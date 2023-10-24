@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import RoboticArm from "../assets/roboticArm.png";
-import defectDetection from '../assets/defectDetection.png'
-import xray2 from '../assets/xray2.png';
+import defectDetection from "../assets/defectDetection.png";
+import xray2 from "../assets/xray2.png";
 
 const StickyScroll = () => {
   const content = [
@@ -42,7 +42,7 @@ const StickyScroll = () => {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest >= 0 && latest < 0.2) setActiveCard(0);
+    if (latest >= 0 && latest < 0.1) setActiveCard(0);
     if (latest >= 0.2 && latest < 0.4) setActiveCard(1);
     if (latest >= 0.4) setActiveCard(2); // Change the condition here
   });
@@ -93,13 +93,13 @@ const StickyScroll = () => {
     >
       <motion.div
         animate={{
-          backgroundImage: `url(${
-            cardColors[activeCard]?.src ?? ""
-          })`,
+          backgroundImage: `url(${cardColors[activeCard]?.src ?? ""})`,
 
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          marginTop:
+            activeCard === 1 ? "10rem" : activeCard === 2 ? "45rem" : "0rem",
         }}
         className="hidden lg:block  rounded-md sticky h-full w-full top-32 titty2"
       ></motion.div>
