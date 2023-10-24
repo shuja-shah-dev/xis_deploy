@@ -11,10 +11,11 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const newScrollPosition = window.scrollY;
+      // console.log("currentScrolPosition : ", newScrollPosition);
       setScrollPosition(newScrollPosition);
 
       // Determine whether the StickyScroll should be sticky
-      if (newScrollPosition <= 50) {
+      if (newScrollPosition <= 900) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
