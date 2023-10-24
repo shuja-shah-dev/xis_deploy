@@ -2,6 +2,7 @@ import Head from "next/head";
 import StickyScroll from "./stickyscroll";
 import { useEffect, useState } from "react";
 import Marquee from "@/components/Marquee";
+import { Box } from "@mui/material";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -35,7 +36,25 @@ export default function Home() {
         <link rel="icon" href="/Asset.png" />
       </Head>
       <div className="bg-black text-white relative overflow-hidden">
-        <section className="block bg-black object-cover w-[100vw] h-[90vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden">
+        <Box
+          className="block bg-black object-cover w-[100vw] h-[90vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden pesudoMyClass"
+          sx={{
+            position: "relative",
+            "&:before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              width: "100%",
+              height: "100%",
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)",
+              zIndex: 1,
+              transition: "all 0.5s ease-in-out",
+            },
+          }}
+        >
           <video
             className="w-[100vw] bg-black opacity-80 fixed z-0 top-0 right-0 left-0 object-cover "
             autoPlay
@@ -43,20 +62,36 @@ export default function Home() {
             playsInline
             loop
             src="/xraylab.mp4"
+          ></video>
+          <div
+            className="absolute top-2/3 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center"
+            style={{
+              zIndex: 999999,
+            }}
           >
-          </video>
-          <div className="fixed top-2/3 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-5xl font-bold">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </h1>
-            <p className="text-lg mt-4">
+            <p
+              className="text-2lg mt-4"
+              style={{
+                fontSize: "1.2rem",
+              }}
+            >
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis,
               voluptas?
             </p>
-            <button className="rounded-md hover:bg-white hover:text-black border px-2 py-1 mt-4">See an action</button>
+            <button className="rounded-md hover:bg-white hover:text-black border px-2 py-1 mt-4">
+              See an action
+            </button>
           </div>
-        </section>
-        <section className="text-white block relative bg-[#111111] ">
+        </Box>
+        <section
+          className="text-white block relative bg-[#111111] mt-0 "
+          style={{
+            marginTop: "0px",
+          }}
+        >
           <div className="container bg-[#111111] text-white px-5 mt-10 py-20 mx-auto flex flex-wrap">
             <div className="flex flex-wrap md:-m-2 -m-1"></div>
             <div className="pb-16 justify-center text-center items-center w-full">
