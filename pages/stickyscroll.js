@@ -20,7 +20,27 @@ const StickyScroll = () => {
         "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     },
     {
-      title: "Version control",
+      title: "Xray Control",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    },
+    {
+      title: "Ai Xray Control",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    },
+    {
+      title: "Industies Control",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    },
+    {
+      title: "Labs Control",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    },
+    {
+      title: "Xraylab Control",
       description:
         "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     },
@@ -62,6 +82,9 @@ const StickyScroll = () => {
     0: "linear-gradient(to bottom right, #00ffff, #008000)",
     1: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
     2: "linear-gradient(to bottom right, red, yellow)",
+    3: "linear-gradient(to bottom right, red, yellow)",
+    4: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
+    5: "linear-gradient(to bottom right, #00ffff, #008000)",
   };
 
   return (
@@ -69,17 +92,17 @@ const StickyScroll = () => {
       animate={{
         backgroundColor: backgroundColors[activeCard],
       }}
-      className="h-[100vh] gap-20  overflow-y-auto w-full bg-[#111111] flex justify-center  space-x-10 rounded-md"
+      className="h-[100vh] gap-20 my-20 overflow-y-auto w-full bg-[#111111] flex justify-center  space-x-10 rounded-md"
       ref={ref}
     >
       <motion.div
         animate={{
           background: cardColors[activeCard],
         }}
-        className="hidden lg:block h-80 w-80 rounded-md sticky top-10"
+        className="hidden lg:block h-80 w-80 rounded-md sticky top-32"
       ></motion.div>
       <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           {content.map((item, index) => (
             <div key={item.title} className="my-20">
               <motion.h2
@@ -102,7 +125,7 @@ const StickyScroll = () => {
                   color: activeCard === index ? "rgb(192, 192, 192)" : "rgb(192, 192, 192)",
                   opacity: 1,
                 }}
-                className="text-lg  max-w-sm mt-10"
+                className="text-lg  max-w-2xl mt-10"
               >
                 {item.description}
               </motion.p>
