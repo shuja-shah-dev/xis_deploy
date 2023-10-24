@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
+import RoboticArm from "../assets/roboticArm.png";
+import defectDetection from '../assets/defectDetection.png'
+import xray2 from '../assets/xray2.png';
 
 const StickyScroll = () => {
   const content = [
@@ -62,25 +65,41 @@ const StickyScroll = () => {
   const backgroundColors = {};
 
   const cardColors = {
-    0: "linear-gradient(to bottom right, #00ffff, #008000)",
-    1: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
-    2: "linear-gradient(to bottom right, red, yellow)",
-    3: "linear-gradient(to bottom right, red, yellow)",
-    4: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
-    5: "linear-gradient(to bottom right, #00ffff, #008000)",
+    0: RoboticArm,
+    1: xray2,
+    2: defectDetection,
+    3: RoboticArm,
+    4: RoboticArm,
+    5: RoboticArm,
   };
+
+  // const cardColors = {
+  //   0: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
+  //   1: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
+  //   2: "linear-gradient(to bottom right, red, yellow)",
+  //   3: "linear-gradient(to bottom right, red, yellow)",
+  //   4: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
+  //   5: "linear-gradient(to bottom right, #00ffff, #008000)",
+  // };
+  console.log(RoboticArm, "Robotic Arm");
 
   return (
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard],
       }}
-      className="h-[100vh] gap-20  overflow-y-auto w-full bg-[#111111] flex justify-center   space-x-10 rounded-md titty1"
+      className="h-[100vh] gap-20  overflow-y-auto w-full bg-[#111111] flex justify-center align-center  space-x-10 rounded-md titty1"
       ref={ref}
     >
       <motion.div
         animate={{
-          background: cardColors[activeCard],
+          backgroundImage: `url(${
+            cardColors[activeCard]?.src ?? ""
+          })`,
+
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
         className="hidden lg:block  rounded-md sticky h-full w-full top-32 titty2"
       ></motion.div>
