@@ -99,7 +99,7 @@ const StickyScroll = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           marginTop:
-            activeCard === 1 ? "10rem" : activeCard === 2 ? "45rem" : "0rem",
+            activeCard === 1 ? "12rem" : activeCard === 2 ? "45rem" : "0rem",
         }}
         className="hidden lg:block  rounded-md sticky h-full w-full top-32 titty2"
       ></motion.div>
