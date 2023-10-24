@@ -5,44 +5,28 @@ import { motion } from "framer-motion";
 const StickyScroll = () => {
   const content = [
     {
-      title: "Collaborative Editing",
-      description:
-        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      title: "Manufacturing Quality Control",
+      description: `
+        Our defect detection software is the answer to maintaining impeccable manufacturing standards and reducing defects in your production lines. Customize datasets and train models that identify defects in real time, resulting in fewer production interruptions, less waste, and a reputation for delivering high-quality products. Improve your bottom line and ensure your products meet the highest quality standards with our software.
+       `,
     },
     {
-      title: "Real-time changes",
-      description:
-        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      title: "Medical Image Analysis",
+      description: `
+      In the healthcare industry, precision and early diagnosis are paramount. Our customizable software for medical image analysis empowers healthcare professionals to take patient care to the next level. Create datasets of normal and abnormal images and train models to detect diseases and anomalies in X-rays, MRIs, and CT scans. The result? Accurate, early diagnoses that lead to better patient outcomes. Join the medical professionals already using our software to elevate healthcare standards.
+      `,
     },
     {
-      title: "Version control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      title: "Agricultural Crop Inspection",
+      description: `
+        Agriculture is the backbone of our society, and ensuring crop health is paramount. Our software for crop inspection offers a transformative solution. Curate datasets of healthy and diseased plants, and deploy custom models on drones or machinery for real-time crop monitoring. Quickly identify issues such as diseases and pests, allowing you to take immediate action to maximize crop yields. Reducing the use of pesticides benefits both your bottom line and the environment.
+        `,
     },
     {
-      title: "Xray Control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    },
-    {
-      title: "Ai Xray Control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    },
-    {
-      title: "Industies Control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    },
-    {
-      title: "Labs Control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    },
-    {
-      title: "Xraylab Control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      title: "Building and Infrastructure Maintenance",
+      description: ` 
+         Safety is a top priority in the construction and infrastructure maintenance industry. With our software, you can revolutionize the way you approach maintenance and safety inspections. Create datasets of images or sensor data related to buildings and infrastructure, and then train models to detect cracks, corrosion, and anomalies. Identify issues before they become major problems, ensuring the longevity and safety of your structures. Take control of maintenance with our software.
+         `,
     },
   ];
 
@@ -63,7 +47,8 @@ const StickyScroll = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Calculate the scroll position based on window.scrollY
-      const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      const scrollPosition =
+        window.scrollY / (document.body.scrollHeight - window.innerHeight);
       setActiveCard(scrollPosition);
     };
 
@@ -74,9 +59,7 @@ const StickyScroll = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-   const backgroundColors = {
-  
-  };
+  const backgroundColors = {};
 
   const cardColors = {
     0: "linear-gradient(to bottom right, #00ffff, #008000)",
@@ -92,14 +75,14 @@ const StickyScroll = () => {
       animate={{
         backgroundColor: backgroundColors[activeCard],
       }}
-      className="h-[100vh] gap-20 my-20 overflow-y-auto w-full bg-[#111111] flex justify-center  space-x-10 rounded-md"
+      className="h-[100vh] gap-20 my-20 overflow-y-auto w-full bg-[#111111] flex justify-center   space-x-10 rounded-md titty1"
       ref={ref}
     >
       <motion.div
         animate={{
           background: cardColors[activeCard],
         }}
-        className="hidden lg:block h-80 w-80 rounded-md sticky top-32"
+        className="hidden lg:block h-80 w-80 rounded-md sticky top-32 titty2"
       ></motion.div>
       <div className="div relative flex items-start px-4">
         <div className="max-w-3xl">
@@ -110,7 +93,10 @@ const StickyScroll = () => {
                   opacity: 0,
                 }}
                 animate={{
-                  color: activeCard === index ? "rgb(192, 192, 192)" : "rgb(192, 192, 192)",
+                  color:
+                    activeCard === index
+                      ? "rgb(192, 192, 192)"
+                      : "rgb(192, 192, 192)",
                   opacity: 1,
                 }}
                 className="text-4xl "
@@ -122,7 +108,10 @@ const StickyScroll = () => {
                   opacity: 0,
                 }}
                 animate={{
-                  color: activeCard === index ? "rgb(192, 192, 192)" : "rgb(192, 192, 192)",
+                  color:
+                    activeCard === index
+                      ? "rgb(192, 192, 192)"
+                      : "rgb(192, 192, 192)",
                   opacity: 1,
                 }}
                 className="text-lg  max-w-2xl mt-10"
