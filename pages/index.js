@@ -92,7 +92,21 @@ export default function Home() {
             marginTop: "0px",
           }}
         >
-          <div className="container bg-[#111111] text-white px-5 mt-10 py-20 mx-auto flex flex-wrap">
+          <div className="container bg-[#111111] text-white px-5  py-20 mx-auto flex flex-wrap">
+            <div className="flex flex-wrap md:-m-2 -m-1"></div>
+            <div className="pb-4 justify-center text-center items-center w-full">
+              <h1 className="text-4xl font-bold">Use Cases</h1>
+            </div>
+            <StickyScroll isSticky={isSticky} />
+          </div>
+        </section>
+        <section
+          className="text-white block relative bg-[#111111] mt-0 "
+          style={{
+            marginTop: "0px",
+          }}
+        >
+          <div className="container bg-[#111111] text-white px-5  py-20 mx-auto flex flex-wrap">
             <div className="flex flex-wrap md:-m-2 -m-1"></div>
             <div className="pb-16 justify-center text-center items-center w-full">
               <h1 className="text-4xl font-bold">
@@ -201,7 +215,7 @@ export default function Home() {
                     </div>
                   </div>
                 </section>
-                <StickyScroll isSticky={isSticky} />
+
                 <div className="justify-center  text-white pb-6 text-center items-center w-full">
                   <h1 className="text-5xl">Providing cancer care for all</h1>
                 </div>

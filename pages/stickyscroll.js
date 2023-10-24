@@ -39,9 +39,9 @@ const StickyScroll = () => {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0 && latest < 0.2) setActiveCard(0);
-    if (latest > 0.2 && latest < 0.4) setActiveCard(1);
-    if (latest > 0.4 && latest < 0.99) setActiveCard(2);
+    if (latest >= 0 && latest < 0.2) setActiveCard(0);
+    if (latest >= 0.2 && latest < 0.4) setActiveCard(1);
+    if (latest >= 0.4) setActiveCard(2); // Change the condition here
   });
 
   useEffect(() => {
@@ -75,14 +75,14 @@ const StickyScroll = () => {
       animate={{
         backgroundColor: backgroundColors[activeCard],
       }}
-      className="h-[100vh] gap-20 my-20 overflow-y-auto w-full bg-[#111111] flex justify-center   space-x-10 rounded-md titty1"
+      className="h-[100vh] gap-20  overflow-y-auto w-full bg-[#111111] flex justify-center   space-x-10 rounded-md titty1"
       ref={ref}
     >
       <motion.div
         animate={{
           background: cardColors[activeCard],
         }}
-        className="hidden lg:block h-80 w-80 rounded-md sticky top-32 titty2"
+        className="hidden lg:block  rounded-md sticky h-full w-full top-32 titty2"
       ></motion.div>
       <div className="div relative flex items-start px-4">
         <div className="max-w-3xl">
