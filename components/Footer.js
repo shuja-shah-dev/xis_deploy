@@ -13,27 +13,27 @@ const Footer = () => {
               <nav className="list-none mb-10">
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    General - contact@lunit.io
+                    General - contact@xis.ai.io
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Investment - ir@lunit.io
+                    Investment - ir@xis.ai.io
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Media - media@lunit.io
+                    Media - media@xis.ai.io
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Partnership - partner@lunit.io
+                    Partnership - partner@xis.ai.io
                   </a>
                 </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
-                    Career - apply@lunit.io
+                    Career - apply@xis.ai.io
                   </a>
                 </li>
               </nav>
@@ -63,8 +63,10 @@ const Footer = () => {
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4"></div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-sky-400 tracking-widest text-base mb-3">
-                Contact Us
+              <h2 className="title-font font-medium flex text-sky-400 tracking-widest text-base mb-3 items-center cursor-pointer">
+                Contact Us   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2 items-center" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
               </h2>
               <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start"></div>
             </div>
@@ -73,7 +75,7 @@ const Footer = () => {
         <div className="bg-black">
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
             <p className="text-base text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-              © 2021 Lunit Inc.
+              © 2023 Xis.ai Inc.
               <a
                 href="https://twitter.com/knyttneve"
                 rel="noopener noreferrer"

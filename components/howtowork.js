@@ -3,13 +3,13 @@ import React from "react";
 const How = () => {
   return (
     <section class="text-white block relative bg-[#111111] mt-0 ">
-      <div className="inline-block justify-center w-full text-3xl items-center text-center my-10">
+      <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center my-10">
         Our Solution
       </div>
 
-      <div class="container justify-center items-center text-center px-5 py-24 mx-auto flex flex-wrap">
+      <div class="container justify-center items-center text-center  py-24 mx-auto flex flex-wrap">
         <div class="flex flex-wrap w-full justify-center text-center items-center">
-          <div class="lg:w-2/5 md:w-1/2  md:py-6">
+          <div class="lg:w-[35%] md:w-1/2  md:py-6">
             <div class="flex relative">
               <div class="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
                 <p class="leading-relaxed mr-10 text-center text-3xl inline-block ">

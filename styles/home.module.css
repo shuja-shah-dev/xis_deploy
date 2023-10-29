@@ -1,17 +1,16 @@
 .background {
-  background: linear-gradient(#e66465, #9198e5);
+  background: url('/contactimg.png') no-repeat center center fixed;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
 }
 
-.scrollText {
-  font-size: 1.5rem;
-}
+
+
 
 .card {
   display: flex;
@@ -29,9 +28,13 @@
 }
 
 .sticky {
-  margin-left: 15%;
-  background-color: #ff6d6d;
+  background-color: rgba(26, 30, 36, 0.65);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 50%;
+  z-index: -1; /* This sets the z-index to -1 */
 }
+
 
 .blue {
   background-color: #5b65ad;
@@ -54,4 +57,11 @@
   .sticky {
     margin-left: 1.5rem;
   }
+}
+@media (max-width: 750px) {
+  .card {
+    width: 85%;
+  }
+
+  
 }

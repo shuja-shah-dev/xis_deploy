@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`text-white  z-10 top-0 sticky p-2 ${
+      className={`text-white  z-20 top-0 sticky p-2 ${
         scrolled ? "bg-black" : "backdrop-brightness-75"
       }`}
     >
@@ -87,14 +87,15 @@ const Navbar = () => {
           >
             <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li className="relative group">
-                Products <ExpandMoreIcon />
+                Products
+                 {/* <ExpandMoreIcon /> */}
               </li>
-             <Link href={"/career"}><li className="relative group">
-                Career <ExpandMoreIcon />
+             <Link href="/career"><li className="relative group">
+                Career 
               </li></Link>
-              <li className="relative group">
-                About Us <ExpandMoreIcon />
-                <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
+              <Link href="/about"><li className="relative group">
+                About Us 
+                {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
                   <li>Menu 1</li>
 
                   <li>Menu 2</li>
@@ -102,8 +103,8 @@ const Navbar = () => {
                   <li>Menu 3</li>
 
                   <li>Menu 4</li>
-                </ul>
-              </li>
+                </ul> */}
+              </li></Link>
             </ul>
           </div>
         </div>
