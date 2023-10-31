@@ -1,6 +1,7 @@
 import Head from "next/head";
 import StickyScroll from "./stickyscroll";
 import { useEffect, useState, useRef, TouchEvent } from "react";
+import { useRouter } from "next/router";
 import Marquee from "@/components/Marquee";
 import { Box, Typography } from "@mui/material";
 import How from "@/components/howtowork";
@@ -14,6 +15,7 @@ export default function Home() {
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
+  const controller = useRouter();
 
   const { accessToken } = useAuth();
 
@@ -765,9 +767,19 @@ export default function Home() {
             alignItems: "center",
             height: "30%",
             width: "35%",
+            flexDirection: "column",
           }}
         >
           <Typography>Permission Denied.</Typography>
+          <Typography>Please Login to continue.</Typography>
+          <button
+            onClick={(_) => {
+              controller.push("/");
+            }}
+            className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          >
+            Login
+          </button>
         </Box>
       </Box>
     </>

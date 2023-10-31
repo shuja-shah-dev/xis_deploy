@@ -36,7 +36,10 @@ const Navbar = () => {
     >
       <nav className=" px-4 lg:px-6 py-2.5 ">
         <div className="flex flex-wrap justify-between items-center mx-auto ">
-          <Link href="/" className="flex title-font font-medium items-start text-white mb-4 md:mb-0">
+          <Link
+            href="/"
+            className="flex title-font font-medium items-start text-white mb-4 md:mb-0"
+          >
             <img src="/Asset.png" width={100} alt="" />
           </Link>
           <div className="flex items-center lg:order-2">
@@ -86,16 +89,17 @@ const Navbar = () => {
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <Link href="/"><li className="relative group">
-                Products
-                 {/* <ExpandMoreIcon /> */}
-              </li></Link>
-             <Link href="/career"><li className="relative group">
-                Career 
-              </li></Link>
-              <Link href="/about"><li className="relative group">
-                About Us 
-                {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
+              <Link href="/Home">
+                <li className="relative group">
+                  Home
+                  {/* <ExpandMoreIcon /> */}
+                </li>
+              </Link>
+
+              <Link href="/about">
+                <li className="relative group">
+                  About Us
+                  {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
                   <li>Menu 1</li>
 
                   <li>Menu 2</li>
@@ -104,7 +108,11 @@ const Navbar = () => {
 
                   <li>Menu 4</li>
                 </ul> */}
-              </li></Link>
+                </li>
+              </Link>
+              <Link href="/career">
+                <li className="relative group">Careers</li>
+              </Link>
             </ul>
           </div>
         </div>
