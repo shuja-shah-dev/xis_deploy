@@ -17,7 +17,7 @@ const ParallaxScroll = () => {
             speed={0.5}
             style={{ ...alignCenter, justifyContent: "center" }}
           >
-            <p className={`text-[4rem] font-bold fadeInUp-animation`}>
+            <p className={`text-[4rem] font-bold `}>
               About Us
             </p>
           </ParallaxLayer>
@@ -28,7 +28,7 @@ const ParallaxScroll = () => {
             style={{ ...alignCenter, justifyContent: "center" }}
           >
             <p
-              className={`styles.scrollText w-[40%] fadeInUp-animation text-center items-center text-xl`}
+              className={`styles.scrollText w-[40%] text-center items-center text-xl`}
             >
               {" "}
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
@@ -50,7 +50,7 @@ const ParallaxScroll = () => {
                   data-v-ac85f32a=""
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  className="text-2xl font-bold text-gray-500 text-center md:text-left  mb-4 fadeInUp-animation aos-init aos-animate"
+                  className="text-2xl font-bold text-gray-500 text-center md:text-left  mb-4  aos-init aos-animate"
                 >
                   Vision &amp; Mission
                 </h4>{" "}
@@ -59,7 +59,7 @@ const ParallaxScroll = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                   data-aos-duration="1000"
-                  className="lh-160 text-3xl text-[#01c9ea] mb-2 fadeInUp-animation text-primary aos-init aos-animate"
+                  className="lh-160 text-3xl text-[#01c9ea] mb-2  text-primary aos-init aos-animate"
                 >
                   Conquer Cancer through AI
                 </h3>
@@ -68,11 +68,11 @@ const ParallaxScroll = () => {
                   data-aos="fade-up"
                   data-aos-delay="300"
                   data-aos-duration="1000"
-                  className="lh-160 text-2xl mb-0 fadeInUp-animation font-bold aos-init aos-animate"
+                  className="lh-160 text-2xl mb-0  font-bold aos-init aos-animate"
                 >
                   We develop AI that detects early-stage
                   
-                  <br data-v-ac85f32a="" className="hidden-sm-down text-2xl fadeInUp-animation" />
+                  <br data-v-ac85f32a="" className="hidden-sm-down text-2xl " />
                   cancer and optimizes cancer treatment.
                 </h3>
               </div>

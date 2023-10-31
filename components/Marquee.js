@@ -2,10 +2,10 @@ import React from "react";
 
 const Marquee = () => {
   return (
-    <div class="app-marquee-container1">
-      <div class="marquee-container1">
-        <div class="marquee-subcontainer1 ">
-          <div class="marquee-subitem-container1">
+    <div className="app-marquee-container1">
+      <div className="marquee-container1">
+        <div className="marquee-subcontainer1 ">
+          <div className="marquee-subitem-container1">
             <ul>
               <li>
                 <span>Xis.ai</span>
@@ -73,7 +73,7 @@ const Marquee = () => {
             </ul>
           </div>
 
-          <div class="marquee-subitem-container1">
+          <div className="marquee-subitem-container1">
             <ul>
               <li>
                 <span>Xis.ai</span>

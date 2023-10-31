@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="text-gray-600 relative bg-black body-font">
+      <footer className="text-gray-600 relative bg-black body-font -m-4">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="lg:w-1/4 md:w-1/2 w-full px-4"></div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium flex text-sky-400 tracking-widest text-base mb-3 items-center cursor-pointer">
-                Contact Us   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2 items-center" viewBox="0 0 24 24">
+                Contact Us   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2 items-center" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
               </h2>

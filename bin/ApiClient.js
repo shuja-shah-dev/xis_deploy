@@ -31,7 +31,10 @@ class ApiClient {
         const url = `${this.baseURL}${endpoint}`;
         const response = await fetch(url, {
           method: "POST",
-          ...customConfig,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(customConfig),
         });
 
         if (!response.ok) {
