@@ -12,6 +12,7 @@ router.post("/register", async (req, res) => {
       await user.save();
       res.status(201).send({ message: "User created" });
     } else {
+      console.log(req.body,'as user<')
       res.status(400).send({ error: "Invalid email or password" });
     }
   } catch (error) {
