@@ -20,7 +20,7 @@ app.use("/api/auth", authRoutes);
 mongoose
   .connect(mongodb.uri)
   .then(() => {
-    app.listen("5000", () => {
+    app.listen("7000", () => {
       console.log("Listening on 5000");
     });
   })

@@ -6,11 +6,14 @@ const bcrypt = require("bcryptjs");
 router.post("/register", async (req, res) => {
   try {
     const user = new User(req.body);
-
-    const hashedPassword = await bcrypt.hash(user.password, 10);
-    user.password = hashedPassword;
-    await user.save();
-    res.status(201).send({ message: "User created" });
+    if (user.password && user.email) {
+      const hashedPassword = await bcrypt.hash(user.password, 10);
+      user.password = hashedPassword;
+      await user.save();
+      res.status(201).send({ message: "User created" });
+    } else {
+      res.status(400).send({ error: "Invalid email or password" });
+    }
   } catch (error) {
     res.status(400).send({ error: error.message });
   }

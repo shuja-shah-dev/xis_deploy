@@ -1,6 +1,5 @@
 
-const MONGO_URI = 'mongodb+srv://admin:admin@cluster0.ljf5bov.mongodb.net/?retryWrites=true&w=majority';
-
+const MONGO_URI = 'mongodb+srv://shuja:SyS32_DEFAULT@cluster0.tancd9w.mongodb.net/?retryWrites=true&w=majority';
 
 // config.js
 module.exports = {
