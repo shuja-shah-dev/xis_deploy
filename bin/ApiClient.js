@@ -38,10 +38,19 @@ class ApiClient {
         });
 
         if (!response.ok) {
-          throw new Error("Request failed");
+          const data = await response.json();
+
+          return {
+            success: false,
+            code: data,
+          };
         }
 
-        return await response.json();
+        const succ = await response.json();
+        return {
+          success: true,
+          code: succ,
+        };
       } else {
         throw new Error(`API configuration for "${apiName}" not found.`);
       }

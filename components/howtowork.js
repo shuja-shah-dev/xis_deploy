@@ -4,7 +4,7 @@ const How = () => {
   return (
     <section className="text-white block relative bg-[#111111] mt-0 ">
       <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center my-10">
-      『 Our Solution 』
+        Our Solution
       </div>
 
       <div className="container justify-center items-center text-center  py-24 mx-auto flex flex-wrap">
@@ -37,12 +37,9 @@ const How = () => {
             </div>
             <div className="flex relative pb-12 ">
               <div className="inline-block  text-white rounded-lg  py-10">
-                <h1 className="block mb-3 text-3xl font-bold">
-                  Deployment
-                </h1>
+                <h1 className="block mb-3 text-3xl font-bold">Deployment</h1>
                 <p className="leading-relaxed">
                   Thats it! Your model is ready to be used in your application.
-
                 </p>
               </div>
               <div className="w-20">_ _ _ _ _</div>
