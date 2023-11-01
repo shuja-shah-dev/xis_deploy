@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border border-gray-500 w-full justify-center items-center text-center mx-auto"></div>
+        <hr className="h-px bg-gray-500 border-0 "></hr>
         <div className="bg-black">
           <div className="container px-5  py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
             <p className="text-xl text-gray-500 sm:ml-6 sm:mt-0 mt-4">
