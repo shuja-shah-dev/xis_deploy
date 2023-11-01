@@ -174,36 +174,36 @@ export default function Home() {
             </h1>
             <div className="mb-12 sm:mb-10 lg:mb-36 relative mx-auto justify-center items-center z-10">
               <div className="min-h-[840px] hidden lg:block relative mx-auto justify-center items-center text-center">
-                <div className="w-[45%] h-[60%] absolute top-[18%] left-0 rounded">
+                <div className="w-[35%] h-[60%] absolute top-[18%] left-0 rounded">
                   <Image
-                    src={RoboticArm}
-                    width={350}
+                    src="/generateai.jpg"
+                    width={400}
                     height={500}
-                    className="transform shadow-2xl shadow-blue-500 rounded-3xl animatable bounceInLeft  text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
+                    className="transform shadow-2xl shadow-sky-400 rounded-3xl animatable bounceInLeft  text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
                   />
                 </div>
-                <div className="w-[75%] h-[50%] absolute top-0 left-[17%]">
+                <div className="w-[73%] h-[50%] absolute top-0 left-[14%]">
                   <Image
                     src="/robotic2.jpeg"
                     width={656}
                     height={430}
-                    className="transform shadow-2xl shadow-blue-500 rounded-3xl animatable fadeInDown text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
+                    className="transform shadow-2xl shadow-sky-400 rounded-3xl animatable fadeInDown text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
                   />
                 </div>
-                <div className="w-[50%]  absolute -bottom-[4%] left-[21%]">
+                <div className="w-[50%]  absolute -bottom-[4%] left-[20%]">
                   <Image
                     src="/robotic1.jpeg"
-                    width={400}
+                    width={450}
                     height={400}
-                    className="transform shadow-2xl shadow-blue-500  animatable fadeInUp rounded-3xl  text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
+                    className="transform shadow-2xl shadow-sky-400  animatable fadeInUp rounded-3xl  text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
                   />
                 </div>
-                <div className="w-[50%] h-[60%]  absolute -bottom-[7%]  right-[2%]">
+                <div className="w-[50%] h-[60%]  absolute -bottom-[7%]  right-[0%]">
                   <Image
-                    src="/machine.jpeg"
+                    src="/aicase.jpg"
                     width={480}
                     height={680}
-                    className="transform shadow-2xl shadow-blue-500  rounded-3xl animatable bounceInRight text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
+                    className="transform shadow-2xl shadow-sky-400  rounded-3xl animatable bounceInRight text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
                   />
                 </div>
               </div>
@@ -211,7 +211,7 @@ export default function Home() {
                 src="/machine2.png"
                 width={512}
                 height={680}
-                className="block w-[600px] object-cover mx-auto lg:hidden max-w-full"
+                className="block w-[785px] object-cover mx-auto lg:hidden max-w-full"
               />
             </div>
             <Image
@@ -227,9 +227,9 @@ export default function Home() {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLineCap="round"
+                  strokeLineJoin="round"
+                  strokeWidth="2"
                   className="w-10 h-10"
                   viewBox="0 0 24 24"
                 >
@@ -326,9 +326,9 @@ export default function Home() {
                         <svg
                           fill="none"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLineCap="round"
+                          strokeLineJoin="round"
+                          strokeWidth="2"
                           className="w-10 h-10"
                           viewBox="0 0 24 24"
                         >
@@ -385,9 +385,9 @@ export default function Home() {
                         <svg
                           fill="none"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLineCap="round"
+                          strokeLineJoin="round"
+                          strokeWidth="2"
                           className="w-10 h-10"
                           viewBox="0 0 24 24"
                         >
@@ -445,9 +445,9 @@ export default function Home() {
                         <svg
                           fill="none"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLineCap="round"
+                          strokeLineJoin="round"
+                          strokeWidth="2"
                           className="w-10 h-10"
                           viewBox="0 0 24 24"
                         >
@@ -511,7 +511,7 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap -mx-4 -mb-10 text-center">
               <div className="sm:w-1/2 mb-10 px-4 relative min-h-[1px]  elementor-element p-[1em]">
-                <div className="rounded-lg overflow-hidden">
+                <div className="rounded-lg h-[68%] overflow-hidden">
                   <Image
                     width={400}
                     height={400}
@@ -535,7 +535,7 @@ export default function Home() {
                       <div className="twentytwenty-wrapper twentytwenty-horizontal">
                         <div
                           ref={imageContainer}
-                          className="twentytwenty-container w-full h-[400.672px]"
+                          className="twentytwenty-container rounded-xl w-full h-[400.672px]"
                         >
                           <img
                             decoding="async"
@@ -544,12 +544,12 @@ export default function Home() {
                                 imageReveal * 100
                               }% 0, ${imageReveal * 100}% 100%, 0 100%)`,
                             }}
-                            className="twentytwenty-before pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                            className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                             src="https://www.tomomi-research.com/wp-content/uploads/2023/03/live-img-2022-09-23-14-11-58--jpg.webp"
                           />
                           <img
                             decoding="async"
-                            className="custom-clip2 pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                            className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                             src="https://www.tomomi-research.com/wp-content/uploads/2023/03/surface-normal-img-2022-09-23-14-11-58--jpg.webp"
                           />
                           <div className="twentytwenty-overlay">
@@ -615,9 +615,9 @@ export default function Home() {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLineCap="round"
+                    strokeLineJoin="round"
+                    strokeWidth="2"
                     className="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -640,9 +640,9 @@ export default function Home() {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLineCap="round"
+                    strokeLineJoin="round"
+                    strokeWidth="2"
                     className="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -665,9 +665,9 @@ export default function Home() {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLineCap="round"
+                    strokeLineJoin="round"
+                    strokeWidth="2"
                     className="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -692,9 +692,9 @@ export default function Home() {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLineCap="round"
+                    strokeLineJoin="round"
+                    strokeWidth="2"
                     className="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -717,9 +717,9 @@ export default function Home() {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLineCap="round"
+                    strokeLineJoin="round"
+                    strokeWidth="2"
                     className="w-10 h-10"
                     viewBox="0 0 24 24"
                   >
@@ -776,7 +776,7 @@ export default function Home() {
             onClick={(_) => {
               controller.push("/");
             }}
-            className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            className="w-full lg:w-1/2 text-white bg-sky-500 hover:bg-sky-500 mt-10 focus:ring-1 focus:outline-none focus:ring-sky-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-500 dark:hover:bg-sky-500 dark:focus:ring-sky-500"
           >
             Login
           </button>

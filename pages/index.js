@@ -46,8 +46,8 @@ const Login = () => {
   return (
     <section className="bg-[#111111]">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a
-          href="#"
+        <h1
+       
           className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         >
           <Image
@@ -57,7 +57,7 @@ const Login = () => {
             src="/Asset.png"
             alt="logo"
           />
-        </a>
+        </h1>
         <div className="w-full bg-white shadow-lg shadow-sky-400 rounded-lg  dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -132,7 +132,7 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                className="w-full text-white bg-sky-500 hover:bg-sky-500 focus:ring-1 focus:outline-none focus:ring-sky-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-500 dark:hover:bg-sky-500 dark:focus:ring-sky-500"
                 onClick={(e) => {
                   e.preventDefault();
                   handleAuth();

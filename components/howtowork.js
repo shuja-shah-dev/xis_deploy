@@ -2,12 +2,11 @@ import React from "react";
 
 const How = () => {
   return (
-    <section className="text-white block relative bg-[#111111] mt-0 ">
-      <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center my-10">
+    <section className="text-white block relative bg-[#111111] py-24 mt-0 ">
+      <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center mb-16">
         Our Solution
       </div>
-
-      <div className="container justify-center items-center text-center  py-24 mx-auto flex flex-wrap">
+      <div className="container justify-center items-center text-center  pb-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full justify-center text-center items-center">
           <div className="lg:w-[35%] md:w-1/2  md:py-6">
             <div className="flex relative">
@@ -17,8 +16,8 @@ const How = () => {
                 </p>
               </div>
             </div>
-            <div className="flex relative pb-12">
-              <div className="inline-block rounded-lg text-white py-10">
+            <div className="flex relative pb-16">
+              <div className="inline-block w-full rounded-lg text-white py-6">
                 <h1 className="block mb-3 text-3xl font-bold">Training</h1>
                 <p className="leading-relaxed">
                   Train the AI based on the dataset you Provided. Our web app
@@ -26,16 +25,16 @@ const How = () => {
                   commence the labeling process for your items.
                 </p>
               </div>
-              <div className="w-32">_ _ _ _ _</div>
+              <div className="w-32  justify-center text-right items-center ">_ _ _ _ _</div>
             </div>
-            <div className="flex relative pb-12">
+            <div className="flex relative">
               <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
                 <p className="leading-relaxed mr-10 text-center text-3xl inline-block ">
                   Step 3{" "}
                 </p>
               </div>
             </div>
-            <div className="flex relative pb-12 ">
+            {/* <div className="flex relative pb-12 ">
               <div className="inline-block  text-white rounded-lg  py-10">
                 <h1 className="block mb-3 text-3xl font-bold">Deployment</h1>
                 <p className="leading-relaxed">
@@ -43,6 +42,15 @@ const How = () => {
                 </p>
               </div>
               <div className="w-20">_ _ _ _ _</div>
+            </div> */}
+             <div className="flex relative pt-10 pb-12">
+              <div className="inline-block w-full rounded-lg text-white py-10">
+                <h1 className="block mb-3 text-3xl font-bold">Deployment</h1>
+                <p className="leading-relaxed">
+                Thats it! Your model is ready to be used in your application.
+                </p>
+              </div>
+              <div className="w-20  justify-center  text-right items-center">_ _ _ _ _</div>
             </div>
             {/* <div className="flex relative pb-12">
               <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
@@ -56,7 +64,7 @@ const How = () => {
             </div> */}
           </div>
           <div className="lg:w-2/5 md:w-1/2  md:py-6">
-            <div className="flex relative pb-12">
+            <div className="flex relative pb-20">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
