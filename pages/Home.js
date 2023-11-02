@@ -10,6 +10,7 @@ import RoboticArm from "../assets/roboticArm.png";
 import defectDetection from "../assets/defectDetection.png";
 import xray2 from "../assets/xray2.png";
 import 'intersection-observer';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 import { useAuth } from "@/common/authProvider";
 
@@ -122,6 +123,24 @@ export default function Home() {
       observer.observe(element);
     });
   }); 
+
+  const [showButton, setShowButton] = useState(false);
+
+
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const shouldShow = window.scrollY > 100; // Adjust the scroll distance as needed
+      setShowButton(shouldShow);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return accessToken ? (
     <>
@@ -762,6 +781,17 @@ export default function Home() {
           </div>
         </section>
       </div>
+      </div>
+      <div  className="z-50" style={{ position: 'relative' }}>
+        <div  className="z-50" style={{ position: 'fixed', bottom: '10%', right: '3%', }}>
+          <button
+          className="z-50"
+            style={{ backgroundColor: '#363636', padding: '10px 10px', borderRadius: "10px", color: '#fff' , transition : '0.5s ease-in-out',opacity: showButton ? 1 : 0 }}
+            onClick={scrollToTop}
+          >
+          <KeyboardDoubleArrowUpIcon/>
+          </button>
+        </div>
       </div>
     </>
   ) : (

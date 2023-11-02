@@ -8,6 +8,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,7 @@ const Navbar = () => {
   return (
     <header
       className={`text-white  z-20 top-0 sticky p-2 ${
-        scrolled ? "bg-black" : "backdrop-brightness-75"
+        scrolled ? "bg-black" : "backdrop-brightness-90"
       }`}
     >
       <nav className=" px-4 lg:px-6 py-2.5 ">
