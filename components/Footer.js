@@ -70,7 +70,7 @@ const Footer = () => {
                 <li className="pb-1">
                   <EmailIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> contact@xray-lab.com</a></li>
               </nav>
-              <div className="cursor-pointer"><FacebookOutlinedIcon  /> <TwitterIcon /> <InstagramIcon /> <LinkedInIcon /> <YouTubeIcon /></div>
+              <div className="cursor-pointer"><FacebookOutlinedIcon /> <TwitterIcon /> <InstagramIcon /> <LinkedInIcon /> <YouTubeIcon /></div>
             </div>
           </div>
         </div>
