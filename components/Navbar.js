@@ -37,7 +37,7 @@ const Navbar = () => {
       <nav className=" px-4 lg:px-6 py-2.5 ">
         <div className="flex flex-wrap justify-between items-center mx-auto ">
           <Link
-            href="/"
+            href="/Home"
             className="flex title-font font-medium items-start text-white mb-4 md:mb-0"
           >
             <img src="/Asset.png" width={100} alt="" />
