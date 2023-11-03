@@ -1,90 +1,84 @@
+import Image from "next/image";
 import React from "react";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import CallIcon from '@mui/icons-material/Call';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
   return (
     <div>
-      <footer className="text-gray-600 relative bg-black body-font -m-4">
+      <footer className="text-gray-600 relative bg-black body-font ">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
+            <div className="lg:w-1/4 md:w-1/2 w-full  px-4">
+              <Image src="/Asset.png" className="justify-center mx-auto items-center text-center mb-10" width={300} height={400} />
+            </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
-                Contact us
+                About Us
               </h2>
               <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    General - contact@xis.ai.io
+                <li className="pb-1">
+                  <a href="/#" className="text-gray-600 hover:text-gray-800">Impressum</a>
+                </li>
+                <li className="pb-1">
+                  <a href="/#" className="text-gray-600 hover:text-gray-800">Terms and Conditions / AGB</a>
+                </li>
+                <li className="pb-1">
+                  <a href="/#" className="text-gray-600 hover:text-gray-800">
+                    General Terms and Conditions
                   </a>
                 </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Investment - ir@xis.ai.io
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Media - media@xis.ai.io
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Partnership - partner@xis.ai.io
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Career - apply@xis.ai.io
-                  </a>
-                </li>
+
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
-                Offices
+                Certificates
               </h2>
               <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">Seoul HQ </a>
+                <li className="pb-1">
+                  <a href="/#" className="text-gray-600 hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">Boston, USA</a>
+                <li className="pb-1">
+                  <a href="/#" className="text-gray-600 hover:text-gray-800 ">Data Privacy Policy</a>
                 </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Amsterdam, The Netherlands
+                <li className="pb-1">
+                  <a href="/#" className="text-gray-600 hover:text-gray-800 ">
+                    Data Protection Declarations
                   </a>
                 </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Shanghai, China
-                  </a>
-                </li>
+
               </nav>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4"></div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium flex text-sky-400 tracking-widest text-base mb-3 items-center cursor-pointer">
-                Contact Us   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2 items-center" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
+              <h2 className="title-font font-medium  text-sky-400 tracking-widest text-base mb-3 cursor-pointer">
+                Contact Us
               </h2>
-              <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start"></div>
+              <nav className="list-none mb-10">
+                <li className="pb-1">
+                  <CallIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> 0800 972 9522</a>
+                </li>
+                <li className="pb-1">
+                  <PhoneIphoneIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> +49 7045 204450</a>
+                </li>
+                <li className="pb-1">
+                  <EmailIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> contact@xray-lab.com</a></li>
+              </nav>
+              <div className="cursor-pointer"><FacebookOutlinedIcon /> <TwitterIcon /> <InstagramIcon /> <LinkedInIcon /> <YouTubeIcon /></div>
             </div>
           </div>
         </div>
+        <hr className="h-px bg-gray-500 border-0 "></hr>
         <div className="bg-black">
-          <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-            <p className="text-base text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-              © 2023 Xis.ai Inc.
-              <a
-                href="https://twitter.com/knyttneve"
-                rel="noopener noreferrer"
-                className="text-gray-500 ml-1"
-                target="_blank"
-              >
-                Privacy Policy Information Security and Medical Device
-                Registration
-              </a>
+          <div className="container px-5  py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
+            <p className="text-xl text-gray-500 sm:ml-6 sm:mt-0 mt-4">
+              © 2023 Xis.ai | All Rights Reserved.
             </p>
           </div>
         </div>

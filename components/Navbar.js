@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SearchIcon from "@mui/icons-material/Search";
+import Image from "next/image";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,24 +33,21 @@ const Navbar = () => {
   return (
     <header
       className={`text-white  z-20 top-0 sticky p-2 ${
-        scrolled ? "bg-black" : "backdrop-brightness-75"
+        scrolled ? "bg-black" : "backdrop-brightness-90"
       }`}
     >
       <nav className=" px-4 lg:px-6 py-2.5 ">
         <div className="flex flex-wrap justify-between items-center mx-auto ">
           <Link
-            href="/"
+            href="/Home"
             className="flex title-font font-medium items-start text-white mb-4 md:mb-0"
           >
-            <img src="/Asset.png" width={100} alt="" />
+            <Image src="/Asset.png" width={100} height={100} alt="" /> 
           </Link>
           <div className="flex items-center lg:order-2">
-            <a
-              href="#contact"
-              className="text-white border font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
-            >
+           <Link href="/contact" className="text-white border font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "> 
               Contact
-            </a>
+            </Link>
             <button
               onClick={toggleMobileMenu}
               data-collapse-toggle="mobile-menu-2"

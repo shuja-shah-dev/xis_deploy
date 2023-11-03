@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://be.xis.ai";
 
 const API_CONFIG = {
   login: "/api/auth/login",
