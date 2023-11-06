@@ -19,7 +19,7 @@
     "@react-spring/web": "^9.7.3",
     "framer-motion": "^10.16.4",
     "intersection-observer": "^0.12.2",
-    "next": "13.4.1",
+    "next": "^14.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^6.1.0",
@@ -29,5 +29,12 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "bin": {
+    "huntingcoder": "bin/ApiClient.js"
+  },
+  "author": "",
+  "license": "ISC"
 }

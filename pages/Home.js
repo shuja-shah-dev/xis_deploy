@@ -56,57 +56,6 @@ export default function Home() {
     window.addEventListener("mouseup", handleMouseUp);
   };
 
-  const doAnimations = () => {
-    const offset = window.scrollY + window.innerHeight;
-    const animatableElements = document.querySelectorAll(".animatable");
-
-    animatableElements.forEach((element) => {
-      if (
-        element.getBoundingClientRect().top + element.offsetHeight - 20 <
-        offset
-      ) {
-        element.classList.remove("animatable");
-        element.classList.add("animated");
-      }
-    });
-  };
-
-  const handleScroll = () => {
-    doAnimations();
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("load", doAnimations);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.addEventListener("load", doAnimations);
-    };
-  }, []);
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isSticky, setIsSticky] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const newScrollPosition = window.scrollY;
-      setScrollPosition(newScrollPosition);
-
-      if (newScrollPosition <= 900) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -126,8 +75,6 @@ export default function Home() {
 
   const [showButton, setShowButton] = useState(false);
 
-
-  
   useEffect(() => {
     const handleScroll = () => {
       const shouldShow = window.scrollY > 100; // Adjust the scroll distance as needed
@@ -142,6 +89,8 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+
+
   return accessToken ? (
     <>
       <Head>
@@ -150,7 +99,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       
-      <div className="bg-[#111111] text-white relative overflow-hidden">
+      <div className="relative overflow-hidden">
+      <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20">
+    <div class="blur-[106px] h-56 bg-gradient-to-br  to-purple-400 from-blue-700"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400  to-indigo-600"></div>
+  </div>
         <Box
           className="block bg-[#111111] object-cover w-[100vw] h-[90vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden pesudoMyClass"
           sx={{
@@ -184,7 +137,7 @@ export default function Home() {
               zIndex: 10,
             }}
           >
-            <h1 className="text-5xl font-bold animated fadeInUp  ">
+            <h1 className="text-5xl font-bold fadeInUp animated  ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </h1>
             <p
@@ -201,9 +154,9 @@ export default function Home() {
             </button>
           </div>
         </Box>
-        <div className="text-white  block relative bg-[#111111] mt-0">
+        <div className="text-white  block relative bg-gradient-to-r to-purple-500 from-sky-500  mt-0">
         <section
-          className="text-white  block relative bg-[#111111] mt-0 "
+          className="text-white  block relative bg-gradient-to-r to-purple-500 from-sky-500 mt-0 "
           style={{
             marginTop: "0px",
           }}
@@ -212,8 +165,8 @@ export default function Home() {
             <h1 className="text-5xl font-bold mb-20 pt-10">
               Benefits
             </h1>
-            <div className="mb-12 sm:mb-10 lg:mb-36 relative mx-auto justify-center items-center z-10">
-              <div className="min-h-[840px] hidden lg:block relative mx-auto justify-center items-center text-center">
+            <div className="mb-12 sm:mb-10 relative mx-auto justify-center items-center z-10">
+              {/* <div className="min-h-[840px] hidden lg:block relative mx-auto justify-center items-center text-center">
                 <div className="w-[30%] h-[60%] absolute top-[18%] left-24 rounded">
                   <Image
                     src="/generateai.jpg"
@@ -246,23 +199,36 @@ export default function Home() {
                     className="transform shadow-2xl shadow-sky-400  rounded-3xl animatable bounceInRight text-transparent custom-transform-style inline-block h-full max-w-full translate-x-0 translate-y-0 scale-100 rotate-0 skew-x-0 skew-y-0 opacity-100"
                   />
                 </div>
-              </div>
-              <Image
+              </div> */}
+               <section className="">
+          <div className="gap-16  items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+         
+            <div className="font-light  sm:text-lg text-gray-400">
+              <h2 className="mb-4 text-4xl tracking-tight font-extrabol text-white">Benefits</h2>
+              <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
+              <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
+            </div>
+            <div className="grid grid-cols-1 w-full gap-4 mt-8">
+              <Image width={1000} height={667} className="h-full rounded-lg" src="/robotic2.jpeg"/>
+            </div>
+          </div>
+        </section>
+              {/* <Image
                 src="/fourpics.png"
                 width={512}
                 height={680}
                 className="block w-[785px] object-cover mx-auto lg:hidden max-w-full"
-              />
+              /> */}
             </div>
-            <Image
+            {/* <Image
               src="/img5.svg"
               width={1096}
               height={680}
               className="-z-[1] max-w-none absolute top-0 left-[28%] pointer-events-none"
-            />
+            /> */}
           </div>
-          <section className="text-white hiddenn py-24  body-font z-10">
-            <div className="container px-5 mx-auto z-10 animatable fadeInUp ">
+          <section className="text-white relative hiddenn pb-24  body-font z-10">
+            <div className="container px-5 mx-auto z-10 ">
               <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
                 <svg
                   fill="none"
@@ -356,11 +322,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <div className="container px-5  mx-auto">
               <div className="flex flex-wrap -m-4">
                 <div className="p-4 md:w-1/3">
-                  <div className="flex rounded-lg h-full p-8 flex-col animatable fadeInUp  ">
+                  <div className="flex rounded-lg h-full p-8 flex-col  ">
                     <div className="flex items-center mb-8">
                       <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
                         <svg
@@ -419,7 +384,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-4 md:w-1/3">
-                  <div className="flex rounded-lg h-full p-8 flex-col animatable fadeInUp ">
+                  <div className="flex rounded-lg h-full p-8 flex-col  ">
                     <div className="flex items-center mb-8">
                       <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
                         <svg
@@ -479,7 +444,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-4 md:w-1/3 ">
-                  <div className="flex rounded-lg h-full  p-8 flex-col animatable fadeInUp ">
+                  <div className="flex rounded-lg h-full  p-8 flex-col ">
                     <div className="flex items-center mb-8">
                       <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
                         <svg
@@ -544,13 +509,13 @@ export default function Home() {
           </section>
         </section>
 
-        <section className="text-white block relative bg-[#111111] -my-1 ">
-          <div className="container px-5 py-24 mx-auto animatable fadeInUp ">
+        <section className="text-white block relative to-[#00c3ff] from-[#03034d] -my-1 ">
+          <div className="container px-5 py-24 mx-auto  ">
             <div className="justify-center items-center text-center mb-16 text-5xl font-bold">
               Case Studies
             </div>
-            <div className="flex hiddenn flex-wrap -mx-4 -mb-10 text-center">
-              <div className="sm:w-1/2 mb-10 px-4 relative min-h-[1px]  elementor-element p-[1em]">
+            <div className="flex hiddenn flex-wrap flex-col lg:flex-row -mx-4 -mb-10 text-center">
+              <div className="lg:w-1/2 mb-10 px-4 relative min-h-[1px] w-full  elementor-element p-[1em]">
                 <div className="rounded-lg h-[68%] overflow-hidden">
                   <Image
                     width={400}
@@ -568,7 +533,7 @@ export default function Home() {
                   API Reference
                 </button>
               </div>
-              <div className="sm:w-1/2 w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
+              <div className="lg:w-1/2 w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
                 <div className="rounded-lg overflow-hidden elementor-widget-wrap flex">
                   <div className="elementor-element  elementor-widget">
                     <div className="elementor-widget-container ">
@@ -628,9 +593,10 @@ export default function Home() {
         </section>
 
         <How />
-        <section className="text-white block relative dark:bg-gray-900 -my-1 ">
-          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center animatable fadeInUp ">
-            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <section className="text-white block relative to-[#00c3ff] from-[#03034d] -my-1 ">
+     
+          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
+            <div className="w-full flex flex-col lg:items-start lg:text-left mb-16 md:mb-0 items-center text-center">
               <h1 className="title-font sm:text-5xl sm:font-bold text-3xl mb-10 font-medium ">
                 Features
               </h1>
@@ -647,8 +613,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="text-white hiddenn block relative bg-[#111111] -my-1">
-          <div className="container px-5 py-24 mx-auto animatable fadeInUp ">
+        <section className="text-white hiddenn block to-[#00c3ff] from-[#03034d] -my-1">
+          <div className="container px-5 py-24 mx-auto  ">
             <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
               <div className="p-4 md:w-1/3 flex">
                 <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">

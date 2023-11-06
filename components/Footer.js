@@ -8,6 +8,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full  px-4">
-              <Image src="/Asset.png" className="justify-center mx-auto items-center text-center mb-10" width={300} height={400} />
+             <Link href="/Home"> <Image src="/Asset.png" className="justify-center mx-auto items-center text-center mb-10" width={300} height={400} /></Link>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
