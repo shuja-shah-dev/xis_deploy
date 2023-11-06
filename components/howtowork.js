@@ -1,12 +1,17 @@
+import Image from "next/image";
 import React from "react";
 
 const How = () => {
   return (
-    <section className="text-white block relative bg-[#111111] py-24 mt-0 ">
+    <>
+    <section className="text-white block relative to-[#00c3ff] from-[#03034d] py-24 mt-0 ">
       <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center mb-16">
         Our Solution
       </div>
-      <div className="container justify-center items-center text-center  pb-24 mx-auto flex flex-wrap">
+      <div className="container mx-auto h-full justify-center text-center w-full">
+        <Image src="/roadmap.png" className="w-full h-full" width={912} height={796} />
+      </div>
+      {/* <div className="container justify-center items-center text-center  pb-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full justify-center text-center items-center">
           <div className="lg:w-[35%] md:w-1/2  md:py-6">
             <div className="flex relative">
@@ -34,7 +39,7 @@ const How = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="flex relative pb-12 ">
+            <div className="flex relative pb-12 ">
               <div className="inline-block  text-white rounded-lg  py-10">
                 <h1 className="block mb-3 text-3xl font-bold">Deployment</h1>
                 <p className="leading-relaxed">
@@ -42,7 +47,7 @@ const How = () => {
                 </p>
               </div>
               <div className="w-20">_ _ _ _ _</div>
-            </div> */}
+            </div>
              <div className="flex relative pt-10 pb-12">
               <div className="inline-block w-full rounded-lg text-white py-10">
                 <h1 className="block mb-3 text-3xl font-bold">Deployment</h1>
@@ -52,7 +57,7 @@ const How = () => {
               </div>
               <div className="w-20  justify-center  text-right items-center">_ _ _ _ _</div>
             </div>
-            {/* <div className="flex relative pb-12">
+            <div className="flex relative pb-12">
               <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
                 <p className="leading-relaxed mr-10 text-center text-3xl inline-block ">
                   Step 5{" "}
@@ -61,7 +66,7 @@ const How = () => {
                   </span>
                 </p>
               </div>
-            </div> */}
+            </div>
           </div>
           <div className="lg:w-2/5 md:w-1/2  md:py-6">
             <div className="flex relative pb-20">
@@ -115,7 +120,7 @@ const How = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="flex relative pb-12">
+            <div className="flex relative pb-12">
               <div className=" w-10 absolute inset-0 flex items-center justify-center">
                 <div className=" w-1 bg-gray-200 pointer-events-none"></div>
               </div>
@@ -128,11 +133,12 @@ const How = () => {
                   bespoke try-hard cliche palo santo offal.
                 </p>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
+    </>
   );
 };
 
