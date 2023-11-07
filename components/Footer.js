@@ -59,9 +59,9 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium  text-sky-400 tracking-widest text-base mb-3 cursor-pointer">
+            <Link href="/contact"><h2 className="title-font font-medium  text-sky-400 tracking-widest text-base mb-3 cursor-pointer">
                 Contact Us
-              </h2>
+              </h2></Link>
               <nav className="list-none mb-10">
                 <li className="pb-1">
                   <CallIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> 0800 972 9522</a>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <li className="pb-1">
                   <EmailIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> contact@xray-lab.com</a></li>
               </nav>
-              <div className="cursor-pointer"><FacebookOutlinedIcon /> <TwitterIcon /> <InstagramIcon /> <LinkedInIcon /> <YouTubeIcon /></div>
+              <div className="cursor-pointer"><FacebookOutlinedIcon /> <TwitterIcon /> <InstagramIcon /> <Link target="_blank" href="https://www.linkedin.com/company/xray-lab/"><LinkedInIcon /></Link> <YouTubeIcon /></div>
             </div>
           </div>
         </div>
