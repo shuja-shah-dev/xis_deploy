@@ -11,16 +11,20 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 -moz-osx-font-smoothing: grayscale;
 padding: 0;
 overflow-y: auto;
-background-color: #111111;
+background-image: url(../public/background.png);
+background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 color: white;
-
 }
+
 ::-webkit-scrollbar {
   width: 0px;
 }
 
 html {
   scroll-behavior: smooth;
+  
 }
 code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -31,13 +35,13 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   opacity: 0;
   transition: all 0.8s;
   filter: blur(5px);
-  transform: translateX(-100%);
+  transform: translateY(60%);
 }
 
 .showw {
   opacity: 1;
   filter: blur(0);
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 
