@@ -134,43 +134,43 @@ const contact = () => {
                                 <div class="flex flex-wrap mb-6 -mx-3">
                                     <div class="w-full px-3">
                                         <label
-                                            class="block mb-2 font-bold tracking-wide text-gray-700 uppercase dark:text-gray-400">
+                                            class="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                             Name
                                         </label>
                                         <input
-                                            class="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight text-gray-700 bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 dark:text-gray-400 focus:bg-gray-800"
+                                            class="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
                                             type="text" placeholder="Your full name...." />
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap mb-6 -mx-3">
                                     <div class="w-full px-3">
                                         <label
-                                            class="block mb-2 font-bold tracking-wide text-gray-700 uppercase dark:text-gray-400">
+                                            class="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                             Subject
                                         </label>
                                         <input
-                                            class="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight text-gray-700 bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 dark:text-gray-400 focus:outline-none focus:bg-gray-800"
+                                            class="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
                                             type="text" placeholder="I'm asking for...." />
                                     </div>
                                 </div>
                                 <div class="flex flex-wrap mb-6 -mx-3">
                                     <div class="w-full px-3">
                                         <label
-                                            class="block mb-2 font-bold tracking-wide text-gray-700 uppercase dark:text-gray-400">
+                                            class="block mb-2 font-bold tracking-wide uppercase text-gray-400">
                                             Email Address
                                         </label>
                                         <input
-                                            class="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight text-gray-700 bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 dark:text-gray-400 focus:outline-none focus:bg-gray-800"
+                                            class="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
                                             type="email" placeholder="abc@gmail.com" />
                                     </div>
                                 </div>
                                 <div class="w-full px-3 mb-6 -mx-3">
                                     <label
-                                        class="block mb-2 font-bold tracking-wide text-gray-700 uppercase dark:text-gray-400">
+                                        class="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                         Your Message
                                     </label>
                                     <textarea rows="4" type="message" placeholder="Write a message..." required=""
-                                        class="w-full p-4 mr-3 text-sm leading-tight text-gray-700 bg-transparent border-b border-gray-300 appearance-none dark:focus:bg-gray-800 dark:border-gray-600 dark:text-gray-400 focus:outline-none focus:bg-gray-800"></textarea>
+                                        class="w-full p-4 mr-3 text-sm leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:focus:bg-gray-800 dark:border-gray-600 text-gray-400 focus:outline-none focus:bg-gray-800"></textarea>
                                 </div>
                                 <div class="px-2">
                                     <button
