@@ -8,6 +8,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Link from "next/link";
+
 
 const Footer = () => {
   return (
@@ -19,9 +21,9 @@ const Footer = () => {
               <Image src="/Asset.png" className="justify-center mx-auto items-center text-center mb-10" width={300} height={400} />
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
+            <Link href="/about"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
                 About Us
-              </h2>
+              </h2></Link> 
               <nav className="list-none mb-10">
                 <li className="pb-1">
                   <a href="/#" className="text-gray-600 hover:text-gray-800">Impressum</a>
@@ -78,7 +80,7 @@ const Footer = () => {
         <div className="bg-black">
           <div className="container px-5  py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
             <p className="text-xl text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-              © 2023 Xis.ai | All Rights Reserved.
+              © 2023 XRAY LAB Industrial Services GmbH | All Rights Reserved.
             </p>
           </div>
         </div>

@@ -47,8 +47,8 @@ const Career = () => {
           flexDirection: "column",
         }}
       >
-        <Typography>Permission Denied.</Typography>
-        <Typography>Please Login to continue.</Typography>
+        <Typography sx={{width: "100%", textAlign: "Center"}}>Permission Denied.</Typography>
+        <Typography sx={{width: "100%", textAlign: "Center"}}>Please Login to continue.</Typography>
         <button
           onClick={(_) => {
             controller.push("/");

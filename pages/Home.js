@@ -90,7 +90,7 @@ export default function Home() {
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 4; // Adjust the total number of slides
+  const totalSlides = 3; // Adjust the total number of slides
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
@@ -157,20 +157,18 @@ export default function Home() {
               zIndex: 10,
             }}
           >
-            <h1 className="text-5xl font-bold fadeInUp animated mb-2 ">
+            <h1 className=" text-2xl sm:text-5xl font-bold fadeInUp animated mb-2 ">
               Simplified Edge AI for Industrial Inspection
             </h1>
 
             <p
-              className="text-2lg mt-4 "
-              style={{
-                fontSize: "1.2rem",
-              }}
+              className=" text-base sm:text-xl mt-4 "
+
             >
               Build, Deploy & Inspect Quality in Minutes
             </p>
             <button className="rounded-md  hover:bg-white hover:text-black border px-2 py-1 mt-4">
-              See an action
+              Get a demo
             </button>
           </div>
         </Box>
@@ -199,8 +197,8 @@ export default function Home() {
                       <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
                     </div>
 
-                    <div id="default-carousel" className="relative w-full" data-carousel="slide">
-                      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <div id="default-carousel" className="relative mt-20 lg:mt-0 w-full" data-carousel="slide">
+                      <div className="relative h-96 overflow-hidden rounded-lg md:h-96">
                         {[...Array(totalSlides)].map((_, index) => (
                           <div
                             key={index}
@@ -209,13 +207,13 @@ export default function Home() {
                             data-carousel-item
                           >
                             <Image
-                              width={400}
-                              height={400}
+                              width={600}
+                              height={600}
                               src={`/robotic${index + 1}.jpeg`} // Adjust the image file names accordingly
                               alt="..."
-                              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              className="absolute block w-full h-full rounded-xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             />
-                            
+
                           </div>
                         ))}
                       </div>
@@ -228,7 +226,7 @@ export default function Home() {
                           aria-label="Previous Slide"
                           onClick={prevSlide}
                         >
-                      
+
                         </button>
                         {[...Array(totalSlides)].map((_, index) => (
                           <button
@@ -248,7 +246,7 @@ export default function Home() {
                           aria-label="Next Slide"
                           onClick={nextSlide}
                         >
-                        
+
                         </button>
                       </div>
                     </div>
@@ -567,31 +565,31 @@ export default function Home() {
               </div>
               <div className="flex hiddenn flex-wrap flex-col lg:flex-row -mx-4 -mb-10 text-center">
                 <div className="lg:w-1/2 mb-10 px-4 relative min-h-[1px] w-full  elementor-element p-[1em]">
-                  <div className="rounded-lg h-[68%] overflow-hidden">
+                  <div className="rounded-xl h-[100%] overflow-hidden">
                     <Image
                       width={400}
                       height={400}
                       alt="content"
-                      className="object-cover h-full object-center w-full"
+                      className="object-cover h-96 object-center w-full"
                       src="/defectDetection.png"
                     />
                   </div>
-                  <h2 className="title-font text-2xl font-medium mt-6 mb-6">
+                  {/* <h2 className="title-font text-2xl font-medium mt-6 mb-6">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Fuga, ea.
                   </h2>
                   <button className="inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none  rounded-xl text-lg">
                     API Reference
-                  </button>
+                  </button> */}
                 </div>
                 <div className="lg:w-1/2 w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
-                  <div className="rounded-lg overflow-hidden elementor-widget-wrap flex">
+                  <div className="rounded-lg overflow-hidden  elementor-widget-wrap flex">
                     <div className="elementor-element  elementor-widget">
                       <div className="elementor-widget-container ">
                         <div className="twentytwenty-wrapper twentytwenty-horizontal">
                           <div
                             ref={imageContainer}
-                            className="twentytwenty-container rounded-xl w-full h-[400.672px]"
+                            className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
                           >
                             <img
                               decoding="async"
@@ -650,16 +648,13 @@ export default function Home() {
             backgroundPosition: "center",
             objectFit: "cover"
           }} className="text-white block relative dark:bg-gray-900 -my-1 ">
-            <div aria-hidden="true" className="absolute inset-0 h-64 w-full m-auto grid grid-cols-2 -space-x-52 opacity-30">
-              <div className="blur-[50px] h-64 bg-gradient-to-br  to-purple-500 from-sky-500"></div>
-              <div className="blur-[50px] h-64 bg-gradient-to-r to-purple-500 from-sky-500"></div>
-            </div>
+
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
-              <div className="w-full flex flex-col lg:items-start lg:text-left mb-16 md:mb-0 items-center text-center">
+              <div className="w-full flex flex-col lg:items-start lg:text-left  items-center text-center">
                 <h1 className="title-font sm:text-5xl sm:font-bold text-3xl mb-10 font-medium ">
                   Features
                 </h1>
-                <p className="mb-10 hiddenn leading-relaxed w-1/2">
+                {/* <p className="mb-10 hiddenn leading-relaxed w-1/2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
                   quasi exercitationem temporibus minus quos dicta rem quis
                   debitis repudiandae ipsum.
@@ -668,11 +663,11 @@ export default function Home() {
                   <button className="inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none  rounded-xl text-lg">
                     API Reference
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
             <section className="text-white hiddenn block  -my-1">
-              <div className="container px-5 py-24 mx-auto  ">
+              <div className="container px-5 pb-24 mx-auto  ">
                 <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
                   <div className="p-4 md:w-1/3 flex">
                     <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
@@ -849,8 +844,8 @@ export default function Home() {
             flexDirection: "column",
           }}
         >
-          <Typography>Permission Denied.</Typography>
-          <Typography>Please Login to continue.</Typography>
+          <Typography sx={{ width: "100%", textAlign: "Center" }}>Permission Denied.</Typography>
+          <Typography sx={{ width: "100%", textAlign: "Center" }}>Please Login to continue.</Typography>
           <button
             onClick={(_) => {
               controller.push("/");
