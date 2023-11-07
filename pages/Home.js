@@ -89,6 +89,26 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 4; // Adjust the total number of slides
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds (adjust as needed)
+
+    return () => {
+      clearInterval(interval); // Clean up the interval on unmount
+    };
+  }, []);
 
 
   return accessToken ? (
@@ -96,12 +116,14 @@ export default function Home() {
 
 
       <div
-       style={{ backgroundImage: "url('/background.png')",
-       backgroundSize: "cover",
-       backgroundRepeat: "no-repeat",
-       backgroundPosition: "center",
-       objectFit: "cover" }}
-       className="bg-[#111111] text-white relative overflow-hidden">
+        style={{
+          backgroundImage: "url('/background.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          objectFit: "cover"
+        }}
+        className="bg-[#111111] text-white relative overflow-hidden">
         <Box
           className="block bg-[#111111] object-cover w-[100vw] h-[90vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden pesudoMyClass"
           sx={{
@@ -155,60 +177,81 @@ export default function Home() {
         <div className="text-white  block relative  mt-0">
           <section
             className="text-white bg-[#111111] block relative  mt-0 "
-            style={{ backgroundImage: "url('/background.png')",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            objectFit: "cover" }}
+            style={{
+              backgroundImage: "url('/background.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              objectFit: "cover"
+            }}
           >
             <div className="justify-center text-white pb-6 text-center items-center w-full relative mx-auto z-10">
               <h1 className="text-5xl font-bold mb-20 pt-10">
                 Benefits
               </h1>
               <div className="mb-12 sm:mb-10 relative mx-auto justify-center items-center z-10">
-              
+
                 <section>
                   <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                  
+
                     <div className="font-light text-gray-100 sm:text-lg dark:text-gray-400">
                       <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
                       <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
                     </div>
-                   
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-   
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <Image width={400} height={400} src="/robotic2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-    </div>
-  
-    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-   
-    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
+
+                    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+                      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+                        {[...Array(totalSlides)].map((_, index) => (
+                          <div
+                            key={index}
+                            className={`duration-700 ease-in-out ${currentSlide === index ? '' : 'hidden'
+                              }`}
+                            data-carousel-item
+                          >
+                            <Image
+                              width={400}
+                              height={400}
+                              src={`/robotic${index + 1}.jpeg`} // Adjust the image file names accordingly
+                              alt="..."
+                              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            />
+                            
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                        <button
+                          type="button"
+                          className="w-3 h-3 rounded-full"
+                          aria-current="true"
+                          aria-label="Previous Slide"
+                          onClick={prevSlide}
+                        >
+                      
+                        </button>
+                        {[...Array(totalSlides)].map((_, index) => (
+                          <button
+                            key={index}
+                            type="button"
+                            className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-black' : 'bg-white'
+                              }`}
+                            aria-current={currentSlide === index}
+                            aria-label={`Slide ${index + 1}`}
+                            onClick={() => setCurrentSlide(index)}
+                          />
+                        ))}
+                        <button
+                          type="button"
+                          className="w-3 h-3 rounded-full"
+                          aria-current="true"
+                          aria-label="Next Slide"
+                          onClick={nextSlide}
+                        >
+                        
+                        </button>
+                      </div>
+                    </div>
 
                   </div>
                 </section>
@@ -227,9 +270,9 @@ export default function Home() {
             /> */}
             </div>
             <section
-             className="text-white dark:bg-gray-900 relative hiddenn pb-24  body-font z-10">
+              className="text-white dark:bg-gray-900 relative hiddenn pb-24  body-font z-10">
               <div className="container px-5 mx-auto z-10  ">
-              
+
                 <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
                   <svg
                     fill="none"
@@ -511,11 +554,13 @@ export default function Home() {
             </section>
           </section>
 
-          <section style={{ backgroundImage: "url('/background.png')",
+          <section style={{
+            backgroundImage: "url('/background.png')",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            objectFit: "cover" }} className="text-white block relative bg-[#111111] -my-1 ">
+            objectFit: "cover"
+          }} className="text-white block relative bg-[#111111] -my-1 ">
             <div className="container px-5 py-24 mx-auto  ">
               <div className="justify-center items-center text-center mb-16 text-5xl font-bold">
                 Case Studies
@@ -598,11 +643,13 @@ export default function Home() {
           </section>
 
           <How />
-          <section style={{ backgroundImage: "url('/background.png')",
+          <section style={{
+            backgroundImage: "url('/background.png')",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            objectFit: "cover" }} className="text-white block relative dark:bg-gray-900 -my-1 ">
+            objectFit: "cover"
+          }} className="text-white block relative dark:bg-gray-900 -my-1 ">
             <div aria-hidden="true" className="absolute inset-0 h-64 w-full m-auto grid grid-cols-2 -space-x-52 opacity-30">
               <div className="blur-[50px] h-64 bg-gradient-to-br  to-purple-500 from-sky-500"></div>
               <div className="blur-[50px] h-64 bg-gradient-to-r to-purple-500 from-sky-500"></div>
@@ -624,141 +671,141 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <section  className="text-white hiddenn block  -my-1">
-            <div className="container px-5 py-24 mx-auto  ">
-              <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                <div className="p-4 md:w-1/3 flex">
-                  <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLineCap="round"
-                      strokeLineJoin="round"
-                      strokeWidth="2"
-                      className="w-10 h-10"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
+            <section className="text-white hiddenn block  -my-1">
+              <div className="container px-5 py-24 mx-auto  ">
+                <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                  <div className="p-4 md:w-1/3 flex">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLineCap="round"
+                        strokeLineJoin="round"
+                        strokeWidth="2"
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div className="flex-grow pl-6">
+                      <h2 className="text-4xl title-font font-medium mb-10">
+                        Label OCR API
+                      </h2>
+                      <p className="leading-relaxed text-base">
+                        Have smartphones and camera devices extract information from
+                        any package label.
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
-                      Label OCR API
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                      Have smartphones and camera devices extract information from
-                      any package label.
-                    </p>
+                  <div className="p-4 md:w-1/3 flex">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLineCap="round"
+                        strokeLineJoin="round"
+                        strokeWidth="2"
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div className="flex-grow pl-6">
+                      <h2 className="text-4xl title-font font-medium mb-10">
+                        Label OCR API
+                      </h2>
+                      <p className="leading-relaxed text-base">
+                        Have smartphones and camera devices extract information from
+                        any package label.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-4 md:w-1/3 flex">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLineCap="round"
+                        strokeLineJoin="round"
+                        strokeWidth="2"
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div className="flex-grow pl-6">
+                      <h2 className="text-4xl title-font font-medium mb-10">
+                        Label OCR API
+                      </h2>
+                      <p className="leading-relaxed text-base">
+                        Have smartphones and camera devices extract information from
+                        any package label.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="p-4 md:w-1/3 flex">
-                  <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLineCap="round"
-                      strokeLineJoin="round"
-                      strokeWidth="2"
-                      className="w-10 h-10"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
+                <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                  <div className="p-4 md:w-1/3 flex">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLineCap="round"
+                        strokeLineJoin="round"
+                        strokeWidth="2"
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div className="flex-grow pl-6">
+                      <h2 className="text-4xl title-font font-medium mb-10">
+                        Label OCR API
+                      </h2>
+                      <p className="leading-relaxed text-base">
+                        Have smartphones and camera devices extract information from
+                        any package label.
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
-                      Label OCR API
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                      Have smartphones and camera devices extract information from
-                      any package label.
-                    </p>
-                  </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex">
-                  <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLineCap="round"
-                      strokeLineJoin="round"
-                      strokeWidth="2"
-                      className="w-10 h-10"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
-                  <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
-                      Label OCR API
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                      Have smartphones and camera devices extract information from
-                      any package label.
-                    </p>
+                  <div className="p-4 md:w-1/3 flex">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLineCap="round"
+                        strokeLineJoin="round"
+                        strokeWidth="2"
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div className="flex-grow pl-6">
+                      <h2 className="text-4xl title-font font-medium mb-10">
+                        Label OCR API
+                      </h2>
+                      <p className="leading-relaxed text-base">
+                        Have smartphones and camera devices extract information from
+                        any package label.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                <div className="p-4 md:w-1/3 flex">
-                  <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLineCap="round"
-                      strokeLineJoin="round"
-                      strokeWidth="2"
-                      className="w-10 h-10"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
-                  <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
-                      Label OCR API
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                      Have smartphones and camera devices extract information from
-                      any package label.
-                    </p>
-                  </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex">
-                  <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLineCap="round"
-                      strokeLineJoin="round"
-                      strokeWidth="2"
-                      className="w-10 h-10"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
-                  <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
-                      Label OCR API
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                      Have smartphones and camera devices extract information from
-                      any package label.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </section>
           </section>
-          </section>
-          
+
         </div>
       </div>
       <div className="z-50" style={{ position: 'relative' }}>
