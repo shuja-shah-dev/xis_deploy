@@ -43,7 +43,7 @@ const How = () => {
               </div>
               <div className="flex relative pb-12 ">
                 <div className="inline-block mr-20  text-white rounded-lg  py-10">
-                  <h1 className="block mb-3 text-3xl font-bold">Deployment</h1>
+                  <h1 className="block mb-3 text-3xl font-bold">Deploy</h1>
                   <p className="leading-relaxed">
                     Thats it! Your model is ready to be used in your application.
                   </p>
@@ -58,7 +58,7 @@ const How = () => {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <p className="flex flex-nowrap w-20">_ _ _ _ _ </p>
                 <div className="inline-block  text-white rounded-lg  py-10">
-                  <h1 className="block mb-3 text-3xl font-bold">Define Data</h1>
+                  <h1 className="block mb-3 text-3xl font-bold">Capture & Label Images</h1>
                   <p className="leading-relaxed">
                     Define your dataset and import it into either our web platform
                     or the standalone desktop app.
@@ -85,7 +85,7 @@ const How = () => {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <p className="flex flex-nowrap w-28">_ _ _ _ _ </p>
                 <div className="inline-block text-white rounded-lg  py-10">
-                  <h1 className="block mb-3 text-3xl font-bold">Testing</h1>
+                  <h1 className="block mb-3 text-3xl font-bold">Test</h1>
                   <p className="leading-relaxed">
                     Once the Labeling in process is completed you can export the
                     model and use it in your application.

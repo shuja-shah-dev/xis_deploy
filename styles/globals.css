@@ -35,7 +35,7 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   opacity: 0;
   transition: all 0.8s;
   filter: blur(5px);
-  transform: translateY(60%);
+  transform: translateY(30%);
 }
 
 .showw {

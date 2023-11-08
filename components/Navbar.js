@@ -40,12 +40,12 @@ const Navbar = () => {
         <div className="flex flex-wrap justify-between items-center mx-auto ">
           <Link
             href="/Home"
-            className="flex title-font font-medium items-start text-white mb-4 md:mb-0"
+            className="flex title-font font-medium items-start text-white "
           >
             <Image src="/Asset.png" width={100} height={100} alt="" /> 
           </Link>
           <div className="flex items-center lg:order-2">
-           <Link href="/contact" className="text-white border font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "> 
+           <Link href="/contact" className="text-white border font-medium rounded-lg text-sm px-3 sm:px-5 py-1 sm:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "> 
               Contact
             </Link>
             <button

@@ -33,49 +33,23 @@ const about = () => {
   return accessToken ? (
 
     <>
-      <div className=' fadeInUp animated container my-24 justify-center items-center text-5xl text-center  mx-auto w-full'>
-        <section className="flex items-center  xl:h-screen font-poppins ">
+      <div className=' fadeInUp animated container mt-24 justify-center items-center text-5xl text-center  mx-auto w-full'>
+        <section className="flex items-center font-poppins ">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
-            <div className="flex flex-wrap ">
-              <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-                <div className="relative lg:max-w-md">
-                  <Image width={4500} height={4100} src="/aicase.jpg" alt="aboutimage"
-                    className="relative z-10 h-full object-cover w-full rounded " />
-                  {/* <div
-                    className="absolute rounded-tl-full rounded-bl-full rounded-br-full bottom-0 right-0 z-10 p-8  border-4 rounded shadow  lg:-mb-8 lg:-mr-11 sm:p-8 :text-gray-300 bg-gray-800 ">
-                    <p className="text-lg font-semibold md:w-72">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        className="absolute top-4 left-4 w-8 h-8  "
-                        viewBox="0 0 16 16">
-                        <path
-                          d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z">
-                        </path>
-                      </svg> Successfully Providing business solutions from 25 years
-                    </p>
-                  </div> */}
-                </div>
-              </div>
-              <div className="w-full px-6 mb-10 lg:w-1/2 lg:mb-0 ">
-                <div className="pl-4 mb-6  ">
+            <div className="flex flex-wrap">
+              <div className="w-full px-6 justify-center mb-10  lg:mb-0 ">
+                <div className="pl-4 mb-6 ">
                   <span className="text-sm uppercase text-gray-200">Who we are?</span>
                   <h1 className="mt-2 text-3xl font-black  md:text-5xl text-gray-100">
                     About Us
                   </h1>
                 </div>
                 <p className="mb-6 text-base leading-7  text-gray-300">
-                  When we commissioned our first X-ray machine in 1998, we were convinced of the future of industrial 2D / 2.5D X-ray analysis and 3D computed tomography (CT). Meanwhile, we are specialized in the field of non-destructive testing through a wide variety of methods on a wide range of industrial components.
-
-                  State-of-the-art non-destructive testing techniques – From 3D computed tomography to digital X-ray testing, eddy current testing ultrasonic testing and other methods in the field of non-destructive testing technology, our application engineers and materials testers have specific expertise in all testing methods.
-
-                  Reliable test results thanks to high-quality measurement methods:
-
-                  The business line, Special machinery and plant engineering develops state-of-the-art and customized equipment, according to the industry standard 4.0. The company’s research and development budget has now grown to record levels.
-
-                  XRAY-LAB GmbH & Co. KG employs several hundred people worldwide in a wide range of business areas and also operates a growing machine park with state-of-the-art testing facilities for research, development and quality assurance.
+                  XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries,
                 </p>
                 <a href="#"
-                  className="px-4 py-2 text-2xl text-gray-100 bg-gray-800 hover:bg-gray-900 rounded  ">
-                  Learn more
+                  className="px-4 py-2 text-xl text-gray-100 rounded-xl bg-gray-800 hover:bg-gray-900 ">
+                  Get in touch
                 </a>
               </div>
             </div>
