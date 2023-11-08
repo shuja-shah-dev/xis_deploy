@@ -650,8 +650,8 @@ export default function Home() {
           }} className="text-white block relative dark:bg-gray-900 -my-1 ">
 
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
-              <div className="w-full flex flex-col lg:items-start lg:text-left  items-center text-center">
-                <h1 className="title-font sm:text-5xl sm:font-bold text-3xl mb-10 font-medium ">
+              <div className="w-full flex flex-col lg:items-center lg:text-center  items-center text-center">
+                <h1 className="title-font text-5xl font-bold mb-10 ">
                   Features
                 </h1>
                 {/* <p className="mb-10 hiddenn leading-relaxed w-1/2">
