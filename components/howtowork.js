@@ -17,7 +17,7 @@ const How = () => {
 
         <div className="container justify-center items-center text-center pb-24 mx-auto flex ">
           <div className="flex w-full justify-center text-center items-center">
-            <div className="lg:w-[35%] md:w-1/2 md:py-6">
+            <div className="lg:w-[35%] md:w-1/2 w-full md:py-6">
                 <div className="flex h-[250px] rounded text-center justify-center items-start w-full pb-20 mr-10">
                   <p className="leading-relaxed mr-10 text-center text-3xl inline-block ">
                     Step 1{" "}
@@ -50,7 +50,7 @@ const How = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:w-2/5 md:w-1/2  md:py-6">
+            <div className="lg:w-2/5 md:w-1/2 w-full  md:py-6">
               <div className="flex relative pb-20">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -104,7 +104,12 @@ const How = () => {
                   </p>
                 </div>
               </div>
-            
+              <div className="flex relative">
+                <div className="h-full w-full text-3xl -left-[40%] top-0 absolute inset-0 flex ">
+                Start Inspecting with 99.9% accuracy
+                </div>
+              
+              </div>
             </div>
           </div>
         </div>

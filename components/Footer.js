@@ -21,9 +21,9 @@ const Footer = () => {
               <Image src="/Asset.png" className="justify-center mx-auto items-center text-center mb-10" width={300} height={400} />
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <Link href="/about"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
+              <Link href="/about"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-base mb-3">
                 About Us
-              </h2></Link> 
+              </h2></Link>
               <nav className="list-none mb-10">
                 <li className="pb-1">
                   <a href="/#" className="text-gray-600 hover:text-gray-800">Impressum</a>
@@ -59,18 +59,18 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <Link href="/contact"><h2 className="title-font font-medium  text-sky-400 tracking-widest text-base mb-3 cursor-pointer">
+              <Link href="/contact"><h2 className="title-font font-medium  text-sky-400 tracking-widest text-base mb-3 cursor-pointer">
                 Contact Us
               </h2></Link>
               <nav className="list-none mb-10">
-                <li className="pb-1">
-                  <CallIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> 0800 972 9522</a>
-                </li>
-                <li className="pb-1">
-                  <PhoneIphoneIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> +49 7045 204450</a>
-                </li>
-                <li className="pb-1">
-                  <EmailIcon /> <a href="/#" className="text-gray-600 hover:text-gray-800"> contact@xray-lab.com</a></li>
+                <Link href="/contact"><li className="pb-1 text-gray-600 hover:text-gray-800">
+                  <CallIcon /> 0800 972 9522
+                </li></Link>
+                <Link href="/contact"><li className="pb-1 text-gray-600 hover:text-gray-800">
+                  <PhoneIphoneIcon /> +49 7045 204450
+                </li></Link>
+                <Link href="/contact"><li className="pb-1 text-gray-600 hover:text-gray-800">
+                  <EmailIcon /> contact@xray-lab.com</li></Link>
               </nav>
               <div className="cursor-pointer"><FacebookOutlinedIcon /> <TwitterIcon /> <InstagramIcon /> <Link target="_blank" href="https://www.linkedin.com/company/xray-lab/"><LinkedInIcon /></Link> <YouTubeIcon /></div>
             </div>

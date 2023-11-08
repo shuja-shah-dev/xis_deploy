@@ -168,7 +168,7 @@ export default function Home() {
             >
               Build, Deploy & Inspect Quality in Minutes
             </p>
-            <Link href="/contact"><button className="rounded-md  hover:bg-white hover:text-black border px-2 py-1 mt-4">
+            <Link href="/contact"><button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
               Get a demo
             </button></Link>
           </div>
@@ -184,14 +184,14 @@ export default function Home() {
               objectFit: "cover"
             }}
           >
-            <div className="justify-center text-white pb-6 text-center items-center w-full relative mx-auto z-10">
-              <h1 className="text-5xl font-bold mb-20 pt-10">
+            <div className="justify-center text-white text-center items-center w-full relative mx-auto z-10">
+              <h1 className="text-5xl font-bold mb-16 pt-10">
                 Benefits
               </h1>
               <div className="mb-12 sm:mb-10 relative mx-auto justify-center items-center z-10">
 
                 <section>
-                  <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                  <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl md:grid md:grid-cols-2 md:pt-16 lg:px-6">
 
                     <div className="font-light text-gray-100 sm:text-lg dark:text-gray-400">
                       <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
