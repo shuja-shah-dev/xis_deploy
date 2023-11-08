@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 
 
-const Contact = () => {
+const contact = () => {
     const controller = useRouter();
     const { accessToken } = useAuth();
 
@@ -235,4 +235,4 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default contact;

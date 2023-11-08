@@ -168,7 +168,7 @@ export default function Home() {
             >
               Build, Deploy & Inspect Quality in Minutes
             </p>
-            <Link href="/Contact"><button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+            <Link href="/contact"><button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
               Get a demo
             </button></Link>
           </div>

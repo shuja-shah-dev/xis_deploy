@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 
 
-const About = () => {
+const about = () => {
 
   const controller = useRouter();
   const { accessToken } = useAuth();
@@ -157,4 +157,4 @@ const About = () => {
 }
 
 
-export default About;
+export default about;
