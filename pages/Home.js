@@ -168,7 +168,7 @@ export default function Home() {
             >
               Build, Deploy & Inspect Quality in Minutes
             </p>
-            <Link href="/contact"><button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+            <Link href="/Contact"><button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
               Get a demo
             </button></Link>
           </div>
@@ -819,7 +819,7 @@ export default function Home() {
     <>
       <Head>
         <title>xis.ai</title>
-        <meta name="description" content="xis.ai xray-lab" />
+        <meta name="description" content="XIS AI, AI startup, industrial quality inspection, process monitoring" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
 
       </Head>

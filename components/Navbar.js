@@ -45,7 +45,7 @@ const Navbar = () => {
             <Image src="/Asset.png" width={100} height={100} alt="" /> 
           </Link>
           <div className="flex items-center lg:order-2">
-           <Link href="/contact" className="text-white border font-medium rounded-lg text-sm px-3 sm:px-5 py-1 sm:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "> 
+           <Link href="/Contact" className="text-white border font-medium rounded-lg text-sm px-3 sm:px-5 py-1 sm:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "> 
               Contact
             </Link>
             <button
@@ -95,7 +95,7 @@ const Navbar = () => {
                 </li>
               </Link>
 
-              <Link href="/about">
+              <Link href="/About">
                 <li className="relative group">
                   About Us
                   {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
