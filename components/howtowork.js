@@ -26,7 +26,7 @@ const How = () => {
              
               <div className="flex relative  pb-16">
                 <div className="inline-block w-full mr-20 rounded-lg text-white py-6">
-                  <h1 className="block mb-3 text-3xl font-bold">Training</h1>
+                  <h1 className="block mb-3 text-3xl font-bold">Train AI</h1>
                   <p className="leading-relaxed">
                     Train the AI based on the dataset you Provided. Our web app
                     and software allow you to effortlessly import your data,
@@ -105,7 +105,7 @@ const How = () => {
                 </div>
               </div>
               <div className="flex relative">
-                <div className="h-full w-full text-3xl -left-[40%] top-0 absolute inset-0 flex ">
+                <div className="h-full w-full text-3xl -left-[40%] top-20 absolute inset-0 flex ">
                 Start Inspecting with 99.9% accuracy
                 </div>
               
