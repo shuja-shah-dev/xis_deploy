@@ -173,8 +173,13 @@ const benefitSection = () => {
     setIsCollapsed(!isCollapsed);
   };
   const accordionStyle = {
+    // backgroundImage: "url('/background.png')",
+    // backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
+    // backgroundPosition: "center",
+    // objectFit: "cover",
     backgroundColor: '#111111',
-    color: "white" ,
+    color: "white",
     border: "1px solid gray"
   };
 
@@ -189,7 +194,7 @@ const benefitSection = () => {
         objectFit: "cover"
       }}
     >
-      <div className="justify-center text-white text-center items-center w-full relative mx-auto z-10">
+      <div className="justify-center text-white  text-center items-center w-full relative mx-auto z-10">
         <h1 className="text-5xl font-bold mb-16 pt-10">
           Benefits
         </h1>
@@ -197,29 +202,29 @@ const benefitSection = () => {
           <section>
             <div className="gap-16 items-start py-8 px-4 mx-auto max-w-screen-xl md:grid md:grid-cols-2 md:pt-16 lg:px-6">
               <div className="flex flex-wrap ">
-              <div>
-              {
-                  vision.map((item, index) => {
-                    return (
-      <Accordion style={accordionStyle}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>{item.heading}</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-           {item.para}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-         )
-        })
-      }
-     
-    </div>
+                <div>
+                  {
+                    vision.map((item, index) => {
+                      return (
+                        <Accordion style={accordionStyle}>
+                          <AccordionSummary
+                            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                          >
+                            <Typography>{item.heading}</Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            <Typography>
+                              {item.para}
+                            </Typography>
+                          </AccordionDetails>
+                        </Accordion>
+                      )
+                    })
+                  }
+
+                </div>
                 {/* {
                   vision.map((item, index) => {
                     return (
