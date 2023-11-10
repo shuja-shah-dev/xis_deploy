@@ -173,13 +173,18 @@ const PerformanceAnalytics = () => {
       <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
-            Assembly process automation
+            Performance Analytics
           </h1>
           <p class="mb-8 leading-relaxed">
-            Computer vision technology can automate the entire assembly process.
-            It can detect parts, orient them correctly to the assembly line, and
-            then track their progress as they move through the various stages of
-            the production process.
+            Our product provides in-depth performance
+            analytics for batch defects, offering a comprehensive overview of
+            production quality. Through meticulous data analysis, it pinpoints
+            root causes, enabling swift corrective measures. Real-time
+            monitoring ensures immediate response to deviations, optimizing
+            production efficiency. With customizable reporting, our solution
+            empowers decision-makers to enhance overall product quality. Elevate
+            your manufacturing processes with our precise and actionable batch
+            defect analytics.
           </p>
         </div>
         <div class="lg:max-w-lg w-full">
@@ -392,7 +397,7 @@ const benefitSection = () => {
           </div>
           {screen === "auto-annotate" && <DefectDetection />}
           {screen === "annotation-types" && <CountingDefects />}
-          {screen === "performance" && <CountingDefects />}
+          {screen === "performance" && <PerformanceAnalytics />}
           {screen === "real-time" && <ProductSorting />}
         </div>
       </div>
