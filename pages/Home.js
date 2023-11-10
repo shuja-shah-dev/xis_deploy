@@ -75,6 +75,58 @@ const introSection = () => {
   )
 };
 
+const Autoannotate = () => {  
+  return(
+    <section class="text-white">
+  <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Quality inspection</h1>
+      <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+    
+    </div>
+    <div class="lg:max-w-lg  w-full">
+      <Image width={4100} height={4100} class="object-cover w-full object-center rounded" alt="hero" src="/robotic1.jpeg"/>
+    </div>
+  </div>
+</section>
+  )
+}
+
+const AnnotationTypes = () => {  
+  return(
+    <section class="text-white">
+  <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Assembly process automation</h1>
+      <p class="mb-8 leading-relaxed">Computer vision technology can automate the entire assembly process. It can detect parts, orient them correctly to the assembly line, and then track their progress as they move through the various stages of the production process.</p>
+    
+    </div>
+    <div class="lg:max-w-lg w-full">
+      <Image width={4100} height={4100} class="object-cover w-full object-center rounded" alt="hero" src="/robotic2.jpeg"/>
+    </div>
+  </div>
+</section>
+  )
+}
+
+const  PerformanceAnalytics  = () => {  
+  return(
+    <section class="text-white">
+  <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Assembly process automation</h1>
+      <p class="mb-8 leading-relaxed">Computer vision technology can automate the entire assembly process. It can detect parts, orient them correctly to the assembly line, and then track their progress as they move through the various stages of the production process.</p>
+    
+    </div>
+    <div class="lg:max-w-lg w-full">
+      <Image width={4100} height={4100} class="object-cover w-full object-center rounded" alt="hero" src="/robotic3.jpeg"/>
+    </div>
+  </div>
+</section>
+  )
+}
+
+
 const benefitSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3; // Adjust the total number of slides
@@ -183,6 +235,8 @@ const benefitSection = () => {
     border: "1px solid gray"
   };
 
+  const [screen, setScreen] = useState("auto-annotate");
+
   return (
     <section
       className="text-white  block relative  mt-0 "
@@ -194,7 +248,93 @@ const benefitSection = () => {
         objectFit: "cover"
       }}
     >
-      <div className="justify-center text-white  text-center items-center w-full relative mx-auto z-10">
+        <div
+       
+        className="text-gray-600 mx-auto container "
+      >
+        <div  className=" px-4 py-12">
+          <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
+            <form className="mb-2 w-full text-center items-center rounded-lg lg:mb-0 lg:flex">
+              <div className="flex flex-wrap lg:flex-nowrap justify-center  text-center gap-3 shadow-sm h-[100%] lg:h-14 items-center  rounded-md w-full relative ">
+                <input
+                  onClick={() => setScreen("auto-annotate")}
+                  className="h-[0px] w-[0px]  overflow-hidden absolute"
+                  type="radio"
+                  id="auto-annotate"
+                  value=""
+                />
+                <label
+                  htmlFor="auto-annotate"
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${
+                    screen === "auto-annotate" &&
+                    "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
+                  } `}
+                >
+                  Auto-Annotate
+                </label>
+                <input
+                  onClick={() => setScreen("annotation-types")}
+                  className="h-[0px] w-[0px]   overflow-hidden absolute"
+                  type="radio"
+                  id="annotation-types"
+                  value=""
+                  checked
+                />
+                <label
+                  htmlFor="annotation-types"
+                  className={`lg:text-lg text-sm  w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
+                    screen === "annotation-types" &&
+                    "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
+                  }`}
+                >
+                  Annotation Types
+                </label>
+                <input
+                  onClick={() => setScreen("performance")}
+                  className="h-[0px] w-[0px]   overflow-hidden absolute"
+                  type="radio"
+                  id="performance"
+                  value=""
+                  checked
+                />
+                <label
+                  htmlFor="performance"
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
+                    screen === "performance" &&
+                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                  }`}
+                >
+                  Performance Analytics 
+                </label>
+                <input
+                  onClick={() => setScreen("real-time")}
+                  className="h-[0px] w-[0px]   overflow-hidden absolute"
+                  type="radio"
+                  id="real-time"
+                  value=""
+                  checked
+                />
+                <label
+                  htmlFor="real-time"
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
+                    screen === "real-time" &&
+                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                  }`}
+                >
+                  Real-time Collaboration
+                </label>
+              
+              </div>
+            </form>
+          </div>
+          {screen === "auto-annotate" && Autoannotate()}
+          {screen === "annotation-types" && AnnotationTypes()}
+          {screen === "performance" && PerformanceAnalytics()}
+        
+        </div>
+      </div>
+      
+      {/* <div className="justify-center text-white  text-center items-center w-full relative mx-auto z-10">
         <h1 className="text-5xl font-bold mb-16 pt-10">
           Benefits
         </h1>
@@ -225,7 +365,7 @@ const benefitSection = () => {
                   }
 
                 </div>
-                {/* {
+                {
                   vision.map((item, index) => {
                     return (
                       <div key={index} className="xl:w-1/2 md:w-1/2 p-4">
@@ -236,7 +376,7 @@ const benefitSection = () => {
                       </div>
                     )
                   })
-                } */}
+                }
               </div>
               <div id="default-carousel" className="relative mt-20 lg:mt-0 w-full" data-carousel="slide">
                 <div className="relative h-96 overflow-hidden rounded-lg md:h-96">
@@ -293,22 +433,22 @@ const benefitSection = () => {
 
             </div>
           </section>
-          {/* <Image
+          <Image
                 src="/fourpics.png"
                 width={512}
                 height={680}
                 className="block w-[785px] object-cover mx-auto lg:hidden max-w-full"
-              /> */}
+              />
         </div>
-        {/* <Image
+        <Image
               src="/img5.svg"
               width={1096}
               height={680}
               className="-z-[1] max-w-none absolute top-0 left-[28%] pointer-events-none"
-            /> */}
-      </div>
+            />
+      </div> */}
       <section
-        className="text-white dark:bg-gray-900 relative hiddenn pb-24  body-font z-10">
+        className="text-white relative hiddenn pb-24  body-font z-10">
         <div className="container px-5 mx-auto z-10  ">
           <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
             <svg
@@ -327,7 +467,7 @@ const benefitSection = () => {
             {
               data.map((item, index) => {
                 return (
-                  <div className="p-4 md:w-1/2 w-full">
+                  <div key={index} className="p-4 md:w-1/2 w-full">
                     <div className="h-full p-4 rounded">
                       <h1 className="mb-4 text-2xl font-medium ">
                         {item.title}
@@ -377,7 +517,7 @@ const benefitSection = () => {
             {
               benefit.map((item, index) => {
                 return (
-                  <div className="p-4 md:w-1/3">
+                  <div key={index} className="p-4 md:w-1/3">
                     <div className="flex rounded-lg h-full p-8 flex-col  ">
                       <div className="flex items-center mb-8">
                         <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
