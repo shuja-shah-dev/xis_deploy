@@ -226,15 +226,19 @@ const benefitSection = () => {
   const data = [
     {
       svg: "",
-      title: "Get chain visibility",
-      desc: "Get insights from every part of the package journey",
+      title: "Reduce Recall",
+      desc: "Our Product ensures early detection of defects, reducing the risk of recalls",
       para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
+      second:'',
+
     },
     {
       svg: "",
       title: "Get chain visibility",
       desc: "Get insights from every part of the package journey",
       para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
+      second:'',
+
     },
   ];
 
