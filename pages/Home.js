@@ -11,16 +11,15 @@ import Image from "next/image";
 import RoboticArm from "../assets/roboticArm.png";
 import defectDetection from "../assets/defectDetection.png";
 import xray2 from "../assets/xray2.png";
-import 'intersection-observer';
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import "intersection-observer";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { useAuth } from "@/common/authProvider";
 import Link from "next/link";
-import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const introSection = () => {
   return (
@@ -61,71 +60,141 @@ const introSection = () => {
           Simplified Edge AI for Industrial Inspection
         </h1>
 
-        <p
-          className=" text-base sm:text-xl mt-4 "
-
-        >
+        <p className=" text-base sm:text-xl mt-4 ">
           Build, Deploy & Inspect Quality in Minutes
         </p>
-        <Link href="/contact"><button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
-          Get a demo
-        </button></Link>
+        <Link href="/contact">
+          <button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+            Get a demo
+          </button>
+        </Link>
       </div>
     </Box>
-  )
+  );
 };
 
-const Autoannotate = () => {  
-  return(
+const DefectDetection = () => {
+  return (
     <section class="text-white">
-  <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Quality inspection</h1>
-      <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-    
-    </div>
-    <div class="lg:max-w-lg  w-full">
-      <Image width={4100} height={4100} class="object-cover w-full object-center rounded" alt="hero" src="/robotic1.jpeg"/>
-    </div>
-  </div>
-</section>
-  )
-}
+      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+            Defect Detection
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Leveraging AI-driven anomaly detection, the integration of computer
+            vision facilitates automated visual inspection to identify defective
+            products, detecting anomalies such as scratches or dents, and/or
+            cracks.
+          </p>
+        </div>
+        <div class="lg:max-w-lg  w-full">
+          <Image
+            width={4100}
+            height={4100}
+            class="object-cover w-full object-center rounded"
+            alt="hero"
+            src="/robotic1.jpeg"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-const AnnotationTypes = () => {  
-  return(
+const CountingDefects = () => {
+  return (
     <section class="text-white">
-  <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Assembly process automation</h1>
-      <p class="mb-8 leading-relaxed">Computer vision technology can automate the entire assembly process. It can detect parts, orient them correctly to the assembly line, and then track their progress as they move through the various stages of the production process.</p>
-    
-    </div>
-    <div class="lg:max-w-lg w-full">
-      <Image width={4100} height={4100} class="object-cover w-full object-center rounded" alt="hero" src="/robotic2.jpeg"/>
-    </div>
-  </div>
-</section>
-  )
-}
+      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+            Defects & Product Counting
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            In the domain of object and defect counting, the seamless fusion of
+            computer vision and machine learning offers a powerful solution for
+            precise and efficient counting. Leveraging state-of-the-art
+            technologies, automated systems adeptly tally objects with accuracy
+            and speed. This integrated approach optimizes counting processes,
+            ensuring a meticulous and reliable enumeration of objects and
+            defects in a production line.
+          </p>
+        </div>
+        <div class="lg:max-w-lg w-full">
+          <Image
+            width={4100}
+            height={4100}
+            class="object-cover w-full object-center rounded"
+            alt="hero"
+            src="/robotic2.jpeg"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-const  PerformanceAnalytics  = () => {  
-  return(
+const ProductSorting = () => {
+  return (
     <section class="text-white">
-  <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Assembly process automation</h1>
-      <p class="mb-8 leading-relaxed">Computer vision technology can automate the entire assembly process. It can detect parts, orient them correctly to the assembly line, and then track their progress as they move through the various stages of the production process.</p>
-    
-    </div>
-    <div class="lg:max-w-lg w-full">
-      <Image width={4100} height={4100} class="object-cover w-full object-center rounded" alt="hero" src="/robotic3.jpeg"/>
-    </div>
-  </div>
-</section>
-  )
-}
+      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+            Product Sorting
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Our Solution in product sorting revolutionizes traditional methods
+            by offering unmatched speed, accuracy, and adaptability. Through our
+            products, users can efficiently categorize imperfect parts from the
+            rest of the batch, ensuring precise sorting. The cost-effectiveness,
+            driven by reduced labor and minimized Human errors, underscores its
+            long-term value. AI sorting not only enhances operational efficiency
+            but also positions industries at the forefront of innovation in
+            manufacturing and logistics.
+          </p>
+        </div>
+        <div class="lg:max-w-lg w-full">
+          <Image
+            width={4100}
+            height={4100}
+            class="object-cover w-full object-center rounded"
+            alt="hero"
+            src="/robotic2.jpeg"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
 
+const PerformanceAnalytics = () => {
+  return (
+    <section class="text-white">
+      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+            Assembly process automation
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Computer vision technology can automate the entire assembly process.
+            It can detect parts, orient them correctly to the assembly line, and
+            then track their progress as they move through the various stages of
+            the production process.
+          </p>
+        </div>
+        <div class="lg:max-w-lg w-full">
+          <Image
+            width={4100}
+            height={4100}
+            class="object-cover w-full object-center rounded"
+            alt="hero"
+            src="/robotic3.jpeg"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const benefitSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -149,42 +218,41 @@ const benefitSection = () => {
     };
   }, []);
 
-
   const data = [
     {
       svg: "",
-      title: 'Get chain visibility',
-      desc: 'Get insights from every part of the package journey',
-      para: 'Synth chartreuse iPhone lomo cray raw denim brunch everyday carry'
+      title: "Get chain visibility",
+      desc: "Get insights from every part of the package journey",
+      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
     },
     {
       svg: "",
-      title: 'Get chain visibility',
-      desc: 'Get insights from every part of the package journey',
-      para: 'Synth chartreuse iPhone lomo cray raw denim brunch everyday carry'
+      title: "Get chain visibility",
+      desc: "Get insights from every part of the package journey",
+      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
     },
-  ]
+  ];
 
   const benefit = [
     {
       svg: "",
-      title: 'Get chain visibility',
-      desc: 'Get insights from every part of the package journey',
-      para: 'Synth chartreuse iPhone lomo cray raw denim brunch everyday carry'
+      title: "Get chain visibility",
+      desc: "Get insights from every part of the package journey",
+      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
     },
     {
       svg: "",
-      title: 'Get chain visibility',
-      desc: 'Get insights from every part of the package journey',
-      para: 'Synth chartreuse iPhone lomo cray raw denim brunch everyday carry'
+      title: "Get chain visibility",
+      desc: "Get insights from every part of the package journey",
+      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
     },
     {
       svg: "",
-      title: 'Get chain visibility',
-      desc: 'Get insights from every part of the package journey',
-      para: 'Synth chartreuse iPhone lomo cray raw denim brunch everyday carry'
+      title: "Get chain visibility",
+      desc: "Get insights from every part of the package journey",
+      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
     },
-  ]
+  ];
 
   const vision = [
     {
@@ -211,8 +279,7 @@ const benefitSection = () => {
       heading: "6 Sorting and counting",
       para: "Manufacturers use computer vision to sort and count items, such as parts or components. Automatic sorting helps to improve accuracy, particularly in high-volume production environments.",
     },
-  ]
-
+  ];
 
   const [isParagraphVisible, setIsParagraphVisible] = useState(false);
 
@@ -230,9 +297,9 @@ const benefitSection = () => {
     // backgroundRepeat: "no-repeat",
     // backgroundPosition: "center",
     // objectFit: "cover",
-    backgroundColor: '#111111',
+    backgroundColor: "#111111",
     color: "white",
-    border: "1px solid gray"
+    border: "1px solid gray",
   };
 
   const [screen, setScreen] = useState("auto-annotate");
@@ -245,14 +312,11 @@ const benefitSection = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        objectFit: "cover"
+        objectFit: "cover",
       }}
     >
-        <div
-       
-        className="text-gray-600 mx-auto container "
-      >
-        <div  className=" px-4 py-12">
+      <div className="text-gray-600 mx-auto container ">
+        <div className=" px-4 py-12">
           <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
             <form className="mb-2 w-full text-center items-center rounded-lg lg:mb-0 lg:flex">
               <div className="flex flex-wrap lg:flex-nowrap justify-center  text-center gap-3 shadow-sm h-[100%] lg:h-14 items-center  rounded-md w-full relative ">
@@ -270,7 +334,7 @@ const benefitSection = () => {
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                   } `}
                 >
-                  Auto-Annotate
+                  Defect Detection
                 </label>
                 <input
                   onClick={() => setScreen("annotation-types")}
@@ -287,7 +351,7 @@ const benefitSection = () => {
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                   }`}
                 >
-                  Annotation Types
+                  Object & Defect Counting
                 </label>
                 <input
                   onClick={() => setScreen("performance")}
@@ -304,7 +368,7 @@ const benefitSection = () => {
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                   }`}
                 >
-                  Performance Analytics 
+                  Performance Statistics
                 </label>
                 <input
                   onClick={() => setScreen("real-time")}
@@ -321,19 +385,18 @@ const benefitSection = () => {
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                   }`}
                 >
-                  Real-time Collaboration
+                  Product Sorting
                 </label>
-              
               </div>
             </form>
           </div>
-          {screen === "auto-annotate" && Autoannotate()}
-          {screen === "annotation-types" && AnnotationTypes()}
-          {screen === "performance" && PerformanceAnalytics()}
-        
+          {screen === "auto-annotate" && <DefectDetection />}
+          {screen === "annotation-types" && <CountingDefects />}
+          {screen === "performance" && <CountingDefects />}
+          {screen === "real-time" && <ProductSorting />}
         </div>
       </div>
-      
+
       {/* <div className="justify-center text-white  text-center items-center w-full relative mx-auto z-10">
         <h1 className="text-5xl font-bold mb-16 pt-10">
           Benefits
@@ -447,8 +510,7 @@ const benefitSection = () => {
               className="-z-[1] max-w-none absolute top-0 left-[28%] pointer-events-none"
             />
       </div> */}
-      <section
-        className="text-white relative hiddenn pb-24  body-font z-10">
+      <section className="text-white relative hiddenn pb-24  body-font z-10">
         <div className="container px-5 mx-auto z-10  ">
           <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
             <svg
@@ -464,131 +526,120 @@ const benefitSection = () => {
             </svg>
           </div>
           <div className="flex flex-wrap -m-4">
-            {
-              data.map((item, index) => {
-                return (
-                  <div key={index} className="p-4 md:w-1/2 w-full">
-                    <div className="h-full p-4 rounded">
-                      <h1 className="mb-4 text-2xl font-medium ">
-                        {item.title}
-                      </h1>
-                      <p className="mb-8 font-medium ">
-                        {item.desc}
-                      </p>
+            {data.map((item, index) => {
+              return (
+                <div key={index} className="p-4 md:w-1/2 w-full">
+                  <div className="h-full p-4 rounded">
+                    <h1 className="mb-4 text-2xl font-medium ">{item.title}</h1>
+                    <p className="mb-8 font-medium ">{item.desc}</p>
 
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline  ">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        {item.para}
-                      </p>
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        {item.para}
-                      </p>
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4 "
-                        />{" "}
-                        {item.para}
-                      </p>
-                    </div>
+                    <p className="leading-relaxed flex mb-6 justify-start items-baseline  ">
+                      <Image
+                        src="/circle.svg"
+                        width={10}
+                        height={10}
+                        className="mr-4"
+                      />{" "}
+                      {item.para}
+                    </p>
+                    <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
+                      <Image
+                        src="/circle.svg"
+                        width={10}
+                        height={10}
+                        className="mr-4"
+                      />{" "}
+                      {item.para}
+                    </p>
+                    <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
+                      <Image
+                        src="/circle.svg"
+                        width={10}
+                        height={10}
+                        className="mr-4 "
+                      />{" "}
+                      {item.para}
+                    </p>
                   </div>
-                )
-              })
-            }
-
+                </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="container px-5  mx-auto">
           <div className="flex flex-wrap -m-4">
-            {
-              benefit.map((item, index) => {
-                return (
-                  <div key={index} className="p-4 md:w-1/3">
-                    <div className="flex rounded-lg h-full p-8 flex-col  ">
-                      <div className="flex items-center mb-8">
-                        <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLineCap="round"
-                            strokeLineJoin="round"
-                            strokeWidth="2"
-                            className="w-10 h-10"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                          </svg>
-                        </div>
-                      </div>
-
-                      <div className="flex-grow ">
-                        <h2 className=" text-2xl font-medium mb-4 ">
-                          {item.title}
-                        </h2>
-                        <p className="leading-relaxed font-medium mb-4 ">
-                          Blue bottle crucifix vinyl post-ironic four dollar toast
-                          vegan taxidermy. Gastropub indxgo juice poutine.
-                        </p>
-                        <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                          <Image
-                            src="/circle.svg"
-                            width={10}
-                            height={10}
-                            className="mr-4"
-                          />{" "}
-                          Synth chartreuse iPhone lomo cray raw denim brunch
-                          everyday carry.
-                        </p>
-                        <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                          <Image
-                            src="/circle.svg"
-                            width={10}
-                            height={10}
-                            className="mr-4"
-                          />{" "}
-                          Synth chartreuse iPhone lomo cray raw denim brunch
-                          everyday carry.
-                        </p>
-                        <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                          <Image
-                            src="/circle.svg"
-                            width={10}
-                            height={10}
-                            className="mr-4"
-                          />{" "}
-                          Synth chartreuse iPhone lomo cray raw denim brunch
-                          everyday carry.
-                        </p>
+            {benefit.map((item, index) => {
+              return (
+                <div key={index} className="p-4 md:w-1/3">
+                  <div className="flex rounded-lg h-full p-8 flex-col  ">
+                    <div className="flex items-center mb-8">
+                      <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          strokeLineCap="round"
+                          strokeLineJoin="round"
+                          strokeWidth="2"
+                          className="w-10 h-10"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
                       </div>
                     </div>
-                  </div>
-                )
-              })
-            }
 
+                    <div className="flex-grow ">
+                      <h2 className=" text-2xl font-medium mb-4 ">
+                        {item.title}
+                      </h2>
+                      <p className="leading-relaxed font-medium mb-4 ">
+                        Blue bottle crucifix vinyl post-ironic four dollar toast
+                        vegan taxidermy. Gastropub indxgo juice poutine.
+                      </p>
+                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
+                        <Image
+                          src="/circle.svg"
+                          width={10}
+                          height={10}
+                          className="mr-4"
+                        />{" "}
+                        Synth chartreuse iPhone lomo cray raw denim brunch
+                        everyday carry.
+                      </p>
+                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
+                        <Image
+                          src="/circle.svg"
+                          width={10}
+                          height={10}
+                          className="mr-4"
+                        />{" "}
+                        Synth chartreuse iPhone lomo cray raw denim brunch
+                        everyday carry.
+                      </p>
+                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
+                        <Image
+                          src="/circle.svg"
+                          width={10}
+                          height={10}
+                          className="mr-4"
+                        />{" "}
+                        Synth chartreuse iPhone lomo cray raw denim brunch
+                        everyday carry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
     </section>
-  )
+  );
 };
 
 const caseStudies = () => {
-
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -627,15 +678,17 @@ const caseStudies = () => {
     window.addEventListener("mouseup", handleMouseUp);
   };
 
-
   return (
-    <section style={{
-      backgroundImage: "url('/background.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      objectFit: "cover"
-    }} className="text-white block relative -my-1 ">
+    <section
+      style={{
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        objectFit: "cover",
+      }}
+      className="text-white block relative -my-1 "
+    >
       <div className="container px-5 py-24 mx-auto  ">
         <div className="justify-center items-center text-center mb-16 text-5xl font-bold">
           Case Studies
@@ -671,8 +724,9 @@ const caseStudies = () => {
                       <img
                         decoding="async"
                         style={{
-                          clipPath: `polygon(0 0, ${imageReveal * 100
-                            }% 0, ${imageReveal * 100}% 100%, 0 100%)`,
+                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                            imageReveal * 100
+                          }% 100%, 0 100%)`,
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="https://www.tomomi-research.com/wp-content/uploads/2023/03/live-img-2022-09-23-14-11-58--jpg.webp"
@@ -716,24 +770,24 @@ const caseStudies = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const featureSection = () => {
   return (
-    <section style={{
-      backgroundImage: "url('/background.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      objectFit: "cover"
-    }} className="text-white block relative dark:bg-gray-900 -my-1 ">
-
+    <section
+      style={{
+        backgroundImage: "url('/background.png')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        objectFit: "cover",
+      }}
+      className="text-white block relative dark:bg-gray-900 -my-1 "
+    >
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
         <div className="w-full flex flex-col lg:items-center lg:text-center  items-center text-center">
-          <h1 className="title-font text-5xl font-bold mb-10 ">
-            Features
-          </h1>
+          <h1 className="title-font text-5xl font-bold mb-10 ">Features</h1>
           {/* <p className="mb-10 hiddenn leading-relaxed w-1/2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
             quasi exercitationem temporibus minus quos dicta rem quis
@@ -880,16 +934,13 @@ const featureSection = () => {
         </div>
       </section>
     </section>
-  )
-}
+  );
+};
 
 export default function Home() {
-
   const controller = useRouter();
 
   const { accessToken } = useAuth();
-
-
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -902,7 +953,7 @@ export default function Home() {
       });
     });
 
-    const hiddenElements = document.querySelectorAll('.hiddenn');
+    const hiddenElements = document.querySelectorAll(".hiddenn");
     hiddenElements.forEach((element) => {
       observer.observe(element);
     });
@@ -916,28 +967,26 @@ export default function Home() {
       setShowButton(shouldShow);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
 
   return accessToken ? (
     <>
-
-
       <div
         style={{
           backgroundImage: "url('/background.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          objectFit: "cover"
+          objectFit: "cover",
         }}
-        className="bg-[#111111] text-white relative overflow-hidden">
+        className="bg-[#111111] text-white relative overflow-hidden"
+      >
         {introSection()}
         <div className="text-white  block relative  mt-0">
           {benefitSection()}
@@ -946,11 +995,21 @@ export default function Home() {
           {featureSection()}
         </div>
       </div>
-      <div className="z-50" style={{ position: 'relative' }}>
-        <div className="z-50" style={{ position: 'fixed', bottom: '10%', right: '3%', }}>
+      <div className="z-50" style={{ position: "relative" }}>
+        <div
+          className="z-50"
+          style={{ position: "fixed", bottom: "10%", right: "3%" }}
+        >
           <button
             className="z-50"
-            style={{ backgroundColor: '#363636', padding: '10px 10px', borderRadius: "10px", color: '#fff', transition: '0.5s ease-in-out', opacity: showButton ? 1 : 0 }}
+            style={{
+              backgroundColor: "#363636",
+              padding: "10px 10px",
+              borderRadius: "10px",
+              color: "#fff",
+              transition: "0.5s ease-in-out",
+              opacity: showButton ? 1 : 0,
+            }}
             onClick={scrollToTop}
           >
             <KeyboardDoubleArrowUpIcon />
@@ -962,9 +1021,11 @@ export default function Home() {
     <>
       <Head>
         <title>xis.ai</title>
-        <meta name="description" content="XIS AI, AI startup, industrial quality inspection, process monitoring" />
+        <meta
+          name="description"
+          content="XIS AI, AI startup, industrial quality inspection, process monitoring"
+        />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-
       </Head>
 
       <Box
@@ -987,8 +1048,12 @@ export default function Home() {
             flexDirection: "column",
           }}
         >
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>Permission Denied.</Typography>
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>Please Login to continue.</Typography>
+          <Typography sx={{ width: "100%", textAlign: "Center" }}>
+            Permission Denied.
+          </Typography>
+          <Typography sx={{ width: "100%", textAlign: "Center" }}>
+            Please Login to continue.
+          </Typography>
           <button
             onClick={(_) => {
               controller.push("/");
