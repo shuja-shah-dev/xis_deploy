@@ -227,17 +227,16 @@ const benefitSection = () => {
     {
       svg: "",
       title: "Reduce Recall",
-      desc: "Our Product ensures early detection of defects, reducing the risk of recalls",
-      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
-      second:'',
+      para: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
+      second:'The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.',
+      third: ""
 
     },
     {
       svg: "",
-      title: "Get chain visibility",
-      desc: "Get insights from every part of the package journey",
-      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
-      second:'',
+      title: "Reduce Costs",
+      para: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
+      second:'Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.',
 
     },
   ];
@@ -245,9 +244,10 @@ const benefitSection = () => {
   const benefit = [
     {
       svg: "",
-      title: "Get chain visibility",
-      desc: "Get insights from every part of the package journey",
+      title: "Efficiency in Industrial Pipeline",
       para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
+      second: "",
+      third: ""
     },
     {
       svg: "",
@@ -558,17 +558,9 @@ const benefitSection = () => {
                         height={10}
                         className="mr-4"
                       />{" "}
-                      {item.para}
+                      {item.second}
                     </p>
-                    <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
-                      <Image
-                        src="/circle.svg"
-                        width={10}
-                        height={10}
-                        className="mr-4 "
-                      />{" "}
-                      {item.para}
-                    </p>
+               
                   </div>
                 </div>
               );
@@ -602,10 +594,7 @@ const benefitSection = () => {
                       <h2 className=" text-2xl font-medium mb-4 ">
                         {item.title}
                       </h2>
-                      <p className="leading-relaxed font-medium mb-4 ">
-                        Blue bottle crucifix vinyl post-ironic four dollar toast
-                        vegan taxidermy. Gastropub indxgo juice poutine.
-                      </p>
+                
                       <p className="leading-relaxed flex mb-6 justify-start items-baseline">
                         <Image
                           src="/circle.svg"
@@ -613,8 +602,7 @@ const benefitSection = () => {
                           height={10}
                           className="mr-4"
                         />{" "}
-                        Synth chartreuse iPhone lomo cray raw denim brunch
-                        everyday carry.
+                       {item.para}
                       </p>
                       <p className="leading-relaxed flex mb-6 justify-start items-baseline">
                         <Image
