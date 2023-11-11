@@ -24,6 +24,8 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import SpeedIcon from "@mui/icons-material/Speed";
 import ErrorIcon from "@mui/icons-material/Error";
+import EqualizerIcon from "@mui/icons-material/Equalizer";
+import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 
 const introSection = () => {
   return (
@@ -231,8 +233,7 @@ const benefitSection = () => {
       svg: <LocalShippingIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Recall",
       desc: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
-      para:
-        "The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.",
+      para: "The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.",
       third: "",
     },
 
@@ -240,38 +241,36 @@ const benefitSection = () => {
       svg: <ErrorIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Human Error",
       desc: "Significantly reduce human errors in the inspection process, Improving product quality & consistency.",
-      para:
-        "Our product can detect defects that are not visible to the human eye, Ensuring a more thorough inspection process.",
+      para: "Our product can detect defects that are not visible to the human eye, Ensuring a more thorough inspection process.",
       third: "",
     },
     {
       svg: <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Costs",
       desc: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
-      para:
-        "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
+      para: "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
     },
   ];
 
   const benefit = [
     ...data,
     {
-      svg: <SpeedIcon />,
+      svg: <SpeedIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Efficiency in Industrial Pipeline",
-      desc: "",
-      para: "",
+      desc: "The seamless integration of collaborative robotic systems and advanced computer vision technologies within industrial pipelines, substantially enhance operational efficiency and productivity.",
+      para: "This not only augments the overall efficacy of industrial processes but also ushers in a paradigm shift towards heightened precision and streamlined workflow dynamics.",
     },
     {
-      svg: "",
-      title: "Get chain visibility",
-      desc: "Get insights from every part of the package journey",
-      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
+      svg: <EqualizerIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Real-time Reporting and Analytics",
+      desc: "Real-time reporting and analytics empower manufacturing stakeholders with instant visibility into defect rates, production trends, and sorting outcomes, facilitating data-driven decision-making for continuous process optimization",
+      para: "This dynamic insight enables proactive responses to emerging challenges, fostering a responsive and agile manufacturing environment.",
     },
     {
-      svg: "",
-      title: "Get chain visibility",
-      desc: "Get insights from every part of the package journey",
-      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
+      svg: <ElectricBoltIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Quick Adaptation to Product Variability",
+      desc: "The adaptability of the system allows for quick reconfiguration to handle different product types or variations, providing flexibility in the manufacturing process without compromising efficiency.",
+      para: "This inherent flexibility positions the manufacturing process to efficiently accommodate diverse product portfolios, promoting agility and competitiveness in a rapidly evolving market.",
     },
   ];
 
@@ -454,7 +453,6 @@ const benefitSection = () => {
                         />{" "}
                         {item.para}
                       </p>
-              
                     </div>
                   </div>
                 </div>
