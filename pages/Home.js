@@ -22,7 +22,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import SpeedIcon from '@mui/icons-material/Speed';
+import SpeedIcon from "@mui/icons-material/Speed";
+import ErrorIcon from "@mui/icons-material/Error";
 
 const introSection = () => {
   return (
@@ -229,27 +230,36 @@ const benefitSection = () => {
     {
       svg: <LocalShippingIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Recall",
-      para: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
-      second:
+      desc: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
+      para:
         "The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.",
+      third: "",
+    },
+
+    {
+      svg: <ErrorIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Reduce Human Error",
+      desc: "Significantly reduce human errors in the inspection process, Improving product quality & consistency.",
+      para:
+        "Our product can detect defects that are not visible to the human eye, Ensuring a more thorough inspection process.",
       third: "",
     },
     {
       svg: <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Costs",
-      para: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
-      second:
+      desc: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
+      para:
         "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
     },
   ];
 
   const benefit = [
+    ...data,
     {
       svg: <SpeedIcon />,
       title: "Efficiency in Industrial Pipeline",
-      para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
-      second: "",
-      third: "",
+      desc: "",
+      para: "",
     },
     {
       svg: "",
@@ -408,174 +418,7 @@ const benefitSection = () => {
         </div>
       </div>
 
-      {/* <div className="justify-center text-white  text-center items-center w-full relative mx-auto z-10">
-        <h1 className="text-5xl font-bold mb-16 pt-10">
-          Benefits
-        </h1>
-        <div className="mb-12 sm:mb-10 relative mx-auto justify-center items-center z-10">
-          <section>
-            <div className="gap-16 items-start py-8 px-4 mx-auto max-w-screen-xl md:grid md:grid-cols-2 md:pt-16 lg:px-6">
-              <div className="flex flex-wrap ">
-                <div>
-                  {
-                    vision.map((item, index) => {
-                      return (
-                        <Accordion style={accordionStyle}>
-                          <AccordionSummary
-                            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                          >
-                            <Typography>{item.heading}</Typography>
-                          </AccordionSummary>
-                          <AccordionDetails>
-                            <Typography>
-                              {item.para}
-                            </Typography>
-                          </AccordionDetails>
-                        </Accordion>
-                      )
-                    })
-                  }
-
-                </div>
-                {
-                  vision.map((item, index) => {
-                    return (
-                      <div key={index} className="xl:w-1/2 md:w-1/2 p-4">
-                        <div className="  rounded-lg">
-                          <h2 className="text-lg text-start md:text-center font-medium title-font mb-2">{item.heading}</h2>
-                          <p className="leading-relaxed text-start md:text-center text-base">{item.para}</p>
-                        </div>
-                      </div>
-                    )
-                  })
-                }
-              </div>
-              <div id="default-carousel" className="relative mt-20 lg:mt-0 w-full" data-carousel="slide">
-                <div className="relative h-96 overflow-hidden rounded-lg md:h-96">
-                  {[...Array(totalSlides)].map((_, index) => (
-                    <div
-                      key={index}
-                      className={`duration-700 ease-in-out absolute w-full h-full ${currentSlide === index ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      data-carousel-item
-                    >
-                      <Image
-                        width={600}
-                        height={600}
-                        src={`/robotic${index + 1}.jpeg`} // Adjust the image file names accordingly
-                        alt="..."
-                        className="w-full h-full rounded-xl"
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                  <button
-                    type="button"
-                    className="w-3 h-3 rounded-full"
-                    aria-current="true"
-                    aria-label="Previous Slide"
-                    onClick={prevSlide}
-                  >
-
-                  </button>
-                  {[...Array(totalSlides)].map((_, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-black' : 'bg-white'
-                        }`}
-                      aria-current={currentSlide === index}
-                      aria-label={`Slide ${index + 1}`}
-                      onClick={() => setCurrentSlide(index)}
-                    />
-                  ))}
-                  <button
-                    type="button"
-                    className="w-3 h-3 rounded-full"
-                    aria-current="true"
-                    aria-label="Next Slide"
-                    onClick={nextSlide}
-                  >
-
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </section>
-          <Image
-                src="/fourpics.png"
-                width={512}
-                height={680}
-                className="block w-[785px] object-cover mx-auto lg:hidden max-w-full"
-              />
-        </div>
-        <Image
-              src="/img5.svg"
-              width={1096}
-              height={680}
-              className="-z-[1] max-w-none absolute top-0 left-[28%] pointer-events-none"
-            />
-      </div> */}
       <section className="text-white relative hiddenn pb-24  body-font z-10">
-        <div className="container px-5 mx-auto z-10  ">
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            {data.map((item, index) => {
-              return (
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    width: "100%",
-                  }}
-                >
-                  <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
-                    {item.svg}
-                  </div>
-                  <div key={index} className="p-4  w-full">
-                    <div className="h-full p-4 rounded">
-                      <h1 className="mb-4 text-2xl font-medium ">
-                        {item.title}
-                      </h1>
-                      <p className="mb-8 font-medium ">{item.desc}</p>
-
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline  ">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        {item.para}
-                      </p>
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        {item.second}
-                      </p>
-                    </div>
-                  </div>
-                </Box>
-              );
-            })}
-          </Box>
-        </div>
-
         <div className="container px-5  mx-auto">
           <div className="flex flex-wrap -m-4">
             {benefit.map((item, index) => {
@@ -584,17 +427,7 @@ const benefitSection = () => {
                   <div className="flex rounded-lg h-full p-8 flex-col  ">
                     <div className="flex items-center mb-8">
                       <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLineCap="round"
-                          strokeLineJoin="round"
-                          strokeWidth="2"
-                          className="w-10 h-10"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
+                        {item.svg ? item.svg : <SpeedIcon />}
                       </div>
                     </div>
 
@@ -610,28 +443,18 @@ const benefitSection = () => {
                           height={10}
                           className="mr-4"
                         />{" "}
+                        {item.desc}
+                      </p>
+                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
+                        <Image
+                          src="/circle.svg"
+                          width={10}
+                          height={10}
+                          className="mr-4"
+                        />{" "}
                         {item.para}
                       </p>
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        Synth chartreuse iPhone lomo cray raw denim brunch
-                        everyday carry.
-                      </p>
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        Synth chartreuse iPhone lomo cray raw denim brunch
-                        everyday carry.
-                      </p>
+              
                     </div>
                   </div>
                 </div>
