@@ -26,6 +26,11 @@ import SpeedIcon from "@mui/icons-material/Speed";
 import ErrorIcon from "@mui/icons-material/Error";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
+import GroupsIcon from "@mui/icons-material/Groups";
+import ShieldIcon from "@mui/icons-material/Shield";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
+import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 
 const introSection = () => {
   return (
@@ -312,11 +317,6 @@ const benefitSection = () => {
     setIsCollapsed(!isCollapsed);
   };
   const accordionStyle = {
-    // backgroundImage: "url('/background.png')",
-    // backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
-    // backgroundPosition: "center",
-    // objectFit: "cover",
     backgroundColor: "#111111",
     color: "white",
     border: "1px solid gray",
@@ -600,6 +600,46 @@ const caseStudies = () => {
 };
 
 const featureSection = () => {
+  const data = [
+    {
+      svg: <SpeedIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Fast AI-Assisted Labeling",
+      desc: "Fast AI-assisted labeling streamlines the annotation process, harnessing the power of artificial intelligence to swiftly and accurately label images.",
+    },
+
+    {
+      svg: <GroupsIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Collaborative Platform",
+      desc: "A centralized hub that facilitates seamless interaction and information sharing among individuals or teams, fostering synergies in various domains.",
+    },
+
+    {
+      svg: <ShieldIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Edge Devices",
+      desc: "Our Product is designed to process data locally, near the point where it is generated, rather than relying solely on centralized cloud servers. The concept of edge computing aims to reduce latency, improve efficiency, and enhance overall system performance.",
+    },
+  ];
+
+  const data2 = [
+    {
+      title: "Plug n Play",
+      desc: 'offers a seamless "plug and play" integration, ensuring a hassle-free setup without the need for extensive configuration. With its user-friendly interface, manufacturers can effortlessly deploy the system',
+      svg: <ElectricalServicesIcon fontSize="large" sx={{ fill: "#fff" }} />,
+    },
+
+    {
+      title: "No Tech Expertise Required",
+      svg: <SettingsIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      desc: "Our product is designed to be user-friendly, requiring no technical expertise to operate. The intuitive interface enables users to easily deploy a solution that meets their needs.",
+    },
+
+    {
+      title: "Fully Customizable",
+      desc: "We offer a fully customizable solution that can be tailored to meet your specific needs.",
+      svg: <DashboardCustomizeIcon fontSize="large" sx={{ fill: "#fff" }} />,
+    },
+  ];
+
   return (
     <section
       style={{
@@ -614,148 +654,55 @@ const featureSection = () => {
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
         <div className="w-full flex flex-col lg:items-center lg:text-center  items-center text-center">
           <h1 className="title-font text-5xl font-bold mb-10 ">Features</h1>
-          {/* <p className="mb-10 hiddenn leading-relaxed w-1/2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-            quasi exercitationem temporibus minus quos dicta rem quis
-            debitis repudiandae ipsum.
-          </p>
-          <div className="flex hiddenn justify-center">
-            <button className="inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none  rounded-xl text-lg">
-              API Reference
-            </button>
-          </div> */}
         </div>
       </div>
       <section className="text-white hiddenn block  -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
           <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLineCap="round"
-                  strokeLineJoin="round"
-                  strokeWidth="2"
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-4xl title-font font-medium mb-10">
-                  Label OCR API
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Have smartphones and camera devices extract information from
-                  any package label.
-                </p>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLineCap="round"
-                  strokeLineJoin="round"
-                  strokeWidth="2"
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-4xl title-font font-medium mb-10">
-                  Label OCR API
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Have smartphones and camera devices extract information from
-                  any package label.
-                </p>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLineCap="round"
-                  strokeLineJoin="round"
-                  strokeWidth="2"
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-4xl title-font font-medium mb-10">
-                  Label OCR API
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Have smartphones and camera devices extract information from
-                  any package label.
-                </p>
-              </div>
-            </div>
+            {data.map((item, index) => {
+              return (
+                <div className="p-4 md:w-1/3 flex" key={index}>
+                  <div
+                    className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                    style={{
+                      height: "4.5rem",
+                      width: "4.5rem",
+                    }}
+                  >
+                    {item.svg}
+                  </div>
+                  <div className="flex-grow pl-6">
+                    <h2 className="text-4xl title-font font-medium mb-10">
+                      {item.title}
+                    </h2>
+                    <p className="leading-relaxed text-base">{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLineCap="round"
-                  strokeLineJoin="round"
-                  strokeWidth="2"
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-4xl title-font font-medium mb-10">
-                  Label OCR API
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Have smartphones and camera devices extract information from
-                  any package label.
-                </p>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/3 flex">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLineCap="round"
-                  strokeLineJoin="round"
-                  strokeWidth="2"
-                  className="w-10 h-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <div className="flex-grow pl-6">
-                <h2 className="text-4xl title-font font-medium mb-10">
-                  Label OCR API
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Have smartphones and camera devices extract information from
-                  any package label.
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+            {data2.map((item, index) => {
+              return (
+                <div className="p-4 md:w-1/3 flex" key={index}>
+                  <div
+                    className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                    style={{
+                      height: "4.5rem",
+                      width: "4.5rem",
+                    }}
+                  >
+                    {item.svg}
+                  </div>
+                  <div className="flex-grow pl-6">
+                    <h2 className="text-4xl title-font font-medium mb-10">
+                      {item.title}
+                    </h2>
+                    <p className="leading-relaxed text-base">{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
