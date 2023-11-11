@@ -20,6 +20,9 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import SpeedIcon from '@mui/icons-material/Speed';
 
 const introSection = () => {
   return (
@@ -176,15 +179,14 @@ const PerformanceAnalytics = () => {
             Performance Analytics
           </h1>
           <p class="mb-8 leading-relaxed">
-            Our product provides in-depth performance
-            analytics for batch defects, offering a comprehensive overview of
-            production quality. Through meticulous data analysis, it pinpoints
-            root causes, enabling swift corrective measures. Real-time
-            monitoring ensures immediate response to deviations, optimizing
-            production efficiency. With customizable reporting, our solution
-            empowers decision-makers to enhance overall product quality. Elevate
-            your manufacturing processes with our precise and actionable batch
-            defect analytics.
+            Our product provides in-depth performance analytics for batch
+            defects, offering a comprehensive overview of production quality.
+            Through meticulous data analysis, it pinpoints root causes, enabling
+            swift corrective measures. Real-time monitoring ensures immediate
+            response to deviations, optimizing production efficiency. With
+            customizable reporting, our solution empowers decision-makers to
+            enhance overall product quality. Elevate your manufacturing
+            processes with our precise and actionable batch defect analytics.
           </p>
         </div>
         <div class="lg:max-w-lg w-full">
@@ -225,29 +227,29 @@ const benefitSection = () => {
 
   const data = [
     {
-      svg: "",
+      svg: <LocalShippingIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Recall",
       para: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
-      second:'The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.',
-      third: ""
-
+      second:
+        "The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.",
+      third: "",
     },
     {
-      svg: "",
+      svg: <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Costs",
       para: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
-      second:'Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.',
-
+      second:
+        "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
     },
   ];
 
   const benefit = [
     {
-      svg: "",
+      svg: <SpeedIcon />,
       title: "Efficiency in Industrial Pipeline",
       para: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry",
       second: "",
-      third: ""
+      third: "",
     },
     {
       svg: "",
@@ -521,51 +523,57 @@ const benefitSection = () => {
       </div> */}
       <section className="text-white relative hiddenn pb-24  body-font z-10">
         <div className="container px-5 mx-auto z-10  ">
-          <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLineCap="round"
-              strokeLineJoin="round"
-              strokeWidth="2"
-              className="w-10 h-10"
-              viewBox="0 0 24 24"
-            >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <div className="flex flex-wrap -m-4">
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
             {data.map((item, index) => {
               return (
-                <div key={index} className="p-4 md:w-1/2 w-full">
-                  <div className="h-full p-4 rounded">
-                    <h1 className="mb-4 text-2xl font-medium ">{item.title}</h1>
-                    <p className="mb-8 font-medium ">{item.desc}</p>
-
-                    <p className="leading-relaxed flex mb-6 justify-start items-baseline  ">
-                      <Image
-                        src="/circle.svg"
-                        width={10}
-                        height={10}
-                        className="mr-4"
-                      />{" "}
-                      {item.para}
-                    </p>
-                    <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
-                      <Image
-                        src="/circle.svg"
-                        width={10}
-                        height={10}
-                        className="mr-4"
-                      />{" "}
-                      {item.second}
-                    </p>
-               
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    width: "100%",
+                  }}
+                >
+                  <div className="w-20 h-20 inline-flex items-center   justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
+                    {item.svg}
                   </div>
-                </div>
+                  <div key={index} className="p-4  w-full">
+                    <div className="h-full p-4 rounded">
+                      <h1 className="mb-4 text-2xl font-medium ">
+                        {item.title}
+                      </h1>
+                      <p className="mb-8 font-medium ">{item.desc}</p>
+
+                      <p className="leading-relaxed flex mb-6 justify-start items-baseline  ">
+                        <Image
+                          src="/circle.svg"
+                          width={10}
+                          height={10}
+                          className="mr-4"
+                        />{" "}
+                        {item.para}
+                      </p>
+                      <p className="leading-relaxed flex mb-6 justify-start items-baseline ">
+                        <Image
+                          src="/circle.svg"
+                          width={10}
+                          height={10}
+                          className="mr-4"
+                        />{" "}
+                        {item.second}
+                      </p>
+                    </div>
+                  </div>
+                </Box>
               );
             })}
-          </div>
+          </Box>
         </div>
 
         <div className="container px-5  mx-auto">
@@ -594,7 +602,7 @@ const benefitSection = () => {
                       <h2 className=" text-2xl font-medium mb-4 ">
                         {item.title}
                       </h2>
-                
+
                       <p className="leading-relaxed flex mb-6 justify-start items-baseline">
                         <Image
                           src="/circle.svg"
@@ -602,7 +610,7 @@ const benefitSection = () => {
                           height={10}
                           className="mr-4"
                         />{" "}
-                       {item.para}
+                        {item.para}
                       </p>
                       <p className="leading-relaxed flex mb-6 justify-start items-baseline">
                         <Image
