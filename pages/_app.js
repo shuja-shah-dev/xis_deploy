@@ -22,7 +22,6 @@ const EssentialCookies = () => {
           gap: "1rem",
           flexDirection: "row-reverse",
           alignItems: "center",
-          width: "500px",
         }}
       >
         <Switch
@@ -75,7 +74,6 @@ const MarketingCookies = () => {
           gap: "1rem",
           flexDirection: "row-reverse",
           alignItems: "center",
-          width: "500px",
         }}
       >
         <Switch
@@ -126,7 +124,6 @@ const AnalyticsCookies = () => {
           gap: "1rem",
           flexDirection: "row-reverse",
           alignItems: "center",
-          width: "500px",
         }}
       >
         <Switch

@@ -85,7 +85,6 @@ const introSection = () => {
 };
 
 const DefectDetection = () => {
-
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -149,8 +148,9 @@ const DefectDetection = () => {
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/xraycrack1.png"
@@ -266,7 +266,6 @@ const ProductSorting = () => {
 };
 
 const PerformanceAnalytics = () => {
-
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -312,14 +311,12 @@ const PerformanceAnalytics = () => {
             Performance Analytics
           </h1>
           <p class="mb-8 leading-relaxed">
-            Our product provides in-depth performance analytics for batch
-            defects, offering a comprehensive overview of production quality.
-            Through meticulous data analysis, it pinpoints root causes, enabling
-            swift corrective measures. Real-time monitoring ensures immediate
-            response to deviations, optimizing production efficiency. With
-            customizable reporting, our solution empowers decision-makers to
-            enhance overall product quality. Elevate your manufacturing
-            processes with our precise and actionable batch defect analytics.
+            Revolutionize your quality control processes with our product's
+            Assembly Completeness Detection feature. Our advanced technology
+            analyzes assembly components, ensuring every element is correctly
+            integrated. By leveraging precise algorithms, our system identifies
+            and flags any inconsistencies or missing parts, guaranteeing the
+            integrity of the assembly.
           </p>
         </div>
         <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
@@ -334,8 +331,9 @@ const PerformanceAnalytics = () => {
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/motorxray1.png"
@@ -386,7 +384,6 @@ const PerformanceAnalytics = () => {
 };
 
 const TextDetection = () => {
-
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -430,17 +427,16 @@ const TextDetection = () => {
       <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
-            Text Detection
+            Text Recognition
           </h1>
           <p class="mb-8 leading-relaxed">
-            Our product provides in-depth performance analytics for batch
-            defects, offering a comprehensive overview of production quality.
-            Through meticulous data analysis, it pinpoints root causes, enabling
-            swift corrective measures. Real-time monitoring ensures immediate
-            response to deviations, optimizing production efficiency. With
-            customizable reporting, our solution empowers decision-makers to
-            enhance overall product quality. Elevate your manufacturing
-            processes with our precise and actionable batch defect analytics.
+            Empower your workflow with our cutting-edge text recognition
+            technology, a cornerstone feature of our product. Our advanced
+            optical character recognition (OCR) seamlessly converts printed or
+            handwritten text from images or scanned documents into
+            machine-readable data. Say goodbye to manual data entry hassles as
+            our product automates the process, ensuring efficient document
+            management.
           </p>
         </div>
         <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
@@ -455,8 +451,9 @@ const TextDetection = () => {
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/textxray.jpg"
@@ -545,7 +542,9 @@ const benefitSection = () => {
       third: "",
     },
     {
-      svg: <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff", fontSize: 45 }} />,
+      svg: (
+        <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff", fontSize: 45 }} />
+      ),
       title: "Reduce Costs",
       desc: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
       para: "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
@@ -644,9 +643,10 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="auto-annotate"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${
+                    screen === "auto-annotate" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
-                    } `}
+                  } `}
                 >
                   Defect Detection
                 </label>
@@ -660,9 +660,10 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="annotation-types"
-                  className={`lg:text-lg text-sm  w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
+                  className={`lg:text-lg text-sm  w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
+                    screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
-                    }`}
+                  }`}
                 >
                   Object Detection & Defect Counting
                 </label>
@@ -676,9 +677,10 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="performance"
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "performance" &&
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
+                    screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                    }`}
+                  }`}
                 >
                   Assembly Completeness
                 </label>
@@ -692,11 +694,12 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="text-detection"
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
+                    screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                    }`}
+                  }`}
                 >
-                  Text Detection
+                  Text Recognition
                 </label>
                 <input
                   onClick={() => setScreen("real-time")}
@@ -708,9 +711,10 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="real-time"
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
+                    screen === "real-time" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                    }`}
+                  }`}
                 >
                   Product Sorting
                 </label>
@@ -858,8 +862,9 @@ const caseStudies = () => {
                       <Image
                         decoding="async"
                         style={{
-                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                            }% 100%, 0 100%)`,
+                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                            imageReveal * 100
+                          }% 100%, 0 100%)`,
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="/xrayimg.webp"
@@ -928,7 +933,6 @@ const featureSection = () => {
       svg: <SettingsIcon fontSize="large" sx={{ fill: "#fff" }} />,
       desc: "User-friendly design, no technical expertise needed. Intuitive interface for easy deployment of tailored solutions.",
     },
-
   ];
 
   const data2 = [
@@ -982,9 +986,7 @@ const featureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className=" text-2xl font-medium mb-4">
-                      {item.title}
-                    </h2>
+                    <h2 className=" text-2xl font-medium mb-4">{item.title}</h2>
                     <p className="leading-relaxed text-base">{item.desc}</p>
                   </div>
                 </div>
@@ -1005,9 +1007,7 @@ const featureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className=" text-2xl font-medium mb-4">
-                      {item.title}
-                    </h2>
+                    <h2 className=" text-2xl font-medium mb-4">{item.title}</h2>
                     <p className="leading-relaxed text-base">{item.desc}</p>
                   </div>
                 </div>
