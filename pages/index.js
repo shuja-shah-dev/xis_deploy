@@ -85,6 +85,7 @@ const introSection = () => {
 };
 
 const DefectDetection = () => {
+
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -124,7 +125,7 @@ const DefectDetection = () => {
   };
   return (
     <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Defect Detection
@@ -143,26 +144,25 @@ const DefectDetection = () => {
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
                   <div
                     ref={imageContainer}
-                    className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
+                    className="twentytwenty-container rounded-xl w-full h-[400px] lg:h-[400px]"
                   >
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
-                          imageReveal * 100
-                        }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                          }% 100%, 0 100%)`,
                       }}
-                      className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/xraycrack1.png"
-                      width={600}
-                      height={600}
+                      width={542}
+                      height={360}
                     />
                     <Image
                       decoding="async"
-                      className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                      className="custom-clip2 h-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                       src="/xraycrack.png"
-                      width={600}
-                      height={600}
+                      width={542}
+                      height={360}
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -203,7 +203,7 @@ const DefectDetection = () => {
 const CountingDefects = () => {
   return (
     <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Object Detection & Defect Counting
@@ -218,11 +218,11 @@ const CountingDefects = () => {
             defects in a production line.
           </p>
         </div>
-        <div class="lg:max-w-lg  w-full">
+        <div class="lg:max-w-lg h-[400px] w-full">
           <Image
-            width={600}
-            height={600}
-            class="object-cover h-[50vh] w-full object-center rounded-xl"
+            width={1950}
+            height={1097}
+            class="h-full w-full object-center rounded-xl"
             alt="hero"
             src="/projectcamera.jpg"
           />
@@ -235,7 +235,7 @@ const CountingDefects = () => {
 const ProductSorting = () => {
   return (
     <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Product Sorting
@@ -251,11 +251,11 @@ const ProductSorting = () => {
             manufacturing and logistics.
           </p>
         </div>
-        <div class="lg:max-w-lg w-full">
+        <div class="lg:max-w-lg h-full w-full">
           <Image
-            width={4100}
-            height={4100}
-            class="object-cover w-full object-center rounded-xl"
+            width={1600}
+            height={1200}
+            class="h-full w-full object-center rounded-xl"
             alt="hero"
             src="/robotic2.jpeg"
           />
@@ -305,7 +305,7 @@ const PerformanceAnalytics = () => {
   };
   return (
     <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Performance Analytics
@@ -326,7 +326,7 @@ const PerformanceAnalytics = () => {
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
                   <div
                     ref={imageContainer}
-                    className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[450px]"
+                    className="twentytwenty-container rounded-xl w-full h-[500px] lg:h-[500px]"
                   >
                     <Image
                       decoding="async"
@@ -335,14 +335,14 @@ const PerformanceAnalytics = () => {
                           imageReveal * 100
                         }% 100%, 0 100%)`,
                       }}
-                      className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      className="twentytwenty-before object-center w-full h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/motorxray1.png"
                       width={960}
                       height={1028}
                     />
                     <Image
                       decoding="async"
-                      className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                      className="custom-clip2 h-full w-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                       src="/motorxray2.png"
                       width={960}
                       height={1028}
@@ -424,7 +424,7 @@ const TextDetection = () => {
 
   return (
     <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Text Recognition
@@ -446,7 +446,7 @@ const TextDetection = () => {
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
                   <div
                     ref={imageContainer}
-                    className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
+                    className="twentytwenty-container rounded-xl w-full h-[450px] lg:h-[450px]"
                   >
                     <Image
                       decoding="async"
@@ -455,17 +455,17 @@ const TextDetection = () => {
                           imageReveal * 100
                         }% 100%, 0 100%)`,
                       }}
-                      className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
-                      src="/textxray.jpg"
-                      width={600}
-                      height={600}
+                      className="twentytwenty-before w-full h-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      src="/textdetect.png"
+                      width={1154}
+                      height={1097}
                     />
                     <Image
                       decoding="async"
-                      className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
-                      src="/textxray1.png"
-                      width={600}
-                      height={600}
+                      className="custom-clip2 h-full w-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                      src="/textdetect1.png"
+                      width={1154}
+                      height={1097}
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -660,7 +660,7 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="annotation-types"
-                  className={`lg:text-lg text-sm  w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
+                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
                     screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                   }`}
@@ -677,7 +677,7 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="performance"
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
+                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
                     screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                   }`}
@@ -857,7 +857,7 @@ const caseStudies = () => {
                   <div className="twentytwenty-wrapper twentytwenty-horizontal">
                     <div
                       ref={imageContainer}
-                      className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
+                      className="twentytwenty-container rounded-xl w-full h-[384px] lg:h-[384px]"
                     >
                       <Image
                         decoding="async"

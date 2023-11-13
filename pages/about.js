@@ -5,6 +5,8 @@ import { Box, Typography } from "@mui/material";
 import Head from "next/head";
 import "intersection-observer";
 import { useEffect } from "react";
+import Link from "next/link";
+
 
 const about = () => {
   const controller = useRouter();
@@ -29,8 +31,8 @@ const about = () => {
 
   return accessToken ? (
     <>
-      <div className=" fadeInUp animated container mt-24 justify-center items-center text-5xl text-center  mx-auto w-full">
-        <section className="flex items-center font-poppins ">
+      <div className=" fadeInUp animated container   mt-24 justify-center items-center text-5xl text-center min-h-[100vh]  mx-auto w-full">
+        <section className="flex items-center">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div className="flex flex-wrap">
               <div className="w-full px-6 justify-center mb-10  lg:mb-0 ">
@@ -51,18 +53,18 @@ const about = () => {
                   technology. We believe in the potential of AI to transform
                   industries,
                 </p>
-                <a
-                  href="#"
+                <Link
+                  href="/contact"
                   className="px-4 py-2 text-xl text-gray-100 rounded-xl bg-gray-800 hover:bg-gray-900 "
                 >
                   Get in touch
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
+      {/* <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
         <div className=" p-4 min-h-screen">
           <div className="hiddenn max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="w-full mt-12 text-gray-100">
@@ -79,13 +81,13 @@ const about = () => {
                 ></path>
               </svg>
               <h2 className="my-8 text-4xl font-bold text-white md:text-5xl">
-                {/* Our Work */}
+                Our Work
               </h2>
               <p className="text-gray-300 text-2xl md:text-3xl ">
-                {/* We have built many products and some of them are below */}
+                We have built many products and some of them are below
               </p>
             </div>
-            {/* <div className="mt-16 grid divide-x divide-y  divide-gray-700 overflow-hidden rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-2xl rounded-bl-2xl  border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4">
+            <div className="mt-16 grid divide-x divide-y  divide-gray-700 overflow-hidden rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-2xl rounded-bl-2xl  border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4">
               <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl  hover:shadow-gray-600/10">
                 <div className="relative space-y-8 py-12 p-8">
                   <img
@@ -167,10 +169,10 @@ const about = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   ) : (
     <>

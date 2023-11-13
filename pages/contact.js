@@ -34,15 +34,13 @@ const contact = () => {
         <>
 
             <div className="justify-center mt-12 text-center items-center mx-auto w-100">
-                <h1 className="text-4xl md:text-5xl w-full lg:text-[5rem]  text-center mx-auto">
+                <h1 className="text-5xl w-full lg:text-[5rem]  text-center mx-auto">
                     Contact Us
                 </h1>
-                <div className="w-96 mx-auto mb-6 border-b border-red-700 dark:border-gray-300"></div>
-
+                <div className="w-60 lg:w-96 mx-auto mb-6 border-b border-red-700 dark:border-gray-300"></div>
             </div>
-            <section className="flex items-center  font-poppins ">
+            <section className="flex items-center ">
                 <div className="justify-center flex-1 max-w-6xl px-4 py-24 mx-auto md:px-6">
-                 
                     <div className="flex flex-wrap px-4 py-8 rounded-md shadow bg-gray-900">
                         <div className="w-full px-4 mb-6 lg:w-2/5 lg:mb-0">
                             <div className="relative h-full p-8 rounded-md bg-gradient-to-r from-blue-900 via-cyan-900 to-sky-900">
@@ -82,7 +80,7 @@ const contact = () => {
                                     </svg>
                                 </div>
                                 <h2 className="mb-10 text-xl sm:text-3xl font-bold text-blue-50 dark:text-gray-300">Contact </h2>
-                               
+
                                 <div className="flex mb-8 text-gray-400 md:items-center dark:text-gray-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         className="w-6 h-6  text-gray-100 dark:text-gray-400 bi bi-geo-alt" viewBox="0 0 16 16">
@@ -93,7 +91,7 @@ const contact = () => {
                                     </svg>
                                     <div
                                         className="w-full ml-2 text-xs sm:text-lg font-semibold tracking-wide text-gray-200 dark:text-gray-400">
-                                    Theodor-Schweitzer-Str. 1+3 75447 Sternenfels
+                                        Theodor-Schweitzer-Str. 1+3 75447 Sternenfels
                                     </div>
                                 </div>
                                 <div className="flex mb-8 text-gray-100 md:items-center dark:text-gray-400">
@@ -104,7 +102,7 @@ const contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
-                                         +49 7045 204450
+                                        +49 7045 204450
                                     </div>
                                 </div>
                                 <div className="flex text-gray-100 md:items-center dark:text-gray-400">

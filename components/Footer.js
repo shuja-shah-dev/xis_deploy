@@ -17,12 +17,12 @@ const Footer = () => {
         <div className="container px-5 py-14 -mt-4 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full  px-4">
-              <Image
+              <Link href="/"><Image
                 src="/Asset.png"
                 className="justify-center mx-auto items-center text-center mb-10"
                 width={300}
                 height={400}
-              />
+              /></Link>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <Link href="/about">
@@ -32,42 +32,27 @@ const Footer = () => {
                 </h2>
               </Link>
               <nav className="list-none mb-10">
-                <li className="pb-1">
-                  <a
-                    href="/#"
-                    className="text-gray-600 text-lg hover:text-gray-800"
-                  >
-                    Impressum
-                  </a>
-                </li>
-                <li className="pb-1">
-                  <a
-                    href="/#"
-                    className="text-gray-600 text-lg hover:text-gray-800"
-                  >
-                    Terms and Conditions / AGB
-                  </a>
-                </li>
-                <li className="pb-1">
-                  <a
-                    href="/#"
-                    className="text-gray-600 text-lg hover:text-gray-800"
-                  >
-                    General Terms and Conditions
-                  </a>
-                </li>
+              <Link href="/about"><li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                  Impressum
+                </li></Link>
+                <Link href="/about"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                  Terms and Conditions / AGB
+                </li></Link>
+                <Link href="/about"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                  General Terms and Conditions
+                </li></Link>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
+              <Link href="/Privacy/"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
                 Certificates
-              </h2>
+              </h2></Link>
               <nav className="list-none mb-10">
                 {/* <li className="pb-1">
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li> */}
                 <Link href="/Privacy/">
-                  {" "}
+
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                     Data Privacy Policy
                   </li>

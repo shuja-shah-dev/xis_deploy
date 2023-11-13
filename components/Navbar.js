@@ -50,7 +50,7 @@ const Navbar = () => {
       <header
         className={`text-white  z-20 top-0 sticky p-2 ${
           scrolled
-            ? "bg-black duration-700 transition-all"
+            ? "bg-black transition ease-in-out duration-300"
             : "backdrop-brightness-90"
         }`}
       >
@@ -142,7 +142,7 @@ const Navbar = () => {
         <Box
           sx={{
             background: "rgb(31, 41, 54)",
-            position: "absolute",
+            position: "fixed",
             top: "0",
             left: "0",
             width: "100%",
@@ -174,7 +174,7 @@ const Navbar = () => {
               flexDirection: "column",
               alignItems: "flex-start",
               gap: "1rem",
-              height: "100%",
+              height: "50%",
               width: "100%",
               fontFamily: "Poppins, Roboto, sans-serif",
               fontSize: "1.5rem",
