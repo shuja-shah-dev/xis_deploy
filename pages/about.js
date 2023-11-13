@@ -79,13 +79,13 @@ const about = () => {
                 ></path>
               </svg>
               <h2 className="my-8 text-4xl font-bold text-white md:text-5xl">
-                Our Work
+                {/* Our Work */}
               </h2>
               <p className="text-gray-300 text-2xl md:text-3xl ">
-                We have built many products and some of them are below
+                {/* We have built many products and some of them are below */}
               </p>
             </div>
-            <div className="mt-16 grid divide-x divide-y  divide-gray-700 overflow-hidden rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-2xl rounded-bl-2xl  border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4">
+            {/* <div className="mt-16 grid divide-x divide-y  divide-gray-700 overflow-hidden rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-2xl rounded-bl-2xl  border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4">
               <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl  hover:shadow-gray-600/10">
                 <div className="relative space-y-8 py-12 p-8">
                   <img
@@ -167,7 +167,7 @@ const about = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
