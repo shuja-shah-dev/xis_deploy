@@ -88,7 +88,7 @@ const Navbar = () => {
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-              <Link href="/Home">
+              <Link href="/">
                 <li className="relative group">
                   Home
                   {/* <ExpandMoreIcon /> */}
