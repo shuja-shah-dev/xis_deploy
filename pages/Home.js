@@ -184,7 +184,7 @@ const DefectDetection = () => {
                         left: `${imageReveal * 100}%`,
                         cursor: "ew-resize",
                       }}
-                      className="twentytwenty-handle h-[38px] w-[38px] absolute left-[50%] top-[50%] "
+                      className="twentytwenty-handle -ml-5 !-mt-2"
                     >
                       <span className="twentytwenty-left-arrow"></span>
                       <span className="twentytwenty-right-arrow"></span>
@@ -218,11 +218,11 @@ const CountingDefects = () => {
             defects in a production line.
           </p>
         </div>
-        <div class="lg:max-w-lg w-full">
+        <div class="lg:max-w-lg  w-full">
           <Image
-            width={4100}
-            height={4100}
-            class="object-cover w-full object-center rounded-xl"
+            width={600}
+            height={600}
+            class="object-cover h-[50vh] w-full object-center rounded-xl"
             alt="hero"
             src="/projectcamera.jpg"
           />
@@ -266,6 +266,44 @@ const ProductSorting = () => {
 };
 
 const PerformanceAnalytics = () => {
+
+  const [imageReveal, setImageReveal] = useState(0.5);
+  const imageContainer = useRef(null);
+  const handleRef = useRef(null);
+
+  const slide = (xPosition) => {
+    const containerBoundRect = imageContainer.current.getBoundingClientRect();
+
+    if (xPosition <= containerBoundRect.left) {
+      setImageReveal(0);
+    } else if (xPosition >= containerBoundRect.right) {
+      setImageReveal(1);
+    } else {
+      const positionInContainer = xPosition - containerBoundRect.left;
+      const width = containerBoundRect.width;
+      setImageReveal(positionInContainer / width);
+    }
+  };
+
+  const handleTouchMove = (event) => {
+    slide(event.touches[0].clientX);
+  };
+
+  const handleMouseDown = () => {
+    const handle = handleRef.current;
+
+    const handleMouseMove = (event) => {
+      slide(event.clientX);
+    };
+
+    const handleMouseUp = () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+  };
   return (
     <section class="text-white">
       <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
@@ -284,14 +322,63 @@ const PerformanceAnalytics = () => {
             processes with our precise and actionable batch defect analytics.
           </p>
         </div>
-        <div class="lg:max-w-lg w-full ">
-          <Image
-            width={4100}
-            height={4100}
-            class="object-cover w-full object-center  rounded-xl"
-            alt="hero"
-            src="/robotic3.jpeg"
-          />
+        <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
+          <div className="rounded-lg overflow-hidden  elementor-widget-wrap flex">
+            <div className="elementor-element  elementor-widget">
+              <div className="elementor-widget-container ">
+                <div className="twentytwenty-wrapper twentytwenty-horizontal">
+                  <div
+                    ref={imageContainer}
+                    className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[450px]"
+                  >
+                    <Image
+                      decoding="async"
+                      style={{
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                          }% 100%, 0 100%)`,
+                      }}
+                      className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      src="/motorxray1.png"
+                      width={960}
+                      height={1028}
+                    />
+                    <Image
+                      decoding="async"
+                      className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                      src="/motorxray2.png"
+                      width={960}
+                      height={1028}
+                    />
+                    <div className="twentytwenty-overlay">
+                      <div
+                        className="twentytwenty-before-label"
+                        data-content="Xray"
+                      ></div>
+                      <div
+                        className="twentytwenty-after-label"
+                        data-content="Xray"
+                      ></div>
+                    </div>
+                    <div
+                      onMouseDown={handleMouseDown}
+                      onTouchMove={handleTouchMove}
+                      ref={handleRef}
+                      style={{
+                        touchAction: "none",
+                        position: "absolute",
+                        left: `${imageReveal * 100}%`,
+                        cursor: "ew-resize",
+                      }}
+                      className="twentytwenty-handle -ml-5 !-mt-2"
+                    >
+                      <span className="twentytwenty-left-arrow"></span>
+                      <span className="twentytwenty-right-arrow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

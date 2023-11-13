@@ -47,7 +47,7 @@ const Footer = () => {
                 {/* <li className="pb-1">
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li> */}
-               <Link href="/Privacy/" className="text-gray-600 text-lg hover:text-gray-800 "> <li className="pb-1">
+               <Link href="/Privacy/"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                 Data Privacy Policy
                 </li></Link>
             
