@@ -31,10 +31,6 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMenuOpen(false);
-  };
-
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
