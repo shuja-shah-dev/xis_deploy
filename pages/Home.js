@@ -85,6 +85,44 @@ const introSection = () => {
 };
 
 const DefectDetection = () => {
+
+  const [imageReveal, setImageReveal] = useState(0.5);
+  const imageContainer = useRef(null);
+  const handleRef = useRef(null);
+
+  const slide = (xPosition) => {
+    const containerBoundRect = imageContainer.current.getBoundingClientRect();
+
+    if (xPosition <= containerBoundRect.left) {
+      setImageReveal(0);
+    } else if (xPosition >= containerBoundRect.right) {
+      setImageReveal(1);
+    } else {
+      const positionInContainer = xPosition - containerBoundRect.left;
+      const width = containerBoundRect.width;
+      setImageReveal(positionInContainer / width);
+    }
+  };
+
+  const handleTouchMove = (event) => {
+    slide(event.touches[0].clientX);
+  };
+
+  const handleMouseDown = () => {
+    const handle = handleRef.current;
+
+    const handleMouseMove = (event) => {
+      slide(event.clientX);
+    };
+
+    const handleMouseUp = () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+  };
   return (
     <section class="text-white">
       <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
@@ -99,14 +137,63 @@ const DefectDetection = () => {
             cracks.
           </p>
         </div>
-        <div class="lg:max-w-lg  w-full">
-          <Image
-            width={4100}
-            height={4100}
-            class="object-cover w-full object-center rounded"
-            alt="hero"
-            src="/robotic1.jpeg"
-          />
+        <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
+          <div className="rounded-lg overflow-hidden  elementor-widget-wrap flex">
+            <div className="elementor-element  elementor-widget">
+              <div className="elementor-widget-container ">
+                <div className="twentytwenty-wrapper twentytwenty-horizontal">
+                  <div
+                    ref={imageContainer}
+                    className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
+                  >
+                    <Image
+                      decoding="async"
+                      style={{
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                          }% 100%, 0 100%)`,
+                      }}
+                      className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      src="/xraycrack1.png"
+                      width={600}
+                      height={600}
+                    />
+                    <Image
+                      decoding="async"
+                      className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                      src="/xraycrack.png"
+                      width={600}
+                      height={600}
+                    />
+                    <div className="twentytwenty-overlay">
+                      <div
+                        className="twentytwenty-before-label"
+                        data-content="Xray"
+                      ></div>
+                      <div
+                        className="twentytwenty-after-label"
+                        data-content="Xray"
+                      ></div>
+                    </div>
+                    <div
+                      onMouseDown={handleMouseDown}
+                      onTouchMove={handleTouchMove}
+                      ref={handleRef}
+                      style={{
+                        touchAction: "none",
+                        position: "absolute",
+                        left: `${imageReveal * 100}%`,
+                        cursor: "ew-resize",
+                      }}
+                      className="twentytwenty-handle h-[38px] w-[38px] absolute left-[50%] top-[50%] "
+                    >
+                      <span className="twentytwenty-left-arrow"></span>
+                      <span className="twentytwenty-right-arrow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -119,7 +206,7 @@ const CountingDefects = () => {
       <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
-            Defects & Product Counting
+            Object Detection & Defect Counting
           </h1>
           <p class="mb-8 leading-relaxed">
             In the domain of object and defect counting, the seamless fusion of
@@ -135,9 +222,9 @@ const CountingDefects = () => {
           <Image
             width={4100}
             height={4100}
-            class="object-cover w-full object-center rounded"
+            class="object-cover w-full object-center rounded-xl"
             alt="hero"
-            src="/robotic2.jpeg"
+            src="/projectcamera.jpg"
           />
         </div>
       </div>
@@ -168,7 +255,7 @@ const ProductSorting = () => {
           <Image
             width={4100}
             height={4100}
-            class="object-cover w-full object-center rounded"
+            class="object-cover w-full object-center rounded-xl"
             alt="hero"
             src="/robotic2.jpeg"
           />
@@ -197,14 +284,135 @@ const PerformanceAnalytics = () => {
             processes with our precise and actionable batch defect analytics.
           </p>
         </div>
-        <div class="lg:max-w-lg w-full">
+        <div class="lg:max-w-lg w-full ">
           <Image
             width={4100}
             height={4100}
-            class="object-cover w-full object-center rounded"
+            class="object-cover w-full object-center  rounded-xl"
             alt="hero"
             src="/robotic3.jpeg"
           />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const TextDetection = () => {
+
+  const [imageReveal, setImageReveal] = useState(0.5);
+  const imageContainer = useRef(null);
+  const handleRef = useRef(null);
+
+  const slide = (xPosition) => {
+    const containerBoundRect = imageContainer.current.getBoundingClientRect();
+
+    if (xPosition <= containerBoundRect.left) {
+      setImageReveal(0);
+    } else if (xPosition >= containerBoundRect.right) {
+      setImageReveal(1);
+    } else {
+      const positionInContainer = xPosition - containerBoundRect.left;
+      const width = containerBoundRect.width;
+      setImageReveal(positionInContainer / width);
+    }
+  };
+
+  const handleTouchMove = (event) => {
+    slide(event.touches[0].clientX);
+  };
+
+  const handleMouseDown = () => {
+    const handle = handleRef.current;
+
+    const handleMouseMove = (event) => {
+      slide(event.clientX);
+    };
+
+    const handleMouseUp = () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+  };
+
+  return (
+    <section class="text-white">
+      <div class="container mx-auto flex px-5 pt-20 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+            Text Detection
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Our product provides in-depth performance analytics for batch
+            defects, offering a comprehensive overview of production quality.
+            Through meticulous data analysis, it pinpoints root causes, enabling
+            swift corrective measures. Real-time monitoring ensures immediate
+            response to deviations, optimizing production efficiency. With
+            customizable reporting, our solution empowers decision-makers to
+            enhance overall product quality. Elevate your manufacturing
+            processes with our precise and actionable batch defect analytics.
+          </p>
+        </div>
+        <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
+          <div className="rounded-lg overflow-hidden  elementor-widget-wrap flex">
+            <div className="elementor-element  elementor-widget">
+              <div className="elementor-widget-container ">
+                <div className="twentytwenty-wrapper twentytwenty-horizontal">
+                  <div
+                    ref={imageContainer}
+                    className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
+                  >
+                    <Image
+                      decoding="async"
+                      style={{
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                          }% 100%, 0 100%)`,
+                      }}
+                      className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      src="/textxray.jpg"
+                      width={600}
+                      height={600}
+                    />
+                    <Image
+                      decoding="async"
+                      className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
+                      src="/textxray1.png"
+                      width={600}
+                      height={600}
+                    />
+                    <div className="twentytwenty-overlay">
+                      <div
+                        className="twentytwenty-before-label"
+                        data-content="Xray"
+                      ></div>
+                      <div
+                        className="twentytwenty-after-label"
+                        data-content="Xray"
+                      ></div>
+                    </div>
+                    <div
+                      onMouseDown={handleMouseDown}
+                      onTouchMove={handleTouchMove}
+                      ref={handleRef}
+                      style={{
+                        touchAction: "none",
+                        position: "absolute",
+                        left: `${imageReveal * 100}%`,
+                        cursor: "ew-resize",
+                      }}
+                      className="twentytwenty-handle h-[38px] w-[38px] absolute left-[50%] top-[50%] "
+                    >
+                      <span className="twentytwenty-left-arrow"></span>
+                      <span className="twentytwenty-right-arrow"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -250,7 +458,7 @@ const benefitSection = () => {
       third: "",
     },
     {
-      svg: <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      svg: <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff", fontSize: 45 }} />,
       title: "Reduce Costs",
       desc: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
       para: "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
@@ -349,10 +557,9 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="auto-annotate"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${
-                    screen === "auto-annotate" &&
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
-                  } `}
+                    } `}
                 >
                   Defect Detection
                 </label>
@@ -366,16 +573,15 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="annotation-types"
-                  className={`lg:text-lg text-sm  w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
-                    screen === "annotation-types" &&
+                  className={`lg:text-lg text-sm  w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
-                  Object & Defect Counting
+                  Object Detection & Defect Counting
                 </label>
                 <input
                   onClick={() => setScreen("performance")}
-                  className="h-[0px] w-[0px]   overflow-hidden absolute"
+                  className="h-[0px] w-[0px]  overflow-hidden absolute"
                   type="radio"
                   id="performance"
                   value=""
@@ -383,12 +589,27 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="performance"
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
-                    screen === "performance" &&
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
-                  Performance Statistics
+                  Assembly Completeness
+                </label>
+                <input
+                  onClick={() => setScreen("text-detection")}
+                  className="h-[0px] w-[0px]   overflow-hidden absolute"
+                  type="radio"
+                  id="text-detection"
+                  value=""
+                  checked
+                />
+                <label
+                  htmlFor="text-detection"
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
+                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                    }`}
+                >
+                  Text Detection
                 </label>
                 <input
                   onClick={() => setScreen("real-time")}
@@ -400,10 +621,9 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="real-time"
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
-                    screen === "real-time" &&
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
                   Product Sorting
                 </label>
@@ -414,6 +634,7 @@ const benefitSection = () => {
           {screen === "annotation-types" && <CountingDefects />}
           {screen === "performance" && <PerformanceAnalytics />}
           {screen === "real-time" && <ProductSorting />}
+          {screen === "text-detection" && <TextDetection />}
         </div>
       </div>
 
@@ -547,20 +768,23 @@ const caseStudies = () => {
                       ref={imageContainer}
                       className="twentytwenty-container rounded-xl w-full h-[270.672px] lg:h-[384px]"
                     >
-                      <img
+                      <Image
                         decoding="async"
                         style={{
-                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
-                            imageReveal * 100
-                          }% 100%, 0 100%)`,
+                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                            }% 100%, 0 100%)`,
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
-                        src="https://www.tomomi-research.com/wp-content/uploads/2023/03/live-img-2022-09-23-14-11-58--jpg.webp"
+                        src="/xrayimg.webp"
+                        width={600}
+                        height={600}
                       />
-                      <img
+                      <Image
                         decoding="async"
                         className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
-                        src="https://www.tomomi-research.com/wp-content/uploads/2023/03/surface-normal-img-2022-09-23-14-11-58--jpg.webp"
+                        src="/xrayimg1.webp"
+                        width={600}
+                        height={600}
                       />
                       <div className="twentytwenty-overlay">
                         <div
@@ -606,23 +830,8 @@ const featureSection = () => {
       title: "AI-Assisted Labeling",
       desc: "Fast AI-assisted labeling streamlines the annotation process, harnessing the power of artificial intelligence to swiftly and accurately label images.",
     },
-
     {
-      svg: <GroupsIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      title: "Collaborative Platform",
-      desc: "A centralized hub that facilitates seamless interaction and information sharing among individuals or teams, fostering synergies in various domains.",
-    },
-
-    {
-      svg: <ShieldIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      title: "Edge Devices",
-      desc: "Utilizing edge computing, data is processed locally near its generation point, reducing latency, improving efficiency, and enhancing overall system performance.",
-    },
-  ];
-
-  const data2 = [
-    {
-      title: "Plug n Play",
+      title: "Plug & Play",
       desc: 'Enables easy "Plug n Play" integration for a hassle-free setup. Effortless deployment with a user-friendly interface.',
       svg: <ElectricalServicesIcon fontSize="large" sx={{ fill: "#fff" }} />,
     },
@@ -631,6 +840,20 @@ const featureSection = () => {
       title: "No Expertise Required",
       svg: <SettingsIcon fontSize="large" sx={{ fill: "#fff" }} />,
       desc: "User-friendly design, no technical expertise needed. Intuitive interface for easy deployment of tailored solutions.",
+    },
+
+  ];
+
+  const data2 = [
+    {
+      svg: <ShieldIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Edge Device Compatible",
+      desc: "Utilizing edge computing, data is processed locally near its generation point, reducing latency, improving efficiency, and enhancing overall system performance.",
+    },
+    {
+      svg: <GroupsIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      title: "Collaborative Platform",
+      desc: "A centralized hub that facilitates seamless interaction and information sharing among individuals or teams, fostering synergies in various domains.",
     },
 
     {

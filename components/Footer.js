@@ -44,18 +44,13 @@ const Footer = () => {
                 Certificates
               </h2>
               <nav className="list-none mb-10">
-                <li className="pb-1">
+                {/* <li className="pb-1">
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
-                </li>
-                <li className="pb-1">
-                  <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Data Privacy Policy</a>
-                </li>
-                <li className="pb-1">
-                  <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">
-                    Data Protection Declarations
-                  </a>
-                </li>
-
+                </li> */}
+               <Link href="/Privacy/" className="text-gray-600 text-lg hover:text-gray-800 "> <li className="pb-1">
+                Data Privacy Policy
+                </li></Link>
+            
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
