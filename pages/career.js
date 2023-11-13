@@ -11,11 +11,7 @@ const Career = () => {
   return accessToken ? (
     <>
       <div className='container fadeInUp animated justify-center items-center text-5xl text-center flex h-[100vh] mx-auto w-full'>
-
-
         Coming Soon!
-
-
       </div>
     </>
 ) : (

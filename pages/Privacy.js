@@ -6,7 +6,7 @@ import Head from "next/head";
 import "intersection-observer";
 import { useEffect } from "react";
 
-const about = () => {
+const Privacy = () => {
   const controller = useRouter();
   const { accessToken } = useAuth();
 
@@ -27,7 +27,7 @@ const about = () => {
     });
   });
 
-  return accessToken ? (
+  return (
     <>
       <div className=" fadeInUp animated container mt-24 justify-center items-center text-5xl text-center  mx-auto w-full">
         <section className="flex items-center font-poppins ">
@@ -35,34 +35,102 @@ const about = () => {
             <div className="flex flex-wrap">
               <div className="w-full px-6 justify-center mb-10  lg:mb-0 ">
                 <div className="pl-4 mb-6 ">
-                  <span className="text-lg uppercase text-gray-200">
-                    Who we are?
-                  </span>
+                  <span className="text-lg uppercase text-gray-200"></span>
                   <h1 className="mt-2 text-3xl font-black  md:text-5xl text-gray-100">
-                    About Us
+                    Privacy Policy
                   </h1>
                 </div>
                 <p className="mb-6 text-lg leading-7  text-gray-300">
-                  XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a
-                  mission to revolutionize Industrial Quality inspection and
-                  Process Monitoring through the power of artificial
-                  intelligence. Our team of innovators and AI enthusiasts is
-                  dedicated to pushing the boundaries of what's possible with AI
-                  technology. We believe in the potential of AI to transform
-                  industries,
+                  This Privacy Policy describes how your personal information is
+                  collected, used, and shared when you visit or make a purchase
+                  from xis.ai (the “Site”).
                 </p>
-                <a
-                  href="#"
-                  className="px-4 py-2 text-xl text-gray-100 rounded-xl bg-gray-800 hover:bg-gray-900 "
-                >
-                  Get in touch
-                </a>
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  PERSONAL INFORMATION WE COLLECT
+                </p>
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  When you visit the Site, we automatically collect certain
+                  information about your device, including information about
+                  your web browser, IP address, time zone, and some of the
+                  cookies that are installed on your device. Additionally, as
+                  you browse the Site, we collect information about the
+                  individual web pages or products that you view, what websites
+                  or search terms referred you to the Site, and information
+                  about how you interact with the Site. We refer to this
+                  automatically-collected information as “Device Information.”
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  We collect Device Information using the following
+                  technologies:
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  - “Cookies” are data files that are placed on your device or
+                  computer and often include an anonymous unique identifier. For
+                  more information about cookies, and how to disable cookies,
+                  visit http://www.allaboutcookies.org.
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  - “Log files” track actions occurring on the Site, and collect
+                  data including your IP address, browser type, Internet service
+                  provider, referring/exit pages, and date/time stamps.
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  JOB APPLICATIONS
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  When you apply to any jobs in this job you agree to
+                  voluntraily give us your personal information. We Collect that
+                  information and we process it. We DO NOT SHARE YOUR PERSONAL
+                  INFORMATION WITH ANY THIRD PARTY APPLICATIONS OR SERVICES.
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  Contacting Us
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  When you contact us, we may collect your email address to
+                  respond to your inquiry. This information is strictly used for
+                  communication purposes and is not shared with third parties.
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  Data Sharing
+                </p>
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  We uphold a strict policy of not sharing any collected user
+                  data with third-party apps or services. Your privacy is
+                  paramount, and we implement measures to ensure that your
+                  information is kept confidential and utilized only for the
+                  purposes outlined in this policy.
+                </p>
+
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  GDPR Compliance
+                </p>
+                <p className="mb-6 text-lg leading-7  text-gray-300">
+                  Our privacy practices align with the standards set forth by
+                  the General Data Protection Regulation (GDPR). We are
+                  dedicated to ensuring the security and confidentiality of your
+                  personal data. If you have any questions or concerns about
+                  your data, please contact us at contact@xray-lab.com . By
+                  engaging with our services, you acknowledge and agree to the
+                  terms outlined in this Privacy Policy. We reserve the right to
+                  update or modify this policy, with any changes reflected on
+                  this page. Your continued use of our services constitutes
+                  acceptance of any such modifications.
+                </p>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
+      {/* <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
         <div className=" p-4 min-h-screen">
           <div className="hiddenn max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="w-full mt-12 text-gray-100">
@@ -170,57 +238,9 @@ const about = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
-  ) : (
-    <>
-      <Head>
-        <title>xis.ai</title>
-        <meta
-          name="description"
-          content="XIS AI, AI startup, industrial quality inspection, process monitoring"
-        />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-      </Head>
-
-      <Box
-        sx={{
-          height: "100vh",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "30%",
-            width: "35%",
-            flexDirection: "column",
-          }}
-        >
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>
-            Permission Denied.
-          </Typography>
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>
-            Please Login to continue.
-          </Typography>
-          <button
-            onClick={(_) => {
-              controller.push("/");
-            }}
-            className="w-full lg:w-1/2 text-white bg-sky-500 hover:bg-sky-500 mt-10 focus:ring-1 focus:outline-none focus:ring-sky-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-500 dark:hover:bg-sky-500 dark:focus:ring-sky-500"
-          >
-            Login
-          </button>
-        </Box>
-      </Box>
+      </div> */}
     </>
   );
 };
 
-export default about;
+export default Privacy;
