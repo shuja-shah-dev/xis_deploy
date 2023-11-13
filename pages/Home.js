@@ -267,13 +267,13 @@ const benefitSection = () => {
     },
     {
       svg: <EqualizerIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      title: "Real-time Reporting and Analytics",
+      title: "Reporting and Analytics",
       desc: "Real-time reporting and analytics empower manufacturing stakeholders with instant visibility into defect rates, production trends, and sorting outcomes, facilitating data-driven decision-making for continuous process optimization",
       para: "This dynamic insight enables proactive responses to emerging challenges, fostering a responsive and agile manufacturing environment.",
     },
     {
       svg: <ElectricBoltIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      title: "Quick Adaptation to Product Variability",
+      title: "Quick Adaptation to Variability",
       desc: "The adaptability of the system allows for quick reconfiguration to handle different product types or variations, providing flexibility in the manufacturing process without compromising efficiency.",
       para: "This inherent flexibility positions the manufacturing process to efficiently accommodate diverse product portfolios, promoting agility and competitiveness in a rapidly evolving market.",
     },
@@ -603,7 +603,7 @@ const featureSection = () => {
   const data = [
     {
       svg: <SpeedIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      title: "Fast AI-Assisted Labeling",
+      title: "AI-Assisted Labeling",
       desc: "Fast AI-assisted labeling streamlines the annotation process, harnessing the power of artificial intelligence to swiftly and accurately label images.",
     },
 
@@ -616,21 +616,21 @@ const featureSection = () => {
     {
       svg: <ShieldIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Edge Devices",
-      desc: "Our Product is designed to process data locally, near the point where it is generated, rather than relying solely on centralized cloud servers. The concept of edge computing aims to reduce latency, improve efficiency, and enhance overall system performance.",
+      desc: "Utilizing edge computing, data is processed locally near its generation point, reducing latency, improving efficiency, and enhancing overall system performance.",
     },
   ];
 
   const data2 = [
     {
       title: "Plug n Play",
-      desc: 'offers a seamless "plug and play" integration, ensuring a hassle-free setup without the need for extensive configuration. With its user-friendly interface, manufacturers can effortlessly deploy the system',
+      desc: 'Enables easy "Plug n Play" integration for a hassle-free setup. Effortless deployment with a user-friendly interface.',
       svg: <ElectricalServicesIcon fontSize="large" sx={{ fill: "#fff" }} />,
     },
 
     {
-      title: "No Tech Expertise Required",
+      title: "No Expertise Required",
       svg: <SettingsIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      desc: "Our product is designed to be user-friendly, requiring no technical expertise to operate. The intuitive interface enables users to easily deploy a solution that meets their needs.",
+      desc: "User-friendly design, no technical expertise needed. Intuitive interface for easy deployment of tailored solutions.",
     },
 
     {
@@ -672,7 +672,7 @@ const featureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
+                    <h2 className=" text-2xl font-medium mb-4">
                       {item.title}
                     </h2>
                     <p className="leading-relaxed text-base">{item.desc}</p>
@@ -695,7 +695,7 @@ const featureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className="text-4xl title-font font-medium mb-10">
+                    <h2 className=" text-2xl font-medium mb-4">
                       {item.title}
                     </h2>
                     <p className="leading-relaxed text-base">{item.desc}</p>
