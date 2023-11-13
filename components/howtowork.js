@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -5,25 +6,28 @@ const How = () => {
   return (
     <>
       <section
-      style={{ backgroundImage: "url('/background.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      objectFit: "cover" }}
-       className="text-white block relative bg-black py-24 mt-0 ">
+        style={{
+          backgroundImage: "url('/background.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          objectFit: "cover",
+        }}
+        className="text-white block relative bg-black py-24 mt-0 "
+      >
         <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center mb-16">
-          Our Solution
+          How it Works
         </div>
 
         <div className="container justify-center items-center text-center pb-24 mx-auto flex ">
           <div className="flex w-full justify-center text-center items-center">
             <div className="lg:w-[35%] md:w-1/2 w-full md:py-6">
-                <div className="flex h-[250px] rounded text-center justify-center items-start w-full pb-20 mr-10">
-                  <p className="leading-relaxed mr-10 text-center text-3xl inline-block ">
-                    Step 1{" "}
-                  </p>
-                </div>
-             
+              <div className="flex h-[250px] rounded text-center justify-center items-start w-full pb-20 mr-10">
+                <p className="leading-relaxed mr-10 text-center text-3xl inline-block ">
+                  Step 1{" "}
+                </p>
+              </div>
+
               <div className="flex relative  pb-16">
                 <div className="inline-block w-full mr-20 rounded-lg text-white py-6">
                   <h1 className="block mb-3 text-3xl font-bold">Train AI</h1>
@@ -45,7 +49,8 @@ const How = () => {
                 <div className="inline-block mr-20  text-white rounded-lg  py-10">
                   <h1 className="block mb-3 text-3xl font-bold">Deploy</h1>
                   <p className="leading-relaxed">
-                    Thats it! Your model is ready to be used in your application.
+                    Thats it! Your model is ready to be used in your
+                    application.
                   </p>
                 </div>
               </div>
@@ -58,10 +63,12 @@ const How = () => {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <p className="flex flex-nowrap w-20">_ _ _ _ _ </p>
                 <div className="inline-block  text-white rounded-lg  py-10">
-                  <h1 className="block mb-3 text-3xl font-bold">Capture & Label Images</h1>
+                  <h1 className="block mb-3 text-3xl font-bold">
+                    Capture & Label Images
+                  </h1>
                   <p className="leading-relaxed">
-                    Define your dataset and import it into either our web platform
-                    or the standalone desktop app.
+                    Define your dataset and import it into either our web
+                    platform or the standalone desktop app.
                   </p>
                 </div>
               </div>
@@ -104,12 +111,25 @@ const How = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex relative">
+              {/* <div className="flex relative">
                 <div className="h-full w-full text-3xl -left-[40%] top-20 absolute inset-0 flex ">
                 Start Inspecting with 99.9% accuracy
                 </div>
               
-              </div>
+              </div> */}
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  marginRight:'50%',
+                  marginLeft:'auto',
+                }}
+                className="text-3xl "
+              >
+                Start Inspecting
+                <p>with 99.9% accuracy</p>
+              </Box>
             </div>
           </div>
         </div>
