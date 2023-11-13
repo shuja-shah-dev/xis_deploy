@@ -660,12 +660,12 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="annotation-types"
-                  className={`lg:text-lg text-sm  w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
+                  className={`lg:text-lg text-sm  w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
                     screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                   }`}
                 >
-                  Object Detection & Defect Counting
+                  Object & Defect Counting
                 </label>
                 <input
                   onClick={() => setScreen("performance")}

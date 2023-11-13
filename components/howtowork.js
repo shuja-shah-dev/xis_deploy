@@ -61,7 +61,7 @@ const How = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
-                <p className="flex flex-nowrap w-20">_ _ _ _ _ </p>
+                <p className="flex flex-nowrap w-20"></p>
                 <div className="inline-block  text-white rounded-lg  py-10">
                   <h1 className="block mb-3 text-3xl font-bold">
                     Capture & Label Images
@@ -77,7 +77,7 @@ const How = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
-                <p className="absolute -left-16  w-20">_ _ _ _ _ </p>
+                <p className="absolute -left-16  w-20"></p>
                 <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ml-10">
                   <p className="leading-relaxed ml-10 text-3xl inline-block ">
                     Step 2{" "}
@@ -90,7 +90,7 @@ const How = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
-                <p className="flex flex-nowrap w-28">_ _ _ _ _ </p>
+                <p className="flex flex-nowrap w-28"></p>
                 <div className="inline-block text-white rounded-lg  py-10">
                   <h1 className="block mb-3 text-3xl font-bold">Test</h1>
                   <p className="leading-relaxed">
@@ -104,7 +104,7 @@ const How = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
-                <p className="absolute -left-16  w-20">_ _ _ _ _ </p>
+                <p className="absolute -left-16  w-20"></p>
                 <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ml-10">
                   <p className="leading-relaxed ml-10 text-3xl inline-block ">
                     Step 4{" "}
