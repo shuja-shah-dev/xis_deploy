@@ -12,7 +12,7 @@ const How = () => {
       objectFit: "cover" }}
        className="text-white block relative bg-black py-24 mt-0 ">
         <div className="inline-block justify-center w-full  items-center text-5xl font-bold text-center mb-16">
-          Our Solution
+          How it Works
         </div>
 
         <div className="container justify-center items-center text-center pb-24 mx-auto flex ">
