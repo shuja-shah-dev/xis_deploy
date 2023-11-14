@@ -74,8 +74,8 @@ const introSection = () => {
         <p className=" text-base sm:text-xl mt-4 ">
           Build, Deploy & Inspect Quality in Minutes
         </p>
-        <Link href="/contact">
-          <button className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+        <Link href="/contact" aria-label="Contact">
+          <button id="getdemo" aria-label="Get a demo" className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
             Get a demo
           </button>
         </Link>
@@ -124,13 +124,13 @@ const DefectDetection = () => {
     window.addEventListener("mouseup", handleMouseUp);
   };
   return (
-    <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+    <section className="text-white">
+      <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Defect Detection
           </h1>
-          <p class="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed ">
             Leveraging AI-driven anomaly detection, the integration of computer
             vision facilitates automated visual inspection to identify defective
             products, detecting anomalies such as scratches or dents, and/or
@@ -156,6 +156,7 @@ const DefectDetection = () => {
                       src="/xraycrack1.png"
                       width={542}
                       height={360}
+                      alt="Crack Detect"
                     />
                     <Image
                       decoding="async"
@@ -163,6 +164,7 @@ const DefectDetection = () => {
                       src="/xraycrack.png"
                       width={542}
                       height={360}
+                      alt="Crack Detect"
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -202,13 +204,13 @@ const DefectDetection = () => {
 
 const CountingDefects = () => {
   return (
-    <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+    <section className="text-white">
+      <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Object Detection & Defect Counting
           </h1>
-          <p class="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed">
             In the domain of object and defect counting, the seamless fusion of
             computer vision and machine learning offers a powerful solution for
             precise and efficient counting. Leveraging state-of-the-art
@@ -218,12 +220,12 @@ const CountingDefects = () => {
             defects in a production line.
           </p>
         </div>
-        <div class="lg:max-w-lg h-[400px] w-full">
+        <div className="lg:max-w-lg h-[400px] w-full">
           <Image
             width={1950}
             height={1097}
-            class="h-full w-full object-center rounded-xl"
-            alt="hero"
+            className="h-full w-full object-center rounded-xl"
+            alt="Project Camera"
             src="/projectcamera.jpg"
           />
         </div>
@@ -234,13 +236,13 @@ const CountingDefects = () => {
 
 const ProductSorting = () => {
   return (
-    <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+    <section className="text-white">
+      <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Product Sorting
           </h1>
-          <p class="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed">
             Our Solution in product sorting revolutionizes traditional methods
             by offering unmatched speed, accuracy, and adaptability. Through our
             products, users can efficiently categorize imperfect parts from the
@@ -251,12 +253,12 @@ const ProductSorting = () => {
             manufacturing and logistics.
           </p>
         </div>
-        <div class="lg:max-w-lg h-full w-full">
+        <div className="lg:max-w-lg h-full w-full">
           <Image
             width={1600}
             height={1200}
-            class="h-full w-full object-center rounded-xl"
-            alt="hero"
+            className="h-full w-full object-center rounded-xl"
+            alt="Robotic"
             src="/robotic2.jpeg"
           />
         </div>
@@ -304,13 +306,13 @@ const PerformanceAnalytics = () => {
     window.addEventListener("mouseup", handleMouseUp);
   };
   return (
-    <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+    <section className="text-white">
+      <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Performance Analytics
           </h1>
-          <p class="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed">
             Revolutionize your quality control processes with our product's
             Assembly Completeness Detection feature. Our advanced technology
             analyzes assembly components, ensuring every element is correctly
@@ -339,6 +341,7 @@ const PerformanceAnalytics = () => {
                       src="/motorxray1.png"
                       width={960}
                       height={1028}
+                      alt="Magnet Detect"
                     />
                     <Image
                       decoding="async"
@@ -346,6 +349,7 @@ const PerformanceAnalytics = () => {
                       src="/motorxray2.png"
                       width={960}
                       height={1028}
+                      alt="Magnet Detect"
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -423,13 +427,13 @@ const TextDetection = () => {
   };
 
   return (
-    <section class="text-white">
-      <div class="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+    <section className="text-white">
+      <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
             Text Recognition
           </h1>
-          <p class="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed">
             Empower your workflow with our cutting-edge text recognition
             technology, a cornerstone feature of our product. Our advanced
             optical character recognition (OCR) seamlessly converts printed or
@@ -459,6 +463,7 @@ const TextDetection = () => {
                       src="/textdetect.png"
                       width={1154}
                       height={1097}
+                      alt="Text Detect"
                     />
                     <Image
                       decoding="async"
@@ -466,6 +471,7 @@ const TextDetection = () => {
                       src="/textdetect1.png"
                       width={1154}
                       height={1097}
+                      alt="Text Detect"
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -753,12 +759,14 @@ const benefitSection = () => {
                           width={10}
                           height={10}
                           className="mr-4"
+                          alt="circle icon"
                         />{" "}
                         {item.desc}
                       </p>
                       <p className="leading-relaxed flex mb-6 justify-start items-baseline">
                         <Image
                           src="/circle.svg"
+                          alt="circle icon"
                           width={10}
                           height={10}
                           className="mr-4"
@@ -837,7 +845,7 @@ const caseStudies = () => {
               <Image
                 width={400}
                 height={400}
-                alt="content"
+                alt="Defect Detection Robot"
                 className="object-cover h-96 object-center w-full"
                 src="/defectDetection.png"
               />
@@ -868,6 +876,7 @@ const caseStudies = () => {
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="/xrayimg.webp"
+                        alt="Xray Vision"
                         width={600}
                         height={600}
                       />
@@ -875,6 +884,7 @@ const caseStudies = () => {
                         decoding="async"
                         className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                         src="/xrayimg1.webp"
+                        alt="Xray Vision"
                         width={600}
                         height={600}
                       />
@@ -1060,6 +1070,14 @@ export default function Home() {
 
   return accessToken ? (
     <>
+     <Head>
+        <title>xis.ai</title>
+        <meta
+          name="description"
+          content="XIS AI, AI startup, industrial quality inspection, process monitoring"
+        />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+      </Head>
       <div
         style={{
           backgroundImage: "url('/background.png')",
@@ -1084,6 +1102,8 @@ export default function Home() {
           style={{ position: "fixed", bottom: "10%", right: "3%" }}
         >
           <button
+          id="scrollbtn"
+          aria-label="Scroll to top of the page"
             className="z-50"
             style={{
               backgroundColor: "#363636",
@@ -1138,6 +1158,8 @@ export default function Home() {
             Please Login to continue.
           </Typography>
           <button
+          id="login"
+          aria-label="Login to your account"
             onClick={(_) => {
               controller.push("/");
             }}

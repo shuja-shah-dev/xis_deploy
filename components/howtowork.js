@@ -104,8 +104,10 @@ const How = () => {
                 </div>
               </div>
               <div className="flex relative">
-                <div className="h-full w-full text-xl md:text-3xl -left-[40%] top-10 md:top-20 absolute inset-0 flex ">
+                <div className="h-full w-full  text-xl md:text-3xl -left-[45%] top-10 md:top-20 absolute ">
+                  <p className="bg-gray-700 border shadow-md rounded-xl text-white font-medium py-2 w-full">
                 Start Inspecting with 99.9% accuracy
+                  </p>
                 </div>
               
               </div>

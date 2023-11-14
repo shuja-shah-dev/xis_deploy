@@ -55,6 +55,7 @@ const about = () => {
                 </p>
                 <Link
                   href="/contact"
+                  aria-label="Contact"
                   className="px-4 py-2 text-xl text-gray-100 rounded-xl bg-gray-800 hover:bg-gray-900 "
                 >
                   Get in touch
@@ -212,6 +213,8 @@ const about = () => {
             Please Login to continue.
           </Typography>
           <button
+           id="login"
+           aria-label="Login to your account"
             onClick={(_) => {
               controller.push("/");
             }}

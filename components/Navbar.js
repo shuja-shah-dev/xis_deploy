@@ -48,23 +48,24 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`text-white  z-20 top-0 sticky p-2 ${
-          scrolled
+        className={`text-white  z-20 top-0 sticky p-2 ${scrolled
             ? "bg-black transition ease-in-out duration-300"
             : "backdrop-brightness-90"
-        }`}
+          }`}
       >
         <nav className=" px-4 lg:px-6 py-2.5 ">
           <div className="flex flex-wrap justify-between items-center mx-auto ">
             <Link
               href="/"
-              className="flex title-font font-medium items-start text-white "
+              aria-label="Home"
+              className="flex title-font font-medium items-start text-white"
             >
-              <Image src="/Asset.png" width={100} height={100} alt="" />
+              <Image src="/Asset.png" width={100} height={100} alt="Logo" />
             </Link>
             <div className="flex items-center lg:order-2">
               <Link
                 href="/contact"
+                aria-label="Contact"
                 className="text-white border font-medium rounded-lg text-sm px-3 sm:px-5 py-1 sm:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
               >
                 Contact
@@ -85,9 +86,9 @@ const Navbar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
                 <svg
@@ -97,9 +98,9 @@ const Navbar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </button>
@@ -109,14 +110,14 @@ const Navbar = () => {
               id="mobile-menu-2"
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <Link href="/">
+                <Link href="/" aria-label="Home">
                   <li className="relative group">
                     Home
                     {/* <ExpandMoreIcon /> */}
                   </li>
                 </Link>
 
-                <Link href="/about">
+                <Link href="/about" aria-label="About">
                   <li className="relative group">
                     About Us
                     {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
@@ -130,7 +131,7 @@ const Navbar = () => {
                 </ul> */}
                   </li>
                 </Link>
-                <Link href="/career">
+                <Link href="/career" aria-label="Career">
                   <li className="relative group">Careers</li>
                 </Link>
               </ul>
@@ -184,18 +185,20 @@ const Navbar = () => {
               p: "1.44rem 0",
             }}
           >
-            <Link href="/">
-              <li className="relative group">Home</li>
-            </Link>
-            <Link href="/about">
-              <li className="relative group">About Us</li>
-            </Link>
-            <Link href="/career">
-              <li className="relative group">Careers</li>
-            </Link>
-            <Link href="/contact">
-              <li className="relative group">Contact</li>
-            </Link>
+            <ul className="flex flex-col items-start justify-start w-full">
+              <Link href="/" aria-label="Home">
+                <li className="relative items-start justify-start">Home</li>
+              </Link>
+              <Link href="/about" aria-label="About">
+                <li className="relative items-start justify-start">About Us</li>
+              </Link>
+              <Link href="/career" aria-label="Career">
+                <li className="relative items-start justify-start">Career</li>
+              </Link>
+              <Link href="/contact" aria-label="Contact">
+                <li className="relative items-start justify-start">Contact</li>
+              </Link>
+            </ul>
           </Box>
         </Box>
       )}

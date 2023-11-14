@@ -46,6 +46,8 @@ const Career = () => {
         <Typography sx={{width: "100%", textAlign: "Center"}}>Permission Denied.</Typography>
         <Typography sx={{width: "100%", textAlign: "Center"}}>Please Login to continue.</Typography>
         <button
+         id="login"
+         aria-label="Login to your account"
           onClick={(_) => {
             controller.push("/");
           }}

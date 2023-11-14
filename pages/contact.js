@@ -102,7 +102,7 @@ const contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
-                                        +49 7045 204450
+                                       +49 173 217 18 85
                                     </div>
                                 </div>
                                 <div className="flex text-gray-100 md:items-center dark:text-gray-400">
@@ -175,7 +175,9 @@ const contact = () => {
                                 </div>
                                 <div className="px-2">
                                     <button
-                                        className="px-4 py-2 font-medium text-gray-100 bg-[#1e3a8a] rounded-md shadow hover:bg-blue-900 ">
+                                    id="message"
+                                    aria-label="Send message"
+                                        className="px-4 py-2 font-medium text-gray-100 bg-[#1e3a8a] rounded-md shadow hover:bg-blue-900">
                                         Send Message
                                     </button>
                                 </div>
@@ -219,6 +221,8 @@ const contact = () => {
                     <Typography sx={{ width: "100%", textAlign: "Center" }}>Permission Denied.</Typography>
                     <Typography sx={{ width: "100%", textAlign: "Center" }}>Please Login to continue.</Typography>
                     <button
+                    id="login"
+                    aria-label="Login to your account"
                         onClick={(_) => {
                             controller.push("/");
                         }}

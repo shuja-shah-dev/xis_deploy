@@ -17,42 +17,44 @@ const Footer = () => {
         <div className="container px-5 py-14 -mt-4 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full  px-4">
-              <Link href="/"><Image
-                src="/Asset.png"
-                className="justify-center mx-auto items-center text-center mb-10"
-                width={300}
-                height={400}
-              /></Link>
+              <Link href="/" aria-label="Home">
+                <Image
+                  src="/Asset.png"
+                  alt="Logo"
+                  className="justify-center mx-auto items-center text-center mb-10"
+                  width={300}
+                  height={400}
+                />
+              </Link>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <Link href="/about">
+              <Link href="/about" aria-label="About">
                 {" "}
                 <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
                   About Us
                 </h2>
               </Link>
               <nav className="list-none mb-10">
-              <Link href="/about"><li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                <Link href="/about" aria-label="About"><li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                   Impressum
                 </li></Link>
-                <Link href="/about"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                <Link href="/about" aria-label="About"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                   Terms and Conditions / AGB
                 </li></Link>
-                <Link href="/about"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                <Link href="/about" aria-label="About"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                   General Terms and Conditions
                 </li></Link>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <Link href="/Privacy/"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
+              <Link href="/Privacy/" aria-label="Privacy"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
                 Certificates
               </h2></Link>
               <nav className="list-none mb-10">
                 {/* <li className="pb-1">
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li> */}
-                <Link href="/Privacy/">
-
+                <Link href="/Privacy/" aria-label="Privacy">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                     Data Privacy Policy
                   </li>
@@ -60,23 +62,23 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <Link href="/contact">
+              <Link href="/contact" aria-label="Contact">
                 <h2 className="title-font font-medium  text-sky-400 tracking-widest text-xl mb-3 cursor-pointer">
                   Contact Us
                 </h2>
               </Link>
               <nav className="list-none mb-10">
-                <Link href="/contact">
+                <Link href="/contact" aria-label="Contact">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                     <CallIcon /> 0800 972 9522
                   </li>
                 </Link>
-                <Link href="/contact">
+                <Link href="/contact" aria-label="Contact">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
-                    <PhoneIphoneIcon /> +49 7045 204450
+                    <PhoneIphoneIcon /> +49 173 2171885
                   </li>
                 </Link>
-                <Link href="/contact">
+                <Link href="/contact" aria-label="Contact">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
                     <EmailIcon /> contact@xray-lab.com
                   </li>
@@ -89,6 +91,7 @@ const Footer = () => {
                 <Link
                   target="_blank"
                   href="https://www.linkedin.com/company/xis-ai/mycompany/"
+                  aria-label="Linkedin"
                 >
                   <LinkedInIcon fontSize="large" />
                 </Link>{" "}
@@ -97,7 +100,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="h-px bg-gray-500 border-0 "></hr>
+        <hr className="h-px bg-gray-500 border-0"></hr>
         <div className="bg-black">
           <div className="container px-5  py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
             <p className="text-base md:text-xl text-gray-500 sm:ml-6 sm:mt-0 mt-4">
