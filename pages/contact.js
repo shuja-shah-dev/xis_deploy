@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 import Head from "next/head";
 import 'intersection-observer';
 import { useEffect } from "react";
+import { useState } from "react";
 
 
 
@@ -29,6 +30,51 @@ const contact = () => {
             observer.observe(element);
         });
     });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(name, phone, email, subject, desc);
+        try {
+            const data = {name, phone, email, subject, desc}
+            const response = await fetch('http://localhost:3000/api/postcontact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+    
+            const result = await response.json();
+            console.log('Success:', result);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+    
+
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
+    const [subject, setSubject] = useState('')
+    const [desc, setDesc] = useState('')
+
+    const handleChange = (e) => {
+        if (e.target.name == 'name') {
+            setName(e.target.value)
+        }
+        else if (e.target.name == 'phone') {
+            setPhone(e.target.value)
+        }
+        else if (e.target.name == 'email') {
+            setEmail(e.target.value)
+        }
+        else if (e.target.name == 'subject') {
+            setSubject(e.target.value)
+        }
+        else if (e.target.name == 'desc') {
+            setDesc(e.target.value)
+        }
+    }
 
     return accessToken ? (
         <>
@@ -102,7 +148,7 @@ const contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
-                                       +49 173 217 18 85
+                                        +49 173 217 18 85
                                     </div>
                                 </div>
                                 <div className="flex text-gray-100 md:items-center dark:text-gray-400">
@@ -120,65 +166,69 @@ const contact = () => {
                             </div>
                         </div>
                         <div className="w-full px-4 mb-6 lg:mb-0 lg:w-3/5">
-                            <form action="">
+                            <form onSubmit={handleSubmit} action="">
                                 <div className="flex flex-wrap mb-6 -mx-3">
                                     <div className="w-full px-3">
                                         <label
+                                            htmlFor="name"
                                             className="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                             Name
                                         </label>
                                         <input
                                             className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
-                                            type="text" placeholder="Your full name...." />
+                                            type="text" name="name" onChange={handleChange} value={name} id="name" placeholder="Your full name...." />
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap mb-6 -mx-3">
                                     <div className="w-full px-3">
                                         <label
+                                            htmlFor="phone"
                                             className="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                             Phone number
                                         </label>
                                         <input
                                             className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
-                                            type="number" placeholder="Your Phone number...." />
+                                            type="phone" id="phone" value={phone} onChange={handleChange} name="phone" placeholder="Your Phone number...." />
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap mb-6 -mx-3">
                                     <div className="w-full px-3">
                                         <label
+                                            htmlFor="subject"
                                             className="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                             Subject
                                         </label>
                                         <input
                                             className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
-                                            type="text" placeholder="I'm asking for...." />
+                                            type="text" id="subject" value={subject} onChange={handleChange} name="subject" placeholder="I'm asking for...." />
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap mb-6 -mx-3">
                                     <div className="w-full px-3">
                                         <label
+                                            htmlFor="email"
                                             className="block mb-2 font-bold tracking-wide uppercase text-gray-400">
                                             Email Address
                                         </label>
                                         <input
                                             className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
-                                            type="email" placeholder="abc@gmail.com" />
+                                            type="email" id="email" value={email} onChange={handleChange} name="email" placeholder="abc@gmail.com" />
                                     </div>
                                 </div>
                                 <div className="w-full px-3 mb-6 -mx-3">
                                     <label
+                                        htmlFor="desc"
                                         className="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                         Your Message
                                     </label>
-                                    <textarea rows="4" type="message" placeholder="Write a message..." required=""
-                                        className="w-full p-4 mr-3 text-sm leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:focus:bg-gray-800 dark:border-gray-600 text-gray-400 focus:outline-none focus:bg-gray-800"></textarea>
+                                    <textarea rows="4" type="message" name="desc" onChange={handleChange} value={desc} id="desc" placeholder="Write a message..." required=""
+                                        className="w-full p-4 mr-3 text-sm leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:focus:bg-gray-800 dark:border-gray-600 text-gray-400 focus:outline-none focus:bg-gray-800" />
                                 </div>
                                 <div className="px-2">
                                     <button
-                                    id="message"
-                                    aria-label="Send message"
+                                        type="submit"
                                         className="px-4 py-2 font-medium text-gray-100 bg-[#1e3a8a] rounded-md shadow hover:bg-blue-900">
-                                        Send Message
+                                        Submit
                                     </button>
                                 </div>
                             </form>
@@ -221,8 +271,8 @@ const contact = () => {
                     <Typography sx={{ width: "100%", textAlign: "Center" }}>Permission Denied.</Typography>
                     <Typography sx={{ width: "100%", textAlign: "Center" }}>Please Login to continue.</Typography>
                     <button
-                    id="login"
-                    aria-label="Login to your account"
+                        id="login"
+                        aria-label="Login to your account"
                         onClick={(_) => {
                             controller.push("/");
                         }}

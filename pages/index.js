@@ -75,7 +75,7 @@ const introSection = () => {
           Build, Deploy & Inspect Quality in Minutes
         </p>
         <Link href="/contact" aria-label="Contact">
-          <button id="getdemo" aria-label="Get a demo" className="rounded-full text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+          <button id="getdemo" aria-label="Get a demo" className="rounded-full text-base sm:text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
             Get a demo
           </button>
         </Link>
@@ -144,7 +144,7 @@ const DefectDetection = () => {
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
                   <div
                     ref={imageContainer}
-                    className="twentytwenty-container rounded-xl w-full h-[400px] lg:h-[400px]"
+                    className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]"
                   >
                     <Image
                       decoding="async"
@@ -220,7 +220,7 @@ const CountingDefects = () => {
             defects in a production line.
           </p>
         </div>
-        <div className="lg:max-w-lg h-[400px] w-full">
+        <div className="lg:max-w-lg h-[320px] lg:h-[400px] w-full">
           <Image
             width={1950}
             height={1097}
@@ -328,14 +328,13 @@ const PerformanceAnalytics = () => {
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
                   <div
                     ref={imageContainer}
-                    className="twentytwenty-container rounded-xl w-full h-[500px] lg:h-[500px]"
+                    className="twentytwenty-container rounded-xl w-full h-[383px] lg:h-[500px]"
                   >
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
-                          imageReveal * 100
-                        }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                          }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before object-center w-full h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/motorxray1.png"
@@ -450,14 +449,13 @@ const TextDetection = () => {
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
                   <div
                     ref={imageContainer}
-                    className="twentytwenty-container rounded-xl w-full h-[450px] lg:h-[450px]"
+                    className="twentytwenty-container rounded-xl w-full h-[350px] lg:h-[450px]"
                   >
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
-                          imageReveal * 100
-                        }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                          }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before w-full h-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/textdetect.png"
@@ -638,7 +636,7 @@ const benefitSection = () => {
       <div className="text-gray-600 mx-auto container ">
         <div className=" px-4 py-12">
           <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
-            <form className="mb-2 w-full text-center items-center rounded-lg lg:mb-0 lg:flex">
+            <div className="mb-2 w-full text-center items-center rounded-lg lg:mb-0 lg:flex">
               <div className="flex flex-wrap lg:flex-nowrap justify-center  text-center gap-3 shadow-sm h-[100%] lg:h-14 items-center  rounded-md w-full relative ">
                 <input
                   onClick={() => setScreen("auto-annotate")}
@@ -649,10 +647,9 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="auto-annotate"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${
-                    screen === "auto-annotate" &&
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
-                  } `}
+                    } `}
                 >
                   Defect Detection
                 </label>
@@ -666,10 +663,9 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="annotation-types"
-                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${
-                    screen === "annotation-types" &&
+                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
                   Object & Defect Counting
                 </label>
@@ -683,10 +679,9 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="performance"
-                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
-                    screen === "performance" &&
+                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
                   Assembly Completeness
                 </label>
@@ -700,10 +695,9 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="text-detection"
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
-                    screen === "text-detection" &&
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
                   Text Recognition
                 </label>
@@ -717,15 +711,14 @@ const benefitSection = () => {
                 />
                 <label
                   htmlFor="real-time"
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${
-                    screen === "real-time" &&
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                  }`}
+                    }`}
                 >
                   Product Sorting
                 </label>
               </div>
-            </form>
+            </div>
           </div>
           {screen === "auto-annotate" && <DefectDetection />}
           {screen === "annotation-types" && <CountingDefects />}
@@ -870,9 +863,8 @@ const caseStudies = () => {
                       <Image
                         decoding="async"
                         style={{
-                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
-                            imageReveal * 100
-                          }% 100%, 0 100%)`,
+                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
+                            }% 100%, 0 100%)`,
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="/xrayimg.webp"
@@ -1070,12 +1062,14 @@ export default function Home() {
 
   return accessToken ? (
     <>
-     <Head>
+      <Head>
         <title>xis.ai</title>
         <meta
           name="description"
           content="XIS AI, AI startup, industrial quality inspection, process monitoring"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
       <div
@@ -1102,8 +1096,8 @@ export default function Home() {
           style={{ position: "fixed", bottom: "10%", right: "3%" }}
         >
           <button
-          id="scrollbtn"
-          aria-label="Scroll to top of the page"
+            id="scrollbtn"
+            aria-label="Scroll to top of the page"
             className="z-50"
             style={{
               backgroundColor: "#363636",
@@ -1158,8 +1152,8 @@ export default function Home() {
             Please Login to continue.
           </Typography>
           <button
-          id="login"
-          aria-label="Login to your account"
+            id="login"
+            aria-label="Login to your account"
             onClick={(_) => {
               controller.push("/");
             }}
