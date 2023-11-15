@@ -638,85 +638,37 @@ const benefitSection = () => {
           <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
             <div className="mb-2 w-full text-center items-center rounded-lg lg:mb-0 lg:flex">
               <div className="flex flex-wrap lg:flex-nowrap justify-center  text-center gap-3 shadow-sm h-[100%] lg:h-14 items-center  rounded-md w-full relative ">
-                <input
-                  onClick={() => setScreen("auto-annotate")}
-                  className="h-[0px] w-[0px]  overflow-hidden absolute"
-                  type="radio"
-                  id="auto-annotate"
-                  value=""
-                />
-                <label
-                  htmlFor="auto-annotate"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border   items-center focus:border-sky-500 focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
+                <button
+                  aria-label="defect-detect"
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500  focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     } `}
-                >
-                  Defect Detection
-                </label>
-                <input
-                  onClick={() => setScreen("annotation-types")}
-                  className="h-[0px] w-[0px]   overflow-hidden absolute"
-                  type="radio"
-                  id="annotation-types"
-                  value=""
-                  checked
-                />
-                <label
-                  htmlFor="annotation-types"
-                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500   md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
+                  onClick={() => setScreen("auto-annotate")}>Defect Detection</button>
+                <button
+                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center focus:ring-0  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                >
-                  Object & Defect Counting
-                </label>
-                <input
+                  onClick={() => setScreen("annotation-types")}
+                >Object & Defect Counting</button>
+                <button
+                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "performance" &&
+                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                    }`}
                   onClick={() => setScreen("performance")}
-                  className="h-[0px] w-[0px]  overflow-hidden absolute"
-                  type="radio"
-                  id="performance"
-                  value=""
-                  checked
-                />
-                <label
-                  htmlFor="performance"
-                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "performance" &&
+                >Assembly Completeness</button>
+
+                <button
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                >
-                  Assembly Completeness
-                </label>
-                <input
                   onClick={() => setScreen("text-detection")}
-                  className="h-[0px] w-[0px]   overflow-hidden absolute"
-                  type="radio"
-                  id="text-detection"
-                  value=""
-                  checked
-                />
-                <label
-                  htmlFor="text-detection"
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
+                >Text Recognition</button>
+                <button
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring-0 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                >
-                  Text Recognition
-                </label>
-                <input
                   onClick={() => setScreen("real-time")}
-                  className="h-[0px] w-[0px]   overflow-hidden absolute"
-                  type="radio"
-                  id="real-time"
-                  value=""
-                  checked
-                />
-                <label
-                  htmlFor="real-time"
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring focus:ring-sky-500 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
-                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                    }`}
-                >
-                  Product Sorting
-                </label>
+                >Product Sorting</button>
               </div>
             </div>
           </div>
