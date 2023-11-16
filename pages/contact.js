@@ -35,7 +35,7 @@ const contact = () => {
         e.preventDefault();
         console.log(name, phone, email, subject, desc);
         try {
-            const data = {name, phone, email, subject, desc}
+            const data = { name, phone, email, subject, desc }
             const response = await fetch('http://localhost:3000/api/postcontact', {
                 method: 'POST',
                 headers: {
@@ -43,14 +43,17 @@ const contact = () => {
                 },
                 body: JSON.stringify(data),
             });
-    
+
             const result = await response.json();
             console.log('Success:', result);
+            setName('')
+            setPhone('')
+            setEmail('')
+            setSubject('')
         } catch (error) {
             console.error('Error:', error);
         }
     };
-    
 
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
@@ -166,7 +169,7 @@ const contact = () => {
                             </div>
                         </div>
                         <div className="w-full px-4 mb-6 lg:mb-0 lg:w-3/5">
-                            <form onSubmit={handleSubmit} action="">
+                            <form onSubmit={handleSubmit}>
                                 <div className="flex flex-wrap mb-6 -mx-3">
                                     <div className="w-full px-3">
                                         <label

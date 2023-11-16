@@ -27,7 +27,7 @@ const How = () => {
               </div>
              
               <div className="flex relative pb-12">
-                <div className="inline-block w-full rounded-lg text-white py-10 ">
+                <div className="inline-block w-full rounded-lg text-white pt-28 sm:pt-12 ">
                   <h1 className="block mb-3 text-xl md:text-3xl font-bold">Train AI</h1>
                   <p className="leading-relaxed text-sm md:text-base">
                     Train the AI based on the dataset you Provided. Our web app
@@ -53,7 +53,7 @@ const How = () => {
               </div>
             </div>
             <div className="md:w-2/5 w-full  md:py-6">
-              <div className="flex relative pb-12">
+              <div className="flex relative pb-10 sm:pb-16">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>

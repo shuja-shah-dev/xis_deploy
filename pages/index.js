@@ -32,7 +32,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 
-const introSection = () => {
+const IntroSection = () => {
   return (
     <Box
       className="block bg-[#111111] object-cover w-[100vw] h-[90vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden pesudoMyClass"
@@ -74,7 +74,7 @@ const introSection = () => {
         <p className=" text-base sm:text-xl mt-4 ">
           Build, Deploy & Inspect Quality in Minutes
         </p>
-        <Link href="/contact" aria-label="Contact">
+        <Link href="https://beltline.glitch.me/" target="_blank" aria-label="ViewInAR">
           <button id="getdemo" aria-label="Get a demo" className="rounded-full text-base sm:text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
             Get a demo
           </button>
@@ -507,7 +507,7 @@ const TextDetection = () => {
   );
 };
 
-const benefitSection = () => {
+const BenefitSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3; // Adjust the total number of slides
 
@@ -730,7 +730,7 @@ const benefitSection = () => {
   );
 };
 
-const caseStudies = () => {
+const CaseStudies = () => {
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -869,7 +869,7 @@ const caseStudies = () => {
   );
 };
 
-const featureSection = () => {
+const FeatureSection = () => {
   const data = [
     {
       svg: <SpeedIcon fontSize="large" sx={{ fill: "#fff" }} />,
@@ -1034,12 +1034,12 @@ export default function Home() {
         }}
         className="bg-[#111111] text-white relative overflow-hidden"
       >
-        {introSection()}
+        <IntroSection/>
         <div className="text-white  block relative  mt-0">
-          {benefitSection()}
-          {caseStudies()}
+          <BenefitSection/>
+          <CaseStudies/>
           <How />
-          {featureSection()}
+          <FeatureSection/>
         </div>
       </div>
       <div className="z-50" style={{ position: "relative" }}>
