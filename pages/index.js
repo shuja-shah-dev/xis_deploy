@@ -75,8 +75,8 @@ const IntroSection = () => {
           Build, Deploy & Inspect Quality in Minutes
         </p>
         <Link href="https://beltline.glitch.me/" target="_blank" aria-label="ViewInAR">
-          <button id="getdemo" aria-label="Get a demo" className="rounded-full text-base sm:text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
-            Get a demo
+          <button id="ViewInAR" aria-label="ViewInAR" className="rounded-full text-base sm:text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+          View in AR
           </button>
         </Link>
       </div>

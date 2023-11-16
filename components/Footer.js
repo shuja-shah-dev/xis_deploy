@@ -95,7 +95,13 @@ const Footer = () => {
                 >
                   <LinkedInIcon fontSize="large" />
                 </Link>{" "}
+                <Link
+                  target="_blank"
+                  href="https://www.youtube.com/@xray-lab2514"
+                  aria-label="Youtube"
+                >
                 <YouTubeIcon fontSize="large" />
+                </Link>
               </div>
             </div>
           </div>
