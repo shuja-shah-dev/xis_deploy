@@ -76,13 +76,13 @@ const IntroSection = () => {
         <p className=" text-base sm:text-xl mt-4 ">
           Build, Deploy & Inspect Quality in Minutes
         </p>
-        <Link href="/contact" aria-label="GetaDemo">
-          <button id="get-a-demo" aria-label="GetaDemo" className="rounded-full text-base sm:text-xl hover:border-black  hover:bg-white hover:text-black border px-4 py-2 mt-4">
+        <Link href="/contact" aria-label="GetaDemo" className="focus:outline-none">
+          <button id="get-a-demo" aria-label="GetaDemo" className="rounded-full text-base sm:text-xl hover:border-black focus:outline-none hover:bg-white hover:text-black border px-4 py-2 mt-4">
           Get a Demo
           </button>
         </Link>
-        <Link href="https://beltline.glitch.me/" target="_blank"  aria-label="ViewInAR">
-          <button id="ViewInAR" aria-label="ViewInAR" className="block rounded-full mx-auto text-base sm:text-lg hover:border-black  hover:bg-white hover:text-black  px-2 py-1 mt-2">
+        <Link href="https://beltline.glitch.me/" target="_blank"  aria-label="ViewInAR" className="focus:outline-none">
+          <button id="ViewInAR" aria-label="ViewInAR" className="block focus:outline-none rounded-full mx-auto text-base sm:text-lg hover:border-black  hover:bg-white hover:text-black  px-2 py-1 mt-2">
           <CenterFocusStrongIcon /> View in AR
           </button>
           </Link>
@@ -648,31 +648,31 @@ const BenefitSection = () => {
               <div className="flex flex-wrap lg:flex-nowrap justify-center  text-center gap-3 shadow-sm h-[100%] lg:h-14 items-center  rounded-md w-full relative ">
                 <button
                   aria-label="defect-detect"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500  focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500  focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     } `}
                   onClick={() => setScreen("auto-annotate")}>Defect Detection</button>
                 <button
-                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center focus:ring-0  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
+                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border focus:outline-none items-center focus:ring-0  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     }`}
                   onClick={() => setScreen("annotation-types")}
                 >Object & Defect Counting</button>
                 <button
-                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "performance" &&
+                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
                   onClick={() => setScreen("performance")}
                 >Assembly Completeness</button>
 
                 <button
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed focus:outline-none -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
                   onClick={() => setScreen("text-detection")}
                 >Text Recognition</button>
                 <button
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring-0 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring-0 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed focus:outline-none -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
                   onClick={() => setScreen("real-time")}

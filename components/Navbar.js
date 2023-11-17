@@ -61,7 +61,7 @@ const Navbar = () => {
             <Link
               href="/"
               aria-label="Home"
-              className="flex title-font font-medium items-start text-white"
+              className="flex title-font font-medium focus:outline-none items-start text-white"
             >
               <Image src="/Asset.png" width={100} height={100} alt="Logo" />
             </Link>
@@ -113,15 +113,15 @@ const Navbar = () => {
               id="mobile-menu-2"
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <Link href="/" aria-label="Home">
-                  <li className="relative group">
+                <Link href="/" aria-label="Home" className="focus:outline-none">
+                  <li className="relative group focus:outline-none">
                     Home
                     {/* <ExpandMoreIcon /> */}
                   </li>
                 </Link>
 
-                <Link href="/about" aria-label="About">
-                  <li className="relative group">
+                <Link href="/about" aria-label="About" className="focus:outline-none">
+                  <li className="relative group focus:outline-none">
                     About Us
                     {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
                   <li>Menu 1</li>
@@ -134,8 +134,8 @@ const Navbar = () => {
                 </ul> */}
                   </li>
                 </Link>
-                <Link href="/career" aria-label="Career">
-                  <li className="relative group">Careers</li>
+                <Link href="/career" aria-label="Career" className="focus:outline-none">
+                  <li className="relative group focus:outline-none">Careers</li>
                 </Link>
               </ul>
             </div>
