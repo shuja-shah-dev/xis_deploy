@@ -31,6 +31,8 @@ import ShieldIcon from "@mui/icons-material/Shield";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
+import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import CenterFocusStrongIcon from '@mui/icons-material/CenterFocusStrong';
 
 const IntroSection = () => {
   return (
@@ -79,7 +81,13 @@ const IntroSection = () => {
           Get a Demo
           </button>
         </Link>
+        <Link href="https://beltline.glitch.me/" target="_blank"  aria-label="ViewInAR">
+          <button id="ViewInAR" aria-label="ViewInAR" className="block rounded-full mx-auto text-base sm:text-lg hover:border-black  hover:bg-white hover:text-black  px-2 py-1 mt-2">
+          <CenterFocusStrongIcon /> View in AR
+          </button>
+          </Link>
       </div>
+      
     </Box>
   );
 };
@@ -337,7 +345,7 @@ const PerformanceAnalytics = () => {
                           }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before object-center w-full h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
-                      src="/motorxray1.png"
+                      src="/motorxray2.png"
                       width={960}
                       height={1028}
                       alt="Magnet Detect"
@@ -345,7 +353,7 @@ const PerformanceAnalytics = () => {
                     <Image
                       decoding="async"
                       className="custom-clip2 h-full w-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
-                      src="/motorxray2.png"
+                      src="/motorxray1.png"
                       width={960}
                       height={1028}
                       alt="Magnet Detect"
@@ -539,7 +547,7 @@ const BenefitSection = () => {
     },
 
     {
-      svg: <ErrorIcon fontSize="large" sx={{ fill: "#fff" }} />,
+      svg: <ReportProblemIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Human Error",
       desc: "Significantly reduce human errors in the inspection process, Improving product quality & consistency.",
       para: "Our product can detect defects that are not visible to the human eye, Ensuring a more thorough inspection process.",
