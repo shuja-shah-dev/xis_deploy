@@ -6,7 +6,10 @@ import Image from "next/image";
 import { Box } from "@mui/material";
 import { CloseOutlined } from "@mui/icons-material";
 import { useRouter } from "next/router";
+
+
 const Navbar = () => {
+
   const [scrolled, setScrolled] = useState(false);
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,7 +53,7 @@ const Navbar = () => {
       <header
         className={`text-white  z-20 top-0 sticky p-2 ${scrolled
             ? "bg-black transition ease-in-out duration-300"
-            : "backdrop-brightness-90"
+            : "backdrop-brightness-90 transition ease-in-out duration-300"
           }`}
       >
         <nav className=" px-4 lg:px-6 py-2.5 ">
