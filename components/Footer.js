@@ -47,7 +47,7 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <Link href="/Privacy/" aria-label="Privacy"> <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
+              <Link href="/Privacy/" aria-label="Privacy"> <h2 className="title-font transition transform duration-500 hover:scale-110 font-medium text-gray-500 tracking-widest text-xl mb-3">
                 Certificates
               </h2></Link>
               <nav className="list-none mb-10">
@@ -55,7 +55,7 @@ const Footer = () => {
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li> */}
                 <Link href="/Privacy/" aria-label="Privacy">
-                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800 transition transform duration-500 hover:scale-110">
                     Data Privacy Policy
                   </li>
                 </Link>
@@ -68,14 +68,10 @@ const Footer = () => {
                 </h2>
               </Link>
               <nav className="list-none mb-10">
+              
                 <Link href="/contact" aria-label="Contact">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
-                    <CallIcon /> 0800 972 9522
-                  </li>
-                </Link>
-                <Link href="/contact" aria-label="Contact">
-                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
-                    <PhoneIphoneIcon /> +49 173 2171885
+                    <PhoneIphoneIcon /> +49 7045 204450
                   </li>
                 </Link>
                 <Link href="/contact" aria-label="Contact">

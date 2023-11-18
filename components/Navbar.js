@@ -51,17 +51,14 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`text-white  z-20 top-0 sticky p-2 ${scrolled
-            ? "bg-black transition ease-in-out duration-300"
-            : "backdrop-brightness-90 transition ease-in-out duration-300"
-          }`}
+        className="text-white z-20 top-0 sticky p-2 bg-black"
       >
-        <nav className=" px-4 lg:px-6 py-2.5 ">
-          <div className="flex flex-wrap justify-between items-center mx-auto ">
+        <nav className="px-4 lg:px-6 py-4">
+          <div className="flex flex-wrap justify-between items-center mx-auto">
             <Link
               href="/"
               aria-label="Home"
-              className="flex title-font font-medium focus:outline-none items-start text-white"
+              className="flex font-medium focus:outline-none items-center text-white"
             >
               <Image src="/Asset.png" width={100} height={100} alt="Logo" />
             </Link>
@@ -69,7 +66,7 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 aria-label="Contact"
-                className="text-white border font-medium rounded-lg text-sm px-3 sm:px-5 py-1 sm:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
+                className="text-white border hover:text-blue-500 hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-5 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
               >
                 Contact
               </Link>
@@ -114,14 +111,14 @@ const Navbar = () => {
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                 <Link href="/" aria-label="Home" className="focus:outline-none">
-                  <li className="relative group focus:outline-none">
+                  <li className="relative group focus:outline-none text-xl">
                     Home
                     {/* <ExpandMoreIcon /> */}
                   </li>
                 </Link>
 
                 <Link href="/about" aria-label="About" className="focus:outline-none">
-                  <li className="relative group focus:outline-none">
+                  <li className="relative group focus:outline-none text-xl">
                     About Us
                     {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
                   <li>Menu 1</li>
@@ -135,7 +132,7 @@ const Navbar = () => {
                   </li>
                 </Link>
                 <Link href="/career" aria-label="Career" className="focus:outline-none">
-                  <li className="relative group focus:outline-none">Careers</li>
+                  <li className="relative group focus:outline-none text-xl">Careers</li>
                 </Link>
               </ul>
             </div>

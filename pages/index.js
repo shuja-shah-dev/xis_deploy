@@ -37,7 +37,7 @@ import CenterFocusStrongIcon from '@mui/icons-material/CenterFocusStrong';
 const IntroSection = () => {
   return (
     <Box
-      className="block bg-[#111111] object-cover w-[100vw] h-[90vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden pesudoMyClass"
+      className="block bg-[#111111] object-cover w-[100vw] h-[100vh] max-w-[100vw] top-0 left-0 right-0 overflow-hidden pesudoMyClass"
       sx={{
         position: "relative",
         "&:before": {
@@ -56,7 +56,7 @@ const IntroSection = () => {
       }}
     >
       <video
-        className="w-[100vw] bg-[#111111] h-full opacity-80 fixed z-0 top-0 right-0 left-0 object-cover "
+        className="w-[100vw] bg-[#111111] h-full mt-20 opacity-80 fixed z-0 top-0 right-0 left-0 object-cover "
         autoPlay
         muted
         playsInline
@@ -64,7 +64,7 @@ const IntroSection = () => {
         src="/xraylab.mp4"
       ></video>
       <div
-        className="absolute top-2/3 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center"
+        className="absolute top-1/2 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center"
         style={{
           zIndex: 10,
         }}
@@ -77,17 +77,17 @@ const IntroSection = () => {
           Build, Deploy & Inspect Quality in Minutes
         </p>
         <Link href="/contact" aria-label="GetaDemo" className="focus:outline-none">
-          <button id="get-a-demo" aria-label="GetaDemo" className="rounded-full text-base sm:text-xl hover:border-black focus:outline-none hover:bg-white hover:text-black border px-4 py-2 mt-4">
-          Get a Demo
+          <button id="get-a-demo" aria-label="GetaDemo" className="rounded-full text-sm sm:text-xl hover:border-black focus:outline-none hover:scale-110 transition transform duration-500 hover:bg-white hover:text-black border sm:px-4 px-2 py-2 sm:py-3 mt-4">
+            Get a Demo
           </button>
         </Link>
-        <Link href="https://beltline.glitch.me/" target="_blank"  aria-label="ViewInAR" className="focus:outline-none">
-          <button id="ViewInAR" aria-label="ViewInAR" className="block focus:outline-none rounded-full mx-auto text-base sm:text-lg hover:border-black  hover:bg-white hover:text-black  px-2 py-1 mt-2">
-          <CenterFocusStrongIcon /> View in AR
+        <Link href="https://beltline.glitch.me/" target="_blank" aria-label="ViewInAR" className="focus:outline-none">
+          <button id="ViewInAR" aria-label="ViewInAR" className="block focus:outline-none rounded-full mx-auto text-sm sm:text-lg hover:scale-110 transition transform duration-500 px-2 py-1 mt-2">
+            <CenterFocusStrongIcon /> View in AR
           </button>
-          </Link>
+        </Link>
       </div>
-      
+
     </Box>
   );
 };
@@ -339,7 +339,6 @@ const PerformanceAnalytics = () => {
                     className="twentytwenty-container rounded-xl w-full h-[383px] lg:h-[500px]"
                   >
                     <Image
-                      decoding="async"
                       style={{
                         clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
                           }% 100%, 0 100%)`,
@@ -351,7 +350,6 @@ const PerformanceAnalytics = () => {
                       alt="Magnet Detect"
                     />
                     <Image
-                      decoding="async"
                       className="custom-clip2 h-full w-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                       src="/motorxray1.png"
                       width={960}
@@ -460,7 +458,6 @@ const TextDetection = () => {
                     className="twentytwenty-container rounded-xl w-full h-[350px] lg:h-[450px]"
                   >
                     <Image
-                      decoding="async"
                       style={{
                         clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
                           }% 100%, 0 100%)`,
@@ -472,7 +469,6 @@ const TextDetection = () => {
                       alt="Text Detect"
                     />
                     <Image
-                      decoding="async"
                       className="custom-clip2 h-full w-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                       src="/textdetect1.png"
                       width={1154}
@@ -628,7 +624,7 @@ const BenefitSection = () => {
     border: "1px solid gray",
   };
 
-  const [screen, setScreen] = useState("auto-annotate");
+  const [screen, setScreen] = useState("defect-detection");
 
   return (
     <section
@@ -644,89 +640,75 @@ const BenefitSection = () => {
       <div className="text-gray-600 mx-auto container ">
         <div className=" px-4 py-12">
           <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
-            <div className="mb-2 w-full text-center items-center rounded-lg lg:mb-0 lg:flex">
-              <div className="flex flex-wrap lg:flex-nowrap justify-center  text-center gap-3 shadow-sm h-[100%] lg:h-14 items-center  rounded-md w-full relative ">
+            <div className="mb-2 w-full rounded-lg lg:mb-0 ">
+              <div className="flex flex-col lg:flex-row justify-center text-center gap-3 lg:gap-2 shadow-sm h-[100%] lg:h-14 items-center rounded-md w-full relative">
                 <button
-                  aria-label="defect-detect"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500  focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "auto-annotate" &&
+                  aria-label="defect-detection"
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500 md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     } `}
-                  onClick={() => setScreen("auto-annotate")}>Defect Detection</button>
+                  onClick={() => setScreen("defect-detection")}>Defect Detection</button>
                 <button
-                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border focus:outline-none items-center focus:ring-0  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed -mr-[1px] relative text-center duration-[.15s] transition-all   ${screen === "annotation-types" &&
-                    "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
+                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border focus:outline-none items-center px-1  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${screen === "object-defect" &&
+                    " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => setScreen("annotation-types")}
+                  onClick={() => setScreen("object-defect")}
                 >Object & Defect Counting</button>
                 <button
-                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed -mr-[1px] focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
-                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
-                    }`}
-                  onClick={() => setScreen("performance")}
-                >Assembly Completeness</button>
-
-                <button
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center focus:ring-0 md:text-lg rounded-lg py-3 px-2 cursor-pointer leading-relaxed focus:outline-none -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
+                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
                   onClick={() => setScreen("text-detection")}
                 >Text Recognition</button>
                 <button
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center focus:ring-0 md:text-lg rounded-lg py-3 pr-2  cursor-pointer leading-relaxed focus:outline-none -mr-[1px] relative text-center duration-[.15s] transition-all ${screen === "real-time" &&
+                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => setScreen("real-time")}
+                  onClick={() => setScreen("performance")}
+                >Assembly Completeness</button>
+
+
+                <button
+                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
+                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                    }`}
+                  onClick={() => setScreen("product-sorting")}
                 >Product Sorting</button>
               </div>
             </div>
           </div>
-          {screen === "auto-annotate" && <DefectDetection />}
-          {screen === "annotation-types" && <CountingDefects />}
-          {screen === "performance" && <PerformanceAnalytics />}
-          {screen === "real-time" && <ProductSorting />}
+          {screen === "defect-detection" && <DefectDetection />}
+          {screen === "object-defect" && <CountingDefects />}
           {screen === "text-detection" && <TextDetection />}
+          {screen === "performance" && <PerformanceAnalytics />}
+          {screen === "product-sorting" && <ProductSorting />}
         </div>
       </div>
-
-      <section className="text-white relative hiddenn pb-24  body-font z-10">
-        <div className="container px-5  mx-auto">
-          <div className="flex flex-wrap -m-4">
+      <section className="text-white hiddenn block -my-1">
+        <div className="container px-5 pb-24 mx-auto  ">
+          <div className="flex flex-wrap sm:-m-4 pb-28 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {benefit.map((item, index) => {
               return (
-                <div key={index} className="p-4 md:w-1/3">
-                  <div className="flex rounded-lg h-full p-8 flex-col  ">
-                    <div className="flex items-center mb-8">
-                      <div className="w-20 h-20 inline-flex items-center justify-center  bg-gray-800 rounded-lg text-white mb-5 flex-shrink-0">
-                        {item.svg ? item.svg : <SpeedIcon />}
-                      </div>
-                    </div>
+                <div className="p-4 lg:w-1/3 flex" key={index}>
+                  <div
+                    className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                    style={{
+                      height: "4.5rem",
+                      width: "4.5rem",
+                    }}
+                  >
+                    {item.svg ? item.svg : <SpeedIcon />}
+                  </div>
+                  <div className="flex-grow pl-6">
+                    <h2 className=" text-2xl font-medium mb-4">{item.title}</h2>
+                    <p className="leading-relaxed flex mb-6 justify-start items-baseline">
 
-                    <div className="flex-grow ">
-                      <h2 className=" text-2xl font-medium mb-4 ">
-                        {item.title}
-                      </h2>
+                      {item.desc}
+                    </p>
+                    <p className="leading-relaxed flex mb-6 justify-start items-baseline">
 
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                        <Image
-                          src="/circle.svg"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                          alt="circle icon"
-                        />{" "}
-                        {item.desc}
-                      </p>
-                      <p className="leading-relaxed flex mb-6 justify-start items-baseline">
-                        <Image
-                          src="/circle.svg"
-                          alt="circle icon"
-                          width={10}
-                          height={10}
-                          className="mr-4"
-                        />{" "}
-                        {item.para}
-                      </p>
-                    </div>
+                      {item.para}
+                    </p>
                   </div>
                 </div>
               );
@@ -934,10 +916,10 @@ const FeatureSection = () => {
       </div>
       <section className="text-white hiddenn block  -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
-          <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+          <div className="flex flex-wrap sm:-m-4 pb-28  -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {data.map((item, index) => {
               return (
-                <div className="p-4 md:w-1/3 flex" key={index}>
+                <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
                     className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
                     style={{
@@ -958,7 +940,7 @@ const FeatureSection = () => {
           <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {data2.map((item, index) => {
               return (
-                <div className="p-4 md:w-1/3 flex" key={index}>
+                <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
                     className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
                     style={{
@@ -1042,12 +1024,12 @@ export default function Home() {
         }}
         className="bg-[#111111] text-white relative overflow-hidden"
       >
-        <IntroSection/>
+        <IntroSection />
         <div className="text-white  block relative  mt-0">
-          <BenefitSection/>
-          <CaseStudies/>
+          <BenefitSection />
+          <CaseStudies />
           <How />
-          <FeatureSection/>
+          <FeatureSection />
         </div>
       </div>
       <div className="z-50" style={{ position: "relative" }}>

@@ -31,7 +31,7 @@ const about = () => {
 
   return accessToken ? (
     <>
-      <div className=" fadeInUp animated container   mt-24 justify-center items-center text-5xl text-center min-h-[100vh]  mx-auto w-full">
+      <div className=" fadeInUp animated container my-24 justify-center items-center text-5xl text-center  mx-auto w-full">
         <section className="flex items-center">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div className="flex flex-wrap">
@@ -65,6 +65,20 @@ const about = () => {
           </div>
         </section>
       </div>
+      <div class="relative h-0 rounded-xl container mx-auto px-4 overflow-hidden mb-24" style={{ paddingBottom: "56.25%" }}>
+        <iframe
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7208.187062385887!2d68.33878799999997!3d25.40167960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1700318107658!5m2!1sen!2s"
+          frameborder="0"
+          style={{ border: 0 }}
+          allowfullscreen=""
+          aria-hidden="false"
+          loading="lazy"
+          tabindex="0"
+        ></iframe>
+      </div>
+
+
       {/* <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
         <div className=" p-4 min-h-screen">
           <div className="hiddenn max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
@@ -213,8 +227,8 @@ const about = () => {
             Please Login to continue.
           </Typography>
           <button
-           id="login"
-           aria-label="Login to your account"
+            id="login"
+            aria-label="Login to your account"
             onClick={(_) => {
               controller.push("/");
             }}

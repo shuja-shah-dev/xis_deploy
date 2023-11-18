@@ -20,7 +20,7 @@ const How = () => {
             <div className="md:w-2/5 w-full md:py-6">
             <div className="flex relative pb-12">
                 <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
-                  <p className="leading-relaxed  text-center text-xl md:text-3xl inline-block">
+                  <p className="leading-relaxed border-b-4 border-red-600   text-center text-xl md:text-3xl inline-block">
                     Step 1
                   </p>
                 </div>
@@ -38,7 +38,7 @@ const How = () => {
               </div>
               <div className="flex relative pb-12">
               <div className="inline-block rounded  text-end justify-end items-center w-full py-20  mr-10">
-                  <p className="leading-relaxed  text-center text-xl md:text-3xl inline-block">
+                  <p className="leading-relaxed border-b-4 border-red-600  text-center text-xl md:text-3xl inline-block">
                     Step 3
                   </p>
                 </div>
@@ -73,7 +73,7 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ml-10">
-                  <p className="leading-relaxed  text-center text-xl md:text-3xl inline-block ">
+                  <p className="leading-relaxed border-b-4 border-red-600  text-center text-xl md:text-3xl inline-block ">
                     Step 2{" "}
                   </p>
                 </div>
@@ -84,7 +84,7 @@ const How = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
-                <div className="inline-block text-white rounded-lg  py-10">
+                <div className="inline-block text-white rounded-lg  pt-28 sm:py-10">
                   <h1 className="block mb-3 text-xl md:text-3xl font-bold">Test</h1>
                   <p className="leading-relaxed text-sm md:text-base">
                     Once the Labeling in process is completed you can export the
@@ -98,14 +98,14 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ml-10">
-                  <p className="leading-relaxed text-xl  md:text-3xl inline-block ">
+                  <p className="leading-relaxed border-b-4 border-red-600 text-xl  md:text-3xl inline-block ">
                     Step 4{" "}
                   </p>
                 </div>
               </div>
               <div className="flex relative">
                 <div className="h-full w-full  text-xl md:text-3xl -left-[45%] top-10 md:top-20 absolute ">
-                  <p className="bg-gray-700 border shadow-md rounded-xl text-white font-medium py-2 w-full">
+                  <p className=" border-b-4 border-red-600  text-white font-medium  w-full">
                 Start Inspecting with 99.9% accuracy
                   </p>
                 </div>

@@ -151,7 +151,7 @@ const contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
-                                        +49 173 217 18 85
+                                        +49 7045 204450
                                     </div>
                                 </div>
                                 <div className="flex text-gray-100 md:items-center dark:text-gray-400">
