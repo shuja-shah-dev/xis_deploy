@@ -53,7 +53,7 @@ const Navbar = () => {
       <header
         className="text-white z-20 top-0 sticky p-2 bg-black"
       >
-        <nav className="px-4 lg:px-6 py-4">
+        <nav className="px-6 lg:px-8 py-4">
           <div className="flex flex-wrap justify-between items-center mx-auto">
             <Link
               href="/"

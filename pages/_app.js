@@ -171,7 +171,7 @@ export default function App({ Component, pageProps }) {
     position: "fixed",
     width: "100%",
     zIndex: "999",
-    height:"auto",
+    height: "auto",
     fontSize: "21px",
     bottom: "5px",
     padding: "0.88rem 1.44rem",
@@ -197,17 +197,24 @@ export default function App({ Component, pageProps }) {
             color: "#fff",
             background: "transparent",
             border: "1px solid #fff",
-            borderRadius: "5px",
-            fontSize: "13px",
-            padding: "5px 10px",
+            borderRadius: "8px",
+            fontSize: "16px",
+            padding: "8px 12px",
+            "&:hover": {
+              transform: "scale(1.1)",
+            },
           }}
           declineButtonStyle={{
             color: "#fff",
             background: "transparent",
             border: "1px solid #fff",
-            borderRadius: "5px",
-            fontSize: "13px",
-            padding: "5px 10px",
+            borderRadius: "8px",
+            fontSize: "16px",
+            padding: "8px 12px",
+            transform: "scale(1.1)",
+            "&:hover": {
+              transform: "scale(1.1)",
+            },
           }}
           buttonText="Accept"
           declineButtonText="Settings"
@@ -221,9 +228,12 @@ export default function App({ Component, pageProps }) {
                 color: "rgb(255, 255, 255)",
                 background: "transparent",
                 border: "1px solid rgb(255, 255, 255)",
-                borderRadius: "5px",
-                fontSize: "13px",
-                padding: "5px 10px",
+                borderRadius: "8px",
+                fontSize: "16px",
+                padding: "8px 12px",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
               },
             },
           }}
