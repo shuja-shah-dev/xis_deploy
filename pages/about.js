@@ -68,7 +68,7 @@ const about = () => {
       <div class="relative h-0 rounded-xl container mx-auto px-4 overflow-hidden mb-24" style={{ paddingBottom: "56.25%" }}>
         <iframe
           class="absolute top-0 left-0 w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7208.187062385887!2d68.33878799999997!3d25.40167960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1700318107658!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.5692550973376!2d8.848324875555058!3d49.05681318672361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47979d2fd2ffcf53%3A0xd8a4d478df498df3!2sTheodor-Schweitzer-Stra%C3%9Fe%201%2F3%2C%2075447%20Sternenfels%2C%20Germany!5e0!3m2!1sen!2s!4v1700329065442!5m2!1sen!2s"
           frameborder="0"
           style={{ border: 0 }}
           allowfullscreen=""
