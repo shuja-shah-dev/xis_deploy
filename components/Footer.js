@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <Link href="/about" aria-label="About">
                 {" "}
-                <h2 className="title-font font-medium text-gray-500 tracking-widest text-xl mb-3">
+                <h2 className="title-font font-medium text-gray-500 transition transform duration-500 hover:scale-95 tracking-widest text-xl mb-3">
                   About Us
                 </h2>
               </Link>
@@ -47,7 +47,7 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <Link href="/Privacy/" aria-label="Privacy"> <h2 className="title-font transition transform duration-500 hover:scale-110 font-medium text-gray-500 tracking-widest text-xl mb-3">
+              <Link href="/Privacy/" aria-label="Privacy"> <h2 className="title-font transition transform duration-500 hover:scale-95 font-medium text-gray-500 tracking-widest text-xl mb-3">
                 Certificates
               </h2></Link>
               <nav className="list-none mb-10">
@@ -55,7 +55,7 @@ const Footer = () => {
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li> */}
                 <Link href="/Privacy/" aria-label="Privacy">
-                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800 transition transform duration-500 hover:scale-110">
+                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800 ">
                     Data Privacy Policy
                   </li>
                 </Link>
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <Link href="/contact" aria-label="Contact">
-                <h2 className="title-font font-medium  text-sky-400 tracking-widest text-xl mb-3 cursor-pointer">
+                <h2 className="title-font font-medium  transition transform duration-500 hover:scale-95 text-sky-400 tracking-widest text-xl mb-3 cursor-pointer">
                   Contact Us
                 </h2>
               </Link>
