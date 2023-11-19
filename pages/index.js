@@ -518,7 +518,7 @@ const BenefitSection = () => {
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
   };
-
+  
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
@@ -609,22 +609,38 @@ const BenefitSection = () => {
   ];
 
   const [isParagraphVisible, setIsParagraphVisible] = useState(false);
-
-  const toggleParagraph = () => {
-    setIsParagraphVisible(!isParagraphVisible);
-  };
   const [isCollapsed, setIsCollapsed] = useState(false);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-  const accordionStyle = {
-    backgroundColor: "#111111",
-    color: "white",
-    border: "1px solid gray",
-  };
-
   const [screen, setScreen] = useState("defect-detection");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Check if the screen width is less than 768 pixels
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const handleButtonClick = (clickedScreen) => {
+    if (isMobile) {
+      // Handle mobile behavior (e.g., scroll to the clicked section)
+      const nextSection = document.getElementById(clickedScreen);
+      if (nextSection) {
+        window.scrollTo({
+          top: nextSection.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    } else {
+      // Handle regular button click behavior
+      setScreen(clickedScreen);
+    }
+  };
+  
 
   return (
     <section
@@ -647,24 +663,26 @@ const BenefitSection = () => {
                   className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500 md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     } `}
-                  onClick={() => setScreen("defect-detection")}>Defect Detection</button>
+                    onClick={() => handleButtonClick("defect-detection")}
+                    >Defect Detection</button>
                 <button
+                 aria-label="object-defect"
                   className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border focus:outline-none items-center px-1  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${screen === "object-defect" &&
                     " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => setScreen("object-defect")}
+                    onClick={() => handleButtonClick("object-defect")}
                 >Object & Defect Counting</button>
                 <button
                   className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => setScreen("text-detection")}
+                    onClick={() => handleButtonClick("text-detection")}
                 >Text Recognition</button>
                 <button
                   className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => setScreen("performance")}
+                    onClick={() => handleButtonClick("performance")}
                 >Assembly Completeness</button>
 
 
@@ -672,7 +690,7 @@ const BenefitSection = () => {
                   className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => setScreen("product-sorting")}
+                    onClick={() => handleButtonClick("product-sorting")}
                 >Product Sorting</button>
               </div>
             </div>
