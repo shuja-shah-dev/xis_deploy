@@ -35,13 +35,13 @@ const Footer = () => {
                 </h2>
               </Link>
               <nav className="list-none mb-10">
-                <Link href="/about" aria-label="About"><li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                <Link href="/about" aria-label="About"><li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                   Impressum
                 </li></Link>
-                <Link href="/about" aria-label="About"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                <Link href="/about" aria-label="About"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                   Terms and Conditions / AGB
                 </li></Link>
-                <Link href="/about" aria-label="About"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                <Link href="/about" aria-label="About"> <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                   General Terms and Conditions
                 </li></Link>
               </nav>
@@ -55,7 +55,7 @@ const Footer = () => {
                   <a href="/#" className="text-gray-600 text-lg hover:text-gray-800 ">Cookie Directive (EU)</a>
                 </li> */}
                 <Link href="/Privacy/" aria-label="Privacy">
-                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800 ">
+                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-700 ">
                     Data Privacy Policy
                   </li>
                 </Link>
@@ -70,12 +70,12 @@ const Footer = () => {
               <nav className="list-none mb-10">
               
                 <Link href="/contact" aria-label="Contact">
-                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                     <PhoneIphoneIcon /> +49 7045 204450
                   </li>
                 </Link>
                 <Link href="/contact" aria-label="Contact">
-                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-800">
+                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                     <EmailIcon /> contact@xray-lab.com
                   </li>
                 </Link>

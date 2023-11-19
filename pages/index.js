@@ -518,7 +518,7 @@ const BenefitSection = () => {
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
   };
-  
+
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
@@ -608,39 +608,63 @@ const BenefitSection = () => {
     },
   ];
 
-  const [isParagraphVisible, setIsParagraphVisible] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [screen, setScreen] = useState("defect-detection");
-  const [isMobile, setIsMobile] = useState(false);
+  const [screen, setScreen] = useState('defect-detection');
+  const [isMobile, setIsMobile] = useState('defect-detection');
+
 
   useEffect(() => {
-    const handleResize = () => {
-      // Check if the screen width is less than 768 pixels
-      setIsMobile(window.innerWidth < 768);
+    const handleScroll = () => {
+      const currentWidth = window.innerWidth;
+      setIsMobile(currentWidth < 768);
+      const sections = ['defect-detection', 'object-defect', 'text-detection', 'performance', 'product-sorting'];
+  
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Change the condition to check if the top of the element is below 700px
+          return rect.top >= 300 && rect.bottom <= window.innerHeight;
+        }
+        return false;
+      });
+  
+      if (currentSection) {
+        setScreen(currentSection);
+      }
     };
-    window.addEventListener('resize', handleResize);
-    handleResize();
+  
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
+  
+  
+
 
   const handleButtonClick = (clickedScreen) => {
+    const isMobile = window.innerWidth < 768;
+  
     if (isMobile) {
-      // Handle mobile behavior (e.g., scroll to the clicked section)
       const nextSection = document.getElementById(clickedScreen);
       if (nextSection) {
+        const additionalHeight = 1000; // Adjust the value as needed
+        const offsetBottom = nextSection.offsetTop + nextSection.offsetHeight + additionalHeight;
         window.scrollTo({
-          top: nextSection.offsetTop,
+          top: offsetBottom,
           behavior: 'smooth',
         });
       }
     } else {
-      // Handle regular button click behavior
       setScreen(clickedScreen);
     }
   };
   
+  
+
+
 
   return (
     <section
@@ -659,38 +683,46 @@ const BenefitSection = () => {
             <div className="mb-2 w-full rounded-lg lg:mb-0 ">
               <div className="flex flex-col lg:flex-row justify-center text-center gap-3 lg:gap-2 shadow-sm h-[100%] lg:h-14 items-center rounded-md w-full relative">
                 <button
+                  id="defect-detection"
                   aria-label="defect-detection"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center focus:border-sky-500 md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
+                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
                     "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     } `}
-                    onClick={() => handleButtonClick("defect-detection")}
-                    >Defect Detection</button>
+                  onClick={() => handleButtonClick("defect-detection")}
+                >Defect Detection</button>
                 <button
-                 aria-label="object-defect"
-                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border focus:outline-none items-center px-1  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${screen === "object-defect" &&
+                  id="object-defect"
+                  aria-label="object-defect"
+                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border focus:outline-none items-center px-1  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${screen === "object-defect" &&
                     " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                    onClick={() => handleButtonClick("object-defect")}
+                  onClick={() => handleButtonClick("object-defect")}
                 >Object & Defect Counting</button>
                 <button
-                  className={`lg:text-lg text-sm w-[60%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border   items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
+                  id="text-detection"
+                  aria-label="text-detection"
+                  className={`lg:text-lg text-sm w-[60%] text-white  bg-gray-800 border-gray-600 border   items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                    onClick={() => handleButtonClick("text-detection")}
+                  onClick={() => handleButtonClick("text-detection")}
                 >Text Recognition</button>
                 <button
-                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white focus:border-sky-500 bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
+                  id="performance"
+                  aria-label="performance"
+                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                    onClick={() => handleButtonClick("performance")}
+                  onClick={() => handleButtonClick("performance")}
                 >Assembly Completeness</button>
 
 
                 <button
-                  className={`lg:text-lg text-sm w-[60%]  text-white focus:border-sky-500 bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
+                  aria-label="product-sorting"
+                  id="product-sorting"
+                  className={`lg:text-lg text-sm w-[60%]  text-white bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
                     "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                    onClick={() => handleButtonClick("product-sorting")}
+                  onClick={() => handleButtonClick("product-sorting")}
                 >Product Sorting</button>
               </div>
             </div>
