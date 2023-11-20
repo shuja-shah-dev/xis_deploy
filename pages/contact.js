@@ -7,6 +7,13 @@ import Head from "next/head";
 import 'intersection-observer';
 import { useEffect } from "react";
 import { useState } from "react";
+import { Roboto, Lato } from 'next/font/google'
+ 
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700'],
+  subsets: ['latin'],
+})
 
 
 
@@ -83,7 +90,7 @@ const contact = () => {
         <>
 
             <div className="justify-center mt-12 text-center items-center mx-auto w-100">
-                <h1 className="text-5xl w-full lg:text-[5rem]  text-center mx-auto">
+                <h1 className={` ${roboto.className} text-5xl w-full lg:text-[5rem] text-center mx-auto`}>
                     Contact Us
                 </h1>
                 <div className="w-60 lg:w-96 mx-auto mb-6 border-b border-red-700 dark:border-gray-300"></div>

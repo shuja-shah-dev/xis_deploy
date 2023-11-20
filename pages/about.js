@@ -6,9 +6,17 @@ import Head from "next/head";
 import "intersection-observer";
 import { useEffect } from "react";
 import Link from "next/link";
+import { Roboto, Lato } from 'next/font/google'
+ 
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700'],
+  subsets: ['latin'],
+})
 
 
 const about = () => {
+
   const controller = useRouter();
   const { accessToken } = useAuth();
 
@@ -40,7 +48,7 @@ const about = () => {
                   <span className="text-lg uppercase text-gray-200">
                     Who we are?
                   </span>
-                  <h1 className="mt-2 text-3xl font-black  md:text-5xl text-gray-100">
+                  <h1 className={`${roboto.className} mt-2 text-3xl font-black  md:text-5xl text-gray-100`}>
                     About Us
                   </h1>
                 </div>
@@ -56,9 +64,10 @@ const about = () => {
                 <Link
                   href="/contact"
                   aria-label="Contact"
-                  className="px-4 py-2 text-xl text-gray-100 rounded-xl bg-gray-800 hover:bg-gray-900 "
                 >
+                  <button  className="justify-center items-center text-center px-4 py-2 text-xl text-gray-100 hover:scale-110 transition transform duration-500 rounded-xl bg-gray-800 hover:bg-gray-900 ">
                   Get in touch
+                  </button>
                 </Link>
               </div>
             </div>      

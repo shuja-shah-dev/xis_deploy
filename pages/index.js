@@ -33,6 +33,13 @@ import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import CenterFocusStrongIcon from '@mui/icons-material/CenterFocusStrong';
+import { Roboto, Lato } from 'next/font/google'
+ 
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700'],
+  subsets: ['latin'],
+})
 
 const IntroSection = () => {
   return (
@@ -64,7 +71,7 @@ const IntroSection = () => {
         src="/xraylab.mp4"
       ></video>
       <div
-        className="absolute top-1/2 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center"
+        className={`${roboto.className} absolute top-1/2 w-full left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white text-center`}
         style={{
           zIndex: 10,
         }}
@@ -134,11 +141,11 @@ const DefectDetection = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Defect Detection
           </h1>
-          <p className="mb-8 leading-relaxed ">
+          <p className="mb-8 leading-relaxed text-lg">
             Leveraging AI-driven anomaly detection, the integration of computer
             vision facilitates automated visual inspection to identify defective
             products, detecting anomalies such as scratches or dents, and/or
@@ -215,10 +222,10 @@ const CountingDefects = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Object Detection & Defect Counting
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed text-lg ">
             In the domain of object and defect counting, the seamless fusion of
             computer vision and machine learning offers a powerful solution for
             precise and efficient counting. Leveraging state-of-the-art
@@ -247,10 +254,10 @@ const ProductSorting = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Product Sorting
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed text-lg">
             Our Solution in product sorting revolutionizes traditional methods
             by offering unmatched speed, accuracy, and adaptability. Through our
             products, users can efficiently categorize imperfect parts from the
@@ -317,10 +324,10 @@ const PerformanceAnalytics = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Performance Analytics
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed text-lg">
             Revolutionize your quality control processes with our product's
             Assembly Completeness Detection feature. Our advanced technology
             analyzes assembly components, ensuring every element is correctly
@@ -435,10 +442,10 @@ const TextDetection = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
+          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Text Recognition
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="mb-8 leading-relaxed text-lg">
             Empower your workflow with our cutting-edge text recognition
             technology, a cornerstone feature of our product. Our advanced
             optical character recognition (OCR) seamlessly converts printed or
@@ -612,33 +619,33 @@ const BenefitSection = () => {
   const [isMobile, setIsMobile] = useState('defect-detection');
 
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentWidth = window.innerWidth;
-      setIsMobile(currentWidth < 768);
-      const sections = ['defect-detection', 'object-defect', 'text-detection', 'performance', 'product-sorting'];
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentWidth = window.innerWidth;
+  //     setIsMobile(currentWidth < 768);
+  //     const sections = ['defect-detection', 'object-defect', 'text-detection', 'performance', 'product-sorting'];
   
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Change the condition to check if the top of the element is below 700px
-          return rect.top >= 300 && rect.bottom <= window.innerHeight;
-        }
-        return false;
-      });
+  //     const currentSection = sections.find((section) => {
+  //       const element = document.getElementById(section);
+  //       if (element) {
+  //         const rect = element.getBoundingClientRect();
+  //         // Change the condition to check if the top of the element is below 700px
+  //         return rect.top >= 300 && rect.bottom <= window.innerHeight;
+  //       }
+  //       return false;
+  //     });
   
-      if (currentSection) {
-        setScreen(currentSection);
-      }
-    };
+  //     if (currentSection) {
+  //       setScreen(currentSection);
+  //     }
+  //   };
   
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   handleScroll();
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   
   
   
@@ -727,7 +734,7 @@ const BenefitSection = () => {
               </div>
             </div>
           </div>
-          {screen === "defect-detection" && <DefectDetection />}
+          {screen === "defect-detection" && <DefectDetection  />}
           {screen === "object-defect" && <CountingDefects />}
           {screen === "text-detection" && <TextDetection />}
           {screen === "performance" && <PerformanceAnalytics />}
@@ -750,12 +757,12 @@ const BenefitSection = () => {
                     {item.svg ? item.svg : <SpeedIcon />}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className=" text-2xl font-medium mb-4">{item.title}</h2>
-                    <p className="leading-relaxed flex mb-6 justify-start items-baseline">
+                    <h2 className={`${roboto.className} text-2xl font-medium mb-4`}>{item.title}</h2>
+                    <p className="leading-relaxed flex mb-6 justify-start text-lg items-baseline">
 
                       {item.desc}
                     </p>
-                    <p className="leading-relaxed flex mb-6 justify-start items-baseline">
+                    <p className="leading-relaxed text-lg flex mb-6 justify-start items-baseline">
 
                       {item.para}
                     </p>
@@ -821,7 +828,7 @@ const CaseStudies = () => {
       className="text-white block relative -my-1 "
     >
       <div className="container px-5 py-24 mx-auto  ">
-        <div className="justify-center items-center text-center mb-16 text-5xl font-bold">
+        <div className={`${roboto.className} justify-center items-center text-center mb-16 text-5xl font-bold`}>
           Case Studies
         </div>
         <div className="flex hiddenn flex-wrap flex-col lg:flex-row -mx-4 -mb-10 text-center">
@@ -961,10 +968,10 @@ const FeatureSection = () => {
     >
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
         <div className="w-full flex flex-col lg:items-center lg:text-center  items-center text-center">
-          <h1 className="title-font text-5xl font-bold mb-10 ">Features</h1>
+          <h1 className={`${roboto.className} title-font text-5xl font-bold mb-10`}>Features</h1>
         </div>
       </div>
-      <section className="text-white hiddenn block  -my-1">
+      <section className="text-white hiddenn block -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
           <div className="flex flex-wrap sm:-m-4 pb-28  -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {data.map((item, index) => {
@@ -980,14 +987,14 @@ const FeatureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className=" text-2xl font-medium mb-4">{item.title}</h2>
-                    <p className="leading-relaxed text-base">{item.desc}</p>
+                    <h2 className={`${roboto.className} text-2xl font-medium mb-4`}>{item.title}</h2>
+                    <p className="leading-relaxed text-lg">{item.desc}</p>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="flex flex-wrap sm:-m-4 pb-28   -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+          <div className="flex flex-wrap sm:-m-4 pb-28  -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {data2.map((item, index) => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
@@ -1001,8 +1008,8 @@ const FeatureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className=" text-2xl font-medium mb-4">{item.title}</h2>
-                    <p className="leading-relaxed text-base">{item.desc}</p>
+                    <h2 className={`${roboto.className} text-2xl font-medium mb-4`}>{item.title}</h2>
+                    <p className="leading-relaxed text-lg">{item.desc}</p>
                   </div>
                 </div>
               );
@@ -1024,13 +1031,14 @@ export default function Home() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("showw");
+          entry.target.classList.add("showCase");
         } else {
           entry.target.classList.remove("hidden");
         }
       });
     });
 
-    const hiddenElements = document.querySelectorAll(".hiddenn");
+    const hiddenElements = document.querySelectorAll(".hiddenn, .hiddenCase");
     hiddenElements.forEach((element) => {
       observer.observe(element);
     });

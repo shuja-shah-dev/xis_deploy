@@ -6,6 +6,17 @@ import Link from "next/link";
 import CookieConsent from "react-cookie-consent";
 import { useState } from "react";
 import { Box, Switch } from "@mui/material";
+import { Roboto, Lato } from 'next/font/google'
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700'],
+  subsets: ['latin'],
+})
+
+const lato = Lato({
+  weight: ['100','300','400','700'],
+  subsets: ['latin'],
+})
 
 const EssentialCookies = () => {
   return (
@@ -158,6 +169,7 @@ const AnalyticsCookies = () => {
 };
 
 export default function App({ Component, pageProps }) {
+
   const [settings, setSettings] = useState(false);
 
   const dec = {
@@ -261,7 +273,9 @@ export default function App({ Component, pageProps }) {
           )}
         </CookieConsent>
         <Navbar />
-        <Component {...pageProps} />
+        <main className={lato.className}>
+          <Component {...pageProps} />
+        </main>
         <Footer />
       </AuthProvider>
     </>

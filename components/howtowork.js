@@ -1,5 +1,11 @@
-import Image from "next/image";
 import React from "react";
+import { Roboto, Lato } from 'next/font/google'
+ 
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700'],
+  subsets: ['latin'],
+})
 
 const How = () => {
   return (
@@ -11,7 +17,7 @@ const How = () => {
       backgroundPosition: "center",
       objectFit: "cover" }}
        className="text-white block relative bg-black py-24 mt-0 ">
-        <div className="flex justify-center w-full items-center text-5xl font-bold text-center mb-16">
+        <div className={`${roboto.className} flex justify-center w-full items-center text-5xl font-bold text-center mb-16`}>
           How it Works
         </div>
         <div className="container justify-center items-center text-center pb-10 mx-auto flex ">
@@ -112,8 +118,8 @@ const How = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full justify-center items-center text-2xl lg:text-4xl font-bold text-center">
-        <p className="text-white bg-black px-8 py-8 border-2 rounded-lg  ">Start Inspecting with 99.9% accuracy</p>
+        <div className="flex w-full justify-center items-center text-xl sm:text-2xl lg:text-4xl font-bold text-center">
+        <p className="text-white bg-gray-900 py-2 px-2 sm:px-8 sm:py-8 border-4 border-[#53c9eb] rounded-lg">Start Inspecting with 99.9% accuracy</p>
         </div>
       </section>
     </>

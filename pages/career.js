@@ -3,6 +3,13 @@ import { useAuth } from "@/common/authProvider";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { Box, Typography } from "@mui/material";
+import { Roboto, Lato } from 'next/font/google'
+ 
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700'],
+  subsets: ['latin'],
+})
 
 const Career = () => {
   const controller = useRouter();
@@ -10,7 +17,7 @@ const Career = () => {
 
   return accessToken ? (
     <>
-      <div className='container fadeInUp animated justify-center items-center text-5xl text-center flex h-[100vh] mx-auto w-full'>
+      <div className={`${roboto.className} container fadeInUp animated justify-center items-center text-5xl text-center flex h-[100vh] mx-auto w-full`}>
         Coming Soon!
       </div>
     </>
