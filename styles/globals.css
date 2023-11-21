@@ -39,6 +39,18 @@ body {
   filter: blur(0);
   transform: translateX(0);
 }
+.hiddenFit {
+  opacity: 0;
+  transition: all 0.8s;
+  filter: blur(3px);
+  transform: translateY(10%);
+}
+
+.showFit {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
 
 
 .hiddenn {

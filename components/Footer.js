@@ -68,10 +68,14 @@ const Footer = () => {
                 </h2>
               </Link>
               <nav className="list-none mb-10">
-              
                 <Link href="/contact" aria-label="Contact">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                     <PhoneIphoneIcon /> +49 7045 2044 560
+                  </li>
+                </Link>
+                <Link href="/contact" aria-label="Contact">
+                  <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
+                    <CallIcon /> +1 248-843-1760
                   </li>
                 </Link>
                 <Link href="/contact" aria-label="Contact">
@@ -81,9 +85,15 @@ const Footer = () => {
                 </Link>
               </nav>
               <div className="cursor-pointer">
+              <Link
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=61552506112246"
+                  aria-label="Facebook"
+                >
                 <FacebookOutlinedIcon fontSize="large" />{" "}
-                <TwitterIcon fontSize="large" />{" "}
-                <InstagramIcon fontSize="large" />{" "}
+                </Link>
+                {/* <TwitterIcon fontSize="large" />{" "} */}
+                {/* <InstagramIcon fontSize="large" />{" "} */}
                 <Link
                   target="_blank"
                   href="https://www.linkedin.com/company/xis-ai/mycompany/"

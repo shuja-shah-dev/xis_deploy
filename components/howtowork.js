@@ -134,7 +134,7 @@ const How = () => {
         <div className="flex w-full justify-center  items-center text-xl sm:text-2xl lg:text-4xl text-center">
           <div className="text-white bg-[#182A2F] shadow-gray-600 shadow-inner  py-2 px-4 sm:px-8 sm:py-4 rounded-full">
             <p
-              className={`drop-shadow-lg font-light ${roboto.className} shadow-back`}
+              className={`drop-shadow-lg font-normal ${roboto.className} shadow-back`}
             >
               Start Inspecting with <span className="font-bold">99.9%</span>{" "}
               accuracy

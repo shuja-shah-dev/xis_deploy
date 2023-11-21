@@ -157,13 +157,13 @@ const DefectDetection = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left  items-center text-center">
           <h1
-            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+            className={` ${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Defect Detection
           </h1>
-          <p className="mb-8 leading-relaxed text-lg">
+          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Leveraging AI-driven anomaly detection, the integration of computer
             vision facilitates automated visual inspection to identify defective
             products, detecting anomalies such as scratches or dents, and/or
@@ -240,13 +240,13 @@ const CountingDefects = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1
-            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+            className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium`}
           >
             Object Detection & Defect Counting
           </h1>
-          <p className="mb-8 leading-relaxed text-lg">
+          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             In the domain of object and defect counting, the seamless fusion of
             computer vision and machine learning offers a powerful solution for
             precise and efficient counting. Leveraging state-of-the-art
@@ -295,13 +295,13 @@ const ProductSorting = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1
-            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+            className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Product Sorting
           </h1>
-          <p className="mb-8 leading-relaxed text-lg">
+          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Our Solution in product sorting revolutionizes traditional methods
             by offering unmatched speed, accuracy, and adaptability. Through our
             products, users can efficiently categorize imperfect parts from the
@@ -388,13 +388,13 @@ const PerformanceAnalytics = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1
-            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+            className={`sm:text-4xl ${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
-            Performance Analytics
+            Assembly Completeness
           </h1>
-          <p className="mb-8 leading-relaxed text-lg">
+          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Revolutionize your quality control processes with our product's
             Assembly Completeness Detection feature. Our advanced technology
             analyzes assembly components, ensuring every element is correctly
@@ -509,13 +509,13 @@ const TextDetection = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1
-            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+            className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Text Recognition
           </h1>
-          <p className="mb-8 leading-relaxed text-lg">
+          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Empower your workflow with our cutting-edge text recognition
             technology, a cornerstone feature of our product. Our advanced
             optical character recognition (OCR) seamlessly converts printed or
@@ -698,7 +698,7 @@ const BenefitSection = () => {
   const [screen, setScreen] = useState("defect-detection");
 
   const handleButtonClick = (clickedScreen) => {
-    const isMobile = window.innerWidth < 700 ;
+    const isMobile = window.innerWidth < 768 ;
 
     if (isMobile) {
       const nextSection = document.getElementById(clickedScreen);
@@ -736,7 +736,7 @@ const BenefitSection = () => {
         objectFit: "cover",
       }}
     >
-      {screenSize < 700 ? (
+      {screenSize < 768 ? (
         <div
           className="relative mb-20"
         >
@@ -751,7 +751,7 @@ const BenefitSection = () => {
               className=" py-2 px-2 bg-[#182A2F] rotate-180 absolute -left-10 -top-4 rounded-full"
               aria-current="true"
               aria-label="Next Slide"
-              onClick={nextSlide}
+              onClick={prevSlide}
             >
               <ArrowForwardIosIcon
                 sx={{
@@ -828,9 +828,9 @@ const BenefitSection = () => {
                   <button
                     id="performance"
                     aria-label="performance"
-                    className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${
+                    className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${
                       screen === "performance" &&
-                      "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                      "border-4 border-sky-500 text-white duration-[.15s] transition-all font-semibold"
                     }`}
                     onClick={() => handleButtonClick("performance")}
                   >
@@ -840,7 +840,7 @@ const BenefitSection = () => {
                   <button
                     aria-label="product-sorting"
                     id="product-sorting"
-                    className={`lg:text-lg text-sm w-[60%]  text-white bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${
+                    className={`lg:text-lg text-sm w-[60%] text-white bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${
                       screen === "product-sorting" &&
                       "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
@@ -859,31 +859,28 @@ const BenefitSection = () => {
           </div>
         </div>
       )}
-      <section className="text-white hiddenn block -my-1">
+      <section className="text-white hiddenFit block -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
           <div className="flex flex-wrap sm:-m-4 pb-28 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             {benefit.map((item, index) => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
-                    className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
-                    style={{
-                      height: "4.5rem",
-                      width: "4.5rem",
-                    }}
+                    className="inline-flex h-[3rem] w-[3rem] md:h-[4.5rem] md:w-[4.5rem]  items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                  
                   >
                     {item.svg ? item.svg : <SpeedIcon />}
                   </div>
                   <div className="flex-grow pl-6">
                     <h2
-                      className={`${roboto.className} text-2xl font-medium mb-4`}
+                      className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
                     >
                       {item.title}
                     </h2>
-                    <p className="leading-relaxed flex mb-6 justify-start text-lg items-baseline">
+                    <p className="leading-relaxed flex mb-6 justify-start text-sm md:text-lg items-baseline">
                       {item.desc}
                     </p>
-                    <p className="leading-relaxed text-lg flex mb-6 justify-start items-baseline">
+                    <p className="leading-relaxed text-sm md:text-lg  flex mb-6 justify-start items-baseline">
                       {item.para}
                     </p>
                   </div>
@@ -1105,21 +1102,18 @@ const FeatureSection = () => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
-                    className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
-                    style={{
-                      height: "4.5rem",
-                      width: "4.5rem",
-                    }}
+                    className="inline-flex h-[3rem] w-[3rem] md:h-[4.5rem] md:w-[4.5rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                 
                   >
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
                     <h2
-                      className={`${roboto.className} text-2xl font-medium mb-4`}
+                      className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
                     >
                       {item.title}
                     </h2>
-                    <p className="leading-relaxed text-lg">{item.desc}</p>
+                    <p className="leading-relaxed text-sm md:text-lg">{item.desc}</p>
                   </div>
                 </div>
               );
@@ -1130,21 +1124,16 @@ const FeatureSection = () => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
-                    className="inline-flex items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
-                    style={{
-                      height: "4.5rem",
-                      width: "4.5rem",
-                    }}
-                  >
+                    className="inline-flex h-[3rem] w-[3rem] md:h-[4.5rem] md:w-[4.5rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
                     <h2
-                      className={`${roboto.className} text-2xl font-medium mb-4`}
+                      className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
                     >
                       {item.title}
                     </h2>
-                    <p className="leading-relaxed text-lg">{item.desc}</p>
+                    <p className="leading-relaxed text-sm md:text-lg">{item.desc}</p>
                   </div>
                 </div>
               );
@@ -1167,13 +1156,14 @@ export default function Home() {
         if (entry.isIntersecting) {
           entry.target.classList.add("showw");
           entry.target.classList.add("showCase");
+          entry.target.classList.add("showFit");
         } else {
           entry.target.classList.remove("hidden");
         }
       });
     });
 
-    const hiddenElements = document.querySelectorAll(".hiddenn, .hiddenCase");
+    const hiddenElements = document.querySelectorAll(".hiddenn, .hiddenCase, .hiddenFit");
     hiddenElements.forEach((element) => {
       observer.observe(element);
     });
@@ -1218,7 +1208,7 @@ export default function Home() {
         className="bg-[#111111] text-white relative overflow-hidden"
       >
         <IntroSection />
-        <div className="text-white  block relative  mt-0">
+        <div className="text-white block relative  mt-0">
           <BenefitSection />
           <CaseStudies />
           <How />

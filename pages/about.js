@@ -52,7 +52,7 @@ const about = () => {
                     About Us
                   </h1>
                 </div>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-sm md:text-lg leading-7 text-gray-300">
                   XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a
                   mission to revolutionize Industrial Quality inspection and
                   Process Monitoring through the power of artificial

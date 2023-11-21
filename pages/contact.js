@@ -8,6 +8,8 @@ import 'intersection-observer';
 import { useEffect } from "react";
 import { useState } from "react";
 import { Roboto, Lato } from 'next/font/google'
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+
  
 
 const roboto = Roboto({
@@ -90,10 +92,10 @@ const contact = () => {
         <>
 
             <div className="justify-center mt-12 text-center items-center mx-auto w-100">
-                <h1 className={` ${roboto.className} text-5xl w-full lg:text-[5rem] text-center mx-auto`}>
+                <h1 className={` ${roboto.className} text-5xl w-full md:text-[5rem] text-center mx-auto`}>
                     Contact Us
                 </h1>
-                <div className="w-60 lg:w-96 mx-auto mb-6 border-b border-red-700 dark:border-gray-300"></div>
+                <div className="w-60 md:w-96 mx-auto  border-b border-red-700 dark:border-gray-300"></div>
             </div>
             <section className="flex items-center ">
                 <div className="justify-center flex-1 max-w-6xl px-4 py-24 mx-auto md:px-6">
@@ -151,6 +153,13 @@ const contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex mb-8 text-gray-100 md:items-center dark:text-gray-400">
+                                <PhoneIphoneIcon />
+                                    <div
+                                        className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
+                                        +49 7045 2044 560
+                                    </div>
+                                </div>
+                                <div className="flex mb-8 text-gray-100 md:items-center dark:text-gray-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         className="w-5 h-5 text-gray-100 dark:text-gray-400 bi bi-telephone" viewBox="0 0 16 16">
                                         <path
@@ -158,7 +167,7 @@ const contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
-                                        +49 7045 2044 560
+                                        +1 248-843-1760
                                     </div>
                                 </div>
                                 <div className="flex text-gray-100 md:items-center dark:text-gray-400">
