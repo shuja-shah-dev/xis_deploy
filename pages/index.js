@@ -31,17 +31,16 @@ import ShieldIcon from "@mui/icons-material/Shield";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import CenterFocusStrongIcon from '@mui/icons-material/CenterFocusStrong';
-import { Roboto, Lato } from 'next/font/google'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
+import ReportProblemIcon from "@mui/icons-material/ReportProblem";
+import CenterFocusStrongIcon from "@mui/icons-material/CenterFocusStrong";
+import { Roboto, Lato } from "next/font/google";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const IntroSection = () => {
   return (
@@ -85,24 +84,39 @@ const IntroSection = () => {
         <p className=" text-base sm:text-xl mt-4 ">
           Build, Deploy & Inspect Quality in Minutes
         </p>
-        <Link href="/contact" aria-label="GetaDemo" className="focus:outline-none">
-          <button id="get-a-demo" aria-label="GetaDemo" className="rounded-full text-sm sm:text-xl hover:border-black focus:outline-none hover:scale-110 transition transform duration-500 hover:bg-white hover:text-black border sm:px-4 px-2 py-2 sm:py-3 mt-4">
+        <Link
+          href="/contact"
+          aria-label="GetaDemo"
+          className="focus:outline-none"
+        >
+          <button
+            id="get-a-demo"
+            aria-label="GetaDemo"
+            className="rounded-full text-sm sm:text-xl hover:border-black focus:outline-none hover:scale-110 transition transform duration-500 hover:bg-white hover:text-black border sm:px-4 px-2 py-2 sm:py-3 mt-4"
+          >
             Get a Demo
           </button>
         </Link>
-        <Link href="https://beltline.glitch.me/" target="_blank" aria-label="ViewInAR" className="focus:outline-none">
-          <button id="ViewInAR" aria-label="ViewInAR" className="block focus:outline-none rounded-full mx-auto text-sm sm:text-lg hover:scale-110 transition transform duration-500 px-2 py-1 mt-2">
+        <Link
+          href="https://beltline.glitch.me/"
+          target="_blank"
+          aria-label="ViewInAR"
+          className="focus:outline-none"
+        >
+          <button
+            id="ViewInAR"
+            aria-label="ViewInAR"
+            className="block focus:outline-none rounded-full mx-auto text-sm sm:text-lg hover:scale-110 transition transform duration-500 px-2 py-1 mt-2"
+          >
             <CenterFocusStrongIcon /> View in AR
           </button>
         </Link>
       </div>
-
     </Box>
   );
 };
 
 const DefectDetection = () => {
-
   const [imageReveal, setImageReveal] = useState(0.5);
   const imageContainer = useRef(null);
   const handleRef = useRef(null);
@@ -144,7 +158,9 @@ const DefectDetection = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
+          <h1
+            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+          >
             Defect Detection
           </h1>
           <p className="mb-8 leading-relaxed text-lg">
@@ -166,8 +182,9 @@ const DefectDetection = () => {
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/xraycrack1.png"
@@ -220,12 +237,13 @@ const DefectDetection = () => {
 };
 
 const CountingDefects = () => {
-  
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
+          <h1
+            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+          >
             Object Detection & Defect Counting
           </h1>
           <p className="mb-8 leading-relaxed text-lg">
@@ -243,9 +261,7 @@ const CountingDefects = () => {
             <div className="elementor-element  elementor-widget">
               <div className="elementor-widget-container ">
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
-                  <div
-                    className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]"
-                  >
+                  <div className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]">
                     <Image
                       className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       alt="Project Camera"
@@ -264,7 +280,6 @@ const CountingDefects = () => {
                         data-content="Xray"
                       ></div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -272,8 +287,7 @@ const CountingDefects = () => {
           </div>
         </div>
       </div>
-    </section >
-
+    </section>
   );
 };
 
@@ -282,7 +296,9 @@ const ProductSorting = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
+          <h1
+            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+          >
             Product Sorting
           </h1>
           <p className="mb-8 leading-relaxed text-lg">
@@ -301,9 +317,7 @@ const ProductSorting = () => {
             <div className="elementor-element  elementor-widget">
               <div className="elementor-widget-container ">
                 <div className="twentytwenty-wrapper twentytwenty-horizontal">
-                  <div
-                    className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]"
-                  >
+                  <div className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]">
                     <Image
                       className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/robotic2.jpeg"
@@ -322,7 +336,6 @@ const ProductSorting = () => {
                         data-content="Xray"
                       ></div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -330,7 +343,7 @@ const ProductSorting = () => {
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 
@@ -376,7 +389,9 @@ const PerformanceAnalytics = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
+          <h1
+            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+          >
             Performance Analytics
           </h1>
           <p className="mb-8 leading-relaxed text-lg">
@@ -399,8 +414,9 @@ const PerformanceAnalytics = () => {
                   >
                     <Image
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before object-center w-full h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/motorxray2.png"
@@ -494,7 +510,9 @@ const TextDetection = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
+          <h1
+            className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}
+          >
             Text Recognition
           </h1>
           <p className="mb-8 leading-relaxed text-lg">
@@ -518,8 +536,9 @@ const TextDetection = () => {
                   >
                     <Image
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before w-full h-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/textdetect.png"
@@ -571,11 +590,16 @@ const TextDetection = () => {
 };
 
 const BenefitSection = () => {
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 5;
 
-  const screenNames = ["defect-detection", "object-defect", "text-detection", "performance", "product-sorting"];
+  const screenNames = [
+    "defect-detection",
+    "object-defect",
+    "text-detection",
+    "performance",
+    "product-sorting",
+  ];
 
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
@@ -594,7 +618,7 @@ const BenefitSection = () => {
     setMobile(screenNames[(currentSlide - 1 + totalSlides) % totalSlides]);
   };
 
-  const [mobile, setMobile] = useState('defect-detection');
+  const [mobile, setMobile] = useState("defect-detection");
 
   const data = [
     {
@@ -671,8 +695,8 @@ const BenefitSection = () => {
     },
   ];
 
-  const [screen, setScreen] = useState('defect-detection');
-  
+  const [screen, setScreen] = useState("defect-detection");
+
   const handleButtonClick = (clickedScreen) => {
     const isMobile = window.innerWidth < 768;
 
@@ -680,10 +704,11 @@ const BenefitSection = () => {
       const nextSection = document.getElementById(clickedScreen);
       if (nextSection) {
         const additionalHeight = 1000; // Adjust the value as needed
-        const offsetBottom = nextSection.offsetTop + nextSection.offsetHeight + additionalHeight;
+        const offsetBottom =
+          nextSection.offsetTop + nextSection.offsetHeight + additionalHeight;
         window.scrollTo({
           top: offsetBottom,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       }
     } else {
@@ -691,7 +716,14 @@ const BenefitSection = () => {
     }
   };
 
+  const [screenSize, setScreenSize] = useState(0);
 
+  useEffect(() => {
+    setScreenSize(window.innerWidth);
+    window.addEventListener("resize", () => {
+      setScreenSize(window.innerWidth);
+    });
+  }, []);
 
   return (
     <section
@@ -704,101 +736,132 @@ const BenefitSection = () => {
         objectFit: "cover",
       }}
     >
-      <div className="relative">
-        {mobile === "defect-detection" && <DefectDetection />}
-        {mobile === "object-defect" && <CountingDefects />}
-        {mobile === "text-detection" && <TextDetection />}
-        {mobile === "performance" && <PerformanceAnalytics />}
-        {mobile === "product-sorting" && <ProductSorting />}
-        <div className="absolute z-10 flex space-x-3 -translate-x-1/2 bottom-0 left-1/2">
-          <button
-            type="button"
-            className=" py-2 px-2 bg-gray-900 rotate-180 absolute -left-10 -top-4 rounded-full"
-            aria-current="true"
-            aria-label="Next Slide"
-            onClick={nextSlide}
-          >
-            <ArrowForwardIosIcon />
-          </button>
-          {[...Array(totalSlides)].map((_, index) => (
+      {screenSize < 700 ? (
+        <div
+          className="relative"
+          style={{
+            margin: "2rem 0",
+          }}
+        >
+          {mobile === "defect-detection" && <DefectDetection />}
+          {mobile === "object-defect" && <CountingDefects />}
+          {mobile === "text-detection" && <TextDetection />}
+          {mobile === "performance" && <PerformanceAnalytics />}
+          {mobile === "product-sorting" && <ProductSorting />}
+          <div className="absolute z-10 flex space-x-3 -translate-x-1/2 bottom-0 left-1/2">
             <button
-              key={index}
               type="button"
-              className={`w-3 h-3  rounded-full ${currentSlide === index ? 'bg-black' : 'bg-white'
+              className=" py-2 px-2 bg-[#182A2F] rotate-180 absolute -left-10 -top-4 rounded-full"
+              aria-current="true"
+              aria-label="Next Slide"
+              onClick={nextSlide}
+            >
+              <ArrowForwardIosIcon
+                sx={{
+                  fill: "#fff",
+                }}
+              />
+            </button>
+            {[...Array(totalSlides)].map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`w-3 h-3  rounded-full ${
+                  currentSlide === index ? "bg-[#182A2F]" : "bg-white"
                 }`}
-              aria-current={currentSlide === index}
-              aria-label={`Slide ${index + 1}`}
-              onClick={() => handleSlideChange(index)}
-            />
-          ))}
-          <button
-            type="button"
-            className="py-2 px-2 bg-gray-900 absolute -right-14 -top-4 rounded-full"
-            aria-current="true"
-            aria-label="Next Slide"
-            onClick={nextSlide}
-          >
-            <ArrowForwardIosIcon />
-          </button>
+                aria-current={currentSlide === index}
+                aria-label={`Slide ${index + 1}`}
+                onClick={() => handleSlideChange(index)}
+              />
+            ))}
+            <button
+              type="button"
+              className="py-2 px-2 bg-[#182A2F] absolute -right-14 -top-4 rounded-full"
+              aria-current="true"
+              aria-label="Next Slide"
+              onClick={nextSlide}
+            >
+              <ArrowForwardIosIcon
+                sx={{
+                  fill: "#fff",
+                }}
+              />
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="text-gray-600 mx-auto container">
-        <div className=" px-4 py-12">
-          <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
-            <div className="mb-2 w-full rounded-lg lg:mb-0 ">
-              <div className="flex flex-col lg:flex-row justify-center text-center gap-3 lg:gap-2 shadow-sm h-[100%] lg:h-14 items-center rounded-md w-full relative">
-                <button
-                  id="defect-detection"
-                  aria-label="defect-detection"
-                  className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
-                    "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
+      ) : (
+        <div className="text-gray-600 mx-auto container">
+          <div className=" px-4 py-12">
+            <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
+              <div className="mb-2 w-full rounded-lg lg:mb-0 ">
+                <div className="flex flex-col lg:flex-row justify-center text-center gap-3 lg:gap-2 shadow-sm h-[100%] lg:h-14 items-center rounded-md w-full relative">
+                  <button
+                    id="defect-detection"
+                    aria-label="defect-detection"
+                    className={`lg:text-lg text-sm  text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${
+                      screen === "defect-detection" &&
+                      "  border-4 border-sky-500  text-white duration-[.15s] transition-all  font-semibold"
                     } `}
-                  onClick={() => handleButtonClick("defect-detection")}
-                >Defect Detection</button>
-                <button
-                  id="object-defect"
-                  aria-label="object-defect"
-                  className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border focus:outline-none items-center px-1  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${screen === "object-defect" &&
-                    " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                    onClick={() => handleButtonClick("defect-detection")}
+                  >
+                    Defect Detection
+                  </button>
+                  <button
+                    id="object-defect"
+                    aria-label="object-defect"
+                    className={`lg:text-lg text-sm  w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border focus:outline-none items-center px-1  md:text-lg rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${
+                      screen === "object-defect" &&
+                      " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => handleButtonClick("object-defect")}
-                >Object & Defect Counting</button>
-                <button
-                  id="text-detection"
-                  aria-label="text-detection"
-                  className={`lg:text-lg text-sm w-[60%] text-white  bg-gray-800 border-gray-600 border   items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
-                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                    onClick={() => handleButtonClick("object-defect")}
+                  >
+                    Object & Defect Counting
+                  </button>
+                  <button
+                    id="text-detection"
+                    aria-label="text-detection"
+                    className={`lg:text-lg text-sm w-[60%] text-white  bg-gray-800 border-gray-600 border   items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${
+                      screen === "text-detection" &&
+                      "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => handleButtonClick("text-detection")}
-                >Text Recognition</button>
-                <button
-                  id="performance"
-                  aria-label="performance"
-                  className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
-                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                    onClick={() => handleButtonClick("text-detection")}
+                  >
+                    Text Recognition
+                  </button>
+                  <button
+                    id="performance"
+                    aria-label="performance"
+                    className={`lg:text-lg text-sm w-[60%] lg:w-[90%] text-white  bg-gray-800 border-gray-600 border items-center md:text-lg rounded-lg py-3 px-1 cursor-pointer leading-relaxed  focus:outline-none relative text-center duration-[.15s] transition-all ${
+                      screen === "performance" &&
+                      "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => handleButtonClick("performance")}
-                >Assembly Completeness</button>
+                    onClick={() => handleButtonClick("performance")}
+                  >
+                    Assembly Completeness
+                  </button>
 
-
-                <button
-                  aria-label="product-sorting"
-                  id="product-sorting"
-                  className={`lg:text-lg text-sm w-[60%]  text-white bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
-                    "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
+                  <button
+                    aria-label="product-sorting"
+                    id="product-sorting"
+                    className={`lg:text-lg text-sm w-[60%]  text-white bg-gray-800 border-gray-600 border  items-center md:text-lg rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${
+                      screen === "product-sorting" &&
+                      "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-semibold"
                     }`}
-                  onClick={() => handleButtonClick("product-sorting")}
-                >Product Sorting</button>
+                    onClick={() => handleButtonClick("product-sorting")}
+                  >
+                    Product Sorting
+                  </button>
+                </div>
               </div>
             </div>
+            {screen === "defect-detection" && <DefectDetection />}
+            {screen === "object-defect" && <CountingDefects />}
+            {screen === "text-detection" && <TextDetection />}
+            {screen === "performance" && <PerformanceAnalytics />}
+            {screen === "product-sorting" && <ProductSorting />}
           </div>
-          {screen === "defect-detection" && <DefectDetection />}
-          {screen === "object-defect" && <CountingDefects />}
-          {screen === "text-detection" && <TextDetection />}
-          {screen === "performance" && <PerformanceAnalytics />}
-          {screen === "product-sorting" && <ProductSorting />}
         </div>
-      </div>
+      )}
       <section className="text-white hiddenn block -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
           <div className="flex flex-wrap sm:-m-4 pb-28 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
@@ -815,13 +878,15 @@ const BenefitSection = () => {
                     {item.svg ? item.svg : <SpeedIcon />}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className={`${roboto.className} text-2xl font-medium mb-4`}>{item.title}</h2>
+                    <h2
+                      className={`${roboto.className} text-2xl font-medium mb-4`}
+                    >
+                      {item.title}
+                    </h2>
                     <p className="leading-relaxed flex mb-6 justify-start text-lg items-baseline">
-
                       {item.desc}
                     </p>
                     <p className="leading-relaxed text-lg flex mb-6 justify-start items-baseline">
-
                       {item.para}
                     </p>
                   </div>
@@ -886,7 +951,9 @@ const CaseStudies = () => {
       className="text-white block relative -my-1 "
     >
       <div className="container px-5 py-24 mx-auto  ">
-        <div className={`${roboto.className} justify-center items-center text-center mb-16 text-5xl font-bold`}>
+        <div
+          className={`${roboto.className} justify-center items-center text-center mb-16 text-5xl font-bold`}
+        >
           Case Studies
         </div>
         <div className="flex hiddenn flex-wrap flex-col lg:flex-row -mx-4 -mb-10 text-center">
@@ -920,8 +987,9 @@ const CaseStudies = () => {
                       <Image
                         decoding="async"
                         style={{
-                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                            }% 100%, 0 100%)`,
+                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                            imageReveal * 100
+                          }% 100%, 0 100%)`,
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="/xrayimg.webp"
@@ -1026,7 +1094,11 @@ const FeatureSection = () => {
     >
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
         <div className="w-full flex flex-col lg:items-center lg:text-center  items-center text-center">
-          <h1 className={`${roboto.className} title-font text-5xl font-bold mb-10`}>Features</h1>
+          <h1
+            className={`${roboto.className} title-font text-5xl font-bold mb-10`}
+          >
+            Features
+          </h1>
         </div>
       </div>
       <section className="text-white hiddenn block -my-1">
@@ -1045,7 +1117,11 @@ const FeatureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className={`${roboto.className} text-2xl font-medium mb-4`}>{item.title}</h2>
+                    <h2
+                      className={`${roboto.className} text-2xl font-medium mb-4`}
+                    >
+                      {item.title}
+                    </h2>
                     <p className="leading-relaxed text-lg">{item.desc}</p>
                   </div>
                 </div>
@@ -1066,7 +1142,11 @@ const FeatureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2 className={`${roboto.className} text-2xl font-medium mb-4`}>{item.title}</h2>
+                    <h2
+                      className={`${roboto.className} text-2xl font-medium mb-4`}
+                    >
+                      {item.title}
+                    </h2>
                     <p className="leading-relaxed text-lg">{item.desc}</p>
                   </div>
                 </div>

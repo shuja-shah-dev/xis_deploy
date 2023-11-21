@@ -1,39 +1,45 @@
 import React from "react";
-import { Roboto, Lato } from 'next/font/google'
- 
+import { Roboto, Lato } from "next/font/google";
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500','700'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const How = () => {
   return (
     <>
       <section
-      style={{ backgroundImage: "url('/background.png')",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      objectFit: "cover" }}
-       className="text-white block relative bg-black py-24 mt-0 ">
-        <div className={`${roboto.className} flex justify-center w-full items-center text-5xl font-bold text-center mb-16`}>
+        style={{
+          backgroundImage: "url('/background.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          objectFit: "cover",
+        }}
+        className="text-white block relative bg-black py-24 mt-0 "
+      >
+        <div
+          className={`${roboto.className} flex justify-center w-full items-center text-5xl font-bold text-center mb-16`}
+        >
           How it Works
         </div>
         <div className="container justify-center items-center text-center pb-10 mx-auto flex ">
           <div className="flex w-full justify-center text-center items-center">
             <div className="w-2/6 md:py-6">
-            <div className="flex relative md:pb-10 pb-20">
+              <div className="flex relative md:pb-10 pb-20">
                 <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
                   <p className="leading-relaxed text-center text-xl md:text-3xl inline-block">
                     Step 1
                   </p>
                 </div>
               </div>
-             
+
               <div className="flex relative pb-12">
                 <div className="inline-block w-full rounded-lg text-white pt-28 sm:pt-12 ">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">Train AI</h1>
+                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                    Train AI
+                  </h1>
                   <p className="leading-relaxed text-sm md:text-base">
                     Train the AI based on the dataset you Provided. Our web app
                     and software allow you to effortlessly import your data,
@@ -42,7 +48,7 @@ const How = () => {
                 </div>
               </div>
               <div className="flex relative pb-12">
-              <div className="inline-block rounded text-end justify-end items-center w-full py-20  mr-10">
+                <div className="inline-block rounded text-end justify-end items-center w-full py-20  mr-10">
                   <p className="leading-relaxed text-center text-xl md:text-3xl inline-block">
                     Step 3
                   </p>
@@ -50,9 +56,12 @@ const How = () => {
               </div>
               <div className="flex relative ">
                 <div className="inline-block w-full text-white rounded-lg pt-16  md:py-10">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">Deploy</h1>
+                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                    Deploy
+                  </h1>
                   <p className="leading-relaxed text-sm md:text-base">
-                    Thats it! Your model is ready to be used in your application.
+                    Thats it! Your model is ready to be used in your
+                    application.
                   </p>
                 </div>
               </div>
@@ -63,12 +72,14 @@ const How = () => {
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
-                
+
                 <div className="inline-block text-white rounded-lg  py-10">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">Capture & Label Images</h1>
+                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                    Capture & Label Images
+                  </h1>
                   <p className="leading-relaxed text-sm md:text-base">
-                    Define your dataset and import it into either our web platform
-                    or the standalone desktop app.
+                    Define your dataset and import it into either our web
+                    platform or the standalone desktop app.
                   </p>
                 </div>
               </div>
@@ -90,7 +101,9 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <div className="inline-block text-white rounded-lg  pt-28 sm:py-10">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">Test</h1>
+                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                    Test
+                  </h1>
                   <p className="leading-relaxed text-sm md:text-base">
                     Once the Labeling in process is completed you can export the
                     model and use it in your application.
@@ -119,8 +132,14 @@ const How = () => {
           </div>
         </div>
         <div className="flex w-full justify-center  items-center text-xl sm:text-2xl lg:text-4xl text-center">
-        <div className="text-white bg-gray-800 shadow-gray-600 shadow-inner  py-2 px-4 sm:px-8 sm:py-4 rounded-full">
-          <p className={`drop-shadow-lg font-light ${roboto.className} shadow-back`}>Start Inspecting with <span className="font-bold">99.9%</span> accuracy</p></div>
+          <div className="text-white bg-[#182A2F] shadow-gray-600 shadow-inner  py-2 px-4 sm:px-8 sm:py-4 rounded-full">
+            <p
+              className={`drop-shadow-lg font-light ${roboto.className} shadow-back`}
+            >
+              Start Inspecting with <span className="font-bold">99.9%</span>{" "}
+              accuracy
+            </p>
+          </div>
         </div>
       </section>
     </>
