@@ -269,7 +269,7 @@ body {
 .twentytwenty-left-arrow {
   border-right: 6px solid white;
   left: 50%;
-  margin-left: -17px;
+  margin-left: -17px; 
 }
 
 .twentytwenty-horizontal .twentytwenty-handle:after {
@@ -280,7 +280,7 @@ body {
 
 .twentytwenty-horizontal .twentytwenty-handle:after,
 .twentytwenty-horizontal .twentytwenty-handle:before {
-  width: 3px;
+  width: 5px;
   height: 9999px;
   left: 55%;
   margin-left: -1.5px;

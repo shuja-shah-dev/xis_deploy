@@ -34,10 +34,12 @@ import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import CenterFocusStrongIcon from '@mui/icons-material/CenterFocusStrong';
 import { Roboto, Lato } from 'next/font/google'
- 
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500','700'],
+  weight: ['100', '300', '400', '500', '700'],
   subsets: ['latin'],
 })
 
@@ -218,14 +220,15 @@ const DefectDetection = () => {
 };
 
 const CountingDefects = () => {
+  
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Object Detection & Defect Counting
           </h1>
-          <p className="mb-8 leading-relaxed text-lg ">
+          <p className="mb-8 leading-relaxed text-lg">
             In the domain of object and defect counting, the seamless fusion of
             computer vision and machine learning offers a powerful solution for
             precise and efficient counting. Leveraging state-of-the-art
@@ -235,17 +238,42 @@ const CountingDefects = () => {
             defects in a production line.
           </p>
         </div>
-        <div className="lg:max-w-lg h-[320px] lg:h-[400px] w-full">
-          <Image
-            width={1950}
-            height={1097}
-            className="h-full w-full object-center rounded-xl"
-            alt="Project Camera"
-            src="/projectcamera.jpg"
-          />
+        <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
+          <div className="rounded-lg overflow-hidden  elementor-widget-wrap flex">
+            <div className="elementor-element  elementor-widget">
+              <div className="elementor-widget-container ">
+                <div className="twentytwenty-wrapper twentytwenty-horizontal">
+                  <div
+                    className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]"
+                  >
+                    <Image
+                      className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      alt="Project Camera"
+                      src="/projectcamera.jpg"
+                      width={1950}
+                      height={1097}
+                    />
+
+                    <div className="twentytwenty-overlay">
+                      <div
+                        className="twentytwenty-before-label"
+                        data-content="Xray"
+                      ></div>
+                      <div
+                        className="twentytwenty-after-label"
+                        data-content="Xray"
+                      ></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </section >
+
   );
 };
 
@@ -253,7 +281,7 @@ const ProductSorting = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className={`sm:text-4xl ${roboto.className} text-3xl mb-4 font-medium `}>
             Product Sorting
           </h1>
@@ -268,17 +296,41 @@ const ProductSorting = () => {
             manufacturing and logistics.
           </p>
         </div>
-        <div className="lg:max-w-lg h-full w-full">
-          <Image
-            width={1600}
-            height={1200}
-            className="h-full w-full object-center rounded-xl"
-            alt="Robotic"
-            src="/robotic2.jpeg"
-          />
+        <div className="lg:max-w-lg  w-full mb-10 px-4 relative min-h-[1px] flex elementor-element p-[1em] ">
+          <div className="rounded-lg overflow-hidden  elementor-widget-wrap flex">
+            <div className="elementor-element  elementor-widget">
+              <div className="elementor-widget-container ">
+                <div className="twentytwenty-wrapper twentytwenty-horizontal">
+                  <div
+                    className="twentytwenty-container rounded-xl w-full h-[320px] lg:h-[400px]"
+                  >
+                    <Image
+                      className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
+                      src="/robotic2.jpeg"
+                      width={542}
+                      height={360}
+                      alt="Crack Detect"
+                    />
+
+                    <div className="twentytwenty-overlay">
+                      <div
+                        className="twentytwenty-before-label"
+                        data-content="Xray"
+                      ></div>
+                      <div
+                        className="twentytwenty-after-label"
+                        data-content="Xray"
+                      ></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
@@ -519,26 +571,30 @@ const TextDetection = () => {
 };
 
 const BenefitSection = () => {
+
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 3; // Adjust the total number of slides
+  const totalSlides = 5;
+
+  const screenNames = ["defect-detection", "object-defect", "text-detection", "performance", "product-sorting"];
+
+  const handleSlideChange = (index) => {
+    setCurrentSlide(index);
+    setMobile(screenNames[index]);
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+    setMobile(screenNames[(currentSlide + 1) % totalSlides]);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
     );
+    setMobile(screenNames[(currentSlide - 1 + totalSlides) % totalSlides]);
   };
 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds (adjust as needed)
-
-    return () => {
-      clearInterval(interval); // Clean up the interval on unmount
-    };
-  }, []);
+  const [mobile, setMobile] = useState('defect-detection');
 
   const data = [
     {
@@ -616,44 +672,10 @@ const BenefitSection = () => {
   ];
 
   const [screen, setScreen] = useState('defect-detection');
-  const [isMobile, setIsMobile] = useState('defect-detection');
-
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentWidth = window.innerWidth;
-  //     setIsMobile(currentWidth < 768);
-  //     const sections = ['defect-detection', 'object-defect', 'text-detection', 'performance', 'product-sorting'];
   
-  //     const currentSection = sections.find((section) => {
-  //       const element = document.getElementById(section);
-  //       if (element) {
-  //         const rect = element.getBoundingClientRect();
-  //         // Change the condition to check if the top of the element is below 700px
-  //         return rect.top >= 300 && rect.bottom <= window.innerHeight;
-  //       }
-  //       return false;
-  //     });
-  
-  //     if (currentSection) {
-  //       setScreen(currentSection);
-  //     }
-  //   };
-  
-  //   window.addEventListener('scroll', handleScroll);
-  //   handleScroll();
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-  
-  
-  
-
-
   const handleButtonClick = (clickedScreen) => {
     const isMobile = window.innerWidth < 768;
-  
+
     if (isMobile) {
       const nextSection = document.getElementById(clickedScreen);
       if (nextSection) {
@@ -668,8 +690,6 @@ const BenefitSection = () => {
       setScreen(clickedScreen);
     }
   };
-  
-  
 
 
 
@@ -684,7 +704,45 @@ const BenefitSection = () => {
         objectFit: "cover",
       }}
     >
-      <div className="text-gray-600 mx-auto container ">
+      <div className="relative">
+        {mobile === "defect-detection" && <DefectDetection />}
+        {mobile === "object-defect" && <CountingDefects />}
+        {mobile === "text-detection" && <TextDetection />}
+        {mobile === "performance" && <PerformanceAnalytics />}
+        {mobile === "product-sorting" && <ProductSorting />}
+        <div className="absolute z-10 flex space-x-3 -translate-x-1/2 bottom-0 left-1/2">
+          <button
+            type="button"
+            className=" py-2 px-2 bg-gray-900 rotate-180 absolute -left-10 -top-4 rounded-full"
+            aria-current="true"
+            aria-label="Next Slide"
+            onClick={nextSlide}
+          >
+            <ArrowForwardIosIcon />
+          </button>
+          {[...Array(totalSlides)].map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              className={`w-3 h-3  rounded-full ${currentSlide === index ? 'bg-black' : 'bg-white'
+                }`}
+              aria-current={currentSlide === index}
+              aria-label={`Slide ${index + 1}`}
+              onClick={() => handleSlideChange(index)}
+            />
+          ))}
+          <button
+            type="button"
+            className="py-2 px-2 bg-gray-900 absolute -right-14 -top-4 rounded-full"
+            aria-current="true"
+            aria-label="Next Slide"
+            onClick={nextSlide}
+          >
+            <ArrowForwardIosIcon />
+          </button>
+        </div>
+      </div>
+      <div className="text-gray-600 mx-auto container">
         <div className=" px-4 py-12">
           <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
             <div className="mb-2 w-full rounded-lg lg:mb-0 ">
@@ -734,7 +792,7 @@ const BenefitSection = () => {
               </div>
             </div>
           </div>
-          {screen === "defect-detection" && <DefectDetection  />}
+          {screen === "defect-detection" && <DefectDetection />}
           {screen === "object-defect" && <CountingDefects />}
           {screen === "text-detection" && <TextDetection />}
           {screen === "performance" && <PerformanceAnalytics />}

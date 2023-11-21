@@ -25,7 +25,7 @@ const How = () => {
             <div className="w-2/6 md:py-6">
             <div className="flex relative md:pb-10 pb-20">
                 <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
-                  <p className="leading-relaxed border-b-2 border-red-600   text-center text-xl md:text-3xl inline-block">
+                  <p className="leading-relaxed text-center text-xl md:text-3xl inline-block">
                     Step 1
                   </p>
                 </div>
@@ -42,8 +42,8 @@ const How = () => {
                 </div>
               </div>
               <div className="flex relative pb-12">
-              <div className="inline-block rounded  text-end justify-end items-center w-full py-20  mr-10">
-                  <p className="leading-relaxed border-b-2 border-red-600  text-center text-xl md:text-3xl inline-block">
+              <div className="inline-block rounded text-end justify-end items-center w-full py-20  mr-10">
+                  <p className="leading-relaxed text-center text-xl md:text-3xl inline-block">
                     Step 3
                   </p>
                 </div>
@@ -64,7 +64,7 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 
-                <div className="inline-block  text-white rounded-lg  py-10">
+                <div className="inline-block text-white rounded-lg  py-10">
                   <h1 className="block mb-3 text-xl md:text-3xl font-bold">Capture & Label Images</h1>
                   <p className="leading-relaxed text-sm md:text-base">
                     Define your dataset and import it into either our web platform
@@ -78,7 +78,7 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ml-10">
-                  <p className="leading-relaxed border-b-2 border-red-600  text-center text-xl md:text-3xl inline-block ">
+                  <p className="leading-relaxed text-center text-xl md:text-3xl inline-block ">
                     Step 2{" "}
                   </p>
                 </div>
@@ -103,7 +103,7 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ml-10">
-                  <p className="leading-relaxed border-b-2 border-red-600 text-xl  md:text-3xl inline-block ">
+                  <p className="leading-relaxed text-xl  md:text-3xl inline-block ">
                     Step 4{" "}
                   </p>
                 </div>
@@ -118,8 +118,9 @@ const How = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full justify-center items-center text-xl sm:text-2xl lg:text-4xl font-bold text-center">
-        <p className="text-white bg-gray-900 py-2 px-2 sm:px-8 sm:py-8 border-4 border-[#53c9eb] rounded-lg">Start Inspecting with 99.9% accuracy</p>
+        <div className="flex w-full justify-center  items-center text-xl sm:text-2xl lg:text-4xl text-center">
+        <div className="text-white bg-gray-800 shadow-gray-600 shadow-inner  py-2 px-4 sm:px-8 sm:py-4 rounded-full">
+          <p className={`drop-shadow-lg font-light ${roboto.className} shadow-back`}>Start Inspecting with <span className="font-bold">99.9%</span> accuracy</p></div>
         </div>
       </section>
     </>

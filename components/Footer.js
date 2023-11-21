@@ -71,7 +71,7 @@ const Footer = () => {
               
                 <Link href="/contact" aria-label="Contact">
                   <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                    <PhoneIphoneIcon /> +49 7045 204450
+                    <PhoneIphoneIcon /> +49 7045 2044 560
                   </li>
                 </Link>
                 <Link href="/contact" aria-label="Contact">
