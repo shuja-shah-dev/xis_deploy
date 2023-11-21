@@ -698,7 +698,7 @@ const BenefitSection = () => {
   const [screen, setScreen] = useState("defect-detection");
 
   const handleButtonClick = (clickedScreen) => {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 700 ;
 
     if (isMobile) {
       const nextSection = document.getElementById(clickedScreen);
@@ -738,10 +738,7 @@ const BenefitSection = () => {
     >
       {screenSize < 700 ? (
         <div
-          className="relative"
-          style={{
-            margin: "2rem 0",
-          }}
+          className="relative mb-20"
         >
           {mobile === "defect-detection" && <DefectDetection />}
           {mobile === "object-defect" && <CountingDefects />}
