@@ -792,7 +792,7 @@ const BenefitSection = () => {
                     id="defect-detection"
                     aria-label="defect-detection"
                     className={`lg:text-lg text-sm text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
-                      "  border-4 border-sky-500 text-white duration-[.15s] transition-all font-medium"
+                      "  border-4 border-sky-500 text-white duration-[.15s] transition-all font-medium "
                       } `}
                     onClick={() => handleButtonClick("defect-detection")}
                   >
@@ -1208,7 +1208,7 @@ export default function Home() {
       <div className="z-50" style={{ position: "relative" }}>
         <div
           className="z-50"
-          style={{ position: "fixed", bottom: "10%", right: "3%" }}
+          style={{ position: "fixed", bottom: "15%", right: "3%" }}
         >
           <button
             id="scrollbtn"
