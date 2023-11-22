@@ -90,7 +90,16 @@ const contact = () => {
 
     return accessToken ? (
         <>
-
+ <Head>
+        <title>xis.ai - Contact us</title>
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta
+          name="description"
+          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+        />
+        <meta property="og:title" content="Contact us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
             <div className="justify-center mt-12 text-center items-center mx-auto w-100">
                 <h1 className={` ${roboto.className} text-5xl w-full md:text-[5rem] text-center mx-auto`}>
                     Contact Us
@@ -261,11 +270,16 @@ const contact = () => {
         </>
     ) : (
         <>
-            <Head>
-                <title>xis.ai</title>
-                <meta name="description" content="XIS AI, AI startup, industrial quality inspection, process monitoring" />
-                <link rel="icon" href="/favicon.png" />
-            </Head>
+           <Head>
+        <title>xis.ai - Contact us</title>
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta
+          name="description"
+          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+        />
+        <meta property="og:title" content="Contact us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
 
             <Box
                 sx={{

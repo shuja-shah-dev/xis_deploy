@@ -48,9 +48,15 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>xis.ai</title>
-        <meta name="description" content="XIS AI, AI startup, industrial quality inspection, process monitoring" />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16"  />
+        <title>xis.ai - Login</title>
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta charset="UTF-8" />
+        <meta
+          name="description"
+          content="XIS AI, AI startup, industrial quality inspection, process monitoring"
+        />
+        <meta property="og:title" content="Login - Industrial quality inspection, process monitoring" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <section className="">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -89,7 +95,7 @@ const Login = () => {
                     type="email"
                     name="email"
                     id="email"
-                    className="border  sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                    className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                     placeholder="name@company.com"
                     required=""
                     ref={email}
@@ -107,7 +113,7 @@ const Login = () => {
                     name="password"
                     id="password"
                     placeholder="••••••••"
-                    className="border  sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                    className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                     required=""
                     ref={password}
                   />

@@ -611,9 +611,9 @@ camelize@^1.0.0:
   integrity sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==
 
 caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001464:
-  version "1.0.30001486"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001486.tgz"
-  integrity sha512-uv7/gXuHi10Whlj0pp5q/tsK/32J2QSqVRKQhs2j8VsDCjgyruAh/eEXHF822VqO9yT6iZKw3nRwZRSPBE9OQg==
+  version "1.0.30001564"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001564.tgz"
+  integrity sha512-DqAOf+rhof+6GVx1y+xzbFPeOumfQnhYzVnZD6LAXijR77yPtm9mfOcqOnT3mpnJiZVT+kwLAFnRlZcIz+c6bg==
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -686,6 +686,11 @@ cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
+
+crisp-sdk-web@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.npmjs.org/crisp-sdk-web/-/crisp-sdk-web-1.0.21.tgz"
+  integrity sha512-jNF/zSSA0lsAWT3q4JLG6YxtMRvgai++PwesxEL2Zm6utZaN+AoWPAH01QTfjJC/c++nFT7YM56ucdi+Y5yP4A==
 
 css-color-keywords@^1.0.0:
   version "1.0.0"

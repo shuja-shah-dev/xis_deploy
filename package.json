@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.2",
     "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
+    "crisp-sdk-web": "^1.0.21",
     "framer-motion": "^10.16.4",
     "intersection-observer": "^0.12.2",
     "next": "13.4.1",
