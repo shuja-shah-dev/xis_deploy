@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 const authRoutes = require("./routes/authRoutes");
+const postcontact = require("./routes/postcontact");
 
 app.use(cors());
 
@@ -16,6 +17,8 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.post("/contact", postcontact);
+
 
 mongoose
   .connect(mongodb.uri)

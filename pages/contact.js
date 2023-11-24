@@ -9,12 +9,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Roboto, Lato } from 'next/font/google'
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import Alert from '@mui/material/Alert';
 
- 
+
+
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500','700'],
-  subsets: ['latin'],
+    weight: ['100', '300', '400', '500', '700'],
+    subsets: ['latin'],
 })
 
 
@@ -45,7 +47,7 @@ const contact = () => {
         console.log(name, phone, email, subject, desc);
         try {
             const data = { name, phone, email, subject, desc }
-            const response = await fetch('http://localhost:3000/api/postcontact', {
+            const response = await fetch('http://localhost:5000/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,12 +55,27 @@ const contact = () => {
                 body: JSON.stringify(data),
             });
 
-            const result = await response.json();
-            console.log('Success:', result);
-            setName('')
-            setPhone('')
-            setEmail('')
-            setSubject('')
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error('Server Error:', errorData);
+                setShowErrorAlert(true);
+                setTimeout(() => {
+                    setShowErrorAlert(false);
+                }, 3000);
+
+            } else {
+                const result = await response.json();
+                console.log('Success:', result);
+                setName('');
+                setPhone('');
+                setEmail('');
+                setSubject('');
+                setDesc('');
+                setShowAlert(true);
+                setTimeout(() => {
+                    setShowAlert(false);
+                }, 3000);
+            }
         } catch (error) {
             console.error('Error:', error);
         }
@@ -69,6 +86,10 @@ const contact = () => {
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
     const [desc, setDesc] = useState('')
+    const [showAlert, setShowAlert] = useState(false);
+    const [showErrorAlert, setShowErrorAlert] = useState(false);
+
+
 
     const handleChange = (e) => {
         if (e.target.name == 'name') {
@@ -90,16 +111,16 @@ const contact = () => {
 
     return accessToken ? (
         <>
- <Head>
-        <title>xis.ai - Contact us</title>
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <meta
-          name="description"
-          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
-        />
-        <meta property="og:title" content="Contact us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+            <Head>
+                <title>xis.ai - Contact us</title>
+                <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+                <meta
+                    name="description"
+                    content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+                />
+                <meta property="og:title" content="Contact us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             <div className="justify-center mt-12 text-center items-center mx-auto w-100">
                 <h1 className={` ${roboto.className} text-5xl w-full md:text-[5rem] text-center mx-auto`}>
                     Contact Us
@@ -162,7 +183,7 @@ const contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex mb-8 text-gray-100 md:items-center dark:text-gray-400">
-                                <PhoneIphoneIcon />
+                                    <PhoneIphoneIcon />
                                     <div
                                         className="max-w-xl ml-2 text-xs sm:text-lg  font-semibold tracking-wide text-gray-200 dark:text-gray-400">
                                         +49 7045 2044 560
@@ -203,8 +224,8 @@ const contact = () => {
                                             Name
                                         </label>
                                         <input
-                                            className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
-                                            type="text" name="name" onChange={handleChange} value={name} id="name" placeholder="Your full name...." />
+                                            className="w-full p-4 mr-3 text-sm md:text-lg bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
+                                            type="text" name="name" onChange={handleChange} value={name} id="name" placeholder="Your full name...." required />
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap mb-6 -mx-3">
@@ -215,19 +236,19 @@ const contact = () => {
                                             Phone number
                                         </label>
                                         <input
-                                            className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
-                                            type="phone" id="phone" value={phone} onChange={handleChange} name="phone" placeholder="Your Phone number...." />
+                                            className="w-full p-4 mr-3 text-sm md:text-lg bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 focus:outline-none dark:focus:bg-gray-800 text-gray-400 focus:bg-gray-800"
+                                            type="phone" id="phone" value={phone} onChange={handleChange} name="phone" placeholder="Your Phone number...." required />
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap mb-6 -mx-3">
                                     <div className="w-full px-3">
                                         <label
                                             htmlFor="subject"
-                                            className="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
+                                            className="block mb-2 font-bold tracking-wide  uppercase text-gray-400" required>
                                             Subject
                                         </label>
                                         <input
-                                            className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
+                                            className="w-full p-4 mr-3 text-sm md:text-lg bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
                                             type="text" id="subject" value={subject} onChange={handleChange} name="subject" placeholder="I'm asking for...." />
                                     </div>
                                 </div>
@@ -239,8 +260,8 @@ const contact = () => {
                                             Email Address
                                         </label>
                                         <input
-                                            className="w-full p-4 mr-3 text-sm bg-gray-800 leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
-                                            type="email" id="email" value={email} onChange={handleChange} name="email" placeholder="abc@gmail.com" />
+                                            className="w-full p-4 mr-3 text-sm md:text-lg bg-gray-800 leading-tight bg-transparent border-b border-gray-300 appearance-none dark:border-gray-600 dark:focus:bg-gray-800 text-gray-400 focus:outline-none focus:bg-gray-800"
+                                            type="email" id="email" value={email} onChange={handleChange} name="email" placeholder="abc@gmail.com" required/>
                                     </div>
                                 </div>
                                 <div className="w-full px-3 mb-6 -mx-3">
@@ -249,8 +270,8 @@ const contact = () => {
                                         className="block mb-2 font-bold tracking-wide  uppercase text-gray-400">
                                         Your Message
                                     </label>
-                                    <textarea rows="4" type="message" name="desc" onChange={handleChange} value={desc} id="desc" placeholder="Write a message..." required=""
-                                        className="w-full p-4 mr-3 text-sm leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:focus:bg-gray-800 dark:border-gray-600 text-gray-400 focus:outline-none focus:bg-gray-800" />
+                                    <textarea rows="4" type="message" name="desc" onChange={handleChange} value={desc} id="desc" placeholder="Write a message..." required
+                                        className="w-full p-4 mr-3 text-sm md:text-lg leading-tight  bg-transparent border-b border-gray-300 appearance-none dark:focus:bg-gray-800 dark:border-gray-600 text-gray-400 focus:outline-none focus:bg-gray-800" />
                                 </div>
                                 <div className="px-2">
                                     <button
@@ -258,6 +279,15 @@ const contact = () => {
                                         className="px-4 py-2 font-medium text-gray-100 bg-[#1e3a8a] rounded-md shadow hover:bg-blue-900">
                                         Submit
                                     </button>
+                                </div>
+                                <div>
+                                    {showAlert && (
+                                        <Alert severity="success">Your message has been sent successfully.</Alert>
+                                    )}
+                                    {showErrorAlert && (
+                                        <Alert severity="error">All fields are required.</Alert>
+                                    )}
+
                                 </div>
                             </form>
                         </div>
@@ -270,16 +300,16 @@ const contact = () => {
         </>
     ) : (
         <>
-           <Head>
-        <title>xis.ai - Contact us</title>
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <meta
-          name="description"
-          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
-        />
-        <meta property="og:title" content="Contact us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+            <Head>
+                <title>xis.ai - Contact us</title>
+                <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+                <meta
+                    name="description"
+                    content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+                />
+                <meta property="og:title" content="Contact us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
 
             <Box
                 sx={{
