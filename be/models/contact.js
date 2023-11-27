@@ -13,6 +13,7 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: [true, "Email is required."],
     trim: true,
+    unique: true,
     match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Invalid email address"],
   },
   phone: {
