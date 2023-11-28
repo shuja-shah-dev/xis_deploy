@@ -47,11 +47,14 @@ const about = () => {
           name="description"
           content="About us - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta
+       <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+          content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
         />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+        <meta
+          property="og:url"
+          content={process.env.NEXT_PUBLIC_BASE_URL} // Corrected variable name
+        />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
@@ -225,7 +228,7 @@ const about = () => {
           name="description"
           content="About us - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-       <meta
+        <meta
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
         />

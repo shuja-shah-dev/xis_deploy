@@ -124,7 +124,7 @@ const contact = () => {
                 />
                 <meta
                     property="og:image"
-                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+                    content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
                 />
                 <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -324,9 +324,12 @@ const contact = () => {
                 />
                 <meta
                     property="og:image"
-                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+                    content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
                 />
-                <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+                <meta
+                    property="og:url"
+                    content={process.env.NEXT_PUBLIC_BASE_URL} // Corrected variable name
+                />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
 
