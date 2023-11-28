@@ -7,10 +7,10 @@ import "intersection-observer";
 import { useEffect } from "react";
 import Link from "next/link";
 import { Roboto, Lato } from 'next/font/google'
- 
+
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500','700'],
+  weight: ['100', '300', '400', '500', '700'],
   subsets: ['latin'],
 })
 
@@ -39,14 +39,20 @@ const about = () => {
 
   return accessToken ? (
     <>
-     <Head>
+      <Head>
         <title>xis.ai - About us</title>
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
         <meta
           name="description"
-          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+          content="About us - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="About us - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className=" fadeInUp animated container my-24 justify-center items-center text-5xl text-center  mx-auto w-full">
@@ -75,28 +81,28 @@ const about = () => {
                   href="/contact"
                   aria-label="Contact"
                 >
-                  <button  className="justify-center items-center text-center px-4 py-2 text-xl text-gray-100 hover:scale-110 transition transform duration-500 rounded-xl bg-gray-800 hover:bg-gray-900 ">
-                  Get in touch
+                  <button className="justify-center items-center text-center px-4 py-2 text-xl text-gray-100 hover:scale-110 transition transform duration-500 rounded-xl bg-gray-800 hover:bg-gray-900 ">
+                    Get in touch
                   </button>
                 </Link>
               </div>
-            </div>      
+            </div>
           </div>
         </section>
         <div className="relative h-full container mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
-        <iframe
-          className="absolute top-0 rounded-xl lg:rounded-3xl left-0 lg:left-[25%] w-full lg:w-1/2 h-[100%] lg:h-[100%]"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.5692550973376!2d8.848324875555058!3d49.05681318672361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47979d2fd2ffcf53%3A0xd8a4d478df498df3!2sTheodor-Schweitzer-Stra%C3%9Fe%201%2F3%2C%2075447%20Sternenfels%2C%20Germany!5e0!3m2!1sen!2s!4v1700329065442!5m2!1sen!2s"
-          frameborder="0"
-          style={{ border: 0 }}
-          allowfullscreen=""
-          aria-hidden="false"
-          loading="lazy"
-          tabindex="0"
-        ></iframe>
+          <iframe
+            className="absolute top-0 rounded-xl lg:rounded-3xl left-0 lg:left-[25%] w-full lg:w-1/2 h-[100%] lg:h-[100%]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.5692550973376!2d8.848324875555058!3d49.05681318672361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47979d2fd2ffcf53%3A0xd8a4d478df498df3!2sTheodor-Schweitzer-Stra%C3%9Fe%201%2F3%2C%2075447%20Sternenfels%2C%20Germany!5e0!3m2!1sen!2s!4v1700329065442!5m2!1sen!2s"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            loading="lazy"
+            tabIndex="0"
+          ></iframe>
+        </div>
       </div>
-      </div>
-     
+
 
 
       {/* <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
@@ -211,14 +217,19 @@ const about = () => {
     </>
   ) : (
     <>
-       <Head>
+      <Head>
         <title>xis.ai - About us</title>
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
         <meta
           name="description"
-          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
+          content="About us - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="About us - AI detection, AI detector, AI robotic, AI web, AI technologies, computer vision, precision recall, robotic inspection." />
+       <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 

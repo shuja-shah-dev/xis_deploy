@@ -50,12 +50,16 @@ const Login = () => {
       <Head>
         <title>xis.ai - Login</title>
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <meta charset="UTF-8" />
+        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
         <meta
           name="description"
-          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
+          content="Login - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="Login - AI detection, AI detector, AI robotic, AI web, AI technologies, computer vision, precision recall, robotic inspection."/>
+         <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <section className="">

@@ -1,4 +1,4 @@
-const BASE_URL = "http://be.xis.ai";
+const BASE_URL = "https://be.xis.ai";
 
 const API_CONFIG = {
   login: "/api/auth/login",

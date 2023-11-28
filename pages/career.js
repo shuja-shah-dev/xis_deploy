@@ -20,11 +20,16 @@ const Career = () => {
        <Head>
         <title>xis.ai - Careers</title>
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
         <meta
           name="description"
-          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+          content="Careers - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="Careers - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className={`${roboto.className} container fadeInUp animated justify-center items-center text-5xl text-center flex h-[100vh] mx-auto w-full`}>
@@ -36,11 +41,16 @@ const Career = () => {
     <Head>
         <title>xis.ai - Careers</title>
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
         <meta
           name="description"
-          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
+          content="Careers - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="Careers - AI detection, AI detector, AI robotic, AI web, AI technologies, computer vision, precision recall, robotic inspection." />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
