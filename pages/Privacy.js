@@ -34,9 +34,9 @@ const Privacy = () => {
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
         <meta
           name="description"
-          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence. Our team of innovators and AI enthusiasts is dedicated to pushing the boundaries of what's possible with AI technology. We believe in the potential of AI to transform industries"
+          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="Privacy - XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
+        <meta property="og:title" content="Privacy - AI detection, AI detector, AI robotic, AI web, AI technologies, computer vision, precision recall, robotic inspection." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className=" fadeInUp animated container mt-24 justify-center items-center text-5xl text-center  mx-auto w-full">

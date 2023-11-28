@@ -53,9 +53,9 @@ const Login = () => {
         <meta charset="UTF-8" />
         <meta
           name="description"
-          content="XIS AI, AI startup, industrial quality inspection, process monitoring"
+          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
         />
-        <meta property="og:title" content="Login - Industrial quality inspection, process monitoring" />
+        <meta property="og:title" content="Login - AI detection, AI detector, AI robotic, AI web, AI technologies, computer vision, precision recall, robotic inspection."/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <section className="">
