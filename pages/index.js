@@ -1181,15 +1181,15 @@ export default function Home() {
         <title>xis.ai</title>
         <meta
           property="og:title"
-          content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence."
+          content="Simplified Edge AI for Industrial Inspection"
         />
         <meta
           name="description"
-          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
+          content="XIS AI is an AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics."
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
         />
         <meta
           property="og:url"
