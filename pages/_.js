@@ -48,23 +48,26 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>xis.ai - Login</title>
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
-        <meta
-          name="description"
-          content="Login - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
-        />
-        <meta
-          property="og:image"
-          content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
-        />
-        <meta
-          property="og:url"
-          content={process.env.NEXT_PUBLIC_BASE_URL} // Corrected variable name
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+                <title>Login - Simplified Edge AI for Industrial Inspection</title>
+                <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+                <meta
+                    name="description"
+                    content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+                />
+                <meta name="robots" content="index, follow" />
+                <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+                <meta property="og:title"
+                    content="Login - Simplified Edge AI for Industrial Inspection"
+                />
+                <meta
+                    property="og:image"
+                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+                />
+                <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+
+            </Head>
       <section className="">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <h1
@@ -81,9 +84,9 @@ const Login = () => {
           </h1>
           <div className="w-full bg-gray-800 shadow-lg shadow-sky-400 rounded-lg  border md:mt-0 sm:max-w-md xl:p-0  border-gray-700">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">
+              <h2 className="text-xl font-bold leading-tight tracking-tight  md:text-2xl text-white">
                 Sign in to your account
-              </h1>
+              </h2>
               <form
                 className="space-y-4 md:space-y-6"
                 onSubmit={(e) => {

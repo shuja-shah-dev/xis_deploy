@@ -81,7 +81,6 @@ const StickyScroll = () => {
   //   4: "linear-gradient(to bottom right, #ff00ff, #4b0082)",
   //   5: "linear-gradient(to bottom right, #00ffff, #008000)",
   // };
-  console.log(RoboticArm, "Robotic Arm");
 
   return (
     <motion.div

@@ -76,7 +76,7 @@ const IntroSection = () => {
           zIndex: 10,
         }}
       >
-        <h1 className=" text-2xl sm:text-5xl font-bold fadeInUp animated mb-2 ">
+        <h1 className="text-2xl sm:text-5xl font-bold fadeInUp animated mb-2 ">
           Simplified Edge AI for Industrial Inspection
         </h1>
 
@@ -157,11 +157,11 @@ const DefectDetection = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left  items-center text-center">
-          <h1
+          <h2
             className={` ${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Defect Detection
-          </h1>
+          </h2>
           <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Leveraging AI-driven anomaly detection, the integration of computer
             vision facilitates automated visual inspection to identify defective
@@ -239,11 +239,11 @@ const CountingDefects = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1
+          <h2
             className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium`}
           >
             Object Detection & Defect Counting
-          </h1>
+          </h2>
           <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             In the domain of object and defect counting, the seamless fusion of
             computer vision and machine learning offers a powerful solution for
@@ -294,11 +294,11 @@ const ProductSorting = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1
+          <h2
             className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Product Sorting
-          </h1>
+          </h2>
           <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Our Solution in product sorting revolutionizes traditional methods
             by offering unmatched speed, accuracy, and adaptability. Through our
@@ -387,11 +387,11 @@ const PerformanceAnalytics = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1
+          <h2
             className={`sm:text-4xl ${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Assembly Completeness
-          </h1>
+          </h2>
           <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Revolutionize your quality control processes with our product's
             Assembly Completeness Detection feature. Our advanced technology
@@ -507,11 +507,11 @@ const TextDetection = () => {
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1
+          <h2
             className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
           >
             Text Recognition
-          </h1>
+          </h2>
           <p className="mb-8 leading-relaxed text-sm sm:text-lg">
             Empower your workflow with our cutting-edge text recognition
             technology, a cornerstone feature of our product. Our advanced
@@ -787,7 +787,7 @@ const BenefitSection = () => {
           <div className=" px-4 py-12">
             <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
               <div className="mb-2 w-full rounded-lg lg:mb-0 ">
-                <div className="flex flex-col md:flex-row justify-center text-center gap-3 lg:gap-2 shadow-sm h-[100%] md:h-14 items-center rounded-md w-full relative">
+                <div className="flex flex-col md:flex-row justify-center text-center gap-2 lg:gap-2 shadow-sm h-[100%] md:h-14 items-center rounded-md w-full relative">
                   <button
                     id="defect-detection"
                     aria-label="defect-detection"
@@ -863,16 +863,30 @@ const BenefitSection = () => {
                     {item.svg ? item.svg : <SpeedIcon />}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2
+                    <h3
                       className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
                     >
                       {item.title}
-                    </h2>
-                    <p className="leading-relaxed flex mb-3 md:mb-6 justify-start text-sm md:text-lg items-baseline">
-                      {item.desc}
+                    </h3>
+                    <p className="leading-relaxed flex mb-6 md:mb-6 justify-start  text-sm md:text-base items-baseline">
+                      <Image
+                        src="/circle.svg"
+                        width={10}
+                        height={10}
+                        className="mr-4"
+                        alt="circle"
+
+                      /> {item.desc}
                     </p>
-                    <p className="leading-relaxed text-sm md:text-lg  flex mb-6 justify-start items-baseline">
-                      {item.para}
+                    <p className="leading-relaxed text-sm md:text-base flex mb-6 justify-start items-baseline">
+                      <Image
+                        src="/circle.svg"
+                        width={10}
+                        height={10}
+                        className="mr-4"
+                        alt="circle"
+
+                      /> {item.para}
                     </p>
                   </div>
                 </div>
@@ -1098,12 +1112,12 @@ const FeatureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2
+                    <h4
                       className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
                     >
                       {item.title}
-                    </h2>
-                    <p className="leading-relaxed text-sm md:text-lg">{item.desc}</p>
+                    </h4>
+                    <p className="leading-relaxed text-sm md:text-base">{item.desc}</p>
                   </div>
                 </div>
               );
@@ -1118,12 +1132,12 @@ const FeatureSection = () => {
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h2
+                    <h5
                       className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
                     >
                       {item.title}
-                    </h2>
-                    <p className="leading-relaxed text-sm md:text-lg">{item.desc}</p>
+                    </h5>
+                    <p className="leading-relaxed text-sm md:text-base">{item.desc}</p>
                   </div>
                 </div>
               );
@@ -1178,22 +1192,26 @@ export default function Home() {
   return accessToken ? (
     <>
       <Head>
-        <title>xis.ai</title>
+        <title>xis.ai - Simplified Edge AI for Industrial Inspection</title>
+        <meta
+          name="description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta
           property="og:title"
           content="Simplified Edge AI for Industrial Inspection"
         />
-        <meta
-          name="description"
-          content="XIS AI is an AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics."
-        />
+
         <meta
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
         />
         <meta
           property="og:url"
-          content={process.env.NEXT_PUBLIC_BASE_URL} // Corrected variable name
+          content={process.env.NEXT_PUBLIC_BASE_URL}
         />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1245,26 +1263,6 @@ export default function Home() {
     </>
   ) : (
     <>
-      <Head>
-        <title>xis.ai</title>
-        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
-        <meta
-          name="description"
-          content="XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
-        />
-        <meta
-          property="og:image"
-          content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
-        />
-        <meta
-          property="og:url"
-          content={process.env.NEXT_PUBLIC_BASE_URL} // Corrected variable name
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-      </Head>
-
       <Box
         sx={{
           height: "100vh",

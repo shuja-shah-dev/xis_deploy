@@ -18,44 +18,32 @@ const Career = () => {
   return accessToken ? (
     <>
       <Head>
-        <title>xis.ai - Careers</title>
+        <title>Careers - Simplified Edge AI for Industrial Inspection</title>
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
         <meta
           name="description"
-          content="Careers - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <meta property="og:title"
+          content="Careers - Simplified Edge AI for Industrial Inspection"
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
         />
-        <meta
-          property="og:url"
-          content={process.env.NEXT_PUBLIC_BASE_URL} // Corrected variable name
-        />        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+
       </Head>
       <div className={`${roboto.className} container fadeInUp animated justify-center items-center text-5xl text-center flex h-[100vh] mx-auto w-full`}>
-        Coming Soon!
+        <h1>Coming Soon!</h1>
       </div>
     </>
   ) : (
     <>
-      <Head>
-        <title>xis.ai - Careers</title>
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <meta property="og:title" content="XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence." />
-        <meta
-          name="description"
-          content="Careers - XIS AI specializes in AI detection, AI robotics, and web technologies. Explore our cutting-edge solutions in computer vision, precision recall, and robotic inspection."
-        />
-        <meta
-          property="og:image"
-          content={`${process.env.NEXT_PUBLIC_LOCAL_URL}/opengraph-image.png`}
-        />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-
       <Box
         sx={{
           height: "100vh",

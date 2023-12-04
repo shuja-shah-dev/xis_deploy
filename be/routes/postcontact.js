@@ -11,7 +11,7 @@ router.post("/contact", async (req, res) => {
     try {
         const { name, phone, email, subject, desc } = req.body;
         if (!name || !email || !phone || !subject || !desc) {
-            return res.status(400).json({ error: "Email already exists" });
+            return res.status(400).json({ error: "Bad request" });
         }
 
         // Save contact details to the database
