@@ -19,11 +19,11 @@ const How = () => {
         }}
         className="text-white block relative bg-black py-24 mt-0 "
       >
-        <div
+        <h5
           className={`${roboto.className} flex justify-center w-full items-center text-5xl font-bold text-center mb-16`}
         >
           How it Works
-        </div>
+        </h5>
         <div className="container justify-center items-center text-center pb-10 mx-auto flex ">
           <div className="flex w-full justify-center text-center items-center">
             <div className="w-2/6 md:py-6">
@@ -56,9 +56,9 @@ const How = () => {
               </div>
               <div className="flex relative ">
                 <div className="inline-block w-full text-white rounded-lg pt-16  md:py-10">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                  <h2 className="block mb-3 text-xl md:text-3xl font-bold">
                     Deploy
-                  </h1>
+                  </h2>
                   <p className="leading-relaxed text-sm md:text-base">
                     Thats it! Your model is ready to be used in your
                     application.
@@ -74,9 +74,9 @@ const How = () => {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
 
                 <div className="inline-block text-white rounded-lg  py-10">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                  <h3 className="block mb-3 text-xl md:text-3xl font-bold">
                     Capture & Label Images
-                  </h1>
+                  </h3>
                   <p className="leading-relaxed text-sm md:text-base">
                     Define your dataset and import it into either our web
                     platform or the standalone desktop app.
@@ -101,9 +101,9 @@ const How = () => {
                 </div>
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#53c9eb] inline-flex items-center justify-center text-white relative "></div>
                 <div className="inline-block text-white rounded-lg  pt-28 sm:py-10">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                  <h4 className="block mb-3 text-xl md:text-3xl font-bold">
                     Test
-                  </h1>
+                  </h4>
                   <p className="leading-relaxed text-sm md:text-base">
                     Once the Labeling in process is completed you can export the
                     model and use it in your application.
@@ -133,12 +133,12 @@ const How = () => {
         </div>
         <div className="flex w-full justify-center  items-center text-xl sm:text-2xl lg:text-4xl text-center">
           <div className="text-white bg-[#182A2F] shadow-gray-600 shadow-inner  py-2 px-4 sm:px-8 sm:py-4 rounded-full">
-            <p
+            <h5
               className={`drop-shadow-lg font-normal ${roboto.className} shadow-back`}
             >
               Start Inspecting with <span className="font-bold">99.9%</span>{" "}
               accuracy
-            </p>
+            </h5>
           </div>
         </div>
       </section>

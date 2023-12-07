@@ -48,26 +48,39 @@ const Login = () => {
   return (
     <>
       <Head>
-                <title>Login - Simplified Edge AI for Industrial Inspection</title>
-                <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-                <meta
-                    name="description"
-                    content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
-                />
-                <meta name="robots" content="index, follow" />
-                <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
-                <meta property="og:title"
-                    content="Login - Simplified Edge AI for Industrial Inspection"
-                />
-                <meta
-                    property="og:image"
-                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
-                />
-                <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <title>Login - xis.ai</title>
+        <meta
+          name="description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />                <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <meta property="og:title"
+          content="Login - Simplified Edge AI for Industrial Inspection"
+        />
+        <meta property="og:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
 
-            </Head>
+      </Head>
       <section className="">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <h1

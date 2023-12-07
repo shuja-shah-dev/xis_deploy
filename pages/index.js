@@ -156,13 +156,13 @@ const DefectDetection = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left  items-center text-center">
+        <div className="lg:flex-grow md:w-full lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h2
-            className={` ${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
+            className={` ${roboto.className} text-3xl md:text-4xl mb-4 font-medium `}
           >
             Defect Detection
           </h2>
-          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
+          <p className="mb-8 leading-relaxed text-sm md:text-base">
             Leveraging AI-driven anomaly detection, the integration of computer
             vision facilitates automated visual inspection to identify defective
             products, detecting anomalies such as scratches or dents, and/or
@@ -188,7 +188,7 @@ const DefectDetection = () => {
                       src="/xraycrack1.png"
                       width={542}
                       height={360}
-                      alt="Crack Detect"
+                      alt="Crack Detect1"
                     />
                     <Image
                       decoding="async"
@@ -196,7 +196,7 @@ const DefectDetection = () => {
                       src="/xraycrack.png"
                       width={542}
                       height={360}
-                      alt="Crack Detect"
+                      alt="Crack Detect2"
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -238,13 +238,13 @@ const CountingDefects = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <div className="lg:flex-grow md:w-full lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h2
-            className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium`}
+            className={`${roboto.className} text-3xl md:text-4xl mb-4 font-medium`}
           >
             Object Detection & Defect Counting
           </h2>
-          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
+          <p className="mb-8 leading-relaxed text-sm md:text-lg">
             In the domain of object and defect counting, the seamless fusion of
             computer vision and machine learning offers a powerful solution for
             precise and efficient counting. Leveraging state-of-the-art
@@ -271,11 +271,11 @@ const CountingDefects = () => {
                     <div className="twentytwenty-overlay">
                       <div
                         className="twentytwenty-before-label"
-                        data-content="Xray"
+                        data-content="Xray321"
                       ></div>
                       <div
                         className="twentytwenty-after-label"
-                        data-content="Xray"
+                        data-content="Xray4321"
                       ></div>
                     </div>
                   </div>
@@ -293,13 +293,13 @@ const ProductSorting = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow  md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <div className="lg:flex-grow  md:w-full lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h2
-            className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
+            className={`${roboto.className} text-3xl md:text-4xl mb-4 font-medium `}
           >
             Product Sorting
           </h2>
-          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
+          <p className="mb-8 leading-relaxed text-sm md:text-lg">
             Our Solution in product sorting revolutionizes traditional methods
             by offering unmatched speed, accuracy, and adaptability. Through our
             products, users can efficiently categorize imperfect parts from the
@@ -321,17 +321,17 @@ const ProductSorting = () => {
                       src="/robotic2.jpeg"
                       width={542}
                       height={360}
-                      alt="Crack Detect"
+                      alt="AI Machine"
                     />
 
                     <div className="twentytwenty-overlay">
                       <div
                         className="twentytwenty-before-label"
-                        data-content="Xray"
+                        data-content="Xrays1"
                       ></div>
                       <div
                         className="twentytwenty-after-label"
-                        data-content="Xray"
+                        data-content="Xrays2"
                       ></div>
                     </div>
                   </div>
@@ -386,13 +386,13 @@ const PerformanceAnalytics = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <div className="lg:flex-grow md:w-full lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h2
-            className={`sm:text-4xl ${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
+            className={`sm:text-4xl ${roboto.className} text-3xl md:text-4xl mb-4 font-medium `}
           >
             Assembly Completeness
           </h2>
-          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
+          <p className="mb-8 leading-relaxed text-sm md:text-lg">
             Revolutionize your quality control processes with our product's
             Assembly Completeness Detection feature. Our advanced technology
             analyzes assembly components, ensuring every element is correctly
@@ -419,14 +419,14 @@ const PerformanceAnalytics = () => {
                       src="/motorxray2.png"
                       width={960}
                       height={1028}
-                      alt="Magnet Detect"
+                      alt="Motor Detect1"
                     />
                     <Image
                       className="custom-clip2 h-full w-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                       src="/motorxray1.png"
                       width={960}
                       height={1028}
-                      alt="Magnet Detect"
+                      alt="Motor Detect2"
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -506,13 +506,13 @@ const TextDetection = () => {
   return (
     <section className="text-white">
       <div className="container mx-auto flex px-5 pt-20 lg:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <div className="lg:flex-grow md:w-full lg:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h2
-            className={`${roboto.className} text-3xl sm:text-5xl mb-4 font-medium `}
+            className={`${roboto.className} text-3xl md:text-4xl mb-4 font-medium `}
           >
             Text Recognition
           </h2>
-          <p className="mb-8 leading-relaxed text-sm sm:text-lg">
+          <p className="mb-8 leading-relaxed text-sm md:text-lg">
             Empower your workflow with our cutting-edge text recognition
             technology, a cornerstone feature of our product. Our advanced
             optical character recognition (OCR) seamlessly converts printed or
@@ -540,14 +540,14 @@ const TextDetection = () => {
                       src="/textdetect.png"
                       width={1154}
                       height={1097}
-                      alt="Text Detect"
+                      alt="Text Detect1"
                     />
                     <Image
                       className="custom-clip2 h-full w-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                       src="/textdetect1.png"
                       width={1154}
                       height={1097}
-                      alt="Text Detect"
+                      alt="Text Detect2"
                     />
                     <div className="twentytwenty-overlay">
                       <div
@@ -724,7 +724,7 @@ const BenefitSection = () => {
 
   return (
     <section
-      className="text-white  block relative  mt-0 "
+      className="text-white block relative  mt-0 "
       style={{
         backgroundImage: "url('/background.png')",
         backgroundSize: "cover",
@@ -783,12 +783,12 @@ const BenefitSection = () => {
           </div>
         </div>
       ) : (
-        <div className="text-gray-600 mx-auto container">
-          <div className=" px-4 py-12">
-            <div className="my-4 flex w-full flex-col justify-center items-center pt-8 lg:flex-row lg:pt-0">
+        <div className="text-gray-600 px-4 mx-auto container">
+          <div className=" py-12">
+            <div className="my-4 flex w-full flex-col justify-center items-center pt-8 md:flex-row lg:pt-0">
               <div className="mb-2 w-full rounded-lg lg:mb-0 ">
-                <div className="flex flex-col md:flex-row justify-center text-center gap-2 lg:gap-2 shadow-sm h-[100%] md:h-14 items-center rounded-md w-full relative">
-                  <button
+                <div className="flex flex-col md:flex-row justify-center text-center gap-2 lg:gap-2 shadow-sm h-[100%] md:h-14 items-center rounded-md w-full list-none relative">
+                  <li
                     id="defect-detection"
                     aria-label="defect-detection"
                     className={`lg:text-lg text-sm text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
@@ -797,18 +797,18 @@ const BenefitSection = () => {
                     onClick={() => handleButtonClick("defect-detection")}
                   >
                     Defect Detection
-                  </button>
-                  <button
+                  </li>
+                  <li
                     id="object-defect"
                     aria-label="object-defect"
-                    className={`lg:text-lg  w-[90%]  text-white bg-gray-800 border-gray-600 border focus:outline-none items-center px-1 md:text-sm rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all   ${screen === "object-defect" &&
+                    className={`lg:text-lg w-[90%] text-white bg-gray-800 border-gray-600 border focus:outline-none items-center px-1 md:text-sm rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all  ${screen === "object-defect" &&
                       " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
                       }`}
                     onClick={() => handleButtonClick("object-defect")}
                   >
                     Object & Defect Counting
-                  </button>
-                  <button
+                  </li>
+                  <li
                     id="text-detection"
                     aria-label="text-detection"
                     className={`lg:text-lg text-sm w-[60%] text-white  bg-gray-800 border-gray-600 border   items-center md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
@@ -817,8 +817,8 @@ const BenefitSection = () => {
                     onClick={() => handleButtonClick("text-detection")}
                   >
                     Text Recognition
-                  </button>
-                  <button
+                  </li>
+                  <li
                     id="performance"
                     aria-label="performance"
                     className={`lg:text-lg text-sm w-[90%]  text-white  bg-gray-800 border-gray-600 border items-center md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
@@ -827,9 +827,9 @@ const BenefitSection = () => {
                     onClick={() => handleButtonClick("performance")}
                   >
                     Assembly Completeness
-                  </button>
+                  </li>
 
-                  <button
+                  <li
                     aria-label="product-sorting"
                     id="product-sorting"
                     className={`lg:text-lg text-sm w-[60%] text-white bg-gray-800 border-gray-600 border  items-center md:text-sm rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
@@ -838,7 +838,7 @@ const BenefitSection = () => {
                     onClick={() => handleButtonClick("product-sorting")}
                   >
                     Product Sorting
-                  </button>
+                  </li>
                 </div>
               </div>
             </div>
@@ -857,37 +857,37 @@ const BenefitSection = () => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
-                    className="inline-flex h-[3rem] w-[3rem] md:h-[4.5rem] md:w-[4.5rem]  items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                    className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem]  items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
 
                   >
                     {item.svg ? item.svg : <SpeedIcon />}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h3
-                      className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
+                    <p
+                      className={`${roboto.className} text-xl md:text-2xl font-medium mb-4`}
                     >
                       {item.title}
-                    </h3>
-                    <p className="leading-relaxed flex mb-6 md:mb-6 justify-start  text-sm md:text-base items-baseline">
+                    </p>
+                    <span className="leading-relaxed flex mb-6 md:mb-6 justify-start  text-sm md:text-base items-baseline">
                       <Image
                         src="/circle.svg"
                         width={10}
                         height={10}
                         className="mr-4"
-                        alt="circle"
+                        alt="circle1"
 
                       /> {item.desc}
-                    </p>
-                    <p className="leading-relaxed text-sm md:text-base flex mb-6 justify-start items-baseline">
+                    </span>
+                    <span className="leading-relaxed text-sm md:text-base flex mb-6 justify-start items-baseline">
                       <Image
                         src="/circle.svg"
                         width={10}
                         height={10}
                         className="mr-4"
-                        alt="circle"
+                        alt="circle2"
 
                       /> {item.para}
-                    </p>
+                    </span>
                   </div>
                 </div>
               );
@@ -950,11 +950,11 @@ const CaseStudies = () => {
       className="text-white block relative -my-1 "
     >
       <div className="container px-5 py-24 mx-auto  ">
-        <div
+        <h4
           className={`${roboto.className} justify-center items-center text-center mb-16 text-5xl font-bold`}
         >
           Case Studies
-        </div>
+        </h4>
         <div className="flex hiddenn flex-wrap flex-col lg:flex-row -mx-4 -mb-10 text-center">
           <div className="lg:w-1/2 mb-10 px-4 relative min-h-[1px] w-full  elementor-element p-[1em]">
             <div className="rounded-xl h-[100%] overflow-hidden">
@@ -991,7 +991,7 @@ const CaseStudies = () => {
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="/xrayimg.webp"
-                        alt="Xray Vision"
+                        alt="Xray Vision1"
                         width={600}
                         height={600}
                       />
@@ -999,18 +999,18 @@ const CaseStudies = () => {
                         decoding="async"
                         className="custom-clip2 h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--after twentytwenty-after"
                         src="/xrayimg1.webp"
-                        alt="Xray Vision"
+                        alt="Xray Vision2"
                         width={600}
                         height={600}
                       />
                       <div className="twentytwenty-overlay">
                         <div
                           className="twentytwenty-before-label"
-                          data-content="Xray"
+                          data-content="Xray123"
                         ></div>
                         <div
                           className="twentytwenty-after-label"
-                          data-content="Xray"
+                          data-content="Xray1234"
                         ></div>
                       </div>
                       <div
@@ -1092,11 +1092,11 @@ const FeatureSection = () => {
     >
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
         <div className="w-full flex flex-col lg:items-center lg:text-center  items-center text-center">
-          <h1
+          <h3
             className={`${roboto.className} title-font text-5xl font-bold mb-10`}
           >
             Features
-          </h1>
+          </h3>
         </div>
       </div>
       <section className="text-white hiddenn block -my-1">
@@ -1106,18 +1106,18 @@ const FeatureSection = () => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
-                    className="inline-flex h-[3rem] w-[3rem] md:h-[4.5rem] md:w-[4.5rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
+                    className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
 
                   >
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h4
-                      className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
+                    <p
+                      className={`${roboto.className} text-xl md:text-2xl font-medium mb-4`}
                     >
                       {item.title}
-                    </h4>
-                    <p className="leading-relaxed text-sm md:text-base">{item.desc}</p>
+                    </p>
+                    <span className="leading-relaxed text-sm md:text-base">{item.desc}</span>
                   </div>
                 </div>
               );
@@ -1128,16 +1128,16 @@ const FeatureSection = () => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
                   <div
-                    className="inline-flex h-[3rem] w-[3rem] md:h-[4.5rem] md:w-[4.5rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                    className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
-                    <h5
-                      className={`${roboto.className} text-xl md:text-3xl font-medium mb-4`}
+                    <p
+                      className={`${roboto.className} text-xl md:text-2xl font-medium mb-4`}
                     >
                       {item.title}
-                    </h5>
-                    <p className="leading-relaxed text-sm md:text-base">{item.desc}</p>
+                    </p>
+                    <span className="leading-relaxed text-sm md:text-base">{item.desc}</span>
                   </div>
                 </div>
               );
@@ -1192,30 +1192,42 @@ export default function Home() {
   return accessToken ? (
     <>
       <Head>
-        <title>xis.ai - Simplified Edge AI for Industrial Inspection</title>
+        <title>Xis.ai - Simplified Edge AI for Industrial Inspection</title>
         <meta
           name="description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
         <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta
           property="og:title"
           content="Simplified Edge AI for Industrial Inspection"
         />
-
+        <meta property="og:description"
+                    content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+                />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
         <meta
           property="og:url"
           content={process.env.NEXT_PUBLIC_BASE_URL}
         />
-
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
 

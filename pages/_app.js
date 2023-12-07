@@ -261,7 +261,7 @@ export default function App({ Component, pageProps }) {
               site traffic. By clicking 'Accept,' you consent to the use of all
               cookies. If you prefer not to allow non-essential cookies, click
               'Decline.'For More Info, see our{" "}
-              <Link href={"/Privacy"}>Privacy Policy</Link>.{" "}
+              <Link href={"/privacy"}>Privacy Policy</Link>.{" "}
             </>
           ) : (
             <Box

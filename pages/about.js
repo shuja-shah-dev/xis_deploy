@@ -40,22 +40,38 @@ const about = () => {
   return accessToken ? (
     <>
       <Head>
-        <title>About us - Simplified Edge AI for Industrial Inspection</title>
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        <title>About us - xis.ai</title>
         <meta
           name="description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}about`} />
+
         <meta property="og:title"
           content="About us - Simplified Edge AI for Industrial Inspection"
         />
+        <meta property="og:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png`}
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
 
@@ -64,16 +80,16 @@ const about = () => {
         <section className="flex items-center">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div className="flex flex-wrap">
-              <div className="w-full px-6 justify-center mb-10  lg:mb-0 ">
+              <div className="w-full px-6 justify-center mb-10 lg:mb-0 ">
                 <div className="pl-4 mb-6 ">
                   <span className="text-lg uppercase text-gray-200">
                     Who we are?
                   </span>
-                  <h1 className={`${roboto.className} mt-2 text-3xl font-black  md:text-5xl text-gray-100`}>
+                  <h1 className={`${roboto.className} mt-2 text-3xl font-black md:text-5xl text-gray-100`}>
                     About Us
                   </h1>
                 </div>
-                <p className="mb-6 text-sm md:text-lg leading-7 text-gray-300">
+                <p className="mb-6 text-sm md:text-base leading-7 text-gray-300">
                   XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a
                   mission to revolutionize Industrial Quality inspection and
                   Process Monitoring through the power of artificial
@@ -115,7 +131,6 @@ const about = () => {
           <div className="hiddenn max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div className="w-full mt-12 text-gray-100">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="w-6 h-6 text-secondary"
