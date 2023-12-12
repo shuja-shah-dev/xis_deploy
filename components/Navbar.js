@@ -74,7 +74,7 @@ const Navbar = () => {
                 onClick={toggleMobileMenu}
                 data-collapse-toggle="mobile-menu-2"
                 type="button"
-                className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 transition duration-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="mobile-menu-2"
                 aria-expanded={isMobileMenuOpen}
               >
@@ -108,31 +108,25 @@ const Navbar = () => {
               id="mobile-menu-2"
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <Link href="/" aria-label="Home" className="focus:outline-none">
-                  <li className="relative group focus:outline-none text-xl">
+                <li className="relative group focus:outline-none text-xl">
+                  <Link href="/" aria-label="Home" className="focus:outline-none">
                     Home
-                    {/* <ExpandMoreIcon /> */}
-                  </li>
-                </Link>
+                  </Link>
+                </li>
 
-                <Link href="/about" aria-label="About" className="focus:outline-none">
-                  <li className="relative group focus:outline-none text-xl">
+                <li className="relative group focus:outline-none text-xl">
+                  <Link href="/about" aria-label="About" className="focus:outline-none">
                     About Us
-                    {/* <ul className="absolute bg-[#000] shadow-[0px_2px_12px_0px_#0000001f] text-[#aaa] w-[200px] p-3 space-y-3 rounded hidden group-hover:block">
-                  <li>Menu 1</li>
+                  </Link>
+                </li>
 
-                  <li>Menu 2</li>
-
-                  <li>Menu 3</li>
-
-                  <li>Menu 4</li>
-                </ul> */}
-                  </li>
-                </Link>
-                <Link href="/career" aria-label="Career" className="focus:outline-none">
-                  <li className="relative group focus:outline-none text-xl">Careers</li>
-                </Link>
+                <li className="relative group focus:outline-none text-xl">
+                  <Link href="/career" aria-label="Career" className="focus:outline-none">
+                    Careers
+                  </Link>
+                </li>
               </ul>
+
             </div>
           </div>
         </nav>
@@ -184,19 +178,28 @@ const Navbar = () => {
             }}
           >
             <ul className="flex flex-col items-start justify-start w-full">
-              <Link href="/" aria-label="Home">
-                <li className="relative items-start justify-start">Home</li>
-              </Link>
-              <Link href="/about" aria-label="About">
-                <li className="relative items-start justify-start">About Us</li>
-              </Link>
-              <Link href="/career" aria-label="Career">
-                <li className="relative items-start justify-start">Career</li>
-              </Link>
-              <Link href="/contact" aria-label="Contact">
-                <li className="relative items-start justify-start">Contact</li>
-              </Link>
+              <li className="relative items-start justify-start">
+                <Link href="/" aria-label="Home">
+                  Home
+                </Link>
+              </li>
+              <li className="relative items-start justify-start">
+                <Link href="/about" aria-label="About">
+                  About Us
+                </Link>
+              </li>
+              <li className="relative items-start justify-start">
+                <Link href="/career" aria-label="Career">
+                  Career
+                </Link>
+              </li>
+              <li className="relative items-start justify-start">
+                <Link href="/contact" aria-label="Contact">
+                  Contact
+                </Link>
+              </li>
             </ul>
+
           </Box>
         </Box>
       )}

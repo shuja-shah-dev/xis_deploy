@@ -37,9 +37,9 @@ const How = () => {
 
               <div className="flex relative pb-12">
                 <div className="inline-block w-full rounded-lg text-white pt-28 sm:pt-12 ">
-                  <h1 className="block mb-3 text-xl md:text-3xl font-bold">
+                  <h6 className="block mb-3 text-xl md:text-3xl font-bold">
                     Train AI
-                  </h1>
+                  </h6>
                   <p className="leading-relaxed text-sm md:text-base">
                     Train the AI based on the dataset you Provided. Our web app
                     and software allow you to effortlessly import your data,

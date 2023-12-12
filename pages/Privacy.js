@@ -49,6 +49,9 @@ const Privacy = () => {
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -62,6 +65,9 @@ const Privacy = () => {
           name="twitter:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
 

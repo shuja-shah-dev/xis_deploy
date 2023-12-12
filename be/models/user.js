@@ -20,6 +20,11 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  
+  is_admin: {
+    type: String,
+    required: true,
+  },
 });
 
 userSchema.methods.generateAuthToken = function () {

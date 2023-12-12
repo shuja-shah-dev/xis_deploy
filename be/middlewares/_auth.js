@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const Blog = require('../models/blogModel');
 const key = 'c0fa1bc00531bd78ef38c628449c5102aeabd49b5dc3a2a516ea6ea959d6658e';
 
 
@@ -25,7 +26,22 @@ const isAdmin = (req, res, next) => {
     }
 };
 
+// const isBlog = async (req, res, next) => {
+//     try {
+//         const blog = await Blog.find({});
+//         if (blog.length == 0 && req.originalUrl != "/blog-setup") {
+//             res.redirect('/blog-setup')
+//         }
+//         else {
+//             next();
+//         }
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// }
+
 module.exports = {
     authCheck,
     isAdmin,
+    // isBlog,
 };

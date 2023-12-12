@@ -83,33 +83,32 @@ const IntroSection = () => {
         <p className=" text-base sm:text-xl mt-4 ">
           Build, Deploy & Inspect Quality in Minutes
         </p>
-        <Link
-          href="/contact"
+
+        <button
+          id="get-a-demo"
           aria-label="GetaDemo"
-          className="focus:outline-none"
+          className="rounded-full text-sm sm:text-xl hover:border-black focus:outline-none hover:scale-110 transition transform duration-500 hover:bg-white hover:text-black border sm:px-4 px-2 py-1 sm:py-3 mt-4"
         >
-          <button
-            id="get-a-demo"
+          <Link
+            href="/contact"
             aria-label="GetaDemo"
-            className="rounded-full text-sm sm:text-xl hover:border-black focus:outline-none hover:scale-110 transition transform duration-500 hover:bg-white hover:text-black border sm:px-4 px-2 py-1 sm:py-3 mt-4"
-          >
-            Get a Demo
-          </button>
-        </Link>
-        <Link
-          href="https://beltline.glitch.me/"
-          target="_blank"
+            className="focus:outline-none"
+          >Get a Demo </Link>
+        </button>
+
+
+        <button
+          id="ViewInAR"
           aria-label="ViewInAR"
-          className="focus:outline-none"
+          className="block focus:outline-none rounded-full mx-auto text-sm sm:text-lg hover:scale-110 transition transform duration-500 px-2 py-1 mt-2"
         >
-          <button
-            id="ViewInAR"
+          <Link
+            href="https://beltline.glitch.me/"
+            target="_blank"
             aria-label="ViewInAR"
-            className="block focus:outline-none rounded-full mx-auto text-sm sm:text-lg hover:scale-110 transition transform duration-500 px-2 py-1 mt-2"
-          >
-            <CenterFocusStrongIcon /> View in AR
-          </button>
-        </Link>
+            className="focus:outline-none"
+          ><CenterFocusStrongIcon /> View in AR</Link>
+        </button>
       </div>
     </Box>
   );
@@ -1150,6 +1149,7 @@ const FeatureSection = () => {
 };
 
 export default function Home() {
+
   const controller = useRouter();
 
   const { accessToken } = useAuth();
@@ -1173,22 +1173,6 @@ export default function Home() {
     });
   });
 
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const shouldShow = window.scrollY > 100; // Adjust the scroll distance as needed
-      setShowButton(shouldShow);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return accessToken ? (
     <>
       <Head>
@@ -1205,12 +1189,15 @@ export default function Home() {
           content="Simplified Edge AI for Industrial Inspection"
         />
         <meta property="og:description"
-                    content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
-                />
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
         <meta
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta
           property="og:url"
           content={process.env.NEXT_PUBLIC_BASE_URL}
@@ -1227,6 +1214,9 @@ export default function Home() {
           name="twitter:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
@@ -1247,29 +1237,6 @@ export default function Home() {
           <CaseStudies />
           <How />
           <FeatureSection />
-        </div>
-      </div>
-      <div className="z-50" style={{ position: "relative" }}>
-        <div
-          className="z-50"
-          style={{ position: "fixed", bottom: "15%", right: "3%" }}
-        >
-          <button
-            id="scrollbtn"
-            aria-label="Scroll to top of the page"
-            className="z-50"
-            style={{
-              backgroundColor: "#363636",
-              padding: "10px 10px",
-              borderRadius: "10px",
-              color: "#fff",
-              transition: "0.5s ease-in-out",
-              opacity: showButton ? 1 : 0,
-            }}
-            onClick={scrollToTop}
-          >
-            <KeyboardDoubleArrowUpIcon />
-          </button>
         </div>
       </div>
     </>
