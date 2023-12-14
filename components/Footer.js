@@ -28,11 +28,11 @@ const Footer = () => {
               </Link>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <p className="title-font font-medium text-gray-500 transition transform duration-500 hover:scale-95 tracking-widest text-xl mb-3">
               <Link href="/about" aria-label="About">
-                <h2 className="title-font font-medium text-gray-500 transition transform duration-500 hover:scale-95 tracking-widest text-xl mb-3">
                   About Us
-                </h2>
               </Link>
+                </p>
               <nav className="list-none mb-10">
                 <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                   <Link href="/about" aria-label="About">
@@ -52,11 +52,11 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <p className="title-font transition transform duration-500 hover:scale-95 font-medium text-gray-500 tracking-widest text-xl mb-3">
               <Link href="/privacy" aria-label="Privacy">
-                <h2 className="title-font transition transform duration-500 hover:scale-95 font-medium text-gray-500 tracking-widest text-xl mb-3">
                   Certificates
-                </h2>
               </Link>
+                </p>
               <nav className="list-none mb-10">
                 <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                   <Link href="/privacy" aria-label="Privacy">
@@ -66,11 +66,11 @@ const Footer = () => {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <p className="title-font font-medium  transition transform duration-500 hover:scale-95 text-sky-400 tracking-widest text-xl mb-3 cursor-pointer">
               <Link href="/contact" aria-label="Contact">
-                <h2 className="title-font font-medium  transition transform duration-500 hover:scale-95 text-sky-400 tracking-widest text-xl mb-3 cursor-pointer">
                   Contact Us
-                </h2>
               </Link>
+                </p>
               <nav className="list-none mb-10">
                 <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
                   <Link href="/contact" aria-label="Contact">
@@ -116,8 +116,8 @@ const Footer = () => {
         </div>
         <hr className="h-px bg-gray-500 border-0"></hr>
         <div className="bg-black">
-          <div className="container px-5  py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
-            <p className="text-base md:text-xl text-gray-500 sm:ml-6 sm:mt-0 ">
+          <div className="container px-5 py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
+            <p className="text-base md:text-xl text-gray-500 sm:ml-6 sm:mt-0">
               © 2023 XRAY LAB Industrial Services GmbH | All Rights Reserved.
             </p>
           </div>

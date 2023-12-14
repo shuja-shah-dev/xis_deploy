@@ -11,4 +11,4 @@ Allow: /public-page
 Allow: /
 
 # Specify the sitemap location
-Sitemap: https://www.xis.ai/sitemap.xml
+Sitemap: https://xis.ai/sitemap.xml

@@ -53,7 +53,9 @@ const Login = () => {
           name="description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />                <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />               
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}login`} />
         <meta property="og:title"
           content="Login - Simplified Edge AI for Industrial Inspection"
         />
@@ -64,10 +66,11 @@ const Login = () => {
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
+        <meta property="og:type" content="website" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}login`} />
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}

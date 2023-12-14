@@ -1,4 +1,5 @@
 import { Roboto } from 'next/font/google';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const roboto = Roboto({
@@ -15,7 +16,6 @@ const Featured = () => {
                     className={`${roboto.className} title-font text-3xl font-bold mb-4`}
                 >
                     Discover Nice Articles Here
-
                 </h1>
                 <p className='w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae omnis fugit ea at magni quod dolorem totam aperiam temporibus?</p>
             </div>
@@ -30,9 +30,9 @@ const Featured = () => {
                         <img src="/lightsai.jpg" alt="AI LIGHTS" className="h-full w-full " />
                         <div
                             className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
-                            <h2 className="text-xl font-medium leading-9 text-white dark:text-white">
+                            <p className="text-xl font-medium leading-9 text-white dark:text-white">
                                 Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
-                            </h2>
+                            </p>
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 mx-2 h-96 ">
@@ -41,9 +41,9 @@ const Featured = () => {
                                 <img src="/lightsai.jpg" alt="LIGHTS AI" className="h-full w-full rounded-lg" />
                                 <div
                                     className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
-                                    <h2 className="text-xl font-medium leading-9 text-white dark:text-white">
+                                    <p className="text-xl font-medium leading-9 text-white dark:text-white">
                                         Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
-                                    </h2>
+                                    </p>
                                 </div>
                             </div>
                             <div className="h-48 w-full flex space-x-4 ">
@@ -51,18 +51,18 @@ const Featured = () => {
                                     <img src="/generateai.jpg" alt="Generate AI1" className="h-full w-full rounded-lg" />
                                     <div className="absolute inset-0 bg-gray-900 opacity-50 rounded-md"></div>
                                     <div className="absolute inset-0 flex items-center z-10 p-6  justify-center">
-                                        <h2 className="text-xl font-medium leading-9 text-white dark:text-white">
+                                        <p className="text-xl font-medium leading-9 text-white dark:text-white">
                                             Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
-                                        </h2>
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="h-full w-1/2 overflow-hidden relative rounded-lg">
                                     <img src="/generateai.jpg" alt="Generate AI2" className="h-full w-full rounded-lg" />
                                     <div className="absolute inset-0 bg-gray-900 opacity-50 rounded-md"></div>
                                     <div className="absolute inset-0 flex items-center z-10 p-6  justify-center">
-                                        <h2 className="text-xl font-medium leading-9 text-white dark:text-white">
+                                        <p className="text-xl font-medium leading-9 text-white dark:text-white">
                                             Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
-                                        </h2>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,6 @@ const Featured = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
@@ -90,7 +89,7 @@ const TrendingBlog = ({ blogs }) => {
                 <div className="rounded-lg h-64 overflow-hidden">
                   <img alt="content" className="object-cover object-center h-full w-full" src={blog.blog_image} />
                 </div>
-                <h2 className="text-xl font-medium title-font mt-5">{blog.blog_title}</h2>
+                <h4 className="text-xl font-medium title-font mt-5">{blog.blog_title}</h4>
                 <p className="text-base leading-relaxed mt-2">{blog.blog_content}</p>
               </div>
             ))}
@@ -105,45 +104,63 @@ const TrendingBlog = ({ blogs }) => {
 
 const LatestBlog = () => {
 
+    const data = [
+        {
+            title: "Blogs",
+            content: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
+          },
+        {
+            title: "Blogs",
+            content: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
+          },
+    ]
+    const lblogs = [
+        {
+            title: "Organize the Content",
+            content: "Bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
+          },
+        {
+            title: "Organize the Content",
+            content: "Bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
+          },
+
+    ]
+
     return (
         <>
             <div className="container px-5 py-12 mx-auto">
                 <div className="flex flex-col">
                     <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
-                        <h1 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">Latest Post</h1>
+                        <h4 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">Latest Post</h4>
                     </div>
                 </div>
                 <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                    <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    {data.map((item,index) => {
+                        return(
+                    <div key={index} className="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div className="rounded-lg h-64 overflow-hidden">
                             <img alt="content" className="object-cover object-center h-full w-full" src="/truckai.jpg" />
                         </div>
-                        <h2 className="text-xl font-medium title-font  mt-5">Heading</h2>
-                        <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO </p>
+                        <Link href={'/blogpost/latest-blogs'}>
+                        <h2 className="text-xl font-medium title-font mt-5">{item.title}</h2>
+                        </Link>
+                        <p className="text-base leading-relaxed mt-2">{item.content}</p>
+                    </div>
+                    )
+                    })}
                   
-                    </div>
-                    <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                        <div className="rounded-lg h-64 overflow-hidden">
-                            <img alt="content" className="object-cover object-center h-full w-full" src="/truckai.jpg" />
-                        </div>
-                        <h3 className="text-xl font-medium title-font  mt-5">Heading</h3>
-                        <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO </p>
-                    </div>
                     <div className="p-4 lg:w-1/3">
-                        <div className="flex sm:flex-row mb-6">
+                    {lblogs.map((item,index) =>{
+                        return(
+                        <div key={index} className="flex sm:flex-row mb-6">
                             <img alt="Robotic AI1" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="/roboticArm.png" />
                             <div className="flex-grow pl-4 sm:pl-8">
-                                <h4 className="font-medium text-xl mb-4">Organize the Content</h4>
-                                <p className="mb-4 text-sm">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                <h4 className="font-medium text-xl mb-4">{item.title}</h4>
+                                <p className="mb-4 text-sm">{item.content}</p>
                             </div>
                         </div>
-                        <div className="flex sm:flex-row">
-                            <img alt="Robotic AI2" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="/roboticArm.png" />
-                            <div className="flex-grow pl-4 sm:pl-8">
-                                <h5 className="font-medium text-xl mb-4">Organize the Content</h5>
-                                <p className="mb-4 text-sm">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-                            </div>
-                        </div>
+                        )
+                    })}     
                     </div>
                 </div>
             </div>

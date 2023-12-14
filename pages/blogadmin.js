@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Alert from '@mui/material/Alert';
 
 
-const blogpost = () => {
+const blogadmin = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -203,4 +203,4 @@ const blogpost = () => {
     )
 }
 
-export default blogpost
+export default blogadmin;
