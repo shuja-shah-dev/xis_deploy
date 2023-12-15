@@ -10,7 +10,7 @@ const roboto = Roboto({
 
 const Featured = () => {
     return (
-        <div className="container mx-auto px-5 py-24 items-center ">
+        <div className="container mx-auto px-5 pb-24 items-center ">
             <div className="flex w-full flex-col lg:items-center lg:text-center items-center text-center mb-20">
                 <h1
                     className={`${roboto.className} title-font text-3xl font-bold mb-4`}
@@ -75,54 +75,65 @@ const Featured = () => {
 }
 
 const TrendingBlog = ({ blogs }) => {
+
     return (
-      <>
-        <div className="container px-5 py-12 mx-auto">
-          <div className="flex flex-col">
-            <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
-              <h3 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">Trending</h3>
-            </div>
-          </div>
-          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            {blogs.map((blog) => (
-              <div key={blog.id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                <div className="rounded-lg h-64 overflow-hidden">
-                  <img alt="content" className="object-cover object-center h-full w-full" src={blog.blog_image} />
+        <>
+            <div className="container px-5 py-12 mx-auto">
+                <div className="flex flex-col">
+                    <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
+                        <h3 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">Trending</h3>
+                    </div>
                 </div>
-                <h4 className="text-xl font-medium title-font mt-5">{blog.blog_title}</h4>
-                <p className="text-base leading-relaxed mt-2">{blog.blog_content}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </>
+                <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                    {Object.keys(blogs).map((item) => {
+                        const blog = blogs[item];
+                        const truncatedContent = blog.blog_content.length > 150
+                            ? blog.blog_content.slice(0, 150) + '...'
+                            : blog.blog_content;
+
+                        return (
+                            <div key={blog._id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                                <div className="rounded-lg h-64 overflow-hidden">
+                                    <img alt="content" className="object-cover object-center h-full w-full" src="/truckai.jpg" />
+                                </div>
+                                <Link passHref={true} href={`/blogpost/${blog._id}`}>
+                                    <h2 className="text-xl font-medium title-font mt-5">{blog.blog_title}</h2>
+                                </Link>
+                                <p className="text-base leading-relaxed mt-2">{truncatedContent}</p>
+                            </div>
+                        );
+                    })}
+                </div>
+
+            </div>
+        </>
     );
-  };
-  
+};
 
 
 
-const LatestBlog = () => {
+
+const LatestBlog = ({ blogs }) => {
 
     const data = [
         {
             title: "Blogs",
             content: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
-          },
+        },
         {
             title: "Blogs",
             content: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
-          },
+        },
     ]
     const lblogs = [
         {
             title: "Organize the Content",
             content: "Bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-          },
+        },
         {
             title: "Organize the Content",
             content: "Bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-          },
+        },
 
     ]
 
@@ -130,37 +141,46 @@ const LatestBlog = () => {
         <>
             <div className="container px-5 py-12 mx-auto">
                 <div className="flex flex-col">
-                    <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
+                    <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6 justify-between">
                         <h4 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">Latest Post</h4>
                     </div>
                 </div>
                 <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                    {data.map((item,index) => {
-                        return(
-                    <div key={index} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                        <div className="rounded-lg h-64 overflow-hidden">
-                            <img alt="content" className="object-cover object-center h-full w-full" src="/truckai.jpg" />
-                        </div>
-                        <Link href={'/blogpost/latest-blogs'}>
-                        <h2 className="text-xl font-medium title-font mt-5">{item.title}</h2>
-                        </Link>
-                        <p className="text-base leading-relaxed mt-2">{item.content}</p>
-                    </div>
-                    )
+                    {Object.keys(blogs).map((item, index) => {
+                        if (index < 2) {
+                            const blog = blogs[item];
+                            const truncatedContent = blog.blog_content.length > 150
+                                ? blog.blog_content.slice(0, 150) + '...'
+                                : blog.blog_content;
+                            return (
+                                <div key={blog._id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                                    <div className="rounded-lg h-64 overflow-hidden">
+                                        <img alt="content" className="object-cover object-center h-full w-full" src="/truckai.jpg" />
+                                    </div>
+                                    <Link passHref={true} href={`/blogpost/${blog._id}`}>
+                                        <h2 className="text-xl font-medium title-font mt-5">{blog.blog_title}</h2>
+                                    </Link>
+                                    <p className="text-base leading-relaxed mt-2">{truncatedContent}</p>
+                                </div>
+                            );
+                        }
+                        return null;
                     })}
-                  
-                    <div className="p-4 lg:w-1/3">
-                    {lblogs.map((item,index) =>{
-                        return(
-                        <div key={index} className="flex sm:flex-row mb-6">
-                            <img alt="Robotic AI1" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="/roboticArm.png" />
-                            <div className="flex-grow pl-4 sm:pl-8">
-                                <h4 className="font-medium text-xl mb-4">{item.title}</h4>
-                                <p className="mb-4 text-sm">{item.content}</p>
-                            </div>
-                        </div>
-                        )
-                    })}     
+
+
+                    <div className="p-4 lg:w-1/3 pt-20 lg:pt-4 relative">
+                        <h4 className="sm:w-full absolute top-0 lg:-top-16 text-[#57C8E7] text-start font-medium title-font text-3xl mb-6">Popular Post</h4>
+                        {lblogs.map((item, index) => {
+                            return (
+                                <div key={index} className="flex sm:flex-row mb-6">
+                                    <img alt="Robotic AI1" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="/roboticArm.png" />
+                                    <div className="flex-grow pl-4 sm:pl-8">
+                                        <h4 className="font-medium text-xl mb-4">{item.title}</h4>
+                                        <p className="mb-4 text-sm">{item.content}</p>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
@@ -170,19 +190,19 @@ const LatestBlog = () => {
 }
 
 const Blogs = ({ blogs }) => {
-    console.log(blogs)
+
     return (
         <>
             <div className='bg-[#111]'>
                 <div className="container mx-auto px-5 py-24 items-center">
                     <Featured />
                     <TrendingBlog blogs={blogs} />
-                    <LatestBlog />
+                    <LatestBlog blogs={blogs} />
                 </div>
             </div>
         </>
     )
-}
+};
 
 export default Blogs;
 
@@ -209,4 +229,4 @@ export async function getServerSideProps() {
             },
         };
     }
-}
+};

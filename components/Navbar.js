@@ -119,10 +119,15 @@ const Navbar = () => {
                     About Us
                   </Link>
                 </li>
-
+{/* 
                 <li className="relative group focus:outline-none text-xl">
                   <Link href="/career" aria-label="Career" className="focus:outline-none">
                     Careers
+                  </Link>
+                </li> */}
+                <li className="relative group focus:outline-none text-xl">
+                  <Link href="/blogs" aria-label="Blogs" className="focus:outline-none">
+                    News & blogs
                   </Link>
                 </li>
               </ul>

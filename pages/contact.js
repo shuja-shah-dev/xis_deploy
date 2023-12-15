@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ParallaxScroll from "./parallaxScroll";
 import { useAuth } from "@/common/authProvider";
 import { useRouter } from "next/router";
 import { Box, Typography } from "@mui/material";
@@ -11,6 +10,7 @@ import { Roboto, Lato } from 'next/font/google'
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import Alert from '@mui/material/Alert';
 import { BASE_URL } from "@/common/base_config";
+import Modal from '@mui/material/Modal';
 
 
 
@@ -111,6 +111,19 @@ const contact = () => {
             setDesc(e.target.value)
         }
     }
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: '#111827',
+        border: '2px solid #000',
+        boxShadow: 24,
+        borderRadius: "10px",
+        p: 4,
+    };
 
     return accessToken ? (
         <>
@@ -325,10 +338,32 @@ const contact = () => {
                                 </div>
                                 <div>
                                     {showAlert && (
-                                        <Alert severity="success">Your message has been sent successfully.</Alert>
+                                        <Modal
+                                            open={true}
+                                            onClose={() => setShowAlert(false)}
+                                        >
+                                            <Box sx={style}>
+                                                <div className="modal-container">
+                                                    <div className="modal-container">
+                                                        <Alert severity="success">Your message has been sent successfully.</Alert>
+                                                    </div>
+                                                </div>
+                                            </Box>
+                                        </Modal>
                                     )}
                                     {showErrorAlert && (
-                                        <Alert severity="error">Email address already exists</Alert>
+                                        <Modal
+                                            open={true}
+                                            onClose={() => setShowErrorAlert(false)}
+                                        >
+                                            <Box sx={style}>
+                                                <div className="modal-container">
+                                                    <div className="modal-container">
+                                                        <Alert severity="error">Email address already exists</Alert>
+                                                    </div>
+                                                </div>
+                                            </Box>
+                                        </Modal>
                                     )}
 
                                 </div>
