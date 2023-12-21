@@ -127,7 +127,7 @@ const Navbar = () => {
                 </li> */}
                 <li className="relative group focus:outline-none text-xl">
                   <Link href="/blogs" aria-label="Blogs" className="focus:outline-none">
-                    News & blogs
+                    News & Blogs
                   </Link>
                 </li>
               </ul>
@@ -202,6 +202,11 @@ const Navbar = () => {
                 <Link href="/contact" aria-label="Contact">
                   Contact
                 </Link>
+              </li>
+              <li className="relative items-start justify-start">
+              <Link href="/blogs" aria-label="Blogs">
+                    News & Blogs
+                  </Link>
               </li>
             </ul>
 

@@ -2,10 +2,9 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const bcrypt = require('bcrypt');
 const Blog = require('../models/blogModel');
-const User = require('../models/user');
 const mongoose = require('mongoose');
+const fs = require('fs').promises;
 
 const storage = multer.diskStorage({
   destination: './media',
@@ -31,33 +30,39 @@ function checkFileType(file, cb) {
   if (mimetype && extname) {
     return cb(null, true);
   } else {
-    return cb('Error: Images Only!');
+    return cb(new Error('Images Only!'));
   }
 }
 
-router.post('/blogs', upload, async (req, res) => {
-  try {
-    const { blog_title, blog_content } = req.body;
+router.post('/blogs', (req, res) => {
+  upload(req, res, async (err) => {
+    try {
+      if (err) {
+        return res.status(400).json({ error: err.message });
+      }
 
-    if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
+      const { blog_title, blog_content } = req.body;
+
+      if (!req.file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+
+      const blog_image = req.file.filename;
+
+      const newBlog = new Blog({
+        blog_title,
+        blog_image,
+        blog_content,
+      });
+
+      const savedBlog = await newBlog.save();
+
+      res.status(201).json(savedBlog);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
     }
-
-    const blog_image = req.file.filename;
-
-    const newBlog = new Blog({
-      blog_title,
-      blog_image,
-      blog_content,
-    });
-
-    const savedBlog = await newBlog.save();
-
-    res.status(201).json(savedBlog);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
+  });
 });
 
 router.get('/blogs', async (req, res) => {
@@ -112,7 +117,6 @@ router.put('/blogs/:id', upload, async (req, res) => {
       blog_content,
     };
 
-    // If a new image is uploaded, update the blog_image field
     if (req.file) {
       updatedBlog.blog_image = req.file.filename;
     }
@@ -125,8 +129,20 @@ router.put('/blogs/:id', upload, async (req, res) => {
 
     // If an old image exists and a new image is uploaded, delete the old image
     if (req.file && updatedBlogResult.blog_image) {
-      // Assuming you have a function to delete the old image file
-      // Implement the function or use fs.unlinkSync to delete the file
+      const oldImagePath = path.join(__dirname, 'media', updatedBlogResult.blog_image);
+
+      // Check if the file exists before attempting to delete it
+      try {
+        await fs.access(oldImagePath);
+        await fs.unlink(oldImagePath);
+      } catch (error) {
+        console.error('Error deleting old image:', error);
+
+        // Handle the case where the file doesn't exist or deletion fails
+        if (error.code !== 'ENOENT') {
+          return res.status(500).json({ error: 'Failed to delete old image', details: error.message });
+        }
+      }
     }
 
     res.status(200).json(updatedBlogResult);
@@ -135,6 +151,7 @@ router.put('/blogs/:id', upload, async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 
 router.delete('/blogs/:id', async (req, res) => {

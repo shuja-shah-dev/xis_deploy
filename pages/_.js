@@ -42,7 +42,7 @@ const Login = () => {
     const { code } = extract;
     const { token } = code;
     setAccessToken(token);
-    controller.push("/Home");
+    controller.push("/blogadmin");
   };
 
   return (
@@ -55,7 +55,7 @@ const Login = () => {
         />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />               
         <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}login`} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}_`} />
         <meta property="og:title"
           content="Login - Simplified Edge AI for Industrial Inspection"
         />
@@ -70,7 +70,7 @@ const Login = () => {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}login`} />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}_`} />
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
@@ -118,7 +118,7 @@ const Login = () => {
               >
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block mb-2 text-sm font-medium text-white"
                   >
                     Your email
@@ -135,7 +135,7 @@ const Login = () => {
                 </div>
                 <div>
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block mb-2 text-sm font-medium text-white"
                   >
                     Password
@@ -168,7 +168,7 @@ const Login = () => {
                     </div>
                     <div className="ml-3 text-sm">
                       <label
-                        for="remember"
+                        htmlFor="remember"
                         className="text-gray-500 dark:text-gray-300"
                       >
                         Remember me

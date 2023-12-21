@@ -2,16 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Alert from '@mui/material/Alert';
 import Link from 'next/link';
 import { useAuth } from "@/common/authProvider";
-import { useRouter } from "next/router";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { useRouter } from "next/router"
 
 
-
-
-
+export const ENDPOINT = "http://localhost:5000";
 
 
 const Featured = () => {
@@ -33,7 +31,7 @@ const Featured = () => {
             <div className="flex justify-center">
                 <div className="flex flex-col md:flex-row space-y-2 items-center justify-center max-w-7xl w-full">
                     <div className="w-full md:w-1/2 h-96 mr-0 md:mr-4 overflow-hidden rounded-lg relative ">
-                        <img src="/lightsai.jpg" alt="AI LIGHTS" className="h-full w-full " />
+                        <img src="/lightsai.jpg" alt="AI LIGHTS" className="h-full w-full" />
                         <div
                             className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
                             <p className="text-xl font-medium leading-9 text-white dark:text-white">
@@ -84,12 +82,11 @@ const TrendingBlog = ({ blogs }) => {
 
     const [showAlert, setShowAlert] = useState(false);
     const [showError, setShowError] = useState(false);
-
+    const [data, setData] = useState([])
 
     const handleDelete = async (blogId) => {
         try {
-
-            const response = await fetch(`http://localhost:5000/blogs/${blogId}`, {
+            const response = await fetch(`${ENDPOINT}/blogs/${blogId}`, {
                 method: 'DELETE',
             });
 
@@ -127,9 +124,12 @@ const TrendingBlog = ({ blogs }) => {
         setEditBlogId(null);
     };
 
-    const handleUpdate = async () => {
+
+
+    const handleUpdate = async (e) => {
+        e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/blogs/${editBlogId}`, {
+            const response = await fetch(`${ENDPOINT}/blogs/${editBlogId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -193,13 +193,18 @@ const TrendingBlog = ({ blogs }) => {
                                 <p className="text-base leading-relaxed mt-2 mb-4">{shortenedContent}</p>
                                 <button
                                     className='bg-red-600 px-4 py-2 mr-2 rounded-full'
-                                    onClick={() => handleDelete(blog._id)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleDelete(blog._id);
+                                    }}
                                 >
                                     Delete
                                 </button>
                                 <button
                                     className='bg-blue-600 px-4 py-2 rounded-full'
-                                    onClick={() => handleEdit(blog._id)}
+                                    onClick={(e) => {
+                                        e.preventDefault(); handleEdit(blog._id)
+                                    }}
                                 >
                                     Edit
                                 </button>
@@ -386,25 +391,40 @@ const LatestBlog = () => {
 }
 
 
-const Blogadmin = ({ blogs }) => {
+const Blogadmin = () => {
+
+    const router = useRouter();
+    const controller = useRouter();
+    const { accessToken } = useAuth();
+
+    const [formData, setFormData] = useState({
+        blog_title: "",
+        blog_content: "",
+        blog_image: null,
+    })
+    const [submittedBlogs, setSubmittedBlogs] = useState([]);
+
+    const [showAlert, setShowAlert] = useState(false);
+    const [showErrorAlert, setShowErrorAlert] = useState(false);
+    const [loading, setLoading] = useState(false);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const formData = new FormData();
-            formData.append('blog_title', blog_title);
-            formData.append('blog_image', blog_image);
-            formData.append('blog_content', blog_content);
             setLoading(true);
+            const formDataObj = new FormData();
+            formDataObj.append('blog_title', formData.blog_title);
+            formDataObj.append('blog_content', formData.blog_content);
+            formDataObj.append('blog_image', formData.blog_image);
 
-            const response = await fetch(`http://localhost:5000/blogs`, {
+            const response = await fetch(`${ENDPOINT}/blogs`, {
                 method: 'POST',
-                body: formData,
+                body: formDataObj,
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
-                console.error('Server Error:', errorData);
+                console.log(error, "Error")
                 setShowErrorAlert(true);
                 setTimeout(() => {
                     setShowErrorAlert(false);
@@ -412,9 +432,15 @@ const Blogadmin = ({ blogs }) => {
             } else {
                 const result = await response.json();
                 console.log('Success:', result);
-                setBlog_title('');
-                setBlog_image(null);
-                setBlog_content('');
+
+                setSubmittedBlogs(prevBlogs => [...prevBlogs, result]);
+
+                setFormData({
+                    blog_title: '',
+                    blog_content: '',
+                    blog_image: null,
+                });
+
                 setShowAlert(true);
                 setTimeout(() => {
                     setShowAlert(false);
@@ -427,44 +453,130 @@ const Blogadmin = ({ blogs }) => {
         }
     };
 
-    const [blog_title, setBlog_title] = useState('');
-    const [blog_image, setBlog_image] = useState(null);
-    const [blog_content, setBlog_content] = useState('');
-    const [showAlert, setShowAlert] = useState(false);
-    const [showErrorAlert, setShowErrorAlert] = useState(false);
-    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`${ENDPOINT}/blogs`);
+                if (response.ok) {
+                    const data = await response.json();
+                    setSubmittedBlogs(data);
+                } else {
+                    console.log(error, "Error")
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
-        setBlog_image(file);
+        setFormData((prevData) => ({
+            ...prevData,
+            blog_image: file,
+        }));
+    };
+    const [showError, setShowError] = useState(false);
+    const [editBlogId, setEditBlogId] = useState(null);
+    const [open, setOpen] = useState(false);
+    const [alert, setAlert] = useState(false)
+    const [error, setError] = useState(false)
+    const [editedTitle, setEditedTitle] = useState('');
+    const [editedContent, setEditedContent] = useState('');
+    const [editedImage, setEditedImage] = useState(null);
+
+
+    const handleEdit = (blogId) => {
+        setEditBlogId(blogId);
+        setOpen(true);
     };
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        if (name === 'blog_title') {
-            setBlog_title(value);
-        } else if (name === 'blog_content') {
-            setBlog_content(value);
+    const handleClose = () => {
+        setOpen(false);
+        setEditBlogId(null);
+    };
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        setEditedImage(file);
+    };
+    
+
+    const handleUpdate = async (e) => {
+        e.preventDefault();
+        try {
+            const formDataObj = new FormData();
+    
+            formDataObj.append('blog_title', editedTitle);
+            formDataObj.append('blog_content', editedContent);
+    
+            if (editedImage) {
+                formDataObj.append('blog_image', editedImage);
+            }
+    
+            const response = await fetch(`${ENDPOINT}/blogs/${editBlogId}`, {
+                method: 'PUT',
+                body: formDataObj,
+            });
+    
+            if (!response.ok) {
+                setError(true);
+                setTimeout(() => {
+                    setError(false);
+                }, 3000);
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+    
+            const updatedBlog = await response.json();
+            console.log('Blog updated successfully:', updatedBlog);
+    
+            handleClose();
+            setEditedTitle('');
+            setEditedContent('');
+            setEditedImage(null);
+    
+            setAlert(true);
+            setTimeout(() => {
+                setAlert(false);
+            }, 3000);
+    
+            setSubmittedBlogs((prevBlogs) =>
+                prevBlogs.map((blog) => (blog._id === editBlogId ? updatedBlog : blog))
+            );
+        } catch (error) {
+            console.error('Error updating blog:', error);
         }
-        // else if (e.target.name == 'email') {
-        //     setEmail(e.target.value)
-        // }
-        // else if (e.target.name == 'password') {
-        //     setPassword(e.target.value)
-        // }
     };
+    
 
-    const controller = useRouter();
-    const { accessToken } = useAuth();
+    const handleDelete = async (blogId) => {
+        try {
+            const response = await fetch(`${ENDPOINT}/blogs/${blogId}`, {
+                method: 'DELETE',
+            });
 
-    const router = useRouter();
+            if (!response.ok) {
+                // Handle error
+            } else {
+                const { deletedBlog } = await response.json();
+                console.log('Blog deleted successfully:', deletedBlog);
+
+                setSubmittedBlogs(prevBlogs =>
+                    prevBlogs.filter(blog => blog._id !== blogId)
+                );
+            }
+        } catch (error) {
+            console.error('Error deleting blog:', error);
+        }
+    };
 
     useEffect(() => {
         if (!accessToken) {
-            router.replace('/login');
+            router.replace('/_');
         }
     }, [accessToken, router]);
-
 
     const style = {
         position: 'absolute',
@@ -478,6 +590,18 @@ const Blogadmin = ({ blogs }) => {
         borderRadius: "10px",
         p: 4,
     };
+
+    const shortenText = (text, maxLength) => {
+        if (text.length <= maxLength) {
+            return text;
+        }
+        const truncatedIndex = text.indexOf(' ', maxLength);
+        return text.substring(0, truncatedIndex) + '...';
+    };
+
+    function createMarkup(c) {
+        return {__html: c};
+      }
 
     return accessToken ? (
 
@@ -495,32 +619,6 @@ const Blogadmin = ({ blogs }) => {
                             </div>
                             <div>
                                 <form onSubmit={handleSubmit} method='POST' encType='multipart/form-data'>
-                                    {/* <div className="px-4 mb-6">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Email</label>
-                                        <input
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
-                                            type="email"
-                                            name="email"
-                                            placeholder="Admin Email"
-                                            id="email"
-                                            value={email}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-                                    <div className="px-4 mb-6">
-                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Password</label>
-                                        <input
-                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
-                                            type="password"
-                                            name="password"
-                                            placeholder="Enter your Password"
-                                            id="password"
-                                            value={password}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div> */}
                                     <div className="px-4 mb-6">
                                         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="blog_image">
                                             Upload file
@@ -531,8 +629,8 @@ const Blogadmin = ({ blogs }) => {
                                             name="blog_image"
                                             id="blog_image"
                                             onChange={handleFileChange}
-                                            required
                                         />
+
                                     </div>
                                     <div className="px-4 mb-6">
                                         <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Title</label>
@@ -542,8 +640,13 @@ const Blogadmin = ({ blogs }) => {
                                             name="blog_title"
                                             placeholder="Enter Blog Title"
                                             id="blog_title"
-                                            value={blog_title}
-                                            onChange={handleChange}
+                                            value={formData.blog_title}
+                                            onChange={(e) =>
+                                                setFormData({
+                                                    ...formData,
+                                                    blog_title: e.target.value,
+                                                })
+                                            }
                                             required
                                         />
                                     </div>
@@ -554,8 +657,13 @@ const Blogadmin = ({ blogs }) => {
                                             name="blog_content"
                                             rows="5"
                                             id="blog_content"
-                                            value={blog_content}
-                                            onChange={handleChange}
+                                            value={formData.blog_content}
+                                            onChange={(e) =>
+                                                setFormData({
+                                                    ...formData,
+                                                    blog_content: e.target.value,
+                                                })
+                                            }
                                             placeholder="Enter Blog Content here..."
                                             required
                                         />
@@ -571,6 +679,7 @@ const Blogadmin = ({ blogs }) => {
                                                 </svg> : "Submit"}
                                             </button>
                                         </div>
+
                                         {showAlert &&
                                             <Modal
                                                 open={true}
@@ -593,7 +702,7 @@ const Blogadmin = ({ blogs }) => {
                                                 <Box sx={style}>
                                                     <div className="modal-container">
                                                         <div className="modal-container">
-                                                            <Alert severity="error">Failed to post the blog. Please try again.</Alert>
+                                                            <Alert severity="error">Failed to post the blog check your image file. Please try again.</Alert>
                                                         </div>
                                                     </div>
                                                 </Box>
@@ -606,7 +715,101 @@ const Blogadmin = ({ blogs }) => {
                         </div>
                     </div>
                 </div>
-                <TrendingBlog blogs={blogs} />
+                <div className="container px-5 py-12 mx-auto">
+                    <div className="flex flex-col">
+                        <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
+                            <h3 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">All Blogs</h3>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+
+                        {submittedBlogs.length ? submittedBlogs.map((item, index) => {
+                            return (
+                                <div key={index} className="p-4 md:w-1/3 sm:mb-0 mb-6">
+                                    <div className="rounded-lg h-64 overflow-hidden">
+                                        <img
+                                            alt={`content-${index}`}
+                                            className="object-cover object-center h-full w-full"
+                                            src={`${ENDPOINT}${item.blog_image}`}
+                                        />
+                                    </div>
+                                    <h2 className="text-xl font-medium title-font mt-5">{item.blog_title}</h2>
+                                    <p dangerouslySetInnerHTML={createMarkup(shortenText(item.blog_content, 150))} className="text-base leading-relaxed mt-2 mb-4"></p>
+                                    <button
+                                        className='bg-red-600 px-4 py-2 mr-2 rounded-full'
+                                        onClick={() => handleDelete(item._id)}
+                                    >
+                                        Delete
+                                    </button>
+                                    <button
+                                        className='bg-blue-600 px-4 py-2 rounded-full'
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleEdit(item._id);
+                                        }}
+                                    >
+                                        Edit
+                                    </button>
+                                </div>
+                            );
+                        }) : null}
+
+                    </div>
+                </div>
+                {editBlogId && (
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box sx={style}>
+                            <div className="modal-container">
+                                <div className="modal-container">
+                                    <h2 className='mb-4'>Edit Blog Post</h2>
+                                    <div className="px-4 mb-6">
+                                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="blog_image">
+                                            Upload file
+                                        </label>
+                                        <input
+                                            className="block w-full text-sm border border-gray-200 rounded cursor-pointer file:hover:bg-gray-900 file:border-solid file:border-0 file:cursor-pointer dark:file:border-gray-700 file:text-gray-300 dark:file:bg-gray-600 file:mr-5 file:px-5 file:py-3 dark:text-gray-400 bg-gray-800 dark:border-gray-800 dark:placeholder-gray-400 file:border-r file:border-gray-300 file:bg-gray-800 "
+                                            type="file"
+                                            name="blog_image"
+                                            id="blog_image"
+                                            onChange={(e) => handleImageChange(e)}
+                                            />
+                                    </div>
+                                    <div className="px-4 mb-6">
+                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400"> Title</label>
+                                        <input
+                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
+                                            type="text"
+                                            name="blog_title"
+                                            placeholder="Enter Blog Title"
+                                            id="blog_title"
+                                            value={editedTitle} onChange={(e) => setEditedTitle(e.target.value)}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="px-4 mb-6">
+                                        <label className="block mb-2 text-sm font-medium dark:text-gray-400">Content</label>
+                                        <textarea
+                                            className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
+                                            name="blog_content"
+                                            rows="5"
+                                            id="blog_content"
+                                            value={editedContent} onChange={(e) => setEditedContent(e.target.value)}
+                                            placeholder="Enter Blog Content here..."
+                                            required
+                                        />
+                                    </div>
+                                    <button className='bg-blue-600 px-4 py-2 mr-2 rounded-full' onClick={handleUpdate}>Update</button>
+                                    <button className='bg-red-600 px-4 py-2 rounded-full' onClick={handleClose}>Cancel</button>
+                                </div>
+                            </div>
+                        </Box>
+                    </Modal>
+                )}
             </section>
         </>
     ) : (
@@ -637,7 +840,7 @@ const Blogadmin = ({ blogs }) => {
                         id="login"
                         aria-label="Login to your account"
                         onClick={(_) => {
-                            controller.push("/admin");
+                            controller.push("/_");
                         }}
                         className="w-full lg:w-1/2 text-white bg-sky-500 hover:bg-sky-500 mt-10 focus:ring-1 focus:outline-none focus:ring-sky-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-500 dark:hover:bg-sky-500 dark:focus:ring-sky-500"
                     >
@@ -648,19 +851,16 @@ const Blogadmin = ({ blogs }) => {
         </>
     );
 }
-
 export default Blogadmin;
 
 export async function getServerSideProps() {
     try {
-        const res = await fetch('http://localhost:5000/blogs');
+        const res = await fetch(`${ENDPOINT}/blogs`);
 
         if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
-
         const blogs = await res.json();
-
         return {
             props: {
                 blogs,

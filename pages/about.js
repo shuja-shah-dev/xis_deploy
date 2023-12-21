@@ -17,8 +17,6 @@ const roboto = Roboto({
 
 const about = () => {
 
-  const controller = useRouter();
-  const { accessToken } = useAuth();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -37,7 +35,7 @@ const about = () => {
     });
   });
 
-  return accessToken ? (
+  return (
     <>
       <Head>
         <title>About us - xis.ai</title>
@@ -117,9 +115,13 @@ const about = () => {
             </div>
           </div>
         </section>
-        <div className="relative h-full container mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
+
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+      <div class="w-1/2 mb-10 px-4">
+      <div className="relative h-full  rounded-xl container mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
           <iframe
-            className="absolute top-0 rounded-xl lg:rounded-3xl left-0 lg:left-[25%] w-full lg:w-1/2 h-[100%] lg:h-[100%]"
+            className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.5692550973376!2d8.848324875555058!3d49.05681318672361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47979d2fd2ffcf53%3A0xd8a4d478df498df3!2sTheodor-Schweitzer-Stra%C3%9Fe%201%2F3%2C%2075447%20Sternenfels%2C%20Germany!5e0!3m2!1sen!2s!4v1700329065442!5m2!1sen!2s"
             frameBorder="0"
             style={{ border: 0 }}
@@ -129,10 +131,27 @@ const about = () => {
             tabIndex="0"
           ></iframe>
         </div>
+      
       </div>
+      <div class="w-1/2 mb-10 px-4">
+      <div className="relative h-full container  rounded-xl mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
+          <iframe
+            className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5056224970035!2d-83.24737019999999!3d42.671830799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824eaac3f8d9c03%3A0x54513cd1f684af54!2s2255%20Pontiac%20Rd%2C%20Auburn%20Hills%2C%20MI%2048326%2C%20USA!5e0!3m2!1sen!2s!4v1703003095408!5m2!1sen!2s"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            loading="lazy"
+            tabIndex="0"
+          ></iframe>
+        </div>
 
-
-
+      </div>
+    </div>
+  </div>
+      </div>
+    
       {/* <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
         <div className=" p-4 min-h-screen">
           <div className="hiddenn max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
@@ -242,48 +261,7 @@ const about = () => {
         </div>
       </div> */}
     </>
-  ) : (
-    <>
-      <Box
-        sx={{
-          height: "100vh",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "30%",
-            width: "35%",
-            flexDirection: "column",
-          }}
-        >
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>
-            Permission Denied.
-          </Typography>
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>
-            Please Login to continue.
-          </Typography>
-          <button
-            id="login"
-            aria-label="Login to your account"
-            onClick={(_) => {
-              controller.push("/");
-            }}
-            className="w-full lg:w-1/2 text-white bg-sky-500 hover:bg-sky-500 mt-10 focus:ring-1 focus:outline-none focus:ring-sky-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-500 dark:hover:bg-sky-500 dark:focus:ring-sky-500"
-          >
-            Login
-          </button>
-        </Box>
-      </Box>
-    </>
-  );
+  )
 };
 
 export default about;

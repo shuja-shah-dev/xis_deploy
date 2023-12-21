@@ -1173,7 +1173,7 @@ export default function Home() {
     });
   });
 
-  return accessToken ? (
+  return  (
     <>
       <Head>
         <title>Xis.ai - Simplified Edge AI for Industrial Inspection</title>
@@ -1203,9 +1203,8 @@ export default function Home() {
           property="og:url"
           content={process.env.NEXT_PUBLIC_BASE_URL}
         />
-        {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
+        <meta name="twitter:site" content="@XisAI" />  
         <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
         <meta
           name="twitter:description"
@@ -1241,46 +1240,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  ) : (
-    <>
-      <Box
-        sx={{
-          height: "100vh",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "30%",
-            width: "35%",
-            flexDirection: "column",
-          }}
-        >
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>
-            Permission Denied.
-          </Typography>
-          <Typography sx={{ width: "100%", textAlign: "Center" }}>
-            Please Login to continue.
-          </Typography>
-          <button
-            id="login"
-            aria-label="Login to your account"
-            onClick={(_) => {
-              controller.push("/");
-            }}
-            className="w-full lg:w-1/2 text-white bg-sky-500 hover:bg-sky-500 mt-10 focus:ring-1 focus:outline-none focus:ring-sky-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-500 dark:hover:bg-sky-500 dark:focus:ring-sky-500"
-          >
-            Login
-          </button>
-        </Box>
-      </Box>
-    </>
-  );
-}
+  ) 
+};
