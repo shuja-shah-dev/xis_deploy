@@ -1,4 +1,5 @@
 const BASE_URL = "https://be.xis.ai";
+// const BASE_URL = "https://xis.ai";
 
 const API_CONFIG = {
   login: "/api/auth/login",

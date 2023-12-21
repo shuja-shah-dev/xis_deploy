@@ -7,9 +7,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useRouter } from "next/router"
+import { BASE_URL } from '@/common/base_config';
 
 
-export const ENDPOINT = "http://localhost:5000";
+export const ENDPOINT = BASE_URL;
 
 
 const Featured = () => {
