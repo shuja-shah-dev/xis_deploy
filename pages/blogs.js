@@ -21,7 +21,7 @@ const Featured = ({ blogs }) => {
                 >
                     Discover Nice Articles Here
                 </h1>
-                <p className='w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae omnis fugit ea at magni quod dolorem totam aperiam temporibus?</p>
+                {/* <p className='w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae omnis fugit ea at magni quod dolorem totam aperiam temporibus?</p> */}
             </div>
             <div className="flex flex-col">
                 <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
@@ -158,6 +158,8 @@ const TrendingBlog = ({ blogs }) => {
                     {Object.keys(blogs).length > 0 ? (
                         Object.keys(blogs).map((item, index) => {
                             const blog = blogs[item];
+                            const truncatedContent = blog.blog_content.slice(0, 150);
+                            const truncatedTitle = blog.blog_title.slice(0, 40);
                             return (
                                 <div key={blog._id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
                                     <div className="rounded-lg h-64 overflow-hidden">
@@ -168,9 +170,9 @@ const TrendingBlog = ({ blogs }) => {
                                         />
                                     </div>
                                     <Link passHref={true} href={`/blogpost/${blog._id}`}>
-                                        <h2 className="text-xl font-medium title-font mt-5">{blog.blog_title}</h2>
+                                        <h2 className="text-xl font-medium title-font mt-5 mb-4">{truncatedTitle}</h2>
                                     </Link>
-                                    <div className="text-base leading-relaxed mt-2 mb-4">{shortenText(blog.blog_content)}</div>
+                                    <div className="text-base leading-relaxed mt-2 mb-4">{truncatedContent}...</div>
                                 </div>
                             );
                         })
@@ -194,13 +196,6 @@ const LatestBlog = ({ blogs }) => {
         return { __html: c };
     }
     
-    const shortenText = (text, maxLength) => {
-        if (text.length <= maxLength) {
-            return text;
-        }
-        const truncatedIndex = text.indexOf(' ', maxLength);
-        return text.substring(0, truncatedIndex) + '...';
-    };
     return (
         <>
          
@@ -215,6 +210,9 @@ const LatestBlog = ({ blogs }) => {
                         Object.keys(blogs).map((item, index) => {
                             if (index < 2) {
                                 const blog = blogs[item];
+                                const truncatedContent = blog.blog_content.slice(0, 150);
+                                const truncatedTitle = blog.blog_title.slice(0, 40);
+
                                 return (
                                     <div key={blog._id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
                                         <div className="rounded-lg h-64 overflow-hidden">
@@ -226,10 +224,10 @@ const LatestBlog = ({ blogs }) => {
                                         </div>
                                         <h2 className="text-xl font-medium title-font mt-5">
                                             <Link passHref={true} href={`/blogpost/${blog._id}`}>
-                                                {blog.blog_title}
+                                                {truncatedTitle}
                                             </Link>
                                         </h2>
-                                        <div  className="text-base leading-relaxed mt-2 mb-4">{shortenText(blog.blog_content)}</div>
+                                        <div className="text-base leading-relaxed mt-2 mb-4">{truncatedContent}...</div>
                                     </div>
                                 );
                             }

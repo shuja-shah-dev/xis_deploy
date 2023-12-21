@@ -96,7 +96,6 @@ const IntroSection = () => {
           >Get a Demo </Link>
         </button>
 
-
         <button
           id="ViewInAR"
           aria-label="ViewInAR"
@@ -736,6 +735,21 @@ const BenefitSection = () => {
         <div
           className="relative mb-20"
         >
+          <div class="flex  relative mt-0 lg:-mt-[90px]  z-10  rounded">
+            <div class="w-full flex flex-col justify-center items-center p-8 mb-10 text-center transition-all bg-[#111] shadow lg:mb-0">
+              <div className="w-full sm:w-1/2 font-bold text-xl md:w-1/4 lg:w-1/4 xl:w-1/4 px-2">
+                TRUSTED BY:
+              </div>
+              <Image src={"/IMAGE.png"} className=" object-cover object-center  h-full" alt="nvidia" width={200} height={200} />
+
+              <Image src={"/ipai.png"} alt="ipai" className=" object-cover object-center h-full" width={200} height={200} />
+
+              <Image src={"/bosch-logo 1.png"} alt="ipai" className=" object-cover object-center  h-full" width={200} height={200} />
+
+              <Image src={"/nvidia.png"} alt="ipai" className="items-center object-cover w-1/4 object-center h-full" width={200} height={200} />
+
+            </div>
+          </div>
           {mobile === "defect-detection" && <DefectDetection />}
           {mobile === "object-defect" && <CountingDefects />}
           {mobile === "text-detection" && <TextDetection />}
@@ -782,7 +796,30 @@ const BenefitSection = () => {
           </div>
         </div>
       ) : (
-        <div className="text-gray-600 px-4 mx-auto container">
+        <>
+          <div class="flex relative mt-0 lg:-mt-[80px] z-10 rounded">
+            <div class="w-full flex items-center px-6 mb-10 text-center justify-center transition-all bg-[#111] shadow lg:mb-0">
+              <div className="w-full font-bold text-xl sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4">
+                TRUSTED BY :
+              </div>
+              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
+                <Image src={"/IMAGE.png"} alt="nvidia" width={200} height={200} />
+              </div>
+
+              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
+                <Image src={"/ipai.png"} alt="ipai" width={200} height={200} />
+              </div>
+
+              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
+                <Image src={"/bosch-logo 1.png"} alt="ipai" width={200} height={200} />
+              </div>
+
+              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
+                <Image src={"/nvidia.png"} alt="ipai" width={200} height={200} />
+              </div>
+            </div>
+          </div>
+        <div className="px-4 mx-auto container">
           <div className=" py-12">
             <div className="my-4 flex w-full flex-col justify-center items-center pt-8 md:flex-row lg:pt-0">
               <div className="mb-2 w-full rounded-lg lg:mb-0 ">
@@ -848,6 +885,7 @@ const BenefitSection = () => {
             {screen === "product-sorting" && <ProductSorting />}
           </div>
         </div>
+        </>
       )}
       <section className="text-white hiddenFit block -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
@@ -1173,7 +1211,7 @@ export default function Home() {
     });
   });
 
-  return  (
+  return (
     <>
       <Head>
         <title>Xis.ai - Simplified Edge AI for Industrial Inspection</title>
@@ -1204,7 +1242,7 @@ export default function Home() {
           content={process.env.NEXT_PUBLIC_BASE_URL}
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@XisAI" />  
+        <meta name="twitter:site" content="@XisAI" />
         <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
         <meta
           name="twitter:description"
@@ -1240,5 +1278,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  ) 
+  )
 };

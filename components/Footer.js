@@ -64,7 +64,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/Privacy" aria-label="Privacy">
+                  <Link href="/privacy" aria-label="Privacy">
                     Data Privacy Policy
                   </Link>
                 </li>
