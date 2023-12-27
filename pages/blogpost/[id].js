@@ -1,5 +1,6 @@
 import React from 'react';
 import { ENDPOINT } from '../blogadmin';
+import { BASE_URL } from '@/common/base_config';
 
 const Slug = ({ blog }) => {
   function createMarkup(c) {
@@ -13,7 +14,7 @@ const Slug = ({ blog }) => {
            {blog.blog_title}
           </h1>
           <div className="rounded-lg h-64 overflow-hidden mb-4">
-            <img alt="contentImage" className="object-cover object-center h-full w-full" src={`${ENDPOINT}/media/${blog.blog_image}`} />
+            <img alt="contentImage" className="object-cover object-center h-full w-full" src={`${BASE_URL}/media/${blog.blog_image}`} />
           </div>
           <p  className="mb-16 text-base text-center text-gray-200">
             {blog.blog_content}
@@ -29,7 +30,7 @@ export default Slug;
 export async function getServerSideProps(context) {
   try {
     const { id } = context.params;
-    const res = await fetch(`http://localhost:5000/blogs/${id}`);
+    const res = await fetch(`${BASE_URL}/blogs/${id}`);
 
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);

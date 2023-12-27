@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useRouter } from "next/router"
+import { BASE_URL } from '@/common/base_config';
 
 
 export const ENDPOINT = "http://localhost:5000";
@@ -86,7 +87,7 @@ const TrendingBlog = ({ blogs }) => {
 
     const handleDelete = async (blogId) => {
         try {
-            const response = await fetch(`${ENDPOINT}/blogs/${blogId}`, {
+            const response = await fetch(`${BASE_URL}/blogs/${blogId}`, {
                 method: 'DELETE',
             });
 
@@ -129,7 +130,7 @@ const TrendingBlog = ({ blogs }) => {
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${ENDPOINT}/blogs/${editBlogId}`, {
+            const response = await fetch(`${BASE_URL}/blogs/${editBlogId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -418,7 +419,7 @@ const Blogadmin = () => {
             formDataObj.append('blog_content', formData.blog_content);
             formDataObj.append('blog_image', formData.blog_image);
 
-            const response = await fetch(`${ENDPOINT}/blogs`, {
+            const response = await fetch(`${BASE_URL}/blogs`, {
                 method: 'POST',
                 body: formDataObj,
             });
@@ -457,7 +458,7 @@ const Blogadmin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`${ENDPOINT}/blogs`);
+                const response = await fetch(`${BASE_URL}/blogs`);
                 if (response.ok) {
                     const data = await response.json();
                     setSubmittedBlogs(data);
@@ -516,7 +517,7 @@ const Blogadmin = () => {
                 formDataObj.append('blog_image', editedImage);
             }
     
-            const response = await fetch(`${ENDPOINT}/blogs/${editBlogId}`, {
+            const response = await fetch(`${BASE_URL}/blogs/${editBlogId}`, {
                 method: 'PUT',
                 body: formDataObj,
             });
@@ -553,7 +554,7 @@ const Blogadmin = () => {
 
     const handleDelete = async (blogId) => {
         try {
-            const response = await fetch(`${ENDPOINT}/blogs/${blogId}`, {
+            const response = await fetch(`${BASE_URL}/blogs/${blogId}`, {
                 method: 'DELETE',
             });
 
@@ -730,7 +731,7 @@ const Blogadmin = () => {
                                         <img
                                             alt={`content-${index}`}
                                             className="object-cover object-center h-full w-full"
-                                            src={`${ENDPOINT}${item.blog_image}`}
+                                            src={`${BASE_URL}${item.blog_image}`}
                                         />
                                     </div>
                                     <h2 className="text-xl font-medium title-font mt-5">{item.blog_title}</h2>
@@ -855,7 +856,7 @@ export default Blogadmin;
 
 export async function getServerSideProps() {
     try {
-        const res = await fetch(`${ENDPOINT}/blogs`);
+        const res = await fetch(`${BASE_URL}/blogs`);
 
         if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);

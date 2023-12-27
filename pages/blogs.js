@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import Alert from '@mui/material/Alert';
 import { ENDPOINT } from './blogadmin';
 import Head from 'next/head';
+import { BASE_URL } from '@/common/base_config';
+
 
 const roboto = Roboto({
     weight: ["100", "300", "400", "500", "700"],
@@ -42,7 +44,7 @@ const Featured = ({ blogs }) => {
                                         <img
                                             alt={`content-${index}`}
                                             className="object-cover object-center h-full w-full"
-                                            src={`${ENDPOINT}${blog.blog_image}`}
+                                            src={`${BASE_URL}${blog.blog_image}`}
                                         />
                                         <div
                                             className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
@@ -75,7 +77,7 @@ const Featured = ({ blogs }) => {
                                                 <img
                                                     alt={`content-${index}`}
                                                     className="object-center h-full w-full"
-                                                    src={`${ENDPOINT}${blog.blog_image}`}
+                                                    src={`${BASE_URL}${blog.blog_image}`}
                                                 />
                                                 <div
                                                     className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0"
@@ -108,7 +110,7 @@ const Featured = ({ blogs }) => {
                                                     <img
                                                         alt={`content-${index}`}
                                                         className="object-cover object-center h-full w-full"
-                                                        src={`${ENDPOINT}${blog.blog_image}`}
+                                                        src={`${BASE_URL}${blog.blog_image}`}
                                                     />
                                                     <div className="absolute inset-0 bg-gray-900 opacity-30 rounded-md"></div>
                                                     <div className="absolute inset-0 flex items-center z-10 p-6  justify-center">
@@ -166,7 +168,7 @@ const TrendingBlog = ({ blogs }) => {
                                         <img
                                             alt={`content-${index}`}
                                             className="object-cover object-center h-full w-full"
-                                            src={`${ENDPOINT}${blog.blog_image}`}
+                                            src={`${BASE_URL}${blog.blog_image}`}
                                         />
                                     </div>
                                     <Link passHref={true} href={`/blogpost/${blog._id}`}>
@@ -219,7 +221,7 @@ const LatestBlog = ({ blogs }) => {
                                             <img
                                                 alt={`content-${index}`}
                                                 className="object-cover object-center h-full w-full"
-                                                src={`${ENDPOINT}${blog.blog_image}`}
+                                                src={`${BASE_URL}${blog.blog_image}`}
                                             />
                                         </div>
                                         <h2 className="text-xl font-medium title-font mt-5">
@@ -250,7 +252,7 @@ const LatestBlog = ({ blogs }) => {
                                         : blog.blog_content;
                                     return (
                                         <div key={blog._id} className="flex sm:flex-row mb-6">
-                                            <img alt={`content-${index}`} className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={`${ENDPOINT}${blog.blog_image}`} />
+                                            <img alt={`content-${index}`} className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={`${BASE_URL}${blog.blog_image}`} />
                                             <div className="flex-grow pl-4 sm:pl-8">
                                                 <h4 className="font-medium text-xl mb-4">
                                                     <Link passHref={true} href={`/blogpost/${blog._id}`}>
@@ -338,7 +340,7 @@ export default Blogs;
 
 export async function getServerSideProps() {
     try {
-        const res = await fetch('http://localhost:5000/blogs');
+        const res = await fetch(`${BASE_URL}/blogs`);
 
         if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);
