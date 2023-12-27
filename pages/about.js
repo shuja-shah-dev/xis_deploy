@@ -116,9 +116,9 @@ const about = () => {
           </div>
         </section>
 
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -mx-4 -mb-10 text-center">
-      <div class="w-1/2 mb-10 px-4">
+  <div className="container px-5 py-24 mx-auto">
+    <div className="flex flex-col md:flex-row justify-center items-center -mx-4 -mb-10 text-center">
+      <div className="w-full md:w-1/2 mb-10 px-4">
       <div className="relative h-full  rounded-xl container mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
           <iframe
             className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
@@ -131,9 +131,8 @@ const about = () => {
             tabIndex="0"
           ></iframe>
         </div>
-      
       </div>
-      <div class="w-1/2 mb-10 px-4">
+      <div className="w-full md:w-1/2 mb-10 px-4">
       <div className="relative h-full container  rounded-xl mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
           <iframe
             className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"

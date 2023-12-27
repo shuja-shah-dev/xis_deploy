@@ -663,33 +663,7 @@ const BenefitSection = () => {
     },
   ];
 
-  const vision = [
-    {
-      heading: "1 Quality inspection",
-      para: "Combined with ML-powered anomaly detection, computer vision enables automated visual inspection to identify defective products with any type of anomaly (e.g. scratches or dents).",
-    },
-    {
-      heading: "2 Assembly process automation",
-      para: "Computer vision technology can automate the entire assembly process. It can detect parts, orient them correctly to the assembly line, and then track their progress as they move through the various stages of the production process.",
-    },
-    {
-      heading: "3 Packaging inspection",
-      para: "Manufacturing companies rely on computer vision solutions to ensure products are correctly packaged, palleted, and labeled with appropriate barcodes.",
-    },
-    {
-      heading: "4 Object detection and recognition",
-      para: "CV can identify and track objects within manufacturing operations, such as parts on a conveyor belt or products on an assembly line, allowing for real-time supervision.",
-    },
-    {
-      heading: "5 Compliance monitoring",
-      para: "Computer vision systems can continuously monitor adherence to relevant manufacturing compliance rules, safety regulations, or environmental standards.",
-    },
-    {
-      heading: "6 Sorting and counting",
-      para: "Manufacturers use computer vision to sort and count items, such as parts or components. Automatic sorting helps to improve accuracy, particularly in high-volume production environments.",
-    },
-  ];
-
+  
   const [screen, setScreen] = useState("defect-detection");
 
   const handleButtonClick = (clickedScreen) => {
@@ -735,18 +709,21 @@ const BenefitSection = () => {
         <div
           className="relative mb-20"
         >
-          <div class="flex  relative mt-0 lg:-mt-[90px]  z-10  rounded">
-            <div class="w-full flex flex-col justify-center items-center p-8 mb-10 text-center transition-all bg-[#111] shadow lg:mb-0">
-              <div className="w-full sm:w-1/2 font-bold text-xl md:w-1/4 lg:w-1/4 xl:w-1/4 px-2">
+          <div className="flex relative mt-0 lg:-mt-[90px] z-10 rounded">
+            <div className="w-full h-1/2 flex justify-center items-center text-center p-2 mb-10 bg-[#111] shadow lg:mb-0">
+              <div className="w-full items-center justify-center text-center font-medium sm:font-bold text-xs sm:text-base px-2">
                 TRUSTED BY:
               </div>
-              <Image src={"/IMAGE.png"} className=" object-cover object-center  h-full" alt="nvidia" width={200} height={200} />
+              <div className="w-full h-full px-2">
+              <Image src={"/IMAGE.png"} className="object-contain object-center w-full h-full" alt="Xray-lab" width={600} height={300} /></div>
 
-              <Image src={"/ipai.png"} alt="ipai" className=" object-cover object-center h-full" width={200} height={200} />
-
-              <Image src={"/bosch-logo 1.png"} alt="ipai" className=" object-cover object-center  h-full" width={200} height={200} />
-
-              <Image src={"/nvidia.png"} alt="ipai" className="items-center object-cover w-1/4 object-center h-full" width={200} height={200} />
+              <div className="w-full h-full px-2">
+                <Image src={"/ipai.png"} alt="Ipai" className="w-full h-full object-contain object-center" width={600} height={300} />
+              </div>
+              <div className="w-full h-full px-2">
+              <Image src={"/bosch-logo 1.png"} alt="Bosch" className="object-contain object-center w-full h-full" width={600} height={300} /></div>
+              <div className="w-full h-full  px-2">
+              <Image src={"/nvidia.png"} alt="Nvidia" className="object-contain object-center w-full h-full" width={600} height={300} /></div>
 
             </div>
           </div>
@@ -797,25 +774,26 @@ const BenefitSection = () => {
         </div>
       ) : (
         <>
-          <div class="flex relative mt-0 lg:-mt-[80px] z-10 rounded">
-            <div class="w-full flex items-center px-6 mb-10 text-center justify-center transition-all bg-[#111] shadow lg:mb-0">
-              <div className="w-full font-bold text-xl sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4">
+          <div className="flex relative mt-0 lg:-mt-[80px] z-10 rounded">
+            <div className="w-full flex items-center px-6 mb-10 text-center justify-center transition-all bg-[#111] shadow lg:mb-0">
+              <div className="font-bold text-xl justify-center items-center w-1/3">
                 TRUSTED BY :
               </div>
-              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
-                <Image src={"/IMAGE.png"} alt="nvidia" width={200} height={200} />
+              
+              <div className="w-1/3 h-full px-2">
+                <Image src={"/IMAGE.png"} alt="Xray-lab" className="w-3/4 h-full object-center object-contain" width={600} height={300} />
               </div>
 
-              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
-                <Image src={"/ipai.png"} alt="ipai" width={200} height={200} />
+              <div className="w-1/3 h-full px-2">
+                <Image src={"/ipai.png"} alt="Ipai" className="w-3/4 h-full object-center object-contain"  width={600} height={300} />
               </div>
 
-              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
-                <Image src={"/bosch-logo 1.png"} alt="ipai" width={200} height={200} />
+              <div className="w-1/3 h-full px-2">
+                <Image src={"/bosch-logo 1.png"} alt="Bosch" className="w-3/4 h-full object-center object-contain"  width={600} height={300} />
               </div>
 
-              <div className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 mb-4 px-2">
-                <Image src={"/nvidia.png"} alt="ipai" width={200} height={200} />
+              <div className="w-1/3 h-full px-2">
+                <Image src={"/nvidia.png"} alt="Nvidia" className="w-3/4 h-full object-center object-contain"  width={600} height={300} />
               </div>
             </div>
           </div>
@@ -986,7 +964,7 @@ const CaseStudies = () => {
       }}
       className="text-white block relative -my-1 "
     >
-      <div className="container px-5 py-24 mx-auto  ">
+      <div className="container px-5 py-24 mx-auto">
         <h4
           className={`${roboto.className} justify-center items-center text-center mb-16 text-5xl font-bold`}
         >
@@ -1217,7 +1195,7 @@ export default function Home() {
         <title>Xis.ai - Simplified Edge AI for Industrial Inspection</title>
         <meta
           name="description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+          content="XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />

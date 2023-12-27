@@ -1,8 +1,56 @@
+import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 
 
 const Agb = () => {
+
   return (
+    <>
+     <Head>
+        <title>Terms & Conditions / AGB - xis.ai</title>
+        <meta
+          name="description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}agb`} />
+
+        <meta property="og:title"
+          content="Terms & Conditions / AGB - Simplified Edge AI for Industrial Inspection"
+        />
+        <meta property="og:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}agb`} />
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />  
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+
+      </Head>
     <section className="terms-and-conditions">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20">
@@ -16,10 +64,12 @@ const Agb = () => {
         <div className="flex flex-wrap -m-4">
           <div className="w-full p-4">
             <div className=" p-6 w-full sm:w-1/2 rounded-lg mb-10">
-              <img
+              <Image
                 className="h-40 rounded  object-center mb-6"
                 src="/Asset.png"
                 alt="XisAi"
+                width={600}
+                height={300}
                 style={{
                   width: "auto",
                 }}
@@ -35,7 +85,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §1 Scope
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 XRAY-LAB Industrial Services GmbH Co. KG, abbreviated as
                 XIS, carries out the work assigned to it as a contractor
                 within the meaning of § 631 BGB exclusively on the basis of
@@ -56,7 +106,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §2 Conclusion of the contract, remuneration
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 Offers from XRAY-LAB are subject to change and non-binding.
                 After the order has been placed, the contract for work is only
                 concluded through express confirmation from XRAY-LAB or through
@@ -65,7 +115,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §3 Payment conditions
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 XRAY-LAB charges the customer the remuneration in accordance
                 with the contractual agreement. Waiting times for material to be
                 made available or other delays that are not caused by us must be
@@ -86,7 +136,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §4 Interim invoices
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 XRAY-LAB is entitled to create interim invoices for completed
                 parts and agreed services. XRAY-LAB is also entitled to create
                 interim invoices for fixed periods, approximately one week each.
@@ -94,7 +144,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §5 Delay in delivery, liability, warranty
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 XRAY-LAB undertakes to carry out the work assigned to it on time
                 in accordance with the contractual agreement. Delays in delivery
                 or service due to force majeure and events that make delivery
@@ -124,7 +174,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §6 Occupational safety, occupational safety
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 The work of the XRAY-LAB employee at the client is subject to
                 the public law regulations of occupational safety law applicable
                 to the client's business; The resulting obligations for the
@@ -147,7 +197,7 @@ const Agb = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §7 German law; Place of jurisdiction
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 The law of the Federal Republic of Germany applies to these
                 terms and conditions and the entire legal relationship between
                 XRAY-LAB and the customer. If the customer is a full merchant
@@ -172,6 +222,7 @@ const Agb = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

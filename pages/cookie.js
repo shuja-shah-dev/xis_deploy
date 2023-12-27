@@ -1,7 +1,56 @@
+import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 
+
 const Cookie = () => {
+
   return (
+    <>
+     <Head>
+        <title>Cookies Directive (EU) - xis.ai</title>
+        <meta
+          name="description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}cookie`} />
+
+        <meta property="og:title"
+          content="Cookies Directive (EU) - Simplified Edge AI for Industrial Inspection"
+        />
+        <meta property="og:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}cookie`} />
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />  
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+
+      </Head>
     <section className="terms-and-conditions">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20">
@@ -20,10 +69,12 @@ const Cookie = () => {
         <div className="flex flex-wrap -m-4">
           <div className="w-full p-4">
             <div className=" p-6 w-full sm:w-1/2 rounded-lg mb-10">
-              <img
-                className="h-40 rounded object-center mb-6"
+            <Image
+                className="h-40 rounded  object-center mb-6"
                 src="/Asset.png"
                 alt="XisAi"
+                width={600}
+                height={300}
                 style={{
                   width: "auto",
                 }}
@@ -33,7 +84,7 @@ const Cookie = () => {
               <p className="font-medium mb-4 text-xl sm:text-2xl">
                 1. Introduction
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 Our website, https://xis.ai.com (hereinafter: "The Website")
                 uses cookies and similar technologies (for convenience, all of
                 these are referred to as "cookies"). Cookies are also placed by
@@ -43,7 +94,7 @@ const Cookie = () => {
               <p className="font-medium mb-4  text-xl sm:text-2xl">
                 2. What are cookies?
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 A cookie is a simple small file that can be sent together with
                 the pages of an Internet address and stored by the web browser
                 on the PC or other device. The information stored therein may be
@@ -53,7 +104,7 @@ const Cookie = () => {
               <p className="font-medium mb-4 text-xl sm:text-2xl">
                 3. What are scripts?
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 A script is a piece of program code used to enable our website
                 functionality and interactivity. This code runs on our servers
                 or on your device.
@@ -61,7 +112,7 @@ const Cookie = () => {
               <p className="font-medium mb-4 text-xl sm:text-2xl">
                 4. What is a web beacon?
               </p>
-              <p class="leading-relaxe mb-4">
+              <p className="leading-relaxe mb-4">
                 A web beacon (also called a pixel tag) is a small, invisible
                 fragment of text or image on a website that is used to monitor
                 traffic on the website. To make this possible, various data
@@ -71,7 +122,7 @@ const Cookie = () => {
               <p className="leading-relaxed text-lg mb-4">
                 5.1 Technical or functional cookies
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 Some cookies ensure that parts of our website function properly
                 and your user preferences are remembered. By placing functional
                 cookies we make it easier for you to visit our website. This
@@ -83,13 +134,13 @@ const Cookie = () => {
               <p className="leading-relaxed text-lg mb-4">
                 5.2 Analytical cookies
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 We use analytical cookies to optimize the website experience for
                 our users. These analytical cookies provide us with insights
                 into the use of our website. We ask for your permission to set
                 analytical cookies.
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 Some cookies ensure that parts of our website function properly
                 and your user preferences are remembered. By placing functional
                 cookies we make it easier for you to visit our website. This
@@ -101,7 +152,7 @@ const Cookie = () => {
               <p className="leading-relaxed text-lg mb-4">
                 5.3 Advertising cookies
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 We use advertising cookies on this website to gain insight into
                 campaign results. This happens based on a profile we create
                 based on your behavior in https://xis.ai.com . With these
@@ -112,7 +163,7 @@ const Cookie = () => {
               <p className="leading-relaxed text-lg mb-4">
                 5.4 Marketing/Tracking Cookies
               </p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 Marketing/tracking cookies are cookies or other form of local
                 storage used to create user profiles, display advertising or
                 track the user within this website or across websites for
@@ -120,7 +171,7 @@ const Cookie = () => {
                 tracking cookies, we need your consent to place them.
               </p>
               <p className="leading-relaxed text-lg mb-4">5.5 Social media</p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">
                 On our website we have integrated content from Facebook,
                 Twitter, LinkedIn, Instagram and Pinterest to promote websites
                 (e.g. "Like", "Pin") or share (e.g. "Tweet") in social Networks
@@ -139,76 +190,76 @@ const Cookie = () => {
               <p className="font-medium mb-4 text-xl sm:text-2xl">
                 6. Cookies placed
               </p>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white">
                     {" "}
                     Google Analytics
                   </span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> Google Maps</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> Google Maps</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> Google Fonts</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> Google Fonts</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> YouTube</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> YouTube</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> Facebook</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> Facebook</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> Instagram</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> Instagram</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> LinkedIn</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> LinkedIn</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
                 </div>
               </div>
-              <div class="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
-                <div class="flex items-center justify-between ">
-                  <span class="font-bold dark:text-white"> Medium</span>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
+              <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="flex items-center justify-between ">
+                  <span className="font-bold dark:text-white"> Medium</span>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="text-blue-600 rotate-180 dark:text-gray-100" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
                                         </path>
                                     </svg> */}
@@ -217,7 +268,7 @@ const Cookie = () => {
               <p className="font-medium mb-4  text-xl sm:text-2xl">
                 7. Consent
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 When you visit our website for the first time, we will show you
                 a pop-up with an explanation about cookies. Once you click on
                 “Save settings Save properties”, you give us your consent to use
@@ -229,16 +280,16 @@ const Cookie = () => {
               <p className="leading-relaxed text-lg mb-4">
                 7.1 Manage your consent settings
               </p>
-              <p class="leading-relaxed mb-4">Functional Functional</p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">Functional Functional</p>
+              <p className="leading-relaxed mb-4">
                 The technical storage or access is strictly necessary for the
                 legitimate purpose of enabling the use of a specific service
                 explicitly requested by the subscriber or user, or for the sole
                 purpose of carrying out the transmission of a communication over
                 an electronic communications network.
               </p>
-              <p class="leading-relaxed mb-4">Statistics Statistics</p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">Statistics Statistics</p>
+              <p className="leading-relaxed mb-4">
                 The technical storage or access that is used exclusively for
                 anonymous statistical purposes. Without a subpoena, voluntary
                 compliance on the part of your Internet Service Provider, or
@@ -246,8 +297,8 @@ const Cookie = () => {
                 retrieved for this purpose alone cannot usually be used to
                 identify you.
               </p>
-              <p class="leading-relaxed mb-4">marketing</p>
-              <p class="leading-relaxed mb-4">
+              <p className="leading-relaxed mb-4">marketing</p>
+              <p className="leading-relaxed mb-4">
                 The technical storage or access is required to create user
                 profiles to send advertising, or to track the user on a website
                 or across several websites for similar marketing purposes.
@@ -255,7 +306,7 @@ const Cookie = () => {
               <p className="font-medium mb-4  text-xl sm:text-2xl">
                 8. Activation/deactivation and deletion of cookies
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 You can use your internet browser to delete cookies
                 automatically or manually. You can also specify whether special
                 cookies should not be placed. Another option is to set your
@@ -269,7 +320,7 @@ const Cookie = () => {
               <p className="font-medium mb-4  text-xl sm:text-2xl">
                 9. Your rights regarding personal data
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 You have the following rights in relation to your personal data
               </p>
               <nav className="mb-10">
@@ -302,7 +353,7 @@ const Cookie = () => {
                   the processing.
                 </li>
               </nav>
-              <p class="leading-relaxed  mb-4">
+              <p className="leading-relaxed  mb-4">
                 To exercise these rights please contact us. Please refer to the
                 contact details at the end of this cookie statement. If you have
                 a complaint about how we handle your data, we would like to hear
@@ -312,12 +363,12 @@ const Cookie = () => {
               <p className="font-medium mb-4 text-xl sm:text-2xl">
                 10. Contact details
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 If you have any questions and/or comments about our Cookie
                 Policy and this statement, please contact us using the following
                 contact details:
               </p>
-              <p class="leading-relaxed text-lg w-1/2 mb-4">
+              <p className="leading-relaxed text-lg w-1/2 mb-4">
                 XRAY LAB Industrial Services GmbH & Co. KG
                 Theodor-Schweitzer-Str. 1+3 75447 Sternenfels Germany Germany
                 Website: https://xis.ai.com Email: moc.bal-yarx@ztuhcsnetad
@@ -329,6 +380,7 @@ const Cookie = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

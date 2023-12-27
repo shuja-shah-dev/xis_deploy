@@ -1,7 +1,55 @@
+import Head from "next/head";
+import Image from "next/image";
 import React from "react";
+
 
 const Impressum = () => {
   return (
+    <>
+    <Head>
+        <title>Impressum - xis.ai</title>
+        <meta
+          name="description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}impressum`} />
+
+        <meta property="og:title"
+          content="Impressum - Simplified Edge AI for Industrial Inspection"
+        />
+        <meta property="og:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}impressum`} />
+        {/* Twitter meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />  
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+
+      </Head>
     <section className="terms-and-conditions">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20">
@@ -15,26 +63,28 @@ const Impressum = () => {
         <div className="flex flex-wrap -m-4">
           <div className="w-full p-4">
             <div className="p-6 w-full sm:w-1/2 rounded-lg mb-10">
-              <img
+            <Image
                 className="h-40 rounded  object-center mb-6"
                 src="/Asset.png"
                 alt="XisAi"
+                width={600}
+                height={300}
                 style={{
-                    width:'auto'
+                  width: "auto",
                 }}
               />
             </div>
-            <div class="flex flex-wrap w-full mb-20">
-              <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                <h1 class="sm:text-lg text-base font-medium title-font mb-2 ">
+            <div className="flex flex-wrap w-full mb-20">
+              <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+                <h1 className="sm:text-lg text-base font-medium title-font mb-2 ">
                   XRAY LAB Industrial Services GmbH & Co. KG
                   Theodor-Schweitzer-Str 1+3. 75447 Sternenfels{" "}
                   <strong className="text-[#57C8E7]">Contact</strong> :
                   Telephone: +49 (0) 7045 20 44 5-0 Email: contact@xray-lab.com
                 </h1>
-                <div class="h-1 w-20 bg-[#57C8E7] rounded"></div>
+                <div className="h-1 w-20 bg-[#57C8E7] rounded"></div>
               </div>
-              <p class="lg:w-1/2 w-full leading-relaxed">
+              <p className="lg:w-1/2 w-full leading-relaxed">
                 <strong className="text-[#57C8E7]">Represented by</strong> Mr.
                 Uwe Hartnagel (managing director authorized to represent) Mr.
                 Hartmut Schneider (managing director authorized to represent){" "}
@@ -78,7 +128,7 @@ const Impressum = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 Liability for content
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 As a service provider, we are responsible for our own content on
                 these pages in accordance with general laws in accordance with
                 Section 7 Paragraph 1 TMG. However, according to Sections 8 to
@@ -94,7 +144,7 @@ const Impressum = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 Liability for links
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 Our offer contains links to external third-party websites over
                 whose content we have no influence. We therefore cannot assume
                 any liability for this external content. The respective provider
@@ -109,7 +159,7 @@ const Impressum = () => {
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 copyright
               </p>
-              <p class="leading-relaxed text-lg mb-4">
+              <p className="leading-relaxed text-lg mb-4">
                 The content and works on these pages created by the site
                 operators are subject to German copyright law. Reproduction,
                 processing, distribution and any kind of exploitation outside
@@ -128,6 +178,7 @@ const Impressum = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
