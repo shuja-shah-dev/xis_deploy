@@ -712,7 +712,7 @@ const BenefitSection = () => {
           <div className="flex relative mt-0 lg:-mt-[90px] z-10 rounded">
             <div className="w-full h-1/2 flex justify-center items-center text-center p-2 mb-10 bg-[#111] shadow lg:mb-0">
               <div className="w-full items-center justify-center text-center font-medium sm:font-bold text-xs sm:text-base px-2">
-                TRUSTED BY:
+                TRUSTED BY
               </div>
               <div className="w-full h-full px-2">
               <Image src={"/IMAGE.png"} className="object-contain object-center w-full h-full" alt="Xray-lab" width={600} height={300} /></div>
@@ -774,27 +774,23 @@ const BenefitSection = () => {
         </div>
       ) : (
         <>
-          <div className="flex relative mt-0 lg:-mt-[80px] z-10 rounded">
-            <div className="w-full flex items-center px-6 mb-10 text-center justify-center transition-all bg-[#111] shadow lg:mb-0">
-              <div className="font-bold text-xl justify-center items-center w-1/3">
-                TRUSTED BY :
+          <div className="flex relative mt-0 lg:-mt-[70px] z-10 rounded">
+            <div className="w-full flex items-center px-6 mb-10  transition-all bg-[#111] shadow lg:mb-0">
+            <div className=" flex h-full w-full justify-center font-bold text-lg items-center">
+            TRUSTED BY
+            </div>
+              <div className="w-full h-full">
+                <Image width={600} height={300} alt="Xray-Lab" className="object-contain object-center h-full w-1/2" src={"/IMAGE.png"} />
               </div>
-              
-              <div className="w-1/3 h-full px-2">
-                <Image src={"/IMAGE.png"} alt="Xray-lab" className="w-3/4 h-full object-center object-contain" width={600} height={300} />
+              <div className="w-full h-full">
+                <Image width={600} height={300} alt="Ipai" className="object-contain object-center h-full w-1/2" src={"/ipai.png"} />
               </div>
-
-              <div className="w-1/3 h-full px-2">
-                <Image src={"/ipai.png"} alt="Ipai" className="w-3/4 h-full object-center object-contain"  width={600} height={300} />
-              </div>
-
-              <div className="w-1/3 h-full px-2">
-                <Image src={"/bosch-logo 1.png"} alt="Bosch" className="w-3/4 h-full object-center object-contain"  width={600} height={300} />
-              </div>
-
-              <div className="w-1/3 h-full px-2">
-                <Image src={"/nvidia.png"} alt="Nvidia" className="w-3/4 h-full object-center object-contain"  width={600} height={300} />
-              </div>
+              <div className="w-full h-full">
+                <Image width={600} height={300} alt="Bosch" className="object-contain object-center h-full w-1/2" src={"/bosch-logo 1.png"} />
+              </div>     
+              <div className="w-full h-full">
+                <Image width={600} height={300} alt="Nvidia" className="object-contain object-center h-full w-1/2" src={"/nvidia.png"} />
+              </div>                
             </div>
           </div>
         <div className="px-4 mx-auto container">

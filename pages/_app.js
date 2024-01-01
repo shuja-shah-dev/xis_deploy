@@ -10,6 +10,8 @@ import { Roboto, Lato } from 'next/font/google'
 import CrispChat from "@/components/Crisp";
 import Script from "next/script";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+import 'react-quill/dist/quill.snow.css'; 
+
 
 
 

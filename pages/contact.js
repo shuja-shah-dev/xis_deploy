@@ -176,7 +176,6 @@ const contact = () => {
                 <h1 className={` ${roboto.className} text-5xl w-full md:text-[5rem] text-center mx-auto`}>
                     Contact Us
                 </h1>
-                <div className="w-60 md:w-96 mx-auto  border-b border-red-700 dark:border-gray-300"></div>
             </div>
             <section className="flex items-center ">
                 <div className="justify-center flex-1 max-w-6xl px-4 py-24 mx-auto md:px-6">

@@ -54,7 +54,7 @@ const Navbar = () => {
         className="text-white z-20 top-0 sticky p-2 bg-black"
       >
         <nav className="px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap justify-between items-center mx-auto">
+          <div className="flex flex-nowrap justify-between items-center mx-auto">
             <Link
               href="/"
               aria-label="Home"
@@ -66,7 +66,14 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 aria-label="Contact"
-                className="text-white border hover:text-blue-500 hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-5 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
+                className="text-white border hover:text-blue-500 hidden lg:flex hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-3 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
+              >
+                Request Partner
+              </Link>
+              <Link
+                href="/contact"
+                aria-label="Contact"
+                className="text-white flex border hover:text-blue-500 hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-3 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
               >
                 Contact
               </Link>
@@ -104,10 +111,10 @@ const Navbar = () => {
               </button>
             </div>
             <div
-              className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+              className="hidden justify-between items-center w-full lg:flex lg:w-[59%] lg:order-1"
               id="mobile-menu-2"
             >
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-0 lg:mt-0">
                 <li className="relative group focus:outline-none text-xl">
                   <Link href="/" aria-label="Home" className="focus:outline-none">
                     Home
@@ -119,7 +126,7 @@ const Navbar = () => {
                     About Us
                   </Link>
                 </li>
-{/* 
+                {/* 
                 <li className="relative group focus:outline-none text-xl">
                   <Link href="/career" aria-label="Career" className="focus:outline-none">
                     Careers
@@ -194,8 +201,18 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="relative items-start justify-start">
+                <Link href="/blogs" aria-label="Blogs">
+                  News & Blogs
+                </Link>
+              </li>
+              {/* <li className="relative items-start justify-start">
                 <Link href="/career" aria-label="Career">
                   Career
+                </Link>
+              </li> */}
+              <li className="relative items-start justify-start">
+                <Link href="/contact" aria-label="Contact">
+                  Request Partner
                 </Link>
               </li>
               <li className="relative items-start justify-start">
@@ -203,11 +220,7 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
-              <li className="relative items-start justify-start">
-              <Link href="/blogs" aria-label="Blogs">
-                    News & Blogs
-                  </Link>
-              </li>
+              
             </ul>
 
           </Box>
