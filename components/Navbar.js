@@ -7,9 +7,7 @@ import { Box } from "@mui/material";
 import { CloseOutlined } from "@mui/icons-material";
 import { useRouter } from "next/router";
 
-
 const Navbar = () => {
-
   const [scrolled, setScrolled] = useState(false);
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,9 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header
-        className="text-white z-20 top-0 sticky p-2 bg-black"
-      >
+      <header className="text-white z-20 top-0 sticky p-2 bg-black">
         <nav className="px-6 lg:px-8 py-4">
           <div className="flex flex-nowrap justify-between items-center mx-auto">
             <Link
@@ -66,9 +62,9 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 aria-label="Contact"
-                className="text-white border hover:text-blue-500 hidden lg:flex hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-3 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
+                className="text-white  hover:text-blue-500 hidden lg:flex hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-3 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
               >
-                Request Partner
+                Request Partnership
               </Link>
               <Link
                 href="/contact"
@@ -116,13 +112,21 @@ const Navbar = () => {
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-0 lg:mt-0">
                 <li className="relative group focus:outline-none text-xl">
-                  <Link href="/" aria-label="Home" className="focus:outline-none">
+                  <Link
+                    href="/"
+                    aria-label="Home"
+                    className="focus:outline-none"
+                  >
                     Home
                   </Link>
                 </li>
 
                 <li className="relative group focus:outline-none text-xl">
-                  <Link href="/about" aria-label="About" className="focus:outline-none">
+                  <Link
+                    href="/about"
+                    aria-label="About"
+                    className="focus:outline-none"
+                  >
                     About Us
                   </Link>
                 </li>
@@ -133,12 +137,15 @@ const Navbar = () => {
                   </Link>
                 </li> */}
                 <li className="relative group focus:outline-none text-xl">
-                  <Link href="/blogs" aria-label="Blogs" className="focus:outline-none">
+                  <Link
+                    href="/blogs"
+                    aria-label="Blogs"
+                    className="focus:outline-none"
+                  >
                     News & Blogs
                   </Link>
                 </li>
               </ul>
-
             </div>
           </div>
         </nav>
@@ -210,19 +217,17 @@ const Navbar = () => {
                   Career
                 </Link>
               </li> */}
-              <li className="relative items-start justify-start">
-                <Link href="/contact" aria-label="Contact">
-                  Request Partner
-                </Link>
-              </li>
+              {/* <li className="relative items-start justify-start"> */}
+              {/* <Link href="/contact" aria-label="Contact">
+                Request Partnership
+              </Link> */}
+              {/* </li> */}
               <li className="relative items-start justify-start">
                 <Link href="/contact" aria-label="Contact">
                   Contact
                 </Link>
               </li>
-              
             </ul>
-
           </Box>
         </Box>
       )}

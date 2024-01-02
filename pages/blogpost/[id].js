@@ -150,7 +150,7 @@ const Slug = ({ blog }) => {
           </div>
         </div>
       </section>
-      <section className="">
+      {/* <section className="">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             {submitBlog && submitBlog.length > 0 ? (
@@ -186,7 +186,7 @@ const Slug = ({ blog }) => {
           </div>
 
         </div>
-      </section>
+      </section> */}
       {/* <div className="container px-5 py-12 mx-auto">
       <div className="p-4 flex flex-col w-full pt-20 lg:pt-4">
             {submitBlog && submitBlog.length > 0 ? (
