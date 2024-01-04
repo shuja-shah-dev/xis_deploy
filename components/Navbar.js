@@ -46,6 +46,17 @@ const Navbar = () => {
     setMobileMenuOpen(false);
   }, [router.pathname]);
 
+  const email = "muti.rehman@xray-lab.com";
+  const subject = "Request Partnership";
+  const body = "";
+
+  const handleClick = () => {
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <>
       <header className="text-white z-20 top-0 sticky p-2 bg-black">
@@ -59,13 +70,13 @@ const Navbar = () => {
               <Image src="/Asset.png" width={100} height={100} alt="Logo" />
             </Link>
             <div className="flex items-center lg:order-2">
-              <Link
-                href="/contact"
+              <div
+                onClick={handleClick}
                 aria-label="Contact"
                 className="text-white  hover:text-blue-500 hidden lg:flex hover:scale-95 transition transform duration-500 font-medium rounded-lg text-sm lg:text-xl px-3 lg:px-3 py-1 lg:py-2.5 mr-2 dark:bg-primary-600 hover:border-blue-500 focus:outline-none "
               >
                 Request Partnership
-              </Link>
+              </div>
               <Link
                 href="/contact"
                 aria-label="Contact"
