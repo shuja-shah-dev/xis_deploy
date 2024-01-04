@@ -372,7 +372,7 @@ const Cookie = () => {
                 XRAY LAB Industrial Services GmbH & Co. KG
                 Theodor-Schweitzer-Str. 1+3 75447 Sternenfels Germany Germany
                 Website: https://xis.ai.com Email: moc.bal-yarx@ztuhcsnetad
-                Telephone number: 00497045204450 This Cookie Policy was
+                Telephone number: +49 7045 2044 560 This Cookie Policy was
                 synchronized with cookiedatabase.org on November 11, 2021.
               </p>
             </div>

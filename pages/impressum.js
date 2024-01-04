@@ -95,7 +95,7 @@ const Impressum = () => {
                     XRAY LAB Industrial Services GmbH & Co. KG
                     Theodor-Schweitzer-Str 1+3. 75447 Sternenfels{" "}
                     <strong className="text-[#57C8E7]">Contact</strong> :
-                    Telephone: +49 (0) 7045 20 44 5-0 Email:
+                    Telephone: +49 7045 2044 560 Email:
                     contact@xray-lab.com
                   </h1>
                   <div className="h-1 w-20 bg-[#57C8E7] rounded"></div>
