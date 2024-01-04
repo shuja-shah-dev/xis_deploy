@@ -35,6 +35,7 @@ import CenterFocusStrongIcon from "@mui/icons-material/CenterFocusStrong";
 import { Roboto, Lato } from "next/font/google";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import nvidia from "../assets/nvidia.png";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -93,7 +94,9 @@ const IntroSection = () => {
             href="/contact"
             aria-label="GetaDemo"
             className="focus:outline-none"
-          >Get a Demo </Link>
+          >
+            Get a Demo{" "}
+          </Link>
         </button>
 
         <button
@@ -106,7 +109,9 @@ const IntroSection = () => {
             target="_blank"
             aria-label="ViewInAR"
             className="focus:outline-none"
-          ><CenterFocusStrongIcon /> View in AR</Link>
+          >
+            <CenterFocusStrongIcon /> View in AR
+          </Link>
         </button>
       </div>
     </Box>
@@ -179,8 +184,9 @@ const DefectDetection = () => {
                     <Image
                       decoding="async"
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before w-full object-center h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/xraycrack1.png"
@@ -410,8 +416,9 @@ const PerformanceAnalytics = () => {
                   >
                     <Image
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before object-center w-full h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/motorxray2.png"
@@ -531,8 +538,9 @@ const TextDetection = () => {
                   >
                     <Image
                       style={{
-                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                          }% 100%, 0 100%)`,
+                        clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                          imageReveal * 100
+                        }% 100%, 0 100%)`,
                       }}
                       className="twentytwenty-before w-full h-full object-center pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                       src="/textdetect.png"
@@ -618,16 +626,20 @@ const BenefitSection = () => {
     {
       svg: <LocalShippingIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Recall",
-      desc: "Our product ensures early detection of defects, Minimizing the risk of recalls.",
-      para: "The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.",
+      desc:
+        "Our product ensures early detection of defects, Minimizing the risk of recalls.",
+      para:
+        "The precision of image recognition reduces false positives & negatives, Mitigating potential recalls incidents.",
       third: "",
     },
 
     {
       svg: <ReportProblemIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reduce Human Error",
-      desc: "Significantly reduce human errors in the inspection process, Improving product quality & consistency.",
-      para: "Our product can detect defects that are not visible to the human eye, Ensuring a more thorough inspection process.",
+      desc:
+        "Significantly reduce human errors in the inspection process, Improving product quality & consistency.",
+      para:
+        "Our product can detect defects that are not visible to the human eye, Ensuring a more thorough inspection process.",
       third: "",
     },
     {
@@ -635,35 +647,41 @@ const BenefitSection = () => {
         <AttachMoneyIcon fontSize="large" sx={{ fill: "#fff", fontSize: 45 }} />
       ),
       title: "Reduce Costs",
-      desc: "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
-      para: "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
+      desc:
+        "Our product reduces costs by automating labor-intensive visual inspection, speeding up production process & minimizing manual errors.",
+      para:
+        "Its ability to detect defects early prevents costly rework & material wastage, Optimizing resource utilization.",
     },
   ];
-
 
   const benefit = [
     ...data,
     {
       svg: <SpeedIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Efficiency in Industrial Pipeline",
-      desc: "The seamless integration of collaborative robotic systems and advanced computer vision technologies within industrial pipelines, substantially enhance operational efficiency and productivity.",
-      para: "This not only augments the overall efficacy of industrial processes but also ushers in a paradigm shift towards heightened precision and streamlined workflow dynamics.",
+      desc:
+        "The seamless integration of collaborative robotic systems and advanced computer vision technologies within industrial pipelines, substantially enhance operational efficiency and productivity.",
+      para:
+        "This not only augments the overall efficacy of industrial processes but also ushers in a paradigm shift towards heightened precision and streamlined workflow dynamics.",
     },
     {
       svg: <EqualizerIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Reporting and Analytics",
-      desc: "Real-time reporting and analytics empower manufacturing stakeholders with instant visibility into defect rates, production trends, and sorting outcomes, facilitating data-driven decision-making for continuous process optimization",
-      para: "This dynamic insight enables proactive responses to emerging challenges, fostering a responsive and agile manufacturing environment.",
+      desc:
+        "Real-time reporting and analytics empower manufacturing stakeholders with instant visibility into defect rates, production trends, and sorting outcomes, facilitating data-driven decision-making for continuous process optimization",
+      para:
+        "This dynamic insight enables proactive responses to emerging challenges, fostering a responsive and agile manufacturing environment.",
     },
     {
       svg: <ElectricBoltIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Quick Adaptation to Variability",
-      desc: "The adaptability of the system allows for quick reconfiguration to handle different product types or variations, providing flexibility in the manufacturing process without compromising efficiency.",
-      para: "This inherent flexibility positions the manufacturing process to efficiently accommodate diverse product portfolios, promoting agility and competitiveness in a rapidly evolving market.",
+      desc:
+        "The adaptability of the system allows for quick reconfiguration to handle different product types or variations, providing flexibility in the manufacturing process without compromising efficiency.",
+      para:
+        "This inherent flexibility positions the manufacturing process to efficiently accommodate diverse product portfolios, promoting agility and competitiveness in a rapidly evolving market.",
     },
   ];
 
-  
   const [screen, setScreen] = useState("defect-detection");
 
   const handleButtonClick = (clickedScreen) => {
@@ -706,25 +724,49 @@ const BenefitSection = () => {
       }}
     >
       {screenSize < 768 ? (
-        <div
-          className="relative mb-20"
-        >
+        <div className="relative mb-20">
           <div className="flex relative mt-0 lg:-mt-[90px] z-10 rounded">
             <div className="w-full h-1/2 flex justify-center items-center text-center p-2 mb-10 bg-[#111] shadow lg:mb-0">
               <div className="w-full items-center justify-center text-center font-medium sm:font-bold text-xs sm:text-base px-2">
                 TRUSTED BY
               </div>
               <div className="w-full h-full px-2">
-              <Image src={"/IMAGE.png"} className="object-contain object-center w-full h-full" alt="Xray-lab" width={600} height={300} /></div>
+                <Image
+                  src={"/IMAGE.png"}
+                  className="object-contain object-center w-full h-full"
+                  alt="Xray-lab"
+                  width={600}
+                  height={300}
+                />
+              </div>
 
               <div className="w-full h-full px-2">
-                <Image src={"/ipai.png"} alt="Ipai" className="w-full h-full object-contain object-center" width={600} height={300} />
+                <Image
+                  src={"/ipai.png"}
+                  alt="Ipai"
+                  className="w-full h-full object-contain object-center"
+                  width={600}
+                  height={300}
+                />
               </div>
               <div className="w-full h-full px-2">
-              <Image src={"/bosch-logo 1.png"} alt="Bosch" className="object-contain object-center w-full h-full" width={600} height={300} /></div>
+                <Image
+                  src={"/bosch-logo 1.png"}
+                  alt="Bosch"
+                  className="object-contain object-center w-full h-full"
+                  width={600}
+                  height={300}
+                />
+              </div>
               <div className="w-full h-full  px-2">
-              <Image src={"/nvidia.png"} alt="Nvidia" className="object-contain object-center w-full h-full" width={600} height={300} /></div>
-
+                <Image
+                  src={nvidia}
+                  alt="Nvidia"
+                  className="object-contain object-center w-full h-full"
+                  width={600}
+                  height={300}
+                />
+              </div>
             </div>
           </div>
           {mobile === "defect-detection" && <DefectDetection />}
@@ -750,8 +792,9 @@ const BenefitSection = () => {
               <button
                 key={index}
                 type="button"
-                className={`w-3 h-3  rounded-full ${currentSlide === index ? "bg-[#182A2F]" : "bg-white"
-                  }`}
+                className={`w-3 h-3  rounded-full ${
+                  currentSlide === index ? "bg-[#182A2F]" : "bg-white"
+                }`}
                 aria-current={currentSlide === index}
                 aria-label={`Slide ${index + 1}`}
                 onClick={() => handleSlideChange(index)}
@@ -776,89 +819,118 @@ const BenefitSection = () => {
         <>
           <div className="flex relative mt-0 lg:-mt-[70px] z-10 rounded">
             <div className="w-full flex items-center px-6 mb-10  transition-all bg-[#111] shadow lg:mb-0">
-            <div className=" flex h-full w-full justify-center font-bold text-lg items-center">
-            TRUSTED BY
-            </div>
-              <div className="w-full h-full">
-                <Image width={600} height={300} alt="Xray-Lab" className="object-contain object-center h-full w-1/2" src={"/IMAGE.png"} />
+              <div className=" flex h-full w-full justify-center font-bold text-lg items-center">
+                TRUSTED BY
               </div>
               <div className="w-full h-full">
-                <Image width={600} height={300} alt="Ipai" className="object-contain object-center h-full w-1/2" src={"/ipai.png"} />
+                <Image
+                  width={600}
+                  height={300}
+                  alt="Xray-Lab"
+                  className="object-contain object-center h-full w-1/2"
+                  src={"/IMAGE.png"}
+                />
               </div>
               <div className="w-full h-full">
-                <Image width={600} height={300} alt="Bosch" className="object-contain object-center h-full w-1/2" src={"/bosch-logo 1.png"} />
-              </div>     
+                <Image
+                  width={600}
+                  height={300}
+                  alt="Ipai"
+                  className="object-contain object-center h-full w-1/2"
+                  src={"/ipai.png"}
+                />
+              </div>
               <div className="w-full h-full">
-                <Image width={600} height={300} alt="Nvidia" className="object-contain object-center h-full w-1/2" src={"/nvidia.png"} />
-              </div>                
+                <Image
+                  width={600}
+                  height={300}
+                  alt="Bosch"
+                  className="object-contain object-center h-full w-1/2"
+                  src={"/bosch-logo 1.png"}
+                />
+              </div>
+              <div className="w-full h-full">
+                <Image
+                  width={600}
+                  height={300}
+                  alt="Nvidia"
+                  className="object-contain object-center h-full w-1/2"
+                  src={nvidia}
+                />
+              </div>
             </div>
           </div>
-        <div className="px-4 mx-auto container">
-          <div className=" py-12">
-            <div className="my-4 flex w-full flex-col justify-center items-center pt-8 md:flex-row lg:pt-0">
-              <div className="mb-2 w-full rounded-lg lg:mb-0 ">
-                <div className="flex flex-col md:flex-row justify-center text-center gap-2 lg:gap-2 shadow-sm h-[100%] md:h-14 items-center rounded-md w-full list-none relative">
-                  <li
-                    id="defect-detection"
-                    aria-label="defect-detection"
-                    className={`lg:text-lg text-sm text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${screen === "defect-detection" &&
-                      "  border-4 border-sky-500 text-white duration-[.15s] transition-all font-medium "
+          <div className="px-4 mx-auto container">
+            <div className=" py-12">
+              <div className="my-4 flex w-full flex-col justify-center items-center pt-8 md:flex-row lg:pt-0">
+                <div className="mb-2 w-full rounded-lg lg:mb-0 ">
+                  <div className="flex flex-col md:flex-row justify-center text-center gap-2 lg:gap-2 shadow-sm h-[100%] md:h-14 items-center rounded-md w-full list-none relative">
+                    <li
+                      id="defect-detection"
+                      aria-label="defect-detection"
+                      className={`lg:text-lg text-sm text-white w-[60%] bg-gray-800 border-gray-600 border items-center  md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed  relative focus:outline-none text-center duration-[.15s] transition-all  ${
+                        screen === "defect-detection" &&
+                        "  border-4 border-sky-500 text-white duration-[.15s] transition-all font-medium "
                       } `}
-                    onClick={() => handleButtonClick("defect-detection")}
-                  >
-                    Defect Detection
-                  </li>
-                  <li
-                    id="object-defect"
-                    aria-label="object-defect"
-                    className={`lg:text-lg w-[90%] text-white bg-gray-800 border-gray-600 border focus:outline-none items-center px-1 md:text-sm rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all  ${screen === "object-defect" &&
-                      " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
+                      onClick={() => handleButtonClick("defect-detection")}
+                    >
+                      Defect Detection
+                    </li>
+                    <li
+                      id="object-defect"
+                      aria-label="object-defect"
+                      className={`lg:text-lg w-[90%] text-white bg-gray-800 border-gray-600 border focus:outline-none items-center px-1 md:text-sm rounded-lg py-3  cursor-pointer leading-relaxed relative text-center duration-[.15s] transition-all  ${
+                        screen === "object-defect" &&
+                        " border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
                       }`}
-                    onClick={() => handleButtonClick("object-defect")}
-                  >
-                    Object & Defect Counting
-                  </li>
-                  <li
-                    id="text-detection"
-                    aria-label="text-detection"
-                    className={`lg:text-lg text-sm w-[60%] text-white  bg-gray-800 border-gray-600 border   items-center md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "text-detection" &&
-                      "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
+                      onClick={() => handleButtonClick("object-defect")}
+                    >
+                      Object & Defect Counting
+                    </li>
+                    <li
+                      id="text-detection"
+                      aria-label="text-detection"
+                      className={`lg:text-lg text-sm w-[60%] text-white  bg-gray-800 border-gray-600 border   items-center md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${
+                        screen === "text-detection" &&
+                        "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
                       }`}
-                    onClick={() => handleButtonClick("text-detection")}
-                  >
-                    Text Recognition
-                  </li>
-                  <li
-                    id="performance"
-                    aria-label="performance"
-                    className={`lg:text-lg text-sm w-[90%]  text-white  bg-gray-800 border-gray-600 border items-center md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${screen === "performance" &&
-                      "border-4 border-sky-500 text-white duration-[.15s] transition-all font-medium"
+                      onClick={() => handleButtonClick("text-detection")}
+                    >
+                      Text Recognition
+                    </li>
+                    <li
+                      id="performance"
+                      aria-label="performance"
+                      className={`lg:text-lg text-sm w-[90%]  text-white  bg-gray-800 border-gray-600 border items-center md:text-sm rounded-lg py-3 px-1 cursor-pointer leading-relaxed focus:outline-none relative text-center duration-[.15s] transition-all ${
+                        screen === "performance" &&
+                        "border-4 border-sky-500 text-white duration-[.15s] transition-all font-medium"
                       }`}
-                    onClick={() => handleButtonClick("performance")}
-                  >
-                    Assembly Completeness
-                  </li>
+                      onClick={() => handleButtonClick("performance")}
+                    >
+                      Assembly Completeness
+                    </li>
 
-                  <li
-                    aria-label="product-sorting"
-                    id="product-sorting"
-                    className={`lg:text-lg text-sm w-[60%] text-white bg-gray-800 border-gray-600 border  items-center md:text-sm rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${screen === "product-sorting" &&
-                      "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
+                    <li
+                      aria-label="product-sorting"
+                      id="product-sorting"
+                      className={`lg:text-lg text-sm w-[60%] text-white bg-gray-800 border-gray-600 border  items-center md:text-sm rounded-lg py-3 px-1  cursor-pointer leading-relaxed focus:outline-none  relative text-center duration-[.15s] transition-all ${
+                        screen === "product-sorting" &&
+                        "border-4 border-sky-500 text-white duration-[.15s] transition-all  font-medium"
                       }`}
-                    onClick={() => handleButtonClick("product-sorting")}
-                  >
-                    Product Sorting
-                  </li>
+                      onClick={() => handleButtonClick("product-sorting")}
+                    >
+                      Product Sorting
+                    </li>
+                  </div>
                 </div>
               </div>
+              {screen === "defect-detection" && <DefectDetection />}
+              {screen === "object-defect" && <CountingDefects />}
+              {screen === "text-detection" && <TextDetection />}
+              {screen === "performance" && <PerformanceAnalytics />}
+              {screen === "product-sorting" && <ProductSorting />}
             </div>
-            {screen === "defect-detection" && <DefectDetection />}
-            {screen === "object-defect" && <CountingDefects />}
-            {screen === "text-detection" && <TextDetection />}
-            {screen === "performance" && <PerformanceAnalytics />}
-            {screen === "product-sorting" && <ProductSorting />}
           </div>
-        </div>
         </>
       )}
       <section className="text-white hiddenFit block -my-1">
@@ -867,10 +939,7 @@ const BenefitSection = () => {
             {benefit.map((item, index) => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
-                  <div
-                    className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem]  items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
-
-                  >
+                  <div className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem]  items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
                     {item.svg ? item.svg : <SpeedIcon />}
                   </div>
                   <div className="flex-grow pl-6">
@@ -886,8 +955,8 @@ const BenefitSection = () => {
                         height={10}
                         className="mr-4"
                         alt="circle1"
-
-                      /> {item.desc}
+                      />{" "}
+                      {item.desc}
                     </span>
                     <span className="leading-relaxed text-sm md:text-base flex mb-6 justify-start items-baseline">
                       <Image
@@ -896,8 +965,8 @@ const BenefitSection = () => {
                         height={10}
                         className="mr-4"
                         alt="circle2"
-
-                      /> {item.para}
+                      />{" "}
+                      {item.para}
                     </span>
                   </div>
                 </div>
@@ -997,8 +1066,9 @@ const CaseStudies = () => {
                       <Image
                         decoding="async"
                         style={{
-                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${imageReveal * 100
-                            }% 100%, 0 100%)`,
+                          clipPath: `polygon(0 0, ${imageReveal * 100}% 0, ${
+                            imageReveal * 100
+                          }% 100%, 0 100%)`,
                         }}
                         className="twentytwenty-before h-full pafe-before-after-image-comparison-slider__item pafe-before-after-image-comparison-slider__item--before"
                         src="/xrayimg.webp"
@@ -1056,18 +1126,21 @@ const FeatureSection = () => {
     {
       svg: <SpeedIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "AI-Assisted Labeling",
-      desc: "Fast AI-assisted labeling streamlines the annotation process, harnessing the power of artificial intelligence to swiftly and accurately label images.",
+      desc:
+        "Fast AI-assisted labeling streamlines the annotation process, harnessing the power of artificial intelligence to swiftly and accurately label images.",
     },
     {
       title: "Plug & Play",
-      desc: 'Enables easy "Plug n Play" integration for a hassle-free setup. Effortless deployment with a user-friendly interface.',
+      desc:
+        'Enables easy "Plug n Play" integration for a hassle-free setup. Effortless deployment with a user-friendly interface.',
       svg: <ElectricalServicesIcon fontSize="large" sx={{ fill: "#fff" }} />,
     },
 
     {
       title: "No Expertise Required",
       svg: <SettingsIcon fontSize="large" sx={{ fill: "#fff" }} />,
-      desc: "User-friendly design, no technical expertise needed. Intuitive interface for easy deployment of tailored solutions.",
+      desc:
+        "User-friendly design, no technical expertise needed. Intuitive interface for easy deployment of tailored solutions.",
     },
   ];
 
@@ -1075,17 +1148,20 @@ const FeatureSection = () => {
     {
       svg: <ShieldIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Edge Device Compatible",
-      desc: "Utilizing edge computing, data is processed locally near its generation point, reducing latency, improving efficiency, and enhancing overall system performance.",
+      desc:
+        "Utilizing edge computing, data is processed locally near its generation point, reducing latency, improving efficiency, and enhancing overall system performance.",
     },
     {
       svg: <GroupsIcon fontSize="large" sx={{ fill: "#fff" }} />,
       title: "Collaborative Platform",
-      desc: "A centralized hub that facilitates seamless interaction and information sharing among individuals or teams, fostering synergies in various domains.",
+      desc:
+        "A centralized hub that facilitates seamless interaction and information sharing among individuals or teams, fostering synergies in various domains.",
     },
 
     {
       title: "Fully Customizable",
-      desc: "We offer a fully customizable solution that can be tailored to meet your specific needs.",
+      desc:
+        "We offer a fully customizable solution that can be tailored to meet your specific needs.",
       svg: <DashboardCustomizeIcon fontSize="large" sx={{ fill: "#fff" }} />,
     },
   ];
@@ -1116,10 +1192,7 @@ const FeatureSection = () => {
             {data.map((item, index) => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
-                  <div
-                    className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0"
-
-                  >
+                  <div className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
@@ -1128,7 +1201,9 @@ const FeatureSection = () => {
                     >
                       {item.title}
                     </p>
-                    <span className="leading-relaxed text-sm md:text-base">{item.desc}</span>
+                    <span className="leading-relaxed text-sm md:text-base">
+                      {item.desc}
+                    </span>
                   </div>
                 </div>
               );
@@ -1138,8 +1213,7 @@ const FeatureSection = () => {
             {data2.map((item, index) => {
               return (
                 <div className="p-4 lg:w-1/3 flex" key={index}>
-                  <div
-                    className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
+                  <div className="inline-flex h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] items-center justify-center rounded-lg bg-gray-800  text-white mb-4 flex-shrink-0">
                     {item.svg}
                   </div>
                   <div className="flex-grow pl-6">
@@ -1148,7 +1222,9 @@ const FeatureSection = () => {
                     >
                       {item.title}
                     </p>
-                    <span className="leading-relaxed text-sm md:text-base">{item.desc}</span>
+                    <span className="leading-relaxed text-sm md:text-base">
+                      {item.desc}
+                    </span>
                   </div>
                 </div>
               );
@@ -1161,7 +1237,6 @@ const FeatureSection = () => {
 };
 
 export default function Home() {
-
   const controller = useRouter();
 
   const { accessToken } = useAuth();
@@ -1179,7 +1254,9 @@ export default function Home() {
       });
     });
 
-    const hiddenElements = document.querySelectorAll(".hiddenn, .hiddenCase, .hiddenFit");
+    const hiddenElements = document.querySelectorAll(
+      ".hiddenn, .hiddenCase, .hiddenFit"
+    );
     hiddenElements.forEach((element) => {
       observer.observe(element);
     });
@@ -1193,14 +1270,21 @@ export default function Home() {
           name="description"
           content="XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+          name="keywords"
+          content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection"
+        />
         <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta
           property="og:title"
           content="Simplified Edge AI for Industrial Inspection"
         />
-        <meta property="og:description"
+        <meta
+          property="og:description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta
@@ -1211,13 +1295,13 @@ export default function Home() {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta
-          property="og:url"
-          content={process.env.NEXT_PUBLIC_BASE_URL}
-        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@XisAI" />
-        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta
+          name="twitter:title"
+          content="Simplified Edge AI for Industrial Inspection"
+        />
         <meta
           name="twitter:description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
@@ -1252,5 +1336,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  )
-};
+  );
+}
