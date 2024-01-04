@@ -106,7 +106,7 @@ const Impressum = () => {
                   Muti Rehman (managing director authorized to represent){" "}
                   <strong className="text-[#57C8E7]">VAT ID</strong> : VAT
                   identification number in accordance with Section 27 a of the
-                  Sales Tax Act: DE32604920{" "}
+                  Sales Tax Act: : DE326042920{" "}
                   <strong className="text-[#57C8E7]">District Court </strong>
                   Register court: Mannheim District Court Registration number:
                   HRA 708898{" "}
@@ -129,7 +129,7 @@ const Impressum = () => {
                   address in our legal notice. We are neither obliged nor
                   willing to take part in the dispute resolution process. The
                   images used on this website come from, among others ,
-                  XRAY-LAB, Deutsche Messe AG, from Fotolia.com: MH,
+                 XIS, Deutsche Messe AG, from Fotolia.com: MH,
                   kimtaro2008, Gesina Ottner from iStockphoto.com: M_a_y_a,
                   querbeet, wahahaz, turbohampster, Stefan Weichelt, Volodymyr
                   Krasyuk, kyoshino, Harald Richter, Givaga, Wavebreakmedia,
