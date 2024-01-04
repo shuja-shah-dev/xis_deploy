@@ -833,10 +833,10 @@ const BenefitSection = () => {
               </div>
               <div className="w-full h-full">
                 <Image
-                  width={600}
-                  height={300}
+                  width={300}
+                  height={200}
                   alt="Ipai"
-                  className="object-contain object-center h-full w-1/2"
+                  className="object-contain object-center h-full w-[151px]"
                   src={"/ipai.png"}
                 />
               </div>

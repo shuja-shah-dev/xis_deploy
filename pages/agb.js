@@ -11,7 +11,7 @@ const Agb = () => {
         <title>Terms & Conditions / AGB - xis.ai</title>
         <meta
           name="description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+          content="AI startup of Xray-Lab Industrial Services that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
@@ -21,7 +21,7 @@ const Agb = () => {
           content="Terms & Conditions / AGB - Simplified Edge AI for Industrial Inspection"
         />
         <meta property="og:description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+          content="AI startup of Xray-Lab Industrial Services that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta
           property="og:image"
@@ -38,7 +38,7 @@ const Agb = () => {
         <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
         <meta
           name="twitter:description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+          content="AI startup of Xray-Lab Industrial Services that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta
           name="twitter:image"
@@ -86,11 +86,11 @@ const Agb = () => {
                 §1 Scope
               </p>
               <p className="leading-relaxed text-lg mb-4">
-                XRAY-LAB Industrial Services GmbH Co. KG, abbreviated as
+                Xray-Lab Industrial Services Industrial Services GmbH Co. KG, abbreviated as
                 XIS, carries out the work assigned to it as a contractor
                 within the meaning of § 631 BGB exclusively on the basis of
                 these general terms and conditions of business and payment. By
-                placing the order with XRAY-LAB, the customer expressly accepts
+                placing the order with Xray-Lab Industrial Services, the customer expressly accepts
                 these terms and conditions. The terms and conditions apply for
                 the duration of the entire business relationship, even if they
                 are not expressly agreed again. Differing conditions must be
@@ -107,75 +107,75 @@ const Agb = () => {
                 §2 Conclusion of the contract, remuneration
               </p>
               <p className="leading-relaxed text-lg mb-4">
-                Offers from XRAY-LAB are subject to change and non-binding.
+                Offers from Xray-Lab Industrial Services are subject to change and non-binding.
                 After the order has been placed, the contract for work is only
-                concluded through express confirmation from XRAY-LAB or through
+                concluded through express confirmation from Xray-Lab Industrial Services or through
                 execution of the assigned work.
               </p>
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §3 Payment conditions
               </p>
               <p className="leading-relaxed text-lg mb-4">
-                XRAY-LAB charges the customer the remuneration in accordance
+                Xray-Lab Industrial Services charges the customer the remuneration in accordance
                 with the contractual agreement. Waiting times for material to be
                 made available or other delays that are not caused by us must be
                 taken into account. Payments are due within 2 weeks of the
                 invoice being issued without deductions. After this period,
-                XRAY-LAB reserves the right to charge default interest. If
-                XRAY-LAB is forced to hire a lawyer after the third reminder,
-                the entire legal fees will be charged. XRAY-LAB is entitled,
+                Xray-Lab Industrial Services reserves the right to charge default interest. If
+                Xray-Lab Industrial Services is forced to hire a lawyer after the third reminder,
+                the entire legal fees will be charged. Xray-Lab Industrial Services is entitled,
                 despite the customer's provisions to the contrary, to initially
                 offset payments against the customer's older debts and will
                 inform the customer about the type of offsetting that has taken
                 place. If costs and interest have already been incurred,
-                XRAY-LAB is entitled to offset the payment first against the
+                Xray-Lab Industrial Services is entitled to offset the payment first against the
                 costs, then against the interest and finally against the main
                 service. A payment is only considered to have been made when
-                XRAY-LAB can dispose of the amount.
+                Xray-Lab Industrial Services can dispose of the amount.
               </p>
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §4 Interim invoices
               </p>
               <p className="leading-relaxed text-lg mb-4">
-                XRAY-LAB is entitled to create interim invoices for completed
-                parts and agreed services. XRAY-LAB is also entitled to create
+                Xray-Lab Industrial Services is entitled to create interim invoices for completed
+                parts and agreed services. Xray-Lab Industrial Services is also entitled to create
                 interim invoices for fixed periods, approximately one week each.
               </p>
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §5 Delay in delivery, liability, warranty
               </p>
               <p className="leading-relaxed text-lg mb-4">
-                XRAY-LAB undertakes to carry out the work assigned to it on time
+                Xray-Lab Industrial Services undertakes to carry out the work assigned to it on time
                 in accordance with the contractual agreement. Delays in delivery
                 or service due to force majeure and events that make delivery
                 significantly more difficult or impossible for the seller, not
                 only temporarily - these include, in particular, strikes,
                 lockouts, official orders and so on, even if they occur at
-                suppliers of XRAY-LAB or whose sub-suppliers are involved -
-                XRAY-LAB is not responsible even if deadlines and dates have
+                suppliers of Xray-Lab Industrial Services or whose sub-suppliers are involved -
+                Xray-Lab Industrial Services is not responsible even if deadlines and dates have
                 been bindingly agreed. There is no obligation to pay
                 compensation. Any warranty claims of the purchaser must be
-                reported to XRAY-LAB immediately upon becoming aware of them.
+                reported to Xray-Lab Industrial Services immediately upon becoming aware of them.
                 You are initially limited to the right of repair or replacement
                 delivery. If the repair or replacement delivery fails after a
                 reasonable period of time, the purchaser can, at his discretion,
                 request a reduction in the remuneration (reduction) or reversal
-                of the contract (cancellation). Warranty claims against XRAY-LAB
+                of the contract (cancellation). Warranty claims against Xray-Lab Industrial Services
                 are only available to the purchaser directly and cannot be
-                assigned. XRAY-LAB's liability for damages arising from its
+                assigned. Xray-Lab Industrial Services's liability for damages arising from its
                 contractual work is excluded unless there is gross negligence or
                 even intentional breach of contract. In the event of any
                 liability claims, there is liability insurance in the amount of
                 €5 million per damaging event per year for personal injury
                 and/or property damage. There is insurance cover of €50,000 for
-                customer goods/equipment and machines located on XRAY-LAB's
+                customer goods/equipment and machines located on Xray-Lab Industrial Services's
                 premises in the event of fire/water and theft damage.
               </p>
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
                 §6 Occupational safety, occupational safety
               </p>
               <p className="leading-relaxed text-lg mb-4">
-                The work of the XRAY-LAB employee at the client is subject to
+                The work of the Xray-Lab Industrial Services employee at the client is subject to
                 the public law regulations of occupational safety law applicable
                 to the client's business; The resulting obligations for the
                 employer are the responsibility of the client, without prejudice
@@ -200,7 +200,7 @@ const Agb = () => {
               <p className="leading-relaxed text-lg mb-4">
                 The law of the Federal Republic of Germany applies to these
                 terms and conditions and the entire legal relationship between
-                XRAY-LAB and the customer. If the customer is a full merchant
+                Xray-Lab Industrial Services and the customer. If the customer is a full merchant
                 within the meaning of the Commercial Code, a legal entity under
                 public law or a special fund under public law, the Maulbronn
                 District Court or Karlsruhe Regional Court is the exclusive
@@ -213,7 +213,7 @@ const Agb = () => {
               </p>
               <p className="font-medium mb-4 text-center text-xl sm:text-2xl text-[#57C8E7]">
                 <a href="/AGB_en.pdf" download="AGB">
-                  Download General Terms and Conditions of XRAY-LAB Industrial
+                  Download General Terms and Conditions of Xray-Lab Industrial Services Industrial
                   Services GmbH & Co. KG as PDF
                 </a>
               </p>

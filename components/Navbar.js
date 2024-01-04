@@ -69,7 +69,43 @@ const Navbar = () => {
             >
               <Image src="/Asset.png" width={100} height={100} alt="Logo" />
             </Link>
-            <div className="flex items-center lg:order-2">
+            <div className="flex items-center ">
+              <div
+                className="hidden justify-between items-center  lg:flex"
+                id="mobile-menu-2"
+              >
+                <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-0 lg:mt-0">
+                  <li className="relative group focus:outline-none text-xl">
+                    <Link
+                      href="/"
+                      aria-label="Home"
+                      className="focus:outline-none"
+                    >
+                      Home
+                    </Link>
+                  </li>
+
+                  <li className="relative group focus:outline-none text-xl">
+                    <Link
+                      href="/about"
+                      aria-label="About"
+                      className="focus:outline-none"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+
+                  <li className="relative group focus:outline-none text-xl">
+                    <Link
+                      href="/blogs"
+                      aria-label="Blogs"
+                      className="focus:outline-none"
+                    >
+                      News & Blogs
+                    </Link>
+                  </li>
+                </ul>
+              </div>
               <div
                 onClick={handleClick}
                 aria-label="Contact"
@@ -116,47 +152,6 @@ const Navbar = () => {
                   ></path>
                 </svg>
               </button>
-            </div>
-            <div
-              className="hidden justify-between items-center w-full lg:flex lg:w-[59%] lg:order-1"
-              id="mobile-menu-2"
-            >
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-0 lg:mt-0">
-                <li className="relative group focus:outline-none text-xl">
-                  <Link
-                    href="/"
-                    aria-label="Home"
-                    className="focus:outline-none"
-                  >
-                    Home
-                  </Link>
-                </li>
-
-                <li className="relative group focus:outline-none text-xl">
-                  <Link
-                    href="/about"
-                    aria-label="About"
-                    className="focus:outline-none"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                {/* 
-                <li className="relative group focus:outline-none text-xl">
-                  <Link href="/career" aria-label="Career" className="focus:outline-none">
-                    Careers
-                  </Link>
-                </li> */}
-                <li className="relative group focus:outline-none text-xl">
-                  <Link
-                    href="/blogs"
-                    aria-label="Blogs"
-                    className="focus:outline-none"
-                  >
-                    News & Blogs
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </nav>

@@ -96,7 +96,7 @@ const Certificates = () => {
                   <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Quality management system according to ISO 9001; 2015 Location: Slovakia 490354 SQM 15</td>
                   <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">German / English</td>
                   <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg ">
-                  <Link href="/Certifikat-ISO-9001-ang.-XRAY-LAB-Slovensko-k.s_.pdf" download="SL/English" aria-label="SL/English">ISO 9001 EN Certificate Xray-Lab Slovensko</Link>
+                  {/* <Link href="/Certifikat-ISO-9001-ang.-XRAY-LAB-Slovensko-k.s_.pdf" download="SL/English" aria-label="SL/English">ISO 9001 EN Certificate Xray-Lab Slovensko</Link> */}
                   </td>
                   <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg">
                   <Link href="/EN-ISO-14001-2015_ANG.pdf" download="SL/German" aria-label="SL/German">ISO 14001 - 2016 Xray Lab Slovensko</Link>
