@@ -191,6 +191,14 @@ const Blogadmin = () => {
   };
 
   useEffect(() => {
+    if (editBlogId) {
+      const blog = submittedBlogs.find((blog) => blog._id === editBlogId);
+      setEditedTitle(blog.blog_title);
+      setEditedContent(blog.blog_content);
+    }
+  }, [editBlogId]);
+
+  useEffect(() => {
     if (!accessToken) {
       router.replace("/_");
     }
@@ -220,6 +228,10 @@ const Blogadmin = () => {
   function createMarkup(c) {
     return { __html: c };
   }
+
+  useEffect(() => {
+    console.log(formData, "as the form data");
+  });
 
   return accessToken ? (
     <>
@@ -458,7 +470,13 @@ const Blogadmin = () => {
                       required
                     />
                   </div>
-                  <div className="px-4 mb-6">
+                  <div
+                    className="px-4 mb-6"
+                    style={{
+                      height: "300px",
+                      overflow: "auto",
+                    }}
+                  >
                     <label className="block mb-2 text-sm font-medium dark:text-gray-400">
                       Content
                     </label>
