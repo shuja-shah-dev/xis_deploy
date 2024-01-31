@@ -74,7 +74,7 @@ const Featured = () => {
                       <h3
                         className={`${roboto.className} text-xl font-medium leading-9 text-white dark:text-white`}
                       >
-                        <Link passHref={true} href={`/blogpost/${item._id}`}>
+                        <Link passHref={true} href={`/blogpost/${item.blog_name}`}>
                           {item.blog_title}
                         </Link>
                       </h3>
@@ -111,7 +111,7 @@ const Featured = () => {
                           <p className="text-xl font-medium leading-9 text-white dark:text-white">
                             <Link
                               passHref={true}
-                              href={`/blogpost/${item._id}`}
+                              href={`/blogpost/${item.blog_name}`}
                             >
                               {item.blog_title}
                             </Link>
@@ -146,7 +146,7 @@ const Featured = () => {
                             >
                               <Link
                                 passHref={true}
-                                href={`/blogpost/${item._id}`}
+                                href={`/blogpost/${item.blog_name}`}
                               >
                                 {item.blog_title}
                               </Link>
@@ -225,7 +225,7 @@ const TrendingBlog = () => {
                       src={`${BASE_URL}${item.blog_image}`}
                     />
                   </div>
-                  <Link passHref={true} href={`/blogpost/${item._id}`}>
+                  <Link passHref={true} href={`/blogpost/${item.blog_name}`}>
                     <h2 className="text-xl font-medium title-font mt-5 mb-4">
                       {truncatedTitle}
                     </h2>
@@ -305,7 +305,10 @@ const LatestBlog = () => {
                       />
                     </div>
                     <h2 className="text-xl font-medium title-font mt-5 mb-4">
-                      <Link passHref={true} href={`/blogpost/${item._id}`}>
+                      <Link
+                        passHref={true}
+                        href={`/blogpost/${item.blog_name}`}
+                      >
                         {truncatedTitle}
                       </Link>
                     </h2>
@@ -348,7 +351,10 @@ const LatestBlog = () => {
                       />
                       <div className="flex-grow pl-4 sm:pl-8">
                         <h4 className="font-medium text-xl mb-4">
-                          <Link passHref={true} href={`/blogpost/${item._id}`}>
+                          <Link
+                            passHref={true}
+                            href={`/blogpost/${item.blog_name}`}
+                          >
                             {truncatedTitle}
                           </Link>
                         </h4>

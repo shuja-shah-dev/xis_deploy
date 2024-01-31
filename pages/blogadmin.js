@@ -24,6 +24,7 @@ const Blogadmin = () => {
     blog_title: "",
     blog_content: "",
     blog_image: null,
+    blog_name: "",
   });
   const [submittedBlogs, setSubmittedBlogs] = useState([]);
 
@@ -39,6 +40,7 @@ const Blogadmin = () => {
       formDataObj.append("blog_title", formData.blog_title);
       formDataObj.append("blog_content", formData.blog_content);
       formDataObj.append("blog_image", formData.blog_image);
+      formDataObj.append("blog_name", formData.blog_name);
 
       const response = await fetch(`${BASE_URL}/blogs`, {
         method: "POST",
@@ -61,6 +63,7 @@ const Blogadmin = () => {
           blog_title: "",
           blog_content: "",
           blog_image: null,
+          blog_name: "",
         });
 
         setShowAlert(true);
@@ -91,7 +94,7 @@ const Blogadmin = () => {
     };
 
     fetchData();
-  }, []);
+  }, [submittedBlogs]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -314,6 +317,29 @@ const Blogadmin = () => {
                       }}
                     />
                   </div>
+
+                  <div className="px-4 mb-6">
+                    <label className="block mb-2 text-sm font-medium dark:text-gray-400">
+                      {" "}
+                      Preffered Name
+                    </label>
+                    <input
+                      className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
+                      type="text"
+                      name="blog_name"
+                      placeholder="Enter Preffered Name"
+                      id="blog_name"
+                      value={formData.blog_name}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          blog_name: e.target.value,
+                        })
+                      }
+                      required
+                    />
+                  </div>
+
                   <div className="px-4">
                     <div className="flex">
                       <button
@@ -365,7 +391,7 @@ const Blogadmin = () => {
                             <div className="modal-container">
                               <Alert severity="error">
                                 Failed to post the blog check your image file.
-                                Please try again.
+                                Name should also be unique. Please try again.
                               </Alert>
                             </div>
                           </div>
@@ -378,6 +404,7 @@ const Blogadmin = () => {
             </div>
           </div>
         </div>
+
         <div className="container px-5 py-12 mx-auto">
           <div className="flex flex-col">
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
@@ -428,6 +455,7 @@ const Blogadmin = () => {
               : null}
           </div>
         </div>
+
         {editBlogId && (
           <Modal
             open={open}

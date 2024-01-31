@@ -565,18 +565,18 @@ const TextDetection = () => {
                         data-content="Xray"
                       ></div>
                     </div>
-                    <div
-                      onMouseDown={handleMouseDown}
-                      onTouchMove={handleTouchMove}
-                      ref={handleRef}
-                      style={{
-                        touchAction: "none",
-                        position: "absolute",
-                        left: `${imageReveal * 100}%`,
-                        cursor: "ew-resize",
-                      }}
-                      className="twentytwenty-handle h-[38px] w-[38px] absolute left-[50%] top-[50%] "
-                    >
+                      <div
+                        onMouseDown={handleMouseDown}
+                        onTouchMove={handleTouchMove}
+                        ref={handleRef}
+                        style={{
+                          touchAction: "none",
+                          position: "absolute",
+                          left: `${imageReveal * 100}%`,
+                          cursor: "ew-resize",
+                        }}
+                        className="twentytwenty-handle h-[38px] w-[38px] absolute left-[50%] top-[50%] "
+                      >
                       <span className="twentytwenty-left-arrow"></span>
                       <span className="twentytwenty-right-arrow"></span>
                     </div>
@@ -933,6 +933,8 @@ const BenefitSection = () => {
           </div>
         </>
       )}
+
+      
       <section className="text-white hiddenFit block -my-1">
         <div className="container px-5 pb-24 mx-auto  ">
           <div className="flex flex-wrap sm:-m-4 pb-28 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">

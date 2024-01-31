@@ -12,17 +12,17 @@ router.post("/register", async (req, res) => {
       await user.save();
       res.status(201).send({ message: "User created" });
     } else {
-      console.log(req.body,'as user<')
+      console.log(req.body, "as user<");
       res.status(400).send({ error: "Invalid email or password" });
     }
   } catch (error) {
     res.status(400).send({ error: error.message });
   }
 });
-
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
+
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(401).send({ error: "No account found" });
