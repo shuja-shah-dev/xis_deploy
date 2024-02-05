@@ -80,6 +80,7 @@ router.get("/blogs", async (req, res) => {
       ...blog._doc,
       blog_image: `/media/${blog.blog_image}`,
     }));
+    
 
     res.status(200).json(blogsWithMediaURLs);
   } catch (error) {
@@ -87,6 +88,8 @@ router.get("/blogs", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+
 
 router.get("/blogs/:name", async (req, res) => {
   try {
@@ -117,11 +120,12 @@ router.put("/blogs/:id", upload, async (req, res) => {
       return res.status(400).json({ error: "Invalid blog ID" });
     }
 
-    const { blog_title, blog_content } = req.body;
+    const { blog_title, blog_content , blog_name} = req.body;
 
     let updatedBlog = {
       blog_title,
       blog_content,
+      blog_name
     };
 
     if (req.file) {

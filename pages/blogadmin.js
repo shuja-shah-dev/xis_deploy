@@ -32,6 +32,16 @@ const Blogadmin = () => {
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [showError, setShowError] = useState(false);
+  const [editBlogId, setEditBlogId] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [alert, setAlert] = useState(false);
+  const [error, setError] = useState(false);
+  const [editedTitle, setEditedTitle] = useState("");
+  const [editedContent, setEditedContent] = useState("");
+  const [editedImage, setEditedImage] = useState(null);
+  const [editUrl, setEditUrl] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -103,14 +113,7 @@ const Blogadmin = () => {
       blog_image: file,
     }));
   };
-  const [showError, setShowError] = useState(false);
-  const [editBlogId, setEditBlogId] = useState(null);
-  const [open, setOpen] = useState(false);
-  const [alert, setAlert] = useState(false);
-  const [error, setError] = useState(false);
-  const [editedTitle, setEditedTitle] = useState("");
-  const [editedContent, setEditedContent] = useState("");
-  const [editedImage, setEditedImage] = useState(null);
+
 
   const handleEdit = (blogId) => {
     setEditBlogId(blogId);
@@ -133,6 +136,7 @@ const Blogadmin = () => {
 
       formDataObj.append("blog_title", editedTitle);
       formDataObj.append("blog_content", editedContent);
+      formDataObj.append("blog_name", editUrl);
 
       if (editedImage) {
         formDataObj.append("blog_image", editedImage);
@@ -157,6 +161,7 @@ const Blogadmin = () => {
       handleClose();
       setEditedTitle("");
       setEditedContent("");
+      setEditUrl("");
       setEditedImage(null);
 
       setAlert(true);
@@ -498,6 +503,24 @@ const Blogadmin = () => {
                       required
                     />
                   </div>
+
+                  <div className="px-4 mb-6">
+                    <label className="block mb-2 text-sm font-medium dark:text-gray-400">
+                      {" "}
+                      URL
+                    </label>
+                    <input
+                      className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
+                      type="text"
+                      name="blog_name"
+                      placeholder="Enter URL"
+                      id="url"
+                      value={editUrl}
+                      onChange={(e) => setEditUrl(e.target.value)}
+                      required
+                    />
+                  </div>
+
                   <div
                     className="px-4 mb-6"
                     style={{
