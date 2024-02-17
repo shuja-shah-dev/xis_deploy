@@ -27,6 +27,7 @@ const How = () => {
         <div className="container justify-center items-center text-center pb-10 mx-auto flex ">
           <div className="flex w-full justify-center text-center items-center">
             <div className="w-2/6 md:py-6">
+              
               <div className="flex relative md:pb-10 pb-20">
                 <div className="inline-block rounded  text-end justify-end items-center w-full py-20 mr-10">
                   <p className="leading-relaxed text-center text-xl md:text-3xl inline-block">

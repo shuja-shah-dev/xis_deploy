@@ -1,30 +1,27 @@
 import { AuthProvider } from "@/common/authProvider";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import "@/styles/globals.css";
 import Link from "next/link";
 import CookieConsent from "react-cookie-consent";
 import { useEffect, useState } from "react";
 import { Box, Switch } from "@mui/material";
-import { Roboto, Lato } from 'next/font/google'
+import { Roboto, Lato } from "next/font/google";
 import CrispChat from "@/components/Crisp";
 import Script from "next/script";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
-import 'react-quill/dist/quill.snow.css'; 
-
-
-
-
+import "react-quill/dist/quill.snow.css";
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const lato = Lato({
-  weight: ['100', '300', '400', '700'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "700"],
+  subsets: ["latin"],
+});
 
 const ArrowSlider = () => {
   const [showButton, setShowButton] = useState(false);
@@ -66,8 +63,8 @@ const ArrowSlider = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const EssentialCookies = () => {
   return (
@@ -220,8 +217,6 @@ const AnalyticsCookies = () => {
 };
 
 export default function App({ Component, pageProps }) {
-
-
   const [settings, setSettings] = useState(false);
 
   const dec = {
@@ -324,11 +319,11 @@ export default function App({ Component, pageProps }) {
             </Box>
           )}
         </CookieConsent>
-        <Navbar />
+        <Header />
         <main className={lato.className}>
           <Component {...pageProps} />
         </main>
-        <ArrowSlider/>
+        <ArrowSlider />
         <CrispChat />
         <Footer />
       </AuthProvider>
