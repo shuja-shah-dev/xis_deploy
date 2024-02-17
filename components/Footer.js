@@ -1,158 +1,139 @@
 import Image from "next/image";
-import React from "react";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import CallIcon from "@mui/icons-material/Call";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import Link from "next/link";
-
+import React from "react";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { MdOutlinePhoneIphone } from "react-icons/md";
+import { MdLocalPhone } from "react-icons/md";
+import { IoMail } from "react-icons/io5";
 const Footer = () => {
   return (
-    <div>
-      <footer className="text-gray-600 relative bg-black">
-        <div className="container px-5 py-14 mx-auto">
-          <div className="flex flex-wrap md:text-left text-center order-first">
-            <div className="lg:w-1/4 md:w-1/2 w-full  px-4">
-              <Link href="/" aria-label="Home">
-                <Image
-                  src="/Asset.png"
-                  alt="Logo"
-                  className="justify-center mx-auto items-center text-center mb-10"
-                  width={300}
-                  height={400}
-                />
+    <div className=" pb-6 pt-24 relative ">
+      <div className="absolute inset-0">
+        <Image
+          src="/Rectangle 75.png"
+          alt="footer rectangle"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+
+      <div className="flex flex-col lg:flex-row text-gray-300 gap-14 justify-around pb-24 relative z-10 ">
+        <div className="w-1/4 lg:w-auto m-auto lg:m-0 text-center lg:text-left">
+          <Link href="/">
+            <Image src="/Asset.png" width={150} height={100} alt="logo" />
+          </Link>
+
+          <p className="mt-4">Precision Beyond Perception</p>
+        </div>
+
+        <div className="text-base flex flex-col text-center md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
+          <div className="flex flex-col gap-5 ">
+            <div className="font-bold text-xl">
+              <Link href="/AboutUs" aria-label="About">
+                About Us
               </Link>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <p className="title-font font-medium text-gray-500 transition transform duration-500 hover:scale-95 tracking-widest text-xl mb-3">
-                <Link href="/about" aria-label="About">
-                  About Us
-                </Link>
-              </p>
-              <nav className="list-none mb-10">
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/impressum" aria-label="Impressum">
-                    Impressum
-                  </Link>
-                </li>
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/agb" aria-label="Terms and Conditions / AGB">
-                    Terms and Conditions / AGB
-                  </Link>
-                </li>
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/AGB_en.pdf" download="AGB" aria-label="About">
-                    General Terms and Conditions
-                  </Link>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <p className="title-font transition transform duration-500 hover:scale-95 font-medium text-gray-500 tracking-widest text-xl mb-3">
-                <Link href="/certificates" aria-label="Certificates">
-                  Certificates
-                </Link>
-              </p>
-              <nav className="list-none mb-10">
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/cookie" aria-label="Cookie Directive">
-                    Cookie Directive (EU)
-                  </Link>
-                </li>
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/privacy" aria-label="Privacy">
-                    Data Privacy Policy
-                  </Link>
-                </li>
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/dpd_customer_suppler_en.pdf" download="Data/Protection" aria-label="Data/Protection">
-                    Data Protection Declaration
-                  </Link>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <p className="title-font font-medium  transition transform duration-500 hover:scale-95 text-sky-400 tracking-widest text-xl mb-3 cursor-pointer">
-                <Link href="/contact" aria-label="Contact">
-                  Contact Us
-                </Link>
-              </p>
-              <nav className="list-none mb-10">
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/contact" aria-label="Contact">
-                    <PhoneIphoneIcon /> +49 7045 2044 560
-                  </Link>
-                </li>
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/contact" aria-label="Contact">
-                    <CallIcon /> +1 248-843-1760
-                  </Link>
-                </li>
-                <li className="pb-1 text-gray-600 text-lg hover:text-gray-700">
-                  <Link href="/contact" aria-label="Contact">
-                    <EmailIcon /> contact@xray-lab.com
-                  </Link>
-                </li>
-              </nav>
-              <div className="cursor-pointer w-full flex justify-center md:justify-start items-center">
-                <Link
-                  target="_blank"
-                  href="https://www.facebook.com/profile.php?id=61552506112246"
-                  aria-label="Facebook"
-                >
-                  <FacebookOutlinedIcon fontSize="large" />{" "}
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://www.instagram.com/xis.ai.official/"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon fontSize="large" />{" "}
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://www.linkedin.com/company/xis-ai/mycompany/"
-                  aria-label="Linkedin"
-                >
-                  <LinkedInIcon fontSize="large" />
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://medium.com/@xis.ai"
-                  aria-label="Medium"
-                >
-                  <svg  width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="7.5" cy="12.5" r="2.5" stroke="#4b5563" strokeWidth="1.5" />
-                    <ellipse cx="13.5" cy="12.5" rx="1.5" ry="2.5" stroke="#4b5563" strokeWidth="1.5" />
-                    <ellipse cx="18" cy="12.5" rx="1" ry="2.5" stroke="#4b5563" strokeWidth="1.5" />
-                    <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="#4b5563" strokeWidth="1.5" strokeLinejoin="round" />
-                  </svg>
+            <Link href="/impressum" aria-label="Impressum">
+              Impressum
+            </Link>
+            <Link href="/agb" aria-label="Terms and Conditions / AGB">
+              Terms and Conditions / AGB
+            </Link>
+            <Link href="/AGB_en.pdf" download="AGB" aria-label="About">
+              General Terms and Conditions
+            </Link>
+          </div>
 
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://www.youtube.com/@xisaiofficial"
-                  aria-label="Youtube"
-                >
-                  <YouTubeIcon fontSize="large" />
-                </Link>
-              </div>
+          <div className="flex flex-col gap-5">
+            <div className="font-bold text-xl">
+              <Link href="/certificates" aria-label="Certificates">
+                Certificates
+              </Link>
+            </div>
+            <Link href="/cookie" aria-label="Cookie Directive">
+              Cookie Directive (EU)
+            </Link>
+            <Link href="/privacy" aria-label="Privacy">
+              Data Privacy Policy
+            </Link>
+            <Link
+              href="/dpd_customer_suppler_en.pdf"
+              download="Data/Protection"
+              aria-label="Data/Protection"
+            >
+              Data Protection Declaration
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-5 ">
+            <div className="font-bold text-xl ">
+              <Link href="/Contact" aria-label="Contact">
+                Contact Us
+              </Link>
+            </div>
+            <div className="flex flex-col justify-center gap-5 items-center">
+              <Link href="/Contact" aria-label="Contact">
+                <div className="flex md:ml-[-20px]">
+                  <MdOutlinePhoneIphone size={24} color="white" /> +49 7045 2044
+                  560
+                </div>
+              </Link>
+              <Link href="/Contact" aria-label="Contact">
+                <div className="flex md:ml-[-34px]">
+                  <MdLocalPhone size={24} color="white" /> +1 248-843-1760
+                </div>
+              </Link>
+
+              <Link href="/Contact" aria-label="Contact">
+                <div className="flex">
+                  <IoMail size={24} color="white" />{" "}
+                  <div className="ml-1">contact@xray-lab.com</div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
-        <hr className="h-px bg-gray-500 border-0"></hr>
-        <div className="bg-black">
-          <div className="container px-5 py-8 mx-auto flex justify-center items-center sm:flex-row flex-col">
-            <p className="text-base md:text-xl text-gray-500 sm:ml-6 sm:mt-0">
-              © 2023 XRAY LAB Industrial Services GmbH | All Rights Reserved.
-            </p>
-          </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row items-center justify-between lg:justify-around text-white relative z-10">
+        <div>© 2024 Xis.ai | All Rights Reserved.</div>
+        <div className="flex gap-4 lg:ml-[550px] pt-6 lg:pt-0">
+          <Link
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=61552506112246"
+            aria-label="Facebook"
+          >
+            <FaFacebookF size={24} color="white" />
+          </Link>
+          <FaTwitter size={24} color="white" />
+          <Link
+            target="_blank"
+            href="https://www.instagram.com/xis.ai.official/"
+            aria-label="Instagram"
+          >
+            <FaInstagramSquare size={24} color="white" />
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/xis-ai/mycompany/"
+            aria-label="Linkedin"
+          >
+            <FaLinkedin size={24} color="white" />
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.youtube.com/@xisaiofficial"
+            aria-label="Youtube"
+          >
+            <FaYoutube size={24} color="white" />
+          </Link>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
