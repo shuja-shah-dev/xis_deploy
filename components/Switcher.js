@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { HeroBlob } from "./HeroSection";
 
 const Software = () => {
   return (
-    <div className=" px-16 pb-28 ">
+    <div className=" px-16 pb-28 " style={{ position: "relative" }}>
       <div className="flex lg:flex-row flex-col justify-around">
         <div>
           <Image src="/screen.png" width={760} height={500} alt="screen img" />
@@ -27,6 +28,16 @@ const Software = () => {
           </p>
         </div>
       </div>
+      <HeroBlob
+        sx={{
+          zIndex: 99,
+          bottom: "20px",
+          right: "500px",
+          width: "462px",
+          height: "462px",
+          borderRadius: "462px",
+        }}
+      />
     </div>
   );
 };

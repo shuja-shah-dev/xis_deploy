@@ -1,6 +1,7 @@
 import React from "react";
 import IndustryCard from "./IndustryCard";
 import Image from "next/image";
+import { HeroBlob } from "./HeroSection";
 
 const IndustrySolutions = () => {
   const IndustrySolutionsData = [
@@ -42,13 +43,31 @@ const IndustrySolutions = () => {
         </h3>
       </div>
 
-      <div className=" absolute right-[180px]  top-[-400px]">
+      {/* <div className=" absolute right-[180px]  top-[-400px]">
         <Image src="/Ellipse 171.png" alt="Ellipse " height={900} width={900} />
       </div>
 
       <div className=" absolute right-0 ">
         <Image src="/Ellipse 166.png" alt="Ellipse " height={800} width={400} />
-      </div>
+      </div> */}
+      <HeroBlob
+        sx={{
+          right: "-1px",
+          zIndex: "99",
+          height: "568px",
+          width: "568px",
+          borderRadius: "568px",
+        }}
+        key="SmallBlob"
+      />
+
+      <HeroBlob
+        sx={{
+          right: "20%",
+          zIndex: "99",
+        }}
+        key={"NormalSizedBlob"}
+      />
 
       <IndustryCard data={IndustrySolutionsData} />
     </div>

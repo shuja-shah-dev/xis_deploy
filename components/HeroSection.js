@@ -3,6 +3,22 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import LogoBar from "./LogoBar";
 
+const HeroBlob = ({ sx = {} }) => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        width: "710px",
+        height: "710px",
+        borderRadius: "710px",
+        background: "rgba(93, 56, 194, 0.25)",
+        filter: "blur(250px)",
+        ...sx,
+      }}
+    ></div>
+  );
+};
+
 const HeroSection = () => {
   const gradientStyle = {
     background: "rgba(255, 255, 255, 0.1)",
@@ -27,6 +43,22 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-full">
+      <HeroBlob
+        sx={{
+          top: "",
+          zIndex: "99",
+        }}
+        key={1}
+      />
+
+      <HeroBlob
+        sx={{
+          right: "-10px",
+          zIndex: "99",
+        }}
+        key={2}
+        id="blob2"
+      />
       <div className="absolute inset-0 overflow-hidden ">
         <video autoPlay muted loop className="w-full  h-full object-cover">
           <source src="/hero-video.mp4" type="video/mp4" />
@@ -50,10 +82,20 @@ const HeroSection = () => {
             </div>
 
             <div className="flex justify-between w-[350px] m-auto">
-              <button className="text-xl bg-violet-900 opacity-95 py-2 px-4 rounded-full border-2 border-purple-950">
+              <button
+                className="text-xl bg-violet-900 opacity-95 py-2 px-4 rounded-full border-2 border-purple-950"
+                onClick={(_) => {
+                  window.open("https://demo.xis.ai", "_blank");
+                }}
+              >
                 Get a Demo
               </button>
-              <div className="flex gap-1 items-center cursor-pointer">
+              <div
+                className="flex gap-1 items-center cursor-pointer"
+                onClick={(_) => {
+                  window.open("https://beltline.glitch.me", "_blank");
+                }}
+              >
                 <Image
                   src="/iconamoon_scanner.png"
                   width={30}
@@ -70,5 +112,6 @@ const HeroSection = () => {
     </div>
   );
 };
-
+export { HeroBlob };
 export default HeroSection;
+//If you want to use hero blob with custom sx prop.
