@@ -11,7 +11,7 @@ const HowItWorks = () => {
 
   return (
     //py-28
-    <div className="h-full border-2 border-slate-800 rounded-2xl relative">
+    <div className="h-full border-2 border-slate-800 rounded-2xl relative ">
       <div style={gradientStyle}>
         <div className="absolute  sm:top-[-180px]">
           <Image src="/left.png" width={500} height={100} alt="left img" />
@@ -32,7 +32,7 @@ const HowItWorks = () => {
           <Image src="/line.png" width={32} height={10} alt="dotted-line img" />
         </div>
 
-        <div className="container text-white justify-center items-center pb-10 mx-auto flex">
+        <div className="container text-white justify-center items-center pb-10 mx-auto flex ">
           <div className="flex overflow-hidden  justify-around text-center items-center ">
             <div className="w-2/6 md:py-6 mt-[-50px] ">
               <div className="flex relative md:pb-10 pb-20">
@@ -72,7 +72,7 @@ const HowItWorks = () => {
             </div>
 
             <div className="w-2/6 md:py-6 pl-8 md:pl-0">
-              <div className="flex relative pb-10 sm:pb-16 text-left w-[150px] md:w-[300px] mt-[20px]">
+              <div className="flex relative pb-10 sm:pb-16 text-left w-[100px] sm:w-[300px] mt-[20px]">
                 <div className="">
                   <h3 className="block mb-3 text-xl font-bold">
                     Capture & Label Images
@@ -112,8 +112,8 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="mt-28">
-          <h1 className=" text-xl sm:text-3xl font-semibold text-white text-center">
+        <div className="mt-28 relative">
+          <h1 className=" text-xl sm:text-3xl font-semibold text-white text-center ">
             Start Inspecting with 99% Accuracy
           </h1>
         </div>

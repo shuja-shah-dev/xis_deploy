@@ -29,7 +29,7 @@ const roboto = Roboto({
 });
 
 const Slug = ({ blog }) => {
-  console.log(blog);
+  console.log( );
   function createMarkup(c) {
     return { __html: c };
   }

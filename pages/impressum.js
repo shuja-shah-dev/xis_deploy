@@ -65,7 +65,33 @@ const Impressum = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
-      <section className="terms-and-conditions">
+      <section className="terms-and-conditions relative sm:px-16">
+        <div className=" absolute right-[0px] top-[100px]  sm:top-[-200px]">
+          <Image
+            src="/Ellipse 171.png"
+            alt="Ellipse "
+            height={900}
+            width={900}
+          />
+        </div>
+
+        <div className=" absolute right-[0px] bottom-[400px] sm:hidden">
+          <Image
+            src="/Ellipse 171.png"
+            alt="Ellipse "
+            height={1000}
+            width={1000}
+          />
+        </div>
+
+        <div className=" absolute left-0 top-[1000px]  sm:top-[600px]">
+          <Image
+            src="/Ellipse 164.png"
+            alt="Ellipse "
+            height={900}
+            width={900}
+          />
+        </div>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -95,8 +121,7 @@ const Impressum = () => {
                     XRAY LAB Industrial Services GmbH & Co. KG
                     Theodor-Schweitzer-Str 1+3. 75447 Sternenfels{" "}
                     <strong className="text-[#57C8E7]">Contact</strong> :
-                    Telephone: +49 7045 2044 560 Email:
-                    contact@xray-lab.com
+                    Telephone: +49 7045 2044 560 Email: contact@xray-lab.com
                   </h1>
                   <div className="h-1 w-20 bg-[#57C8E7] rounded"></div>
                 </div>
@@ -128,15 +153,15 @@ const Impressum = () => {
                   http://ec.europa.eu/consumers/odr . You can find our email
                   address in our legal notice. We are neither obliged nor
                   willing to take part in the dispute resolution process. The
-                  images used on this website come from, among others ,
-                 XIS, Deutsche Messe AG, from Fotolia.com: MH,
-                  kimtaro2008, Gesina Ottner from iStockphoto.com: M_a_y_a,
-                  querbeet, wahahaz, turbohampster, Stefan Weichelt, Volodymyr
-                  Krasyuk, kyoshino, Harald Richter, Givaga, Wavebreakmedia,
-                  gordana jovanovic, BostjanT, Edi_Eco, MiguelMalo, Kajdi
-                  Szabolcs, deepblue4you, choreograph, Bosca78, Alengo,
-                  gorodenkoff from depositphotos:MasterMariner, from
-                  shutterstock: alterfalter, lightwavemedia from pixabay
+                  images used on this website come from, among others , XIS,
+                  Deutsche Messe AG, from Fotolia.com: MH, kimtaro2008, Gesina
+                  Ottner from iStockphoto.com: M_a_y_a, querbeet, wahahaz,
+                  turbohampster, Stefan Weichelt, Volodymyr Krasyuk, kyoshino,
+                  Harald Richter, Givaga, Wavebreakmedia, gordana jovanovic,
+                  BostjanT, Edi_Eco, MiguelMalo, Kajdi Szabolcs, deepblue4you,
+                  choreograph, Bosca78, Alengo, gorodenkoff from
+                  depositphotos:MasterMariner, from shutterstock: alterfalter,
+                  lightwavemedia from pixabay
                 </p>
                 <h2 className="sm:text-3xl text-2xl font-medium title-font mb-4">
                   Disclaimer

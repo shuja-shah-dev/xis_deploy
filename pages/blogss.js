@@ -86,7 +86,8 @@ const Featured = () => {
             })
           ) : (
             <Alert severity="info">You don't have any blog yet.</Alert>
-          )}
+          )
+        }
 
           <div className="w-full md:w-1/2 mx-2 h-96 ">
             <div className="flex flex-col space-y-4">

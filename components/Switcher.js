@@ -50,7 +50,7 @@ const Switcher = () => {
       </div>
 
       <div className="flex justify-center items-center pb-14">
-        <div className="text-white relative text-lg sm:border-2 sm:border-gray-400 rounded-full flex flex-col sm:flex-row gap-4 px-4 py-2 ">
+        <div className="text-white relative text-base sm:text-lg border-2 border-gray-400 rounded-full flex flex-row gap-0 sm:gap-4 px-4 py-2 ">
           <div
             className={`cursor-pointer  ${
               activeTab === "software"

@@ -35,13 +35,24 @@ const privacy = () => {
           name="description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />               
-        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}privacy`} />
-        <meta property="og:title"
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+          name="keywords"
+          content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection"
+        />
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}privacy`}
+        />
+        <meta
+          property="og:title"
           content="Privacy - Simplified Edge AI for Industrial Inspection"
         />
-        <meta property="og:description"
+        <meta
+          property="og:description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta
@@ -52,11 +63,18 @@ const privacy = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}privacy`} />
+        <meta
+          property="og:url"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}privacy`}
+        />
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
-        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
+        <meta name="twitter:site" content="@XisAI" />{" "}
+        {/* Replace with your actual Twitter handle */}
+        <meta
+          name="twitter:title"
+          content="Simplified Edge AI for Industrial Inspection"
+        />
         <meta
           name="twitter:description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
@@ -70,9 +88,25 @@ const privacy = () => {
         <meta name="twitter:image:height" content="630" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-
       </Head>
-      <div className=" fadeInUp animated container mt-24 justify-center items-center text-5xl text-center  mx-auto w-full">
+      <div className=" fadeInUp animated container mt-24 justify-center relative items-center text-5xl text-center  mx-auto w-full">
+        <div className=" absolute right-[0px] bottom-[400px] sm:hidden">
+          <Image
+            src="/Ellipse 171.png"
+            alt="Ellipse "
+            height={1000}
+            width={1000}
+          />
+        </div>
+
+        <div className=" absolute left-0 top-[100px]  sm:top-[-100px]">
+          <Image
+            src="/Ellipse 164.png"
+            alt="Ellipse "
+            height={900}
+            width={900}
+          />
+        </div>
         <section className="flex items-center font-poppins ">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div className="flex flex-wrap">

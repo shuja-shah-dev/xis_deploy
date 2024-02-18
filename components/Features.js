@@ -44,7 +44,7 @@ const Features = () => {
         <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Features
         </h1>
-        <h3 className="text-gray-300 text-2xl mt-4 text-center">
+        <h3 className="text-gray-300 text-xl sm:text-2xl mt-4 text-center">
           Train the AI based on the dataset you Provided.
         </h3>
       </div>

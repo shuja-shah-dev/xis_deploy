@@ -1,13 +1,31 @@
 const mongoose = require("mongoose");
 
 const contactSchema = new mongoose.Schema({
-
-  name: {
+  fname: {
     type: String,
-    required: [true, "Name is required."],
+    required: [true, "First Name is required."],
     trim: true,
     minLength: [2, "Name must be larger than 2 characters"],
     maxLength: [50, "Name must be lesser than 50 characters"],
+  },
+  lname: {
+    type: String,
+    required: [true, "Last Name is required."],
+    trim: true,
+    minLength: [2, "Name must be larger than 2 characters"],
+    maxLength: [50, "Name must be lesser than 50 characters"],
+  },
+  jobTitle: {
+    type: String,
+    required: [true, "Job Title is required."],
+  },
+  company: {
+    type: String,
+    required: [true, "Company is required."],
+  },
+  topic: {
+    type: String,
+    required: [true, "Topic is required."],
   },
   email: {
     type: String,
@@ -16,17 +34,9 @@ const contactSchema = new mongoose.Schema({
     unique: true,
     match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Invalid email address"],
   },
-  phone: {
-    type: String,
-    required: [true, "Phone number is required."],
-  },
   desc: {
     type: String,
     required: [true, "Message is required."],
-  },
-  subject: {
-    type: String,
-    required: [true, "Subject is required."],
   },
   date: {
     type: Date,

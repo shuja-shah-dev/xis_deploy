@@ -46,6 +46,7 @@ const contact = () => {
         e.preventDefault();
         try {
             const data = { name, phone, email, subject, desc }
+            console.log(data)
             setLoading(true)
             const response = await fetch(`${BASE_URL}/contact`, {
                 method: 'POST',
