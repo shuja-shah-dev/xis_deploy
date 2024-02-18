@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { HeroBlob } from "@/components/HeroSection";
 import React from "react";
 import Link from "next/link";
 
@@ -11,14 +11,23 @@ const page = () => {
     background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
   };
 
-    const gradientStyle2 = {
-      background:
-        "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
-    };
+  const gradientStyle2 = {
+    background:
+      "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
+  };
 
   return (
     <div className="mt-20 relative">
-      <div className=" absolute left-[0px] sm:top-[-200px] top-[-300px]">
+      <HeroBlob
+        sx={{
+          background: "rgba(62, 95, 170, 0.25)",
+          bottom: "1px",
+          zIndex: "-1",
+          left: "1px",
+        }}
+        key={"UniqueElementor2"}
+      />
+      {/* <div className=" absolute left-[0px] sm:top-[-200px] top-[-300px]">
         <Image
           src="/Ellipse 165.png"
           alt="Ellipse "
@@ -37,8 +46,8 @@ const page = () => {
           height={1000}
           width={1000}
         />
-      </div>
-      <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
+      </div> */}
+      <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto relative">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
           Let’s explore how xis.ai can work for you
         </h1>
@@ -58,7 +67,7 @@ const page = () => {
         </Link>
       </div>
 
-      <div className="pb-40 pt-12 text-sm sm:text-base">
+      <div className="pb-40 pt-12 text-sm sm:text-base relative">
         <form
           action=""
           className="w-3/5 sm:w-1/2 md:w-2/5 m-auto flex flex-col gap-4"

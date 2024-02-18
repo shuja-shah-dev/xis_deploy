@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
+import DOMPurify from "dompurify";
+import Truncate from "react-truncate-html";
 
 const FeatureCard = ({ data }) => {
   const gradientStyle = {
@@ -13,14 +15,33 @@ const FeatureCard = ({ data }) => {
       "linear-gradient(184deg, rgba(62, 95, 170, 0.13) 28.13%, rgba(87, 200, 231, 0.00) 98.75%)",
   };
 
+  const truncateRef = useRef();
+
+  const truncateText = (text, maxLength) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const truncatedContent = doc.body.textContent || "";
+    return (
+      truncatedContent.slice(0, maxLength) +
+      (truncatedContent.length > maxLength ? "..." : "")
+    );
+  };
   return (
-    <div className="flex flex-wrap gap-6 justify-center">
+    <div className="flex flex-wrap gap-2 sm:gap-6 justify-center">
       {data.map((c, index) => (
         <div
           key={index}
           style={gradientStyleMain}
-          className="w-[350px] p-6 bg-slate-900 rounded-2xl border-2 border-slate-800"
+          className="ftest w-[184px] sm:w-[300px] md:w-[350px] p-6 bg-slate-900 rounded-2xl border-2 border-slate-800"
         >
+          <style jsx>{`
+            @media (max-width: 391px) {
+              .ftest {
+                width: 100%;
+                margin-left: 4px;
+              }
+            }
+          `}</style>
           <div className="flex justify-between items-center">
             <div
               style={gradientStyle}
@@ -39,7 +60,18 @@ const FeatureCard = ({ data }) => {
 
           <div className=" mt-8">
             <h1 className="font-bold text-white text-xl">{c.label}</h1>
-            <p className="text-sm mt-2 leading-7 text-gray-300">{c.desc}</p>
+            {/* <p className="text-sm mt-2 leading-7 text-gray-300 sm:hidden">
+              <Truncate
+                ref={truncateRef}
+                lines={3}
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(truncateText(c.desc, 150)),
+                }}
+              />
+            </p> */}
+            <p className="text-sm mt-2 leading-7 text-gray-300  sm:block">
+              {c.desc}
+            </p>
           </div>
         </div>
       ))}

@@ -9,19 +9,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import Link from "next/link";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
-import { Alert } from "@mui/material";
-import Truncate from "react-truncate-html";
-import renderHTML from "react-render-html";
-
-const truncateText = (text, maxLength) => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(text, "text/html");
-  const truncatedContent = doc.body.textContent || "";
-  return (
-    truncatedContent.slice(0, maxLength) +
-    (truncatedContent.length > maxLength ? "..." : "")
-  );
-};
+import { HeroBlob } from "@/components/HeroSection";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -33,10 +21,6 @@ const Slug = ({ blog }) => {
   function createMarkup(c) {
     return { __html: c };
   }
-
-  const truncateRef = useRef();
-
-  const [submitBlog, setSubmitBlog] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -83,7 +67,25 @@ const Slug = ({ blog }) => {
 
   return (
     <>
-      <section className="bg-[#111]">
+      <section className="relative">
+        <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            bottom: "2%",
+            zIndex: "-1",
+            right: "10%",
+          }}
+          key={"UniqueElementor1"}
+        />
+        <HeroBlob
+          sx={{
+            right: "10%",
+            top: "-300px",
+            zIndex: "-1",
+            right: "100px",
+          }}
+          key={"NormalSizedBlob"}
+        />
         <div className="container px-5 py-24 mx-auto flex flex-col">
           <div className="lg:w-3/4 mx-auto">
             <div className="rounded-lg h-32 overflow-hidden">

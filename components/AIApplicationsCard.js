@@ -7,6 +7,7 @@ const AIApplicationsCard = ({ data }) => {
   const gradientStyle = {
     background:
       "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
+      
   };
 
   const gradientStyleMain = {
@@ -15,13 +16,22 @@ const AIApplicationsCard = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-6 w-[70%] relative">
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:w-[70%] relative">
       {data.map((item, index) => (
         <div
           key={index}
           style={gradientStyleMain}
-          className="w-[250px] rounded-2xl "
+          className="test w-[180px] sm:w-[230px] md:w-[250px] rounded-2xl "
         >
+          <style jsx>{`
+            @media (max-width: 391px) {
+              .test {
+                width: 100%;
+                margin-left: 4px;
+              }
+            }
+          `}</style>
+
           <div className="rounded-xl h-40 overflow-hidden">
             <Image
               className="object-cover object-center h-full w-full"
@@ -43,7 +53,7 @@ const AIApplicationsCard = ({ data }) => {
 
           <div
             style={gradientStyle}
-            className="w-[40%] cursor-pointer ml-auto mt-4 mr-2 mb-4 py-1  text-gray-300   test-base text-center  border-2  border-[#5D38C2] rounded-3xl"
+            className="w-[60%] md:w-[40%] cursor-pointer ml-auto mt-4 mr-2 mb-4 py-1  text-gray-300   text-sm sm:test-base text-center  border-2  border-[#5D38C2] rounded-3xl"
           >
             Get Started
           </div>

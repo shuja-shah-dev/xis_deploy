@@ -8,6 +8,7 @@ import { BASE_URL } from "@/common/base_config";
 import DOMPurify from "dompurify";
 import Truncate from "react-truncate-html";
 import Link from "next/link";
+import { HeroBlob } from "@/components/HeroSection";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -112,6 +113,24 @@ const page = () => {
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
       <div className="mt-20 relative">
+        <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            top: "-300px",
+            zIndex: "-1",
+            right: "100px",
+          }}
+          key={"UniqueElementor1"}
+        />
+
+        <HeroBlob
+          sx={{
+            right: "10%",
+            bottom: "2%",
+            zIndex: "-1",
+          }}
+          key={"NormalSizedBlob"}
+        />
         {/* <div className=" absolute left-[-100px] top-[100px]  sm:top-[-200px]">
           <Image
             src="/Ellipse 165.png"
@@ -148,7 +167,7 @@ const page = () => {
           </h3>
         </div>
         <div className="px-6 sm:px-16 py-20 my-40 border-2 border-slate-800 rounded-2xl ">
-          <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 relative">
+          <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 ">
             <IoSearch
               color="#8A8A8E"
               size={30}
@@ -157,7 +176,7 @@ const page = () => {
             <input
               placeholder="Search By Keywords, industry or application*"
               type="text"
-              className="rounded-full bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
+              className="rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
             />
             <button
               style={gradientStyle}

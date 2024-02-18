@@ -1,35 +1,54 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import AIApplicationsCard from "./AIApplicationsCard";
-
+import { HeroBlob } from "./HeroSection";
 const AIApplications = () => {
   const [activeTab, setActiveTab] = useState("show all");
 
   const AIdata = [
     {
-      path: "/Depositphotos_4586951_S.png",
+      path: "/a1.png",
       label: "Analog Instruments Reading",
       desc: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
     },
     {
-      path: "/Depositphotos_4586951_S.png",
+      path: "/a2.png",
       label: "Analog Instruments Reading",
       desc: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
     },
     {
-      path: "/Depositphotos_4586951_S.png",
+      path: "/a3.png",
       label: "Analog Instruments Reading",
       desc: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
     },
     {
-      path: "/Depositphotos_4586951_S.png",
+      path: "/a4.png",
+      label: "Analog Instruments Reading",
+      desc: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
+    },
+    {
+      path: "/a5.png",
+      label: "Analog Instruments Reading",
+      desc: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
+    },
+    {
+      path: "/a6.png",
       label: "Analog Instruments Reading",
       desc: "Computer Vision application to read analog dials such as gauges, digital displays, and warning light colors using cameras.",
     },
   ];
 
   return (
-    <div className="pb-48 px-2 sm:px-8 md:px-16 relative">
+    <div className="pb-48 px-2 sm:px-4 lg:px-16 relative">
+      <HeroBlob
+        sx={{
+          background: "rgba(62, 95, 170, 0.25)",
+          top: "-300px",
+          zIndex: "1",
+          right: "100px",
+        }}
+        key={"UniqueElementor1"}
+      />
       <div className="flex flex-col justify-center items-center mb-14">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           AI Vision Applications
@@ -39,7 +58,7 @@ const AIApplications = () => {
           deploy and operate with xis.ai Suite
         </h3>
       </div>
-
+      {/* 
       <div className=" absolute left-0  top-[-800px] z-50">
         <Image src="/Ellipse 164.png" alt="Ellipse " height={800} width={800} />
       </div>
@@ -50,10 +69,19 @@ const AIApplications = () => {
 
       <div className=" absolute right-0 ">
         <Image src="/Ellipse 166.png" alt="Ellipse " height={800} width={500} />
-      </div>
+      </div> */}
 
-      <div className="flex justify-between relative z-50">
-        <div className="flex flex-col gap-4 text-gray-300 w-[30%] sm:w-[20%] mr-auto md:ml-auto text-lg">
+      <HeroBlob
+        sx={{
+          background: "rgba(62, 95, 170, 0.25)",
+          bottom: "1px",
+          zIndex: "999",
+          left: "1px",
+        }}
+        key={"UniqueElementor2"}
+      />
+      <div className="flex sm:flex-row flex-col justify-between relative z-50">
+        <div className="flex flex-row sm:flex-col mb-8  justify-between sm:justify-normal sm:mb-0 sm:gap-4 text-gray-300 w-full sm:w-[20%] mr-auto ml-0 md:ml-auto text-sm sm:text-lg">
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "show all"

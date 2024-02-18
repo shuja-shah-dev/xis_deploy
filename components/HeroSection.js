@@ -8,7 +8,7 @@ const HeroBlob = ({ sx = {} }) => {
     <div
       style={{
         position: "absolute",
-        width: "710px",
+        width: "100%",
         height: "710px",
         borderRadius: "710px",
         background: "rgba(93, 56, 194, 0.25)",
@@ -36,7 +36,7 @@ const HeroSection = () => {
     const intervalId = setInterval(() => {
       index = (index + 1) % choicesLength;
       setSub(choices[index]);
-    }, 1000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -46,15 +46,15 @@ const HeroSection = () => {
       <HeroBlob
         sx={{
           top: "",
-          zIndex: "99",
+          zIndex: "1",
         }}
         key={1}
       />
-
+{/* -10 */}
       <HeroBlob
         sx={{
-          right: "-10px",
-          zIndex: "99",
+          right: "10px",
+          zIndex: "1",
         }}
         key={2}
         id="blob2"

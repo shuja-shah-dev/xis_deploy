@@ -6,33 +6,33 @@ import { HeroBlob } from "./HeroSection";
 const IndustrySolutions = () => {
   const IndustrySolutionsData = [
     {
-      path: "/transportation.png",
-      label: "Transportation",
+      path: "/i1.png",
+      label: "Food",
     },
     {
-      path: "/technology.png",
-      label: "Technology",
+      path: "/i2.png",
+      label: "Electronics",
     },
     {
-      path: "/healthcare.png",
-      label: "Healthcare",
+      path: "/i3.png",
+      label: "Metal",
     },
     {
-      path: "/smart city.png",
-      label: "Smart city",
+      path: "/i4.png",
+      label: "Package Handle",
     },
     {
-      path: "/manufacturing.png",
-      label: "Manufacturing",
+      path: "/i5.png",
+      label: "Timber",
     },
     {
-      path: "/retail.png",
-      label: "Retail",
+      path: "/i6.png",
+      label: "Plastic Mold",
     },
   ];
 
   return (
-    <div className="pb-48 px-16 relative">
+    <div className="pb-48 px-2 sm:px-4 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
         <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">
           Industry Solutions
@@ -64,7 +64,7 @@ const IndustrySolutions = () => {
       <HeroBlob
         sx={{
           right: "20%",
-          zIndex: "99",
+          zIndex: "-1",
         }}
         key={"NormalSizedBlob"}
       />

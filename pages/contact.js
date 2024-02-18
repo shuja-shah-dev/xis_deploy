@@ -9,6 +9,7 @@ import { Roboto } from "next/font/google";
 import Alert from "@mui/material/Alert";
 import { BASE_URL } from "@/common/base_config";
 import Modal from "@mui/material/Modal";
+import { HeroBlob } from "@/components/HeroSection";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -189,7 +190,16 @@ const page = () => {
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
       <div className="mt-20 relative">
-        <div className=" absolute left-[0px] sm:top-[-200px] top-[-300px]">
+        <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            bottom: "1px",
+            zIndex: "-1",
+            left: "1px",
+          }}
+          key={"UniqueElementor2"}
+        />
+        {/* <div className=" absolute left-[0px] sm:top-[-200px] top-[-300px]">
           <Image
             src="/Ellipse 165.png"
             alt="Ellipse "
@@ -213,7 +223,7 @@ const page = () => {
             height={1000}
             width={1000}
           />
-        </div>
+        </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Get In Touch With Us

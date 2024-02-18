@@ -1,6 +1,5 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
-import Image from "next/image";
 import { HeroBlob } from "./HeroSection";
 
 const Features = () => {
@@ -40,13 +39,13 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-[#000] pb-48  pt-40 px-16 relative">
+    <div className="bg-[#000] pb-48  pt-40 sm:px-2 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
         <HeroBlob
           sx={{
             background: "rgba(62, 95, 170, 0.25)",
-            top: "1px",
-            zIndex: "999",
+            top: "-300px",
+            zIndex: "1",
             right: "100px",
           }}
           key={"UniqueElementor1"}
@@ -72,14 +71,14 @@ const Features = () => {
         key={"UniqueElementor2"}
       />
 
-      <div className=" absolute left-[220px] top-[-500px]">
+      {/* <div className=" absolute left-[220px] top-[-500px]">
         <Image
           src="/Ellipse 162.png"
           alt="Ellipse "
           height={1100}
           width={1100}
         />
-      </div>
+      </div> */}
 
       <FeatureCard data={featureData} />
     </div>
@@ -87,4 +86,4 @@ const Features = () => {
 };
 
 export default Features;
-/* It is highly recommended to use Key prop for HeroBlob component to avoid any unexpected behavior */ 
+/* It is highly recommended to use Key prop for HeroBlob component to avoid any unexpected behavior */
