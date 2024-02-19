@@ -107,19 +107,19 @@ const Hardware = () => {
 
         <div className="text-white flex flex-col md:flex-row justify-around mt-16 lg:mt-20">
           <div className="md:w-[70%]">
-            <h2 className="text-2xl mb-4 font-bold font-inter">Text Here</h2>
             <p className="text-left leading-7 ">
+              Create your own AI visual inspection model and deploy it on edge
+              devices without any hassle. xis.suite is a expandable platform
+              that can be implemented on already installed equipments i-e
+              cameras, saving time and money. xis.suite's Edge AI ensures
+              efficiency of AI models and privacy of user's data
+            </p>
+            {/*          <p className="text-left mt-4 leading-7">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reprehenderit cumque veniam harum nihil temporibus repellendus
               minima quam impedit dolorem, enim dolor voluptas aspernatur
               voluptates vel dolore esse magni blanditiis pariatur.
-            </p>
-            <p className="text-left mt-4 leading-7">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit cumque veniam harum nihil temporibus repellendus
-              minima quam impedit dolorem, enim dolor voluptas aspernatur
-              voluptates vel dolore esse magni blanditiis pariatur.
-            </p>
+  </p>*/}
           </div>
 
           <div className="">
@@ -158,18 +158,22 @@ const Software = () => {
         </div>
 
         <div className="text-white flex flex-col lg:w-1/4 w-full mt-10 lg:mt-0">
-          <h2 className="text-2xl mb-4 font-bold font-inter">Text Here</h2>
           <p className="text-left leading-7 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit cumque veniam harum nihil temporibus repellendus
-            minima quam impedit dolorem, enim dolor voluptas aspernatur
-            voluptates vel dolore esse magni blanditiis pariatur.
+            xis.ai provides a robust Vision AI platform enabling companies to
+            navigate the entire AI life cycle effortlessly. With our solution,
+            businesses can swiftly develop and customize AI solutions
+            independently, establishing a secure foundation that minimizes risks
+            and optimizes costs while driving revenue growth.
           </p>
           <p className="text-left mt-4 leading-7">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit cumque veniam harum nihil temporibus repellendus
-            minima quam impedit dolorem, enim dolor voluptas aspernatur
-            voluptates vel dolore esse magni blanditiis pariatur.
+            xis.ai provides no code, an end-to-end platform for AI visual
+            quality inspection. A robust Vision AI platform enabling companies
+            to navigate the entire AI life cycle effortlessly. With our
+            solution, businesses can swiftly develop and customize AI solutions
+            independently, establishing a secure foundation that minimizes risks
+            and optimizes costs while driving revenue growth. Includes AI
+            assistive labeling and active learning algorithms for fast and
+            efficient process
           </p>
         </div>
       </div>
