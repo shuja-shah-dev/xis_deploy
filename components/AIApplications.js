@@ -39,7 +39,7 @@ const AIApplications = () => {
   ];
 
   return (
-    <div className="pb-48 px-2 sm:px-4 lg:px-16 relative">
+    <div className="pb-16 sm:pb-48 px-2 sm:px-4 lg:px-16 relative">
       <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
@@ -50,10 +50,10 @@ const AIApplications = () => {
         key={"UniqueElementor1"}
       />
       <div className="flex flex-col justify-center items-center mb-14">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           AI Vision Applications
         </h1>
-        <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+        <h3 className="text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
           Explore real-world computer vision applications which you can build,
           deploy and operate with xis.ai Suite
         </h3>
@@ -85,7 +85,7 @@ const AIApplications = () => {
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "show all"
-                ? "bg-slate-800  border-l-4 border-[#5D38C2]"
+                ? "bg-slate-800  sm:border-l-4 border-t-2 border-[#5D38C2]"
                 : "border-transparent"
             }`}
             onClick={() => setActiveTab("show all")}
@@ -95,7 +95,7 @@ const AIApplications = () => {
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "industry"
-                ? "bg-slate-800  border-l-4 border-[#5D38C2]"
+                ? "bg-slate-800  sm:border-l-4 border-t-2 border-[#5D38C2]"
                 : "border-transparent"
             }`}
             onClick={() => setActiveTab("industry")}
@@ -105,7 +105,7 @@ const AIApplications = () => {
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "agriculture"
-                ? "bg-slate-800  border-l-4 border-[#5D38C2]"
+                ? "bg-slate-800 sm:border-l-4 border-t-2 border-[#5D38C2]"
                 : "border-transparent"
             }`}
             onClick={() => setActiveTab("agriculture")}
@@ -115,7 +115,7 @@ const AIApplications = () => {
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "healthcare"
-                ? "bg-slate-800  border-l-4 border-[#5D38C2]"
+                ? "bg-slate-800  sm:border-l-4 border-t-2 border-[#5D38C2]"
                 : "border-transparent"
             }`}
             onClick={() => setActiveTab("healthcare")}
@@ -125,7 +125,7 @@ const AIApplications = () => {
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "retail"
-                ? "bg-slate-800  border-l-4 border-[#5D38C2]"
+                ? "bg-slate-800  sm:border-l-4 border-t-2 border-[#5D38C2]"
                 : "border-transparent"
             }`}
             onClick={() => setActiveTab("retail")}

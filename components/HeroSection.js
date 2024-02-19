@@ -50,7 +50,7 @@ const HeroSection = () => {
         }}
         key={1}
       />
-{/* -10 */}
+      {/* -10 */}
       <HeroBlob
         sx={{
           right: "10px",

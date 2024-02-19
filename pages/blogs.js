@@ -158,15 +158,16 @@ const page = () => {
           />
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Welcome to the Xis.ai Blogs
           </h1>
-          <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+          <h3 className="text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
             Our central destination for the latest updates, stories and industry
             news about visual deep learning and computer vision.
           </h3>
         </div>
-        <div className="px-6 sm:px-16 py-20 my-40 border-2 border-slate-800 rounded-2xl ">
+        
+        <div className="px-6 sm:px-16 py-20 mt-4 mb-32 sm:my-40 border-2 border-slate-800 rounded-2xl ">
           <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 ">
             <IoSearch
               color="#8A8A8E"
@@ -247,7 +248,7 @@ const page = () => {
                 )
             )}
 
-          <h3 className="mb-10 text-white test-semibold text-2xl ml-10">
+          <h3 className="mb-10 text-white test-semibold text-2xl sm:ml-10">
             LATEST STORIES
           </h3>
           <BlogCard />

@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="text-base flex flex-col text-center md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
           <div className="flex flex-col gap-5 ">
             <div className="font-bold text-xl">
-              <Link href="/AboutUs" aria-label="About">
+              <Link href="/about" aria-label="About">
                 About Us
               </Link>
             </div>
@@ -72,24 +72,24 @@ const Footer = () => {
 
           <div className="flex flex-col gap-5 ">
             <div className="font-bold text-xl ">
-              <Link href="/Contact" aria-label="Contact">
+              <Link href="/contact" aria-label="Contact">
                 Contact Us
               </Link>
             </div>
             <div className="flex flex-col justify-center gap-5 items-center">
-              <Link href="/Contact" aria-label="Contact">
+              <Link href="/contact" aria-label="Contact">
                 <div className="flex md:ml-[-20px]">
                   <MdOutlinePhoneIphone size={24} color="white" /> +49 7045 2044
                   560
                 </div>
               </Link>
-              <Link href="/Contact" aria-label="Contact">
+              <Link href="/contact" aria-label="Contact">
                 <div className="flex md:ml-[-34px]">
                   <MdLocalPhone size={24} color="white" /> +1 248-843-1760
                 </div>
               </Link>
 
-              <Link href="/Contact" aria-label="Contact">
+              <Link href="/contact" aria-label="Contact">
                 <div className="flex">
                   <IoMail size={24} color="white" />{" "}
                   <div className="ml-1">contact@xray-lab.com</div>

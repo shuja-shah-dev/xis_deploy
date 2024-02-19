@@ -10,18 +10,18 @@ const IndustryCard = ({ data }) => {
   };
   //
   return (
-    <div className="flex flex-wrap gap-2 sm:gap-6 justify-center">
+    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
       {data.map((c, index) => (
         <div key={index} className="itest relative">
           <style jsx>{`
-            @media (max-width: 391px) {
+            @media (max-width: 400px) {
               .itest {
-                width: 100%;
-                margin-left: 4px;
+                width: 90%;
+                margin: 2px 8px;
               }
             }
           `}</style>
-          <div className="w-[184px] sm:w-[300px] md:w-[350px] h-[300px] rounded-2xl ">
+          <div className="w-[184px] sm:w-[300px] md:w-[350px] h-[200px] sm:h-[300px] rounded-2xl ">
             <Image
               className="rounded-2xl"
               src={c.path}
@@ -32,7 +32,7 @@ const IndustryCard = ({ data }) => {
 
           <div
             style={gradientStyle}
-            className="w-[80%] sm:w-1/2 mt-[-60px] ml-6 absolute py-1 px-3 text-gray-300 font-bold text-xl text-center  border-2  rounded-3xl"
+            className="w-[50%] sm:w-[70%] md:w-1/2 mt-[-60px] ml-6 absolute py-1 sm:px-3 text-gray-300 font-bold text-base sm:text-xl text-center  border-2  rounded-3xl"
           >
             {c.label}
           </div>

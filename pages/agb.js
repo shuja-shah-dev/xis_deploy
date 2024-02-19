@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-
+import { HeroBlob } from "@/components/HeroSection";
 
 const Agb = () => {
 
@@ -65,7 +65,7 @@ const Agb = () => {
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
       <section className="terms-and-conditions relative sm:px-16">
-        <div className=" absolute right-[0px] top-[100px]  sm:top-[-200px]">
+        {/* <div className=" absolute right-[0px] top-[100px]  sm:top-[-200px]">
           <Image
             src="/Ellipse 171.png"
             alt="Ellipse "
@@ -90,7 +90,25 @@ const Agb = () => {
             height={900}
             width={900}
           />
-        </div>
+        </div> */}
+        <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            top: "-300px",
+            zIndex: "-1",
+            right: "100px",
+          }}
+          key={"UniqueElementor1"}
+        />
+
+        <HeroBlob
+          sx={{
+            right: "10%",
+            bottom: "2%",
+            zIndex: "-1",
+          }}
+          key={"NormalSizedBlob"}
+        />
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">

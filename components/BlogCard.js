@@ -68,7 +68,7 @@ const BlogCard = () => {
               </div>
 
               <div className="px-4  mt-4">
-                <h1 className="font-bold text-white text-xl">
+                <h1 className="font-bold text-white text-lg sm:text-xl">
                   {item.blog_title.slice(0, 63)}
                 </h1>
                 <p className="text-sm mt-2 leading-7 text-gray-300">

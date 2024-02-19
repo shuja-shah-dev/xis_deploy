@@ -50,10 +50,10 @@ const Features = () => {
           }}
           key={"UniqueElementor1"}
         />
-        <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Features
         </h1>
-        <h3 className="text-gray-300 text-xl sm:text-2xl mt-4 text-center">
+        <h3 className="text-gray-300 text-base sm:text-xl mt-4 text-center">
           Train the AI based on the dataset you Provided.
         </h3>
       </div>
@@ -65,7 +65,7 @@ const Features = () => {
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "1px",
-          zIndex: "999",
+          zIndex: "1",
           left: "1px",
         }}
         key={"UniqueElementor2"}

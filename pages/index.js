@@ -15,7 +15,7 @@ import { Roboto, Lato } from "next/font/google";
 
 import HeroSection from "@/components/HeroSection";
 import Switcher from "@/components/Switcher";
-import HowItWorks from "@/components/HowItWorks";
+import HowItWorks from "@/components/howtowork";
 import Features from "@/components/Features";
 import IndustrySolutions from "@/components/IndustrySolutions";
 

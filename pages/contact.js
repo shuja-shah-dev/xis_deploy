@@ -225,7 +225,7 @@ const page = () => {
           />
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Get In Touch With Us
           </h1>
           <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
@@ -233,7 +233,7 @@ const page = () => {
           </h3>
         </div>
 
-        <div className="pb-40 pt-12 text-sm sm:text-base">
+        <div className="pb-40 pt-2 sm:pt-12 text-sm sm:text-base">
           <form
             onSubmit={handleSubmit}
             className="w-3/5 sm:w-1/2 md:w-2/5 m-auto flex flex-col gap-4"

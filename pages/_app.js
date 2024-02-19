@@ -1,7 +1,6 @@
 import { AuthProvider } from "@/common/authProvider";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Header from "@/components/Header";
+import Header from "@/components/Navbar";
 import "@/styles/globals.css";
 import Link from "next/link";
 import CookieConsent from "react-cookie-consent";

@@ -5,11 +5,18 @@ import { Box, Typography } from "@mui/material";
 import Head from "next/head";
 import "intersection-observer";
 import { useEffect } from "react";
-import { HeroBlob } from "@/components/HeroSection";
+import Link from "next/link";
+import { Roboto, Lato } from 'next/font/google'
 
-const privacy = () => {
-  const controller = useRouter();
-  const { accessToken } = useAuth();
+
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700'],
+  subsets: ['latin'],
+})
+
+
+const about = () => {
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -31,51 +38,34 @@ const privacy = () => {
   return (
     <>
       <Head>
-        <title>Privacy - xis.ai</title>
+        <title>About us - xis.ai</title>
         <meta
           name="description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="keywords" content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}about`} />
+
+        <meta property="og:title"
+          content="About us - Simplified Edge AI for Industrial Inspection"
         />
-        <meta
-          name="keywords"
-          content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection"
-        />
-        <link
-          rel="canonical"
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}privacy`}
-        />
-        <meta
-          property="og:title"
-          content="Privacy - Simplified Edge AI for Industrial Inspection"
-        />
-        <meta
-          property="og:description"
+        <meta property="og:description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
         />
         <meta
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
         />
-        <meta property="og:image:type" content="image/png" />
         <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta
-          property="og:url"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}privacy`}
-        />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}about`} />
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@XisAI" />{" "}
-        {/* Replace with your actual Twitter handle */}
-        <meta
-          name="twitter:title"
-          content="Simplified Edge AI for Industrial Inspection"
-        />
+        <meta name="twitter:site" content="@XisAI" />  {/* Replace with your actual Twitter handle */}
+        <meta name="twitter:title" content="Simplified Edge AI for Industrial Inspection" />
         <meta
           name="twitter:description"
           content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
@@ -89,143 +79,78 @@ const privacy = () => {
         <meta name="twitter:image:height" content="630" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+
       </Head>
-      <div className=" fadeInUp animated  mt-24 justify-center relative items-center text-5xl text-center  mx-auto w-full">
-        <HeroBlob
-          sx={{
-            background: "rgba(62, 95, 170, 0.25)",
-            top: "-300px",
-            zIndex: "-1",
-            right: "100px",
-          }}
-          key={"UniqueElementor1"}
-        />
-
-        <HeroBlob
-          sx={{
-            right: "10%",
-            bottom: "2%",
-            zIndex: "-1",
-          }}
-          key={"NormalSizedBlob"}
-        />
-        {/* <div className=" absolute right-[0px] bottom-[400px] sm:hidden">
-          <Image
-            src="/Ellipse 171.png"
-            alt="Ellipse "
-            height={1000}
-            width={1000}
-          />
-        </div>
-
-        <div className=" absolute left-0 top-[100px]  sm:top-[-100px]">
-          <Image
-            src="/Ellipse 164.png"
-            alt="Ellipse "
-            height={900}
-            width={900}
-          />
-        </div> */}
-        <section className="flex items-center font-poppins ">
+      <div className=" fadeInUp animated container my-24 justify-center items-center text-5xl text-center  mx-auto w-full">
+        <section className="flex items-center">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div className="flex flex-wrap">
-              <div className="w-full px-6 justify-center mb-10  lg:mb-0 ">
+              <div className="w-full px-6 justify-center mb-10 lg:mb-0 ">
                 <div className="pl-4 mb-6 ">
-                  <span className="text-lg uppercase text-gray-200"></span>
-                  <h1 className="mt-2 text-3xl font-black  md:text-5xl text-gray-100">
-                    Privacy Policy
+                  <span className="text-lg uppercase text-gray-200">
+                    Who we are?
+                  </span>
+                  <h1 className={`${roboto.className} mt-2 text-3xl font-black md:text-5xl text-gray-100`}>
+                    About Us
                   </h1>
                 </div>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  This Privacy Policy describes how your personal information is
-                  collected, used, and shared when you visit or make a purchase
-                  from xis.ai (the “Site”).
+                <p className="mb-6 text-sm md:text-base leading-7 text-gray-300">
+                  XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a
+                  mission to revolutionize Industrial Quality inspection and
+                  Process Monitoring through the power of artificial
+                  intelligence. Our team of innovators and AI enthusiasts is
+                  dedicated to pushing the boundaries of what's possible with AI
+                  technology. We believe in the potential of AI to transform
+                  industries,
                 </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  PERSONAL INFORMATION WE COLLECT
-                </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  When you visit the Site, we automatically collect certain
-                  information about your device, including information about
-                  your web browser, IP address, time zone, and some of the
-                  cookies that are installed on your device. Additionally, as
-                  you browse the Site, we collect information about the
-                  individual web pages or products that you view, what websites
-                  or search terms referred you to the Site, and information
-                  about how you interact with the Site. We refer to this
-                  automatically-collected information as “Device Information.”
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  We collect Device Information using the following
-                  technologies:
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  - “Cookies” are data files that are placed on your device or
-                  computer and often include an anonymous unique identifier. For
-                  more information about cookies, and how to disable cookies,
-                  visit http://www.allaboutcookies.org.
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  - “Log files” track actions occurring on the Site, and collect
-                  data including your IP address, browser type, Internet service
-                  provider, referring/exit pages, and date/time stamps.
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  JOB APPLICATIONS
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  When you apply to any jobs in this job you agree to
-                  voluntraily give us your personal information. We Collect that
-                  information and we process it. We DO NOT SHARE YOUR PERSONAL
-                  INFORMATION WITH ANY THIRD PARTY APPLICATIONS OR SERVICES.
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  Contacting Us
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  When you contact us, we may collect your email address to
-                  respond to your inquiry. This information is strictly used for
-                  communication purposes and is not shared with third parties.
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  Data Sharing
-                </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  We uphold a strict policy of not sharing any collected user
-                  data with third-party apps or services. Your privacy is
-                  paramount, and we implement measures to ensure that your
-                  information is kept confidential and utilized only for the
-                  purposes outlined in this policy.
-                </p>
-
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  GDPR Compliance
-                </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
-                  Our privacy practices align with the standards set forth by
-                  the General Data Protection Regulation (GDPR). We are
-                  dedicated to ensuring the security and confidentiality of your
-                  personal data. If you have any questions or concerns about
-                  your data, please contact us at contact@xray-lab.com . By
-                  engaging with our services, you acknowledge and agree to the
-                  terms outlined in this Privacy Policy. We reserve the right to
-                  update or modify this policy, with any changes reflected on
-                  this page. Your continued use of our services constitutes
-                  acceptance of any such modifications.
-                </p>
+                <Link
+                  href="/contact"
+                  aria-label="Contact"
+                >
+                  <button className="justify-center items-center text-center px-4 py-2 text-xl text-gray-100 hover:scale-110 transition transform duration-500 rounded-xl bg-gray-800 hover:bg-gray-900 ">
+                    Get in touch
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </section>
+
+  <div className="container px-5 py-24 mx-auto">
+    <div className="flex flex-col md:flex-row justify-center items-center -mx-4 -mb-10 text-center">
+      <div className="w-full md:w-1/2 mb-10 px-4">
+      <div className="relative h-full  rounded-xl container mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
+          <iframe
+            className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.5692550973376!2d8.848324875555058!3d49.05681318672361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47979d2fd2ffcf53%3A0xd8a4d478df498df3!2sTheodor-Schweitzer-Stra%C3%9Fe%201%2F3%2C%2075447%20Sternenfels%2C%20Germany!5e0!3m2!1sen!2s!4v1700329065442!5m2!1sen!2s"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            loading="lazy"
+            tabIndex="0"
+          ></iframe>
+        </div>
       </div>
+      <div className="w-full md:w-1/2 mb-10 px-4">
+      <div className="relative h-full container  rounded-xl mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0" style={{ height: "500px" }}>
+          <iframe
+            className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5056224970035!2d-83.24737019999999!3d42.671830799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824eaac3f8d9c03%3A0x54513cd1f684af54!2s2255%20Pontiac%20Rd%2C%20Auburn%20Hills%2C%20MI%2048326%2C%20USA!5e0!3m2!1sen!2s!4v1703003095408!5m2!1sen!2s"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            loading="lazy"
+            tabIndex="0"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+      </div>
+    
       {/* <div className="container justify-center pb-24 items-center text-5xl text-center min-h-[100vh] mx-auto w-full">
         <div className=" p-4 min-h-screen">
           <div className="hiddenn max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
@@ -335,7 +260,7 @@ const privacy = () => {
         </div>
       </div> */}
     </>
-  );
+  )
 };
 
-export default privacy;
+export default about;

@@ -37,8 +37,8 @@ const FeatureCard = ({ data }) => {
           <style jsx>{`
             @media (max-width: 391px) {
               .ftest {
-                width: 100%;
-                margin-left: 4px;
+                width: 90%;
+                margin: 2px 8px;
               }
             }
           `}</style>
