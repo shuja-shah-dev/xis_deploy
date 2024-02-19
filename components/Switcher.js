@@ -9,81 +9,128 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const Robotics = () => {
-  const loader = new GLTFLoader();
-  const scene = new THREE.Scene();
-  const canvasRef = useRef();
+  // const loader = new GLTFLoader();
+  // const scene = new THREE.Scene();
+  // const canvasRef = useRef();
 
-  loader.load(
-    "./model/scene.gltf",
-    function (gltf) {
-      console.log("loaded successfully");
-      const model = gltf.scene;
-      const mixer = new THREE.AnimationMixer(model);
-      mixer.clipAction(gltf.animations[0]).play();
-      scene.add(model);
+  // loader.load(
+  //   "./model/scene.gltf",
+  //   function (gltf) {
+  //     console.log("loaded successfully");
+  //     const model = gltf.scene;
+  //     const mixer = new THREE.AnimationMixer(model);
+  //     mixer.clipAction(gltf.animations[0]).play();
+  //     scene.add(model);
 
-      function animate() {
-        requestAnimationFrame(animate);
-        mixer.update(0.02);
+  //     function animate() {
+  //       requestAnimationFrame(animate);
+  //       mixer.update(0.02);
 
-        renderer.render(scene, camera);
-      }
-      animate();
-    },
-    function (xhr) {
-      console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-    },
-    function (error) {
-      console.log("An error happened", error);
-    }
-  );
+  //       renderer.render(scene, camera);
+  //     }
+  //     animate();
+  //   },
+  //   function (xhr) {
+  //     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+  //   },
+  //   function (error) {
+  //     console.log("An error happened", error);
+  //   }
+  // );
 
-  const ambientLight = new THREE.AmbientLight(0xffffff);
-  scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff);
-  directionalLight.position.set(10, 10, 20).normalize();
-  scene.add(directionalLight);
-  const pointLight = new THREE.PointLight(0xffffff, 5, 1);
-  pointLight.position.set(10, 10, 20);
-  scene.add(pointLight);
+  // const ambientLight = new THREE.AmbientLight(0xffffff);
+  // scene.add(ambientLight);
+  // const directionalLight = new THREE.DirectionalLight(0xffffff);
+  // directionalLight.position.set(10, 10, 20).normalize();
+  // scene.add(directionalLight);
+  // const pointLight = new THREE.PointLight(0xffffff, 5, 1);
+  // pointLight.position.set(10, 10, 20);
+  // scene.add(pointLight);
 
-  const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
+  // const sizes = {
+  //   width: window.innerWidth,
+  //   height: window.innerHeight,
+  // };
 
-  window.addEventListener("resize", () => {
-    sizes.width = window.innerWidth;
-    sizes.height = window.innerHeight;
-    camera.aspect = sizes.width / sizes.height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(sizes.width, sizes.height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  });
+  // window.addEventListener("resize", () => {
+  //   sizes.width = window.innerWidth;
+  //   sizes.height = window.innerHeight;
+  //   camera.aspect = sizes.width / sizes.height;
+  //   camera.updateProjectionMatrix();
+  //   renderer.setSize(sizes.width, sizes.height);
+  //   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  // });
 
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    sizes.width / sizes.height,
-    0.001,
-    1000
-  );
-  camera.position.x = 1;
-  camera.position.y = 1;
-  camera.position.z = 4;
-  scene.add(camera);
+  // const camera = new THREE.PerspectiveCamera(
+  //   75,
+  //   sizes.width / sizes.height,
+  //   0.001,
+  //   1000
+  // );
+  // camera.position.x = 1;
+  // camera.position.y = 1;
+  // camera.position.z = 4;
+  // scene.add(camera);
 
-  const renderer = new THREE.WebGLRenderer({
-    canvas: canvasRef.current,
-  });
-  renderer.setSize(sizes.width, sizes.height);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  // const renderer = new THREE.WebGLRenderer({
+  //   canvas: canvasRef.current,
+  // });
+  // renderer.setSize(sizes.width, sizes.height);
+  // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   return (
-    <div className="px-10 md:px-16 py-12 md:py-28  relative">
-      {/* <canvas
-        ref={canvasRef}
-        className="webgl w-full h-[700px] overflow-hidden"
-      ></canvas> */}
+    <div className="px-10 md:px-16 py-12 md:py-28 relative">
+      <div className="flex flex-col  justify-around">
+        <div className="md:w-[80%] m-auto">
+          <Image
+            src="/Component 2.png"
+            width={900}
+            height={500}
+            alt="screen img"
+          />
+        </div>
+
+        <div className="text-white flex flex-col md:flex-row justify-around mt-16 lg:mt-20">
+          <div className="md:w-[70%]">
+            <p className="text-left leading-7 ">
+              xis.ai's expertise extends to providing comprehensive support in
+              robotics and automation. By providing support for ROS/ROS2 and
+              legacy systems, we optimize efficiency, accuracy, and productivity
+              within industrial pipelines. Our tailored solutions are designed
+              to address specific industry challenges, ensuring seamless
+              integration and maximum impact on operational performance.
+            </p>
+            {/*          <p className="text-left mt-4 leading-7">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit cumque veniam harum nihil temporibus repellendus
+              minima quam impedit dolorem, enim dolor voluptas aspernatur
+              voluptates vel dolore esse magni blanditiis pariatur.
+  </p>*/}
+          </div>
+
+          <div className="">
+            {/* <button
+              style={gradientStyle}
+              className="cursor-pointer z-50 w-32 sm:ml-auto m-auto 
+               rounded-full border-2 border-[#5D38C2]
+            text-white 
+            py-2 px-6 mt-6 sm:mt-20 font-poppins"
+            >
+              Submit
+            </button> */}
+          </div>
+        </div>
+      </div>
+      <HeroBlob
+        sx={{
+          zIndex: 99,
+          bottom: "20px",
+          right: "500px",
+          width: "462px",
+          height: "462px",
+          borderRadius: "462px",
+        }}
+      />
     </div>
   );
 };
@@ -123,7 +170,7 @@ const Hardware = () => {
           </div>
 
           <div className="">
-            <button
+            {/* <button
               style={gradientStyle}
               className="cursor-pointer z-50 w-32 sm:ml-auto m-auto 
                rounded-full border-2 border-[#5D38C2]
@@ -131,7 +178,7 @@ const Hardware = () => {
             py-2 px-6 mt-6 sm:mt-20 font-poppins"
             >
               Submit
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
