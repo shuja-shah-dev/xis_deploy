@@ -2,13 +2,14 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import LogoBar from "./LogoBar";
+import { Box } from "@mui/material";
 
 const HeroBlob = ({ sx = {} }) => {
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         position: "absolute",
-        width: "710px",
+        width: { xl: "710px", lg: "500px", md: "100%", sm: "100%", xs: "100%" },
         height: "710px",
         borderRadius: "710px",
         background: "rgba(93, 56, 194, 0.25)",
@@ -16,7 +17,7 @@ const HeroBlob = ({ sx = {} }) => {
         overflow: "hidden",
         ...sx,
       }}
-    ></div>
+    ></Box>
   );
 };
 

@@ -5,85 +5,10 @@ import React, { useState, useRef } from "react";
 import { HeroBlob } from "./HeroSection";
 
 const Robotics = () => {
-  // const loader = new GLTFLoader();
-  // const scene = new THREE.Scene();
-  // const canvasRef = useRef();
-
-  // loader.load(
-  //   "./model/scene.gltf",
-  //   function (gltf) {
-  //     console.log("loaded successfully");
-  //     const model = gltf.scene;
-  //     const mixer = new THREE.AnimationMixer(model);
-  //     mixer.clipAction(gltf.animations[0]).play();
-  //     scene.add(model);
-
-  //     function animate() {
-  //       requestAnimationFrame(animate);
-  //       mixer.update(0.02);
-
-  //       renderer.render(scene, camera);
-  //     }
-  //     animate();
-  //   },
-  //   function (xhr) {
-  //     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-  //   },
-  //   function (error) {
-  //     console.log("An error happened", error);
-  //   }
-  // );
-
-  // const ambientLight = new THREE.AmbientLight(0xffffff);
-  // scene.add(ambientLight);
-  // const directionalLight = new THREE.DirectionalLight(0xffffff);
-  // directionalLight.position.set(10, 10, 20).normalize();
-  // scene.add(directionalLight);
-  // const pointLight = new THREE.PointLight(0xffffff, 5, 1);
-  // pointLight.position.set(10, 10, 20);
-  // scene.add(pointLight);
-
-  // const sizes = {
-  //   width: window.innerWidth,
-  //   height: window.innerHeight,
-  // };
-
-  // window.addEventListener("resize", () => {
-  //   sizes.width = window.innerWidth;
-  //   sizes.height = window.innerHeight;
-  //   camera.aspect = sizes.width / sizes.height;
-  //   camera.updateProjectionMatrix();
-  //   renderer.setSize(sizes.width, sizes.height);
-  //   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  // });
-
-  // const camera = new THREE.PerspectiveCamera(
-  //   75,
-  //   sizes.width / sizes.height,
-  //   0.001,
-  //   1000
-  // );
-  // camera.position.x = 1;
-  // camera.position.y = 1;
-  // camera.position.z = 4;
-  // scene.add(camera);
-
-  // const renderer = new THREE.WebGLRenderer({
-  //   canvas: canvasRef.current,
-  // });
-  // renderer.setSize(sizes.width, sizes.height);
-  // renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
   return (
     <div className="px-10 md:px-16 py-12 md:py-28 relative">
-      <div className="flex ">
+      <div className="flex lg:flex-row flex-col ">
         <div className="md:w-[60%] m-auto">
-          {/* <Image
-            src="/Component 2.png"
-            width={900}
-            height={500}
-            alt="screen img"
-          /> */}
           <video
             autoPlay
             muted
@@ -135,7 +60,10 @@ const Hardware = () => {
 
   return (
     <div className="px-10 md:px-16 py-12 md:py-28 relative">
-      <div className="flex  justify-around" style={{ alignItems: "center" }}>
+      <div
+        className="flex lg:flex-row flex-col justify-around"
+        style={{ alignItems: "center" }}
+      >
         <div>
           <Image
             src="/Component 2.png"
@@ -145,8 +73,13 @@ const Hardware = () => {
           />
         </div>
 
-        <div className="text-white flex flex-col md:flex-row justify-around">
-          <div className="md:w-[60%]">
+        <div
+          className="text-white flex flex-col md:flex-row justify-around"
+          style={{
+            marginTop: "10px",
+          }}
+        >
+          <div className="md:w-[60%] mt-10 lg:mt-0">
             <p className="text-left leading-7 ">
               Create your own AI visual inspection model and deploy it on edge
               devices without any hassle. xis.suite is a expandable platform
@@ -154,12 +87,9 @@ const Hardware = () => {
               cameras, saving time and money. xis.suite's Edge AI ensures
               efficiency of AI models and privacy of user's data
             </p>
-
           </div>
 
-          <div className="">
-
-          </div>
+          <div className=""></div>
         </div>
       </div>
       <HeroBlob
