@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="pt-20">
       <IndustrySolutions />
-      <AIApplications />
+      {/* <AIApplications /> */}
     </div>
   );
 };

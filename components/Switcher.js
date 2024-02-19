@@ -4,10 +4,6 @@ import Image from "next/image";
 import React, { useState, useRef } from "react";
 import { HeroBlob } from "./HeroSection";
 
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-
 const Robotics = () => {
   // const loader = new GLTFLoader();
   // const scene = new THREE.Scene();
@@ -82,12 +78,25 @@ const Robotics = () => {
     <div className="px-10 md:px-16 py-12 md:py-28 relative">
       <div className="flex flex-col  justify-around">
         <div className="md:w-[80%] m-auto">
-          <Image
+          {/* <Image
             src="/Component 2.png"
             width={900}
             height={500}
             alt="screen img"
-          />
+          /> */}
+          <video
+            autoPlay
+            muted
+            loop
+            className="video"
+            style={{
+              width: "900px",
+              height: "500px",
+              borderRadius: "20px",
+            }}
+          >
+            <source src="/vid.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <div className="text-white flex flex-col md:flex-row justify-around mt-16 lg:mt-20">
@@ -100,25 +109,9 @@ const Robotics = () => {
               to address specific industry challenges, ensuring seamless
               integration and maximum impact on operational performance.
             </p>
-            {/*          <p className="text-left mt-4 leading-7">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit cumque veniam harum nihil temporibus repellendus
-              minima quam impedit dolorem, enim dolor voluptas aspernatur
-              voluptates vel dolore esse magni blanditiis pariatur.
-  </p>*/}
           </div>
 
-          <div className="">
-            {/* <button
-              style={gradientStyle}
-              className="cursor-pointer z-50 w-32 sm:ml-auto m-auto 
-               rounded-full border-2 border-[#5D38C2]
-            text-white 
-            py-2 px-6 mt-6 sm:mt-20 font-poppins"
-            >
-              Submit
-            </button> */}
-          </div>
+          <div className=""></div>
         </div>
       </div>
       <HeroBlob
@@ -242,19 +235,13 @@ const Switcher = () => {
   const [activeTab, setActiveTab] = useState("software");
 
   return (
-    <div className="pt-24 relative">
-      {/* <div className=" absolute left-0  sm:top-[-810px] top-[-850px]">
-        <Image src="/Ellipse 165.png" alt="Ellipse " height={900} width={900} />
-      </div> */}
-      {/* <div className=" absolute right-0  top-[-1100px]">
-        <Image src="/Ellipse 166.png" alt="Ellipse " height={900} width={900} />
-      </div> */}
-      {/* <div className=" absolute left-0  top-[-400px]">
-        <Image src="/Ellipse 172.png" alt="Ellipse " height={900} width={900} />
-      </div> */}
-      {/* <div className=" absolute right-10  top-20">
-        <Image src="/Ellipse 173.png" alt="Ellipse " height={900} width={900} />
-      </div> */}
+    <div
+      className="pt-24 relative"
+      style={{
+        transition: "0.5s ease-in-out",
+      }}
+    >
+
 
       <div className="flex justify-center items-center pb-14">
         <div className="font-poppins text-white relative text-base sm:text-lg border-2 border-gray-400 rounded-full flex flex-row gap-0 sm:gap-4 px-4 py-2 ">

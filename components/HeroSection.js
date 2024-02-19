@@ -8,11 +8,12 @@ const HeroBlob = ({ sx = {} }) => {
     <div
       style={{
         position: "absolute",
-        width: "100%",
+        width: "710px",
         height: "710px",
         borderRadius: "710px",
         background: "rgba(93, 56, 194, 0.25)",
         filter: "blur(250px)",
+        overflow: "hidden",
         ...sx,
       }}
     ></div>

@@ -20,6 +20,17 @@ const IndustryCard = ({ data }) => {
                 margin: 2px 8px;
               }
             }
+
+            .itest {
+              transition: 0.1s ease-in-out;
+              cursor: pointer;
+              border-radius: 1rem;
+            }
+
+            .itest:hover {
+              outline: 2px solid #5d38c2;
+            }
+
           `}</style>
           <div className="w-[184px] sm:w-[300px] md:w-[350px] h-[200px] sm:h-[300px] rounded-2xl">
             <Image

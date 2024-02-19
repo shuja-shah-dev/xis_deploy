@@ -101,7 +101,7 @@ const Header = () => {
             left: "0",
             width: "100%",
             height: "100vh",
-            zIndex: "999",
+            zIndex: "99999999",
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
@@ -119,7 +119,7 @@ const Header = () => {
             <Image src="/Asset.png" width={100} height={100} alt="" />
             <CloseOutlined
               onClick={toggleMobileMenu}
-              sx={{ color: "white", fontSize: "2rem" }}
+              sx={{ fill: "#fff", fontSize: "2rem" }}
             />
           </Box>
           <Box

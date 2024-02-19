@@ -41,6 +41,15 @@ const FeatureCard = ({ data }) => {
                 margin: 2px 8px;
               }
             }
+
+            .ftest {
+              transition: 0.1s ease-in-out;
+              cursor: pointer;
+            }
+
+            .ftest:hover {
+              border: 2px solid #5d38c2;
+            }
           `}</style>
           <div className="flex justify-between items-center">
             <div
@@ -55,7 +64,7 @@ const FeatureCard = ({ data }) => {
                 alt={`${c.label} img`}
               />
             </div>
-            <FaArrowRight color="white" size={24} />
+            {/* <FaArrowRight color="white" size={24} /> */}
           </div>
 
           <div className=" mt-8">
