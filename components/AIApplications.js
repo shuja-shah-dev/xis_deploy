@@ -44,7 +44,7 @@ const AIApplications = () => {
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
           top: "-300px",
-          zIndex: "1",
+          zIndex: "-1",
           right: "100px",
         }}
         key={"UniqueElementor1"}
@@ -75,7 +75,7 @@ const AIApplications = () => {
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "1px",
-          zIndex: "999",
+          zIndex: "-1",
           left: "1px",
         }}
         key={"UniqueElementor2"}

@@ -10,7 +10,7 @@ const IndustrySolutions = () => {
       label: "Food",
     },
     {
-      path: "/i2.png",
+      path: "/newi2.png",
       label: "Electronics",
     },
     {
@@ -18,12 +18,12 @@ const IndustrySolutions = () => {
       label: "Metal",
     },
     {
-      path: "/i4.png",
+      path: "/newi4.png",
       label: "Package Handle",
     },
     {
       path: "/i5.png",
-      label: "Timber",
+      label: "Wood",
     },
     {
       path: "/i6.png",

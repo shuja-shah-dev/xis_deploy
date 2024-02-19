@@ -18,7 +18,10 @@ const page = () => {
   const gradientStyle = {
     background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
   };
-
+  const gradientStyleMain = {
+    background: "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
+  }
+  
   const [submitBlog, setSubmitBlog] = useState([]);
   const truncateRef = useRef();
 
@@ -217,7 +220,7 @@ const page = () => {
 
                     <div className=" flex flex-col w-full md:w-2/5">
                       <div className="px-4mt-4">
-                        <h1 className="font-inter font-bold text-white text-xl">
+                        <h1 className="font-inter font-semibold text-white text-4xl">
                           {item.blog_title.slice(0, 63)}
                         </h1>
                         <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
@@ -237,8 +240,8 @@ const page = () => {
                         href={`/blogpost/${item.blog_name}`}
                       >
                         <div
-                          style={gradientStyle}
-                          className="font-poppins w-[30%] mt-4 mr-2 mb-4 py-1  text-gray-300  test-base sm:text-lg text-center  border-2  border-[#5D38C2] rounded-3xl"
+                          style={gradientStyleMain}
+                          className="font-poppins w-[30%] mt-4 mr-2 mb-4 py-1  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
                         >
                           Read More
                         </div>

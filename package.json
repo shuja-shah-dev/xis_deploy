@@ -35,7 +35,8 @@
     "react-truncate-html": "^0.1.7",
     "scrollmagic": "^2.0.8",
     "styled-components": "^6.1.0",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "three": "^0.161.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
