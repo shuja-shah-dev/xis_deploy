@@ -16,7 +16,7 @@ const Robotics = () => {
             className="video"
             style={{
               width: "900px",
-              height: "500px",
+              height: "auto",
               borderRadius: "20px",
             }}
           >
@@ -24,7 +24,7 @@ const Robotics = () => {
           </video>
         </div>
 
-        <div className="text-white flex flex-col md:flex-row justify-around  md:w-[20%]">
+        <div className="text-white flex flex-col md:flex-row justify-around mt-10 lg:mt-0 md:w-[20%]">
           <div className="md:w-[100%]">
             <p className="text-left leading-7 ">
               xis.ai's expertise extends to providing comprehensive support in
