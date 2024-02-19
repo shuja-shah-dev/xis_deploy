@@ -2,7 +2,7 @@ import { AuthProvider } from "@/common/authProvider";
 import Footer from "@/components/Footer";
 import Header from "@/components/Navbar";
 import "@/styles/globals.css";
-import "@fontsource/poppins";
+// import "@fontsource/poppins";
 import Link from "next/link";
 import CookieConsent from "react-cookie-consent";
 import { useEffect, useState } from "react";
