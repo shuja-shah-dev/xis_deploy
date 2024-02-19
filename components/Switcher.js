@@ -76,8 +76,8 @@ const Robotics = () => {
 
   return (
     <div className="px-10 md:px-16 py-12 md:py-28 relative">
-      <div className="flex flex-col  justify-around">
-        <div className="md:w-[80%] m-auto">
+      <div className="flex ">
+        <div className="md:w-[60%] m-auto">
           {/* <Image
             src="/Component 2.png"
             width={900}
@@ -99,8 +99,8 @@ const Robotics = () => {
           </video>
         </div>
 
-        <div className="text-white flex flex-col md:flex-row justify-around mt-16 lg:mt-20">
-          <div className="md:w-[70%]">
+        <div className="text-white flex flex-col md:flex-row justify-around  md:w-[20%]">
+          <div className="md:w-[100%]">
             <p className="text-left leading-7 ">
               xis.ai's expertise extends to providing comprehensive support in
               robotics and automation. By providing support for ROS/ROS2 and
@@ -135,18 +135,18 @@ const Hardware = () => {
 
   return (
     <div className="px-10 md:px-16 py-12 md:py-28 relative">
-      <div className="flex flex-col  justify-around">
-        <div className="md:w-[80%] m-auto">
+      <div className="flex  justify-around" style={{ alignItems: "center" }}>
+        <div>
           <Image
             src="/Component 2.png"
-            width={900}
+            width={3000}
             height={500}
             alt="screen img"
           />
         </div>
 
-        <div className="text-white flex flex-col md:flex-row justify-around mt-16 lg:mt-20">
-          <div className="md:w-[70%]">
+        <div className="text-white flex flex-col md:flex-row justify-around">
+          <div className="md:w-[60%]">
             <p className="text-left leading-7 ">
               Create your own AI visual inspection model and deploy it on edge
               devices without any hassle. xis.suite is a expandable platform
@@ -198,13 +198,13 @@ const Software = () => {
         </div>
 
         <div className="text-white flex flex-col lg:w-1/4 w-full mt-10 lg:mt-0">
-          <p className="text-left leading-7 ">
+          {/* <p className="text-left leading-7 ">
             xis.ai provides a robust Vision AI platform enabling companies to
             navigate the entire AI life cycle effortlessly. With our solution,
             businesses can swiftly develop and customize AI solutions
             independently, establishing a secure foundation that minimizes risks
             and optimizes costs while driving revenue growth.
-          </p>
+          </p> */}
           <p className="text-left mt-4 leading-7">
             xis.ai provides no code, an end-to-end platform for AI visual
             quality inspection. A robust Vision AI platform enabling companies
@@ -241,8 +241,6 @@ const Switcher = () => {
         transition: "0.5s ease-in-out",
       }}
     >
-
-
       <div className="flex justify-center items-center pb-14">
         <div className="font-poppins text-white relative text-base sm:text-lg border-2 border-gray-400 rounded-full flex flex-row gap-0 sm:gap-4 px-4 py-2 ">
           <div
