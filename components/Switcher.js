@@ -154,24 +154,11 @@ const Hardware = () => {
               cameras, saving time and money. xis.suite's Edge AI ensures
               efficiency of AI models and privacy of user's data
             </p>
-            {/*          <p className="text-left mt-4 leading-7">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit cumque veniam harum nihil temporibus repellendus
-              minima quam impedit dolorem, enim dolor voluptas aspernatur
-              voluptates vel dolore esse magni blanditiis pariatur.
-  </p>*/}
+
           </div>
 
           <div className="">
-            {/* <button
-              style={gradientStyle}
-              className="cursor-pointer z-50 w-32 sm:ml-auto m-auto 
-               rounded-full border-2 border-[#5D38C2]
-            text-white 
-            py-2 px-6 mt-6 sm:mt-20 font-poppins"
-            >
-              Submit
-            </button> */}
+
           </div>
         </div>
       </div>
