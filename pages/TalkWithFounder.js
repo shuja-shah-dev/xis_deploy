@@ -47,8 +47,8 @@ const page = () => {
           width={1000}
         />
       </div> */}
-      <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto relative">
-        <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+      <div className="font-poppins flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto relative">
+        <h1 className="font-inter pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
           Let’s explore how xis.ai can work for you
         </h1>
         <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">

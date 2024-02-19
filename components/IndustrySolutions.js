@@ -34,10 +34,10 @@ const IndustrySolutions = () => {
   return (
     <div className="pb-24 sm:pb-48 px-2 sm:px-4 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
-        <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">
+        <h1 className="pb-1.5 font-inter text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">
           Industry Solutions
         </h1>
-        <h3 className="text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-full md:w-[800px] text-center ">
+        <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-full md:w-[800px] text-center ">
           Xis.ai Suite provides powerful software infrastructure to deliver all
           your AI vision applications with one solution.
         </h3>

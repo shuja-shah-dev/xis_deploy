@@ -50,10 +50,10 @@ const AIApplications = () => {
         key={"UniqueElementor1"}
       />
       <div className="flex flex-col justify-center items-center mb-14">
-        <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="pb-1.5 font-inter text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           AI Vision Applications
         </h1>
-        <h3 className="text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+        <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
           Explore real-world computer vision applications which you can build,
           deploy and operate with xis.ai Suite
         </h3>
@@ -81,7 +81,7 @@ const AIApplications = () => {
         key={"UniqueElementor2"}
       />
       <div className="flex sm:flex-row flex-col justify-between relative z-50">
-        <div className="flex flex-row sm:flex-col mb-8  justify-between sm:justify-normal sm:mb-0 sm:gap-4 text-gray-300 w-full sm:w-[20%] mr-auto ml-0 md:ml-auto text-sm sm:text-lg">
+        <div className="font-poppins flex flex-row sm:flex-col mb-8  justify-between sm:justify-normal sm:mb-0 sm:gap-4 text-gray-300 w-full sm:w-[20%] mr-auto ml-0 md:ml-auto text-sm sm:text-lg">
           <div
             className={`cursor-pointer px-2 sm:px-4 py-2 mr-4 lg:mr-16 ${
               activeTab === "show all"

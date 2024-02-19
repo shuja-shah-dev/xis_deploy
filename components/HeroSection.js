@@ -20,6 +20,10 @@ const HeroBlob = ({ sx = {} }) => {
 };
 
 const HeroSection = () => {
+  const gradientStyleMain = {
+    background:
+      "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
+  };
   const gradientStyle = {
     background: "rgba(255, 255, 255, 0.1)",
   };
@@ -71,19 +75,22 @@ const HeroSection = () => {
             <div className="text-center">
               <div
                 style={gradientStyle}
-                className="hidden sm:block text-gray-300 text-xl py-1 w-3/4 m-auto rounded-full border-2 border-slate-700 bg"
+                className="font-poppins hidden sm:block text-gray-300 text-lg py-1 w-3/4 m-auto rounded-full border-2 border-slate-700 bg"
               >
                 Build, Deploy & Inspect Quality in Minutes
               </div>
-              <h1 className="text-5xl font-bold my-8">
+              <h1 className="font-nexa text-5xl font-bold my-8">
                 Making Quality Inspection
               </h1>
-              <h1 className="text-5xl font-bold mb-8 text-blue-300">{sub}</h1>
+              <h1 className="font-nexa text-5xl font-bold mb-8 text-blue-300">
+                {sub}
+              </h1>
             </div>
 
-            <div className="flex justify-between w-[350px] m-auto">
+            <div className="font-poppins flex justify-between w-[350px] m-auto">
               <button
-                className="text-xl bg-violet-900 opacity-95 py-2 px-4 rounded-full border-2 border-purple-950"
+                style={gradientStyleMain}
+                className="text-xl  opacity-95 py-2 px-4 rounded-full border-2 border-[#5D38C2] backdrop-blur-2xl"
                 onClick={(_) => {
                   window.open("https://demo.xis.ai", "_blank");
                 }}

@@ -68,10 +68,10 @@ const BlogCard = () => {
               </div>
 
               <div className="px-4  mt-4">
-                <h1 className="font-bold text-white text-lg sm:text-xl">
+                <h1 className="font-bold text-white text-lg sm:text-xl font-inter">
                   {item.blog_title.slice(0, 63)}
                 </h1>
-                <p className="text-sm mt-2 leading-7 text-gray-300">
+                <p className="text-sm mt-2 leading-7 text-gray-300 font-poppins">
                   <Truncate
                     ref={truncateRef}
                     lines={3}
@@ -86,7 +86,7 @@ const BlogCard = () => {
               <Link passHref={true} href={`/blogpost/${item.blog_name}`}>
                 <div
                   style={gradientStyle}
-                  className="w-[40%]  ml-auto mt-4 mr-2 mb-4 py-1  text-gray-300   test-base sm:text-lg text-center  border-2  border-[#5D38C2] rounded-3xl"
+                  className="w-[40%]  font-poppins ml-auto mt-4 mr-2 mb-4 py-1  text-gray-300   test-base sm:text-lg text-center  border-2  border-[#5D38C2] rounded-3xl"
                 >
                   Read More
                 </div>

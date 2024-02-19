@@ -2,12 +2,9 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 
 const AIApplicationsCard = ({ data }) => {
-
-
   const gradientStyle = {
     background:
       "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
-      
   };
 
   const gradientStyleMain = {
@@ -43,17 +40,16 @@ const AIApplicationsCard = ({ data }) => {
           </div>
 
           <div className="px-4  mt-4">
-            <h1 className="font-bold text-white text-lg sm:text-xl">{item.label}</h1>
-         
-              <p className="text-sm mt-2 leading-7 text-gray-300">
-                {item.desc}
-              </p>
-           
+            <h1 className="font-inter font-bold text-white text-lg sm:text-xl">
+              {item.label}
+            </h1>
+
+            <p className="text-sm mt-2 leading-7 text-gray-300 ">{item.desc}</p>
           </div>
 
           <div
             style={gradientStyle}
-            className="w-[50%] sm:w-[60%] md:w-[40%] cursor-pointer ml-auto mt-4 mr-2 mb-4 py-1  text-gray-300   text-sm sm:test-base text-center  border-2  border-[#5D38C2] rounded-3xl"
+            className="font-poppins w-[50%] sm:w-[60%] md:w-[40%] cursor-pointer ml-auto mt-4 mr-2 mb-4 py-1  text-gray-300   text-xs sm:test-base text-center  border-2  border-[#5D38C2] rounded-3xl"
           >
             Get Started
           </div>

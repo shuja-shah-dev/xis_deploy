@@ -43,7 +43,7 @@ const Header = () => {
   }, [router.pathname]);
   return (
     <>
-      <div className=" flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative">
+      <div className=" font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative">
         <div>
           <Link href="/">
             <Image src="/Asset.png" width={90} height={90} alt="logo" />
@@ -52,10 +52,10 @@ const Header = () => {
 
         <div className=" gap-4 text-sm hidden md:flex">
           <Link href="/">Home</Link>
-          <Link href="Products">Products</Link>
-          <Link href="Industries">Industries</Link>
-          <Link href="about">About Us</Link>
-          <Link href="blogs">News & Blogs</Link>
+          <Link href="/Products">Products</Link>
+          <Link href="/Industries">Industries</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/blogs">News & Blogs</Link>
 
           <div onClick={handleClick} className="cursor-pointer">
             Partnership
@@ -66,16 +66,16 @@ const Header = () => {
           {/* <div className="sm:flex md:hidden lg:flex items-center ">
             EN <IoIosArrowDown cursor="pointer" />
           </div> */}
-          <Link href="TalkWithFounder">
+          <Link href="/TalkWithFounder">
             <button className="py-1 px-3 rounded-3xl border-[#5D38C2] border-2 md:hidden lg:flex">
               Talk With Founder
             </button>
           </Link>
 
-          <Link href="contact">
+          <Link href="/contact">
             <button
               style={gradientStyleMain}
-              className="py-1 px-3 rounded-3xl border-[#5D38C2] border-2"
+              className="py-1 px-3 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border-2"
             >
               Contact
             </button>
@@ -138,7 +138,7 @@ const Header = () => {
               p: "1.44rem 0",
             }}
           >
-            <ul className="flex flex-col items-start justify-start w-full">
+            <ul className="flex flex-col items-start justify-start w-full font-poppins">
               <li className="relative items-start justify-start">
                 <Link href="/" aria-label="Home">
                   Home

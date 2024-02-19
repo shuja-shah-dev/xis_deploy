@@ -20,7 +20,7 @@ const HowItWorks = () => {
           <Image src="/right.png" width={500} height={100} alt="right img" />
         </div>
         <div className="mb-32">
-          <h1 className="text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
+          <h1 className="font-inter text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
             How it Works
           </h1>
         </div>
@@ -32,7 +32,7 @@ const HowItWorks = () => {
           <Image src="/line.png" width={32} height={10} alt="dotted-line img" />
         </div>
 
-        <div className="container text-white justify-center items-center pb-10 mx-auto flex ">
+        <div className="container font-poppins text-white justify-center items-center pb-10 mx-auto flex ">
           <div className="flex overflow-hidden  justify-around text-center items-center ">
             <div className="w-2/6 md:py-6 mt-[-50px] ">
               <div className="flex relative md:pb-10 pb-20">
@@ -113,7 +113,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-28 relative">
-          <h1 className=" text-xl sm:text-3xl font-semibold text-white text-center ">
+          <h1 className="font-poppins text-xl sm:text-3xl font-semibold text-white text-center ">
             Start Inspecting with 99% Accuracy
           </h1>
         </div>

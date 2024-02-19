@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     domains: ['be.xis.ai'],
   },
+
 }
 
 module.exports = nextConfig

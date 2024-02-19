@@ -59,7 +59,9 @@ const FeatureCard = ({ data }) => {
           </div>
 
           <div className=" mt-8">
-            <h1 className="font-bold text-white text-xl">{c.label}</h1>
+            <h1 className="font-bold text-white text-xl font-inter">
+              {c.label}
+            </h1>
             {/* <p className="text-sm mt-2 leading-7 text-gray-300 sm:hidden">
               <Truncate
                 ref={truncateRef}
@@ -69,7 +71,7 @@ const FeatureCard = ({ data }) => {
                 }}
               />
             </p> */}
-            <p className="text-sm mt-2 leading-7 text-gray-300  sm:block">
+            <p className="text-sm mt-2 leading-7 text-gray-300 font-poppins sm:block">
               {c.desc}
             </p>
           </div>

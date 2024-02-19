@@ -189,7 +189,7 @@ const page = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
-      <div className="mt-20 relative">
+      <div className="mt-20 relative font-poppins">
         <HeroBlob
           sx={{
             background: "rgba(62, 95, 170, 0.25)",
@@ -225,7 +225,7 @@ const page = () => {
           />
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
-          <h1 className="pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="font-inter pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Get In Touch With Us
           </h1>
           <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">

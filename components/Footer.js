@@ -28,12 +28,12 @@ const Footer = () => {
             <Image src="/Asset.png" width={150} height={100} alt="logo" />
           </Link>
 
-          <p className="mt-4">Precision Beyond Perception</p>
+          <p className="mt-4 font-poppins">Precision Beyond Perception</p>
         </div>
 
-        <div className="text-base flex flex-col text-center md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
+        <div className="text-base flex font-poppins flex-col text-center md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
           <div className="flex flex-col gap-5 ">
-            <div className="font-bold text-xl">
+            <div className="font-bold font-inter text-xl">
               <Link href="/about" aria-label="About">
                 About Us
               </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="font-bold text-xl">
+            <div className="font-bold text-xl font-inter">
               <Link href="/certificates" aria-label="Certificates">
                 Certificates
               </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col gap-5 font-inter">
             <div className="font-bold text-xl ">
               <Link href="/contact" aria-label="Contact">
                 Contact Us

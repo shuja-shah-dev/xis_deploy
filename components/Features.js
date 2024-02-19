@@ -50,10 +50,10 @@ const Features = () => {
           }}
           key={"UniqueElementor1"}
         />
-        <h1 className="text-3xl sm:text-4xl md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="text-3xl font-inter  sm:text-4xl md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Features
         </h1>
-        <h3 className="text-gray-300 text-base sm:text-xl mt-4 text-center">
+        <h3 className="font-poppins text-gray-300 text-base sm:text-xl mt-4 text-center">
           Train the AI based on the dataset you Provided.
         </h3>
       </div>
