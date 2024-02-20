@@ -27,18 +27,18 @@ const FeatureCard = ({ data }) => {
     );
   };
   return (
-    <div className="flex flex-wrap gap-2 sm:gap-6 justify-center">
+    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mx-1 sm:mx-0">
       {data.map((c, index) => (
         <div
           key={index}
           style={gradientStyleMain}
-          className="ftest w-[184px] sm:w-[300px] md:w-[350px] p-6 bg-slate-900 rounded-2xl border-2 border-slate-800"
+          className="ftest w-[200px] sm:w-[300px] md:w-[350px] p-6 bg-slate-900 rounded-2xl border-2 border-slate-800"
         >
           <style jsx>{`
-            @media (max-width: 391px) {
+            @media (max-width: 423px) {
               .ftest {
-                width: 90%;
-                margin: 2px 8px;
+                width: 85%;
+                // margin: 2px 8px;
               }
             }
 
@@ -71,7 +71,7 @@ const FeatureCard = ({ data }) => {
             <h1 className="font-bold text-white text-xl font-inter">
               {c.label}
             </h1>
-            {/* <p className="text-sm mt-2 leading-7 text-gray-300 sm:hidden">
+            <p className="text-sm mt-2 leading-7 text-gray-300 sm:hidden">
               <Truncate
                 ref={truncateRef}
                 lines={3}
@@ -79,8 +79,8 @@ const FeatureCard = ({ data }) => {
                   __html: DOMPurify.sanitize(truncateText(c.desc, 150)),
                 }}
               />
-            </p> */}
-            <p className="text-sm mt-2 leading-7 text-gray-300 font-poppins sm:block">
+            </p>
+            <p className="text-sm mt-2 leading-7 text-gray-300 hidden font-poppins sm:block">
               {c.desc}
             </p>
           </div>

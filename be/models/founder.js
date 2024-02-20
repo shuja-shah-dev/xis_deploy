@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const contactSchema = new mongoose.Schema({
+const FounderSchema = new mongoose.Schema({
   fname: {
     type: String,
     required: [true, "First Name is required."],
@@ -19,13 +19,9 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: [true, "Job Title is required."],
   },
-  company: {
+  org: {
     type: String,
-    required: [true, "Company is required."],
-  },
-  topic: {
-    type: String,
-    required: [true, "Topic is required."],
+    required: [true, "Organization is required."],
   },
   email: {
     type: String,
@@ -33,16 +29,12 @@ const contactSchema = new mongoose.Schema({
     trim: true,
     match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Invalid email address"],
   },
-  desc: {
-    type: String,
-    required: [true, "Message is required."],
-  },
   date: {
     type: Date,
     default: Date.now,
   },
 });
 
-const Contact = mongoose.model("Contact", contactSchema);
+const Founder = mongoose.model("Founder", FounderSchema);
 
-module.exports = Contact;
+module.exports = Founder;

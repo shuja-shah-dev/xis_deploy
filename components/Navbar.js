@@ -67,7 +67,7 @@ const Header = () => {
             EN <IoIosArrowDown cursor="pointer" />
           </div> */}
           <Link href="/TalkWithFounder">
-            <button className="py-1 px-3 rounded-3xl border-[#5D38C2] border-2 md:hidden lg:flex">
+            <button className="py-1 px-3 rounded-3xl border-[#5D38C2] border md:hidden lg:flex">
               Talk With Founder
             </button>
           </Link>
@@ -75,7 +75,7 @@ const Header = () => {
           <Link href="/contact">
             <button
               style={gradientStyleMain}
-              className="py-1 px-3 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border-2"
+              className="py-1 px-3 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border"
             >
               Contact
             </button>
@@ -165,13 +165,23 @@ const Header = () => {
               </Link> */}
               {/* </li> */}
               <li className="relative items-start justify-start">
-                <Link href="/Products" aria-label="Contact">
+                <Link href="/Products" aria-label="Products">
                   Products
                 </Link>
               </li>
-              <li className="relative items-start justify-start">
-                <Link href="/Industries" aria-label="Contact">
+              <li className="relative items-start justify-start ">
+                <Link href="/Industries" aria-label="Industries">
                   Industries
+                </Link>
+              </li>
+              <li className="relative items-start justify-start sm:hidden">
+                <Link href="/contact" aria-label="Contact">
+                  Contact
+                </Link>
+              </li>
+              <li className="relative items-start justify-start sm:hidden w-full">
+                <Link href="/TalkWithFounder" aria-label="TalkWithFounder">
+                  Talk With Founder
                 </Link>
               </li>
             </ul>

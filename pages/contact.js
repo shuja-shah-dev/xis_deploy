@@ -5,16 +5,10 @@ import Head from "next/head";
 import "intersection-observer";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Roboto } from "next/font/google";
 import Alert from "@mui/material/Alert";
 import { BASE_URL } from "@/common/base_config";
 import Modal from "@mui/material/Modal";
 import { HeroBlob } from "@/components/HeroSection";
-
-const roboto = Roboto({
-  weight: ["100", "300", "400", "500", "700"],
-  subsets: ["latin"],
-});
 
 const page = () => {
   useEffect(() => {
@@ -57,12 +51,13 @@ const page = () => {
       } else {
         const result = await response.json();
         console.log("Success:", result);
-        setfName("");
-        setlName("");
-        setEmail("");
-        settopic("");
-        setcompany("");
-        setDesc("");
+        setfName('');
+        setlName('');
+        setEmail('');
+        settopic('');
+        setcompany('');
+        setDesc('');
+        setjobTitle('');
         setShowAlert(true);
         setTimeout(() => {
           setShowAlert(false);
@@ -225,7 +220,7 @@ const page = () => {
           />
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
-          <h1 className="font-inter pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Get In Touch With Us
           </h1>
           <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
@@ -248,14 +243,14 @@ const page = () => {
               />
               <input
                 name="fname"
-                // value={name}
+                value={fname}
                 // id="name"
                 onChange={handleChange}
                 style={gradientStyleMain}
                 required
                 placeholder="First Name*"
                 type="text"
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -269,12 +264,13 @@ const page = () => {
               />
               <input
                 name="lname"
+                value={lname}
                 required
                 onChange={handleChange}
                 style={gradientStyleMain}
                 placeholder="Last Name*"
                 type="text"
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -289,11 +285,12 @@ const page = () => {
               <input
                 name="jobTitle"
                 required
+                value={jobTitle}
                 onChange={handleChange}
                 style={gradientStyleMain}
                 placeholder="Job Title*"
                 type="text"
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -308,11 +305,12 @@ const page = () => {
               <input
                 name="company"
                 required
+                value={company}
                 onChange={handleChange}
                 style={gradientStyleMain}
                 placeholder="Company*"
                 type="text"
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -327,11 +325,12 @@ const page = () => {
               <input
                 name="topic"
                 required
+                value={topic}
                 onChange={handleChange}
                 style={gradientStyleMain}
                 placeholder="Topic*"
                 type="text"
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -346,11 +345,12 @@ const page = () => {
               <input
                 name="email"
                 type="email"
+                value={email}
                 required
                 onChange={handleChange}
                 style={gradientStyleMain}
                 placeholder="Work Email*"
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -365,12 +365,13 @@ const page = () => {
               <textarea
                 type="message"
                 name="desc"
+                value={desc}
                 required
                 onChange={handleChange}
                 style={gradientStyleMain}
                 placeholder="How can we help you?*"
                 rows={7}
-                className="rounded-xl  outline-none py-2 px-12 border-2 border-[#5D38C2] w-full text-[#8A8A8E] "
+                className="rounded-xl  outline-none py-2 px-12 border border-[#5D38C2] w-full text-[#8A8A8E] "
               />
             </div>
 
@@ -378,7 +379,7 @@ const page = () => {
               type="submit"
               style={gradientStyle}
               className="cursor-pointer z-50 w-32 ml-auto
-               rounded-full border-2 border-[#5D38C2]
+               rounded-full border border-[#5D38C2]
             text-white 
            py-2 px-6 "
             >
@@ -423,7 +424,8 @@ const page = () => {
                     <div className="modal-container">
                       <div className="modal-container">
                         <Alert severity="error">
-                          Email address already exists
+                          {/* Email address already exists */}
+                          Couldn't send Email. Kindly fill the form correctly.
                         </Alert>
                       </div>
                     </div>

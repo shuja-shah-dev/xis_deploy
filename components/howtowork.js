@@ -13,14 +13,14 @@ const HowItWorks = () => {
     //py-28
     <div className="h-full border-2 border-slate-800 rounded-2xl relative ">
       <div style={gradientStyle}>
-        <div className="absolute  sm:top-[-180px]">
+        <div className="absolute  sm:top-[-180px] top-[-30px]">
           <Image src="/left.png" width={500} height={100} alt="left img" />
         </div>
-        <div className="absolute right-[0px] sm:top-[200px] top-[650px]">
+        <div className="absolute right-[0px] sm:top-[200px] top-[820px]">
           <Image src="/right.png" width={500} height={100} alt="right img" />
         </div>
         <div className="mb-32">
-          <h1 className="font-inter text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
+          <h1 className="font-inter text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
             How it Works
           </h1>
         </div>
@@ -113,7 +113,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-28 relative">
-          <h1 className="font-poppins text-xl sm:text-3xl font-semibold text-white text-center ">
+          <h1 className="font-poppins text-lg sm:text-3xl font-semibold text-white text-center ">
             Start Inspecting with 99% Accuracy
           </h1>
         </div>

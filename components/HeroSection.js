@@ -5,6 +5,7 @@ import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
 
 const HeroBlob = ({ sx = {} }) => {
+
   return (
     <Box
       sx={{
@@ -22,6 +23,7 @@ const HeroBlob = ({ sx = {} }) => {
 };
 
 const HeroSection = () => {
+
   const gradientStyleMain = {
     background:
       "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
@@ -29,9 +31,6 @@ const HeroSection = () => {
   const gradientStyle = {
     background: "rgba(255, 255, 255, 0.1)",
   };
-  //  const gradientStyleMain = {
-  //  background: "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)"
-  // };
 
   const choices = ["Private", "End-to-End", "Accessible", "Simple"];
   const choicesLength = choices.length;
@@ -72,27 +71,27 @@ const HeroSection = () => {
         </video>
       </div>
       <div className="relative z-10 ">
-        <div className="text-white flex justify-center items-center pt-[110px] pb-48">
-          <div>
-            <div className="text-center">
+        <div className="text-white flex justify-center items-center pt-[110px] pb-28 sm:pb-48 ">
+          <div className="overflow-hidden">
+            <div className="text-center px-2">
               <div
                 style={gradientStyle}
-                className="font-poppins hidden sm:block text-gray-300 text-lg py-1 w-3/4 m-auto rounded-full border-2 border-slate-700 bg"
+                className="font-poppins hidden sm:block text-gray-300 text-lg py-1 w-[60%] m-auto rounded-full border border-slate-700 bg"
               >
                 Build, Deploy & Inspect Quality in Minutes
               </div>
-              <h1 className="font-nexa text-5xl font-bold my-8">
+              <h1 className="font-nexa text-5xl sm:text-6xl font-bold my-8 text-shadow line-height-82 gradient-text">
                 Making Quality Inspection
               </h1>
-              <h1 className="font-nexa text-5xl font-bold mb-8 text-blue-300">
+              <h1 className="line-height-82 font-nexa text-5xl sm:text-6xl font-bold mb-8 bg-gradient-to-r z-50 from-[#A9C3FF] via-[#C8F3FF] to-transparent inline-block text-transparent bg-clip-text">
                 {sub}
               </h1>
             </div>
 
-            <div className="font-poppins flex justify-between w-[350px] m-auto">
+            <div className="font-poppins flex justify-between w-[350px] m-auto px-6">
               <button
                 style={gradientStyleMain}
-                className="text-xl  opacity-95 py-2 px-4 rounded-full border-2 border-[#5D38C2] backdrop-blur-2xl"
+                className="text-sm sm:text-xl  opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
                 onClick={(_) => {
                   window.open("https://demo.xis.ai", "_blank");
                 }}
@@ -100,7 +99,7 @@ const HeroSection = () => {
                 Get a Demo
               </button>
               <div
-                className="flex gap-1 items-center cursor-pointer"
+                className="flex gap-1 items-center cursor-pointer text-sm"
                 onClick={(_) => {
                   window.open("https://beltline.glitch.me", "_blank");
                 }}

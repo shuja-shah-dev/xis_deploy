@@ -9,9 +9,13 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 import { IoMail } from "react-icons/io5";
+
+import { HeroBlob } from "./HeroSection";
+
 const Footer = () => {
   return (
     <div className=" pb-6 pt-24 relative ">
+      
       <div className="absolute inset-0">
         <Image
           src="/Rectangle 75.png"
@@ -23,7 +27,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row text-gray-300 gap-14 justify-around pb-24 relative z-10 ">
-        <div className="w-1/4 lg:w-auto m-auto lg:m-0 text-center lg:text-left">
+        <div className=" m-auto lg:m-0 text-center lg:text-left">
           <Link href="/">
             <Image src="/Asset.png" width={150} height={100} alt="logo" />
           </Link>
@@ -31,7 +35,7 @@ const Footer = () => {
           <p className="mt-4 font-poppins">Precision Beyond Perception</p>
         </div>
 
-        <div className="text-base flex font-poppins flex-col text-center md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
+        <div className="text-base flex font-poppins flex-col text-left md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
           <div className="flex flex-col gap-5 ">
             <div className="font-bold font-inter text-xl">
               <Link href="/about" aria-label="About">
@@ -76,7 +80,7 @@ const Footer = () => {
                 Contact Us
               </Link>
             </div>
-            <div className="flex flex-col justify-center gap-5 items-center">
+            <div className="flex flex-col justify-center gap-5 md:items-center">
               <Link href="/contact" aria-label="Contact">
                 <div className="flex md:ml-[-20px]">
                   <MdOutlinePhoneIphone size={24} color="white" /> +49 7045 2044

@@ -8,6 +8,7 @@ const path = require("path");
 
 const authRoutes = require("./routes/authRoutes");
 const postcontact = require("./routes/postcontact");
+const founderRoute = require("./routes/founderRoutes");
 const blogRoutes = require("./routes/blogRoutes")
 
 app.use(cors());
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.post("/contact", postcontact);
+app.post("/founder", founderRoute);
 app.use("/", blogRoutes);
 
 

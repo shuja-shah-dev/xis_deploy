@@ -16,8 +16,8 @@ const IndustryCard = ({ data }) => {
           <style jsx>{`
             @media (max-width: 400px) {
               .itest {
-                width: 90%;
-                margin: 2px 8px;
+                width: 75%;
+                margin: 2px;
               }
             }
 
@@ -30,9 +30,8 @@ const IndustryCard = ({ data }) => {
             .itest:hover {
               outline: 2px solid #5d38c2;
             }
-
           `}</style>
-          <div className="w-[184px] sm:w-[300px] md:w-[350px] h-[200px] sm:h-[300px] rounded-2xl">
+          <div className="w-[184px] h-[200px] sm:w-[300px] md:w-[350px]  sm:h-[300px] rounded-2xl">
             <Image
               className="rounded-2xl"
               src={c.path}

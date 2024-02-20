@@ -12,8 +12,13 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         nexa: ["Nexa Bold", "sans-serif"],
       },
+      lineHeight: {
+        82: "82px",
+      },
+      boxShadow: {
+        custom: "5px 6px 5px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   plugins: [],
 };
-

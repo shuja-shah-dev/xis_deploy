@@ -10,10 +10,6 @@ import Truncate from "react-truncate-html";
 import Link from "next/link";
 import { HeroBlob } from "@/components/HeroSection";
 
-const roboto = Roboto({
-  weight: ["100", "300", "400", "500", "700"],
-  subsets: ["latin"],
-});
 const page = () => {
   const gradientStyle = {
     background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
@@ -34,6 +30,32 @@ const page = () => {
       (truncatedContent.length > maxLength ? "..." : "")
     );
   };
+  const [allBlogs, setAllBlogs] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchedResults, setSearchedResults] = useState([]);
+
+    const filterPrompts = (searchtext) => {
+      const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+      return allBlogs.filter(
+        (item) =>
+          regex.test(item.blog_title) 
+      );
+  };
+  
+  const handleChange = (e) => {
+   clearTimeout(searchTimeout);
+   setSearchText(e.target.value);
+
+   // debounce method
+   setSearchTimeout(
+     setTimeout(() => {
+       const searchResult = filterPrompts(e.target.value);
+       setSearchedResults(searchResult);
+     }, 500)
+   );
+
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,6 +64,7 @@ const page = () => {
         if (response.ok) {
           const data = await response.json();
           setSubmitBlog(data);
+          setAllBlogs(data);
         } else {
           console.log(error, "Error");
         }
@@ -52,6 +75,8 @@ const page = () => {
 
     fetchData();
   }, []);
+
+  console.log(searchedResults);
 
   return (
     <>
@@ -161,7 +186,7 @@ const page = () => {
           />
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
-          <h1 className="font-inter pb-1.5 text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Welcome to the Xis.ai Blogs
           </h1>
           <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
@@ -178,16 +203,18 @@ const page = () => {
               className="absolute ml-4 mt-1.5"
             />
             <input
+              onChange={handleChange}
+              value={searchText}
               placeholder="Search By Keywords, industry or application*"
               type="text"
               className="font-poppins rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
             />
             <button
               style={gradientStyle}
-              className="cursor-pointer z-50 w-32 sm:ml-auto  test-base sm:text-lg
+              className="cursor-pointer z-50 w-[100px] sm:w-32 sm:ml-auto  test-xs sm:text-lg
                rounded-full border-2 border-[#5D38C2]
             text-white 
-           py-1 sm:py-2 px-2 sm:px-6 font-poppins"
+           py-1 sm:py-2  sm:px-6 font-poppins"
             >
               Subscribe
             </button>
@@ -220,7 +247,7 @@ const page = () => {
 
                     <div className=" flex flex-col w-full md:w-2/5">
                       <div className="px-4mt-4">
-                        <h1 className="font-inter font-semibold text-white text-4xl">
+                        <h1 className="font-inter text-white text-2xl sm:text-4xl">
                           {item.blog_title.slice(0, 63)}
                         </h1>
                         <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
@@ -241,7 +268,7 @@ const page = () => {
                       >
                         <div
                           style={gradientStyleMain}
-                          className="font-poppins w-[30%] mt-4 mr-2 mb-4 py-1  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
+                          className="font-poppins w-[40%] sm:w-[30%] mt-4 mr-2 mb-4 py-1 lg:py-2  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
                         >
                           Read More
                         </div>
@@ -254,7 +281,11 @@ const page = () => {
           <h3 className="font-inter mb-10 text-white test-semibold text-2xl sm:ml-10">
             LATEST STORIES
           </h3>
-          <BlogCard />
+          {searchText ? (
+            <BlogCard data={searchedResults} />
+          ) : (
+            <BlogCard data={submitBlog} />
+          )}
         </div>
       </div>
     </>

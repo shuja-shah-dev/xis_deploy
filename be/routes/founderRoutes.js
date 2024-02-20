@@ -2,37 +2,33 @@ require("dotenv").config(); // Add this line at the top of your file
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const Contact = require("../models/contact");
+const Founder = require("../models/founder");
 
 const emailaddress = process.env.GMAIL_USER;
 const pass = process.env.GMAIL_PASS;
 
-router.post("/contact", async (req, res) => {
+router.post("/founder", async (req, res) => {
   try {
-    const { fname, lname, jobTitle, company, topic, email, desc } = req.body;
+    const { fname, lname, jobTitle, org, email} = req.body;
     if (
       !fname ||
       !email ||
       !lname ||
-      !topic ||
-      !company ||
-      !jobTitle ||
-      !desc
+      !org ||
+      !jobTitle 
+   
     ) {
       return res.status(400).json({ error: "Bad request" });
     }
-
     // Save contact details to the database
-    const contact = new Contact({
+    const founder = new Founder({
       fname,
       lname,
       jobTitle,
-      company,
-      topic,
+      org,
       email,
-      desc,
     });
-    await contact.save();
+    await founder.save();
 
     // Send email using Nodemailer
     const transporter = nodemailer.createTransport({
@@ -50,8 +46,8 @@ router.post("/contact", async (req, res) => {
       from: req.body.email,
       to: "ahmadhasham2001@gmail.com", // Replace with the recipient's email address
       cc: req.body.email,
-      subject: `Xis.ai Contact Form Submission`,
-      html: `<p>First Name: ${fname}</p><p>Last Name: ${lname}</p><p>Topic: ${topic}</p><p>Company: ${company}</p><p>Job Title: ${jobTitle}</p><p>Email: ${email}</p><p>Message: ${desc}</p>`,
+      subject: `Xis.ai Talk With Founder Form Submission`,
+      html: `<p>First Name: ${fname}</p><p>Last Name: ${lname}</p><p>Organization: ${org}</p><p>Job Title: ${jobTitle}</p><p>Email: ${email}</p>`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -63,7 +59,7 @@ router.post("/contact", async (req, res) => {
         // Send the success response here
         res
           .status(201)
-          .json({ message: "Contact created successfully", contact });
+          .json({ message: "Instance created successfully", founder });
       }
     });
   } catch (error) {
