@@ -220,11 +220,19 @@ const page = () => {
           />
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
-          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold text-center bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
+          {/* <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold text-center bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
             Get In Touch With Us
           </h1>
           <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
             Please fill in the following form, and we’ll be in touch shortly
+          </h3> */}
+          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+            Let’s explore how xis.ai can work for you
+          </h1>
+          <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+            Tell us a little about yourself in the form below and we'll connect
+            you with a xis.ai expert who can share more about the product and
+            answer any questions you have. 
           </h3>
         </div>
 

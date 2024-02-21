@@ -10,7 +10,7 @@ const IndustryCard = ({ data }) => {
   };
   //
   return (
-    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
+    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center z-50 relative">
       {data.map((c, index) => (
         <div key={index} className="itest relative">
           <style jsx>{`

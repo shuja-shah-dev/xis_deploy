@@ -13,9 +13,16 @@ import { IoMail } from "react-icons/io5";
 import { HeroBlob } from "./HeroSection";
 
 const Footer = () => {
+    const gradientStyle = {
+      background:
+        "linear-gradient(317deg, rgba(93, 56, 194, 0.25) -1.1%, rgba(182, 61, 232, 0.00) 52.97%)",
+      border: "1px solid #5D38C2",
+      padding: "6px",
+    borderRadius: "12px"
+  };
+  
   return (
     <div className=" pb-6 pt-24 relative ">
-      
       <div className="absolute inset-0">
         <Image
           src="/Rectangle 75.png"
@@ -32,7 +39,9 @@ const Footer = () => {
             <Image src="/Asset.png" width={150} height={100} alt="logo" />
           </Link>
 
-          <p className="mt-4 font-poppins text-left sm:text-center">Precision Beyond Perception</p>
+          <p className="mt-4 font-poppins text-left sm:text-center">
+            Precision Beyond Perception
+          </p>
         </div>
 
         <div className="text-base flex font-poppins flex-col text-left md:text-left ml-16  sm:m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
@@ -108,14 +117,23 @@ const Footer = () => {
         <div>© 2024 Xis.ai | All Rights Reserved.</div>
         <div className="flex gap-4 lg:ml-[550px] pt-6 lg:pt-0">
           <Link
+            style={gradientStyle}
             target="_blank"
             href="https://www.facebook.com/profile.php?id=61552506112246"
             aria-label="Facebook"
           >
             <FaFacebookF size={24} color="white" />
           </Link>
-          <FaTwitter size={24} color="white" />
           <Link
+            style={gradientStyle}
+            target="_blank"
+            href="#"
+            aria-label="Twitter"
+          >
+            <FaTwitter size={24} color="white" />
+          </Link>
+          <Link
+            style={gradientStyle}
             target="_blank"
             href="https://www.instagram.com/xis.ai.official/"
             aria-label="Instagram"
@@ -123,6 +141,7 @@ const Footer = () => {
             <FaInstagramSquare size={24} color="white" />
           </Link>
           <Link
+            style={gradientStyle}
             target="_blank"
             href="https://www.linkedin.com/company/xis-ai/mycompany/"
             aria-label="Linkedin"
@@ -130,6 +149,7 @@ const Footer = () => {
             <FaLinkedin size={24} color="white" />
           </Link>
           <Link
+            style={gradientStyle}
             target="_blank"
             href="https://www.youtube.com/@xisaiofficial"
             aria-label="Youtube"

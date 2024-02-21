@@ -8,6 +8,16 @@ const HowItWorks = () => {
     padding: "100px 0px",
     position: "relative",
   };
+const gradientStyleMain = {
+  background:
+    "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
+};
+  const gradientText = {
+     background: "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  };
 
   return (
     //py-28
@@ -112,10 +122,16 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="mt-28 relative">
-          <h1 className="font-poppins text-lg sm:text-3xl font-semibold text-white text-center ">
-            Start Inspecting with 99% Accuracy
-          </h1>
+        <div className="mt-20 relative flex justify-center">
+          <div
+                style={gradientStyleMain}
+                className="text-sm z-50 sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
+               
+              >
+          {/* <h1 style={gradientText} className="font-poppins text-lg sm:text-3xl font-semibold text-center "> */}
+              Start Inspecting with 99% Accuracy
+              </div>
+          
         </div>
       </div>
     </div>

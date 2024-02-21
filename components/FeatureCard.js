@@ -27,12 +27,12 @@ const FeatureCard = ({ data }) => {
     );
   };
   return (
-    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mx-1 sm:mx-0">
+    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mx-1 sm:mx-0 relative z-50">
       {data.map((c, index) => (
         <div
           key={index}
           style={gradientStyleMain}
-          className="ftest w-[200px] sm:w-[300px] md:w-[350px] p-6 bg-slate-900 rounded-2xl border-2 border-slate-800"
+          className="ftest w-[200px] sm:w-[300px] md:w-[350px] p-6  rounded-2xl border-2 border-slate-800"
         >
           <style jsx>{`
             @media (max-width: 424px) {

@@ -57,20 +57,22 @@ const Header = () => {
           <Link href="/about">About Us</Link>
           <Link href="/blogs">News & Blogs</Link>
 
-          <div onClick={handleClick} className="cursor-pointer">
+          {/* <div  className="cursor-pointer">
             Partnership
-          </div>
+          </div> */}
         </div>
 
         <div className="hidden sm:flex gap-4">
           {/* <div className="sm:flex md:hidden lg:flex items-center ">
             EN <IoIosArrowDown cursor="pointer" />
           </div> */}
-          <Link href="/TalkWithFounder">
-            <button className="py-1 px-3 rounded-3xl border-[#5D38C2] border md:hidden lg:flex">
-              Talk With Founder
-            </button>
-          </Link>
+
+          <button
+            onClick={handleClick}
+            className="py-1 px-3 rounded-3xl border-[#5D38C2] border md:hidden lg:flex"
+          >
+            Request A Partnership
+          </button>
 
           <Link href="/contact">
             <button
@@ -174,22 +176,23 @@ const Header = () => {
                   Industries
                 </Link>
               </li>
-              <li
-                onClick={handleClick}
-                className="relative items-start justify-start sm:hidden w-full cursor-pointer bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400"
-              >
-                Partnership
-              </li>
               <li className="relative items-start justify-start sm:hidden bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/contact" aria-label="Contact">
                   Contact
                 </Link>
               </li>
-              <li className="relative items-start justify-start sm:hidden w-full bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
+              <li
+                onClick={handleClick}
+                className="relative items-start justify-start sm:hidden w-full cursor-pointer bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400"
+              >
+                Request A Partnership
+              </li>
+
+              {/* <li className="relative items-start justify-start sm:hidden w-full bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/TalkWithFounder" aria-label="TalkWithFounder">
                   Talk With Founder
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </Box>
         </Box>
