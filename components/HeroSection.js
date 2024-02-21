@@ -5,7 +5,6 @@ import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
 
 const HeroBlob = ({ sx = {} }) => {
-
   return (
     <Box
       sx={{
@@ -23,7 +22,6 @@ const HeroBlob = ({ sx = {} }) => {
 };
 
 const HeroSection = () => {
-
   const gradientStyleMain = {
     background:
       "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
@@ -95,7 +93,7 @@ const HeroSection = () => {
               >
                 Build, Deploy & Inspect Quality in Minutes
               </div>
-              <h1 className="font-nexa text-5xl sm:text-6xl font-bold my-8 text-shadow line-height-82 gradient-text">
+              <h1 className="font-nexa text-5xl sm:text-6xl pb-2 font-bold my-8 text-shadow line-height-82 gradient-text">
                 Making Quality Inspection
               </h1>
               <h1 className="line-height-82 font-nexa text-5xl sm:text-6xl font-bold mb-8 bg-gradient-to-r z-50 from-[#A9C3FF] via-[#C8F3FF] to-transparent inline-block text-transparent bg-clip-text">
