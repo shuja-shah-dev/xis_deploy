@@ -41,10 +41,9 @@ router.post("/founder", async (req, res) => {
         rejectUnauthorized: false,
       },
     });
-    // muti.rehman@xray-lab.com
     const mailOptions = {
       from: req.body.email,
-      to: "ahmadhasham2001@gmail.com", // Replace with the recipient's email address
+      to: "muti.rehman@xray-lab.com", // Replace with the recipient's email address
       cc: req.body.email,
       subject: `Xis.ai Talk With Founder Form Submission`,
       html: `<p>First Name: ${fname}</p><p>Last Name: ${lname}</p><p>Organization: ${org}</p><p>Job Title: ${jobTitle}</p><p>Email: ${email}</p>`,

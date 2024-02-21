@@ -5,17 +5,26 @@ import React, { useState, useRef } from "react";
 import { HeroBlob } from "./HeroSection";
 
 const Robotics = () => {
+    const videoRef = useRef(null);
+
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+  };
+  
   return (
     <div className="px-16 pb-28 relative">
-      <div className="flex lg:flex-row flex-col items-center ">
-        <div className="md:w-[60%] m-auto">
+      <div className="flex lg:flex-row flex-col justify-around items-center ">
+        <div onClick={playVideo}>
           <video
             autoPlay
+            playsInline
             muted
             loop
             className="video"
             style={{
-              width: "900px",
+              width: "760px",
               height: "auto",
               borderRadius: "20px",
             }}
@@ -24,19 +33,16 @@ const Robotics = () => {
           </video>
         </div>
 
-        <div className="text-white w-full lg:w-[40%] lg:ml-20 mt-10 lg:mt-0">
-          <div className="w-full mt-10 lg:mt-0">
-            <p className="text-left leading-7 ">
-              xis.ai's expertise extends to providing comprehensive support in
-              robotics and automation. By providing support for ROS/ROS2 and
-              legacy systems, we optimize efficiency, accuracy, and productivity
-              within industrial pipelines. Our tailored solutions are designed
-              to address specific industry challenges, ensuring seamless
-              integration and maximum impact on operational performance.
-            </p>
-          </div>
+        <div className="text-white  lg:w-1/4 w-full mt-10 lg:mt-0">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0">
+            xis.ai's expertise extends to providing comprehensive support in
+            robotics and automation. By providing support for ROS/ROS2 and
+            legacy systems, we optimize efficiency, accuracy, and productivity
+            within industrial pipelines. Our tailored solutions are designed to
+            address specific industry challenges, ensuring seamless integration
+            and maximum impact on operational performance.
+          </p>
         </div>
-        
       </div>
       <HeroBlob
         sx={{
@@ -59,32 +65,24 @@ const Hardware = () => {
 
   return (
     <div className="px-16 pb-28 pt-4 relative">
-      <div
-        className="flex lg:flex-row flex-col justify-between items-center"
-      >
+      <div className="flex lg:flex-row flex-col justify-around items-center">
         <div>
           <Image
             src="/Component 2.png"
-            width={900}
+            width={760}
             height={500}
             alt="screen img"
           />
         </div>
 
-        <div
-          className="text-white w-full lg:w-[40%] lg:ml-20 mt-10 lg:mt-0"  
-         
-        >
-          <div className="w-full mt-10 lg:mt-0">
-            <p className="text-left leading-7 ">
-              Create your own AI visual inspection model and deploy it on edge
-              devices without any hassle. xis.suite is a expandable platform
-              that can be implemented on already installed equipments i-e
-              cameras, saving time and money. xis.suite's Edge AI ensures
-              efficiency of AI models and privacy of user's data
-            </p>
-          </div>
-
+        <div className="text-white w-full lg:w-1/4  mt-10 lg:mt-0">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0">
+            Create your own AI visual inspection model and deploy it on edge
+            devices without any hassle. xis.suite is a expandable platform that
+            can be implemented on already installed equipments i-e cameras,
+            saving time and money. xis.suite's Edge AI ensures efficiency of AI
+            models and privacy of user's data
+          </p>
         </div>
       </div>
       <HeroBlob
@@ -104,12 +102,12 @@ const Hardware = () => {
 const Software = () => {
   return (
     <div className=" px-16 pb-28 relative">
-      <div className="flex lg:flex-row flex-col justify-around">
+      <div className="flex lg:flex-row flex-col justify-around items-center">
         <div>
           <Image src="/screen.png" width={760} height={500} alt="screen img" />
         </div>
 
-        <div className="text-white flex flex-col lg:w-1/4 w-full mt-10 lg:mt-0">
+        <div className=" lg:w-1/4 w-full mt-10 lg:mt-0">
           {/* <p className="text-left leading-7 ">
             xis.ai provides a robust Vision AI platform enabling companies to
             navigate the entire AI life cycle effortlessly. With our solution,
@@ -117,7 +115,7 @@ const Software = () => {
             independently, establishing a secure foundation that minimizes risks
             and optimizes costs while driving revenue growth.
           </p> */}
-          <p className="text-left mt-4 leading-7">
+          <p className="text-left mt-4 leading-7 lg:ml-7 xl:ml-0">
             xis.ai provides no code, an end-to-end platform for AI visual
             quality inspection. A robust Vision AI platform enabling companies
             to navigate the entire AI life cycle effortlessly. With our
@@ -145,10 +143,7 @@ const Software = () => {
 
 const Switcher = () => {
   const [activeTab, setActiveTab] = useState("software");
-const gradient = {
-  background:
-    "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
-};
+
   return (
     <div
       className="pt-24 relative z-50"
@@ -161,7 +156,7 @@ const gradient = {
           <div
             className={`cursor-pointer  ${
               activeTab === "software"
-                ? " bg-slate-800 rounded-full border-2 border-[#5D38C2]"
+                ? " bg-gradient rounded-full border border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("software")}
@@ -171,7 +166,7 @@ const gradient = {
           <div
             className={`cursor-pointer ${
               activeTab === "hardware"
-                ? "bg-slate-800 rounded-full border-2 border-[#5D38C2]"
+                ? "bg-gradient rounded-full border border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("hardware")}
@@ -181,7 +176,7 @@ const gradient = {
           <div
             className={`cursor-pointer ${
               activeTab === "robotics"
-                ? "bg-slate-800 rounded-full border-2 border-[#5D38C2]"
+                ? "bg-gradient rounded-full border border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("robotics")}

@@ -27,15 +27,15 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row text-gray-300 gap-14 justify-around pb-24 relative z-10 ">
-        <div className=" m-auto lg:m-0 text-center lg:text-left">
+        <div className=" ml-16  sm:m-auto lg:m-0 text-center lg:text-left">
           <Link href="/">
             <Image src="/Asset.png" width={150} height={100} alt="logo" />
           </Link>
 
-          <p className="mt-4 font-poppins">Precision Beyond Perception</p>
+          <p className="mt-4 font-poppins text-left sm:text-center">Precision Beyond Perception</p>
         </div>
 
-        <div className="text-base flex font-poppins flex-col text-left md:text-left m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
+        <div className="text-base flex font-poppins flex-col text-left md:text-left ml-16  sm:m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
           <div className="flex flex-col gap-5 ">
             <div className="font-bold font-inter text-xl">
               <Link href="/about" aria-label="About">

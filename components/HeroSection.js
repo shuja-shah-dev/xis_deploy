@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
 
@@ -46,6 +46,14 @@ const HeroSection = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const videoRef = useRef(null);
+
+  const playVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <div className="relative h-full">
       <HeroBlob
@@ -64,8 +72,15 @@ const HeroSection = () => {
         key={2}
         id="blob2"
       />
-      <div className="absolute inset-0 overflow-hidden ">
-        <video autoPlay muted loop className="w-full  h-full object-cover">
+      <div onClick={playVideo} className="absolute inset-0 overflow-hidden ">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full  h-full object-cover"
+        >
           <source src="/hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -73,7 +88,7 @@ const HeroSection = () => {
       <div className="relative z-10 ">
         <div className="text-white flex justify-center items-center pt-[110px] pb-28 sm:pb-48 ">
           <div className="overflow-hidden">
-            <div className="text-center px-2">
+            <div className="text-center px-3">
               <div
                 style={gradientStyle}
                 className="font-poppins hidden sm:block text-gray-300 text-lg py-1 w-[60%] m-auto rounded-full border border-slate-700 bg"

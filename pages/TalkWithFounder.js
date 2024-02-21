@@ -233,7 +233,7 @@ const page = () => {
           <form
             onSubmit={handleSubmit}
             action=""
-            className="w-3/5 sm:w-1/2 md:w-2/5 m-auto flex flex-col gap-4"
+            className="w-2/3 md:w-2/5 m-auto flex flex-col gap-4"
           >
             <input
               name="email"

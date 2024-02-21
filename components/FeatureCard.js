@@ -35,7 +35,7 @@ const FeatureCard = ({ data }) => {
           className="ftest w-[200px] sm:w-[300px] md:w-[350px] p-6 bg-slate-900 rounded-2xl border-2 border-slate-800"
         >
           <style jsx>{`
-            @media (max-width: 423px) {
+            @media (max-width: 424px) {
               .ftest {
                 width: 85%;
                 // margin: 2px 8px;

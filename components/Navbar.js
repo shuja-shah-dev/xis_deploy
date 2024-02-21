@@ -139,17 +139,17 @@ const Header = () => {
             }}
           >
             <ul className="flex flex-col items-start justify-start w-full font-poppins">
-              <li className="relative items-start justify-start">
+              <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/" aria-label="Home">
                   Home
                 </Link>
               </li>
-              <li className="relative items-start justify-start">
+              <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/about" aria-label="About">
                   About Us
                 </Link>
               </li>
-              <li className="relative items-start justify-start">
+              <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/blogs" aria-label="Blogs">
                   News & Blogs
                 </Link>
@@ -164,22 +164,28 @@ const Header = () => {
                 Request Partnership
               </Link> */}
               {/* </li> */}
-              <li className="relative items-start justify-start">
+              <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/Products" aria-label="Products">
                   Products
                 </Link>
               </li>
-              <li className="relative items-start justify-start ">
+              <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/Industries" aria-label="Industries">
                   Industries
                 </Link>
               </li>
-              <li className="relative items-start justify-start sm:hidden">
+              <li
+                onClick={handleClick}
+                className="relative items-start justify-start sm:hidden w-full cursor-pointer bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400"
+              >
+                Partnership
+              </li>
+              <li className="relative items-start justify-start sm:hidden bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/contact" aria-label="Contact">
                   Contact
                 </Link>
               </li>
-              <li className="relative items-start justify-start sm:hidden w-full">
+              <li className="relative items-start justify-start sm:hidden w-full bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/TalkWithFounder" aria-label="TalkWithFounder">
                   Talk With Founder
                 </Link>
