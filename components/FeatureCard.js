@@ -71,7 +71,7 @@ const FeatureCard = ({ data }) => {
             <h1 className="font-bold text-white text-xl font-inter">
               {c.label}
             </h1>
-            <p className="text-sm mt-2 leading-7 text-gray-300 sm:hidden">
+            {/* <p className="text-sm mt-2 leading-7 text-gray-300 sm:hidden">
               <Truncate
                 ref={truncateRef}
                 lines={3}
@@ -79,8 +79,8 @@ const FeatureCard = ({ data }) => {
                   __html: DOMPurify.sanitize(truncateText(c.desc, 150)),
                 }}
               />
-            </p>
-            <p className="text-sm mt-2 leading-7 text-gray-300 hidden font-poppins sm:block">
+            </p> */}
+            <p className="text-sm mt-2 leading-7 text-gray-300  font-poppins ">
               {c.desc}
             </p>
           </div>

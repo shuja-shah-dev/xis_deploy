@@ -145,7 +145,10 @@ const Software = () => {
 
 const Switcher = () => {
   const [activeTab, setActiveTab] = useState("software");
-
+const gradient = {
+  background:
+    "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
+};
   return (
     <div
       className="pt-24 relative z-50"
@@ -158,7 +161,7 @@ const Switcher = () => {
           <div
             className={`cursor-pointer  ${
               activeTab === "software"
-                ? "bg-slate-800 rounded-full border-2 border-[#5D38C2]"
+                ? " bg-slate-800 rounded-full border-2 border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("software")}

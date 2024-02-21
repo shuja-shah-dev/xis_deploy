@@ -54,7 +54,7 @@ const IndustrySolutions = () => {
         sx={{
           top: "200px",
           right: "-1px",
-          zIndex: "99",
+          zIndex: "-1",
           height: "568px",
           width: "568px",
           // borderRadius: "568px",

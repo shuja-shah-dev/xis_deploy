@@ -65,7 +65,7 @@ const Features = () => {
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "1px",
-          zIndex: "1",
+          zIndex: "-1",
           left: "1px",
         }}
         key={"UniqueElementor2"}
