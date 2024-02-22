@@ -45,24 +45,16 @@ const HeroSection = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const videoRef = useRef(null);
-
-  const playVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
+  const spanStyle = {
+    animation: "spin_words 7s infinite",
+    display: "block",
+    height: "100%",
+    background: "linear-gradient(99deg, #A9C3FF 40.82%, #C8F3FF 62.26%)",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
   };
 
-const spanStyle = {
-  animation: "spin_words 7s infinite",
-  display: "block",
-  height: "100%",
-  background: "linear-gradient(99deg, #A9C3FF 40.82%, #C8F3FF 62.26%)",
-  backgroundClip: "text",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  };
-  
   return (
     <div className="relative h-full">
       <HeroBlob
@@ -81,9 +73,14 @@ const spanStyle = {
         key={2}
         id="blob2"
       />
-      <div onClick={playVideo} className="absolute inset-0 overflow-hidden ">
-        <video
-          ref={videoRef}
+      <div className="absolute inset-0 overflow-hidden ">
+        <img
+          src="/h.gif"
+          alt="Hero GIF"
+          className="w-full h-full object-cover"
+        />
+        {/* <video
+         
           autoPlay
           muted
           loop
@@ -92,7 +89,7 @@ const spanStyle = {
         >
           <source src="/hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
       <div className="relative z-10 ">
         <div className="text-white flex justify-center items-center pt-[110px] pb-28 sm:pb-48 ">
@@ -105,10 +102,10 @@ const spanStyle = {
                 Build, Deploy & Inspect Quality in Minutes
               </div>
               <h1 className="font-nexa text-5xl sm:text-6xl pb-2 font-bold my-8 text-shadow line-height-82 gradient-text">
-                Making Quality AI Inspection
+                Making AI Quality Inspection
               </h1>
               <div className="overflow-hidden max-h-[58px] sm:max-h-[70px] py-2">
-                <div className="flex flex-col  overflow-hiddenline-height-82 font-nexa text-5xl sm:text-6xl font-bold  z-50 ">
+                <div className="flex flex-col mt-[48px] sm:mt-[60px] font-nexa text-5xl sm:text-6xl font-bold  z-50 ">
                   <span style={spanStyle}>Private</span>
                   <span style={spanStyle}>End-to-End</span>
                   <span style={spanStyle}>Accessible</span>
@@ -152,4 +149,3 @@ const spanStyle = {
 export { HeroBlob };
 export default HeroSection;
 //If you want to use hero blob with custom sx prop.
-

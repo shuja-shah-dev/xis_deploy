@@ -16,13 +16,18 @@ const Robotics = () => {
   return (
     <div className="px-16 pb-28 relative">
       <div className="flex lg:flex-row flex-col justify-around items-center ">
-        <div onClick={playVideo}>
+        <div>
+          <img
+            src="/v.gif"
+            alt="video GIF"
+            className="w-full h-full object-cover rounded-2xl sm:hidden"
+          />
           <video
             autoPlay
             playsInline
             muted
             loop
-            className="video"
+            className="video hidden sm:block"
             style={{
               width: "760px",
               height: "auto",
