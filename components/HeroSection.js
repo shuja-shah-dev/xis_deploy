@@ -102,7 +102,7 @@ const HeroSection = () => {
                 Build, Deploy & Inspect Quality in Minutes
               </div>
               <h1 className="font-nexa text-5xl sm:text-6xl pb-2 font-bold my-8 text-shadow line-height-82 gradient-text">
-                Making AI Quality Inspection
+                Making Visual Quality Inspection
               </h1>
               <div className="overflow-hidden max-h-[58px] sm:max-h-[70px] py-2">
                 <div className="flex flex-col mt-[48px] sm:mt-[60px] font-nexa text-5xl sm:text-6xl font-bold  z-50 ">
