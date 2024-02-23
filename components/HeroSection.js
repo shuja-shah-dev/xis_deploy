@@ -55,6 +55,14 @@ const HeroSection = () => {
     WebkitTextFillColor: "transparent",
   };
 
+  const videoRef = useRef(null);
+
+  const playVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <div className="relative h-full">
       <HeroBlob
@@ -73,23 +81,29 @@ const HeroSection = () => {
         key={2}
         id="blob2"
       />
-      <div className="absolute inset-0 overflow-hidden ">
-        <img
+      <div
+        className="absolute inset-0 overflow-hidden "
+        onTouchStart={playVideo()}
+        onTouchMove={playVideo()}
+        onTouchEnd={playVideo()}
+        onTouchCancel={playVideo()}
+      >
+        {/* <img
           src="/h.gif"
           alt="Hero GIF"
           className="w-full h-full object-cover"
-        />
-        {/* <video
-         
+        /> */}
+        <video
+          ref={videoRef}
           autoPlay
+          playsInline
           muted
           loop
-          playsInline
-          className="w-full  h-full object-cover"
+          className="w-full  h-full object-cover z-50"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </div>
       <div className="relative z-10 ">
         <div className="text-white flex justify-center items-center pt-[110px] pb-28 sm:pb-48 ">

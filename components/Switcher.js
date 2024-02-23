@@ -16,18 +16,23 @@ const Robotics = () => {
   return (
     <div className="px-16 pb-28 relative">
       <div className="flex lg:flex-row flex-col justify-around items-center ">
-        <div>
-          <img
+        <div className="z-50">
+          {/* <img
             src="/v.gif"
             alt="video GIF"
             className="w-full h-full object-cover rounded-2xl sm:hidden"
-          />
+          /> */}
           <video
+            ref={videoRef}
+            onTouchStart={playVideo()}
+            onTouchMove={playVideo()}
+            onTouchEnd={playVideo()}
+            onTouchCancel={playVideo()}
             autoPlay
             playsInline
             muted
             loop
-            className="video hidden sm:block"
+            className="video z-50"
             style={{
               width: "760px",
               height: "auto",
@@ -109,7 +114,7 @@ const Software = () => {
     <div className=" px-16 pb-28 relative">
       <div className="flex lg:flex-row flex-col justify-around items-center">
         <div>
-          <Image src="/screen.png" width={760} height={500} alt="screen img" />
+          <Image src="/soft.png" width={760} height={500} alt="screen img " className="rounded-2xl" />
         </div>
 
         <div className=" lg:w-1/4 w-full mt-10 lg:mt-0">

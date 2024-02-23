@@ -25,9 +25,12 @@ export default function Document() {
             function gtag() {
               dataLayer.push(arguments);
             }
-            ${googleTagManagerIds.map((id) => `gtag('js', new Date()); gtag('config', '${id}');`).join('\n')}
+            ${googleTagManagerIds
+              .map((id) => `gtag('js', new Date()); gtag('config', '${id}');`)
+              .join("\n")}
           `}
         </Script>
+
       </Head>
       <body>
         <Main />

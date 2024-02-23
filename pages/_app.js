@@ -260,6 +260,7 @@ export default function App({ Component, pageProps }) {
             "&:hover": {
               transform: "scale(1.1)",
             },
+            marginRight:"72px"
           }}
           // declineButtonStyle={{
           //   color: "#fff",
@@ -297,13 +298,15 @@ export default function App({ Component, pageProps }) {
         >
           {!settings ? (
             <>
-              We use cookies to enhance your browsing experience and analyze
-              site traffic. By clicking 'Accept,' you consent to the use of all
-              cookies. For More Info, see our{" "}
-              <Link href={"/privacy"} className="font-semibold">
-                Privacy Policy
-              </Link>
-              .{" "}
+              <div className="pb-[12px]">
+                We use cookies to enhance your browsing experience and analyze
+                site traffic. By clicking 'Accept,' you consent to the use of
+                all cookies. For More Info, see our{" "}
+                <Link href={"/privacy"} className="font-semibold">
+                  Privacy Policy
+                </Link>
+                .{" "}
+              </div>
             </>
           ) : (
             <Box
