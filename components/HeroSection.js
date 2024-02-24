@@ -81,19 +81,17 @@ const HeroSection = () => {
         key={2}
         id="blob2"
       />
-      <div
-        className="absolute inset-0 overflow-hidden "
-        onTouchStart={playVideo()}
-        onTouchMove={playVideo()}
-        onTouchEnd={playVideo()}
-        onTouchCancel={playVideo()}
-      >
+      <div className="absolute inset-0 overflow-hidden">
         {/* <img
           src="/h.gif"
           alt="Hero GIF"
           className="w-full h-full object-cover"
         /> */}
         <video
+          onTouchStart={playVideo()}
+          onTouchMove={playVideo()}
+          onTouchEnd={playVideo()}
+          onTouchCancel={playVideo()}
           ref={videoRef}
           autoPlay
           playsInline

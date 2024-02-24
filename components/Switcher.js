@@ -5,13 +5,13 @@ import React, { useState, useRef } from "react";
 import { HeroBlob } from "./HeroSection";
 
 const Robotics = () => {
-    const videoRef = useRef(null);
+  //   const videoRef = useRef(null);
 
-    const playVideo = () => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-  };
+  //   const playVideo = () => {
+  //     if (videoRef.current) {
+  //       videoRef.current.play();
+  //     }
+  // };
   
   return (
     <div className="px-16 pb-28 relative">
@@ -23,16 +23,16 @@ const Robotics = () => {
             className="w-full h-full object-cover rounded-2xl sm:hidden"
           /> */}
           <video
-            ref={videoRef}
-            onTouchStart={playVideo()}
-            onTouchMove={playVideo()}
-            onTouchEnd={playVideo()}
-            onTouchCancel={playVideo()}
+            // ref={videoRef}
+            // onTouchStart={playVideo()}
+            // onTouchMove={playVideo()}
+            // onTouchEnd={playVideo()}
+            // onTouchCancel={playVideo()}
             autoPlay
             playsInline
             muted
             loop
-            className="video z-50"
+          
             style={{
               width: "760px",
               height: "auto",
