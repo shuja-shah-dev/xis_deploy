@@ -211,7 +211,7 @@ const page = () => {
             />
             <button
               style={gradientStyle}
-              className="cursor-pointer z-50 w-[100px] sm:w-32 sm:ml-auto  test-xs sm:text-lg
+              className="cursor-pointer z-50 w-[100px] sm:w-32 sm:ml-auto  text-xs sm:text-lg
                rounded-full border-2 border-[#5D38C2]
             text-white 
            py-1 sm:py-2  sm:px-6 font-poppins"

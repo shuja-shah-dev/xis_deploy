@@ -8,7 +8,7 @@ const LogoBar = () => {
         <Image src="/Frame.png" alt="xray-lab logo" width={130} height={100} />
       </div>
       <div>
-        <Image src="/ipai.png" alt="ipai logo" width={70} height={100} />
+        <Image src="/ipai.png" alt="ipai logo" width={72} height={100} />
       </div>
 
       <div>
