@@ -5,7 +5,6 @@ import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
 import * as THREE from "three";
 
-
 const ThreeScene = () => {
   useEffect(() => {
     // Your Three.js code here
@@ -193,13 +192,13 @@ const HeroSection = () => {
         id="blob2"
       />
       <div className="absolute inset-0 overflow-hidden  ">
-        <ThreeScene />
+        {/* <ThreeScene /> */}
         {/* <img
           src="/h.gif"
           alt="Hero GIF"
           className="w-full h-full object-cover"
         /> */}
-        {/* <video
+        <video
           onTouchStart={playVideo()}
           onTouchMove={playVideo()}
           onTouchEnd={playVideo()}
@@ -213,7 +212,7 @@ const HeroSection = () => {
         >
           <source src="/output.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </div>
       <div className="relative z-10 ">
         <div className="text-white flex justify-center items-center pt-[110px] pb-28 sm:pb-48 ">
