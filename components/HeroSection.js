@@ -3,6 +3,117 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
+import * as THREE from "three";
+
+
+const ThreeScene = () => {
+  useEffect(() => {
+    // Your Three.js code here
+    // const gui = new dat.GUI();
+    // ... (the rest of your script.js content)
+    // Canvas
+    const canvas = document.querySelector("canvas.webgl");
+
+    // Scene
+    const scene = new THREE.Scene();
+
+    // Objects
+    const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
+
+    // Materials
+
+    const material = new THREE.MeshBasicMaterial();
+    material.color = new THREE.Color(0xff0000);
+
+    // Mesh
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+
+    // Lights
+
+    const pointLight = new THREE.PointLight(0xffffff, 0.1);
+    pointLight.position.x = 2;
+    pointLight.position.y = 3;
+    pointLight.position.z = 4;
+    scene.add(pointLight);
+
+    /**
+     * Sizes
+     */
+    const sizes = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+
+    window.addEventListener("resize", () => {
+      // Update sizes
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
+
+      // Update camera
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix();
+
+      // Update renderer
+      renderer.setSize(sizes.width, sizes.height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
+
+    /**
+     * Camera
+     */
+    // Base camera
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      sizes.width / sizes.height,
+      0.1,
+      100
+    );
+    camera.position.x = 0;
+    camera.position.y = 0;
+    camera.position.z = 2;
+    scene.add(camera);
+
+    // Controls
+    // const controls = new OrbitControls(camera, canvas)
+    // controls.enableDamping = true
+
+    /**
+     * Renderer
+     */
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+    });
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    /**
+     * Animate
+     */
+
+    const clock = new THREE.Clock();
+
+    const tick = () => {
+      const elapsedTime = clock.getElapsedTime();
+
+      // Update objects
+      sphere.rotation.y = 0.5 * elapsedTime;
+
+      // Update Orbital Controls
+      // controls.update()
+
+      // Render
+      renderer.render(scene, camera);
+
+      // Call tick again on the next frame
+      window.requestAnimationFrame(tick);
+    };
+
+    tick();
+  }, []);
+
+  return <canvas className="webgl" />;
+};
 
 const HeroBlob = ({ sx = {} }) => {
   return (
@@ -81,13 +192,14 @@ const HeroSection = () => {
         key={2}
         id="blob2"
       />
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden  ">
+        <ThreeScene />
         {/* <img
           src="/h.gif"
           alt="Hero GIF"
           className="w-full h-full object-cover"
         /> */}
-        <video
+        {/* <video
           onTouchStart={playVideo()}
           onTouchMove={playVideo()}
           onTouchEnd={playVideo()}
@@ -101,7 +213,7 @@ const HeroSection = () => {
         >
           <source src="/output.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
       <div className="relative z-10 ">
         <div className="text-white flex justify-center items-center pt-[110px] pb-28 sm:pb-48 ">

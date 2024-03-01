@@ -187,7 +187,7 @@ const page = () => {
         </div> */}
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
           <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
-            Welcome to the Xis.ai Blogs
+            Welcome to the xis.ai Blogs
           </h1>
           <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
             Our central destination for the latest updates, stories and industry
