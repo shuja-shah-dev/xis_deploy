@@ -526,6 +526,7 @@ export default function Home() {
   return (
     <>
       <Head>
+       {/* fix */}
         <title>xis.ai - Simplified Edge AI for Industrial Inspection</title>
         <meta
           name="description"
