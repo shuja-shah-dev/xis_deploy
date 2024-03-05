@@ -526,7 +526,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Xis.ai - Simplified Edge AI for Industrial Inspection</title>
+        <title>xis.ai - Simplified Edge AI for Industrial Inspection</title>
         <meta
           name="description"
           content="XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
