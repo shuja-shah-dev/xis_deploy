@@ -193,18 +193,18 @@ const Slug = ({ blog }) => {
                 </div>
               </div>
               <div className="sm:w-2/3 sm:pl-8 sm:pb-8 mt-4 sm:mt-0 text-center sm:text-left">
+                <div className="max-w-xl ml-auto">
+                  <div className="rounded-lg h-full overflow-hidden mb-4">
+                    <img
+                      alt="contentImage"
+                      className="object-cover object-center  w-full"
+                      src={`${BASE_URL}/media/${blog[0].blog_image}`}
+                    />
+                  </div>
+                </div>
                 <p
-                  className="leading-relaxed text-lg mb-4"
+                  className="leading-relaxed text-lg mb-4 myCustomDiv "
                   dangerouslySetInnerHTML={createMarkup(blog[0].blog_content)}
-                />
-              </div>
-            </div>
-            <div className="max-w-xl mx-auto">
-              <div className="rounded-lg h-full overflow-hidden mb-4">
-                <img
-                  alt="contentImage"
-                  className="object-cover object-center h-full w-full"
-                  src={`${BASE_URL}/media/${blog[0].blog_image}`}
                 />
               </div>
             </div>

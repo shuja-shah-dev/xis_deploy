@@ -9,7 +9,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 import { IoMail } from "react-icons/io5";
-
+import { FaMedium } from "react-icons/fa6";
 import { HeroBlob } from "./HeroSection";
 
 const Footer = () => {
@@ -131,6 +131,14 @@ const Footer = () => {
             aria-label="Twitter"
           >
             <FaTwitter size={24} color="white" />
+          </Link>
+          <Link
+            style={gradientStyle}
+            target="_blank"
+            href="https://medium.com/@xis.ai/about"
+            aria-label="Medium"
+          >
+            <FaMedium size={24} color="white" />
           </Link>
           <Link
             style={gradientStyle}

@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   images: {
-    domains: ['be.xis.ai'],
+    domains: ['be.xis.ai', 'localhost'],
   },
 
 }
