@@ -10,7 +10,9 @@ const LogoBar = () => {
       <div>
         <Image src="/ipai.png" alt="ipai logo" width={72} height={100} />
       </div>
-
+      <div>
+        <Image src="/aws-activate.png" alt="aws logo" width={175} height={100} />
+      </div>
       <div>
         <Image src="/nframe.png" alt="nvidia logo" width={140} height={47} />
       </div>
