@@ -114,7 +114,6 @@ const Blogadmin = () => {
     }));
   };
 
-
   const handleEdit = (blogId) => {
     setEditBlogId(blogId);
     setOpen(true);
@@ -320,7 +319,6 @@ const Blogadmin = () => {
                           ["clean"],
                         ],
                       }}
-                  
                     />
                   </div>
 

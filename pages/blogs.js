@@ -9,15 +9,17 @@ import DOMPurify from "dompurify";
 import Truncate from "react-truncate-html";
 import Link from "next/link";
 import { HeroBlob } from "@/components/HeroSection";
+import { PropagateLoader } from "react-spinners";
 
 const page = () => {
   const gradientStyle = {
     background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
   };
   const gradientStyleMain = {
-    background: "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
-  }
-  
+    background:
+      "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
+  };
+
   const [submitBlog, setSubmitBlog] = useState([]);
   const truncateRef = useRef();
 
@@ -34,49 +36,55 @@ const page = () => {
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
-
-    const filterPrompts = (searchtext) => {
-      const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
-      return allBlogs.filter(
-        (item) =>
-          regex.test(item.blog_title) 
-      );
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const filterPrompts = (searchtext) => {
+    const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+    return allBlogs.filter((item) => regex.test(item.blog_title));
   };
-  
+
   const handleChange = (e) => {
-   clearTimeout(searchTimeout);
-   setSearchText(e.target.value);
+    clearTimeout(searchTimeout);
+    setSearchText(e.target.value);
 
-   // debounce method
-   setSearchTimeout(
-     setTimeout(() => {
-       const searchResult = filterPrompts(e.target.value);
-       setSearchedResults(searchResult);
-     }, 500)
-   );
-
-  }
+    // debounce method
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResults(searchResult);
+      }, 500)
+    );
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/blogs`);
-        if (response.ok) {
-          const data = await response.json();
-          setSubmitBlog(data);
-          setAllBlogs(data);
+        const cachedData = localStorage.getItem("cached_blogs");
+        if (cachedData) {
+          setSubmitBlog(JSON.parse(cachedData));
+          setAllBlogs(JSON.parse(cachedData));
+          setLoading(false);
         } else {
-          console.log(error, "Error");
+          const response = await fetch(`${BASE_URL}/blogs`);
+          if (response.ok) {
+            const data = await response.json();
+            setSubmitBlog(data);
+            setAllBlogs(data);
+            localStorage.setItem("cached_blogs", JSON.stringify(data));
+            setLoading(false);
+          } else {
+            throw new Error("Failed to fetch data");
+          }
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        setError(error.message);
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
-
-  console.log(searchedResults);
+  // console.log(searchedResults);
 
   return (
     <>
@@ -140,6 +148,7 @@ const page = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
+
       <div className="mt-20 relative">
         <HeroBlob
           sx={{
@@ -167,7 +176,7 @@ const page = () => {
             width={900}
           />
         </div>
-
+ 
         <div className=" absolute left-[-100px] top-[100px]  sm:top-[150px]">
           <Image
             src="/Ellipse 172.png"
@@ -176,7 +185,7 @@ const page = () => {
             width={900}
           />
         </div>
-
+ 
         <div className=" absolute right-[-200px] bottom-[-500px] ">
           <Image
             src="/Ellipse 171.png"
@@ -194,99 +203,115 @@ const page = () => {
             news about visual deep learning and computer vision.
           </h3>
         </div>
-
-        <div className="px-6 sm:px-16 py-20 mt-4 mb-32 sm:my-40 border-2 border-slate-800 rounded-2xl ">
-          <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 ">
-            <IoSearch
-              color="#8A8A8E"
-              size={30}
-              className="absolute ml-4 mt-1.5"
-            />
-            <input
-              onChange={handleChange}
-              value={searchText}
-              placeholder="Search By Keywords, industry or application*"
-              type="text"
-              className="font-poppins rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
-            />
-            <button
-              style={gradientStyle}
-              className="cursor-pointer z-50 w-[100px] sm:w-32 sm:ml-auto  text-xs sm:text-lg
-               rounded-full border-2 border-[#5D38C2]
-            text-white 
-           py-1 sm:py-2  sm:px-6 font-poppins"
-            >
-              Subscribe
-            </button>
-            <div className="hidden md:block cursor-pointer border-2 bg-transparent border-[#5D38C2] rounded-2xl px-1 py-0 ml-6 mt-2 h-8">
-              <Image
-                className="mt-1"
-                src="/ic_round-link.svg"
-                alt="Ellipse "
-                height={20}
-                width={20}
-                color="white"
-              />
-            </div>
+        {loading ? (
+          <div
+            style={{
+              width: "100vw",
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginbottom: "50%",
+            }}
+          >
+            <PropagateLoader color="#36d7b7" />
           </div>
+        ) : error ? (
+          <div>Error: {error}</div>
+        ) : (
+          <div className="px-6 sm:px-16 py-20 mt-4 mb-32 sm:my-40 border-2 border-slate-800 rounded-2xl ">
+            <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 ">
+              <IoSearch
+                color="#8A8A8E"
+                size={30}
+                className="absolute ml-4 mt-1.5"
+              />
+              <input
+                onChange={handleChange}
+                value={searchText}
+                placeholder="Search By Keywords, industry or application*"
+                type="text"
+                className="font-poppins rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
+              />
+              <button
+                style={gradientStyle}
+                className="cursor-pointer z-50 w-[100px] sm:w-32 sm:ml-auto  text-xs sm:text-lg
+               rounded-full border-2 border-[#5D38C2]
+            text-white
+           py-1 sm:py-2  sm:px-6 font-poppins"
+              >
+                Subscribe
+              </button>
+              <div className="hidden md:block cursor-pointer border-2 bg-transparent border-[#5D38C2] rounded-2xl px-1 py-0 ml-6 mt-2 h-8">
+                <Image
+                  className="mt-1"
+                  src="/ic_round-link.svg"
+                  alt="Ellipse "
+                  height={20}
+                  width={20}
+                  color="white"
+                />
+              </div>
+            </div>
 
-          {submitBlog &&
-            submitBlog.map(
-              (item, index) =>
-                index == 0 && (
-                  <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
-                    <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
-                      <Image
-                        className="object-cover object-center h-full w-full"
-                        src={`${BASE_URL}${item.blog_image}`}
-                        alt={`content-${index}`}
-                        width={350}
-                        height={300}
-                      />
-                    </div>
-
-                    <div className=" flex flex-col w-full md:w-2/5">
-                      <div className="px-4mt-4">
-                        <h1 className="font-inter text-white text-2xl sm:text-4xl">
-                          {item.blog_title.slice(0, 63)}
-                        </h1>
-                        <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
-                          <Truncate
-                            ref={truncateRef}
-                            lines={3}
-                            dangerouslySetInnerHTML={{
-                              __html: DOMPurify.sanitize(
-                                truncateText(item.blog_content, 150)
-                              ),
-                            }}
-                          />
-                        </p>
+            {submitBlog &&
+              submitBlog.map(
+                (item, index) =>
+                  index == 0 && (
+                    <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
+                      <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
+                        <Image
+                          className="object-cover object-center h-full w-full"
+                          src={`${BASE_URL}${item.blog_image}`}
+                          alt={`content-${index}`}
+                          width={350}
+                          height={300}
+                        />
                       </div>
-                      <Link
-                        passHref={true}
-                        href={`/blogpost/${item.blog_name}`}
-                      >
-                        <div
-                          style={gradientStyleMain}
-                          className="font-poppins w-[40%] sm:w-[30%] mt-4 mr-2 mb-4 py-1 lg:py-2  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
-                        >
-                          Read More
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                )
-            )}
 
-          <h3 className="font-inter mb-10 text-white test-semibold text-2xl sm:ml-10">
-            LATEST STORIES
-          </h3>
-          {searchText ? (
-            <BlogCard data={searchedResults} />
-          ) : (
-            <BlogCard data={submitBlog} />
-          )}
-        </div>
+                      <div className=" flex flex-col w-full md:w-2/5">
+                        <div className="px-4mt-4">
+                          <h1 className="font-inter text-white text-2xl sm:text-4xl">
+                            {item.blog_title.slice(0, 63)}
+                          </h1>
+                          <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
+                            <Truncate
+                              ref={truncateRef}
+                              lines={3}
+                              dangerouslySetInnerHTML={{
+                                __html: DOMPurify.sanitize(
+                                  truncateText(item.blog_content, 150)
+                                ),
+                              }}
+                            />
+                          </p>
+                        </div>
+                        <Link
+                          passHref={true}
+                          href={`/blogpost/${item.blog_name}`}
+                        >
+                          <div
+                            style={gradientStyleMain}
+                            className="font-poppins w-[40%] sm:w-[30%] mt-4 mr-2 mb-4 py-1 lg:py-2  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
+                          >
+                            Read More
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  )
+              )}
+
+            <h3 className="font-inter mb-10 text-white test-semibold text-2xl sm:ml-10">
+              LATEST STORIES
+            </h3>
+            {searchText ? (
+              <BlogCard data={searchedResults} />
+            ) : (
+              <BlogCard data={submitBlog} />
+            )}
+          </div>
+        )}
       </div>
     </>
   );
