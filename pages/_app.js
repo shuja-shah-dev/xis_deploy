@@ -11,7 +11,12 @@ import { Roboto, Lato } from "next/font/google";
 import CrispChat from "@/components/Crisp";
 import Script from "next/script";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
-import "react-quill/dist/quill.snow.css";
+import "react-quill/dist/quill.snow.css"; 
+
+import { QueryClient, QueryClientProvider } from "react-query";
+
+// Create a new QueryClient instance
+const queryClient = new QueryClient();
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -244,91 +249,93 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <AuthProvider>
-        <CookieConsent
-          enableDeclineButton
-          style={{
-            ...dec,
-          }}
-          disableStyles
-          buttonStyle={{
-            color: "#fff",
-            background: "transparent",
-            border: "1px solid #5D38C2",
-            borderRadius: "8px",
-            fontSize: "16px",
-            padding: "8px 12px",
-            "&:hover": {
-              transform: "scale(1.1)",
-            },
-            marginRight:"72px"
-          }}
-          // declineButtonStyle={{
-          //   color: "#fff",
-          //   background: "transparent",
-          //   border: "1px solid #5D38C2",
-          //   borderRadius: "8px",
-          //   fontSize: "16px",
-          //   padding: "8px 12px",
-          //   transform: "scale(1.1)",
-          //   "&:hover": {
-          //     transform: "scale(1.1)",
-          //   },
-          // }}
-          buttonText="Accept"
-          declineButtonText="Settings"
-          buttonWrapperClasses="buttonWrapperT2"
-          // onDecline={(_) => setSettings(true)}
-          customDeclineButtonProps={{
-            onClick: () => setSettings(true),
-            style: {
-              display: settings ? "none" : "block",
-              ...{
-                color: "rgb(255, 255, 255)",
-                background: "transparent",
-                border: "1px solid #5D38C2",
-                borderRadius: "8px",
-                fontSize: "16px",
-                padding: "8px 12px",
-                "&:hover": {
-                  transform: "scale(1.1)",
+        <QueryClientProvider client={queryClient}>
+          <CookieConsent
+            enableDeclineButton
+            style={{
+              ...dec,
+            }}
+            disableStyles
+            buttonStyle={{
+              color: "#fff",
+              background: "transparent",
+              border: "1px solid #5D38C2",
+              borderRadius: "8px",
+              fontSize: "16px",
+              padding: "8px 12px",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+              marginRight: "72px",
+            }}
+            // declineButtonStyle={{
+            //   color: "#fff",
+            //   background: "transparent",
+            //   border: "1px solid #5D38C2",
+            //   borderRadius: "8px",
+            //   fontSize: "16px",
+            //   padding: "8px 12px",
+            //   transform: "scale(1.1)",
+            //   "&:hover": {
+            //     transform: "scale(1.1)",
+            //   },
+            // }}
+            buttonText="Accept"
+            declineButtonText="Settings"
+            buttonWrapperClasses="buttonWrapperT2"
+            // onDecline={(_) => setSettings(true)}
+            customDeclineButtonProps={{
+              onClick: () => setSettings(true),
+              style: {
+                display: settings ? "none" : "block",
+                ...{
+                  color: "rgb(255, 255, 255)",
+                  background: "transparent",
+                  border: "1px solid #5D38C2",
+                  borderRadius: "8px",
+                  fontSize: "16px",
+                  padding: "8px 12px",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                  },
                 },
               },
-            },
-          }}
-        >
-          {!settings ? (
-            <>
-              <div className="pb-[12px]">
-                We use cookies to enhance your browsing experience and analyze
-                site traffic. By clicking 'Accept,' you consent to the use of
-                all cookies. For More Info, see our{" "}
-                <Link href={"/privacy"} className="font-semibold">
-                  Privacy Policy
-                </Link>
-                .{" "}
-              </div>
-            </>
-          ) : (
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <EssentialCookies />
-              <MarketingCookies />
-              <AnalyticsCookies />
-            </Box>
-          )}
-        </CookieConsent>
-        <Header />
-        <main className={lato.className}>
-          <Component {...pageProps} />
-        </main>
-        <ArrowSlider />
-        <CrispChat />
-        <Footer />
+            }}
+          >
+            {!settings ? (
+              <>
+                <div className="pb-[12px]">
+                  We use cookies to enhance your browsing experience and analyze
+                  site traffic. By clicking 'Accept,' you consent to the use of
+                  all cookies. For More Info, see our{" "}
+                  <Link href={"/privacy"} className="font-semibold">
+                    Privacy Policy
+                  </Link>
+                  .{" "}
+                </div>
+              </>
+            ) : (
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <EssentialCookies />
+                <MarketingCookies />
+                <AnalyticsCookies />
+              </Box>
+            )}
+          </CookieConsent>
+          <Header />
+          <main className={lato.className}>
+            <Component {...pageProps} />
+          </main>
+          <ArrowSlider />
+          <CrispChat />
+          <Footer />
+        </QueryClientProvider>
       </AuthProvider>
     </>
   );

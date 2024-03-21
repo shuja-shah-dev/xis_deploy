@@ -10,6 +10,7 @@ import Truncate from "react-truncate-html";
 import Link from "next/link";
 import { HeroBlob } from "@/components/HeroSection";
 import { PropagateLoader } from "react-spinners";
+import { useQuery } from "react-query";
 
 const page = () => {
   const gradientStyle = {
@@ -21,6 +22,7 @@ const page = () => {
   };
 
   const [submitBlog, setSubmitBlog] = useState([]);
+  const [allBlogs, setAllBlogs] = useState([]);
   const truncateRef = useRef();
 
   const truncateText = (text, maxLength) => {
@@ -32,15 +34,16 @@ const page = () => {
       (truncatedContent.length > maxLength ? "..." : "")
     );
   };
-  const [allBlogs, setAllBlogs] = useState([]);
+
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
-    return allBlogs.filter((item) => regex.test(item.blog_title));
+    return blogsData.filter((item) => regex.test(item.blog_title));
   };
 
   const handleChange = (e) => {
@@ -56,34 +59,51 @@ const page = () => {
     );
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const cachedData = localStorage.getItem("cached_blogs");
-        if (cachedData) {
-          setSubmitBlog(JSON.parse(cachedData));
-          setAllBlogs(JSON.parse(cachedData));
-          setLoading(false);
-        } else {
-          const response = await fetch(`${BASE_URL}/blogs`);
-          if (response.ok) {
-            const data = await response.json();
-            setSubmitBlog(data);
-            setAllBlogs(data);
-            localStorage.setItem("cached_blogs", JSON.stringify(data));
-            setLoading(false);
-          } else {
-            throw new Error("Failed to fetch data");
-          }
-        }
-      } catch (error) {
-        setError(error.message);
-        setLoading(false);
-      }
-    };
+  const fetchData = async () => {
+    const response = await fetch(`${BASE_URL}/blogs`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return response.json();
+  };
 
-    fetchData();
-  }, []);
+  const {
+    data: blogsData,
+    isLoading,
+    isError,
+  } = useQuery("blogs", fetchData, {
+    staleTime: 300000, // 5 minutes
+    cacheTime: 3600000, // 1 hour
+  });
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const cachedData = localStorage.getItem("cached_blogs");
+  //       if (cachedData) {
+  //         setSubmitBlog(JSON.parse(cachedData));
+  //         setAllBlogs(JSON.parse(cachedData));
+  //         setLoading(false);
+  //       } else {
+  //         const response = await fetch(`${BASE_URL}/blogs`);
+  //         if (response.ok) {
+  //           const data = await response.json();
+  //           setSubmitBlog(data);
+  //           setAllBlogs(data);
+  //           localStorage.setItem("cached_blogs", JSON.stringify(data));
+  //           setLoading(false);
+  //         } else {
+  //           throw new Error("Failed to fetch data");
+  //         }
+  //       }
+  //     } catch (error) {
+  //       setError(error.message);
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
   // console.log(searchedResults);
 
   return (
@@ -203,7 +223,7 @@ const page = () => {
             news about visual deep learning and computer vision.
           </h3>
         </div>
-        {loading ? (
+        {isLoading ? (
           <div
             style={{
               width: "100vw",
@@ -216,7 +236,7 @@ const page = () => {
           >
             <PropagateLoader color="#36d7b7" />
           </div>
-        ) : error ? (
+        ) : isError ? (
           <div>Error: {error}</div>
         ) : (
           <div className="px-6 sm:px-16 py-20 mt-4 mb-32 sm:my-40 border-2 border-slate-800 rounded-2xl ">
@@ -254,8 +274,8 @@ const page = () => {
               </div>
             </div>
 
-            {submitBlog &&
-              submitBlog.map(
+            {blogsData &&
+              blogsData.map(
                 (item, index) =>
                   index == 0 && (
                     <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
@@ -308,7 +328,7 @@ const page = () => {
             {searchText ? (
               <BlogCard data={searchedResults} />
             ) : (
-              <BlogCard data={submitBlog} />
+              <BlogCard data={blogsData} />
             )}
           </div>
         )}
