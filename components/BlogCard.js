@@ -6,7 +6,7 @@ import Truncate from "react-truncate-html";
 import Link from "next/link";
 
 const BlogCard = ({data}) => {
-  console.log(data);
+  
 
   const gradientStyle = {
     background:

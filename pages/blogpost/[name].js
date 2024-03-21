@@ -88,7 +88,7 @@ const Slug = ({ blog }) => {
         />
         <div className="container px-5 py-24 mx-auto flex flex-col">
           <div className="lg:w-3/4 mx-auto">
-            <div className="rounded-lg h-32 overflow-hidden">
+            <div className="rounded-lg sm:h-32 overflow-hidden">
               <h1
                 className={`${roboto.className} mb-4 text-3xl font-bold text-center`}
               >
@@ -193,7 +193,7 @@ const Slug = ({ blog }) => {
                 </div>
               </div>
               <div className="sm:w-2/3 sm:pl-8 sm:pb-8 mt-4 sm:mt-0 text-center sm:text-left">
-                <div className="max-w-xl ml-auto">
+                <div className="">
                   <div className="rounded-lg h-full overflow-hidden mb-4">
                     <img
                       alt="contentImage"
