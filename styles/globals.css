@@ -71,6 +71,26 @@ body {
   background-color: #000;
   overflow-x: hidden;
 }
+.CookiebotWidget-consents-list {
+  height: 170px;
+}
+.CookiebotWidget-consents-list ul {
+  width: 100%;
+  flex-direction: column;
+  padding: 5px;
+}
+.CybotCookiebotDialogDetailFooter{
+  display: none;
+}
+.CybotCookiebotDialogDetailBodyContentCookieContainerTypes{
+  flex-direction: column;
+}
+.CybotCookiebotDialogTabContent{
+  height: 400px;
+}
+.CybotCookiebotDialogDetailBodyContentCookieContainerTypes li{
+  width: 100%;
+}
 
 .myCustomDiv h1 {
   font-size: 24px; /* Larger font size for h1 */
