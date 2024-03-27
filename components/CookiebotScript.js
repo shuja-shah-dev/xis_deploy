@@ -16,30 +16,32 @@ const CookiebotScript = () => {
     };
   }, []);
 
-  // Adding styles using the style attribute
-  const styles = `
-    .CybotCookiebotDialogDetailFooter {
-      display: none !important;
-    }
-    .CybotCookiebotDialogDetailBodyContentCookieContainerTypes {
-      flex-direction: column !important;
-    }
-    .CybotCookiebotDialogTabContent {
-      height: 400px !important;
-    }
-    .CybotCookiebotDialogDetailBodyContentCookieContainerTypes li {
-      width: 100% !important;
-    }
-  `;
-
   useEffect(() => {
-    const style = document.createElement("style");
-    style.innerHTML = styles;
-    document.head.appendChild(style);
+    const applyStyles = () => {
+      const styles = `
+        .CybotCookiebotDialogDetailFooter {
+          display: none !important;
+        }
+        .CybotCookiebotDialogDetailBodyContentCookieContainerTypes {
+          flex-direction: column !important;
+        }
+        .CybotCookiebotDialogTabContent {
+          height: 400px !important;
+        }
+        .CybotCookiebotDialogDetailBodyContentCookieContainerTypes li {
+          width: 100% !important;
+        }
+      `;
 
-    return () => {
-      document.head.removeChild(style);
+      const style = document.createElement("style");
+      style.innerHTML = styles;
+      document.head.appendChild(style);
     };
+
+    // Delay the application of styles
+    const timeout = setTimeout(applyStyles, 20000); // Adjust delay as needed
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return null;
