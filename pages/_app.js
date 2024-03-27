@@ -12,7 +12,7 @@ import CrispChat from "@/components/Crisp";
 import Script from "next/script";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import "react-quill/dist/quill.snow.css"; 
-
+import CookiebotScript from "@/components/CookiebotScript";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 // Create a new QueryClient instance
@@ -250,7 +250,7 @@ export default function App({ Component, pageProps }) {
     <>
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
-          <CookieConsent
+          {/* <CookieConsent
             enableDeclineButton
             style={{
               ...dec,
@@ -327,7 +327,8 @@ export default function App({ Component, pageProps }) {
                 <AnalyticsCookies />
               </Box>
             )}
-          </CookieConsent>
+          </CookieConsent> */}
+          <CookiebotScript />
           <Header />
           <main className={lato.className}>
             <Component {...pageProps} />

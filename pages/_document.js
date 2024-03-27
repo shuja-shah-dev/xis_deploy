@@ -30,7 +30,7 @@ export default function Document() {
               .join("\n")}
           `}
         </Script>
-
+        {/* <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8398585a-8058-4a75-8438-8fbd945e42d7" data-blockingmode="auto" type="text/javascript"></script> */}
       </Head>
       <body>
         <Main />
