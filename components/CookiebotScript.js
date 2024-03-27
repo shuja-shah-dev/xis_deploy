@@ -16,6 +16,32 @@ const CookiebotScript = () => {
     };
   }, []);
 
+  // Adding styles using the style attribute
+  const styles = `
+    .CybotCookiebotDialogDetailFooter {
+      display: none !important;
+    }
+    .CybotCookiebotDialogDetailBodyContentCookieContainerTypes {
+      flex-direction: column !important;
+    }
+    .CybotCookiebotDialogTabContent {
+      height: 400px !important;
+    }
+    .CybotCookiebotDialogDetailBodyContentCookieContainerTypes li {
+      width: 100% !important;
+    }
+  `;
+
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.innerHTML = styles;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return null;
 };
 
