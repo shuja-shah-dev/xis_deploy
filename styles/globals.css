@@ -80,16 +80,16 @@ body {
   padding: 5px;
 }
 .CybotCookiebotDialogDetailFooter{
-  display: none;
+  display: none !important;
 }
 .CybotCookiebotDialogDetailBodyContentCookieContainerTypes{
-  flex-direction: column;
+  flex-direction: column !important;
 }
 .CybotCookiebotDialogTabContent{
-  height: 400px;
+  height: 400px !important;
 }
 .CybotCookiebotDialogDetailBodyContentCookieContainerTypes li{
-  width: 100%;
+  width: 100% !important;
 }
 
 .myCustomDiv h1 {
