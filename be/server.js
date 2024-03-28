@@ -11,7 +11,13 @@ const postcontact = require("./routes/postcontact");
 const founderRoute = require("./routes/founderRoutes");
 const blogRoutes = require("./routes/blogRoutes")
 
-app.use(cors());
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
 
 app.use("/media", express.static(path.join(__dirname, "media")));
 app.use(bodyParser.urlencoded({ extended: true }));
