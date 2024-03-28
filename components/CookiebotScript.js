@@ -5,7 +5,7 @@ const CookiebotScript = () => {
     const script = document.createElement("script");
     script.id = "Cookiebot";
     script.src = "https://consent.cookiebot.com/uc.js";
-    script.setAttribute("data-cbid", "8398585a-8058-4a75-8438-8fbd945e42d7");
+    script.setAttribute("data-cbid", "b414e23e-aff2-42f7-bd91-416f2e90fad7");
     script.setAttribute("data-blockingmode", "auto");
     script.type = "text/javascript";
     document.body.appendChild(script);

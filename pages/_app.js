@@ -328,7 +328,7 @@ export default function App({ Component, pageProps }) {
               </Box>
             )}
           </CookieConsent> */}
-          <CookiebotScript />
+          {/* <CookiebotScript /> */}
           <Header />
           <main className={lato.className}>
             <Component {...pageProps} />
