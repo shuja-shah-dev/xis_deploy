@@ -114,8 +114,8 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-between lg:justify-around text-white relative z-10">
-        <div>© 2024 Xis.ai | All Rights Reserved.</div>
-        <div className="flex gap-4 lg:ml-[550px] pt-6 lg:pt-0">
+        <div className="text-center sm:text-left">© 2024 XRAY-LAB Industrial Services GmbH | All Rights Reserved.</div>
+        <div className="flex gap-4 lg:ml-[380px] pt-6 lg:pt-0">
           <Link
             style={gradientStyle}
             target="_blank"

@@ -14,7 +14,7 @@ const Robotics = () => {
   // };
   
   return (
-    <div className="px-16 pb-28 relative">
+    <div className="px-16 pb-28 relative h-[650px] pt-[60px]">
       <div className="flex lg:flex-row flex-col justify-around items-center ">
         <div className="z-50">
           {/* <img
@@ -32,7 +32,6 @@ const Robotics = () => {
             playsInline
             muted
             loop
-          
             style={{
               width: "760px",
               height: "auto",
@@ -74,17 +73,37 @@ const Hardware = () => {
   };
 
   return (
-    <div className="px-16 pb-28 pt-4 relative">
+    <div className="px-16 pb-28  relative h-[650px] pt-[60px]">
       <div className="flex lg:flex-row flex-col justify-around items-center">
-        <div>
+        {/* <div>
           <Image
             src="/Component 2.png"
             width={760}
             height={500}
             alt="screen img"
           />
+        </div> */}
+        <div className="z-50">
+          {/* <img
+            src="/v.gif"
+            alt="video GIF"
+            className="w-full h-full object-cover rounded-2xl sm:hidden"
+          /> */}
+          <video
+   
+            autoPlay
+            playsInline
+            muted
+            loop
+            style={{
+              width: "760px",
+              height: "auto",
+              borderRadius: "30px",
+            }}
+          >
+            <source src="/media.mp4" type="video/mp4" />
+          </video>
         </div>
-
         <div className="text-white w-full lg:w-1/4  mt-10 lg:mt-0">
           <p className="text-left leading-7 lg:ml-7 xl:ml-0">
             Create your own AI visual inspection model and deploy it on edge
@@ -111,7 +130,7 @@ const Hardware = () => {
 
 const Software = () => {
   return (
-    <div className=" px-16 pb-28 relative">
+    <div className=" px-16 pb-28 relative h-[650px]">
       <div className="flex lg:flex-row flex-col justify-around items-center">
         <div>
           <Image src="/soft.png" width={760} height={500} alt="screen img " className="rounded-2xl" />
