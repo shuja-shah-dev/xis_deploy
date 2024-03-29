@@ -16,7 +16,7 @@ const IconCard = ({ data }) => {
           className={`ftest flex flex-col justify-between ${
             c.path === "/Rectangle (8).png" ||
             c.path === "/kotlin-2-logo.png" ||
-            c.path === "/swift_logo.png" ||
+            c.path === "/Swift_logo.svg" ||
             c.path === "/Rectangle (15).png"
               ? "w-[280px]"
               : "w-[137px]"
@@ -43,7 +43,7 @@ const IconCard = ({ data }) => {
             className="m-auto"
             src={c.path}
             width={c.path === "/Rectangle (8).png" || c.path === "/kotlin-2-logo.png" ||
-            c.path === "/swift_logo.png" ||
+            c.path === "/Swift_logo.svg" ||
             c.path === "/Rectangle (15).png" ? 200 : 70}
             height={70}
             alt={`${c.label} img`}

@@ -45,7 +45,7 @@ const ServicesCard = ({ data }) => {
           />
 
           <div className=" mb-8">
-            <h1 className=" m-auto text-center w-3/5 font-semibold opacity-75 text-[#FFF] text-lg sm:text-2xl font-inter">
+            <h1 className=" m-auto text-center w-full sm:w-3/5 font-semibold opacity-75 text-[#FFF] text-lg sm:text-2xl font-inter">
               {c.label}
             </h1>
           </div>

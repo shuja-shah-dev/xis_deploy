@@ -70,29 +70,29 @@ const Text = () => {
 
   const SD = [
     {
-      path: "/Rectangle.png",
+      path: "/Rectangle (1).svg",
     },
     {
-      path: "/Rectangle (1).png",
+      path: "/Rectangle (2).svg",
     },
     {
       path: "/Rectangle (8).png",
     },
     {
-      path: "/Rectangle (12).png",
+      path: "/Rectangle.svg",
     },
   ];
 
   const WB = [
     {
-      path: "/Rectangle (2).png",
+      path: "/Rectangle (3).svg",
     },
     {
       path: "/Rectangle (3).png",
     },
 
     {
-      path: "/Rectangle (9).png",
+      path: "/Rectangle (4).svg",
     },
     {
       path: "/node 1.png",
@@ -101,59 +101,59 @@ const Text = () => {
       path: "/next-white.png",
     },
     {
-      path: "/Rectangle (12).png",
+      path: "/Rectangle.svg",
     },
 
     {
       path: "/express-js-white.png",
     },
     {
-      path: "/Rectangle (14).png",
+      path: "/Rectangle (5).svg",
     },
     {
       path: "/Ruby_on_Rails-Logo 1.png",
     },
     {
-      path: "/Rectangle (16).png",
+      path: "/Rectangle (6).svg",
     },
   ];
 
   const MA = [
     {
-      path: "/Rectangle (4).png",
+      path: "/Rectangle (7).svg",
     },
     {
-      path: "/Rectangle (5).png",
+      path: "/Rectangle (8).svg",
     },
     {
       path: "/kotlin-2-logo.png",
     },
     {
-      path: "/swift_logo.png",
+      path: "/Swift_logo.svg",
     },
     {
       path: "/Rectangle (15).png",
     },
     {
-      path: "/Rectangle (17).png",
+      path: "/Rectangle (9).svg",
     },
   ];
 
   const GD = [
     {
-      path: "/Rectangle (6).png",
+      path: "/Rectangle (10).svg",
     },
     {
-      path: "/Rectangle (7).png",
+      path: "/Rectangle (11).svg",
     },
     {
-      path: "/Rectangle (10).png",
+      path: "/Rectangle (12).svg"
     },
     {
-      path: "/Rectangle (11).png",
+      path: "/Rectangle (13).svg",
     },
     {
-      path: "/Rectangle (13).png",
+      path: "/Rectangle (14).svg",
     },
   ];
 
@@ -162,6 +162,15 @@ const Text = () => {
       <HeroBlob
         sx={{
           top: "-10px",
+          zIndex: "-1",
+          width: "200px",
+        }}
+        key={1}
+      />
+
+      <HeroBlob
+        sx={{
+          top: "50%",
           zIndex: "-1",
           width: "200px",
         }}
@@ -184,7 +193,7 @@ const Text = () => {
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "80%",
           zIndex: "-1",
-          left: "10px",
+          left: "0px",
         }}
         key={"UniqueElementor2"}
       />
@@ -194,7 +203,7 @@ const Text = () => {
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "60%",
           zIndex: "-1",
-          left: "1px",
+          left: "0px",
         }}
         key={"UniqueElementor2"}
       />
@@ -208,7 +217,7 @@ const Text = () => {
         key={"UniqueElementor2"}
       />
 
-      {/* <HeroBlob
+      <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "16%",
@@ -216,14 +225,14 @@ const Text = () => {
           right: "1px",
         }}
         key={"UniqueElementor2"}
-      /> */}
+      />
 
       <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
           bottom: "1px",
           zIndex: "-1",
-          left: "1px",
+          left: "0px",
         }}
         key={"UniqueElementor2"}
       />
