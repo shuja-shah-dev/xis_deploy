@@ -46,9 +46,9 @@ const SDCard = ({ data }) => {
               className="w-12 h-12  border-2  rounded-xl"
             >
               <Image
-                className="ml-3 mt-3"
+                className={` mt-3 ${c.path === "/Frame (2).svg" ? "ml-4": "ml-3"}`}
                 src={c.path}
-                width={24}
+                width={c.path === "/Frame (2).svg" ? 16 : 24}
                 height={24}
                 alt={`${c.label} img`}
               />
