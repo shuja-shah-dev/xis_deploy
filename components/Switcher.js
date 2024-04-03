@@ -102,6 +102,7 @@ const Hardware = () => {
             }}
           >
             <source src="/media.mp4" type="video/mp4" />
+            
           </video>
         </div>
         <div className="text-white w-full lg:w-1/4  mt-10 lg:mt-0">
