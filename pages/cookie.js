@@ -87,7 +87,7 @@ const Cookie = () => {
           key={"NormalSizedBlob"}
         />
         {/* <div className=" absolute right-[0px] top-[100px]  sm:top-[-200px]"> */}
-          {/* <Image
+        {/* <Image
             src="/Ellipse 171.png"
             alt="Ellipse "
             height={900}
@@ -445,7 +445,7 @@ const Cookie = () => {
                 <p className="leading-relaxed text-lg w-1/2 mb-4">
                   XRAY LAB Industrial Services GmbH & Co. KG
                   Theodor-Schweitzer-Str. 1+3 75447 Sternenfels Germany Germany
-                  Website: https://xis.ai.com Email: moc.bal-yarx@ztuhcsnetad
+                  Website: https://xis.ai.com Email: contact@xray-lab.com
                   Telephone number: +49 7045 2044 560 This Cookie Policy was
                   synchronized with cookiedatabase.org on November 11, 2021.
                 </p>
