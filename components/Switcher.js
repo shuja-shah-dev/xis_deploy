@@ -90,7 +90,6 @@ const Hardware = () => {
             className="w-full h-full object-cover rounded-2xl sm:hidden"
           /> */}
           <video
-   
             autoPlay
             playsInline
             muted
