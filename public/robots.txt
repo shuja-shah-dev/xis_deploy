@@ -1,0 +1,14 @@
+# Block all crawlers for /accounts
+User-agent: *
+Disallow: /accounts
+
+# Block specific paths for all crawlers
+Disallow: /admin
+Disallow: /private-page
+
+# Allow all crawlers for other paths
+Allow: /public-page
+Allow: /
+
+# Specify the sitemap location
+Sitemap: https://xis.ai/sitemap.xml
