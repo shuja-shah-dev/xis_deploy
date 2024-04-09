@@ -5,7 +5,7 @@ const cors = require("cors");
 const { mongodb } = require("./config/db");
 const bodyParser = require("body-parser");
 const path = require("path");
-
+const compression = require("compression"); 
 const authRoutes = require("./routes/authRoutes");
 const postcontact = require("./routes/postcontact");
 const founderRoute = require("./routes/founderRoutes");
@@ -18,7 +18,7 @@ const corsOptions ={
 }
 
 app.use(cors(corsOptions))
-
+app.use(compression());
 app.use("/media", express.static(path.join(__dirname, "media")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

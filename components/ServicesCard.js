@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FaArrowRight } from "react-icons/fa6";
+// import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
 import DOMPurify from "dompurify";
 import Truncate from "react-truncate-html";
@@ -16,13 +16,12 @@ const ServicesCard = ({ data }) => {
         <div
           key={index}
           style={gradientStyleMain}
-          className="ftest flex flex-col justify-between w-[450px] sm:w-[600px] md:w-[450px] p-6 h-[300px] rounded-2xl border-2 border-slate-800"
+          className="ftest flex flex-col justify-between w-[200px] sm:w-[300px] md:w-[350px] p-6 h-[340px] rounded-2xl border-2 border-slate-800"
         >
           <style jsx>{`
             @media (max-width: 424px) {
               .ftest {
-                width:100%;
-                height:"300px";
+                width: 85%;
                 // margin: 2px 8px;
               }
             }

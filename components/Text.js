@@ -158,7 +158,7 @@ const Text = () => {
   ];
 
   return (
-    <div className="pt-32 px-16 relative">
+    <div className="pt-32  relative">
       <HeroBlob
         sx={{
           top: "-10px",
