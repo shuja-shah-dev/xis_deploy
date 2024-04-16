@@ -101,7 +101,7 @@ const Hardware = () => {
               borderRadius: "30px",
             }}
           >
-            <source src="/media.mp4" type="video/mp4" />
+            <source src="/new.mp4" type="video/mp4" />
             
           </video>
         </div>

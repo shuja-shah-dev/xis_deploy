@@ -5,11 +5,16 @@ import SDCard from "@/components/SDCard.js";
 import ServicesCard from "@/components/ServicesCard.js";
 import OtherServicesCard from "@/components/OtherServicesCard.js";
 import { HeroBlob } from "./HeroSection";
+import Link from "next/link";
 
 const Text = () => {
   const gradientStyleMain = {
+    background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
+  };
+
+  const gradientStyleBtn = {
     background:
-      "linear-gradient(184deg, rgba(62, 95, 170, 0.13) 28.13%, rgba(87, 200, 231, 0.00) 98.75%)",
+      "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
   };
 
   const SDCardData = [
@@ -147,7 +152,7 @@ const Text = () => {
       path: "/Rectangle (11).svg",
     },
     {
-      path: "/Rectangle (12).svg"
+      path: "/Rectangle (12).svg",
     },
     {
       path: "/Rectangle (13).svg",
@@ -158,7 +163,7 @@ const Text = () => {
   ];
 
   return (
-    <div className="pt-32 px-16 relative">
+    <div className="pt-32 px-4 lg:px-16 relative">
       <HeroBlob
         sx={{
           top: "-10px",
@@ -266,51 +271,59 @@ const Text = () => {
         id="blob2"
       />
 
-      {/* <HeroBlob
-        sx={{
-          top: "95%",
-          right: "0px",
-          zIndex: "-1",
-          width: "200px",
-        }}
-        key={2}
-        id="blob2"
-      /> */}
+      <div className="mb-32 md:mb-52 xl:mb-72 flex items-center justify-center ">
+        <div>
+          <Image
+            src="/digital world 1.svg"
+            width={1248}
+            height={812}
+            alt="screen img"
+          />
+          <div className="mt-[-160px] sm:mt-[-250px] md:mt-[-300px] xl:mt-[-400px] ml-10">
+            <h1 className="text-xl sm:text-5xl md:text-6xl lg:text-7xl text-left mb-4 md:mb-12 w-1/3 sm:w-2/5 md:w-3/5 font-inter text-[#FFF]">
+              Start your{" "}
+              <span className="block  font-semibold">Digital Journey</span>
+            </h1>
 
-      <div className="flex flex-col md:flex-row gap-10 lg:gap-20 items-center pb-32">
-        <Image
-          src="/Mask group.png"
-          width={671}
-          height={447}
-          alt="screen img"
-        />
-
-        <h1 className="pb-4 text-4xl text-center  leading-8 md:text-left md:text-5xl lg:text-6xl xl:text-7xl md:w-1/3 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-          Start your Digital Journey
-        </h1>
+            <Link
+              style={gradientStyleBtn}
+              className=" text-sm sm:text-xl  opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
+              href="/"
+            >
+              Start Now
+            </Link>
+          </div>
+        </div>
       </div>
-      <div>
+      <div className="">
         <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Our Services
         </h1>
         <ServicesCard data={ServicesCardData} />
       </div>
       <div className="pt-32">
-        <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center md:text-left  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Software Development
         </h1>
         <SDCard data={SDCardData} />
       </div>
       <div className="pt-32">
-        <h1 className=" pb-14 text-3xl text-center md:text-left sm:text-4xl md:text-5xl  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className=" pb-14 text-3xl text-center sm:text-4xl md:text-5xl  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Software Development Libraries
         </h1>
         <div className="flex flex-wrap gap-4 justify-center ">
           <div className=" w-[294px] ">
             <div
               style={gradientStyleMain}
-              className="rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
+              className=" relative backdrop-blur-3xl rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
             >
+              {/* <Image
+                src="/Polygon 1.png"
+                width={45}
+                height={45}
+                alt="polygon"
+                className="absolute gradient-fill ml-28 mt-16"
+              /> */}
               Desktop Software Development
             </div>
             <IconCard data={SD} />
@@ -318,7 +331,7 @@ const Text = () => {
           <div className="w-[294px] ">
             <div
               style={gradientStyleMain}
-              className="rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
+              className="backdrop-blur-3xl rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
             >
               Web Application Development
             </div>
@@ -327,7 +340,7 @@ const Text = () => {
           <div className="w-[294px] ">
             <div
               style={gradientStyleMain}
-              className="rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
+              className="backdrop-blur-3xl rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
             >
               Mobile Application Development
             </div>
@@ -336,7 +349,7 @@ const Text = () => {
           <div className="w-[294px] ">
             <div
               style={gradientStyleMain}
-              className="rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
+              className="backdrop-blur-3xl rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-2xl text-center font-inter"
             >
               Graphics Designing & UX/UI
             </div>
@@ -344,24 +357,36 @@ const Text = () => {
           </div>
         </div>
       </div>
-      <div className="pt-32">
-        <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center md:text-left  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+
+      <div className="flex items-center justify-center ">
+        <div className="pt-32 ">
+          <Image
+            src="/Mask group@2x.png"
+            width={1358}
+            height={1039}
+            alt="img"
+          />
+        </div>
+      </div>
+
+      <div className="pt-32 2xl:px-24">
+        <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           All Services
         </h1>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="sm:w-1/2">
             <div
-              style={{
-                background:
-                  "linear-gradient(279deg, #3E5FAA 1.81%, rgba(62, 95, 170, 0.75) 100%)",
-              }}
+              style={gradientStyleMain}
               className="h-28 rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-xl sm:text-2xl text-left font-inter"
             >
               <h1 className="w-1/3 ml-[14%]">Computer Vision</h1>
             </div>
             <div
-              style={{ background: "rgba(62, 95, 170, 0.25)" }}
+              style={{
+                background:
+                  "linear-gradient(98deg, rgba(62, 95, 170, 0.13) -2.31%, rgba(87, 200, 231, 0.00) 100%)",
+              }}
               className="sm:h-72 rounded-2xl mb-4 py-6 md:py-8 flex flex-col gap-4 md:gap-6 px-10 lg:px-20 border text-lg border-slate-800 opacity-75 text-[#FFF] font-poppins"
             >
               <p>Automated Visual Inspection</p>
@@ -373,16 +398,16 @@ const Text = () => {
 
           <div className="sm:w-1/2">
             <div
-              style={{
-                background:
-                  "linear-gradient(279deg, #3E5FAA 1.81%, rgba(62, 95, 170, 0.75) 100%)",
-              }}
+              style={gradientStyleMain}
               className="h-28 rounded-2xl mb-4 py-6 border border-slate-800 font-semibold opacity-75 text-[#FFF] text-xl sm:text-2xl text-left font-inter"
             >
               <h1 className="xl:w-2/5 ml-[14%]">Natural Language Processing</h1>
             </div>
             <div
-              style={{ background: "rgba(62, 95, 170, 0.25)" }}
+              style={{
+                background:
+                  "linear-gradient(98deg, rgba(62, 95, 170, 0.13) -2.31%, rgba(87, 200, 231, 0.00) 100%)",
+              }}
               className="sm:h-72 rounded-2xl mb-4 py-6 md:py-8 flex flex-col gap-4 md:gap-6 px-10 lg:px-20 border text-lg border-slate-800 opacity-75 text-[#FFF] font-poppins"
             >
               <p>ChatGPT Integration</p>
@@ -392,7 +417,7 @@ const Text = () => {
         </div>
       </div>
       <div className="pt-32 pb-52">
-        <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center md:text-left  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Other Services
         </h1>
 

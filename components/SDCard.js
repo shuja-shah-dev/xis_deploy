@@ -21,12 +21,12 @@ const SDCard = ({ data }) => {
         <div
           key={index}
           style={gradientStyleMain}
-          className="ftest flex flex-col justify-between  w-[450px] sm:w-[600px] md:w-[450px] p-6 h-[300px] rounded-2xl border-2 border-slate-800"
+          className="ftest flex flex-col justify-between w-[200px] sm:w-[300px] md:w-[350px] p-6 h-[300px] rounded-2xl border-2 border-slate-800"
         >
           <style jsx>{`
-            @media (max-width: 424px) {
+            @media (max-width: 440px) {
               .ftest {
-                width: 100%;
+                width: 85%;
                 // margin: 2px 8px;
               }
             }
@@ -46,14 +46,16 @@ const SDCard = ({ data }) => {
               className="w-12 h-12  border-2  rounded-xl"
             >
               <Image
-                className={` mt-3 ${c.path === "/Frame (2).svg" ? "ml-4": "ml-3"}`}
+                className={` mt-3 ${
+                  c.path === "/Frame (2).svg" ? "ml-4" : "ml-3"
+                }`}
                 src={c.path}
                 width={c.path === "/Frame (2).svg" ? 16 : 24}
                 height={24}
                 alt={`${c.label} img`}
               />
             </div>
-            <FaArrowRight color="white" size={24} className="opacity-75" />
+            {/* <FaArrowRight color="white" size={24} className="opacity-75" /> */}
           </div>
 
           <div className=" mb-8 ">

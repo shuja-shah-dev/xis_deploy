@@ -9,12 +9,12 @@ const OtherServicesCard = ({ data }) => {
   };
   const gradientStyleMain = {
     background:
-      "linear-gradient(184deg, rgba(62, 95, 170, 0.13) 28.13%, rgba(87, 200, 231, 0.00) 98.75%)",
+      "linear-gradient(98deg, rgba(62, 95, 170, 0.13) -2.31%, rgba(87, 200, 231, 0.00) 100%);",
   };
   return (
     <div
       style={gradientStyleMain}
-      className="ftest flex flex-col text-center md:flex-row gap-4 md:gap-0 justify-around items-center md:items-baseline w-full p-6 rounded-2xl border-2 border-slate-800"
+      className="ftest flex flex-col text-center md:flex-row gap-4 md:gap-0 justify-around items-center md:items-baseline w-full 2xl:w-[80%] m-auto p-6 rounded-2xl border-2 border-slate-800"
     >
       <style jsx>{`
         .ftest {

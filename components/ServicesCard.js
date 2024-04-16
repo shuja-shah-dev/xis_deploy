@@ -16,13 +16,12 @@ const ServicesCard = ({ data }) => {
         <div
           key={index}
           style={gradientStyleMain}
-          className="ftest flex flex-col justify-between w-[450px] sm:w-[600px] md:w-[450px] p-6 h-[300px] rounded-2xl border-2 border-slate-800"
+          className="ftest flex flex-col justify-between w-[200px] sm:w-[300px] md:w-[350px] p-6 h-[340px] rounded-2xl border-2 border-slate-800"
         >
           <style jsx>{`
-            @media (max-width: 424px) {
+            @media (max-width: 440px) {
               .ftest {
-                width:100%;
-                height:"300px";
+                width: 85%;
                 // margin: 2px 8px;
               }
             }

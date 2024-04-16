@@ -87,6 +87,7 @@ const page = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       queryClient.invalidateQueries("blogs");
+      localStorage.removeItem("cached_blogs");
     }, 60000); 
     return () => clearInterval(interval);
   }, [queryClient]);
