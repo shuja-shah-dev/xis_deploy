@@ -10,10 +10,10 @@ import Truncate from "react-truncate-html";
 import Link from "next/link";
 import { HeroBlob } from "@/components/HeroSection";
 import { PropagateLoader } from "react-spinners";
-import HeadSection from "../components/Head"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import HeadSection from "../components/Head";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useQuery } from "react-query";
-import useSWR from 'swr';
+import useSWR from "swr";
 const page = () => {
   const gradientStyle = {
     background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
@@ -67,7 +67,7 @@ const page = () => {
     }
     return response.json();
   };
-  
+
   const fetchData = () => fetcher(`${BASE_URL}/blogs`);
   const {
     data: blogsData,
@@ -77,53 +77,10 @@ const page = () => {
     staleTime: 300000, // 5 minutes
     cacheTime: 3600000, // 1 hour
   });
-<<<<<<< HEAD
-  useEffect(() => {
-    const interval = setInterval(() => {
-      queryClient.invalidateQueries("blogs");
-      localStorage.removeItem("cached_blogs");
-    }, 60000); 
-    return () => clearInterval(interval);
-  }, [queryClient]);
-
-
-
-  
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const cachedData = localStorage.getItem("cached_blogs");
-  //       if (cachedData) {
-  //         setSubmitBlog(JSON.parse(cachedData));
-  //         setAllBlogs(JSON.parse(cachedData));
-  //         setLoading(false);
-  //       } else {
-  //         const response = await fetch(`${BASE_URL}/blogs`);
-  //         if (response.ok) {
-  //           const data = await response.json();
-  //           setSubmitBlog(data);
-  //           setAllBlogs(data);
-  //           localStorage.setItem("cached_blogs", JSON.stringify(data));
-  //           setLoading(false);
-  //         } else {
-  //           throw new Error("Failed to fetch data");
-  //         }
-  //       }
-  //     } catch (error) {
-  //       setError(error.message);
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-  // console.log(searchedResults);
-=======
->>>>>>> 6d63d95e7208c85d2da15c68a9d61ef8bdbc28a2
 
   return (
     <>
-    <HeadSection/>
+      <HeadSection />
       <div className="mt-20 relative">
         <HeroBlob
           sx={{
@@ -143,7 +100,7 @@ const page = () => {
           }}
           key={"NormalSizedBlob"}
         />
-      
+
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
           <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Welcome to the xis.ai Blogs
