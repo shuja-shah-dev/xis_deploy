@@ -1,14 +1,8 @@
-import Image from "next/image";
 import React from "react";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import CallIcon from "@mui/icons-material/Call";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+import Image from "next/image";
 import Link from "next/link";
+import { EmailIcon, PhoneIphoneIcon, CallIcon, FacebookOutlinedIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from "@mui/icons-material";
+
 
 const Footer = () => {
   return (
@@ -24,6 +18,7 @@ const Footer = () => {
                   className="justify-center mx-auto items-center text-center mb-10"
                   width={300}
                   height={400}
+                  loading="lazy"
                 />
               </Link>
             </div>

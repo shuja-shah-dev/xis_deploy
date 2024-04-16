@@ -101,7 +101,7 @@ const Hardware = () => {
               borderRadius: "30px",
             }}
           >
-            <source src="/media.mp4" type="video/mp4" />
+            <source src="/new.mp4" type="video/mp4" />
             
           </video>
         </div>
@@ -134,7 +134,7 @@ const Software = () => {
     <div className=" px-16 pb-28 relative h-[650px]">
       <div className="flex lg:flex-row flex-col justify-around items-center">
         <div>
-          <Image src="/soft.png" width={760} height={500} alt="screen img " className="rounded-2xl" />
+          <Image src="/soft.png" width={760} height={500} alt="screen img " className="rounded-2xl"/>
         </div>
 
         <div className=" lg:w-1/4 w-full mt-10 lg:mt-0">

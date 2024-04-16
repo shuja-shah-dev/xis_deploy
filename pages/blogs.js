@@ -11,6 +11,7 @@ import Link from "next/link";
 import { HeroBlob } from "@/components/HeroSection";
 import { PropagateLoader } from "react-spinners";
 import HeadSection from "../components/Head"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useQuery } from "react-query";
 import useSWR from 'swr';
 const page = () => {
@@ -149,7 +150,7 @@ const page = () => {
                 Subscribe
               </button>
               <div className="hidden md:block cursor-pointer border-2 bg-transparent border-[#5D38C2] rounded-2xl px-1 py-0 ml-6 mt-2 h-8">
-                <Image
+                <LazyLoadImage
                   className="mt-1"
                   src="/ic_round-link.svg"
                   alt="Ellipse "
@@ -166,7 +167,7 @@ const page = () => {
                   index == 0 && (
                     <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
                       <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
-                        <Image
+                        <LazyLoadImage
                           className="object-cover object-center h-full w-full"
                           src={`${BASE_URL}${item.blog_image}`}
                           alt={`content-${index}`}
