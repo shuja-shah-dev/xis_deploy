@@ -163,7 +163,11 @@ const Text = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="pt-32 px-4 lg:px-16 relative">
+=======
+    <div className="pt-32  relative">
+>>>>>>> 6d63d95e7208c85d2da15c68a9d61ef8bdbc28a2
       <HeroBlob
         sx={{
           top: "-10px",

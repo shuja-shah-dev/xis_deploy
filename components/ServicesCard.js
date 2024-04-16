@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FaArrowRight } from "react-icons/fa6";
+// import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
 import DOMPurify from "dompurify";
 import Truncate from "react-truncate-html";

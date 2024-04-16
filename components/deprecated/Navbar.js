@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useLayoutEffect } from "react";
 import Link from "next/link";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import { Box } from "@mui/material";
 import { CloseOutlined } from "@mui/icons-material";
@@ -9,53 +7,37 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  }, [isMobileMenuOpen]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
-  const router = useRouter();
+  useLayoutEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "unset";
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [router.pathname]);
 
-  const email = "muti.rehman@xray-lab.com";
-  const subject = "Request Partnership";
-  const body = "";
+  const toggleMobileMenu = useCallback(() => {
+    setMobileMenuOpen((prev) => !prev);
+  }, []);
 
-  const handleClick = () => {
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+  const handleClick = useCallback(() => {
+    const email = "muti.rehman@xray-lab.com";
+    const subject = "Request Partnership";
+    const body = "";
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
-  };
+  }, []);
 
   return (
     <>

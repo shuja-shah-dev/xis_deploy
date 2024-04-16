@@ -37,6 +37,7 @@ const IndustryCard = ({ data }) => {
               src={c.path}
               alt={`${c.label} img`}
               layout="fill"
+              
             />
           </div>
 

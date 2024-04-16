@@ -10,8 +10,10 @@ import Truncate from "react-truncate-html";
 import Link from "next/link";
 import { HeroBlob } from "@/components/HeroSection";
 import { PropagateLoader } from "react-spinners";
-// import { useQuery } from "react-query";
-import { useQuery, useQueryClient } from "react-query";
+import HeadSection from "../components/Head"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useQuery } from "react-query";
+import useSWR from 'swr';
 const page = () => {
   const gradientStyle = {
     background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
@@ -40,7 +42,7 @@ const page = () => {
   const [searchedResults, setSearchedResults] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const queryClient = useQueryClient();
+
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
     return blogsData.filter((item) => regex.test(item.blog_title));
@@ -58,32 +60,24 @@ const page = () => {
       }, 500)
     );
   };
-
-  const fetchData = async () => {
-    const cachedData = localStorage.getItem("cached_blogs");
-    if (cachedData) {
-      return JSON.parse(cachedData);
-    } else {
-      const response = await fetch(`${BASE_URL}/blogs`);
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const data = await response.json();
-      localStorage.setItem("cached_blogs", JSON.stringify(data));
-      return data;
+  const fetcher = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
     }
+    return response.json();
   };
-
+  
+  const fetchData = () => fetcher(`${BASE_URL}/blogs`);
   const {
     data: blogsData,
     isLoading,
     isError,
-  } = useQuery("blogs", fetchData, {
+  } = useSWR("blogs", fetchData, {
     staleTime: 300000, // 5 minutes
     cacheTime: 3600000, // 1 hour
-    onSuccess: () => setLoading(false),
-    onError: (error) => setError(error.message),
   });
+<<<<<<< HEAD
   useEffect(() => {
     const interval = setInterval(() => {
       queryClient.invalidateQueries("blogs");
@@ -124,70 +118,12 @@ const page = () => {
   //   fetchData();
   // }, []);
   // console.log(searchedResults);
+=======
+>>>>>>> 6d63d95e7208c85d2da15c68a9d61ef8bdbc28a2
 
   return (
     <>
-      <Head>
-        <title>News & Blogs - xis.ai</title>
-        <meta
-          name="description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
-        />
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-        />
-        <meta
-          name="keywords"
-          content="Defect Detection, AI Detection, AI Detector, AI Robotics, AI Web Technologies, Computer Vision, Precision Recall, Robotic Inspection"
-        />
-        <link
-          rel="canonical"
-          href={`${process.env.NEXT_PUBLIC_BASE_URL}blogs`}
-        />
-
-        <meta
-          property="og:title"
-          content="News & Blogs - Simplified Edge AI for Industrial Inspection"
-        />
-        <meta
-          property="og:description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
-        />
-        <meta
-          property="og:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta
-          property="og:url"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}blogs`}
-        />
-        {/* Twitter meta tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@XisAI" />
-        <meta
-          name="twitter:title"
-          content="Simplified Edge AI for Industrial Inspection"
-        />
-        <meta
-          name="twitter:description"
-          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
-        />
-        <meta
-          name="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
-        />
-        <meta name="twitter:image:type" content="image/png" />
-        <meta name="twitter:image:width" content="1200" />
-        <meta name="twitter:image:height" content="630" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-      </Head>
-
+    <HeadSection/>
       <div className="mt-20 relative">
         <HeroBlob
           sx={{
@@ -207,32 +143,7 @@ const page = () => {
           }}
           key={"NormalSizedBlob"}
         />
-        {/* <div className=" absolute left-[-100px] top-[100px]  sm:top-[-200px]">
-          <Image
-            src="/Ellipse 165.png"
-            alt="Ellipse "
-            height={900}
-            width={900}
-          />
-        </div>
- 
-        <div className=" absolute left-[-100px] top-[100px]  sm:top-[150px]">
-          <Image
-            src="/Ellipse 172.png"
-            alt="Ellipse "
-            height={900}
-            width={900}
-          />
-        </div>
- 
-        <div className=" absolute right-[-200px] bottom-[-500px] ">
-          <Image
-            src="/Ellipse 171.png"
-            alt="Ellipse "
-            height={800}
-            width={800}
-          />
-        </div> */}
+      
         <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
           <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Welcome to the xis.ai Blogs
@@ -282,7 +193,7 @@ const page = () => {
                 Subscribe
               </button>
               <div className="hidden md:block cursor-pointer border-2 bg-transparent border-[#5D38C2] rounded-2xl px-1 py-0 ml-6 mt-2 h-8">
-                <Image
+                <LazyLoadImage
                   className="mt-1"
                   src="/ic_round-link.svg"
                   alt="Ellipse "
@@ -299,7 +210,7 @@ const page = () => {
                   index == 0 && (
                     <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
                       <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
-                        <Image
+                        <LazyLoadImage
                           className="object-cover object-center h-full w-full"
                           src={`${BASE_URL}${item.blog_image}`}
                           alt={`content-${index}`}
