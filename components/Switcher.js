@@ -14,7 +14,7 @@ const Robotics = () => {
   // };
   
   return (
-    <div className="px-16 pb-28 lg:mb-0 md:mb-10 relative h-[650px] pt-[60px]">
+    <div className="px-16 pb-28 lg:mb-0 md:mb-10 mb-5 relative h-[650px] pt-[60px]">
       <div className="flex lg:flex-row flex-col justify-around items-center ">
         <div className="z-50">
           {/* <img
