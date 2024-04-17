@@ -14,7 +14,7 @@ const Robotics = () => {
   // };
   
   return (
-    <div className="px-16 pb-28 relative h-[650px] pt-[60px]">
+    <div className="px-16 pb-28 lg:mb-0 md:mb-10 relative h-[650px] pt-[60px]">
       <div className="flex lg:flex-row flex-col justify-around items-center ">
         <div className="z-50">
           {/* <img
@@ -131,13 +131,13 @@ const Hardware = () => {
 
 const Software = () => {
   return (
-    <div className=" px-16 pb-28 relative h-[650px]">
+    <div className=" px-16 lg:mb-0 md:mb-52 mb-28 pb-28 relative h-[650px]">
       <div className="flex lg:flex-row flex-col justify-around items-center">
         <div>
           <Image src="/soft.png" width={760} height={500} alt="screen img " className="rounded-2xl"/>
         </div>
 
-        <div className=" lg:w-1/4 w-full mt-10 lg:mt-0">
+        <div className=" lg:w-[30%] w-full mt-10 lg:mt-0">
           {/* <p className="text-left leading-7 ">
             xis.ai provides a robust Vision AI platform enabling companies to
             navigate the entire AI life cycle effortlessly. With our solution,

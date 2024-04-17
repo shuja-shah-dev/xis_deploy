@@ -25,7 +25,7 @@ const IconCard = ({ data }) => {
           <style jsx>{`
             @media (max-width: 639px) {
               .ftest {
-                width: 70%;
+                 width: 130px;
                 margin: auto;
               }
             }
