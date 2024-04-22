@@ -1,11 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import IconCard from "@/components/IconCard.js";
+import FarmSight from "@/components/FarmSight";
 import SDCard from "@/components/SDCard.js";
 import ServicesCard from "@/components/ServicesCard.js";
 import OtherServicesCard from "@/components/OtherServicesCard.js";
 import { HeroBlob } from "./HeroSection";
 import Link from "next/link";
+import CustomerPortal from "./CustomerPortal";
+import XrayLab from "./XrayLab";
+import CnnInferer from "./CnnInferer";
+import XisApp from "./XisApp";
+import ERP from "./ERP";
 
 const Text = () => {
   const gradientStyleMain = {
@@ -172,7 +178,6 @@ const Text = () => {
         }}
         key={1}
       />
-
       <HeroBlob
         sx={{
           top: "50%",
@@ -181,7 +186,6 @@ const Text = () => {
         }}
         key={1}
       />
-
       <HeroBlob
         sx={{
           top: "100px",
@@ -192,7 +196,6 @@ const Text = () => {
         key={2}
         id="blob2"
       />
-
       <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
@@ -202,7 +205,6 @@ const Text = () => {
         }}
         key={"UniqueElementor2"}
       />
-
       <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
@@ -221,7 +223,6 @@ const Text = () => {
         }}
         key={"UniqueElementor2"}
       />
-
       <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
@@ -231,7 +232,6 @@ const Text = () => {
         }}
         key={"UniqueElementor2"}
       />
-
       <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
@@ -241,7 +241,6 @@ const Text = () => {
         }}
         key={"UniqueElementor2"}
       />
-
       <HeroBlob
         sx={{
           top: "20%",
@@ -251,7 +250,6 @@ const Text = () => {
         key={2}
         id="blob2"
       />
-
       <HeroBlob
         sx={{
           top: "60%",
@@ -260,7 +258,6 @@ const Text = () => {
         }}
         key={1}
       />
-
       <HeroBlob
         sx={{
           top: "80%",
@@ -270,7 +267,6 @@ const Text = () => {
         key={2}
         id="blob2"
       />
-
       <div className="mb-32 md:mb-52 xl:mb-72 flex items-center justify-center ">
         <div>
           <Image
@@ -307,6 +303,12 @@ const Text = () => {
         </h1>
         <SDCard data={SDCardData} />
       </div>
+      <FarmSight />
+      {/* <ERP/> */}
+      <CustomerPortal />
+      <CnnInferer />
+      {/* <XrayLab /> */}
+      <XisApp />
       <div className="pt-32">
         <h1 className=" pb-14 text-3xl text-center sm:text-4xl md:text-5xl  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Software Development Libraries
@@ -357,7 +359,6 @@ const Text = () => {
           </div>
         </div>
       </div>
-
       <div className="flex items-center justify-center ">
         <div className="pt-32 ">
           <Image
@@ -368,7 +369,6 @@ const Text = () => {
           />
         </div>
       </div>
-
       <div className="pt-32 2xl:px-24">
         <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           All Services
