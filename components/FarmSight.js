@@ -22,19 +22,19 @@ const FarmSight = () => {
           <h1 className="text-2xl sm:text-4xl  mb-2 font-inter text-[#FFF]">
             AI Based FARM Quality Solution
           </h1>
-          <p className="font-poppins text-gray-300 md:w-1/2 mb-6 sm:mb-10 text-sm sm:text-base">
-            Lorem ipsum dolor sit amet consectetur. Faucibus facilisis vulputate
+          <p className="font-poppins text-gray-300 md:w-1/2 mb-6 sm:mb-20 text-sm sm:text-base">
+            {/* Lorem ipsum dolor sit amet consectetur. Faucibus facilisis vulputate
             nulla tellus sit nunc id tellus. Nunc nulla morbi gravida id
-            pharetra faucibus aliquet tempor lacus.
+            pharetra faucibus aliquet tempor lacus. */}
           </p>
 
-          <Link
+          {/* <Link
             style={gradientStyleBtn}
             className=" text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
             href="#"
           >
             Learn Now
-          </Link>
+          </Link> */}
         </div>
 
         <div className="lg:flex sm:justify-end justify-center mt-14 sm:mt-4 md:mt-0 hidden">

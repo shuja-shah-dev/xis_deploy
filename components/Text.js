@@ -303,13 +303,15 @@ const Text = () => {
         </h1>
         <SDCard data={SDCardData} />
       </div>
+
       <FarmSight />
-      {/* <ERP/> */}
+      <ERP/>
       <CustomerPortal />
       <CnnInferer />
-      {/* <XrayLab /> */}
+      <XrayLab />
       <XisApp />
-      <div className="pt-32">
+      
+      <div className="py-32">
         <h1 className=" pb-14 text-3xl text-center sm:text-4xl md:text-5xl  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Software Development Libraries
         </h1>
@@ -359,7 +361,7 @@ const Text = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center ">
+      {/* <div className="flex items-center justify-center ">
         <div className="pt-32 ">
           <Image
             src="/Mask group@2x.png"
@@ -368,8 +370,8 @@ const Text = () => {
             alt="img"
           />
         </div>
-      </div>
-      <div className="pt-32 2xl:px-24">
+      </div> */}
+      {/* <div className="pt-32 2xl:px-24">
         <h1 className=" pb-14 text-3xl sm:text-4xl md:text-5xl text-center  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           All Services
         </h1>
@@ -422,7 +424,7 @@ const Text = () => {
         </h1>
 
         <OtherServicesCard data={data} />
-      </div>
+      </div> */}
     </div>
   );
 };

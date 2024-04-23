@@ -42,13 +42,13 @@ const Robotics = () => {
         >
           <div className="flex justify-between">
             <h1 className="font-inter text-3xl">Robotics</h1>
-            <Link
+            {/* <Link
               style={gradientStyleBtn}
               className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
               href="#"
             >
               See more
-            </Link>
+            </Link> */}
           </div>
 
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins">
@@ -126,13 +126,13 @@ const Hardware = () => {
             <h1 className="font-inter text-3xl">
               Hardware
             </h1>
-            <Link
+            {/* <Link
               style={gradientStyleBtn}
               className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
               href="#"
             >
               See more
-            </Link>
+            </Link> */}
           </div>
 
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins">
@@ -189,13 +189,13 @@ const Software = () => {
         >
           <div className="flex justify-between">
             <h1 className="font-inter text-3xl">Software</h1>
-            <Link
+            {/* <Link
               style={gradientStyleBtn}
               className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
               href="#"
             >
               See more
-            </Link>
+            </Link> */}
           </div>
 
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins">

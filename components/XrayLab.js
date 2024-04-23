@@ -24,23 +24,20 @@ const XrayLab = () => {
           </h1>
         </div>
 
-        <div>
-          <Image
+        {/* <Image
             className=""
             src="/Mask group0.png"
             width={400}
-            height={600}
+            height={400}
             alt="screen img"
-          />
-
-          <Image
-            className=""
-            src="/x-ray lab 1.svg"
-            width={650}
-            height={1300}
-            alt="screen img"
-          />
-        </div>
+          /> */}
+        <Image
+          className="m-auto"
+          src="/x-ray lab 1.svg"
+          width={600}
+          height={1300}
+          alt="screen img"
+        />
       </div>
     );
 };

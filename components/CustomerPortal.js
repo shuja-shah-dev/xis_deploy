@@ -23,19 +23,19 @@ const CustomerPortal = () => {
           Customer Portal
         </h1>
         <p className="font-poppins text-gray-300  mb-6 sm:mb-10 text-sm sm:text-base">
-          Lorem ipsum dolor sit amet consectetur. Faucibus facilisis vulputate
+          {/* Lorem ipsum dolor sit amet consectetur. Faucibus facilisis vulputate
           nulla tellus sit nunc id tellus. Nunc nulla morbi gravida pharetra
           faucibus aliquet tempor ipsum lacusLorem ipsum dolor sit amet dolor
-          consectetur.
+          consectetur. */}
         </p>
 
-        <Link
+        {/* <Link
           style={gradientStyleBtn}
           className=" text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
           href="#"
         >
           Learn Now
-        </Link>
+        </Link> */}
       </div>
 
     
