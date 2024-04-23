@@ -152,7 +152,7 @@ const Abouts = () => {
                   className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2614.5692550973376!2d8.848324875555058!3d49.05681318672361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47979d2fd2ffcf53%3A0xd8a4d478df498df3!2sTheodor-Schweitzer-Stra%C3%9Fe%201%2F3%2C%2075447%20Sternenfels%2C%20Germany!5e0!3m2!1sen!2s!4v1700329065442!5m2!1sen!2s"
                   frameBorder="0"
-                  style={{ border: 0 }}
+                  style={{ border: 0, filter: "invert(90%)" }}
                   allowFullScreen=""
                   aria-hidden="false"
                   loading="lazy"
@@ -169,7 +169,7 @@ const Abouts = () => {
                   className="absolute top-0 rounded-xl w-full lg:w-full h-[100%] lg:h-[100%]"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5056224970035!2d-83.24737019999999!3d42.671830799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824eaac3f8d9c03%3A0x54513cd1f684af54!2s2255%20Pontiac%20Rd%2C%20Auburn%20Hills%2C%20MI%2048326%2C%20USA!5e0!3m2!1sen!2s!4v1703003095408!5m2!1sen!2s"
                   frameBorder="0"
-                  style={{ border: 0 }}
+                  style={{ border: 0, filter: "invert(90%)" }}
                   allowFullScreen=""
                   aria-hidden="false"
                   loading="lazy"
