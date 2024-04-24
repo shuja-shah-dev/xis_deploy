@@ -23,6 +23,7 @@ const Footer = () => {
   
   return (
     <div className=" pb-6 pt-24 relative ">
+
       <div className="absolute inset-0">
         <Image
           src="/Rectangle 75.png"
@@ -114,7 +115,9 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-between lg:justify-around text-white relative z-10">
-        <div className="text-center sm:text-left">© 2024 XRAY-LAB Industrial Services GmbH | All Rights Reserved.</div>
+        <div className="text-center sm:text-left">
+          © 2024 XRAY-LAB Industrial Services GmbH | All Rights Reserved.
+        </div>
         <div className="flex gap-4 lg:ml-[380px] pt-6 lg:pt-0">
           <Link
             style={gradientStyle}

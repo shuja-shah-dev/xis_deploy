@@ -19,7 +19,7 @@ const FarmSight = () => {
         className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-32 rounded-3xl p-8 md:p-12"
       >
         <div className="">
-          <h1 className="text-2xl sm:text-4xl  mb-2 font-inter text-[#FFF]">
+          <h1 className="text-2xl sm:text-4xl md:text-[46px] mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             AI Based FARM Quality Solution
           </h1>
           <p className="font-poppins text-gray-300 md:w-1/2 mb-6 sm:mb-20 text-sm sm:text-base">

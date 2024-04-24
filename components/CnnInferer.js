@@ -19,7 +19,7 @@ const CnnInferer = () => {
       className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-12 rounded-3xl lg:pt-32  pl-8 py-8 md:pl-12 justify-between flex flex-col lg:flex-row gap-10 "
     >
       <div className="lg:w-2/5 mb-4 lg:mb-0">
-        <h1 className="text-2xl sm:text-4xl  mb-2 font-inter text-[#FFF]">
+        <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           CNN Model Inferer
         </h1>
         <p className="font-poppins text-gray-300  mb-6 sm:mb-10 text-sm sm:text-base pr-8 md:pr-0">

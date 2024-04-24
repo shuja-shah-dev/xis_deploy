@@ -14,7 +14,7 @@ const XrayLab = () => {
         className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-12 rounded-3xl lg:pt-32 px-8 pt-8 md:px-12 justify-between flex flex-col lg:flex-row gap-10 "
       >
         <div className="lg:w-2/5 mb-4 lg:mb-0">
-          <h1 className="text-2xl sm:text-4xl  mb-2 font-inter text-[#FFF]">
+          <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             XRAY LAB WEBSITE
           </h1>
         </div>

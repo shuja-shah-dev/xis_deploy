@@ -14,7 +14,7 @@ const XisApp = () => {
       className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-12 rounded-3xl p-8 md:p-12"
     >
       <div className="">
-        <h1 className="text-2xl sm:text-4xl lg:w-2/5 mb-10 font-inter text-[#FFF]">
+        <h1 className="text-2xl sm:text-4xl md:text-[46px] xl:w-1/2 mb-10 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           AI Based Visual Quality Solution for Manufacture
         </h1>
       </div>
@@ -48,8 +48,6 @@ const XisApp = () => {
           />
         </div>
       </div>
-
-   
     </div>
   );
 };

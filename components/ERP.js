@@ -14,7 +14,7 @@ const ERP = () => {
       className="w-full 2xl:w-[90%] 2xl:mx-auto h-full rounded-3xl mt-12"
     >
       <div className="p-8 md:p-12">
-        <h1 className="text-2xl sm:text-4xl  mb-2 font-inter text-[#FFF]">
+        <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           ERP & CRM
         </h1>
         <p className="font-poppins text-gray-300 mb-6 sm:mb-10 text-sm sm:text-base">
@@ -44,7 +44,7 @@ const ERP = () => {
 
           <Image
             className="hidden xl:flex mt-[-90px] ml-[331px]"
-            src="/Dashboard.svg"
+            src="/dashboard.svg"
             width={687.692}
             height={475.116}
             alt="screen img"
