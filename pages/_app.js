@@ -68,11 +68,11 @@ const ArrowSlider = () => {
         >
           <KeyboardDoubleArrowUpIcon />
         </button>
+
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
-
         <div
           className="calendly-badge-widget  flex justify-end"
           style={{ position: "fixed", bottom: "14%", right: "2%" }}
@@ -82,7 +82,7 @@ const ArrowSlider = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsFillClockFill size={46} color="indigo" />
+            <BsFillClockFill size={46} color="rgba(93, 56, 194, 0.75)" />
           </a>
         </div>
       </div>
