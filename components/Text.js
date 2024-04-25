@@ -303,14 +303,12 @@ const Text = () => {
         </h1>
         <SDCard data={SDCardData} />
       </div>
-
       <FarmSight />
-      <ERP/>
+      <ERP />
       <CustomerPortal />
       <CnnInferer />
       <XrayLab />
       <XisApp />
-      
       <div className="py-32">
         <h1 className=" pb-14 text-3xl text-center sm:text-4xl md:text-5xl  font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Software Development Libraries
@@ -425,6 +423,7 @@ const Text = () => {
 
         <OtherServicesCard data={data} />
       </div> */}
+      
     </div>
   );
 };

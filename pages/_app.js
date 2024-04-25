@@ -14,6 +14,8 @@ import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp
 import "react-quill/dist/quill.snow.css"; 
 import CookiebotScript from "@/components/CookiebotScript";
 import { QueryClient, QueryClientProvider } from "react-query";
+import CalendlyWidget from "@/components/CalendlyWidget";
+import { BsFillClockFill } from "react-icons/bs";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
@@ -47,8 +49,8 @@ const ArrowSlider = () => {
   return (
     <div className="z-50" style={{ position: "relative" }}>
       <div
-        className="z-50"
-        style={{ position: "fixed", bottom: "15%", right: "3%" }}
+        className="z-50 "
+        style={{ position: "fixed", bottom: "24%", right: "2%" }}
       >
         <button
           id="scrollbtn"
@@ -66,6 +68,23 @@ const ArrowSlider = () => {
         >
           <KeyboardDoubleArrowUpIcon />
         </button>
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+
+        <div
+          className="calendly-badge-widget  flex justify-end"
+          style={{ position: "fixed", bottom: "14%", right: "2%" }}
+        >
+          <a
+            href="https://calendly.com/syedmutti/call-with-muti"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsFillClockFill size={46} color="indigo" />
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -334,6 +353,7 @@ export default function App({ Component, pageProps }) {
             <Component {...pageProps} />
           </main>
           <ArrowSlider />
+          <CalendlyWidget />
           <CrispChat />
           <Footer />
         </QueryClientProvider>
