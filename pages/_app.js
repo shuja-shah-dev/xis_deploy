@@ -11,7 +11,7 @@ import { Roboto, Lato } from "next/font/google";
 import CrispChat from "@/components/Crisp";
 import Script from "next/script";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
-import "react-quill/dist/quill.snow.css"; 
+import "react-quill/dist/quill.snow.css";
 import CookiebotScript from "@/components/CookiebotScript";
 import { QueryClient, QueryClientProvider } from "react-query";
 import CalendlyWidget from "@/components/CalendlyWidget";
@@ -47,10 +47,10 @@ const ArrowSlider = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="z-50" style={{ position: "relative" }}>
+    <div className="z-50 " style={{ position: "relative" }}>
       <div
-        className="z-50 "
-        style={{ position: "fixed", bottom: "24%", right: "2%" }}
+        className="z-50 right-[21%] sm:right-[14%] md:right-[12%] lg:right-[10%] xl:right-[8%] 2xl:right-[6%]"
+        style={{ position: "fixed", bottom: "85px" }}
       >
         <button
           id="scrollbtn"
@@ -69,7 +69,7 @@ const ArrowSlider = () => {
           <KeyboardDoubleArrowUpIcon />
         </button>
 
-        <link
+        {/* <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
@@ -84,7 +84,7 @@ const ArrowSlider = () => {
           >
             <BsFillClockFill size={46} color="rgba(93, 56, 194, 0.75)" />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -199,7 +199,7 @@ const AnalyticsCookies = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        paddingBottom: "20px"
+        paddingBottom: "20px",
       }}
     >
       <Box

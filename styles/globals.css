@@ -141,6 +141,20 @@ p {
   width: 0px;
 }
 
+body .crisp-client .cc-tlyw .cc-kxkl .cc-nsge {
+   position: fixed !important;
+   
+    bottom: 82px !important;
+    
+}
+
+body .crisp-client .cc-tlyw[data-full-view=true] .cc-kxkl .cc-nsge {
+    position: fixed !important;
+   
+    bottom: 82px !important; 
+ 
+}
+
 .hiddenCase {
   opacity: 0;
   transition: all 0.8s;

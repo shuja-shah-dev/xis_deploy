@@ -1,61 +1,56 @@
-// CalendlyWidget.js
-
 import React, { useEffect } from "react";
-import { BsFillClockFill } from "react-icons/bs";
 
-const CalendlyWidget = () => {
-  //   useEffect(() => {
-  //     const script = document.createElement("script");
-  //     script.src = "https://assets.calendly.com/assets/external/widget.js";
-  //     script.async = true;
-  //     document.body.appendChild(script);
+function CalendlyWidget() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
 
-  //     return () => {
-  //       document.body.removeChild(script);
-  //     };
-  //   }, []);
+    script.onload = () => {
+      if (window.Calendly) {
+        window.Calendly.initBadgeWidget({
+          url: "https://calendly.com/syedmutti/call-with-muti",
+            text: "Schedule Meeting",
+          color: "rgba(93, 56, 194, 0.75)",
+          textColor: "#ffffff",
+            branding: undefined,
+    
+          
+        });
+          
+        //   const badgeWidgetContainer = document.querySelector(
+        //     ".calendly-badge-widget"
+        //   );
+        //   if (badgeWidgetContainer) {
+        //     badgeWidgetContainer.style.position = "fixed";
+        //     badgeWidgetContainer.style.bottom = "14%"; 
 
-  //   useEffect(() => {
-  //     const badgeScript = document.createElement("script");
-  //     badgeScript.src = "https://assets.calendly.com/assets/external/widget.js";
-  //     badgeScript.async = true;
-  //     document.body.appendChild(badgeScript);
+        //   }
+      }
+    };
 
-  //     return () => {
-  //       document.body.removeChild(badgeScript);
-  //     };
-  //   }, []);
+    document.body.appendChild(script);
 
-  return (
-    <>
-      {/* Calendly inline widget */}
-      {/* <div
-        className="calendly-inline-widget"
-        data-url="https://calendly.com/syedmutti/call-with-muti"
-        style={{ minWidth: 320, height: 700 }}
-      ></div> */}
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
-      {/* Calendly badge widget */}
-      {/* <link
-        href="https://assets.calendly.com/assets/external/widget.css"
-        rel="stylesheet"
-      />
-
-      <div
-        className="calendly-badge-widget  flex justify-end"
-        // style={{ minWidth: 50, height: 115 }}
-        style={{ position: "fixed", bottom: "13%", right: "2%" }}
-      >
-        <a
-          href="https://calendly.com/syedmutti/call-with-muti"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+      <>
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+        <div
+          className="calendly-widget-container"
+         
         >
-          <BsFillClockFill size={50} color="indigo" />
-        </a>
-      </div> */}
-    </>
-  );
-};
+          
+          {/* This div will be replaced by the Calendly badge widget */}
+        </div>
+      </>
+    );
+}
 
 export default CalendlyWidget;
