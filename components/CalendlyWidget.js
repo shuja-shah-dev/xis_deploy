@@ -42,13 +42,7 @@ function CalendlyWidget() {
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
-        <div
-          className="calendly-widget-container"
-         
-        >
-          
-          {/* This div will be replaced by the Calendly badge widget */}
-        </div>
+     
       </>
     );
 }

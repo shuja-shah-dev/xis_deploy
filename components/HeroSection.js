@@ -63,6 +63,14 @@ const HeroSection = () => {
     }
   };
 
+  const initCalendlyPopup = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/syedmutti/call-with-muti", // Your Calendly link
+      });
+    }
+  };
+
   return (
     <div className="relative h-full">
       <HeroBlob
@@ -125,18 +133,12 @@ const HeroSection = () => {
               <button
                 style={gradientStyleMain}
                 className="text-sm sm:text-xl  opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-                // onClick={(_) => {
-                //   window.open("https://demo.xis.ai", "_blank");
-                // }}
+     
+                onClick={initCalendlyPopup}
               >
-                <a
-                  href="https://calendly.com/syedmutti/call-with-muti"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get a Demo
-                </a>
+                Get a Demo
               </button>
+             
               <div
                 className="flex gap-1 items-center cursor-pointer text-sm"
                 onClick={(_) => {
