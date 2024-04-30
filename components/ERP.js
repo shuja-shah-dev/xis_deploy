@@ -14,13 +14,14 @@ const ERP = () => {
       className="w-full 2xl:w-[90%] 2xl:mx-auto h-full rounded-3xl mt-12"
     >
       <div className="p-8 md:p-12">
-        <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-8 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           ERP & CRM
         </h1>
-        <p className="font-poppins text-gray-300 mb-6 sm:mb-10 text-sm sm:text-base">
-          {/* Lorem ipsum dolor sit amet consectetur. Faucibus facilisis vulputate
-          nulla tellus sit nunc id tellus. Nunc nulla morbi gravida id pharetra
-          faucibus aliquet tempor lacus. */}
+        <p className="font-poppins text-[#FFF] opacity-75 text-base md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
+          Xis Time Tracker is an ERP & CRM system with advanced real-time
+          invoicing, project management, and KPI indicators. It offers easy
+          time-tracking for freelancers, agencies, and companies, along with
+          seamless user and invoice handling
         </p>
       </div>
 

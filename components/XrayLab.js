@@ -14,9 +14,15 @@ const XrayLab = () => {
         className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-12 rounded-3xl lg:pt-32 px-8 pt-8 md:px-12 justify-between flex flex-col lg:flex-row gap-10 "
       >
         <div className="lg:w-2/5 mb-4 lg:mb-0">
-          <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="text-2xl sm:text-4xl md:text-[46px]  mb-8 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             XRAY LAB WEBSITE
           </h1>
+          <p className="font-poppins text-[#FFF] opacity-75 text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
+            Boasting a modern design crafted for effortless navigation and a
+            visually stunning user experience. Engineered with efficiency and
+            scalability in mind, it seamlessly combines aesthetics with
+            functionality to elevate the online presence
+          </p>
         </div>
         {/* <Image
             className=""

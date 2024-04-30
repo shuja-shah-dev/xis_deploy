@@ -19,13 +19,15 @@ const FarmSight = () => {
         className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-32 rounded-3xl p-8 md:p-12"
       >
         <div className="">
-          <h1 className="text-2xl sm:text-4xl md:text-[46px] mb-2 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="pb-2 text-2xl sm:text-4xl md:text-[46px] mb-8 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             AI Based FARM Quality Solution
           </h1>
-          <p className="font-poppins text-gray-300 md:w-1/2 mb-6 sm:mb-20 text-sm sm:text-base">
-            {/* Lorem ipsum dolor sit amet consectetur. Faucibus facilisis vulputate
-            nulla tellus sit nunc id tellus. Nunc nulla morbi gravida id
-            pharetra faucibus aliquet tempor lacus. */}
+          <p className="font-poppins text-[#FFF] opacity-75  text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
+            Farmsight leverages AI for comprehensive quality farming inspection. It includes real-time image analysis to identify crop
+            diseases, pest infestations, and nutrient deficiencies. It provides
+            tailored recommendations for treatment and management strategies,
+            optimizing crop health. Farmsight integrates with existing farm
+            management systems, streamlining data flow and decision-making
           </p>
 
           {/* <Link
@@ -37,7 +39,7 @@ const FarmSight = () => {
           </Link> */}
         </div>
 
-        <div className="lg:flex sm:justify-end justify-center mt-14 sm:mt-4 md:mt-0 hidden">
+        <div className="lg:flex sm:justify-end justify-center md:mt-24 sm:mt-4  hidden ">
           <div className="">
             <Image
               className=" sm:mt-[-50px] sm:ml-[150px] "

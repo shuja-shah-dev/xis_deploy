@@ -14,12 +14,22 @@ const XisApp = () => {
       className="w-full 2xl:w-[90%] 2xl:mx-auto h-full mt-12 rounded-3xl p-8 md:p-12"
     >
       <div className="">
-        <h1 className="text-2xl sm:text-4xl md:text-[46px] xl:w-1/2 mb-10 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="text-2xl sm:text-4xl md:text-[46px] xl:w-1/2 mb-8 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           AI Based Visual Quality Solution for Manufacture
         </h1>
+        <p className="font-poppins text-[#FFF] opacity-75  text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
+          Introducing our AI Based Visual Quality Solution for Manufacturing,
+          powered by the <span className="font-bold">xis suite</span>. With our product, you can
+          train, infer, and deploy your AI model in mere seconds,
+          revolutionizing your quality control processes
+        </p>
+        {/* Designed for seamless integration into your production beltline, it
+        operates on EDGE AI, ensuring efficiency and real-time insights. Start
+        inspecting quality with unparalleled accuracy, reaching up to 99.9%, and
+        elevate your manufacturing standards. */}
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-10">
         <div>
           <div className="mt-2 sm:mt-4 md:mt-0 flex xl:flex-row flex-col xl:gap-10 gap-5">
             <Image

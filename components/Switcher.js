@@ -173,7 +173,7 @@ const Software = () => {
   return (
     <div className="px-16 mb-28  relative">
       <div className="flex flex-col justify-around items-center">
-        <div className="mb-20">
+        <div className="mb-20 lg:hidden">
           <Image
             src="/soft.png"
             width={1050}
@@ -181,6 +181,64 @@ const Software = () => {
             alt="screen img "
             className="rounded-2xl"
           />
+        </div>
+
+        <div className="hidden lg:flex justify-center mb-20 w-full">
+          <div className="hidden 2xl:block">
+            <div className=" hidden 2xl:flex 2xl:flex-row flex-col gap-10 ">
+              <Image
+                className=""
+                src="/team.svg"
+                width={600}
+                height={468}
+                alt="screen img"
+              />
+
+              <Image
+                className="mt-[-55px]"
+                src="/training.svg"
+                width={685}
+                height={454}
+                alt="screen img"
+              />
+            </div>
+
+            <Image
+              className="hidden 2xl:flex mt-[-370px] ml-[300px]"
+              src="/Desktop inference 1.svg"
+              width={663}
+              height={526}
+              alt="screen img"
+            />
+          </div>
+
+          <div className="2xl:hidden block">
+            <div className=" flex 2xl:hidden sm:flex-row flex-col gap-5 ">
+              <Image
+                className=""
+                src="/team.svg"
+                width={420}
+                height={400}
+                alt="screen img"
+              />
+
+              <Image
+                className="mt-[-40px]"
+                src="/training.svg"
+                width={480}
+                height={400}
+                alt="screen img"
+              />
+            </div>
+
+            <Image
+              className="hidden sm:flex mt-[-250px] ml-[190px]"
+              src="/Desktop inference 1.svg"
+              width={500}
+              height={400}
+              alt="screen img"
+            />
+          </div>
         </div>
 
         <div
