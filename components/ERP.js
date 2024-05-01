@@ -29,6 +29,7 @@ const ERP = () => {
         <div className="sm:border border-[#193037] rounded-3xl">
           <Image
             className=""
+            priority={true}
             src="/time.svg"
             width={602.304}
             height={422.151}
@@ -37,6 +38,7 @@ const ERP = () => {
 
           <Image
             className="hidden xl:flex mt-[-406px] ml-[492px]"
+            priority={true}
             src="/table.svg"
             width={556.839}
             height={390.277}
@@ -45,6 +47,7 @@ const ERP = () => {
 
           <Image
             className="hidden xl:flex mt-[-90px] ml-[331px]"
+            priority={true}
             src="/dashboard.svg"
             width={687.692}
             height={475.116}
@@ -53,23 +56,6 @@ const ERP = () => {
         </div>
       </div>
 
-      {/* <div className="lg:hidden justify-center  items-center flex flex-col mt-14">
-        <Image
-          className=" "
-          src="/Desktop - 3 1.svg"
-          width={700}
-          height={400}
-          alt="screen img"
-        />
-
-        <Image
-          className="mt-4"
-          src="/Desktop - 4.svg"
-          width={700}
-          height={400}
-          alt="screen img"
-        />
-      </div> */}
     </div>
   );
 };

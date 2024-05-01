@@ -24,18 +24,11 @@ const CustomerPortal = () => {
           project progress, and gauge performance, all within one intuitive
           platform
         </p>
-
-        {/* <Link
-          style={gradientStyleBtn}
-          className=" text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-          href="#"
-        >
-          Learn Now
-        </Link> */}
       </div>
 
       <Image
         className="overflow-hidden m-auto"
+        priority={true}
         src="/customer portal 1.svg"
         width={650}
         height={1300}

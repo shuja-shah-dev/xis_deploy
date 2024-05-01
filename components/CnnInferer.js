@@ -40,6 +40,7 @@ const CnnInferer = () => {
 
       <Image
         className="m-auto"
+        priority={true}
         src="/black theme (1) 1.svg"
         width={670}
         height={861}

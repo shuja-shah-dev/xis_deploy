@@ -271,6 +271,7 @@ const Text = () => {
         <div>
           <Image
             src="/digital world 1.svg"
+            priority={true}
             width={1248}
             height={812}
             alt="screen img"
@@ -423,7 +424,6 @@ const Text = () => {
 
         <OtherServicesCard data={data} />
       </div> */}
-      
     </div>
   );
 };

@@ -23,11 +23,12 @@ const FarmSight = () => {
             AI Based FARM Quality Solution
           </h1>
           <p className="font-poppins text-[#FFF] opacity-75  text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
-            Farmsight leverages AI for comprehensive quality farming inspection. It includes real-time image analysis to identify crop
-            diseases, pest infestations, and nutrient deficiencies. It provides
-            tailored recommendations for treatment and management strategies,
-            optimizing crop health. Farmsight integrates with existing farm
-            management systems, streamlining data flow and decision-making
+            Farmsight leverages AI for comprehensive quality farming inspection.
+            It includes real-time image analysis to identify crop diseases, pest
+            infestations, and nutrient deficiencies. It provides tailored
+            recommendations for treatment and management strategies, optimizing
+            crop health. Farmsight integrates with existing farm management
+            systems, streamlining data flow and decision-making
           </p>
 
           {/* <Link
@@ -43,6 +44,7 @@ const FarmSight = () => {
           <div className="">
             <Image
               className=" sm:mt-[-50px] sm:ml-[150px] "
+              priority={true}
               src="/Desktop - 3 1.svg"
               width={700}
               height={400}
@@ -51,6 +53,7 @@ const FarmSight = () => {
 
             <Image
               className="sm:mt-[-434px] mt-4"
+              priority={true}
               src="/Desktop - 4.svg"
               width={700}
               height={400}
@@ -62,6 +65,7 @@ const FarmSight = () => {
         <div className="lg:hidden justify-center  items-center flex flex-col mt-14">
           <Image
             className=" "
+            priority={true}
             src="/Desktop - 3 1.svg"
             width={700}
             height={400}
@@ -69,6 +73,7 @@ const FarmSight = () => {
           />
 
           <Image
+            priority={true}
             className="mt-4"
             src="/Desktop - 4.svg"
             width={700}

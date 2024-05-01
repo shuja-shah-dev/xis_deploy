@@ -52,7 +52,7 @@ const Header = () => {
 
         <div className=" gap-4 text-sm hidden md:flex">
           <Link href="/">Home</Link>
-          {/* <Link href="/Products">Products</Link> */}
+          <Link href="/Products">Products</Link>
           <Link href="/Services">Services</Link>
           <Link href="/Industries">Industries</Link>
           <Link href="/about">About Us</Link>
@@ -167,11 +167,11 @@ const Header = () => {
                 Request Partnership
               </Link> */}
               {/* </li> */}
-              {/* <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
+              <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/Products" aria-label="Products">
                   Products
                 </Link>
-              </li> */}
+              </li>
               <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/Services" aria-label="Services">
                   Services

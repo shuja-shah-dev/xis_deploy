@@ -25,7 +25,7 @@ const IconCard = ({ data }) => {
           <style jsx>{`
             @media (max-width: 639px) {
               .ftest {
-                 width: 130px;
+                width: 130px;
                 margin: auto;
               }
             }
@@ -41,10 +41,16 @@ const IconCard = ({ data }) => {
           `}</style>
           <Image
             className="m-auto"
+            priority={true}
             src={c.path}
-            width={c.path === "/Rectangle (8).png" || c.path === "/kotlin-2-logo.png" ||
-            c.path === "/Swift_logo.svg" ||
-            c.path === "/Rectangle (15).png" ? 200 : 70}
+            width={
+              c.path === "/Rectangle (8).png" ||
+              c.path === "/kotlin-2-logo.png" ||
+              c.path === "/Swift_logo.svg" ||
+              c.path === "/Rectangle (15).png"
+                ? 200
+                : 70
+            }
             height={70}
             alt={`${c.label} img`}
           />

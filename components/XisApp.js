@@ -19,9 +19,9 @@ const XisApp = () => {
         </h1>
         <p className="font-poppins text-[#FFF] opacity-75  text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
           Introducing our AI Based Visual Quality Solution for Manufacturing,
-          powered by the <span className="font-bold">xis suite</span>. With our product, you can
-          train, infer, and deploy your AI model in mere seconds,
-          revolutionizing your quality control processes
+          powered by the <span className="font-bold">xis suite</span>. With our
+          product, you can train, infer, and deploy your AI model in mere
+          seconds, revolutionizing your quality control processes
         </p>
         {/* Designed for seamless integration into your production beltline, it
         operates on EDGE AI, ensuring efficiency and real-time insights. Start
@@ -34,6 +34,7 @@ const XisApp = () => {
           <div className="mt-2 sm:mt-4 md:mt-0 flex xl:flex-row flex-col xl:gap-10 gap-5">
             <Image
               className=" "
+              priority={true}
               src="/Desktop inference 1.svg"
               width={505}
               height={400}
@@ -42,6 +43,7 @@ const XisApp = () => {
 
             <Image
               className=""
+              priority={true}
               src="/team.svg"
               width={495}
               height={400}
@@ -51,6 +53,7 @@ const XisApp = () => {
 
           <Image
             className="hidden xl:flex mt-[-350px] ml-[180px]"
+            priority={true}
             src="/training.svg"
             width={670}
             height={400}
