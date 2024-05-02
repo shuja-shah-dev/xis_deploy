@@ -108,7 +108,7 @@ const Hardware = () => {
             muted
             loop
             style={{
-              width: "90%",
+              width: "70%",
               height: "auto",
               borderRadius: "30px",
               margin: "auto"
@@ -140,7 +140,7 @@ const Hardware = () => {
             devices without any hassle. xis.suite is a expandable platform that
             can be implemented on already installed equipments i-e cameras,
             saving time and money. xis.suite's Edge AI ensures efficiency of AI
-            models and privacy of user's data
+            models and privacy of user's data.
           </p>
         </div>
       </div>
@@ -264,7 +264,7 @@ const Software = () => {
             independently, establishing a secure foundation that minimizes risks
             and optimizes costs while driving revenue growth. Includes AI
             assistive labeling and active learning algorithms for fast and
-            efficient process
+            efficient process.
           </p>
         </div>
       </div>

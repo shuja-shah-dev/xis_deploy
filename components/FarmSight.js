@@ -22,7 +22,7 @@ const FarmSight = () => {
           <h1 className="pb-2 text-2xl sm:text-4xl md:text-[46px] mb-8 font-inter font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             AI Based FARM Quality Solution
           </h1>
-          <p className="font-poppins text-[#FFF] opacity-75  text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
+          <p className="font-normal font-poppins text-[#FFF] opacity-75  text-base  md:text-[20px] xl:text-[24px] md:leading-8 xl:leading-10">
             Farmsight leverages AI for comprehensive quality farming inspection.
             It includes real-time image analysis to identify crop diseases, pest
             infestations, and nutrient deficiencies. It provides tailored
