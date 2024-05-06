@@ -129,7 +129,7 @@ const Footer = () => {
           <Link
             style={gradientStyle}
             target="_blank"
-            href="#"
+            href="https://twitter.com/xisai187654"
             aria-label="Twitter"
           >
             <FaTwitter size={24} color="white" />

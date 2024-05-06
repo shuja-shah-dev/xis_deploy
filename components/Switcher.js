@@ -41,7 +41,7 @@ const Robotics = () => {
           className="text-white w-full lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
           <div className="flex justify-between">
-            <h1 className="font-inter text-3xl">Robotics</h1>
+            <h1 className="font-inter text-3xl">Automation</h1>
             {/* <Link
               style={gradientStyleBtn}
               className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
@@ -96,12 +96,8 @@ const Hardware = () => {
             alt="screen img"
           />
         </div> */}
-        <div className="z-50 mb-20 ">
-          {/* <img
-            src="/v.gif"
-            alt="video GIF"
-            className="w-full h-full object-cover rounded-2xl sm:hidden"
-          /> */}
+        {/* <div className="z-50 mb-20 ">
+         
           <video
             autoPlay
             playsInline
@@ -116,7 +112,7 @@ const Hardware = () => {
           >
             <source src="/new.mp4" type="video/mp4" />
           </video>
-        </div>
+        </div> */}
 
         <div
           style={gradientStyle}
@@ -322,7 +318,7 @@ const Switcher = () => {
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("robotics")}
           >
-            Robotics
+            Automation
           </div>
         </div>
       </div>
