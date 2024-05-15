@@ -88,14 +88,9 @@ const Hardware = () => {
   return (
     <div className="px-16 pb-28  relative ">
       <div className="flex flex-col justify-around items-center">
-        {/* <div>
-          <Image
-            src="/Component 2.png"
-            width={760}
-            height={500}
-            alt="screen img"
-          />
-        </div> */}
+        <div className="mb-20">
+          <Image src="/png.png" width={1100} height={500} alt="edgeAI" />
+        </div>
         {/* <div className="z-50 mb-20 ">
          
           <video
@@ -119,9 +114,7 @@ const Hardware = () => {
           className="text-white w-full lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
           <div className="flex justify-between">
-            <h1 className="font-inter text-3xl">
-              Hardware
-            </h1>
+            <h1 className="font-inter text-3xl">Hardware</h1>
             {/* <Link
               style={gradientStyleBtn}
               className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
