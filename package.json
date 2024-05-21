@@ -21,7 +21,7 @@
     "@reduxjs/toolkit": "^2.2.3",
     "compression": "^1.7.4",
     "crisp-sdk-web": "^1.0.21",
-    "dompurify": "^3.0.6",
+    "dompurify": "^3.1.4",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.4",
     "intersection-observer": "^0.12.2",

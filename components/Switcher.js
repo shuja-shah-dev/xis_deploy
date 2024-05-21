@@ -89,7 +89,7 @@ const Hardware = () => {
     <div className="px-16 pb-28  relative ">
       <div className="flex flex-col justify-around items-center">
         <div className="mb-20">
-          <Image src="/png.png" width={1100} height={500} alt="edgeAI" />
+          <Image src="/png.png" width={900} height={500} alt="edgeAI" />
         </div>
         {/* <div className="z-50 mb-20 ">
          

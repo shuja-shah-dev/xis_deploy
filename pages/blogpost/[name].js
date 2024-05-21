@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import { BASE_URL } from "@/common/base_config";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
@@ -17,27 +17,15 @@ const roboto = Roboto({
 });
 
 const Slug = ({ blog }) => {
-  console.log( );
+  const [currentUrl, setCurrentUrl] = useState("");
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
   function createMarkup(c) {
     return { __html: c };
   }
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/blogs`);
-        if (response.ok) {
-          const data = await response.json();
-          setSubmitBlog(data);
-        } else {
-          console.error("Error fetching data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   const formatDays = (createdAt) => {
     const now = new Date();
@@ -64,6 +52,8 @@ const Slug = ({ blog }) => {
       return `${daysDifference} ${daysDifference === 1 ? "day" : "days"} ago`;
     }
   };
+
+  console.log(currentUrl);
 
   return (
     <>
@@ -110,7 +100,7 @@ const Slug = ({ blog }) => {
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
                   <h2 className="font-medium title-font mt-4 text-lg">
-                    Xis.ai
+                    xis.ai
                   </h2>
                   <div className="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
                   <p className="text-base mb-4">
@@ -133,11 +123,12 @@ const Slug = ({ blog }) => {
                     </Link>
                     <Link
                       target="_blank"
-                      href="https://www.linkedin.com/company/xis-ai/mycompany/"
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}`}
                       aria-label="Linkedin"
                     >
                       <LinkedInIcon fontSize="large" />
                     </Link>
+
                     <Link
                       target="_blank"
                       href="https://medium.com/@xis.ai"

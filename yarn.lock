@@ -910,10 +910,10 @@
     "@babel/runtime" "^7.8.7"
     "csstype" "^3.0.2"
 
-"dompurify@^3.0.6":
-  "integrity" "sha512-b7uwreMYL2eZhrSCRC4ahLTeZcPZxSmYfmcQGXGkXiZSNW1X85v+SDM5KsWcpivIiUBH47Ji7NtyUdpLeF5JZQ=="
-  "resolved" "https://registry.npmjs.org/dompurify/-/dompurify-3.0.8.tgz"
-  "version" "3.0.8"
+"dompurify@^3.1.4":
+  "integrity" "sha512-2gnshi6OshmuKil8rMZuQCGiUF3cUxHY3NGDzUAdUx/NPEe5DVnO8BDoAQouvgwnx0R/+a6jUn36Z0FSdq8vww=="
+  "resolved" "https://registry.npmjs.org/dompurify/-/dompurify-3.1.4.tgz"
+  "version" "3.1.4"
 
 "dotenv@^16.3.1":
   "integrity" "sha512-CjA3y+Dr3FyFDOAMnxZEGtnW9KBR2M0JvvUtXNW+dYJL5ROWxP9DUHCwgFqpMk0OXCc0ljhaNTr2w/kutYIcHQ=="
