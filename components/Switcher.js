@@ -18,40 +18,35 @@ const Robotics = () => {
   
   return (
     <div className="px-16 pb-28 lg:mb-0 md:mb-10 mb-5 relative ">
-      <div className="flex  flex-col justify-around items-center ">
-        <div className="z-50 mb-20">
+      <div className="flex  flex-col xl:flex-row justify-center gap-10 items-center">
+        <div className="w-[90%] xl:w-[50%] m-auto xl:m-0 ">
           <video
             autoPlay
             playsInline
             muted
             loop
             style={{
-              width: "90%",
-              height: "auto",
               borderRadius: "20px",
-              margin: "auto",
             }}
+     
           >
             <source src="/vid.mp4" type="video/mp4" />
           </video>
         </div>
-
+        {/* <div >
+          <Image
+            src="/Rectangle 752.svg"
+            width={740}
+            height={639}
+            alt="edgeAI"
+            className="m-auto"
+          />
+        </div> */}
         <div
           style={gradientStyle}
-          className="text-white w-full lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
+          className="text-white w-full xl:w-[456px] xl:h-[480px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
-          <div className="flex justify-between">
-            <h1 className="font-inter text-3xl">Automation</h1>
-            {/* <Link
-              style={gradientStyleBtn}
-              className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-              href="#"
-            >
-              See more
-            </Link> */}
-          </div>
-
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins 2xl:text-lg">
             xis.ai's expertise extends to providing comprehensive support in
             robotics and automation. By providing support for ROS/ROS2 and
             legacy systems, we optimize efficiency, accuracy, and productivity
@@ -87,10 +82,12 @@ const Hardware = () => {
 
   return (
     <div className="px-16 pb-28  relative ">
-      <div className="flex flex-col justify-around items-center">
-        <div className="mb-20">
-          <Image src="/png.png" width={900} height={500} alt="edgeAI" />
+      <div className="flex flex-col xl:flex-row justify-center  gap-10">
+        <div >
+          <Image src="/dia.png" width={781} height={565} alt="edgeAI" className="mt-[-70px] m-auto"/>
         </div>
+      
+
         {/* <div className="z-50 mb-20 ">
          
           <video
@@ -108,23 +105,11 @@ const Hardware = () => {
             <source src="/new.mp4" type="video/mp4" />
           </video>
         </div> */}
-
         <div
           style={gradientStyle}
-          className="text-white w-full lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
+          className="text-white w-full xl:w-[456px] xl:h-[450px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
-          <div className="flex justify-between">
-            <h1 className="font-inter text-3xl">Hardware</h1>
-            {/* <Link
-              style={gradientStyleBtn}
-              className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-              href="#"
-            >
-              See more
-            </Link> */}
-          </div>
-
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins  2xl:text-lg">
             Create your own AI visual inspection model and deploy it on edge
             devices without any hassle. xis.suite is a expandable platform that
             can be implemented on already installed equipments i-e cameras,
@@ -161,41 +146,41 @@ const Software = () => {
 
   return (
     <div className="px-16 mb-28  relative">
-      <div className="flex flex-col justify-around items-center">
-        <div className="mb-20 lg:hidden">
+      <div className="flex flex-col xl:flex-row  justify-center gap-10 ">
+        <div className=" xl:hidden justify-center items-center">
           <Image
             src="/soft.png"
-            width={1050}
+            width={740}
             height={500}
             alt="screen img "
-            className="rounded-2xl"
+            className="rounded-2xl m-auto"
           />
         </div>
 
-        <div className="hidden lg:flex justify-center mb-20 w-full">
+        <div className="hidden xl:flex mb-20 ml-[80px] ">
           <div className="hidden 2xl:block">
-            <div className=" hidden 2xl:flex 2xl:flex-row flex-col gap-10 ">
+            <div className=" hidden 2xl:flex 2xl:flex-row flex-col  ">
               <Image
                 className=""
                 src="/team.svg"
-                width={600}
+                width={700}
                 height={468}
                 alt="screen img"
               />
 
-              <Image
+              {/* <Image
                 className="mt-[-55px]"
                 src="/training.svg"
                 width={685}
                 height={454}
                 alt="screen img"
-              />
+              /> */}
             </div>
 
             <Image
-              className="hidden 2xl:flex mt-[-370px] ml-[300px]"
+              className="hidden 2xl:flex mt-[-430px] ml-[-80px]"
               src="/Desktop inference 1.svg"
-              width={663}
+              width={763}
               height={526}
               alt="screen img"
             />
@@ -206,24 +191,24 @@ const Software = () => {
               <Image
                 className=""
                 src="/team.svg"
-                width={420}
+                width={530}
                 height={400}
                 alt="screen img"
               />
 
-              <Image
+              {/* <Image
                 className="mt-[-40px]"
                 src="/training.svg"
                 width={480}
                 height={400}
                 alt="screen img"
-              />
+              /> */}
             </div>
 
             <Image
-              className="hidden sm:flex mt-[-250px] ml-[190px]"
+              className="hidden sm:flex mt-[-320px] ml-[-80px]"
               src="/Desktop inference 1.svg"
-              width={500}
+              width={600}
               height={400}
               alt="screen img"
             />
@@ -232,10 +217,10 @@ const Software = () => {
 
         <div
           style={gradientStyle}
-          className="text-white w-full lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12 "
+          className="text-white w-full xl:w-[456px] xl:h-[530px] 2xl:h-[670px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12 "
         >
-          <div className="flex justify-between">
-            <h1 className="font-inter text-3xl">Software</h1>
+          <div className="">
+            {/* <h1 className="font-inter text-3xl">Software</h1> */}
             {/* <Link
               style={gradientStyleBtn}
               className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
@@ -245,7 +230,7 @@ const Software = () => {
             </Link> */}
           </div>
 
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0  font-poppins 2xl:text-lg">
             xis.ai provides no code, an end-to-end platform for AI visual
             quality inspection. A robust Vision AI platform enabling companies
             to navigate the entire AI life cycle effortlessly. With our
