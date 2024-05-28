@@ -28,7 +28,6 @@ const Robotics = () => {
             style={{
               borderRadius: "20px",
             }}
-     
           >
             <source src="/vid.mp4" type="video/mp4" />
           </video>
@@ -46,6 +45,8 @@ const Robotics = () => {
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[480px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
+          <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Robotics</h1>
+
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins 2xl:text-lg">
             xis.ai's expertise extends to providing comprehensive support in
             robotics and automation. By providing support for ROS/ROS2 and
@@ -83,10 +84,15 @@ const Hardware = () => {
   return (
     <div className="px-16 pb-28  relative ">
       <div className="flex flex-col xl:flex-row justify-center  gap-10">
-        <div >
-          <Image src="/dia.png" width={781} height={565} alt="edgeAI" className="mt-[-70px] m-auto"/>
+        <div>
+          <Image
+            src="/dia.png"
+            width={781}
+            height={565}
+            alt="edgeAI"
+            className="mt-[-70px] m-auto"
+          />
         </div>
-      
 
         {/* <div className="z-50 mb-20 ">
          
@@ -109,6 +115,8 @@ const Hardware = () => {
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[450px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
+          <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Hardware</h1>
+
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins  2xl:text-lg">
             Create your own AI visual inspection model and deploy it on edge
             devices without any hassle. xis.suite is a expandable platform that
@@ -219,16 +227,7 @@ const Software = () => {
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[530px] 2xl:h-[670px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12 "
         >
-          <div className="">
-            {/* <h1 className="font-inter text-3xl">Software</h1> */}
-            {/* <Link
-              style={gradientStyleBtn}
-              className="hidden sm:block text-sm sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-              href="#"
-            >
-              See more
-            </Link> */}
-          </div>
+          <h1 className="lg:ml-7 xl:ml-0 font-inter text-3xl mb-2">Software</h1>
 
           <p className="text-left leading-7 lg:ml-7 xl:ml-0  font-poppins 2xl:text-lg">
             xis.ai provides no code, an end-to-end platform for AI visual

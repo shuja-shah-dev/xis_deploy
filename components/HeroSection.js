@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
+import ProductBanner from "./banner";
 
 const HeroBlob = ({ sx = {} }) => {
   return (
@@ -73,6 +74,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-full">
+      <ProductBanner />
       <HeroBlob
         sx={{
           top: "",
@@ -133,12 +135,11 @@ const HeroSection = () => {
               <button
                 style={gradientStyleMain}
                 className="text-sm sm:text-xl  opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-     
                 onClick={initCalendlyPopup}
               >
                 Get a Demo
               </button>
-             
+
               <div
                 className="flex gap-1 items-center cursor-pointer text-sm"
                 onClick={(_) => {

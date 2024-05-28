@@ -29,11 +29,6 @@ app.post("/contact", postcontact);
 app.post("/founder", founderRoute);
 app.use("/", blogRoutes);
 
-// app.get("/", function (req, res) {
-//   res.sendFile(path.join(__dirname, "../pages", "blogs.js"));
-// });
-
-
 mongoose
   .connect(mongodb.uri)
   .then(() => {
