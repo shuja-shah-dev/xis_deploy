@@ -47,7 +47,7 @@ const Header = () => {
     <>
       <div
         className={`${
-          isHomePage ? "mt-14" : ""
+          isHomePage ? "mt-[75px] sm:mt-14" : ""
         } font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative`}
     
       >
