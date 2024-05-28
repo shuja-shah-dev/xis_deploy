@@ -51,7 +51,7 @@ const Product = () => {
           sx={{
             bottom: "-10%",
             zIndex: "-1",
-            width: "400px",
+            width: "200px",
           }}
         />
         <HeroBlob
@@ -95,7 +95,7 @@ const Product = () => {
               setup.
             </p>
           </div>
-          <div className="flex flex-col w-[86%] m-auto my-14 xl:mt-0">
+          <div className="flex flex-col w-[86%] m-auto min-[2050px]:w-[73%] my-14 xl:mt-0">
             <ProductFeatures data={xisDevData} />
           </div>
         </div>
@@ -200,11 +200,11 @@ const Product = () => {
                 className="m-auto xl:m-0"
               />
             </div>
-
-            <div className="flex flex-col w-[86%] m-auto mt-14 xl:mt-0">
-              <ProductFeatures data={xisRtData} />
-            </div>
           </div>
+        </div>
+
+        <div className="flex flex-col w-[86%] m-auto min-[2050px]:w-[73%] mt-14 xl:mt-0">
+          <ProductFeatures data={xisRtData} />
         </div>
       </div>
 

@@ -16,7 +16,8 @@ import CookiebotScript from "@/components/CookiebotScript";
 import { QueryClient, QueryClientProvider } from "react-query";
 import CalendlyWidget from "@/components/CalendlyWidget";
 import { BsFillClockFill } from "react-icons/bs";
-
+import ProductBanner from "@/components/banner";
+import { useRouter } from "next/router";
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
 
@@ -243,7 +244,7 @@ const AnalyticsCookies = () => {
 
 export default function App({ Component, pageProps }) {
   const [settings, setSettings] = useState(false);
-
+ const router = useRouter();
   const dec = {
     alignItems: "flex-start",
     background: "rgb(2 6 23)",
@@ -348,6 +349,7 @@ export default function App({ Component, pageProps }) {
             )}
           </CookieConsent> */}
           {/* <CookiebotScript /> */}
+          {router.pathname === "/" && <ProductBanner />}
           <Header />
           <main className={lato.className}>
             <Component {...pageProps} />

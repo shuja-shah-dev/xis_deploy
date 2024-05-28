@@ -17,9 +17,9 @@ const Robotics = () => {
 
   
   return (
-    <div className="px-16 pb-28 lg:mb-0 md:mb-10 mb-5 relative ">
+    <div className="px-16 xl:h-[800px] mb-20 xl:mb-0  relative ">
       <div className="flex  flex-col xl:flex-row justify-center gap-10 items-center">
-        <div className="w-[90%] xl:w-[50%] m-auto xl:m-0 ">
+        <div className="w-[90%] xl:w-[43.5%] m-auto xl:m-0 ">
           <video
             autoPlay
             playsInline
@@ -82,7 +82,7 @@ const Hardware = () => {
   }
 
   return (
-    <div className="px-16 pb-28  relative ">
+    <div className="px-16 xl:h-[800px] mb-20 xl:mb-0 relative ">
       <div className="flex flex-col xl:flex-row justify-center  gap-10">
         <div>
           <Image
@@ -153,7 +153,7 @@ const Software = () => {
   
 
   return (
-    <div className="px-16 mb-28  relative">
+    <div className="px-16 xl:h-[800px] mb-20 xl:mb-0 relative">
       <div className="flex flex-col xl:flex-row  justify-center gap-10 ">
         <div className=" xl:hidden justify-center items-center">
           <Image
@@ -227,9 +227,9 @@ const Software = () => {
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[530px] 2xl:h-[670px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12 "
         >
-          <h1 className="lg:ml-7 xl:ml-0 font-inter text-3xl mb-2">Software</h1>
+          <h1 className="lg:ml-7 xl:ml-0 font-inter text-3xl ">Software</h1>
 
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0  font-poppins 2xl:text-lg">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins 2xl:text-lg">
             xis.ai provides no code, an end-to-end platform for AI visual
             quality inspection. A robust Vision AI platform enabling companies
             to navigate the entire AI life cycle effortlessly. With our

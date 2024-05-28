@@ -19,17 +19,10 @@ const ProductBanner = () => {
     }
   }, []);
 
-  const handleClose = () => {
-    setIsVisible(false);
-    const now = new Date();
-    const expiryDate = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
-    localStorage.setItem("productBannerExpiry", expiryDate.toString());
-  };
-
   if (!isVisible) return null;
 
   return (
-    <div className="bg-gradient-to-r from-purple-700 to-purple-900 text-white text-center p-4 fixed top-0 w-full z-50 shadow-lg flex items-center justify-center">
+    <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white text-center p-4 absolute top-0 w-full z-50 shadow-lg flex items-center justify-center">
       <div className="flex-1">
         <span>
           🤖 Check out our new{" "}
@@ -42,12 +35,6 @@ const ProductBanner = () => {
           ! IT'S LIVE. 🎉
         </span>
       </div>
-      <button
-        onClick={handleClose}
-        className="absolute right-4 text-white bg-transparent hover:text-gray-300 focus:outline-none text-2xl font-bold"
-      >
-        &times;
-      </button>
     </div>
   );
 };

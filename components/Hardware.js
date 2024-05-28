@@ -22,18 +22,36 @@ const Hardware = () => {
         sx={{
           bottom: "10%",
           zIndex: "-1",
-          width: "400px",
+          width: "200px",
         }}
+      />
+      <HeroBlob
+        sx={{
+          background: "rgba(62, 95, 170, 0.25)",
+          bottom: "60%",
+          zIndex: "-1",
+          left: "0px",
+        }}
+        key={"UniqueElementor2"}
+      />
+      <HeroBlob
+        sx={{
+          background: "rgba(62, 95, 170, 0.25)",
+          bottom: "15%",
+          zIndex: "-1",
+          left: "0px",
+        }}
+        key={"UniqueElementor2"}
       />
       <h1 className="my-20 font-inter  text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
         Hardware
       </h1>
 
       <div
-        className="border border-[#5D38C2] rounded-3xl p-12"
+        className="border border-[#5D38C2] rounded-3xl p-12 min-[2050px]:w-[80%] m-auto"
         style={gradient}
       >
-        <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
+        <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-4 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
           Edge AI
         </h3>
         <p className="font-poppins text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
@@ -97,7 +115,7 @@ const Hardware = () => {
               src="/xis rt.svg"
               width={289}
               height={289}
-              className="ml-[-113px] lg:ml-0"
+              className="ml-[-145px] lg:ml-0"
             />
           </div>
 
@@ -147,10 +165,10 @@ const Hardware = () => {
       </div>
 
       <div
-        className="border border-[#5D38C2] rounded-3xl p-12 my-20"
+        className="border border-[#5D38C2] rounded-3xl p-12 my-20 min-[2050px]:w-[80%] m-auto"
         style={gradient}
       >
-        <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
+        <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-4 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
           Visual Sensors
         </h3>
         <p className="font-poppins text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">

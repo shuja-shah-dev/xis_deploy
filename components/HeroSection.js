@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import LogoBar from "./LogoBar";
 import { Box } from "@mui/material";
-import ProductBanner from "./banner";
 
 const HeroBlob = ({ sx = {} }) => {
   return (
@@ -74,7 +73,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-full">
-      <ProductBanner />
+      
       <HeroBlob
         sx={{
           top: "",

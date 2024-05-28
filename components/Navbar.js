@@ -8,6 +8,7 @@ import { CloseOutlined } from "@mui/icons-material";
 import { useRouter } from "next/router";
 
 const Header = () => {
+  
   const email = "muti.rehman@xray-lab.com";
   const subject = "Request Partnership";
   const body = "";
@@ -37,13 +38,19 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   const router = useRouter();
+   const isHomePage = router.pathname === "/";
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [router.pathname]);
   return (
     <>
-      <div className=" font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative">
+      <div
+        className={`${
+          isHomePage ? "mt-14" : ""
+        } font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative`}
+    
+      >
         <div>
           <Link href="/">
             <Image src="/Asset.png" width={90} height={90} alt="logo" />

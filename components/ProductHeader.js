@@ -23,8 +23,8 @@ const ProductHeader = () => {
       />
       <div className="flex flex-col md:flex-row mt-10 md:mt-20 justify-center ">
         <div className="w-full md:w-1/2 md:mt-16 lg:mt-32">
-          <h2 className="font-inter text-4xl md:text-5xl lg:text-[54px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-            xis suit
+          <h2 className="font-inter mb-4 text-4xl md:text-5xl lg:text-[54px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+            Xis Software
           </h2>
           <p className="font-poppins text-[16px] sm:text-[20px] lg:text-[24px] leading-6 mb-4 md:mb-0 md:leading-8 lg:leading-10 opacity-75 w-full 2xl:w-2/3">
             xis.ai offers a Computer Vision AI platform that covers the full AI
