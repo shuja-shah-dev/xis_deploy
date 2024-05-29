@@ -21,7 +21,7 @@ const gradientStyleMain = {
 
   return (
     //py-28
-    <div className="h-full border-2 border-slate-800 rounded-2xl relative ">
+    <div className="h-full border-2 border-slate-800 rounded-2xl relative min-[2300px]:w-[80%] m-auto">
       <div style={gradientStyle}>
         <div className="absolute  sm:top-[-180px] top-[-30px]">
           <Image src="/left.png" width={500} height={100} alt="left img" />
