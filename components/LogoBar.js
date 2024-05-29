@@ -3,7 +3,7 @@ import React from "react";
 
 const LogoBar = () => {
   return (
-    <div className="flex  gap-6 sm:mx-0 mx-4 sm:gap-0 justify-around items-center md:px-10 sm:pb-10 px-1 sm:px-0">
+    <div className="flex  gap-6 sm:mx-0 mx-4 sm:gap-0 justify-around items-center md:px-10 sm:pb-10 px-1 sm:px-0 min-[2300px]:w-[65%] min-[2300px]:m-auto">
       <div>
         <Image src="/Frame.png" alt="xray-lab logo" width={130} height={100} />
       </div>
@@ -11,7 +11,12 @@ const LogoBar = () => {
         <Image src="/ip2.png" alt="ipai logo" width={110} height={100} />
       </div>
       <div>
-        <Image src="/aws-activate.png" alt="aws logo" width={175} height={100} />
+        <Image
+          src="/aws-activate.png"
+          alt="aws logo"
+          width={175}
+          height={100}
+        />
       </div>
       <div>
         <Image src="/nframe.png" alt="nvidia logo" width={140} height={47} />

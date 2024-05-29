@@ -46,8 +46,10 @@ const Header = () => {
   return (
     <>
       <div
-        className={`${
-          isHomePage ? "mt-[75px] sm:mt-14" : ""
+        className={` ${
+          isHomePage
+            ? "mt-[75px] sm:mt-14 min-[2300px]:w-[70%] min-[2300px]:mx-auto"
+            : " min-[2300px]:w-[70%] min-[2300px]:mx-auto"
         } font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative`}
       >
         <div>
@@ -58,7 +60,7 @@ const Header = () => {
 
         <div className=" gap-4 text-sm hidden md:flex">
           <Link href="/">Home</Link>
-          <Link href="/Products">Products</Link>
+          <Link href="/Products">Product</Link>
           {/* <Link href="/Services">Services</Link> */}
           <Link href="/Industries">Industries</Link>
           <Link href="/about">About Us</Link>
@@ -175,7 +177,7 @@ const Header = () => {
               {/* </li> */}
               <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/Products" aria-label="Products">
-                  Products
+                  Product
                 </Link>
               </li>
               {/* <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
