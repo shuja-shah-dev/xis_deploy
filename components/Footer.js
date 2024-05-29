@@ -52,10 +52,10 @@ const Footer = () => {
               </Link>
             </div>
             <Link href="/impressum" aria-label="Impressum">
-              Impressum
+              Imprint
             </Link>
             <Link href="/agb" aria-label="Terms and Conditions / AGB">
-              Terms and Conditions / AGB
+              Terms and Conditions
             </Link>
             <Link href="/AGB_en.pdf" download="AGB" aria-label="About">
               General Terms and Conditions

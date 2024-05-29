@@ -45,7 +45,7 @@ const Robotics = () => {
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[480px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
-          <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Robotics</h1>
+          <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Automation</h1>
 
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins 2xl:text-lg">
             xis.ai's expertise extends to providing comprehensive support in
@@ -115,7 +115,7 @@ const Hardware = () => {
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[450px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"
         >
-          <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Hardware</h1>
+          <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Edge AI</h1>
 
           <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins  2xl:text-lg">
             Create your own AI visual inspection model and deploy it on edge
@@ -225,7 +225,7 @@ const Software = () => {
 
         <div
           style={gradientStyle}
-          className="text-white w-full xl:w-[456px] xl:h-[530px] 2xl:h-[670px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12 "
+          className="text-white w-full xl:w-[456px] xl:h-[530px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12 "
         >
           <h1 className="lg:ml-7 xl:ml-0 font-inter text-3xl ">Software</h1>
 
@@ -257,7 +257,11 @@ const Software = () => {
 
 const Switcher = () => {
   const [activeTab, setActiveTab] = useState("software");
+  const bg = {
+   background: "linear-gradient(0deg, rgba(62, 95, 170, 0.25) 0%, rgba(48, 20, 102, 0.25) 193.33%)",
 
+backdropFilter: "blur(50px)"
+ }
   return (
     <div
       className="pt-24 relative z-50"
@@ -268,6 +272,7 @@ const Switcher = () => {
       <div className="flex justify-center items-center pb-14">
         <div className="font-poppins text-white relative text-sm sm:text-lg border-2 border-gray-400 rounded-full flex flex-row gap-0 sm:gap-4 px-4 py-2 ">
           <div
+            style={activeTab === "software" ? bg : {}}
             className={`cursor-pointer  ${
               activeTab === "software"
                 ? " bg-gradient rounded-full border border-[#5D38C2]"
@@ -278,6 +283,7 @@ const Switcher = () => {
             Software
           </div>
           <div
+            style={activeTab === "hardware" ? bg : {}}
             className={`cursor-pointer ${
               activeTab === "hardware"
                 ? "bg-gradient rounded-full border border-[#5D38C2]"
@@ -288,6 +294,7 @@ const Switcher = () => {
             Edge AI
           </div>
           <div
+            style={activeTab === "robotics" ? bg : {}}
             className={`cursor-pointer ${
               activeTab === "robotics"
                 ? "bg-gradient rounded-full border border-[#5D38C2]"

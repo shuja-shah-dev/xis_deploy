@@ -49,7 +49,6 @@ const Header = () => {
         className={`${
           isHomePage ? "mt-[75px] sm:mt-14" : ""
         } font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative`}
-    
       >
         <div>
           <Link href="/">
@@ -77,7 +76,7 @@ const Header = () => {
 
           <button
             onClick={handleClick}
-            className="py-1 px-3 rounded-3xl border-[#5D38C2] border md:hidden lg:flex"
+            className="py-2 px-4 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border md:hidden lg:flex"
           >
             Request A Partnership
           </button>
@@ -85,7 +84,7 @@ const Header = () => {
           <Link href="/contact">
             <button
               style={gradientStyleMain}
-              className="py-1 px-3 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border"
+              className="py-2 px-4 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border"
             >
               Contact
             </button>

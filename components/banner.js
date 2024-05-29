@@ -1,4 +1,3 @@
-// components/ProductBanner.js
 import { useEffect, useState } from "react";
 
 const ProductBanner = () => {
@@ -21,14 +20,36 @@ const ProductBanner = () => {
 
   if (!isVisible) return null;
 
+  const bannerStyle = {
+    background: "linear-gradient(to right, #5D38C2, #4B2377)",
+    color: "white",
+    textAlign: "center",
+    padding: "1rem",
+    position: "absolute",
+    top: 0,
+    width: "100%",
+    zIndex: 50,
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backdropFilter: "blur(10px)",
+    opacity: 0.9,
+  };
+
   return (
-    <div className="bg-gradient-to-r from-purple-900 to-purple-700 text-white text-center p-4 absolute top-0 w-full z-50 shadow-lg flex items-center justify-center">
-      <div className="flex-1">
+    <div style={bannerStyle}>
+      <div style={{ flex: 1 }}>
         <span>
           🤖 Check out our new{" "}
           <a
             href="/Products"
-            className="text-blue-300 font-bold hover:underline text-lg"
+            style={{
+              color: "#7FDBFF",
+              fontWeight: "bold",
+              textDecoration: "underline",
+              fontSize: "1.125rem",
+            }}
           >
             Products Page
           </a>
