@@ -32,15 +32,7 @@ const Robotics = () => {
             <source src="/vid.mp4" type="video/mp4" />
           </video>
         </div>
-        {/* <div >
-          <Image
-            src="/Rectangle 752.svg"
-            width={740}
-            height={639}
-            alt="edgeAI"
-            className="m-auto"
-          />
-        </div> */}
+    
         <div
           style={gradientStyle}
           className="text-white w-full xl:w-[456px] xl:h-[480px] lg:mt-0 border border-[#193037] rounded-2xl p-6 sm:p-12"

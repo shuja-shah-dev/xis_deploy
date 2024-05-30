@@ -124,7 +124,7 @@ const Abouts = () => {
           <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Who we are?
           </h1>
-          <h3 className="font-poppins text-gray-300 mb-4 text-base sm:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+          <h3 className="font-poppins text-justify text-gray-300 mb-4 text-base sm:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
             XIS AI is a cutting-edge AI startup of XRAY-LAB and is on a mission
             to revolutionize Industrial Quality inspection and Process
             Monitoring through the power of artificial intelligence. Our team of

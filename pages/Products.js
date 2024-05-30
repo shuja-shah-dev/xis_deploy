@@ -5,9 +5,7 @@ import Product from "@/components/Product";
 
 const page = () => {
   return (
-    <div className="relative">
-     
-   
+    <div className="relative ">
       {/* <div className="h-full flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto ">
         <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400 animate-pulse">
           Site is being Updated

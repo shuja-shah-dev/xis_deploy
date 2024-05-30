@@ -3,7 +3,7 @@ import React from "react";
 
 const LogoBar = () => {
   return (
-    <div className="flex  gap-6 sm:mx-0 mx-4 sm:gap-0 justify-around items-center md:px-10 sm:pb-10 px-1 sm:px-0 min-[2300px]:w-[65%] min-[2300px]:m-auto">
+    <div className="flex  gap-6 sm:mx-0 mx-4 sm:gap-0 justify-around items-center md:px-10 sm:pb-10 px-1 sm:px-0 ">
       <div>
         <Image src="/Frame.png" alt="xray-lab logo" width={130} height={100} />
       </div>

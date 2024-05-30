@@ -17,7 +17,7 @@ const Hardware = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative min-[2300px]:w-[55%] min-[2300px]:mx-auto">
       <HeroBlob
         sx={{
           bottom: "10%",
@@ -48,13 +48,13 @@ const Hardware = () => {
       </h1>
 
       <div
-        className="border border-[#5D38C2] rounded-3xl p-12 min-[2050px]:w-[80%] m-auto"
+        className="border border-[#5D38C2] rounded-3xl p-12 "
         style={gradient}
       >
         <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-4 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
           Edge AI
         </h3>
-        <p className="font-poppins text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
+        <p className="font-poppins text-justify text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
           Edge AI refers to the deployment of artificial intelligence algorithms
           directly on edge devices, such as cameras or sensors, rather than
           relying on a centralized server or cloud-based processing. By
@@ -65,8 +65,8 @@ const Hardware = () => {
         </p>
 
         <div
-          style={InnerGradient}
-          className="border border-[#5D38C2] rounded-3xl p-12 mt-12 "
+          // style={InnerGradient}
+          className="p-12 mt-12 "
         >
           <div className="flex justify-center gap-20">
             <div className="flex">
@@ -165,13 +165,13 @@ const Hardware = () => {
       </div>
 
       <div
-        className="border border-[#5D38C2] rounded-3xl p-12 my-20 min-[2050px]:w-[80%] m-auto"
+        className="border border-[#5D38C2] rounded-3xl p-12 my-20 "
         style={gradient}
       >
         <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-4 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
           Visual Sensors
         </h3>
-        <p className="font-poppins text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
+        <p className="font-poppins  text-justify  text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
           XIS Suite is a comprehensive software suite designed to support
           various visual sensors, including industrial cameras for high-speed
           solutions, microscopes for detecting minor and small defects, thermal

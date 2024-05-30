@@ -27,9 +27,8 @@ const Footer = () => {
         <Image
           src="/Rectangle 75.png"
           alt="footer rectangle"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
       </div>
 

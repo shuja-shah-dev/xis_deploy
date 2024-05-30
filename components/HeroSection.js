@@ -73,7 +73,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-full">
-      
       <HeroBlob
         sx={{
           top: "",
@@ -157,7 +156,9 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <LogoBar />
+        <div className="min-[2300px]:w-[65%] min-[2300px]:m-auto">
+          <LogoBar />
+        </div>
       </div>
     </div>
   );

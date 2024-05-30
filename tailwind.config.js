@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        "text-sm": "600px", // Small text sections
+        "text-md": "800px", // Medium text sections
+        "text-lg": "1000px", // Large text sections
+      },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
@@ -20,5 +25,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-justify": {
+          textAlign: "justify",
+          hyphens: "auto",
+        },
+      });
+    },
+  ],
 };

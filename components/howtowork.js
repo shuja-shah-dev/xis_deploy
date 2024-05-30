@@ -57,9 +57,8 @@ const gradientStyleMain = {
                 <div className="inline-block w-[300px] pt-28 mt-[-50px] sm:pt-12 text-right">
                   <h6 className="block mb-3 text-xl font-bold">Train AI</h6>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
-                    Train the AI based on the dataset you Provided. Our web app
-                    and software allow you to effortlessly import your data,
-                    commence the labeling process for your items.
+                    After labeling, start training of AI model with a click of a
+                    button.
                   </p>
                 </div>
               </div>
@@ -74,8 +73,8 @@ const gradientStyleMain = {
                 <div className="inline-block text-right pt-16 w-[300px] md:py-10 mt-[-70px]">
                   <h2 className="block mb-3 text-xl font-bold">Deploy</h2>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
-                    Thats it! Your model is ready to be used in your
-                    application.
+                    Export trained AI models directly to xis rt and start
+                    inspecting.
                   </p>
                 </div>
               </div>
@@ -88,8 +87,8 @@ const gradientStyleMain = {
                     Capture & Label Images
                   </h3>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
-                    Define your dataset and import it into either our web
-                    platform or the standalone desktop app.
+                    Define dataset, import images and start labeling with
+                    AI-assisted labeling.
                   </p>
                 </div>
               </div>
@@ -106,8 +105,7 @@ const gradientStyleMain = {
                 <div className="inline-block w-[300px] text-left pt-28 sm:py-10 mt-[-60px]">
                   <h4 className="block mb-3 text-xl  font-bold">Test</h4>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
-                    Once the Labeling in process is completed you can export the
-                    model and use it in your application.
+                    Evaluate results of trained AI model after training.
                   </p>
                 </div>
               </div>
@@ -124,14 +122,12 @@ const gradientStyleMain = {
 
         <div className="mt-20 relative flex justify-center">
           <div
-                style={gradientStyleMain}
-                className="text-sm z-50 sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
-               
-              >
-          {/* <h1 style={gradientText} className="font-poppins text-lg sm:text-3xl font-semibold text-center "> */}
-              Start Inspecting with 99% Accuracy
-              </div>
-          
+            style={gradientStyleMain}
+            className="text-sm z-50 sm:text-xl opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
+          >
+            {/* <h1 style={gradientText} className="font-poppins text-lg sm:text-3xl font-semibold text-center "> */}
+            Start Inspecting with 99% Accuracy
+          </div>
         </div>
       </div>
     </div>
