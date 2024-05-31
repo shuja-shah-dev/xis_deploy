@@ -64,7 +64,12 @@ const Product = () => {
             }}
             key={"UniqueElementor2"}
           />
-          <div className="w-[80%] m-auto">
+
+            <h1 className="mt-12 font-inter  text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
+            Software
+          </h1>
+
+          <div className="w-[80%] mx-auto mt-[-60px]">
             <Image
               src="/d.svg"
               width={1370}
@@ -74,6 +79,7 @@ const Product = () => {
             />
           </div>
 
+        
           {/* <div className="h-[2px] w-[80%] bg-gray-300 m-auto"></div> */}
 
           <div className="">
@@ -83,7 +89,7 @@ const Product = () => {
                 width={203}
                 height={50}
                 alt="edgeAI"
-                className=" m-auto"
+                className=" ml-[10%]"
               />
               <p className="my-12 text-justify w-[80%] m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
                 xis dev is a no-code platform that encompasses the complete
@@ -167,32 +173,34 @@ const Product = () => {
               </div>
             </div>
           </div>
-            <div className="flex flex-col w-[86%] m-auto  my-14 xl:mt-0">
+          <div className="flex flex-col w-[86%] m-auto  my-14 xl:mt-0">
             <ProductFeatures data={xisDevData} />
           </div>
           {/* <div className="h-[2px] w-[80%] bg-gray-300 m-auto mt-6"></div> */}
 
           <div className="mt-16">
-            <Image
-              src="/xis rt.svg"
-              width={203}
-              height={50}
-              className=" m-auto"
-            />
             <div className="mt-16">
               <div className="flex flex-col xl:flex-row justify-center gap-20">
-                <p className=" text-justify max-w-text-lg xl:text-left w-[80%] m-auto xl:m-0 xl:w-1/2 font-poppins opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
-                  Xis Runtime stands as a versatile platform designed
-                  specifically for the deployment of computer vision models.
-                  Engineered with a lightweight architecture, it offers the
-                  advantage of efficient resource utilization, making it
-                  suitable for deployment across a spectrum of hardware
-                  configurations.Xis Runtime serves as an indispensable tool for
-                  accelerating the deployment of computer vision models within
-                  quality inspection workflows, offering unparalleled
-                  adaptability and performance to meet the evolving demands of
-                  modern manufacturing and production environments
-                </p>
+                <div className="flex flex-col">
+                  <Image
+                    src="/xis rt.svg"
+                    width={203}
+                    height={50}
+                    className="ml-[10%] xl:ml-0"
+                  />
+                  <p className=" text-justify max-w-text-lg xl:text-left w-[80%] m-auto mt-4 xl:m-0 xl:mt-4 xl:w-full font-poppins opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
+                    Xis Runtime stands as a versatile platform designed
+                    specifically for the deployment of computer vision models.
+                    Engineered with a lightweight architecture, it offers the
+                    advantage of efficient resource utilization, making it
+                    suitable for deployment across a spectrum of hardware
+                    configurations.Xis Runtime serves as an indispensable tool
+                    for accelerating the deployment of computer vision models
+                    within quality inspection workflows, offering unparalleled
+                    adaptability and performance to meet the evolving demands of
+                    modern manufacturing and production environments
+                  </p>
+                </div>
                 <Image
                   src="/black theme (2) 1.svg"
                   width={580}
