@@ -6,11 +6,13 @@ import ProductHeader from "./ProductHeader";
 import { HeroBlob } from "./HeroSection";
 const xisRtData = [
   "Customizable according to application",
-  "Create & Manage Multiple Quality Inspection Workflows",
+
   "Real-time Analytics Dashboard",
-  "Get Actionable Signals to PLCs/MES System",
   "Lightweight Runtime platform",
-  "Integration with any Industrial camera/microscope/thermal camera/x-ray tube",
+  "Create & Manage Multiple Quality Inspection Workflows",
+  "Get Actionable Signals to PLCs/MES System",
+
+  "Integration with any Industrial Camera/Microscope/Thermal Camera/X-ray Tube",
 ];
 
 const xisDevData = [
@@ -37,7 +39,7 @@ const Product = () => {
 
       <div
         style={gradient}
-        className=" pb-20 pt-14 border-t-2 border-b-2 border-[#193037] rounded-3xl  px-2 sm:px-4 lg:px-16 relative"
+        className=" pb-20 pt-4 border-t-2 border-b-2 border-[#193037] rounded-3xl px-8 sm:px-10 lg:px-16 relative"
       >
         <div className="min-[2300px]:w-[55%] min-[2300px]:mx-auto">
           <HeroBlob
@@ -65,21 +67,20 @@ const Product = () => {
             key={"UniqueElementor2"}
           />
 
-            <h1 className="mt-12 font-inter  text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
+          <h1 className="mt-12 font-inter  text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
             Software
           </h1>
 
-          <div className="w-[80%] mx-auto mt-[-60px]">
+          <div className="w-[80%] mx-auto lg:mt-[-60px]">
             <Image
               src="/d.svg"
               width={1370}
               height={970}
               alt="edgeAI"
-              className=" m-auto"
+              className=" m-auto mb-28"
             />
           </div>
 
-        
           {/* <div className="h-[2px] w-[80%] bg-gray-300 m-auto"></div> */}
 
           <div className="">
@@ -89,9 +90,9 @@ const Product = () => {
                 width={203}
                 height={50}
                 alt="edgeAI"
-                className=" ml-[10%]"
+                className=""
               />
-              <p className="my-12 text-justify w-[80%] m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
+              <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
                 xis dev is a no-code platform that encompasses the complete
                 pipeline of computer vision. Specially designed for
                 non-technical or non-developers to develop computer vision
@@ -99,7 +100,7 @@ const Product = () => {
                 xis dev lets users to label images, train a computer vision
                 model, and test it in a matter of minutes. with AI-assisted
                 labeling, images are prepared for training very quickly as
-                compared to traditional labeling setup.
+                compared to traditional labeling setup
               </p>
             </div>
           </div>
@@ -173,22 +174,23 @@ const Product = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[86%] m-auto  my-14 xl:mt-0">
+          <div className="flex flex-col mt-14 mb-[150px] xl:mt-0">
             <ProductFeatures data={xisDevData} />
           </div>
           {/* <div className="h-[2px] w-[80%] bg-gray-300 m-auto mt-6"></div> */}
 
           <div className="mt-16">
             <div className="mt-16">
-              <div className="flex flex-col xl:flex-row justify-center gap-20">
-                <div className="flex flex-col">
+              <div className="">
+                <div>
                   <Image
                     src="/xis rt.svg"
                     width={203}
                     height={50}
-                    className="ml-[10%] xl:ml-0"
+                    alt="edgeAI"
+                    className=""
                   />
-                  <p className=" text-justify max-w-text-lg xl:text-left w-[80%] m-auto mt-4 xl:m-0 xl:mt-4 xl:w-full font-poppins opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
+                  <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
                     Xis Runtime stands as a versatile platform designed
                     specifically for the deployment of computer vision models.
                     Engineered with a lightweight architecture, it offers the
@@ -201,6 +203,11 @@ const Product = () => {
                     modern manufacturing and production environments
                   </p>
                 </div>
+              </div>
+              <div className="flex flex-col xl:flex-row  gap-20">
+                <div className="flex flex-col m-auto mt-6 xl:mt-0">
+                  <ProductFeatures data={xisRtData} name="rt" />
+                </div>
                 <Image
                   src="/black theme (2) 1.svg"
                   width={580}
@@ -210,10 +217,6 @@ const Product = () => {
                 />
               </div>
             </div>
-          </div>
-
-          <div className="flex flex-col w-[86%] m-auto mt-14 xl:mt-0">
-            <ProductFeatures data={xisRtData} />
           </div>
         </div>
       </div>

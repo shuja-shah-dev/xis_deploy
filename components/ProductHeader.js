@@ -57,7 +57,7 @@ const ProductHeader = () => {
             />
           </div>
         </div>
-        <div className="py-14 min-[2300px]:w-[95%] min-[2300px]:m-auto">
+        <div className="py-14 ">
           <LogoBar />
         </div>
       </div>
