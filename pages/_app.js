@@ -349,7 +349,7 @@ export default function App({ Component, pageProps }) {
             )}
           </CookieConsent> */}
           {/* <CookiebotScript /> */}
-          {router.pathname === "/" && <ProductBanner />}
+          {/* {router.pathname === "/" && <ProductBanner />} */}
           <Header />
           <main className={lato.className}>
             <Component {...pageProps} />

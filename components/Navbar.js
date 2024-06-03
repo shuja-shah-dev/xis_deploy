@@ -46,9 +46,10 @@ const Header = () => {
   return (
     <>
       <div
+      // mt-[75px] sm:mt-14 
         className={` ${
           isHomePage
-            ? "mt-[75px] sm:mt-14 min-[2300px]:w-[70%] min-[2300px]:mx-auto"
+            ? "min-[2300px]:w-[70%] min-[2300px]:mx-auto"
             : " min-[2300px]:w-[70%] min-[2300px]:mx-auto"
         } font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative`}
       >
