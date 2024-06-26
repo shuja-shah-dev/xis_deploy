@@ -57,9 +57,7 @@ const ProductHeader = () => {
             />
           </div>
         </div>
-        <div className="py-14 ">
-          <LogoBar />
-        </div>
+        
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import ProductFeatures from "./ProductFeatures";
 import Hardware from "./Hardware";
 import ProductHeader from "./ProductHeader";
 import { HeroBlob } from "./HeroSection";
+import LogoBar from "./LogoBar";
 const xisRtData = [
   "Customizable according to application",
 
@@ -33,15 +34,19 @@ const gradient = {
 const Product = () => {
   return (
     <>
-      <div className="px-6 sm:px-10 lg:px-16">
+      <div className="px-6 sm:px-10 lg:px-16 xl:px-40">
         <ProductHeader />
       </div>
 
+        <div className="min-[2300px]:w-[65%] min-[2300px]:m-auto py-14">
+          <LogoBar />
+        </div>
+
       <div
         style={gradient}
-        className=" pb-20 pt-4 border-t-2 border-b-2 border-[#193037] rounded-3xl px-8 sm:px-10 lg:px-16 relative"
+        className=" pb-20 pt-4 border-t-2 border-b-2 border-[#193037] rounded-3xl px-8 sm:px-10 lg:px-16  xl:px-28 relative"
       >
-        <div className="min-[2300px]:w-[55%] min-[2300px]:mx-auto">
+        <div className="min-[2300px]:w-[60%] min-[2300px]:mx-auto">
           <HeroBlob
             sx={{
               bottom: "-10%",
@@ -221,7 +226,7 @@ const Product = () => {
         </div>
       </div>
 
-      <div className=" px-2 sm:px-4 lg:px-12 ">
+      <div className=" px-2 sm:px-4 lg:px-16 ">
         <Hardware />
       </div>
     </>

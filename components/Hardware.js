@@ -17,7 +17,7 @@ const Hardware = () => {
   };
 
   return (
-    <div className="relative min-[2300px]:w-[55%] min-[2300px]:mx-auto">
+    <div className="relative min-[2300px]:w-[65%] min-[2300px]:mx-auto">
       <HeroBlob
         sx={{
           bottom: "10%",
