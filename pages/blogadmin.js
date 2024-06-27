@@ -31,7 +31,7 @@ const Blogadmin = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [loading, setLoading] = useState(false);
-
+ const [errorData, setErrorData] = useState(null);
   const [showError, setShowError] = useState(false);
   const [editBlogId, setEditBlogId] = useState(null);
   const [open, setOpen] = useState(false);
@@ -58,7 +58,9 @@ const Blogadmin = () => {
       });
 
       if (!response.ok) {
-        console.log(error, "Error");
+        const errorfromResponse = await response.json();
+        setErrorData(errorfromResponse.message);
+        console.log(error, "Error", errorfromResponse);
         setShowErrorAlert(true);
         setTimeout(() => {
           setShowErrorAlert(false);
@@ -236,9 +238,9 @@ const Blogadmin = () => {
     return { __html: c };
   }
 
-  useEffect(() => {
-    console.log(formData, "as the form data");
-  });
+  // useEffect(() => {
+  //   console.log(formData, "as the form data");
+  // });
 
   return accessToken ? (
     <>
@@ -396,6 +398,7 @@ const Blogadmin = () => {
                               <Alert severity="error">
                                 Failed to post the blog check your image file.
                                 Name should also be unique. Please try again.
+                                {errorData && <p>Error: {errorData}</p>}
                               </Alert>
                             </div>
                           </div>
