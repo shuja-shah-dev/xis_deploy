@@ -36,7 +36,8 @@ const IndustryCard = ({ data }) => {
               className="rounded-2xl"
               src={c.path}
               alt={`${c.label} img`}
-              layout="fill"
+              fill
+              style={{ objectFit: 'cover' }}
               
             />
           </div>

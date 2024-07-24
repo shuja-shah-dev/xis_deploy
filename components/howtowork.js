@@ -44,7 +44,7 @@ const gradientStyleMain = {
 
         <div className="container font-poppins text-white justify-center items-center pb-10 mx-auto flex ">
           <div className="flex overflow-hidden  justify-around text-center items-center ">
-            <div className="w-2/6 md:py-6 mt-[-50px] ">
+            <div className="w-2/6 md:py-6 sm:mt-[-50px] mt-[-30px]">
               <div className="flex relative md:pb-10 pb-20">
                 <div className="inline-block rounded  text-end justify-end items-center w-full py-20 ">
                   <p className="sm:leading-7 font-bold text-center text-xl md:text-3xl inline-block">
@@ -54,7 +54,7 @@ const gradientStyleMain = {
               </div>
 
               <div className="flex justify-end relative pb-12 ">
-                <div className="inline-block w-[300px] pt-28 mt-[-50px] sm:pt-12 text-right">
+                <div className="inline-block w-[300px] pt-28 sm:mt-[-50px] mt-[-80px] sm:pt-12 text-right">
                   <h6 className="block mb-3 text-xl font-bold">Train AI</h6>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
                     After labeling, start training of AI model with a click of a
@@ -63,7 +63,7 @@ const gradientStyleMain = {
                 </div>
               </div>
               <div className="flex relative pb-12">
-                <div className="inline-block rounded text-end justify-end items-center w-full py-20 mt-[-50px] ">
+                <div className="inline-block rounded text-end justify-end items-center w-full py-20 sm:mt-[-50px] mt-[0px]">
                   <p className="sm:leading-7 font-bold text-center text-xl md:text-3xl inline-block">
                     Step 3
                   </p>
@@ -94,7 +94,7 @@ const gradientStyleMain = {
               </div>
 
               <div className="flex relative pb-12">
-                <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ">
+                <div className="inline-block rounded  text-start justify-start items-center w-full py-20 mt-[-55px] sm:mt-[0px]">
                   <p className="sm:leading-7 font-bold text-center text-xl md:text-3xl inline-block ">
                     Step 2
                   </p>
@@ -102,7 +102,7 @@ const gradientStyleMain = {
               </div>
 
               <div className="flex relative pb-12">
-                <div className="inline-block w-[300px] text-left pt-28 sm:py-10 mt-[-60px]">
+                <div className="inline-block w-[300px] text-left pt-28 sm:py-10 mt-[-80px] sm:mt-[-60px]">
                   <h4 className="block mb-3 text-xl  font-bold">Test</h4>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
                     Evaluate results of trained AI model after training.
@@ -110,7 +110,7 @@ const gradientStyleMain = {
                 </div>
               </div>
               <div className="flex relative">
-                <div className="text-start justify-start items-center w-full py-20 mt-[-70px]">
+                <div className="text-start justify-start items-center w-full py-20 sm:mt-[-70px] mt-[-20px]">
                   <p className="sm:leading-7 font-bold text-xl  md:text-3xl ">
                     Step 4
                   </p>
