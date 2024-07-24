@@ -317,7 +317,7 @@ const Blogadmin = () => {
                           [{ header: [1, 2, 3, 4, 5, 6, false] }],
                           ["bold", "italic", "underline", "strike"],
                           ["link", "image", "video", "color"],
-                          [{ list: "ordered" }, { list: "bullet" }],
+                          [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
                           ["clean"],
                         ],
                       }}

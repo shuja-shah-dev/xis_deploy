@@ -193,8 +193,8 @@ const Slug = ({ blog }) => {
                     />
                   </div>
                 </div>
-                <p
-                  className="leading-relaxed text-lg mb-4 myCustomDiv "
+                <div
+                  className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
                   dangerouslySetInnerHTML={createMarkup(blog[0].blog_content)}
                 />
               </div>
