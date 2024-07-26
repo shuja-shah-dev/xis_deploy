@@ -10,6 +10,7 @@ const authRoutes = require("./routes/authRoutes");
 const postcontact = require("./routes/postcontact");
 const founderRoute = require("./routes/founderRoutes");
 const blogRoutes = require("./routes/blogRoutes")
+const jobRoutes = require("./routes/jobRoutes");
 
 const corsOptions ={
    origin:'*', 
@@ -28,6 +29,7 @@ app.use("/api/auth", authRoutes);
 app.post("/contact", postcontact);
 app.post("/founder", founderRoute);
 app.use("/", blogRoutes);
+app.use("/", jobRoutes);
 
 mongoose
   .connect(mongodb.uri)

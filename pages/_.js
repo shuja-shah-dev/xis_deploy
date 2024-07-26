@@ -8,13 +8,19 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 const Login = () => {
-  const { setAccessToken } = useAuth();
-
+  const { accessToken } = useAuth();
+  const { login } = useAuth();
   const email = useRef();
   const password = useRef();
   const [error, setErrror] = useState("");
 
-  const controller = useRouter();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (accessToken) {
+      router.replace("/adminchoice");
+    }
+  }, [accessToken, router]);
 
   useEffect(() => {
     if (error) {
@@ -40,8 +46,9 @@ const Login = () => {
 
     const { code } = extract;
     const { token } = code;
-    setAccessToken(token);
-    controller.push("/blogadmin");
+    login(token);
+    // setAccessToken(token);
+    // controller.push("/adminchoice");
   };
 
   return (
