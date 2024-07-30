@@ -259,7 +259,7 @@ const CareerDetailHeroSection = () => {
             </div>
 
             <Link href="/contact">
-              <button className="w-full h-[40px] cursor-pointer text-center text-lg bg-gradient-to-r from-[#393E83] to-[#301667]">
+              <button className="w-full h-[40px] cursor-pointer text-center text-lg bg-gradient-to-r from-[#393E83] to-[#301667] rounded-md">
                 Contact
               </button>
             </Link>
@@ -294,7 +294,7 @@ const CareerDetailHeroSection = () => {
         {/* <p className="mb-4">{paragraph}</p> */}
       </div>
 
-      <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20">
+      <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20 rounded-md">
         APPLY NOW
       </div>
     </div>

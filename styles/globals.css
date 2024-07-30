@@ -27,6 +27,42 @@
   }
 }
 
+@media (min-width: 432px) {
+  .parallax-container {
+    justify-content: center;
+  }
+}
+
+.parallax-div {
+  display: none;
+}
+
+@media (min-width: 830px) {
+  .parallax-div {
+    display: block;
+  }
+}
+
+.parallax-div-small {
+  display: none;
+}
+
+@media (min-width: 570px) and (max-width: 829px) {
+  .parallax-div-small {
+    display: block;
+  }
+}
+
+.parallax-div-extra-small {
+  display: block;
+}
+
+@media (min-width: 570px) {
+  .parallax-div-extra-small {
+    display: none;
+  }
+}
+
 @keyframes spin_words {
   10% {
     transform: translateY(-112%);
