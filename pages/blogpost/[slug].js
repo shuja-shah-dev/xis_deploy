@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
 import { HeroBlob } from "@/components/HeroSection";
-import { NextSeo } from "next-seo";
+import { NextSeo, ArticleJsonLd } from "next-seo";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -100,12 +100,20 @@ const Slug = ({ blog }) => {
           ],
           site_name: "xis.ai",
         }}
-        script={[
-          {
-            type: "application/ld+json",
-            innerHTML: $chemaMarkup,
-          },
+      />
+      <ArticleJsonLd
+        type="BlogPosting"
+        url={currentUrl}
+        title={blog.blog_title}
+        images={[
+          `${BASE_URL}/media/${blog.blog_image}`,
+          `${BASE_URL}/media/site_xis_logo_default_please_dont_delete.png`,
         ]}
+        datePublished={blog.createdAt}
+        authorName="xis.ai"
+        publisherName="xis.ai"
+        publisherLogo={`${BASE_URL}/media/site_xis_logo_default_please_dont_delete.png`}
+        description={blog.blog_content.slice(0, 150)}
       />
       <section className="relative">
         <HeroBlob
