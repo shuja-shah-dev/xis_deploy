@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
 import { HeroBlob } from "@/components/HeroSection";
+import { Head } from "next/document";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -53,10 +54,36 @@ const Slug = ({ blog }) => {
     }
   };
 
-
+  const $chemaMarkup = JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "BlogPosting",
+    headline: blog.blog_title,
+    description: blog.blog_content.slice(0, 150),
+    datePublished: blog.createdAt,
+    author: {
+      "@type": "Person",
+      name: "xis.ai",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "xis.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/media/site_xis_logo_default_please_dont_delete.png`, // Change as needed
+      },
+    },
+    image: `${BASE_URL}/media/${blog.blog_image}`,
+    url: currentUrl,
+  });
 
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: $chemaMarkup }}
+        />
+      </Head>
       <section className="relative">
         <HeroBlob
           sx={{
@@ -239,14 +266,11 @@ export async function getStaticPaths() {
     params: { slug: blog.slug },
   }));
 
-
-
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
   try {
-
     const res = await fetch(`${BASE_URL}/blogs/${params.slug}`);
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
