@@ -27,9 +27,19 @@
   }
 }
 
-@media (min-width: 432px) {
-  .parallax-container {
-    justify-content: center;
+@media (min-width: 392px) {
+  .parallax-div-extra-small {
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 470px) {
+  .parallax-div-extra-small {
+   
+    margin-left: -10%;
+  }
+  .parallax-container{
+ justify-content: center;
   }
 }
 

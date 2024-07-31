@@ -5,25 +5,17 @@ import { useInView } from "react-intersection-observer";
 const HowItWorks = () => {
   const [visible, setVisible] = useState(Array(31).fill(false));
   const [SmallVisible, setSmallVisible] = useState(Array(31).fill(false));
-  const [extraSmallVisible, setExtraSmallVisible] = useState(Array(30).fill(false));
+  const [extraSmallVisible, setExtraSmallVisible] = useState(
+    Array(30).fill(false)
+  );
 
   const [textVisible, setTextVisible] = useState(false);
   const [textSmallVisible, setTextSmallVisible] = useState(false);
   const [extraSmallTextVisible, setExtraSmallTextVisible] = useState(false);
-  
+
   const handleAnimation = useCallback((index, inView) => {
     if (inView) {
       setVisible((prev) => {
-        const newVisible = [...prev];
-        newVisible[index] = true;
-        return newVisible;
-      });
-    }
-  }, []);
-
-  const handleAnimationSmall = useCallback((index, inView) => {
-    if (inView) {
-      setSmallVisible((prev) => {
         const newVisible = [...prev];
         newVisible[index] = true;
         return newVisible;
@@ -42,7 +34,16 @@ const HowItWorks = () => {
       return { ref, inView };
     });
 
-    
+  const handleAnimationSmall = useCallback((index, inView) => {
+    if (inView) {
+      setSmallVisible((prev) => {
+        const newVisible = [...prev];
+        newVisible[index] = true;
+        return newVisible;
+      });
+    }
+  }, []);
+
   const handleExtraSmallAnimation = useCallback((index, inView) => {
     if (inView) {
       setExtraSmallVisible((prev) => {
@@ -54,18 +55,17 @@ const HowItWorks = () => {
   }, []);
 
   const refsSmall = Array(31)
-  .fill(null)
-  .map((_, i) => {
-    const { ref, inView } = useInView({
-      triggerOnce: false,
-      threshold: 0.5,
-      onChange: (inView) => handleAnimationSmall(i, inView),
+    .fill(null)
+    .map((_, i) => {
+      const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.5,
+        onChange: (inView) => handleAnimationSmall(i, inView),
+      });
+      return { ref, inView };
     });
-    return { ref, inView };
-  });
 
-
-    const refsExtraSmall = Array(30)
+  const refsExtraSmall = Array(30)
     .fill(null)
     .map((_, i) => {
       const { ref, inView } = useInView({
@@ -122,7 +122,7 @@ const HowItWorks = () => {
       return { ref, inView };
     });
 
-    const refsTextSmall = Array(8)
+  const refsTextSmall = Array(8)
     .fill(null)
     .map((_, index) => {
       const { ref, inView } = useInView({
@@ -133,7 +133,7 @@ const HowItWorks = () => {
       return { ref, inView };
     });
 
-    const refsTextExtraSmall = Array(8)
+  const refsTextExtraSmall = Array(8)
     .fill(null)
     .map((_, index) => {
       const { ref, inView } = useInView({
@@ -144,26 +144,40 @@ const HowItWorks = () => {
       return { ref, inView };
     });
 
-  
   const getAnimationTextStyle = (delay) => ({
-    opacity: (textVisible || textSmallVisible || extraSmallTextVisible)? 1 : 0,
-    transform: (textVisible || textSmallVisible || extraSmallTextVisible) ? "translateX(0)" : "translateX(-100%)",
+    opacity: textVisible || textSmallVisible || extraSmallTextVisible ? 1 : 0,
+    transform:
+      textVisible || textSmallVisible || extraSmallTextVisible
+        ? "translateX(0)"
+        : "translateX(-100%)",
     transition: `transform 1s ease-out ${delay}s, opacity 1s ease-out ${delay}s`,
   });
 
   const getAnimationTextStyleR = (delay) => ({
-    opacity: (textVisible || textSmallVisible || extraSmallTextVisible)  ? 1 : 0,
-    transform: (textVisible || textSmallVisible || extraSmallTextVisible)  ? "translateX(0)" : "translateX(100%)",
+    opacity: textVisible || textSmallVisible || extraSmallTextVisible ? 1 : 0,
+    transform:
+      textVisible || textSmallVisible || extraSmallTextVisible
+        ? "translateX(0)"
+        : "translateX(100%)",
     transition: `transform 1s ease-out ${delay}s, opacity 1s ease-out ${delay}s`,
   });
 
-  const getAnimationStyle = (index) => ({
-    opacity: (visible[index] || SmallVisible[index] || extraSmallVisible[index]) ? 1 : 0,
-    transform: (visible[index] || SmallVisible[index] || extraSmallVisible[index]) ? "translateY(0)" : "translateY(50px)",
-    transition: `opacity 1s ease-out ${0.5 * index}s, transform 1s ease-out ${
-      0.5 * index
-    }s`,
-  });
+  const getAnimationStyle = (index) => {
+    // console.log(0.5 * index);
+    return {
+      opacity:
+        visible[index] || SmallVisible[index] || extraSmallVisible[index]
+          ? 1
+          : 0,
+      transform:
+        visible[index] || SmallVisible[index] || extraSmallVisible[index]
+          ? "translateY(0)"
+          : "translateY(50px)",
+      transition: `opacity 1s ease-out ${0.5 * index}s, transform 1s ease-out ${
+        0.5 * index
+      }s`,
+    };
+  };
 
   return (
     <>
@@ -203,7 +217,7 @@ const HowItWorks = () => {
               <h3 className="font-bold text-[17px] leading-5">
                 Capturing & Labeling Images
               </h3>
-              <p className="text-xs">
+              <p className="text-xs mt-1">
                 Capturing & labeling images includes processes & careful
                 management to ensure the quality and relevance of data
               </p>
@@ -265,7 +279,7 @@ const HowItWorks = () => {
               className="font-poppins w-1/4 absolute top-44 left-32 text-right"
             >
               <h3 className="font-bold text-[17px] leading-5">Training AI</h3>
-              <p className="text-xs">
+              <p className="text-xs mt-1">
                 AI training involves teaching or make decisions by exposing them
                 to large amounts of data and optimizing their parameters
               </p>
@@ -353,7 +367,7 @@ const HowItWorks = () => {
               <h3 className="font-bold text-[17px] leading-5">
                 Testing Trained A
               </h3>
-              <p className="text-xs">
+              <p className="text-xs mt-1">
                 Testing trained AI involves evaluating its performance on new
                 data to ensure accuracy
               </p>
@@ -436,11 +450,11 @@ const HowItWorks = () => {
               className="font-poppins w-1/3 absolute top-4 right-16"
             >
               <h3 className="font-bold text-[17px] leading-5">
-                Capturing & Labeling Images
+                Deploying Trained AI
               </h3>
-              <p className="text-xs">
-                Capturing & labeling images includes processes & careful
-                management to ensure the quality and relevance of data
+              <p className="text-xs mt-1">
+                Deploying a trained AI model involves several steps to ensure it
+                performs effectively & reliably in a real-world environment
               </p>
             </div>
           </div>
@@ -536,7 +550,7 @@ const HowItWorks = () => {
               <h3 className="font-bold text-[12px] leading-5">
                 Capturing & Labeling Images
               </h3>
-              <p className="text-[9px] w-[80%]">
+              <p className="text-[9px] w-[80%] mt-1">
                 Capturing & labeling images includes processes & careful
                 management to ensure the quality and relevance of data
               </p>
@@ -598,7 +612,7 @@ const HowItWorks = () => {
               className="font-poppins w-1/4 absolute top-20 left-28 text-right"
             >
               <h3 className="font-bold text-[12px] leading-5">Training AI</h3>
-              <p className="text-[9px]">
+              <p className="text-[9px] mt-1">
                 AI training involves teaching or make decisions by exposing them
                 to large amounts of data and optimizing their parameters
               </p>
@@ -686,7 +700,7 @@ const HowItWorks = () => {
               <h3 className="font-bold text-[12px] leading-5">
                 Testing Trained A
               </h3>
-              <p className="text-[9px]">
+              <p className="text-[9px] mt-1">
                 Testing trained AI involves evaluating its performance on new
                 data to ensure accuracy
               </p>
@@ -760,7 +774,11 @@ const HowItWorks = () => {
           </div>
 
           <div className="flex ml-[195px] mt-[20px] relative">
-            <div ref={refsSmall[24].ref} style={getAnimationStyle(24)} className="">
+            <div
+              ref={refsSmall[24].ref}
+              style={getAnimationStyle(24)}
+              className=""
+            >
               <Image src="/p21.svg" width={170} height={212} alt="p21" />
             </div>
             <div
@@ -769,11 +787,11 @@ const HowItWorks = () => {
               className="font-poppins w-1/3 absolute top-[-5px] right-6"
             >
               <h3 className="font-bold text-[12px] leading-5">
-                Capturing & Labeling Images
+                Deploying Trained AI
               </h3>
-              <p className="text-[9px]">
-                Capturing & labeling images includes processes & careful
-                management to ensure the quality and relevance of data
+              <p className="text-[9px] mt-1">
+                Deploying a trained AI model involves several steps to ensure it
+                performs effectively & reliably in a real-world environment
               </p>
             </div>
           </div>
@@ -863,7 +881,7 @@ const HowItWorks = () => {
               <h3 className="font-semibold text-[9px]">
                 Capturing & Labeling Images
               </h3>
-              <p className="text-[6px] w-[80%]">
+              <p className="text-[6px] w-[80%] ">
                 Capturing & labeling images includes processes & careful
                 management to ensure the quality and relevance of data
               </p>
@@ -1084,7 +1102,11 @@ const HowItWorks = () => {
           </div>
 
           <div className="flex ml-[130px] mt-[20px] relative">
-            <div ref={refsExtraSmall[24].ref} style={getAnimationStyle(24)} className="">
+            <div
+              ref={refsExtraSmall[24].ref}
+              style={getAnimationStyle(24)}
+              className=""
+            >
               <Image src="/p21.svg" width={68} height={212} alt="p21" />
             </div>
             <div
@@ -1093,11 +1115,11 @@ const HowItWorks = () => {
               className="font-poppins w-1/3 absolute top-[-5px] right-[-10px]"
             >
               <h3 className="font-semibold text-[9px] ">
-                Capturing & Labeling Images
+                Deploying Trained AI
               </h3>
               <p className="text-[6px]">
-                Capturing & labeling images includes processes & careful
-                management to ensure the quality and relevance of data
+                Deploying a trained AI model involves several steps to ensure it
+                performs effectively & reliably in a real-world environment
               </p>
             </div>
           </div>

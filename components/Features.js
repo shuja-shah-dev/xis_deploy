@@ -39,7 +39,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-[#000] pb-48  pt-40 sm:px-2 lg:px-16 relative">
+    <div className="bg-[#000] pb-48  pt-28 md:pt-36 sm:px-2 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
         <HeroBlob
           sx={{
