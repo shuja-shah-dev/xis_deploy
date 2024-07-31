@@ -14,18 +14,39 @@ import HeadSection from "../components/Head";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useQuery } from "react-query";
 import useSWR from "swr";
-const page = () => {
-  const gradientStyle = {
-    background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
-  };
-  const gradientStyleMain = {
-    background:
-      "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
-  };
 
-  const [submitBlog, setSubmitBlog] = useState([]);
-  const [allBlogs, setAllBlogs] = useState([]);
+export async function getStaticProps() {
+  const fs = require("fs");
+  const path = require("path");
+
+  const filePath = path.join(process.cwd(), "public", "blogs.json");
+  const blogsData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  return {
+    props: { blogsData },
+  };
+}
+
+const gradientStyle = {
+  background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
+};
+const gradientStyleMain = {
+  background:
+    "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
+};
+
+const page = ({ blogsData }) => {
   const truncateRef = useRef();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    if (blogsData && Array.isArray(blogsData)) {
+      setIsLoading(false);
+    } else {
+      setIsError("Error syncying static Data");
+    }
+  }, [blogsData]);
 
   const truncateText = (text, maxLength) => {
     const parser = new DOMParser();
@@ -52,7 +73,6 @@ const page = () => {
     clearTimeout(searchTimeout);
     setSearchText(e.target.value);
 
-    // debounce method
     setSearchTimeout(
       setTimeout(() => {
         const searchResult = filterPrompts(e.target.value);
@@ -60,20 +80,6 @@ const page = () => {
       }, 500)
     );
   };
-  const fetcher = async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return response.json();
-  };
-
-  const fetchData = () => fetcher(`${BASE_URL}/blogs`);
-  const { data: blogsData, isLoading, isError } = useSWR("blogs", fetchData, {
-    staleTime: 300000, // 5 minutes
-    cacheTime: 3600000, // 1 hour
-  });
-
   return (
     <>
       <HeadSection />
@@ -159,7 +165,6 @@ const page = () => {
 
             {blogsData &&
               blogsData.map((item, index) => {
-                console.log("Item", item);
                 return (
                   index == 0 && (
                     <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">

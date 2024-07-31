@@ -12,6 +12,10 @@ import { Roboto } from "next/font/google";
 import { HeroBlob } from "@/components/HeroSection";
 import { NextSeo, ArticleJsonLd } from "next-seo";
 
+
+
+
+
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
   subsets: ["latin"],
@@ -27,10 +31,6 @@ const Slug = ({ blog }) => {
   function createMarkup(c) {
     return { __html: c };
   }
-
-  // function sanitize($content) {
-  //   return DOMPurify.sanitize($content);
-  // }
 
   const formatDays = (createdAt) => {
     const now = new Date();
@@ -57,28 +57,6 @@ const Slug = ({ blog }) => {
       return `${daysDifference} ${daysDifference === 1 ? "day" : "days"} ago`;
     }
   };
-
-  const $chemaMarkup = JSON.stringify({
-    "@context": "https://schema.org/",
-    "@type": "BlogPosting",
-    headline: blog.blog_title,
-    description: blog.blog_content.slice(0, 150),
-    datePublished: blog.createdAt,
-    author: {
-      "@type": "Person",
-      name: "xis.ai",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "xis.ai",
-      logo: {
-        "@type": "ImageObject",
-        url: `${BASE_URL}/media/site_xis_logo_default_please_dont_delete.png`, // Change as needed
-      },
-    },
-    image: `${BASE_URL}/media/${blog.blog_image}`,
-    url: currentUrl,
-  });
 
   return (
     <>
@@ -266,29 +244,6 @@ const Slug = ({ blog }) => {
 
 export default Slug;
 
-// export async function getServerSideProps(context) {
-//   try {
-//     const { name } = context.params;
-//     const res = await fetch(`${BASE_URL}/blogs/${name}`);
-//     if (!res.ok) {
-//       throw new Error(`HTTP error! Status: ${res.status}`);
-//     }
-
-//     const blog = await res.json();
-
-//     return {
-//       props: {
-//         blog: blog[0],
-//       },
-//     };
-//   } catch (error) {
-//     return {
-//       props: {
-//         blog: {},
-//       },
-//     };
-//   }
-// }
 export async function getStaticPaths() {
   const res = await fetch(`${BASE_URL}/blogs`);
   const blogs = await res.json();
@@ -296,6 +251,11 @@ export async function getStaticPaths() {
   const paths = blogs.map((blog) => ({
     params: { slug: blog.slug },
   }));
+
+  const fs = require("fs");
+  const path = require("path");
+  const filePath = path.join(process.cwd(), "public", "blogs.json");
+  fs.writeFileSync(filePath, JSON.stringify(blogs, null, 2));
 
   return { paths, fallback: false };
 }
