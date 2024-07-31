@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); */
 
@@ -846,4 +845,48 @@ ul li span {
   -ms-animation-play-state: running;
   -o-animation-play-state: running;
   animation-play-state: running;
+}
+@media (min-width: 392px) {
+  .parallax-div-extra-small {
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 470px) {
+  .parallax-div-extra-small {
+    margin-left: -10%;
+  }
+  .parallax-container {
+    justify-content: center;
+  }
+}
+
+.parallax-div {
+  display: none;
+}
+
+@media (min-width: 830px) {
+  .parallax-div {
+    display: block;
+  }
+}
+
+.parallax-div-small {
+  display: none;
+}
+
+@media (min-width: 570px) and (max-width: 829px) {
+  .parallax-div-small {
+    display: block;
+  }
+}
+
+.parallax-div-extra-small {
+  display: block;
+}
+
+@media (min-width: 570px) {
+  .parallax-div-extra-small {
+    display: none;
+  }
 }
