@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
 import { HeroBlob } from "@/components/HeroSection";
-import { Head } from "next/document";
+import { NextSeo } from "next-seo";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -27,6 +27,10 @@ const Slug = ({ blog }) => {
   function createMarkup(c) {
     return { __html: c };
   }
+
+  // function sanitize($content) {
+  //   return DOMPurify.sanitize($content);
+  // }
 
   const formatDays = (createdAt) => {
     const now = new Date();
@@ -78,12 +82,31 @@ const Slug = ({ blog }) => {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: $chemaMarkup }}
-        />
-      </Head>
+      <NextSeo
+        title={blog.blog_title}
+        description={blog.blog_content.slice(0, 150)}
+        canonical={currentUrl}
+        openGraph={{
+          url: currentUrl,
+          title: blog.blog_title,
+          description: blog.blog_content.slice(0, 150),
+          images: [
+            {
+              url: `${BASE_URL}/media/${blog.blog_image}`,
+              width: 800,
+              height: 600,
+              alt: blog.blog_title,
+            },
+          ],
+          site_name: "xis.ai",
+        }}
+        script={[
+          {
+            type: "application/ld+json",
+            innerHTML: $chemaMarkup,
+          },
+        ]}
+      />
       <section className="relative">
         <HeroBlob
           sx={{
