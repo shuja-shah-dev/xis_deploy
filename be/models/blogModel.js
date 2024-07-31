@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { unique } = require("next/dist/build/utils");
 
 const BlogSchema = new mongoose.Schema(
   {
@@ -14,9 +15,10 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    blog_name: {
+    slug: {
       type: String,
       required: true,
+      unique: true,
     },
   },
   {

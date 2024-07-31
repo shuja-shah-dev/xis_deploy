@@ -41,13 +41,13 @@ router.post("/blogs", (req, res) => {
         return res.status(400).json({ error: err.message });
       }
 
-      const { blog_title, blog_content, blog_name } = req.body;
+      const { blog_title, blog_content, slug } = req.body;
 
       if (!req.file) {
         return res.status(400).json({ error: "No file uploaded" });
       }
 
-      const existingBlog = await Blog.findOne({ blog_name });
+      const existingBlog = await Blog.findOne({ slug });
 
       if (existingBlog) {
         return res.status(400).json({ error: "Blog name already in use!" });
@@ -59,7 +59,7 @@ router.post("/blogs", (req, res) => {
         blog_title,
         blog_image,
         blog_content,
-        blog_name,
+        slug,
       });
 
       const savedBlog = await newBlog.save();
@@ -91,15 +91,15 @@ router.get("/blogs", async (req, res) => {
 
 
 
-router.get("/blogs/:name", async (req, res) => {
+router.get("/blogs/:slug", async (req, res) => {
   try {
-    const blogName = req.params.name;
+    const blogName = req.params.slug;
 
     // if (!mongoose.Types.ObjectId.isValid(blogId)) {
     //   return res.status(400).json({ error: "Invalid blog ID" });
     // }
 
-    const blog = await Blog.find({ blog_name: blogName });
+    const blog = await Blog.find({ slug: blogName });
 
     if (!blog) {
       return res.status(404).json({ error: "Blog not found" });

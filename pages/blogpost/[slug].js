@@ -53,7 +53,7 @@ const Slug = ({ blog }) => {
     }
   };
 
-  console.log(currentUrl);
+
 
   return (
     <>
@@ -82,7 +82,7 @@ const Slug = ({ blog }) => {
               <h1
                 className={`${roboto.className} mb-4 text-3xl font-bold text-center`}
               >
-                {blog[0].blog_title}
+                {blog.blog_title}
               </h1>
             </div>
             <div className="flex mb-8 text-sky-400 text-lg font-medium">
@@ -103,9 +103,7 @@ const Slug = ({ blog }) => {
                     xis.ai
                   </h2>
                   <div className="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
-                  <p className="text-base mb-4">
-                    {formatDays(blog[0].createdAt)}
-                  </p>
+                  <p className="text-base mb-4">{formatDays(blog.createdAt)}</p>
                   <div className="cursor-pointer w-full text-[#4b5563] flex justify-center items-center mb-4">
                     <Link
                       target="_blank"
@@ -123,7 +121,9 @@ const Slug = ({ blog }) => {
                     </Link>
                     <Link
                       target="_blank"
-                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}`}
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+                        currentUrl
+                      )}`}
                       aria-label="Linkedin"
                     >
                       <LinkedInIcon fontSize="large" />
@@ -189,13 +189,13 @@ const Slug = ({ blog }) => {
                     <img
                       alt="contentImage"
                       className="object-cover object-center  w-full"
-                      src={`${BASE_URL}/media/${blog[0].blog_image}`}
+                      src={`${BASE_URL}/media/${blog.blog_image}`}
                     />
                   </div>
                 </div>
                 <div
                   className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
-                  dangerouslySetInnerHTML={createMarkup(blog[0].blog_content)}
+                  dangerouslySetInnerHTML={createMarkup(blog.blog_content)}
                 />
               </div>
             </div>
@@ -208,19 +208,55 @@ const Slug = ({ blog }) => {
 
 export default Slug;
 
-export async function getServerSideProps(context) {
+// export async function getServerSideProps(context) {
+//   try {
+//     const { name } = context.params;
+//     const res = await fetch(`${BASE_URL}/blogs/${name}`);
+//     if (!res.ok) {
+//       throw new Error(`HTTP error! Status: ${res.status}`);
+//     }
+
+//     const blog = await res.json();
+
+//     return {
+//       props: {
+//         blog: blog[0],
+//       },
+//     };
+//   } catch (error) {
+//     return {
+//       props: {
+//         blog: {},
+//       },
+//     };
+//   }
+// }
+export async function getStaticPaths() {
+  const res = await fetch(`${BASE_URL}/blogs`);
+  const blogs = await res.json();
+
+  const paths = blogs.map((blog) => ({
+    params: { slug: blog.slug },
+  }));
+
+
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
   try {
-    const { name } = context.params;
-    const res = await fetch(`${BASE_URL}/blogs/${name}`);
+
+    const res = await fetch(`${BASE_URL}/blogs/${params.slug}`);
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
 
     const blog = await res.json();
-    console.log(blog);
+
     return {
       props: {
-        blog,
+        blog: blog[0],
       },
     };
   } catch (error) {

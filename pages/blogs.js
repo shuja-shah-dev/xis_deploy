@@ -69,11 +69,7 @@ const page = () => {
   };
 
   const fetchData = () => fetcher(`${BASE_URL}/blogs`);
-  const {
-    data: blogsData,
-    isLoading,
-    isError,
-  } = useSWR("blogs", fetchData, {
+  const { data: blogsData, isLoading, isError } = useSWR("blogs", fetchData, {
     staleTime: 300000, // 5 minutes
     cacheTime: 3600000, // 1 hour
   });
@@ -162,8 +158,9 @@ const page = () => {
             </div>
 
             {blogsData &&
-              blogsData.map(
-                (item, index) =>
+              blogsData.map((item, index) => {
+                console.log("Item", item);
+                return (
                   index == 0 && (
                     <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
                       <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
@@ -193,10 +190,7 @@ const page = () => {
                             />
                           </p>
                         </div>
-                        <Link
-                          passHref={true}
-                          href={`/blogpost/${item.blog_name}`}
-                        >
+                        <Link passHref={true} href={`/blogpost/${item.slug}`}>
                           <div
                             style={gradientStyleMain}
                             className="font-poppins w-[40%] sm:w-[30%] mt-4 mr-2 mb-4 py-1 lg:py-2  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
@@ -207,7 +201,8 @@ const page = () => {
                       </div>
                     </div>
                   )
-              )}
+                );
+              })}
 
             <h3 className="font-inter mb-10 text-white test-semibold text-2xl sm:ml-10">
               LATEST STORIES

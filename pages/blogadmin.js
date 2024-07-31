@@ -24,14 +24,14 @@ const Blogadmin = () => {
     blog_title: "",
     blog_content: "",
     blog_image: null,
-    blog_name: "",
+    slug: "",
   });
   const [submittedBlogs, setSubmittedBlogs] = useState([]);
 
   const [showAlert, setShowAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
   const [loading, setLoading] = useState(false);
- const [errorData, setErrorData] = useState(null);
+  const [errorData, setErrorData] = useState(null);
   const [showError, setShowError] = useState(false);
   const [editBlogId, setEditBlogId] = useState(null);
   const [open, setOpen] = useState(false);
@@ -50,7 +50,7 @@ const Blogadmin = () => {
       formDataObj.append("blog_title", formData.blog_title);
       formDataObj.append("blog_content", formData.blog_content);
       formDataObj.append("blog_image", formData.blog_image);
-      formDataObj.append("blog_name", formData.blog_name);
+      formDataObj.append("slug", formData.slug);
 
       const response = await fetch(`${BASE_URL}/blogs`, {
         method: "POST",
@@ -75,7 +75,7 @@ const Blogadmin = () => {
           blog_title: "",
           blog_content: "",
           blog_image: null,
-          blog_name: "",
+          slug: "",
         });
 
         setShowAlert(true);
@@ -137,7 +137,7 @@ const Blogadmin = () => {
 
       formDataObj.append("blog_title", editedTitle);
       formDataObj.append("blog_content", editedContent);
-      formDataObj.append("blog_name", editUrl);
+      formDataObj.append("slug", editUrl);
 
       if (editedImage) {
         formDataObj.append("blog_image", editedImage);
@@ -206,8 +206,6 @@ const Blogadmin = () => {
       setEditedContent(blog.blog_content);
     }
   }, [editBlogId]);
-
-
 
   const style = {
     position: "absolute",
@@ -313,7 +311,11 @@ const Blogadmin = () => {
                           [{ header: [1, 2, 3, 4, 5, 6, false] }],
                           ["bold", "italic", "underline", "strike"],
                           ["link", "image", "video", "color"],
-                          [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+                          [
+                            { list: "ordered" },
+                            { list: "bullet" },
+                            { list: "check" },
+                          ],
                           ["clean"],
                         ],
                       }}
@@ -323,19 +325,19 @@ const Blogadmin = () => {
                   <div className="px-4 mb-6">
                     <label className="block mb-2 text-sm font-medium dark:text-gray-400">
                       {" "}
-                      Preffered Name
+                      Slug
                     </label>
                     <input
                       className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
                       type="text"
-                      name="blog_name"
-                      placeholder="Enter Preffered Name"
-                      id="blog_name"
-                      value={formData.blog_name}
+                      name="slug"
+                      placeholder="Add Slug"
+                      id="slug"
+                      value={formData.slug}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          blog_name: e.target.value,
+                          slug: e.target.value,
                         })
                       }
                       required
@@ -510,7 +512,7 @@ const Blogadmin = () => {
                     <input
                       className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
                       type="text"
-                      name="blog_name"
+                      name="slug"
                       placeholder="Enter URL"
                       id="url"
                       value={editUrl}
@@ -564,7 +566,7 @@ const Blogadmin = () => {
         )}
       </section>
     </>
-  ) 
+  );
 };
 export default Blogadmin;
 
