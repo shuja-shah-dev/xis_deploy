@@ -6,11 +6,11 @@ import { HeroBlob } from "./HeroSection";
 const IndustrySolutions = () => {
   const IndustrySolutionsData = [
     {
-      path: "/i1.png",
+      path: "/_foodImage2.png",
       label: "Food",
     },
     {
-      path: "/_electronic.jpg",
+      path: "/_electronic.png",
       label: "Electronics",
     },
     {
@@ -51,13 +51,6 @@ const IndustrySolutions = () => {
         </h3>
       </div>
 
-      {/* <div className=" absolute right-[180px]  top-[-400px]">
-        <Image src="/Ellipse 171.png" alt="Ellipse " height={900} width={900} />
-      </div>
-
-      <div className=" absolute right-0 ">
-        <Image src="/Ellipse 166.png" alt="Ellipse " height={800} width={400} />
-      </div> */}
       <HeroBlob
         sx={{
           top: "200px",
