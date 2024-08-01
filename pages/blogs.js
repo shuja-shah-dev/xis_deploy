@@ -12,8 +12,7 @@ import { HeroBlob } from "@/components/HeroSection";
 import { PropagateLoader } from "react-spinners";
 import HeadSection from "../components/Head";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { useQuery } from "react-query";
-import useSWR from "swr";
+import { NextSeo } from "next-seo";
 
 export async function getStaticProps() {
   const fs = require("fs");
