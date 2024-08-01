@@ -10,7 +10,7 @@ const IndustrySolutions = () => {
       label: "Food",
     },
     {
-      path: "/newi2.png",
+      path: "/_electronic.jpg",
       label: "Electronics",
     },
     {
@@ -27,12 +27,16 @@ const IndustrySolutions = () => {
     },
     {
       path: "/i6.png",
-      label: "Plastic Mold",
+      label: "Molding",
     },
     {
       path:'/_i7.png',
       label:'Pharma'
-    }
+    },
+    // {
+    //   path:'/xray2.png',
+    //   label:'Medical'
+    // }
   ];
 
   return (
@@ -42,7 +46,7 @@ const IndustrySolutions = () => {
           Industry Solutions
         </h1>
         <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-full md:w-[800px] text-center ">
-          Xis.ai Suite provides powerful software infrastructure to deliver all
+          xis.ai Suite provides powerful software infrastructure to deliver all
           your AI vision applications with one solution.
         </h3>
       </div>

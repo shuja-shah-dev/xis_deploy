@@ -45,7 +45,7 @@ router.post("/founder", async (req, res) => {
       from: req.body.email,
       to: "muti.rehman@xray-lab.com", // Replace with the recipient's email address
       cc: req.body.email,
-      subject: `Xis.ai Talk With Founder Form Submission`,
+      subject: `xis.ai Talk With Founder Form Submission`,
       html: `<p>First Name: ${fname}</p><p>Last Name: ${lname}</p><p>Organization: ${org}</p><p>Job Title: ${jobTitle}</p><p>Email: ${email}</p>`,
     };
 

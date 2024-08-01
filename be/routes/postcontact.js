@@ -50,7 +50,7 @@ router.post("/contact", async (req, res) => {
       from: req.body.email,
       to: "muti.rehman@xray-lab.com", // Replace with the recipient's email address
       cc: req.body.email,
-      subject: `Xis.ai Contact Form Submission`,
+      subject: `xis.ai Contact Form Submission`,
       html: `<p>First Name: ${fname}</p><p>Last Name: ${lname}</p><p>Topic: ${topic}</p><p>Company: ${company}</p><p>Job Title: ${jobTitle}</p><p>Email: ${email}</p><p>Message: ${desc}</p>`,
     };
 
