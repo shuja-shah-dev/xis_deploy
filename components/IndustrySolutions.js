@@ -29,6 +29,10 @@ const IndustrySolutions = () => {
       path: "/i6.png",
       label: "Plastic Mold",
     },
+    {
+      path:'/_i7.png',
+      label:'Pharma'
+    }
   ];
 
   return (
