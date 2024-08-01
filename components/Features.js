@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import FeatureCard from "./FeatureCard";
 import { HeroBlob } from "./HeroSection";
 import { Box } from "@mui/material";
 
 const Features = () => {
+  const videoRef = useRef(null);
   const featureData = [
     {
       path: "/streamline_ai-technology-spark-solid.svg",
@@ -38,6 +39,11 @@ const Features = () => {
       desc: `Powerful customization capabilities, allowing you to tailor the labeling and training process to fit your specific use case or application. This flexibility ensures that the software adapts to your unique requirements, providing a bespoke solution that maximizes efficiency and accuracy in training computer vision models for quality inspection.`,
     },
   ];
+  const playVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   return (
     <>
@@ -100,14 +106,23 @@ const Features = () => {
       >
         <video
           autoPlay
-          loop
+          playsInline
           muted
+          loop
           style={{
             height: "100%",
             borderRadius: "35px",
           }}
-          src="/_demonstraion.mp4"
-        />
+          onTouchStart={playVideo()}
+          onTouchMove={playVideo()}
+          onTouchEnd={playVideo()}
+          onTouchCancel={playVideo()}
+          ref={videoRef}
+          // src="/_demonstraion.mp4"
+        >
+          <source src="/_demonstraion.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </Box>
     </>
   );
