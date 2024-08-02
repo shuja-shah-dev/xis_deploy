@@ -204,6 +204,7 @@ const Blogadmin = () => {
       const blog = submittedBlogs.find((blog) => blog._id === editBlogId);
       setEditedTitle(blog.blog_title);
       setEditedContent(blog.blog_content);
+      setEditUrl(blog.slug)
     }
   }, [editBlogId]);
 

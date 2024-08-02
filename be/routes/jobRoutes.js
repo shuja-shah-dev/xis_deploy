@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 router.post("/jobs", async (req, res) => {
     try {
-      const { title, desc, responsibilities, benefits, nature, country, duration, experience, vacancies, workingHours, workingDays, salary, deadline } = req.body;
+      const { title, desc, responsibilities, benefits, nature, country, duration, experience, vacancies, workingHours, workingDays, salary, deadline, slug } = req.body;
       
       const existingJob = await Job.findOne({ title });
   
@@ -16,7 +16,7 @@ router.post("/jobs", async (req, res) => {
       }
   
       const newJob = new Job({
-        title, desc, responsibilities, benefits, nature, country, duration, experience, vacancies, workingHours, workingDays, salary, deadline
+        title, desc, responsibilities, benefits, nature, country, duration, experience, vacancies, workingHours, workingDays, salary, deadline, slug
       });
   
       const savedJob = await newJob.save();
@@ -32,12 +32,6 @@ router.get("/jobs", async (req, res) => {
   try {
     const jobs = await Job.find();
 
-    // const blogsWithMediaURLs = jobs.map((job) => ({
-    //   ...blog._doc,
-    //   blog_image: `/media/${blog.blog_image}`,
-    // }));
-    
-
     res.status(200).json(jobs);
   } catch (error) {
     console.error(error);
@@ -46,24 +40,41 @@ router.get("/jobs", async (req, res) => {
 });
 
 
-router.get("/jobs/:id", async (req, res) => {
+// router.get("/jobs/:id", async (req, res) => {
+//   try {
+//     const id = req.params.id;
+
+//     // Check if ID is valid (optional, but recommended)
+//     if (!mongoose.Types.ObjectId.isValid(id)) {
+//       return res.status(400).json({ error: "Invalid job ID" });
+//     }
+
+//     // Fetch the job by ID
+//     const job = await Job.findById(id);
+
+//     // Check if job exists
+//     if (!job) {
+//       return res.status(404).json({ error: "Job not found" });
+//     }
+
+//     // Send the job data
+//     res.status(200).json(job);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ error: "Internal Server Error" });
+//   }
+// });
+
+router.get("/jobs/:slug", async (req, res) => {
   try {
-    const id = req.params.id;
+    const slug = req.params.slug;
 
-    // Check if ID is valid (optional, but recommended)
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).json({ error: "Invalid job ID" });
-    }
+    const job = await Job.find({ slug: slug });
 
-    // Fetch the job by ID
-    const job = await Job.findById(id);
-
-    // Check if job exists
     if (!job) {
       return res.status(404).json({ error: "Job not found" });
     }
 
-    // Send the job data
     res.status(200).json(job);
   } catch (error) {
     console.error(error);
@@ -80,7 +91,7 @@ router.put("/jobs/:id", async (req, res) => {
       return res.status(400).json({ error: "Invalid jobId" });
     }
 
-    const { title, desc , responsibiities, benefits, nature, country, duration, experience, vacancies, workingHours, workingDays, salary, deadline} = req.body;
+    const { title, desc , responsibiities, benefits, nature, country, duration, experience, vacancies, workingHours, workingDays, salary, deadline, slug} = req.body;
     
     let updatedJob = {
         title,
@@ -93,12 +104,9 @@ router.put("/jobs/:id", async (req, res) => {
         experience,
         vacancies,
         workingHours,
-        workingDays, salary, deadline
+        workingDays, salary, deadline,
+        slug
     };
-
-    // if (req.file) {
-    //   updatedBlog.blog_image = req.file.filename;
-    // }
 
     const updatedJobResult = await Job.findByIdAndUpdate(
         jobId,
@@ -109,31 +117,6 @@ router.put("/jobs/:id", async (req, res) => {
     if (!updatedJobResult) {
       return res.status(404).json({ error: "Job not found" });
     }
-
-    // If an old image exists and a new image is uploaded, delete the old image
-    // if (req.file && updatedBlogResult.blog_image) {
-    //   const oldImagePath = path.join(
-    //     __dirname,
-    //     "media",
-    //     updatedBlogResult.blog_image
-    //   );
-
-    //   // Check if the file exists before attempting to delete it
-    //   try {
-    //     await fs.access(oldImagePath);
-    //     await fs.unlink(oldImagePath);
-    //   } catch (error) {
-    //     console.error("Error deleting old image:", error);
-
-    //     // Handle the case where the file doesn't exist or deletion fails
-    //     if (error.code !== "ENOENT") {
-    //       return res.status(500).json({
-    //         error: "Failed to delete old image",
-    //         details: error.message,
-    //       });
-    //     }
-    //   }
-    // }
 
     res.status(200).json(updatedJobResult);
   } catch (error) {

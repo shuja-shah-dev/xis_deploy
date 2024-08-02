@@ -30,6 +30,8 @@ const jobadmin = () => {
     workingDays: "",
     salary: "",
     deadline: "",
+
+    slug: ""
   });
   const [submittedJobs, setSubmittedJobs] = useState([]);
   const [editJobId, setEditJobId] = useState(null);
@@ -56,6 +58,8 @@ const jobadmin = () => {
   const [editedNature, setEditedNature] = useState("");
   const [editedCountry, setEditedCountry] = useState("");
   const [editDeadline, setEditDeadline] = useState("");
+
+  const [editSlug, setEditSlug] = useState("");
 
   //   const [editedImage, setEditedImage] = useState(null);
   //   const [editUrl, setEditUrl] = useState("");
@@ -101,6 +105,7 @@ const jobadmin = () => {
           workingDays: "",
           salary: "",
           deadline: "",
+          slug: ""
         });
 
         setShowAlert(true);
@@ -162,6 +167,7 @@ const jobadmin = () => {
       workingDays: editWorkingDays,
       salary: editSalary,
       deadline: editDeadline,
+      slug: editSlug
       }
       const response = await fetch(`${BASE_URL}/jobs/${editJobId}`, {
         method: "PUT",
@@ -232,6 +238,8 @@ const jobadmin = () => {
       setEditExperience(job.experience);
       setEditedNature(job.nature);
       setEditedCountry(job.country);
+      setEditSlug(job.slug);
+      setEditDeadline(job.deadline);
     }
   }, [editJobId]);
 
@@ -249,36 +257,6 @@ const jobadmin = () => {
     p: 4,
     overflowY: 'auto',
   };
-
-//   const style = {
-//     position: "absolute",
-//     top: "50%",
-//     left: "50%",
-//     transform: "translate(-50%, -50%)",
-//     width: 400,
-//     bgcolor: "#111827",
-//     border: "2px solid #000",
-//     boxShadow: 24,
-//     borderRadius: "10px",
-//     p: 4,
-   
-//   };
-
-  const shortenText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    }
-    const truncatedIndex = text.indexOf(" ", maxLength);
-    return text.substring(0, truncatedIndex) + "...";
-  };
-
-  function createMarkup(c) {
-    return { __html: c };
-  }
-
-  // useEffect(() => {
-  //   console.log(formData, "as the form data");
-  // });
 
   return (
     <>
@@ -568,6 +546,28 @@ const jobadmin = () => {
                         setFormData({
                           ...formData,
                           deadline: e.target.value,
+                        })
+                      }
+                      required
+                    />
+                  </div>
+
+                  <div className="px-4 mb-6">
+                    <label className="block mb-2 text-sm font-medium dark:text-gray-400">
+                      {" "}
+                      Slug
+                    </label>
+                    <input
+                      className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
+                      type="text"
+                      name="slug"
+                      placeholder="Enter Slug"
+                      id="slug"
+                      value={formData.slug}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          slug: e.target.value,
                         })
                       }
                       required
@@ -911,6 +911,23 @@ const jobadmin = () => {
                       id="deadline"
                       value={editDeadline}
                       onChange={(e) => setEditDeadline(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <div className="px-4 mb-6">
+                    <label className="block mb-2 text-sm font-medium dark:text-gray-400">
+                      {" "}
+                      Slug
+                    </label>
+                    <input
+                      className="block w-full px-4 py-3 mb-2 text-sm placeholder-gray-500 border rounded dark:text-gray-400 dark:placeholder-gray-500 dark:border-gray-800 bg-gray-800"
+                      type="text"
+                      name="slug"
+                      placeholder="Enter Slug"
+                      id="slug"
+                      value={editSlug}
+                      onChange={(e) => setEditSlug(e.target.value)}
                       required
                     />
                   </div>

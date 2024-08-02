@@ -58,7 +58,7 @@ const CareerJobs = () => {
       {jobs.length > 0 ? (
         jobs.map((item, index) => (
           <div key={item.id}>
-            <Link href={`/jobs/${item._id}`}>
+            <Link href={`/jobs/${item.slug}`}>
         
               <div
                 className={`sm:px-10 font-poppins flex items-center cursor-pointer ${
