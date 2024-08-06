@@ -6,11 +6,11 @@ import { HeroBlob } from "./HeroSection";
 const IndustrySolutions = () => {
   const IndustrySolutionsData = [
     {
-      path: "/_foodImage2.png",
+      path: "/apples_food.png",
       label: "Food",
     },
     {
-      path: "/_electronic.png",
+      path: "/electronic_new.png",
       label: "Electronics",
     },
     {
