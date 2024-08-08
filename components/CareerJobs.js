@@ -4,37 +4,20 @@ import React, { useState, useEffect } from "react";
 import { BASE_URL } from "@/common/base_config";
 import { HeroBlob } from "./HeroSection";
 
-async function fetchJobs() {
-  const response = await fetch(`${BASE_URL}/jobs`);
-  if (!response.ok) {
-    throw new Error("Failed to fetch jobs");
-  }
-  return response.json();
-}
 
-const CareerJobs = () => {
+
+const CareerJobs = ({jobsData}) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [jobs, setJobs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const loadJobs = async () => {
-      try {
-        const data = await fetchJobs();
-        setJobs(data);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadJobs();
-  }, []);
-
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error: {error}</p>;
+    if (jobsData && Array.isArray(jobsData)) {
+      setIsLoading(false);
+    } else {
+      setIsError("Error syncying static Data");
+    }
+  }, [jobsData]);
 
   return (
     <div className="mb-20 relative min-[2300px]:w-[70%] min-[2300px]:mx-auto ">
@@ -55,8 +38,8 @@ const CareerJobs = () => {
         }}
         key={"UniqueElementor2"}
       />
-      {jobs.length > 0 ? (
-        jobs.map((item, index) => (
+      {jobsData.length > 0 ? (
+        jobsData.map((item, index) => (
           <div key={item.id}>
             <Link href={`/jobs/${item.slug}`}>
         

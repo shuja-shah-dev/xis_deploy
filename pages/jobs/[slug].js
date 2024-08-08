@@ -321,7 +321,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(`${BASE_URL}/jobs/${params.slug}`);
+    const res = await fetch(`${BASE_URL}/jobs/${params.slug}`, {
+      next: {revalidate: 7200}, 
+    });
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
