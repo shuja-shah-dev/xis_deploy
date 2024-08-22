@@ -18,6 +18,7 @@ import Switcher from "@/components/Switcher";
 import HowItWorks from "@/components/howtowork";
 import Features from "@/components/Features";
 import IndustrySolutions from "@/components/IndustrySolutions";
+import VideoSection from "@/components/VideoSection";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -584,6 +585,7 @@ export default function Home() {
         <HeroSection />
         <Switcher />
         <HowItWorks />
+        <VideoSection/>
         <Features />
         <IndustrySolutions />
       </main>
