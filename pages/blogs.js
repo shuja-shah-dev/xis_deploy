@@ -24,7 +24,7 @@ export async function getStaticProps() {
 
   return {
     props: { blogsData },
-    revalidate: 3,
+    revalidate: 7200,
   };
 }
 
@@ -194,7 +194,7 @@ const page = ({ blogsData }) => {
                       <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
                         <LazyLoadImage
                           className="object-cover object-center h-full w-full"
-                          src={item.attributes?.blog_image?.data?.attributes?.url}
+                          src={`${BASE_URL_STRAPI}${item.attributes?.blog_image?.data?.attributes?.url}`}
                           alt={`content-${index}`}
                           width={350}
                           height={300}

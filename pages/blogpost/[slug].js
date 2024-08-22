@@ -14,7 +14,6 @@ import { NextSeo, ArticleJsonLd } from "next-seo";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import xisLogo from "../../public/Asset.png";
 
-
 const convertRichTextToHTML = (content) => {
   if (!Array.isArray(content)) return "";
 
@@ -44,6 +43,10 @@ const roboto = Roboto({
 
 const Slug = ({ blog }) => {
   blog = blog.data[0];
+
+  const blogContent = blog.attributes.blog_content;
+  const firstPartContent = blogContent[0]?.children[0]?.text.trim();
+  const startsWithPTag = firstPartContent?.startsWith("<p>");
 
   const [currentUrl, setCurrentUrl] = useState("");
 
@@ -116,7 +119,7 @@ const Slug = ({ blog }) => {
         datePublished={blog.attributes.createdAt}
         authorName="xis.ai"
         publisherName="xis.ai"
-        publisherLogo= {xisLogo}
+        publisherLogo={xisLogo}
         description={blog.attributes.blog_content.slice(0, 150)}
       />
 
@@ -254,19 +257,22 @@ const Slug = ({ blog }) => {
                     <img
                       alt="contentImage"
                       className="object-cover object-center  w-full"
-                      src={blog.attributes?.blog_image?.data?.attributes?.url}
+                      src={`${BASE_URL_STRAPI}${blog.attributes?.blog_image?.data?.attributes?.url}`}
                     />
                   </div>
                 </div>
-                <div
-                  className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
-                  dangerouslySetInnerHTML={createMarkup(
-                    blog.attributes.blog_content
-                  )}
-                />
-                <div
-                  className="leading-relaxed text-lg mb-4 myCustomDiv blog-content">
-                <BlocksRenderer content={blog.attributes.blog_content} /></div>
+                {startsWithPTag ? (
+                  <div
+                    className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
+                    dangerouslySetInnerHTML={{
+                      __html: firstPartContent,
+                    }}
+                  />
+                ) : (
+                  <div className="leading-relaxed text-lg mb-4 myCustomDiv blog-content">
+                    <BlocksRenderer content={blogContent} />
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -302,7 +308,7 @@ export async function getStaticProps({ params }) {
       `
       ${BASE_URL_STRAPI}/api/blogs/?populate=blog_image&filters[slug][$eq]=${params.slug}`,
       {
-        next: { revalidate: 3 },
+        next: { revalidate: 7200 },
       }
     );
 

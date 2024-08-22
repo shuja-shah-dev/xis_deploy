@@ -62,7 +62,7 @@ const BlogCard = ({ data }) => {
           <div className="rounded-xl h-40 overflow-hidden">
             <LazyLoadImage
               className="object-cover object-center h-full w-full"
-              src={item.attributes?.blog_image?.data?.attributes?.url}
+              src={`${BASE_URL_STRAPI}${item.attributes?.blog_image?.data?.attributes?.url}`}
               alt={`content-${index}`}
               width={350}
               height={300}

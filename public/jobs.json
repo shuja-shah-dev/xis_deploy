@@ -1,11 +1,34 @@
 {
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "title": "full stack developer",
+        "desc": "nknkfnsnf nkfkan\naknfknakfnk kenfpknaepkfnkaenf\nnfkaenfkanekfgnaekgna",
+        "responsibilities": "fnapkfnkaenfk kfampkfnaepk kfnaknfkp\nanfkaenfkanekf f kanfknaek",
+        "benefits": " fajlnfkanfkanefknaekf\ngnfkaenfkaenfknaekf\nafnaekfgnkaengk\nkan\nangjaenekgn jfnaekfnaeklnfgklaeng",
+        "nature": "full time ",
+        "country": "germany",
+        "duration": "8 hours",
+        "experience": "3",
+        "vacancies": "3",
+        "workingHours": "8",
+        "workingDays": "mon-fri",
+        "salary": null,
+        "deadline": "8/8/24",
+        "slug": "job1",
+        "createdAt": "2024-08-12T11:32:42.320Z",
+        "updatedAt": "2024-08-12T11:32:44.482Z",
+        "publishedAt": "2024-08-12T11:32:44.476Z"
+      }
+    }
+  ],
   "meta": {
     "pagination": {
       "page": 1,
       "pageSize": 25,
-      "pageCount": 0,
-      "total": 0
+      "pageCount": 1,
+      "total": 1
     }
   }
 }

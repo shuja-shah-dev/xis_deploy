@@ -27,23 +27,16 @@ async function fetchAndPostBlogs() {
           createdAt: blog.createdAt,
           updatedAt: blog.updatedAt,
           publishedAt: blog.updatedAt,
-          blog_image: blog.blog_image
-            ? {
-                data: {
-                  id: 1,
-                  attributes: {
-                    name: blog.blog_image, // Adjust as per your image processing
+          blog_image: {
                     url: `https://be.xis.ai/${blog.blog_image}`, // Placeholder, replace with actual URL if needed.
                   },
-                },
-              }
-            : null,
+              
         },
       };
 
       // Post to the first API
       await axios.post(
-        "https://thankful-growth-9dc3553048.strapiapp.com/api/blogs",
+        "http://127.0.0.1:1337/api/blogs",
         transformedData,
         {
           headers: {
