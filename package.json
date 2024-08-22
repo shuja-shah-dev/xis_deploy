@@ -19,6 +19,8 @@
     "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
     "@reduxjs/toolkit": "^2.2.3",
+    "@strapi/blocks-react-renderer": "^1.0.1",
+    "axios": "^1.7.3",
     "caniuse-lite": "^1.0.30001625",
     "compression": "^1.7.4",
     "crisp-sdk-web": "^1.0.21",

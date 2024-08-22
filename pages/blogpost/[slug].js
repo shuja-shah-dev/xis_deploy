@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
-import { BASE_URL } from "@/common/base_config";
+import { BASE_URL_STRAPI } from "@/common/base_config";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -11,10 +11,31 @@ import Image from "next/image";
 import { Roboto } from "next/font/google";
 import { HeroBlob } from "@/components/HeroSection";
 import { NextSeo, ArticleJsonLd } from "next-seo";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import xisLogo from "../../public/Asset.png";
 
 
+const convertRichTextToHTML = (content) => {
+  if (!Array.isArray(content)) return "";
 
-
+  return content
+    .map((block) => {
+      switch (block.type) {
+        case "paragraph":
+          return `<p>${block.children
+            .map((child) => child.text || "")
+            .join("")}</p>`;
+        case "heading":
+          return `<h${block.level}>${block.children
+            .map((child) => child.text || "")
+            .join("")}</h${block.level}>`;
+        // Add more cases as needed for other types (e.g., lists, links)
+        default:
+          return "";
+      }
+    })
+    .join("");
+};
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -22,6 +43,8 @@ const roboto = Roboto({
 });
 
 const Slug = ({ blog }) => {
+  blog = blog.data[0];
+
   const [currentUrl, setCurrentUrl] = useState("");
 
   useEffect(() => {
@@ -29,7 +52,9 @@ const Slug = ({ blog }) => {
   }, []);
 
   function createMarkup(c) {
-    return { __html: c };
+    return {
+      __html: convertRichTextToHTML(c),
+    };
   }
 
   const formatDays = (createdAt) => {
@@ -61,38 +86,40 @@ const Slug = ({ blog }) => {
   return (
     <>
       <NextSeo
-        title={blog.blog_title}
-        description={blog.blog_content.slice(0, 150)}
+        title={blog.attributes.blog_title}
+        description={blog.attributes.blog_content.slice(0, 150)}
         canonical={currentUrl}
         openGraph={{
           url: currentUrl,
-          title: blog.blog_title,
-          description: blog.blog_content.slice(0, 150),
+          title: blog.attributes.blog_title,
+          description: blog.attributes.blog_content.slice(0, 150),
           images: [
             {
-              url: `${BASE_URL}/media/${blog.blog_image}`,
+              url: `${BASE_URL_STRAPI}${blog.attributes?.blog_image?.data?.attributes?.url}`,
               width: 800,
               height: 600,
-              alt: blog.blog_title,
+              alt: blog.attributes.blog_title,
             },
           ],
           site_name: "xis.ai",
         }}
       />
+
       <ArticleJsonLd
         type="BlogPosting"
         url={currentUrl}
-        title={blog.blog_title}
+        title={blog.attributes.blog_title}
         images={[
-          `${BASE_URL}/media/${blog.blog_image}`,
-          `${BASE_URL}/media/site_xis_logo_default_please_dont_delete.png`,
+          `${BASE_URL_STRAPI}${blog.attributes?.blog_image?.data?.attributes?.url}`,
+          xisLogo,
         ]}
-        datePublished={blog.createdAt}
+        datePublished={blog.attributes.createdAt}
         authorName="xis.ai"
         publisherName="xis.ai"
-        publisherLogo={`${BASE_URL}/media/site_xis_logo_default_please_dont_delete.png`}
-        description={blog.blog_content.slice(0, 150)}
+        publisherLogo= {xisLogo}
+        description={blog.attributes.blog_content.slice(0, 150)}
       />
+
       <section className="relative">
         <HeroBlob
           sx={{
@@ -118,7 +145,7 @@ const Slug = ({ blog }) => {
               <h1
                 className={`${roboto.className} mb-4 text-3xl font-bold text-center`}
               >
-                {blog.blog_title}
+                {blog.attributes.blog_title}
               </h1>
             </div>
             <div className="flex mb-8 text-sky-400 text-lg font-medium">
@@ -139,7 +166,9 @@ const Slug = ({ blog }) => {
                     xis.ai
                   </h2>
                   <div className="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
-                  <p className="text-base mb-4">{formatDays(blog.createdAt)}</p>
+                  <p className="text-base mb-4">
+                    {formatDays(blog.attributes.createdAt)}
+                  </p>
                   <div className="cursor-pointer w-full text-[#4b5563] flex justify-center items-center mb-4">
                     <Link
                       target="_blank"
@@ -225,14 +254,19 @@ const Slug = ({ blog }) => {
                     <img
                       alt="contentImage"
                       className="object-cover object-center  w-full"
-                      src={`${BASE_URL}/media/${blog.blog_image}`}
+                      src={blog.attributes?.blog_image?.data?.attributes?.url}
                     />
                   </div>
                 </div>
                 <div
                   className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
-                  dangerouslySetInnerHTML={createMarkup(blog.blog_content)}
+                  dangerouslySetInnerHTML={createMarkup(
+                    blog.attributes.blog_content
+                  )}
                 />
+                <div
+                  className="leading-relaxed text-lg mb-4 myCustomDiv blog-content">
+                <BlocksRenderer content={blog.attributes.blog_content} /></div>
               </div>
             </div>
           </div>
@@ -245,11 +279,13 @@ const Slug = ({ blog }) => {
 export default Slug;
 
 export async function getStaticPaths() {
-  const res = await fetch(`${BASE_URL}/blogs`);
-  const blogs = await res.json();
+  const res = await fetch(
+    `${BASE_URL_STRAPI}/api/blogs/?populate[0]=blog_image`
+  );
 
-  const paths = blogs.map((blog) => ({
-    params: { slug: blog.slug },
+  const blogs = await res.json();
+  const paths = blogs.data.map((blog) => ({
+    params: { slug: blog.attributes.slug },
   }));
 
   const fs = require("fs");
@@ -262,18 +298,22 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(`${BASE_URL}/blogs/${params.slug}`, {
-      next: {revalidate: 7200}, 
-    });
+    const res = await fetch(
+      `
+      ${BASE_URL_STRAPI}/api/blogs/?populate=blog_image&filters[slug][$eq]=${params.slug}`,
+      {
+        next: { revalidate: 3 },
+      }
+    );
+
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-
-    const blog = await res.json();
+    let blog = await res.json();
 
     return {
       props: {
-        blog: blog[0],
+        blog: blog,
       },
     };
   } catch (error) {

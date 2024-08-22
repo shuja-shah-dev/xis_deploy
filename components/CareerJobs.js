@@ -40,8 +40,9 @@ const CareerJobs = ({jobsData}) => {
       />
       {jobsData.length > 0 ? (
         jobsData.map((item, index) => (
+
           <div key={item.id}>
-            <Link href={`/jobs/${item.slug}`}>
+            <Link href={`/jobs/${item.attributes.slug}`}>
         
               <div
                 className={`sm:px-10 font-poppins flex items-center cursor-pointer ${
@@ -53,9 +54,9 @@ const CareerJobs = ({jobsData}) => {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="w-full py-5">
-                  <h4 className="text-lg md:text-xl font-bold mb-4">{item.title}</h4>
+                  <h4 className="text-lg md:text-xl font-bold mb-4">{item.attributes.title}</h4>
                   <p>
-                    {item.nature} - {item.country} - {item.duration}
+                    {item.attributes.nature} - {item.attributes.country} - {item.attributes.duration}
                   </p>
                 </div>
                 <Image

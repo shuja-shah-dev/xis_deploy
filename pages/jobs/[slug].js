@@ -3,18 +3,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { HeroBlob } from "@/components/HeroSection";
 import Link from "next/link";
-import { BASE_URL } from "@/common/base_config";
-
-// async function fetchJobById(id) {
-//   const response = await fetch(`${BASE_URL}/jobs/${id}`); 
-//   if (!response.ok) {
-//     throw new Error("Failed to fetch job details");
-//   }
-//   return response.json();
-// }
+import { BASE_URL_STRAPI } from "@/common/base_config";
 
 async function fetchJobs() {
-  const response = await fetch(`${BASE_URL}/jobs`);
+  const response = await fetch(`${BASE_URL_STRAPI}/api/jobs`);
   if (!response.ok) {
     throw new Error("Failed to fetch jobs");
   }
@@ -22,6 +14,8 @@ async function fetchJobs() {
 }
 
 const CareerDetailHeroSection = ({job}) => {
+  console.log(job)
+  job = job.data[0];
   const router = useRouter();
   const { id } = router.query;
   const [jobs, setJobs] = useState([]);
@@ -29,29 +23,12 @@ const CareerDetailHeroSection = ({job}) => {
   // const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   if (id) {
-  //     const loadJob = async () => {
-  //       try {
-  //         const data = await fetchJobById(id);
-  //         console.log(data);
-  //         setJob(data);
-  //       } catch (error) {
-  //         setError(error.message);
-  //       } finally {
-  //         setLoading(false);
-  //       }
-  //     };
-
-  //     loadJob();
-  //   }
-  // }, [id]);
 
   useEffect(() => {
     const loadJobs = async () => {
       try {
         const data = await fetchJobs();
-        setJobs(data);
+        setJobs(data.data);
       } catch (error) {
         console.log(error.message);
       } 
@@ -80,7 +57,7 @@ const CareerDetailHeroSection = ({job}) => {
     );
 
   // Process benefits field
-  const benefitsLines = job.benefits.split("\n");
+  const benefitsLines = job.attributes.benefits.split("\n");
   const bulletPoints = benefitsLines.map((line, index) => (
     <div className="flex gap-3">
       {/* <Image
@@ -217,13 +194,13 @@ const CareerDetailHeroSection = ({job}) => {
             </div>
             <div className="flex justify-between text-xs mt-1">
               <p>
-                <span className="text-[#4634FC]">NATURE:</span> {job.nature}{" "}
+                <span className="text-[#4634FC]">NATURE:</span> {job.attributes.nature}{" "}
               </p>
               <p>
-                <span className="text-[#4634FC]">LOCATION:</span> {job.country}{" "}
+                <span className="text-[#4634FC]">LOCATION:</span> {job.attributes.country}{" "}
               </p>
               <p>
-                <span className="text-[#4634FC]">JOB TYPE:</span> {job.duration}{" "}
+                <span className="text-[#4634FC]">JOB TYPE:</span> {job.attributes.duration}{" "}
               </p>
             </div>
           </div>
@@ -233,25 +210,25 @@ const CareerDetailHeroSection = ({job}) => {
           <div className="bg-[#121212] p-8 border border-[#4634FC] flex flex-col gap-4">
             <p>
               <span className="text-[#515151]">Experience:</span>{" "}
-              {job.experience}{" "}
+              {job.attributes.experience}{" "}
             </p>
             <p>
               <span className="text-[#515151]">No. of Vacancies:</span>{" "}
-              {job.vacancies}{" "}
+              {job.attributes.vacancies}{" "}
             </p>
             <p>
               <span className="text-[#515151]">Working Hours:</span>{" "}
-              {job.workingHours}{" "}
+              {job.attributes.workingHours}{" "}
             </p>
             <p>
               <span className="text-[#515151]">Working Days:</span>{" "}
-              {job.workingDays}{" "}
+              {job.attributes.workingDays}{" "}
             </p>
             {/* <p>
               <span className="text-[#515151]">Salary:</span> {job.salary}{" "}
             </p> */}
             <p>
-              <span className="text-[#515151]">Deadline:</span> {job.deadline}{" "}
+              <span className="text-[#515151]">Deadline:</span> {job.attributes.deadline}{" "}
             </p>
 
             <div className="font-bold text-lg text-center">
@@ -275,8 +252,8 @@ const CareerDetailHeroSection = ({job}) => {
                   key={job.id}
                   className="flex justify-between border-b border-[#515151] py-4 px-2 hover:bg-gradient-to-r from-[#393E83] to-[#301667]"
                 >
-                  <div>{job.title}</div>
-                  <div>({job.vacancies})</div>
+                  <div>{job.attributes.title}</div>
+                  <div>({job.attributes.vacancies})</div>
                 </div>
               ))}
             </div>
@@ -285,10 +262,10 @@ const CareerDetailHeroSection = ({job}) => {
       </div>
 
       <div className="mb-20 w-full lg:w-2/3 lg:pr-6">
-        <h1 className="text-3xl font-bold mb-4">{job.title.toUpperCase()}</h1>
-        <p className="mb-4 text-base">{job.desc}</p>
+        <h1 className="text-3xl font-bold mb-4">{job.attributes.title.toUpperCase()}</h1>
+        <p className="mb-4 text-base">{job.attributes.desc}</p>
         <h3 className="mb-4 text-2xl">{"Responsibilities:".toUpperCase()}</h3>
-        <p className="mb-4 text-base">{job.responsibilities}</p>
+        <p className="mb-4 text-base">{job.attributes.responsibilities}</p>
         <h3 className="mb-4 text-2xl">{"Benefits:".toUpperCase()}</h3>
         <div className="mb-4 flex flex-col gap-4 text-base">{bulletPoints}</div>
         {/* <p className="mb-4">{paragraph}</p> */}
@@ -304,11 +281,11 @@ const CareerDetailHeroSection = ({job}) => {
 export default CareerDetailHeroSection;
 
 export async function getStaticPaths() {
-  const res = await fetch(`${BASE_URL}/jobs`);
+  const res = await fetch(`${BASE_URL_STRAPI}/api/jobs`);
   const jobs = await res.json();
 
-  const paths = jobs.map((job) => ({
-    params: { slug: job.slug },
+  const paths = jobs.data.map((job) => ({
+    params: { slug: job.attributes.slug },
   }));
 
   const fs = require("fs");
@@ -321,7 +298,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(`${BASE_URL}/jobs/${params.slug}`, {
+    const res = await fetch(`${BASE_URL_STRAPI}/api/jobs?filters[slug][$eq]=${params.slug}`, {
       next: {revalidate: 7200}, 
     });
     if (!res.ok) {
@@ -329,10 +306,10 @@ export async function getStaticProps({ params }) {
     }
 
     const job = await res.json();
-
+console.log(job)
     return {
       props: {
-        job: job[0],
+        job: job,
       },
     };
   } catch (error) {

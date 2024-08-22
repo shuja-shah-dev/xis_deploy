@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Roboto } from "next/font/google";
 import React, { useEffect, useState, useRef } from "react";
 import Head from "next/head";
-import { BASE_URL } from "@/common/base_config";
+import { BASE_URL_STRAPI } from "@/common/base_config";
 import DOMPurify from "dompurify";
 import Truncate from "react-truncate-html";
 import Link from "next/link";
@@ -19,13 +19,36 @@ export async function getStaticProps() {
   const path = require("path");
 
   const filePath = path.join(process.cwd(), "public", "blogs.json");
-  const blogsData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  let blogsData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  blogsData = blogsData.data;
 
   return {
     props: { blogsData },
-    revalidate: 7200,
+    revalidate: 3,
   };
 }
+
+const convertRichTextToHTML = (content) => {
+  if (!Array.isArray(content)) return "";
+
+  return content
+    .map((block) => {
+      switch (block.type) {
+        case "paragraph":
+          return `<p>${block.children
+            .map((child) => child.text || "")
+            .join("")}</p>`;
+        case "heading":
+          return `<h${block.level}>${block.children
+            .map((child) => child.text || "")
+            .join("")}</h${block.level}>`;
+        // Add more cases as needed for other types (e.g., lists, links)
+        default:
+          return "";
+      }
+    })
+    .join("");
+};
 
 const gradientStyle = {
   background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
@@ -66,7 +89,7 @@ const page = ({ blogsData }) => {
 
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
-    return blogsData.filter((item) => regex.test(item.blog_title));
+    return blogsData.filter((item) => regex.test(item.attributes.blog_title));
   };
 
   const handleChange = (e) => {
@@ -171,7 +194,7 @@ const page = ({ blogsData }) => {
                       <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
                         <LazyLoadImage
                           className="object-cover object-center h-full w-full"
-                          src={`${BASE_URL}${item.blog_image}`}
+                          src={item.attributes?.blog_image?.data?.attributes?.url}
                           alt={`content-${index}`}
                           width={350}
                           height={300}
@@ -181,7 +204,7 @@ const page = ({ blogsData }) => {
                       <div className=" flex flex-col w-full md:w-2/5">
                         <div className="px-4mt-4">
                           <h1 className="font-inter text-white text-2xl sm:text-4xl">
-                            {item.blog_title.slice(0, 63)}
+                            {item.attributes.blog_title.slice(0, 63)}
                           </h1>
                           <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
                             <Truncate
@@ -189,13 +212,18 @@ const page = ({ blogsData }) => {
                               lines={3}
                               dangerouslySetInnerHTML={{
                                 __html: DOMPurify.sanitize(
-                                  truncateText(item.blog_content, 150)
+                                  convertRichTextToHTML(
+                                    item.attributes.blog_content
+                                  )
                                 ),
                               }}
                             />
                           </p>
                         </div>
-                        <Link passHref={true} href={`/blogpost/${item.slug}`}>
+                        <Link
+                          passHref={true}
+                          href={`/blogpost/${item.attributes.slug}`}
+                        >
                           <div
                             style={gradientStyleMain}
                             className="font-poppins w-[40%] sm:w-[30%] mt-4 mr-2 mb-4 py-1 lg:py-2  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"

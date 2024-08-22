@@ -6,7 +6,7 @@ import "intersection-observer";
 import { useEffect } from "react";
 import { useState } from "react";
 import Alert from "@mui/material/Alert";
-import { BASE_URL } from "@/common/base_config";
+import { BASE_URL_STRAPI } from "@/common/base_config";
 import Modal from "@mui/material/Modal";
 import { HeroBlob } from "@/components/HeroSection";
 
@@ -33,7 +33,7 @@ const page = () => {
     try {
       const data = { fname, lname, jobTitle, company, topic, email, desc };
       setLoading(true);
-      const response = await fetch(`${BASE_URL}/contact`, {
+      const response = await fetch(`${BASE_URL_STRAPI}/api/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

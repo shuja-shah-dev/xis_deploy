@@ -1,42 +1,11 @@
-[
-  {
-    "_id": "66ac8c87d0000875120afa23",
-    "title": "macon",
-    "desc": "mclmalm",
-    "responsibilities": "nknk",
-    "benefits": "nknk",
-    "nature": "nknk",
-    "country": "nknk",
-    "duration": "knkn",
-    "experience": "nkn",
-    "vacancies": "pkn",
-    "workingHours": "nkn",
-    "workingDays": "knknk",
-    "salary": "nkn",
-    "deadline": "n",
-    "slug": "tesstingslug2",
-    "createdAt": "2024-08-02T07:36:39.655Z",
-    "updatedAt": "2024-08-02T07:39:20.654Z",
-    "__v": 0
-  },
-  {
-    "_id": "66ac97001e21d86ff5f42001",
-    "title": "full stack",
-    "desc": "pin",
-    "responsibilities": "kn",
-    "benefits": "nk",
-    "nature": "nk",
-    "country": "nkn",
-    "duration": "pkn",
-    "experience": "kn",
-    "vacancies": "pkn",
-    "workingHours": "pkn",
-    "workingDays": "pkn",
-    "salary": "kn",
-    "deadline": "kn",
-    "slug": "pkn",
-    "createdAt": "2024-08-02T08:21:20.633Z",
-    "updatedAt": "2024-08-02T08:21:20.633Z",
-    "__v": 0
+{
+  "data": [],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 0,
+      "total": 0
+    }
   }
-]
+}

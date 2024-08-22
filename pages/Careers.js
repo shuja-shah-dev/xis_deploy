@@ -20,7 +20,7 @@ const Careers = ({jobsData}) => {
     <>
       <div className="px-6 sm:px-10 lg:px-16 xl:px-32 2xl:px-52 ">
         <CareerHeroSection />
-        <CareerJobs jobsData = {jobsData}/>
+        <CareerJobs jobsData = {jobsData.data}/>
       </div>
     </>
   );

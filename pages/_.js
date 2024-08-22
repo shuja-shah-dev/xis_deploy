@@ -17,9 +17,10 @@ const Login = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (accessToken) {
-      router.replace("/adminchoice");
-    }
+    // if (accessToken) {
+    //   router.replace("/adminchoice");
+    // }
+    router.replace("https://thankful-growth-9dc3553048.strapiapp.com/admin/auth/login");
   }, [accessToken, router]);
 
   useEffect(() => {
