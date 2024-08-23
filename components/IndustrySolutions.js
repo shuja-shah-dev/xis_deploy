@@ -40,7 +40,7 @@ const IndustrySolutions = () => {
   ];
 
   return (
-    <div className="pb-24 sm:pb-48 px-2 sm:px-4 lg:px-16 relative">
+    <div className="pb-24 sm:pb-36 px-2 sm:px-4 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
         <h1 className="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">
           Industry Solutions
@@ -63,14 +63,14 @@ const IndustrySolutions = () => {
         key="SmallBlob"
       />
 
-      <HeroBlob
+      {/* <HeroBlob
         sx={{
           top: "500px",
           right: "20%",
           zIndex: "-1",
         }}
         key={"NormalSizedBlob"}
-      />
+      /> */}
 
       <IndustryCard data={IndustrySolutionsData} />
     </div>
