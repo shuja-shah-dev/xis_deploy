@@ -1,43 +1,32 @@
 const axios = require("axios");
 
-axios.defaults.timeout = 90000; // Set global timeout to 10 seconds
+axios.defaults.timeout = 90000; // Set global timeout to 90 seconds
 
-async function fetchAndPostBlogs() {
+async function fetchAndUpdateBlogs() {
   try {
     // Fetch data from the second API
     const { data: secondApiBlogs } = await axios.get("https://be.xis.ai/blogs");
 
-    // Transform and post each blog to the first API
+    // Update each blog on the first API
     for (const blog of secondApiBlogs) {
-      const transformedData = {
-        data: {
-          blog_title: blog.blog_title,
-          blog_content: [
-            {
-              type: "paragraph",
-              children: [
-                {
-                  text: blog.blog_content, // You might need to further parse this HTML if needed.
-                  type: "text",
-                },
-              ],
-            },
-          ],
-          slug: blog.slug,
-          createdAt: blog.createdAt,
-          updatedAt: blog.updatedAt,
-          publishedAt: blog.updatedAt,
-          blog_image: {
-                    url: `https://be.xis.ai/${blog.blog_image}`, // Placeholder, replace with actual URL if needed.
-                  },
-              
-        },
+      // Extract blog ID or another unique identifier if necessary
+      const blogId = blog.slug; // assuming blog.id is the identifier
+      const encodedSlug = encodeURIComponent(blogId);
+      // Fetch the existing blog data from the first API
+      const { data: existingBlog } = await axios.get(`http://127.0.0.1:1337/api/blogs/?populate=blog_image&filters[slug][$eq]=${encodedSlug}`);
+
+      // Merge the existing data with the new data
+      const updatedBlog = {
+        ...existingBlog.data,
+        createdAt: blog.createdAt,
+        updatedAt: blog.updatedAt,
+        publishedAt: blog.updatedAt,
       };
 
-      // Post to the first API
-      await axios.post(
-        "http://127.0.0.1:1337/api/blogs",
-        transformedData,
+      // Update the blog on the first API
+      await axios.put(
+        `http://127.0.0.1:1337/api/blogs/${blogId}`,
+        { data: updatedBlog },
         {
           headers: {
             "Content-Type": "application/json",
@@ -45,11 +34,11 @@ async function fetchAndPostBlogs() {
         }
       );
 
-      console.log(`Blog titled "${blog.blog_title}" uploaded successfully.`);
+      console.log(`Blog titled "${blog.blog_title}" updated successfully.`);
     }
   } catch (error) {
-    console.error("Error uploading blogs:", error);
+    console.error("Error updating blogs:", error);
   }
 }
 
-fetchAndPostBlogs();
+fetchAndUpdateBlogs();

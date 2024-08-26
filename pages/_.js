@@ -20,7 +20,7 @@ const Login = () => {
     // if (accessToken) {
     //   router.replace("/adminchoice");
     // }
-    router.replace("https://thankful-growth-9dc3553048.strapiapp.com/admin/auth/login");
+    router.replace("https://be.xis.ai/admin/auth/login");
   }, [accessToken, router]);
 
   useEffect(() => {

@@ -1,3 +1,7 @@
+
+
+
+
 import React, { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
@@ -27,7 +31,7 @@ const FeatureCard = ({ data }) => {
     );
   };
   return (
-    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mx-1 sm:mx-0 relative z-50">
+    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mx-1 sm:mx-0 relative z-40">
       {data.map((c, index) => (
         <div
           key={index}

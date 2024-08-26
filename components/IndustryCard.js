@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
@@ -10,7 +12,7 @@ const IndustryCard = ({ data }) => {
   };
   //
   return (
-    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center z-50 relative">
+    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
       {data.map((c, index) => (
         <div key={index} className="itest relative">
           <style jsx>{`
@@ -55,3 +57,7 @@ const IndustryCard = ({ data }) => {
 };
 
 export default IndustryCard;
+
+
+
+

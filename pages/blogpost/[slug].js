@@ -47,6 +47,7 @@ const Slug = ({ blog }) => {
   const blogContent = blog.attributes.blog_content;
   const firstPartContent = blogContent[0]?.children[0]?.text.trim();
   const startsWithPTag = firstPartContent?.startsWith("<p>");
+  const startsWithHTag = firstPartContent?.startsWith("<h");
 
   const [currentUrl, setCurrentUrl] = useState("");
 
@@ -261,7 +262,7 @@ const Slug = ({ blog }) => {
                     />
                   </div>
                 </div>
-                {startsWithPTag ? (
+                {startsWithPTag || startsWithHTag ? (
                   <div
                     className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
                     dangerouslySetInnerHTML={{

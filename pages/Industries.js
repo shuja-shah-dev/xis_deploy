@@ -1,3 +1,7 @@
+
+
+
+
 import AIApplications from "@/components/AIApplications";
 import IndustrySolutions from "@/components/IndustrySolutions";
 import React from "react";
@@ -12,3 +16,4 @@ const page = () => {
 };
 
 export default page;
+

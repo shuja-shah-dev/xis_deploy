@@ -1,3 +1,6 @@
+
+
+
 import Head from "next/head";
 
 import { useEffect, useState, useRef, TouchEvent } from "react";
@@ -18,7 +21,7 @@ import Switcher from "@/components/Switcher";
 import HowItWorks from "@/components/howtowork";
 import Features from "@/components/Features";
 import IndustrySolutions from "@/components/IndustrySolutions";
-import VideoSection from "../components/VideoSection";
+import VideoSection from "@/components/VideoSection";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -586,9 +589,31 @@ export default function Home() {
         <Switcher />
         <HowItWorks />
         <VideoSection/>
-        <Features />
+       
         <IndustrySolutions />
+        <Features />
       </main>
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

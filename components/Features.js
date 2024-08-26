@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import FeatureCard from "./FeatureCard";
 import { HeroBlob } from "./HeroSection";
@@ -39,7 +41,8 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-[#000] pb-48 pt-20 sm:pt-28 md:pt-36 sm:px-2 lg:px-16 relative">
+    //pt-28 md:pt-36 
+    <div className="bg-[#000] pb-48  sm:px-2 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
         <HeroBlob
           sx={{
@@ -86,3 +89,8 @@ const Features = () => {
 };
 
 export default Features;
+
+
+
+
+
