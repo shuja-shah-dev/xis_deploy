@@ -42,7 +42,7 @@ const Features = () => {
 
   return (
     //pt-28 md:pt-36 
-    <div className="bg-[#000] pb-48  sm:px-2 lg:px-16 relative">
+    <div className="bg-[#000] pb-32  sm:px-2 lg:px-16 relative">
       <div className="flex flex-col justify-center items-center mb-14">
         <HeroBlob
           sx={{

@@ -589,9 +589,9 @@ export default function Home() {
         <Switcher />
         <HowItWorks />
         <VideoSection/>
-       
-        <IndustrySolutions />
         <Features />
+        <IndustrySolutions />
+       
       </main>
     </>
   );

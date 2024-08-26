@@ -14,16 +14,17 @@ const VideoSection = () => {
   };
 
   const videos = [
-
-    { id: 1, src: "video.mp4" },
-    { id: 2, src: "09.mp4" },
+  
+    { id: 1, src: "01.mp4" },
+    { id: 2, src: "08.mp4" },
     { id: 3, src: "03.mp4" },
     { id: 4, src: "04.mp4" },
     { id: 5, src: "05.mp4" },
-    { id: 6, src: "video (1).mp4" },
-    { id: 7, src: "01.mp4" },
-    { id: 8, src: "02.mp4" },
-    { id: 9, src: "06.mp4" },
+    { id: 6, src: "video.mp4" },
+   
+    { id: 7, src: "02.mp4" },
+    { id: 8, src: "06.mp4" },
+    { id: 9, src: "09.mp4" },
   ];
 
   return (
@@ -53,15 +54,14 @@ const VideoSection = () => {
             <source src="/allin2.mp4" type="video/mp4" />
           </video>
         </div> */}
-
-         {/* onClick={() => handleVideoClick(video.src)} */}
+              {/* onClick={() => handleVideoClick(video.src)} */}
       <div className="lg:w-[80%] m-auto min-[2400px]:w-[50%]">
         <div className="grid grid-cols-3 gap-2 sm:gap-4 sm:p-4 p-2">
           {videos.map((video) => (
             <div key={video.id} className="aspect-w-16 aspect-h-9 "
-           >
+      >
               <video 
-                className="w-full h-full object-cover rounded-xl   "
+                className="w-full h-full object-cover rounded-xl  "
                 autoPlay
                 playsInline
                 muted
