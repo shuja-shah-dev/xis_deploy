@@ -58,10 +58,10 @@ const VideoSection = () => {
       <div className="lg:w-[80%] m-auto min-[2400px]:w-[50%]">
         <div className="grid grid-cols-3 gap-2 sm:gap-4 sm:p-4 p-2">
           {videos.map((video) => (
-            <div key={video.id} className="aspect-w-16 aspect-h-9 cursor-pointer"
+            <div key={video.id} className="aspect-w-16 aspect-h-9 "
            >
               <video 
-                className="w-full h-full object-cover rounded-xl  hover:border border-[#5d38c2] "
+                className="w-full h-full object-cover rounded-xl   "
                 autoPlay
                 playsInline
                 muted
