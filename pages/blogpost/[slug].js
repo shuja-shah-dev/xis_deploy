@@ -13,6 +13,60 @@ import { HeroBlob } from "@/components/HeroSection";
 import { NextSeo, ArticleJsonLd } from "next-seo";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import xisLogo from "../../public/Asset.png";
+import { Typography } from "@mui/material";
+
+//ui commented in globals
+const ListComponent = ({ children, format }) => {
+  const listStyle = format === "ordered" ? "decimal" : "disc";
+  const padding = "1em";
+
+  return format === "ordered" ? (
+    <ol
+      style={{ listStyleType: listStyle, paddingLeft: padding, margin: "10px" }}
+    >
+      {children}
+    </ol>
+  ) : (
+    <ul
+      style={{ listStyleType: listStyle, paddingLeft: padding, margin: "10px" }}
+    >
+      {children}
+    </ul>
+  );
+};
+
+const Heading = ({ children, level }) => {
+  const headingStyles = {
+    marginTop: "6px",
+    marginBottom: "6px",
+  };
+  switch (level) {
+    case 1:
+      return (
+        <Typography variant="h3" style={headingStyles}>
+          {children}
+        </Typography>
+      );
+    case 2:
+      return (
+        <Typography variant="h4" style={headingStyles}>
+          {children}
+        </Typography>
+      );
+    case 3:
+      return (
+        <Typography variant="h5" style={headingStyles}>
+          {children}
+        </Typography>
+      );
+    case 4:
+      return (
+        <Typography variant="h6" style={headingStyles}>
+          {children}
+        </Typography>
+      );
+  }
+};
 
 const convertRichTextToHTML = (content) => {
   if (!Array.isArray(content)) return "";
@@ -270,8 +324,14 @@ const Slug = ({ blog }) => {
                     }}
                   />
                 ) : (
-                  <div className="leading-relaxed text-lg mb-4 myCustomDiv blog-content">
-                    <BlocksRenderer content={blogContent} />
+                  <div className=" leading-relaxed text-lg mb-4 ">
+                    <BlocksRenderer
+                      content={blogContent}
+                      blocks={{
+                        list: ListComponent,
+                        heading: Heading,
+                      }}
+                    />
                   </div>
                 )}
               </div>

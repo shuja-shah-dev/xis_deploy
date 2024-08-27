@@ -485,7 +485,7 @@ div.marquee-config-action-container1 {
   box-shadow: 0px 2px 12px 0px #3944561f;
   background-color: var(--neutral-base);
 }
-
+/* 
 ul {
   height: 40px;
   width: 80%;
@@ -493,15 +493,15 @@ ul {
   display: flex;
   align-items: center;
   gap: 16px;
-}
+} */
 
-ul li {
+/* ul li {
   width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
-}
+} */
 
 ul li span {
   font-size: 12px;
