@@ -262,18 +262,20 @@ const CareerDetailHeroSection = ({job}) => {
       </div>
 
       <div className="mb-20 w-full lg:w-2/3 lg:pr-6">
-        <h1 className="text-3xl font-bold mb-4">{job.attributes.title.toUpperCase()}</h1>
-        <p className="mb-4 text-base">{job.attributes.desc}</p>
+        <h1 className="text-3xl font-bold mb-4 ">{job.attributes.title.toUpperCase()}</h1>
+        <p className="mb-4 text-base break-words	">{job.attributes.desc}</p>
         <h3 className="mb-4 text-2xl">{"Responsibilities:".toUpperCase()}</h3>
-        <p className="mb-4 text-base">{job.attributes.responsibilities}</p>
+        <p className="mb-4 text-base break-words	">{job.attributes.responsibilities}</p>
         <h3 className="mb-4 text-2xl">{"Benefits:".toUpperCase()}</h3>
-        <div className="mb-4 flex flex-col gap-4 text-base">{bulletPoints}</div>
+        <div className="mb-4 flex flex-col gap-4 text-base break-words" >{bulletPoints}</div>
         {/* <p className="mb-4">{paragraph}</p> */}
       </div>
-
+    
+      <Link href={`/ApplyForm?jobTitle=${encodeURIComponent(job.attributes.title)}`}>
       <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20">
         APPLY NOW
       </div>
+      </Link>
     </div>
   );
 };

@@ -96,10 +96,10 @@ const roboto = Roboto({
 });
 
 const Slug = ({ blog }) => {
-  blog = blog.data[0];
+  blog = blog?.data?.[0];
 
-  const blogContent = blog.attributes.blog_content;
-  const firstPartContent = blogContent[0]?.children[0]?.text.trim();
+  const blogContent = blog?.attributes?.blog_content || '';
+  const firstPartContent = blogContent[0]?.children[0]?.text.trim() || '';
   const startsWithPTag = firstPartContent?.startsWith("<p>");
   const startsWithHTag = firstPartContent?.startsWith("<h");
 
@@ -144,19 +144,19 @@ const Slug = ({ blog }) => {
   return (
     <>
       <NextSeo
-        title={blog.attributes.blog_title}
-        description={blog.attributes.blog_content.slice(0, 150)}
+        title={blog?.attributes.blog_title}
+        description={blog?.attributes.blog_content.slice(0, 150)}
         canonical={currentUrl}
         openGraph={{
           url: currentUrl,
-          title: blog.attributes.blog_title,
-          description: blog.attributes.blog_content.slice(0, 150),
+          title: blog?.attributes.blog_title,
+          description: blog?.attributes.blog_content.slice(0, 150),
           images: [
             {
-              url: `${BASE_URL_STRAPI}${blog.attributes?.blog_image?.data?.attributes?.url}`,
+              url: `${BASE_URL_STRAPI}${blog?.attributes?.blog_image?.data?.attributes?.url}`,
               width: 800,
               height: 600,
-              alt: blog.attributes.blog_title,
+              alt: blog?.attributes.blog_title,
             },
           ],
           site_name: "xis.ai",
@@ -166,16 +166,16 @@ const Slug = ({ blog }) => {
       <ArticleJsonLd
         type="BlogPosting"
         url={currentUrl}
-        title={blog.attributes.blog_title}
+        title={blog?.attributes.blog_title}
         images={[
-          `${BASE_URL_STRAPI}${blog.attributes?.blog_image?.data?.attributes?.url}`,
+          `${BASE_URL_STRAPI}${blog?.attributes?.blog_image?.data?.attributes?.url}`,
           xisLogo,
         ]}
-        datePublished={blog.attributes.createdAt}
+        datePublished={blog?.attributes.createdAt}
         authorName="xis.ai"
         publisherName="xis.ai"
         publisherLogo={xisLogo}
-        description={blog.attributes.blog_content.slice(0, 150)}
+        description={blog?.attributes.blog_content.slice(0, 150)}
       />
 
       <section className="relative">
