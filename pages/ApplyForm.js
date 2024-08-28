@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { BASE_URL_STRAPI } from "@/common/base_config";
 import { useRouter } from "next/router";
+import { HeroBlob } from "@/components/HeroSection";
 
 const ApplyForm = () => {
   const router = useRouter();
@@ -114,8 +115,34 @@ const ApplyForm = () => {
   };
 
   return (
-    <div className="py-24 min-[2300px]:w-[65%] mx-auto">
-      <h1 className="font-Inter text-4xl md:text-7xl text-center font-bold">
+    <div className="py-24 min-[2300px]:w-[65%] mx-auto relative">
+      <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            bottom: "2px",
+            zIndex: "-1",
+            left: "20px",
+          }}
+          key={"UniqueElementor2"}
+        />
+        <HeroBlob
+          sx={{
+            top: "0px",
+            zIndex: "-1",
+            width: "300px",
+            right: "20px",
+          }}
+        />
+        {/* <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            bottom: "-50%",
+            zIndex: "-1",
+            right: "40%",
+          }}
+          key={"UniqueElementor2"}
+        /> */}
+      <h1 className="font-inter text-4xl md:text-7xl text-center font-bold">
         APPLY HERE
       </h1>
       <div className="py-16 w-[80%] mx-auto font-poppins">
@@ -222,7 +249,7 @@ const ApplyForm = () => {
           <div className="flex justify-center items-center">
             <button
               type="submit"
-              className="w-[224px] h-[55px] md:text-lg text-sm cursor-pointer rounded-md p-3 text-center bg-gradient-to-r from-[#393E83] to-[#301667]"
+              className="w-[224px] h-[55px] md:text-lg text-sm cursor-pointer rounded p-3 text-center bg-gradient-to-r from-[#393E83] to-[#301667]"
             >
               Submit
             </button>

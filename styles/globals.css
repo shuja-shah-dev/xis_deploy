@@ -139,6 +139,9 @@ p {
 ::-webkit-scrollbar {
   width: 0px;
 }
+body .crisp-client .cc-1brb6 .cc-1kgzy {
+  background: linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%) !important;
+}
 
 body .crisp-client .cc-tlyw .cc-kxkl .cc-nsge {
   position: fixed !important;

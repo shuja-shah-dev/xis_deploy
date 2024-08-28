@@ -58,7 +58,7 @@ const ArrowSlider = () => {
           aria-label="Scroll to top of the page"
           className="z-50"
           style={{
-            backgroundColor: "#363636",
+            // backgroundColor: "#363636",
             padding: "10px 10px",
             borderRadius: "10px",
             color: "#fff",

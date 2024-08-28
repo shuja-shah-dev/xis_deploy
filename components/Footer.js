@@ -14,15 +14,20 @@ import { HeroBlob } from "./HeroSection";
 
 const Footer = () => {
     const gradientStyle = {
-      background:
-        "linear-gradient(317deg, rgba(93, 56, 194, 0.25) -1.1%, rgba(182, 61, 232, 0.00) 52.97%)",
-      border: "1px solid #5D38C2",
-      padding: "6px",
-    borderRadius: "12px"
+    //   background:
+    //     "linear-gradient(317deg, rgba(93, 56, 194, 0.25) -1.1%, rgba(182, 61, 232, 0.00) 52.97%)",
+    //   border: "1px solid #5D38C2",
+      padding: "8px",
+    // borderRadius: "12px"
+    width: '40px',
+    height: '40px',
+    background: '#1E1E23',
+    borderRadius: '9999px'
+    // <div className="w-[34px] h-[34px] bg-[#1E1E23] rounded-full">
   };
   
   return (
-    <div className=" pb-6 pt-24 relative ">
+    <div className=" pb-6 pt-24 relative bg-[#141416]">
       <div className="absolute inset-0">
         <Image
           src="/Rectangle 75.png"
@@ -33,20 +38,20 @@ const Footer = () => {
       </div>
 
       <div className="min-[2300px]:w-[85%] m-auto">
-        <div className="flex flex-col lg:flex-row text-gray-300 gap-14 justify-around pb-24 relative z-10 ">
+        <div className="flex flex-col lg:flex-row text-[#414558] gap-14 justify-around pb-24 relative z-10 ">
           <div className=" ml-16  sm:m-auto lg:m-0 text-center lg:text-left">
             <Link href="/">
               <Image src="/Asset.png" width={150} height={100} alt="logo" />
             </Link>
 
-            <p className="mt-4 font-poppins text-left sm:text-center">
+            <p className="mt-4 font-poppins text-left sm:text-center text-base">
               Precision Beyond Perception
             </p>
           </div>
 
           <div className="text-base flex font-poppins flex-col text-left md:text-left ml-16  sm:m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
-            <div className="flex flex-col gap-5 ">
-              <div className="font-bold font-inter text-xl">
+            <div className="flex flex-col gap-5 md:gap-7  ">
+              <div className="font-bold font-poppins text-xl text-[#FFF]">
                 <Link href="/about" aria-label="About">
                   About Us
                 </Link>
@@ -62,8 +67,8 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-5">
-              <div className="font-bold text-xl font-inter">
+            <div className="flex flex-col gap-5 md:gap-7">
+              <div className="font-bold text-xl font-poppins text-[#FFF]">
                 <Link href="/certificates" aria-label="Certificates">
                   Certificates
                 </Link>
@@ -83,29 +88,34 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-5 font-inter">
-              <div className="font-bold text-xl ">
+            <div className="flex flex-col gap-5">
+              <div className="font-bold text-xl  font-poppins text-[#FFF]">
                 <Link href="/contact" aria-label="Contact">
                   Contact Us
                 </Link>
               </div>
-              <div className="flex flex-col justify-center gap-5 md:items-center">
+              <div className="flex flex-col  gap-5">
                 <Link href="/contact" aria-label="Contact">
-                  <div className="flex md:ml-[-20px]">
-                    <MdOutlinePhoneIphone size={24} color="white" /> +49 7045
-                    2044 560
+                  <div className="flex  items-center">
+                    <div className="w-[34px] h-[34px] bg-[#1E1E23] rounded-full"><MdOutlinePhoneIphone size={22} color="white" className="ml-[7px] mt-1.5"/></div>
+                    
+                    <div className="ml-2"> +49 7045
+                    2044 560</div>
                   </div>
                 </Link>
                 <Link href="/contact" aria-label="Contact">
-                  <div className="flex md:ml-[-34px]">
-                    <MdLocalPhone size={24} color="white" /> +1 248-843-1760
+                  <div className="flex  items-center">
+                  <div className="w-[34px] h-[34px] bg-[#1E1E23] rounded-full"><MdLocalPhone size={22} color="white" className="ml-[7px] mt-1.5"/></div>
+                  
+                    <div className="ml-2">  +1 248-843-1760</div>
                   </div>
                 </Link>
 
                 <Link href="/contact" aria-label="Contact">
-                  <div className="flex">
-                    <IoMail size={24} color="white" />{" "}
-                    <div className="ml-1">contact@xray-lab.com</div>
+                  <div className="flex items-center">
+                  <div className="w-[34px] h-[34px] bg-[#1E1E23] rounded-full"><IoMail size={20} color="white" className="ml-[7px] mt-1.5"/></div>
+            
+                    <div className="ml-2">contact@xray-lab.com</div>
                   </div>
                 </Link>
               </div>
@@ -113,11 +123,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pb-32 md:pb-0 flex flex-col-reverse md:flex-col 2xl:flex-row items-center  2xl:justify-center text-white relative z-10 min-[2000px]:justify-around">
-          <div className="text-center sm:text-left mt-6 md:mt-0 px-1 sm:px-0">
+        <div className="pb-32 md:pb-0 flex flex-col-reverse gap-6  items-center  2xl:justify-center text-[#414558]  relative z-10 min-[2000px]:justify-around">
+          <div className="text-center sm:text-left mt-6 md:mt-0 px-1 sm:px-0 font-semibold sm:text-base">
             © 2024 XRAY-LAB Industrial Services GmbH | All Rights Reserved.
           </div>
-          <div className="flex gap-4 2xl:ml-[360px] md:pt-6 2xl:pt-0">
+          <div className="w-full h-0.5 bg-[#343437]"></div>
+          <div className="flex gap-4 md:pt-6 2xl:pt-0">
             <Link
               style={gradientStyle}
               target="_blank"
