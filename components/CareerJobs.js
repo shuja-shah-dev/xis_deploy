@@ -38,7 +38,7 @@ const CareerJobs = ({jobsData}) => {
         }}
         key={"UniqueElementor2"}
       />
-      {jobsData ? (
+      {jobsData.length > 0 ? (
         jobsData.map((item, index) => (
 
           <div key={item.id}>

@@ -3,23 +3,45 @@
     {
       "id": 1,
       "attributes": {
-        "title": "full stack ",
-        "desc": "loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
-        "responsibilities": "loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
-        "benefits": "loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\nloremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\nopnmapo mcoame\nkanod\n",
-        "nature": "abcd",
-        "country": "lahore",
-        "duration": "full",
-        "experience": "5",
-        "vacancies": "6",
-        "workingHours": "8",
-        "workingDays": "5",
-        "salary": "good",
-        "deadline": "tomorow",
-        "slug": "first",
-        "createdAt": "2024-08-27T10:02:39.394Z",
-        "updatedAt": "2024-08-27T10:16:01.802Z",
-        "publishedAt": "2024-08-27T10:04:13.944Z"
+        "title": "Computer Vision Engineer",
+        "desc": "Bachelor’s or Master’s degree in Computer Science, Electrical Engineering, or a related field.\nMinimum of 2 years of industry experience in computer vision.\nProficiency in C++ and Python programming languages.\nStrong understanding of machine learning algorithms and frameworks.\nExperience with libraries such as OpenCV, TensorFlow, or PyTorch.\nFamiliarity with GPU programming and CUDA is a plus.\nStrong problem-solving skills and attention to detail.\nExcellent communication and teamwork abilities.",
+        "responsibilities": "Design, develop, and optimize computer vision algorithms and applications.\nCollaborate with cross-functional teams to integrate computer vision solutions into products.\nWork on real-time processing and analysis of image and video data.\nImplement and maintain code in C++ and Python for high-performance computing.\nConduct performance evaluations and optimize existing systems for speed and accuracy.\nStay updated with the latest advancements in computer vision and machine learning.",
+        "benefits": "Be part of an innovative company that values creativity and excellence.\nWork with a talented team of professionals in a collaborative environment.\nCompetitive salary and benefits package.\nOpportunities for professional growth and development.",
+        "nature": "Remote",
+        "country": "Pakistan",
+        "duration": "Permanent ",
+        "experience": "2 years",
+        "vacancies": "2",
+        "workingHours": "8 Hours ",
+        "workingDays": "5 Days",
+        "salary": null,
+        "deadline": "15 Sep",
+        "slug": "cv-engineer",
+        "createdAt": "2024-08-28T08:41:08.354Z",
+        "updatedAt": "2024-08-28T08:42:47.319Z",
+        "publishedAt": "2024-08-28T08:41:12.085Z"
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "title": "Junior Graphics Designer ",
+        "desc": "Bachelor’s degree in Graphic Design, Multimedia Design, or a related field.\nUp to 2 years of experience in graphic design, with a strong focus on digital platforms.\nProficiency in Figma for UI/UX design.\nBasic experience in video editing software such as Adobe Premiere Pro, Final Cut Pro, or similar.\nStrong understanding of design principles, typography, color theory, and layout.\nA portfolio showcasing your design skills across digital mediums and basic video editing work.\nAbility to multitask and manage multiple projects simultaneously.\nStrong communication skills and a collaborative mindset.\nWillingness to learn and adapt in a fast-paced environment.",
+        "responsibilities": "Create and refine designs for digital platforms using Figma, ensuring a cohesive and user-friendly experience.\nAssist in the development of marketing materials, including social media graphics, website assets, and email campaigns.\nPerform basic video editing tasks, including trimming, adding transitions, and overlaying text/graphics.\nCollaborate with senior designers and other team members to bring creative concepts to life.\nContribute to brainstorming sessions with fresh ideas and innovative design solutions.\nEnsure consistency with brand guidelines across all visual content.\nStay updated with the latest design and video editing trends and tools.",
+        "benefits": "Be part of a creative team that values innovation and continuous learning.\nWork on diverse projects that challenge and expand your skill set.\nAccess to mentorship opportunities and professional development resources.\nCompetitive salary and benefits package.\nA supportive and collaborative work culture.",
+        "nature": "Remote",
+        "country": "Pakistan",
+        "duration": "Permanent ",
+        "experience": "2 years",
+        "vacancies": "1",
+        "workingHours": "8 Hours ",
+        "workingDays": "5 Days",
+        "salary": null,
+        "deadline": "15 Sep",
+        "slug": "gd-junior",
+        "createdAt": "2024-08-28T08:42:39.917Z",
+        "updatedAt": "2024-08-28T08:47:04.434Z",
+        "publishedAt": "2024-08-28T08:47:04.432Z"
       }
     }
   ],
@@ -28,7 +50,7 @@
       "page": 1,
       "pageSize": 25,
       "pageCount": 1,
-      "total": 1
+      "total": 2
     }
   }
 }
