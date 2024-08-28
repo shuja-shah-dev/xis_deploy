@@ -55,13 +55,13 @@ const VideoSection = () => {
           </video>
         </div> */}
               {/* onClick={() => handleVideoClick(video.src)} */}
-      <div className="lg:w-[80%] m-auto min-[2400px]:w-[50%]">
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 sm:p-4 p-2">
+      <div className="lg:w-[80%] m-auto min-[2400px]:w-[50%]  ">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 sm:p-4 p-2 ">
           {videos.map((video) => (
-            <div key={video.id} className="aspect-w-16 aspect-h-9 "
+            <div key={video.id} className="aspect-w-16 aspect-h-9  z-50"
       >
               <video 
-                className="w-full h-full object-cover rounded-xl  "
+                className="w-full h-full object-cover rounded-xl "
                 autoPlay
                 playsInline
                 muted

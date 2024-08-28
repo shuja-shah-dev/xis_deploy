@@ -7,11 +7,11 @@ export async function getStaticProps() {
   const path = require("path");
 
   const filePath = path.join(process.cwd(), "public", "jobs.json");
-  const jobsData = JSON.parse(fs.readFileSync(filePath, "utf8"));
-
+  let jobsData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  jobsData = jobsData.data;
   return {
     props: { jobsData },
-    revalidate: 7200,
+    revalidate: 600,
   };
 }
 

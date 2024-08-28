@@ -4,7 +4,7 @@ import { HeroBlob } from "./HeroSection";
 const CareerHeroSection = () => {
   return (
     <div className="font-poppins flex justify-center items-center flex-col my-14 md:my-20 relative  min-[2300px]:w-[70%] min-[2300px]:mx-auto">
-     
+{/*      
             <HeroBlob
             sx={{
               background: "rgba(62, 95, 170, 0.25)",
@@ -14,7 +14,7 @@ const CareerHeroSection = () => {
             }}
             key={"UniqueElementor2"}
           />
-       
+        */}
     
       
       <div className="flex flex-col justify-center items-center ">

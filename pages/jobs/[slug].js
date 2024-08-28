@@ -13,8 +13,8 @@ async function fetchJobs() {
   return response.json();
 }
 
-const CareerDetailHeroSection = ({job}) => {
-  console.log(job)
+const CareerDetailHeroSection = ({ job }) => {
+  console.log(job);
   job = job.data[0];
   const router = useRouter();
   const { id } = router.query;
@@ -23,7 +23,6 @@ const CareerDetailHeroSection = ({job}) => {
   // const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-
   useEffect(() => {
     const loadJobs = async () => {
       try {
@@ -31,7 +30,7 @@ const CareerDetailHeroSection = ({job}) => {
         setJobs(data.data);
       } catch (error) {
         console.log(error.message);
-      } 
+      }
     };
 
     loadJobs();
@@ -67,7 +66,7 @@ const CareerDetailHeroSection = ({job}) => {
         height={15}
         alt="job"
       /> */}
-      
+
       <div className="flex relative">
         <svg
           className="absolute"
@@ -122,8 +121,7 @@ const CareerDetailHeroSection = ({job}) => {
 
   return (
     <div className="px-6 sm:px-10 lg:px-16 xl:px-32 2xl:px-52 min-[2300px]:w-[70%] min-[2300px]:mx-auto font-poppins relative ">
-     
-        <svg
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="1280"
         height="312"
@@ -139,7 +137,7 @@ const CareerDetailHeroSection = ({job}) => {
           fill="#303030"
         />
       </svg>
-   
+
       <div className="flex justify-center items-center flex-col my-14 md:my-20 relative">
         <HeroBlob
           sx={{
@@ -212,13 +210,16 @@ const CareerDetailHeroSection = ({job}) => {
             </div>
             <div className="flex justify-between text-xs mt-1">
               <p>
-                <span className="text-[#4634FC]">NATURE:</span> {job.attributes.nature}{" "}
+                <span className="text-[#4634FC]">NATURE:</span>{" "}
+                {job.attributes.nature}{" "}
               </p>
               <p>
-                <span className="text-[#4634FC]">LOCATION:</span> {job.attributes.country}{" "}
+                <span className="text-[#4634FC]">LOCATION:</span>{" "}
+                {job.attributes.country}{" "}
               </p>
               <p>
-                <span className="text-[#4634FC]">JOB TYPE:</span> {job.attributes.duration}{" "}
+                <span className="text-[#4634FC]">JOB TYPE:</span>{" "}
+                {job.attributes.duration}{" "}
               </p>
             </div>
           </div>
@@ -246,7 +247,8 @@ const CareerDetailHeroSection = ({job}) => {
               <span className="text-[#515151]">Salary:</span> {job.salary}{" "}
             </p> */}
             <p>
-              <span className="text-[#515151]">Deadline:</span> {job.attributes.deadline}{" "}
+              <span className="text-[#515151]">Deadline:</span>{" "}
+              {job.attributes.deadline}{" "}
             </p>
 
             <div className="font-bold text-lg text-center">
@@ -265,7 +267,7 @@ const CareerDetailHeroSection = ({job}) => {
               OUR OPENING POSITIONS
             </div>
             <div className="flex flex-col">
-            {jobs.map((job) => (
+              {jobs.map((job) => (
                 <div
                   key={job.id}
                   className="flex justify-between border-b border-[#515151] py-4 px-2 hover:bg-gradient-to-r from-[#393E83] to-[#301667]"
@@ -280,19 +282,27 @@ const CareerDetailHeroSection = ({job}) => {
       </div>
 
       <div className="mb-20 w-full lg:w-2/3 lg:pr-6">
-        <h1 className="text-3xl font-bold mb-4 ">{job.attributes.title.toUpperCase()}</h1>
+        <h1 className="text-3xl font-bold mb-4 ">
+          {job.attributes.title.toUpperCase()}
+        </h1>
         <p className="mb-4 text-base break-words	">{job.attributes.desc}</p>
         <h3 className="mb-4 text-2xl">{"Responsibilities:".toUpperCase()}</h3>
-        <p className="mb-4 text-base break-words	">{job.attributes.responsibilities}</p>
+        <p className="mb-4 text-base break-words	">
+          {job.attributes.responsibilities}
+        </p>
         <h3 className="mb-4 text-2xl">{"Benefits:".toUpperCase()}</h3>
-        <div className="mb-4 flex flex-col gap-4 text-base break-words" >{bulletPoints}</div>
+        <div className="mb-4 flex flex-col gap-4 text-base break-words">
+          {bulletPoints}
+        </div>
         {/* <p className="mb-4">{paragraph}</p> */}
       </div>
-    
-      <Link href={`/ApplyForm?jobTitle=${encodeURIComponent(job.attributes.title)}`}>
-      <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20">
-        APPLY NOW
-      </div>
+
+      <Link
+        href={`/ApplyForm?jobTitle=${encodeURIComponent(job.attributes.title)}`}
+      >
+        <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20">
+          APPLY NOW
+        </div>
       </Link>
     </div>
   );
@@ -318,15 +328,18 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const res = await fetch(`${BASE_URL_STRAPI}/api/jobs?filters[slug][$eq]=${params.slug}`, {
-      next: {revalidate: 7200}, 
-    });
+    const res = await fetch(
+      `${BASE_URL_STRAPI}/api/jobs?filters[slug][$eq]=${params.slug}`,
+      {
+        next: { revalidate: 600 },
+      }
+    );
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
 
     const job = await res.json();
-console.log(job)
+
     return {
       props: {
         job: job,

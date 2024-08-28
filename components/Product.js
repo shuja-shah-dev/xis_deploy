@@ -110,7 +110,21 @@ const Product = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-around items-center">
+           <div className="w-[90%] m-auto min-[2500px]:w-[90%] my-20">
+          <video
+            autoPlay
+            playsInline
+            muted
+            loop
+            style={{
+              borderRadius: "10px",
+            }}
+          >
+            <source src="/0828.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+          {/* <div className="flex flex-col justify-around items-center">
             <div className="mb-20 lg:hidden">
               <Image
                 src="/soft.png"
@@ -178,7 +192,7 @@ const Product = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-col mt-14 mb-[150px] xl:mt-0">
             <ProductFeatures data={xisDevData} />
           </div>
