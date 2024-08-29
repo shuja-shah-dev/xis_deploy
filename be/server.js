@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
-app.post("/contact", postcontact);
+app.use("/contact", postcontact);
 app.post("/founder", founderRoute);
 app.use("/", blogRoutes);
 app.use("/", jobRoutes);
