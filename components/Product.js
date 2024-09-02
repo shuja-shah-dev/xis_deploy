@@ -110,7 +110,7 @@ const Product = () => {
             </div>
           </div>
 
-           <div className="w-[90%] m-auto min-[2500px]:w-[90%] my-20">
+           <div className="w-[95%] m-auto lg:w-[65%] my-20">
           <video
             autoPlay
             playsInline
@@ -228,9 +228,9 @@ const Product = () => {
                   <ProductFeatures data={xisRtData} name="rt" />
                 </div>
                 <Image
-                  src="/black theme (2) 1.svg"
-                  width={580}
-                  height={690}
+                  src="/Group 39587.svg"
+                  width={800}
+                  height={890}
                   alt="edgeAI"
                   className="m-auto xl:m-0"
                 />

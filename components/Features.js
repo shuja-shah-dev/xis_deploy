@@ -32,12 +32,13 @@ const Features = () => {
     {
       path: "/collab.svg",
       label: "Collaborative Platform",
-      desc: `A robust collaborative system that enables multiple team members to work together seamlessly on labeling and training workloads for computer vision models used in quality inspection. This collaborative feature is designed to enhance productivity, improve accuracy, and ensure efficient workflow management.`,
+      desc: `A robust system allowing multiple users to collaborate seamlessly on labeling and training computer vision models, enhancing productivity, accuracy, and workflow efficiency.`,
     },
     {
       path: "/fully Custom.svg",
       label: "Fully Customizable",
-      desc: `Powerful customization capabilities, allowing you to tailor the labeling and training process to fit your specific use case or application. This flexibility ensures that the software adapts to your unique requirements, providing a bespoke solution that maximizes efficiency and accuracy in training computer vision models for quality inspection.`,
+      desc: `
+Customizable labeling and training processes ensure the software fits your needs, optimizing efficiency and accuracy for training computer vision models in quality inspection.`,
     },
   ];
 

@@ -39,7 +39,7 @@ const VideoSection = () => {
         key={"UniqueElementor2"}
       />
           <h1 className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-         Industry Examples
+         Use Cases
         </h1>
         {/* <div className="w-[90%] m-auto 2xl:w-[70%] min-[2500px]:w-[40%]">
           <video

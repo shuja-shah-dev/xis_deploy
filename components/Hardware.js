@@ -155,7 +155,7 @@ const Hardware = () => {
               className="rounded-3xl"
             />
             <Image
-              src="/e3.svg"
+              src="/i3.png"
               width={250}
               height={250}
               className="rounded-3xl"
@@ -184,7 +184,7 @@ const Hardware = () => {
         </p>
         <div className="flex flex-col lg:hidden 2xl:flex 2xl:flex-row items-center mt-12 justify-center gap-10">
           <Image
-            src="/vs1.svg"
+            src="/umberto-jXd2FSvcRr8-unsplash 1.svg"
             width={450}
             height={289}
             className="rounded-3xl"
