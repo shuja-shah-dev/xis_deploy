@@ -262,12 +262,12 @@ backdropFilter: "blur(50px)"
       }}
     >
       <div className="flex justify-center items-center pb-14">
-        <div className="font-poppins text-white relative text-sm sm:text-lg border-2 border-[#4C4758] rounded-md flex flex-row gap-0 sm:gap-4 px-4 py-2 ">
+        <div className="font-poppins text-white relative text-sm sm:text-lg border-2 border-gray-400 rounded-full flex flex-row gap-0 sm:gap-4 px-4 py-2 ">
           <div
             style={activeTab === "software" ? bg : {}}
             className={`cursor-pointer  ${
               activeTab === "software"
-                ? " bg-gradient rounded-md border border-[#2D2938]"
+                ? " bg-gradient rounded-full border border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("software")}
@@ -278,7 +278,7 @@ backdropFilter: "blur(50px)"
             style={activeTab === "hardware" ? bg : {}}
             className={`cursor-pointer ${
               activeTab === "hardware"
-                ? "bg-gradient rounded-md border border-[#2D2938]"
+                ? "bg-gradient rounded-full border border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("hardware")}
@@ -289,7 +289,7 @@ backdropFilter: "blur(50px)"
             style={activeTab === "robotics" ? bg : {}}
             className={`cursor-pointer ${
               activeTab === "robotics"
-                ? "bg-gradient rounded-md border border-[#2D2938]"
+                ? "bg-gradient rounded-full border border-[#5D38C2]"
                 : "border-transparent"
             } py-2 px-2 sm:px-6 `}
             onClick={() => setActiveTab("robotics")}
@@ -535,6 +535,5 @@ export default Switcher;
 // };
 
 // export default Switcher;
-
 
 

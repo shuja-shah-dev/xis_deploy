@@ -45,13 +45,13 @@ const Features = () => {
     //pt-28 md:pt-36 
     <div className="bg-[#000] pb-32  sm:px-2 lg:px-16 relative ">
      
-      <Image
+      {/* <Image
                   className="w-full h-full object-fit inset-0 absolute  hidden xl:flex xl:mt-[-300px] "
                 src="/peakpx 1.svg"
                 width={100}
                 height={100}
                 alt=""
-              />
+              /> */}
       <div className="flex flex-col justify-center items-center mb-14">
         <HeroBlob
           sx={{
@@ -62,7 +62,7 @@ const Features = () => {
           }}
           key={"UniqueElementor1"}
         />
-        <h1 className="xl:mt-24 text-4xl font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h1 className="text-4xl font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Features
         </h1>
         <h3 className="font-poppins px-4 sm:px-0 text-gray-300 text-base sm:text-xl mt-4 text-center">

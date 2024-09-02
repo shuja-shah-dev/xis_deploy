@@ -11,8 +11,8 @@ function CalendlyWidget() {
         window.Calendly.initBadgeWidget({
           url: "https://calendly.com/syedmutti/call-with-muti",
             text: "Schedule Meeting",
-          // color: "rgba(93, 56, 194, 0.75)",
-          color: " linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
+          color: "rgba(93, 56, 194, 0.75)",
+          // color: " linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
           textColor: "#ffffff",
             branding: undefined,
     

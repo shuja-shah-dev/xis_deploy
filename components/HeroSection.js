@@ -28,10 +28,7 @@ const HeroSection = () => {
   };
 
   const gradientStyle = {
-    // background: "rgba(255, 255, 255, 0.1)",
-    background: "linear-gradient(203deg, rgba(39, 36, 55, 0.80) 54.33%, rgba(28, 25, 41, 0.80) 83.04%)"
-
-
+    background: "rgba(255, 255, 255, 0.1)",
   };
 
   const choices = ["Private", "End-to-End", "Accessible", "Simple"];
@@ -76,22 +73,18 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-full">
-      {/* <HeroBlob
+      <HeroBlob
         sx={{
           top: "",
           zIndex: "1",
         }}
         key={1}
-      /> */}
+      />
       {/* -10 */}
       <HeroBlob
         sx={{
-          right: "2px",
+          right: "10px",
           zIndex: "1",
-          width: "600px",
-          height: "700px",
-          top: "500px",
-         
         }}
         key={2}
         id="blob2"
@@ -119,11 +112,9 @@ const HeroSection = () => {
             <div className="text-center px-3 relative">
               <div
                 style={gradientStyle}
-                className=" gap-2 font-poppins hidden sm:flex justify-center items-center text-gray-300 text-lg py-1 w-[60%] m-auto rounded-md border-2 border-[#2D2938] "
+                className="font-poppins hidden sm:block text-gray-300 text-lg py-1 w-[60%] m-auto rounded-full border border-slate-700 bg"
               >
-                <div className="bg-[#C6BEFF] w-2 h-2 rounded-full "></div>
-                <p>Build, Deploy & Inspect Quality in Minutes</p>
-                <div className="bg-[#C6BEFF] w-2 h-2 rounded-full"></div>
+                Build, Deploy & Inspect Quality in Minutes
               </div>
               <h1 className="font-nexa text-5xl sm:text-6xl pb-2 font-bold my-8 text-shadow line-height-82 gradient-text">
                 Making Visual Quality Inspection
@@ -140,8 +131,8 @@ const HeroSection = () => {
 
             <div className="font-poppins flex justify-between w-[350px] m-auto px-6 mt-10">
               <button
-                // style={gradientStyleMain}
-                className="text-sm sm:text-xl bg-[#4835FF] opacity-95 py-2 px-[22px] rounded-md border border-[#5D38C2] backdrop-blur-2xl"
+                style={gradientStyleMain}
+                className="text-sm sm:text-xl  opacity-95 py-2 px-[22px] rounded-full border border-[#5D38C2] backdrop-blur-2xl"
                 onClick={initCalendlyPopup}
               >
                 Get a Demo

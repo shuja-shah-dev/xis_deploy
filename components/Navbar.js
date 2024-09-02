@@ -47,16 +47,19 @@ const Header = () => {
     <>
       <div
       // mt-[75px] sm:mt-14 
-        className={` font-poppins  bg-[#0A0A0C]`}
+        className={` ${
+          isHomePage
+            ? "min-[2300px]:w-[70%] min-[2300px]:mx-auto"
+            : " min-[2300px]:w-[70%] min-[2300px]:mx-auto"
+        } font-poppins flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative`}
       >
-        <div className="min-[2300px]:w-[70%] min-[2300px]:mx-auto flex px-10 md:px-0 justify-between md:justify-around items-center py-6 text-white z-50 relative">
         <div>
           <Link href="/">
             <Image src="/Asset.png" width={90} height={90} alt="logo" />
           </Link>
         </div>
 
-        <div className=" gap-4 text-sm hidden md:flex text-[#8F97AE]" > 
+        <div className=" gap-4 text-sm hidden md:flex">
           <Link href="/">Home</Link>
           <Link href="/Products">Product</Link>
           {/* <Link href="/Services">Services</Link> */}
@@ -77,16 +80,15 @@ const Header = () => {
 
           <button
             onClick={handleClick}
-            className="py-2 px-4 rounded-3xl mt-2 md:hidden lg:flex"
+            className="py-2 px-4 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border md:hidden lg:flex"
           >
-              <Image src="/handshake.svg" width={23} height={15} alt="" className="mt-0.5 mr-1.5 hidden lg:flex" />
             Request A Partnership
           </button>
 
           <Link href="/contact">
             <button
-              // style={gradientStyleMain}
-              className="py-2 px-8 rounded-md mt-2 backdrop-blur-2xl border-[#5D38C2] border " style={{background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)"}}
+              style={gradientStyleMain}
+              className="py-2 px-4 rounded-3xl backdrop-blur-2xl border-[#5D38C2] border"
             >
               Contact
             </button>
@@ -100,7 +102,6 @@ const Header = () => {
           className="block md:hidden cursor-pointer"
         >
           <IoMenu size={40} />
-        </div>
         </div>
       </div>
 

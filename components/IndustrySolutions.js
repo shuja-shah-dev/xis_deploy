@@ -41,13 +41,13 @@ const IndustrySolutions = () => {
 
   return (
     <div className="pb-24 sm:pb-36 px-2 sm:px-4 lg:px-16 relative">
-        <Image
+        {/* <Image
         className="w-full h-full object-cover absolute inset-0"
         src="/peakpx (1) 1.svg"
         width={100}
         height={100}
         alt=""
-      />
+      /> */}
       <div className="flex flex-col justify-center items-center mb-14">
         <h1 className="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">
           Industries

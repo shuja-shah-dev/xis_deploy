@@ -28,7 +28,7 @@ const VideoSection = () => {
   ];
 
   return (
-    <div className="sm:px-2 lg:px-16 relative pt-28 pb-36 ">
+    <div className="sm:px-2 lg:px-16 relative pt-28 pb-28 ">
            <HeroBlob
         sx={{
           background: "rgba(62, 95, 170, 0.25)",
