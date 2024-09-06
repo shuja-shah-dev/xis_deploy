@@ -55,7 +55,7 @@ const HowItWorks = () => {
               </div>
 
               <div className="flex justify-end relative pb-12 ">
-                <div className="inline-block w-[300px] pt-28 mt-[-50px] sm:pt-12 text-right">
+                <div className="inline-block w-[300px] pt-28 mt-[-160px] sm:mt-[-50px] sm:pt-12 text-right">
                   <h6 className="block mb-3 text-xl font-bold">Train AI</h6>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
                     Train the AI based on the dataset you Provided. Our web app
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div className="flex relative pb-12">
-                <div className="inline-block rounded text-end justify-end items-center w-full py-20 mt-[-50px] ">
+                <div className="inline-block rounded text-end justify-end items-center w-full py-20 mt-[-100px] sm:mt-[-50px]">
                   <p className="sm:leading-7 font-bold text-center text-xl md:text-3xl inline-block">
                     Step 3
                   </p>
@@ -83,7 +83,7 @@ const HowItWorks = () => {
             </div>
 
             <div className="w-2/6 md:py-6 pl-8 md:pl-0">
-              <div className="flex relative pb-10 sm:pb-16 text-left w-[100px] sm:w-[300px] mt-[20px]">
+              <div className="flex relative pb-10 sm:pb-16 text-left w-[100px] sm:w-[300px] mt-[20px] sm:mt-0">
                 <div className="">
                   <h3 className="block mb-3 text-xl font-bold">
                     Capture & Label Images
@@ -96,7 +96,7 @@ const HowItWorks = () => {
               </div>
 
               <div className="flex relative pb-12">
-                <div className="inline-block rounded  text-start justify-start items-center w-full py-20 ">
+                <div className="inline-block rounded  text-start justify-start items-center w-full py-20 mt-[-50px]">
                   <p className="sm:leading-7 font-bold text-center text-xl md:text-3xl inline-block ">
                     Step 2
                   </p>
@@ -104,7 +104,7 @@ const HowItWorks = () => {
               </div>
 
               <div className="flex relative pb-12">
-                <div className="inline-block w-[300px] text-left pt-28 sm:py-10 mt-[-60px]">
+                <div className="inline-block w-[300px] text-left pt-28 sm:py-10 mt-[-110px] sm:mt-[-60px]">
                   <h4 className="block mb-3 text-xl  font-bold">Test</h4>
                   <p className="sm:leading-7 text-sm md:text-base text-gray-300">
                     Once the Labeling in process is completed you can export the

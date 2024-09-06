@@ -45,13 +45,13 @@ const CareerDetailHeroSection = ({ job }) => {
   if (error)
     return (
       <div className="flex justify-center items-center h-[800px]">
-        <h2 className="text-3xl">Error: {error}</h2>
+        <h2 className="text-xl sm:text-3xl">Error: {error}</h2>
       </div>
     );
   if (!job)
     return (
       <div className="flex justify-center items-center h-[800px]">
-        <h2 className="text-3xl">Job Not Found</h2>
+        <h2 className="text-xl sm:text-3xl">Job Not Found</h2>
       </div>
     );
 
@@ -167,10 +167,10 @@ const CareerDetailHeroSection = ({ job }) => {
         />
 
         <div className="flex flex-col justify-center items-center ">
-          <h1 className="text-4xl md:text-7xl font-bold mb-4 font-inter">
+          <h1 className="text-4xl text-center md:text-7xl font-bold mb-4 font-inter">
             CAREER DETAILS
           </h1>
-          <div className="flex md:text-xl gap-2 sm:gap-5">
+          <div className="flex text-sm md:text-xl gap-2 sm:gap-5">
             <p>H</p>
             <p>O</p>
             <p>M</p>
@@ -195,11 +195,20 @@ const CareerDetailHeroSection = ({ job }) => {
 
       <div className="flex lg:flex-row flex-col gap-10 mt-24 mb-10">
         <div className="flex flex-col w-full lg:w-2/3">
-          <h2 className="font-bold text-3xl md:text-4xl w-full lg:w-2/5 mb-8">
+          <h2 className="font-bold text-2xl md:text-4xl w-full lg:w-2/5 mb-8">
             Begin Your Career With Us
           </h2>
           <div className="w-full">
-            <div className="relative w-full h-[600px]">
+            <div className="relative w-full h-[600px] hidden sm:block">
+              <Image
+                className=""
+                src={"/job.svg"}
+                layout="fill"
+                objectFit="cover"
+                alt="job"
+              />
+            </div>
+            <div className="relative w-full h-[300px] sm:hidden">
               <Image
                 className=""
                 src={"/job.svg"}
@@ -251,19 +260,19 @@ const CareerDetailHeroSection = ({ job }) => {
               {job.attributes.deadline}{" "}
             </p>
 
-            <div className="font-bold text-lg text-center">
+            <div className="font-bold text-base sm:text-lg sm:text-center">
               DO YOU HAVE ANY DOUBTS?
             </div>
 
             <Link href="/contact">
-              <button className="w-full h-[40px] cursor-pointer text-center text-lg bg-gradient-to-r from-[#393E83] to-[#301667]">
+              <button className="w-full h-[40px] cursor-pointer text-center text-base sm:text-lg bg-gradient-to-r from-[#393E83] to-[#301667]">
                 Contact
               </button>
             </Link>
           </div>
 
           <div className="bg-[#121212] p-8 border border-[#4634FC] flex flex-col gap-4 text-sm mt-14">
-            <div className="font-bold text-lg text-left">
+            <div className="font-bold text-base sm:text-lg text-left">
               OUR OPENING POSITIONS
             </div>
             <div className="flex flex-col">
@@ -282,15 +291,15 @@ const CareerDetailHeroSection = ({ job }) => {
       </div>
 
       <div className="mb-20 w-full lg:w-2/3 lg:pr-6">
-        <h1 className="text-3xl font-bold mb-4 ">
+        <h1 className="text-xl sm:text-3xl font-bold mb-4 ">
           {job.attributes.title.toUpperCase()}
         </h1>
         <p className="mb-4 text-base break-words	">{job.attributes.desc}</p>
-        <h3 className="mb-4 text-2xl">{"Responsibilities:".toUpperCase()}</h3>
+        <h3 className="mb-4 text-xl">{"Responsibilities:".toUpperCase()}</h3>
         <p className="mb-4 text-base break-words	">
           {job.attributes.responsibilities}
         </p>
-        <h3 className="mb-4 text-2xl">{"Benefits:".toUpperCase()}</h3>
+        <h3 className="mb-4 text-xl">{"Benefits:".toUpperCase()}</h3>
         <div className="mb-4 flex flex-col gap-4 text-base break-words">
           {bulletPoints}
         </div>
@@ -300,7 +309,7 @@ const CareerDetailHeroSection = ({ job }) => {
       <Link
         href={`/ApplyForm?jobTitle=${encodeURIComponent(job.attributes.title)}`}
       >
-        <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20">
+        <div className="w-[150px] h-[55px] cursor-pointer p-4 text-center text-base sm:text-xl bg-gradient-to-r from-[#393E83] to-[#301667] mb-20">
           APPLY NOW
         </div>
       </Link>

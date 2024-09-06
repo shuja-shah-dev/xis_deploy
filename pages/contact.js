@@ -184,7 +184,7 @@ const page = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
-      <div className="mt-20 relative font-poppins">
+      <div className="mt-20 relative font-poppins px-2 sm:px-4 lg:px-16">
         <HeroBlob
           sx={{
             background: "rgba(62, 95, 170, 0.25)",
@@ -219,7 +219,7 @@ const page = () => {
             width={1000}
           />
         </div> */}
-        <div className="flex flex-col justify-center items-center mb-14 w-1/2 sm:w-3/5 m-auto">
+        <div className="flex flex-col justify-center items-center mb-14  m-auto">
           {/* <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold text-center bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
             Get In Touch With Us
           </h1>
@@ -229,7 +229,7 @@ const page = () => {
           <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Let’s explore how xis.ai can work for you
           </h1>
-          <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+          <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4  w-[80%]  md:w-[700px] text-center text-justify sm:text-center">
             Tell us a little about yourself in the form below and we'll connect
             you with a xis.ai expert who can share more about the product and
             answer any questions you have. 
@@ -239,7 +239,7 @@ const page = () => {
         <div className="pb-40 pt-2 sm:pt-12 text-sm sm:text-base ">
           <form
             onSubmit={handleSubmit}
-            className="w-2/3 md:w-2/5 m-auto flex flex-col gap-4 "
+            className="w-[80%] md:w-[40%] m-auto flex flex-col gap-4 "
           >
             <div className=" relative">
               <Image

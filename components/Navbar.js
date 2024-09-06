@@ -129,7 +129,7 @@ const Header = () => {
               alignItems: "center",
             }}
           >
-            <Image src="/Asset.png" width={100} height={100} alt="" />
+            <Image src="/Asset.png" width={90} height={100} alt="" />
             <CloseOutlined
               onClick={toggleMobileMenu}
               sx={{ fill: "#fff", fontSize: "2rem" }}
@@ -144,7 +144,7 @@ const Header = () => {
               height: "50%",
               width: "100%",
               fontFamily: "Poppins, Roboto, sans-serif",
-              fontSize: "1.5rem",
+              fontSize: "1rem",
               fontWeight: "600",
               listStyle: "none",
               mt: "1rem",

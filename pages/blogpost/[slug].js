@@ -198,7 +198,7 @@ const Slug = ({ blog }) => {
           key={"NormalSizedBlob"}
         />
         <div className="container px-5 py-24 mx-auto flex flex-col">
-          <div className="lg:w-3/4 mx-auto">
+          <div className="w-full lg:w-3/4 mx-auto">
             <div className="rounded-lg sm:h-32 overflow-hidden">
               <h1
                 className={`${roboto.className} mb-4 text-3xl font-bold text-center`}
@@ -328,6 +328,7 @@ const Slug = ({ blog }) => {
                     <BlocksRenderer
                       content={blogContent}
                       blocks={{
+                        paragraph: ({ children }) => <p className="break-words">{children}</p>,
                         list: ListComponent,
                         heading: Heading,
                       }}

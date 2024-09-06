@@ -39,7 +39,7 @@ const Robotics = () => {
         >
           <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Automation</h1>
 
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins 2xl:text-lg">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins text-base 2xl:text-lg">
             xis.ai's expertise extends to providing comprehensive support in
             robotics and automation. By providing support for ROS/ROS2 and
             legacy systems, we optimize efficiency, accuracy, and productivity
@@ -109,7 +109,7 @@ const Hardware = () => {
         >
           <h1 className="font-inter text-3xl lg:ml-7 xl:ml-0">Edge AI</h1>
 
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins  2xl:text-lg">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins text-base 2xl:text-lg">
             Create your own AI visual inspection model and deploy it on edge
             devices without any hassle. xis.suite is a expandable platform that
             can be implemented on already installed equipments i-e cameras,
@@ -221,7 +221,7 @@ const Software = () => {
         >
           <h1 className="lg:ml-7 xl:ml-0 font-inter text-3xl ">Software</h1>
 
-          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins 2xl:text-lg">
+          <p className="text-left leading-7 lg:ml-7 xl:ml-0 mt-4 font-poppins text-base 2xl:text-lg">
             xis.ai provides no code, an end-to-end platform for AI visual
             quality inspection. A robust Vision AI platform enabling companies
             to navigate the entire AI life cycle effortlessly. With our

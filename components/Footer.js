@@ -39,19 +39,19 @@ const Footer = () => {
               <Image src="/Asset.png" width={150} height={100} alt="logo" />
             </Link>
 
-            <p className="mt-4 font-poppins text-left sm:text-center">
+            <p className="mt-4 font-poppins text-left sm:text-center text-sm">
               Precision Beyond Perception
             </p>
           </div>
 
           <div className="text-base flex font-poppins flex-col text-left md:text-left ml-16  sm:m-auto md:m-0 w-1/2 md:w-auto md:flex-row gap-12 md:px-40 lg:px-0">
-            <div className="flex flex-col gap-5 ">
-              <div className="font-bold font-inter text-xl">
+            <div className="flex flex-col gap-5 text-sm sm:text-base ">
+              <div className="font-bold font-inter text-lg sm:text-xl">
                 <Link href="/about" aria-label="About">
                   About Us
                 </Link>
-              </div>
-              <Link href="/impressum" aria-label="Impressum">
+              </div >
+              <Link href="/impressum" aria-label="Impressum" >
                 Imprint
               </Link>
               <Link href="/agb" aria-label="Terms and Conditions / AGB">
@@ -62,8 +62,8 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-5">
-              <div className="font-bold text-xl font-inter">
+            <div className="flex flex-col gap-5 text-sm sm:text-base">
+              <div className="font-bold text-lg sm:text-xl font-inter">
                 <Link href="/certificates" aria-label="Certificates">
                   Certificates
                 </Link>
@@ -83,8 +83,8 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-5 font-inter">
-              <div className="font-bold text-xl ">
+            <div className="flex flex-col gap-5 font-inter text-sm sm:text-base">
+              <div className="font-bold text-lg sm:text-xl">
                 <Link href="/contact" aria-label="Contact">
                   Contact Us
                 </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
         </div>
 
         <div className="pb-32 md:pb-0 flex flex-col-reverse md:flex-col 2xl:flex-row items-center  2xl:justify-center text-white relative z-10 min-[2000px]:justify-around">
-          <div className="text-center sm:text-left mt-6 md:mt-0 px-1 sm:px-0">
+          <div className="text-center sm:text-left mt-6 md:mt-0 px-1 sm:px-0 text-xs sm:text-sm">
             © 2024 XRAY-LAB Industrial Services GmbH | All Rights Reserved.
           </div>
           <div className="flex gap-4 2xl:ml-[360px] md:pt-6 2xl:pt-0">

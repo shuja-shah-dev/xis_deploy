@@ -126,11 +126,11 @@ const page = ({ blogsData }) => {
           key={"NormalSizedBlob"}
         />
 
-        <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
+        <div className="flex flex-col justify-center items-center mb-14  m-auto px-2 sm:px-4 lg:px-16">
           <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
             Welcome to the xis.ai Blogs
           </h1>
-          <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+          <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-[80%] md:w-[700px] text-center text-justify sm:text-center">
             Our central destination for the latest updates, stories and industry
             news about visual deep learning and computer vision.
           </h3>
@@ -154,16 +154,16 @@ const page = ({ blogsData }) => {
           <div className="px-6 sm:px-16 py-20 mt-4 mb-32 sm:my-40 border-2 border-slate-800 rounded-2xl ">
             <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 ">
               <IoSearch
-                color="#8A8A8E"
+                color="#fff"
                 size={30}
                 className="absolute ml-4 mt-1.5"
               />
               <input
                 onChange={handleChange}
                 value={searchText}
-                placeholder="Search By Keywords, industry or application*"
+                placeholder="Search By Keywords, industry or application"
                 type="text"
-                className="font-poppins rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
+                className="font-poppins rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 text-xs px-4 sm:px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
               />
               <button
                 style={gradientStyle}
@@ -203,7 +203,7 @@ const page = ({ blogsData }) => {
 
                       <div className=" flex flex-col w-full md:w-2/5">
                         <div className="px-4mt-4">
-                          <h1 className="font-inter text-white text-2xl sm:text-4xl">
+                          <h1 className="font-inter text-white text-xl sm:text-4xl">
                             {item.attributes.blog_title.slice(0, 63)}
                           </h1>
                           <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
@@ -212,8 +212,11 @@ const page = ({ blogsData }) => {
                               lines={3}
                               dangerouslySetInnerHTML={{
                                 __html: DOMPurify.sanitize(
-                                  convertRichTextToHTML(
-                                    item.attributes.blog_content
+                                  truncateText(
+                                    convertRichTextToHTML(
+                                      item.attributes.blog_content
+                                    ),
+                                    140
                                   )
                                 ),
                               }}

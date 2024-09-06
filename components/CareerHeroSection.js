@@ -3,7 +3,7 @@ import { HeroBlob } from "./HeroSection";
 
 const CareerHeroSection = () => {
   return (
-    <div className="font-poppins flex justify-center items-center flex-col my-14 md:my-20 relative  min-[2300px]:w-[70%] min-[2300px]:mx-auto">
+    <div className="font-poppins flex justify-center items-center flex-col mb-14 md:mb-20 relative  min-[2300px]:w-[70%] min-[2300px]:mx-auto">
 {/*      
             <HeroBlob
             sx={{
@@ -18,8 +18,8 @@ const CareerHeroSection = () => {
     
       
       <div className="flex flex-col justify-center items-center ">
-        <h1 className="text-4xl md:text-7xl font-bold mb-4">CAREERS</h1>
-        <div className="flex md:text-xl gap-5">
+        <h1 className="text-4xl md:text-7xl font-bold mb-4 text-center">CAREERS</h1>
+        <div className="flex text-sm md:text-xl gap-5">
           <p>H</p>
           <p>O</p>
           <p>M</p>
@@ -34,11 +34,11 @@ const CareerHeroSection = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between mt-24">
-        <h2 className="font-bold text-2xl md:text-4xl w-full md:w-1/4 mb-6 md:mb-0">Begin Your Career With Us</h2>
+        <h2 className="font-bold text-xl md:text-4xl w-full md:w-1/4 mb-6 md:mb-0">Begin Your Career With Us</h2>
 
         <div className="flex gap-3 w-full md:w-1/2 items-center">
        
-          <div className="w-1 h-16 bg-[#5D38C2]"></div>
+          <div className="w-1 h-20 sm:h-16 bg-[#5D38C2]"></div>
           <p className="text-sm">
             Explore our diverse range of rewarding opportunities where you can
             apply your talents to meaningful projects. Join us in shaping the

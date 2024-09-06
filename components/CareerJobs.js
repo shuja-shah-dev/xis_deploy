@@ -54,8 +54,8 @@ const CareerJobs = ({jobsData}) => {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="w-full py-5">
-                  <h4 className="text-lg md:text-xl font-bold mb-4">{item.attributes.title}</h4>
-                  <p>
+                  <h4 className="text-base md:text-xl font-bold mb-4">{item.attributes.title}</h4>
+                  <p className="text-xs sm:text-sm">
                     {item.attributes.nature} - {item.attributes.country} - {item.attributes.duration}
                   </p>
                 </div>
@@ -73,7 +73,7 @@ const CareerJobs = ({jobsData}) => {
         ))
       ) : (
         <div className="flex justify-center items-center h-[250px]">
-          <h2 className="text-2xl ">No Current Openings</h2>
+          <h2 className="text-xl sm:text-2xl ">No Current Openings</h2>
         </div>
       )}
     </div>

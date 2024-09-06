@@ -38,9 +38,9 @@ const Product = () => {
         <ProductHeader />
       </div>
 
-        <div className="min-[2300px]:w-[65%] min-[2300px]:m-auto py-14">
-          <LogoBar />
-        </div>
+      <div className="min-[2300px]:w-[65%] min-[2300px]:m-auto py-14">
+        <LogoBar />
+      </div>
 
       <div
         style={gradient}
@@ -76,13 +76,13 @@ const Product = () => {
             Software
           </h1>
 
-          <div className="w-[80%] mx-auto lg:mt-[-60px]">
+          <div className="sm:w-[80%] mx-auto lg:mt-[-60px]">
             <Image
               src="/d.svg"
               width={1370}
               height={970}
               alt="edgeAI"
-              className=" m-auto mb-28"
+              className=" m-auto mb-14"
             />
           </div>
 
@@ -95,9 +95,16 @@ const Product = () => {
                 width={203}
                 height={50}
                 alt="edgeAI"
-                className=""
+                className="hidden sm:block"
               />
-              <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
+              <Image
+                src="/xis dev.svg"
+                width={150}
+                height={50}
+                alt="edgeAI"
+                className=" sm:hidden"
+              />
+              <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-base sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
                 xis dev is a no-code platform that encompasses the complete
                 pipeline of computer vision. Specially designed for
                 non-technical or non-developers to develop computer vision
@@ -110,19 +117,19 @@ const Product = () => {
             </div>
           </div>
 
-           <div className="w-[95%] m-auto lg:w-[65%] my-20">
-          <video
-            autoPlay
-            playsInline
-            muted
-            loop
-            style={{
-              borderRadius: "10px",
-            }}
-          >
-            <source src="/0828.mp4" type="video/mp4" />
-          </video>
-        </div>
+          <div className="w-[95%] m-auto lg:w-[65%] my-20">
+            <video
+              autoPlay
+              playsInline
+              muted
+              loop
+              style={{
+                borderRadius: "10px",
+              }}
+            >
+              <source src="/0828.mp4" type="video/mp4" />
+            </video>
+          </div>
 
           {/* <div className="flex flex-col justify-around items-center">
             <div className="mb-20 lg:hidden">
@@ -193,7 +200,7 @@ const Product = () => {
               </div>
             </div>
           </div> */}
-          <div className="flex flex-col mt-14 mb-[150px] xl:mt-0">
+          <div className="flex flex-col mt-14  xl:mt-0">
             <ProductFeatures data={xisDevData} />
           </div>
           {/* <div className="h-[2px] w-[80%] bg-gray-300 m-auto mt-6"></div> */}
@@ -207,7 +214,14 @@ const Product = () => {
                     width={203}
                     height={50}
                     alt="edgeAI"
-                    className=""
+                    className="hidden sm:block"
+                  />
+                  <Image
+                    src="/xis rt.svg"
+                    width={150}
+                    height={50}
+                    alt="edgeAI"
+                    className="sm:hidden"
                   />
                   <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
                     Xis Runtime stands as a versatile platform designed
