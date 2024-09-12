@@ -145,7 +145,7 @@ const Cookie = () => {
                 <p className="font-medium mb-4 text-xl sm:text-2xl">
                   1. Introduction
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Our website, https://xis.ai.com (hereinafter: "The Website")
                   uses cookies and similar technologies (for convenience, all of
                   these are referred to as "cookies"). Cookies are also placed
@@ -155,7 +155,7 @@ const Cookie = () => {
                 <p className="font-medium mb-4  text-xl sm:text-2xl">
                   2. What are cookies?
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   A cookie is a simple small file that can be sent together with
                   the pages of an Internet address and stored by the web browser
                   on the PC or other device. The information stored therein may
@@ -165,7 +165,7 @@ const Cookie = () => {
                 <p className="font-medium mb-4 text-xl sm:text-2xl">
                   3. What are scripts?
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   A script is a piece of program code used to enable our website
                   functionality and interactivity. This code runs on our servers
                   or on your device.
@@ -173,7 +173,7 @@ const Cookie = () => {
                 <p className="font-medium mb-4 text-xl sm:text-2xl">
                   4. What is a web beacon?
                 </p>
-                <p className="leading-relaxe mb-4">
+                <p className="leading-relaxe text-base sm:text-lg mb-4">
                   A web beacon (also called a pixel tag) is a small, invisible
                   fragment of text or image on a website that is used to monitor
                   traffic on the website. To make this possible, various data
@@ -185,7 +185,7 @@ const Cookie = () => {
                 <p className="leading-relaxed text-lg mb-4">
                   5.1 Technical or functional cookies
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Some cookies ensure that parts of our website function
                   properly and your user preferences are remembered. By placing
                   functional cookies we make it easier for you to visit our
@@ -197,13 +197,13 @@ const Cookie = () => {
                 <p className="leading-relaxed text-lg mb-4">
                   5.2 Analytical cookies
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   We use analytical cookies to optimize the website experience
                   for our users. These analytical cookies provide us with
                   insights into the use of our website. We ask for your
                   permission to set analytical cookies.
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Some cookies ensure that parts of our website function
                   properly and your user preferences are remembered. By placing
                   functional cookies we make it easier for you to visit our
@@ -215,7 +215,7 @@ const Cookie = () => {
                 <p className="leading-relaxed text-lg mb-4">
                   5.3 Advertising cookies
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   We use advertising cookies on this website to gain insight
                   into campaign results. This happens based on a profile we
                   create based on your behavior in https://xis.ai.com . With
@@ -226,7 +226,7 @@ const Cookie = () => {
                 <p className="leading-relaxed text-lg mb-4">
                   5.4 Marketing/Tracking Cookies
                 </p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Marketing/tracking cookies are cookies or other form of local
                   storage used to create user profiles, display advertising or
                   track the user within this website or across websites for
@@ -234,7 +234,7 @@ const Cookie = () => {
                   tracking cookies, we need your consent to place them.
                 </p>
                 <p className="leading-relaxed text-lg mb-4">5.5 Social media</p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   On our website we have integrated content from Facebook,
                   Twitter, LinkedIn, Instagram and Pinterest to promote websites
                   (e.g. "Like", "Pin") or share (e.g. "Tweet") in social
@@ -253,7 +253,8 @@ const Cookie = () => {
                 <p className="font-medium mb-4 text-xl sm:text-2xl">
                   6. Cookies placed
                 </p>
-                <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900">
+                <div className="sm:text-base text-sm">
+                <div className="flex flex-col justify-between w-full px-6 py-4 mb-4  border dark:border-gray-700 rounded-3xl bg-gray-900 ">
                   <div className="flex items-center justify-between ">
                     <span className="font-bold dark:text-white">
                       {" "}
@@ -337,10 +338,11 @@ const Cookie = () => {
                                     </svg> */}
                   </div>
                 </div>
+                </div>
                 <p className="font-medium mb-4  text-xl sm:text-2xl">
                   7. Consent
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   When you visit our website for the first time, we will show
                   you a pop-up with an explanation about cookies. Once you click
                   on “Save settings Save properties”, you give us your consent
@@ -352,16 +354,16 @@ const Cookie = () => {
                 <p className="leading-relaxed text-lg mb-4">
                   7.1 Manage your consent settings
                 </p>
-                <p className="leading-relaxed mb-4">Functional Functional</p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">Functional Functional</p>
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   The technical storage or access is strictly necessary for the
                   legitimate purpose of enabling the use of a specific service
                   explicitly requested by the subscriber or user, or for the
                   sole purpose of carrying out the transmission of a
                   communication over an electronic communications network.
                 </p>
-                <p className="leading-relaxed mb-4">Statistics Statistics</p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">Statistics Statistics</p>
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   The technical storage or access that is used exclusively for
                   anonymous statistical purposes. Without a subpoena, voluntary
                   compliance on the part of your Internet Service Provider, or
@@ -369,8 +371,8 @@ const Cookie = () => {
                   retrieved for this purpose alone cannot usually be used to
                   identify you.
                 </p>
-                <p className="leading-relaxed mb-4">marketing</p>
-                <p className="leading-relaxed mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">Marketing</p>
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   The technical storage or access is required to create user
                   profiles to send advertising, or to track the user on a
                   website or across several websites for similar marketing
@@ -379,7 +381,7 @@ const Cookie = () => {
                 <p className="font-medium mb-4  text-xl sm:text-2xl">
                   8. Activation/deactivation and deletion of cookies
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   You can use your internet browser to delete cookies
                   automatically or manually. You can also specify whether
                   special cookies should not be placed. Another option is to set
@@ -393,11 +395,11 @@ const Cookie = () => {
                 <p className="font-medium mb-4  text-xl sm:text-2xl">
                   9. Your rights regarding personal data
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   You have the following rights in relation to your personal
                   data
                 </p>
-                <nav className="mb-10">
+                <nav className="mb-10 text-base ">
                   <li className="pb-1">
                     You have the right to know why your personal data is needed,
                     what happens to it and how long it is kept.
@@ -427,7 +429,7 @@ const Cookie = () => {
                     the processing.
                   </li>
                 </nav>
-                <p className="leading-relaxed  mb-4">
+                <p className="leading-relaxed text-base  mb-4">
                   To exercise these rights please contact us. Please refer to
                   the contact details at the end of this cookie statement. If
                   you have a complaint about how we handle your data, we would
@@ -437,12 +439,12 @@ const Cookie = () => {
                 <p className="font-medium mb-4 text-xl sm:text-2xl">
                   10. Contact details
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   If you have any questions and/or comments about our Cookie
                   Policy and this statement, please contact us using the
                   following contact details:
                 </p>
-                <p className="leading-relaxed text-lg w-1/2 mb-4">
+                <p className="leading-relaxed text-base sm:text-lg w-full sm:w-1/2 mb-4">
                   XRAY LAB Industrial Services GmbH & Co. KG
                   Theodor-Schweitzer-Str. 1+3 75447 Sternenfels Germany Germany
                   Website: https://xis.ai.com Email: contact@xray-lab.com

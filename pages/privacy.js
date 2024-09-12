@@ -136,7 +136,7 @@ const privacy = () => {
                     Privacy Policy
                   </h1>
                 </div>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   This Privacy Policy describes how your personal information is
                   collected, used, and shared when you visit or make a purchase
                   from xis.ai (the “Site”).
@@ -144,7 +144,7 @@ const privacy = () => {
                 <p className="mb-6 text-lg leading-7  text-gray-300">
                   PERSONAL INFORMATION WE COLLECT
                 </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   When you visit the Site, we automatically collect certain
                   information about your device, including information about
                   your web browser, IP address, time zone, and some of the
@@ -161,14 +161,14 @@ const privacy = () => {
                   technologies:
                 </p>
 
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   - “Cookies” are data files that are placed on your device or
                   computer and often include an anonymous unique identifier. For
                   more information about cookies, and how to disable cookies,
                   visit http://www.allaboutcookies.org.
                 </p>
 
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   - “Log files” track actions occurring on the Site, and collect
                   data including your IP address, browser type, Internet service
                   provider, referring/exit pages, and date/time stamps.
@@ -178,7 +178,7 @@ const privacy = () => {
                   JOB APPLICATIONS
                 </p>
 
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   When you apply to any jobs in this job you agree to
                   voluntraily give us your personal information. We Collect that
                   information and we process it. We DO NOT SHARE YOUR PERSONAL
@@ -189,7 +189,7 @@ const privacy = () => {
                   Contacting Us
                 </p>
 
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   When you contact us, we may collect your email address to
                   respond to your inquiry. This information is strictly used for
                   communication purposes and is not shared with third parties.
@@ -198,7 +198,7 @@ const privacy = () => {
                 <p className="mb-6 text-lg leading-7  text-gray-300">
                   Data Sharing
                 </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   We uphold a strict policy of not sharing any collected user
                   data with third-party apps or services. Your privacy is
                   paramount, and we implement measures to ensure that your
@@ -209,7 +209,7 @@ const privacy = () => {
                 <p className="mb-6 text-lg leading-7  text-gray-300">
                   GDPR Compliance
                 </p>
-                <p className="mb-6 text-lg leading-7  text-gray-300">
+                <p className="mb-6 text-base sm:text-lg leading-7  text-gray-300">
                   Our privacy practices align with the standards set forth by
                   the General Data Protection Regulation (GDPR). We are
                   dedicated to ensuring the security and confidentiality of your

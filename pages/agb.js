@@ -125,11 +125,9 @@ const Agb = () => {
                   className="h-40 rounded  object-center mb-6"
                   src="/Asset.png"
                   alt="XisAi"
-                  width={600}
-                  height={300}
-                  style={{
-                    width: "auto",
-                  }}
+                  width={400}
+                  height={200}
+                  
                 />
               </div>
               <div className="w-full">
@@ -139,13 +137,13 @@ const Agb = () => {
                 <h2 className="sm:text-3xl text-2xl font-medium title-font mb-4">
                   As of: October 1, 2017
                 </h2>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §1 Scope
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  1 Scope
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Xray-Lab Industrial Services Industrial Services GmbH Co. KG,
                   abbreviated as XIS, carries out the work assigned to it as a
-                  contractor within the meaning of § 631 BGB exclusively on the
+                  contractor within the meaning of  631 BGB exclusively on the
                   basis of these general terms and conditions of business and
                   payment. By placing the order with Xray-Lab Industrial
                   Services, the customer expressly accepts these terms and
@@ -162,20 +160,20 @@ const Agb = () => {
                   partners are obliged to proceed in accordance with what is
                   actually intended.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §2 Conclusion of the contract, remuneration
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  2 Conclusion of the contract, remuneration
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Offers from Xray-Lab Industrial Services are subject to change
                   and non-binding. After the order has been placed, the contract
                   for work is only concluded through express confirmation from
                   Xray-Lab Industrial Services or through execution of the
                   assigned work.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §3 Payment conditions
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  3 Payment conditions
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Xray-Lab Industrial Services charges the customer the
                   remuneration in accordance with the contractual agreement.
                   Waiting times for material to be made available or other
@@ -196,19 +194,19 @@ const Agb = () => {
                   been made when Xray-Lab Industrial Services can dispose of the
                   amount.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §4 Interim invoices
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  4 Interim invoices
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Xray-Lab Industrial Services is entitled to create interim
                   invoices for completed parts and agreed services. Xray-Lab
                   Industrial Services is also entitled to create interim
                   invoices for fixed periods, approximately one week each.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §5 Delay in delivery, liability, warranty
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  5 Delay in delivery, liability, warranty
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Xray-Lab Industrial Services undertakes to carry out the work
                   assigned to it on time in accordance with the contractual
                   agreement. Delays in delivery or service due to force majeure
@@ -239,10 +237,10 @@ const Agb = () => {
                   Services's premises in the event of fire/water and theft
                   damage.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §6 Occupational safety, occupational safety
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  6 Occupational safety, occupational safety
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   The work of the Xray-Lab Industrial Services employee at the
                   client is subject to the public law regulations of
                   occupational safety law applicable to the client's business;
@@ -263,10 +261,10 @@ const Agb = () => {
                   starting this activity. In the event of an accident at work,
                   the client must notify the contractor immediately.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
-                  §7 German law; Place of jurisdiction
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
+                  7 German law; Place of jurisdiction
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   The law of the Federal Republic of Germany applies to these
                   terms and conditions and the entire legal relationship between
                   Xray-Lab Industrial Services and the customer. If the customer
@@ -280,7 +278,7 @@ const Agb = () => {
                   become invalid, this will not affect the effectiveness of all
                   other provisions or agreements.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl text-[#57C8E7]">
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl text-[#57C8E7]">
                   <a href="/AGB_en.pdf" download="AGB">
                     Download General Terms and Conditions of Xray-Lab Industrial
                     Services Industrial Services GmbH & Co. KG as PDF

@@ -144,7 +144,7 @@ const Impressum = () => {
                   </h1>
                   <div className="h-1 w-20 bg-[#57C8E7] rounded"></div>
                 </div>
-                <p className="lg:w-1/2 w-full leading-relaxed">
+                <p className="lg:w-1/2 w-full text-sm leading-relaxed">
                   <strong className="text-[#57C8E7]">Represented by</strong> Mr.
                   Uwe Hartnagel (managing director authorized to represent) Mr.
                   Muti Rehman (managing director authorized to represent){" "}
@@ -182,14 +182,14 @@ const Impressum = () => {
                   depositphotos:MasterMariner, from shutterstock: alterfalter,
                   lightwavemedia from pixabay
                 </p>
-                <h2 className="sm:text-3xl text-2xl font-medium title-font mb-4">
+                <h2 className="sm:text-3xl text-2xl font-medium title-font mb-2">
                   Disclaimer
                 </h2>
-                <div className="h-1 w-20 bg-[#57C8E7] rounded"></div>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
+                <div className="h-1 w-20 bg-[#57C8E7] rounded mb-4"></div>
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
                   Liability for content
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   As a service provider, we are responsible for our own content
                   on these pages in accordance with general laws in accordance
                   with Section 7 Paragraph 1 TMG. However, according to Sections
@@ -203,10 +203,10 @@ const Impressum = () => {
                   any corresponding legal violations, we will immediately remove
                   this content.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
                   Liability for links
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   Our offer contains links to external third-party websites over
                   whose content we have no influence. We therefore cannot assume
                   any liability for this external content. The respective
@@ -219,10 +219,10 @@ const Impressum = () => {
                   If we become aware of any legal violations, we will
                   immediately remove such links.
                 </p>
-                <p className="font-medium mb-4 text-center text-xl sm:text-2xl">
+                <p className="font-medium mb-4 text-left sm:text-center text-xl sm:text-2xl">
                   Copyright
                 </p>
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-base sm:text-lg mb-4">
                   The content and works on these pages created by the site
                   operators are subject to German copyright law. Reproduction,
                   processing, distribution and any kind of exploitation outside
