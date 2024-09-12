@@ -104,7 +104,7 @@ const Product = () => {
                 alt="edgeAI"
                 className=" sm:hidden"
               />
-              <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-base sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
+              <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-base sm:text-[20px] md:text-[24px]  md:leading-10">
                 xis dev is a no-code platform that encompasses the complete
                 pipeline of computer vision. Specially designed for
                 non-technical or non-developers to develop computer vision
@@ -223,7 +223,7 @@ const Product = () => {
                     alt="edgeAI"
                     className="sm:hidden"
                   />
-                  <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px] leading-8 md:leading-10">
+                  <p className="mb-12 mt-6 text-justify  m-auto opacity-75 text-[16px] sm:text-[20px] md:text-[24px]  md:leading-10">
                     Xis Runtime stands as a versatile platform designed
                     specifically for the deployment of computer vision models.
                     Engineered with a lightweight architecture, it offers the

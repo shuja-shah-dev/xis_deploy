@@ -151,7 +151,7 @@ const Header = () => {
               p: "1.44rem 0",
             }}
           >
-            <ul className="flex flex-col items-start justify-start w-full font-poppins">
+            <ul className="flex flex-col items-start justify-start w-full font-poppins gap-1">
               <li className="relative items-start justify-start bg-clip-text  text-transparent bg-gradient-to-r from-white to-gray-400">
                 <Link href="/" aria-label="Home">
                   Home

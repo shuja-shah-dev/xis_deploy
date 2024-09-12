@@ -54,7 +54,7 @@ const Hardware = () => {
         <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-4 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
           Edge AI
         </h3>
-        <p className="font-poppins text-justify text-base sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
+        <p className="font-poppins text-justify text-base sm:text-[20px] md:text-[24px]  md:leading-10 opacity-75">
           Edge AI refers to the deployment of artificial intelligence algorithms
           directly on edge devices, such as cameras or sensors, rather than
           relying on a centralized server or cloud-based processing. By
@@ -171,7 +171,7 @@ const Hardware = () => {
         <h3 className="font-inter text-3xl sm:text-4xl md:text-[40px] mb-4 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-semibold">
           Visual Sensors
         </h3>
-        <p className="font-poppins  text-justify  text-base sm:text-[20px] md:text-[24px] leading-8 md:leading-10 opacity-75">
+        <p className="font-poppins  text-justify  text-base sm:text-[20px] md:text-[24px]  md:leading-10 opacity-75">
           XIS Suite is a comprehensive software suite designed to support
           various visual sensors, including industrial cameras for high-speed
           solutions, microscopes for detecting minor and small defects, thermal

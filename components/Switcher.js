@@ -17,7 +17,7 @@ const Robotics = () => {
 
   
   return (
-    <div className="px-10 sm:px-16 xl:h-[800px] mb-20 xl:mb-0  relative ">
+    <div className="px-6 sm:px-16 xl:h-[800px] mb-20 xl:mb-0  relative ">
       <div className="flex  flex-col xl:flex-row justify-center gap-10 items-center">
         <div className="w-[90%] xl:w-[43.5%] m-auto xl:m-0 ">
           <video
@@ -74,7 +74,7 @@ const Hardware = () => {
   }
 
   return (
-    <div className="px-10 sm:px-16 xl:h-[800px] mb-20 xl:mb-0 relative ">
+    <div className="px-6 sm:px-16 xl:h-[800px] mb-20 xl:mb-0 relative ">
       <div className="flex flex-col xl:flex-row justify-center  gap-10">
         <div>
           <Image
@@ -145,7 +145,7 @@ const Software = () => {
   
 
   return (
-    <div className="px-10 sm:px-16 xl:h-[800px] mb-20 xl:mb-0 relative">
+    <div className="px-6 sm:px-16 xl:h-[800px] mb-20 xl:mb-0 relative">
       <div className="flex flex-col xl:flex-row  justify-center gap-10 ">
         <div className=" xl:hidden justify-center items-center">
           <Image

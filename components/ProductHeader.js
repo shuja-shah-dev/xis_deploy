@@ -28,7 +28,7 @@ const ProductHeader = () => {
             <h2 className="font-inter mb-4  text-4xl xl:text-5xl pb-2 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
               Unlock the Power of AI Vision in Manufacturing
             </h2>
-            <p className="font-poppins text-left text-justify text-base sm:text-[20px] xl:text-[24px] leading-6 mb-4 md:mb-0 md:leading-8 lg:leading-10 opacity-75 w-full ">
+            <p className="font-poppins text-left text-justify text-base sm:text-[20px] xl:text-[24px]  mb-4 md:mb-0 md:leading-8 lg:leading-10 opacity-75 w-full ">
               xis.ai's cutting-edge Computer Vision AI platform revolutionizes
               the way you develop and deploy AI solutions. From ideation to
               production, our seamless platform streamlines every step of the AI

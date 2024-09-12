@@ -6,7 +6,7 @@ const ProductFeatures = ({ data, name}) => {
       <div className=" text-3xl md:text-[40px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-inter mb-4">
         Features
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap justify-between font-poppins opacity-75 test-[21px] leading-10">
+      <div className="flex flex-col md:flex-row flex-wrap justify-between font-poppins opacity-75 test-[21px] ">
         {data.map((text, index) => (
           <div
             key={index}
