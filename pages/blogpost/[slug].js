@@ -201,7 +201,7 @@ const Slug = ({ blog }) => {
           <div className="w-full lg:w-3/4 mx-auto">
             <div className="rounded-lg sm:h-32 overflow-hidden">
               <h1
-                className={`${roboto.className} mb-4 text-3xl font-bold text-center`}
+                className={`${roboto.className} mb-4 text-3xl font-bold text-left sm:text-center`}
               >
                 {blog.attributes.blog_title}
               </h1>
