@@ -121,10 +121,10 @@ const Abouts = () => {
           key={"NormalSizedBlob"}
         />
         <div className="flex flex-col justify-center items-center mb-14  m-auto">
-          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text w-[80%] text-left sm:text-center mx-auto sm:w-full text-transparent bg-gradient-to-r from-white to-gray-400">
             Who we are?
           </h1>
-          <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-[80%] md:w-[800px] text-center text-justify sm:text-center mb-4">
+          <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-[80%] md:w-[800px] text-left text-justify sm:text-center mb-4">
           xia.ai, a pioneering AI startup by XRAY-LAB, aims to revolutionize Industrial Quality Inspection and Process Monitoring using Artificial Intelligence. Our innovative team is committed to pushing AI's boundaries, transforming industries with cutting-edge technology.
           </h3>
           <Link href="contact">
@@ -140,7 +140,7 @@ const Abouts = () => {
           <div className="flex flex-col md:flex-row justify-around items-center  -mb-10 text-center">
             <div className="w-full md:w-1/2 sm:mb-10 px-4">
               <div
-                className="relative h-full  rounded-xl container mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0"
+                className="relative h-full  rounded-xl container mx-auto mt-10 overflow-hidden mb-24 md:mb-0"
                 style={{ height: "500px" }}
               >
                 <iframe
@@ -157,7 +157,7 @@ const Abouts = () => {
             </div>
             <div className="w-full md:w-1/2 mb-10 px-4">
               <div
-                className="relative h-full container  rounded-xl mx-auto px-4 mt-10 overflow-hidden mb-24 md:mb-0"
+                className="relative h-full container  rounded-xl mx-auto mt-10 overflow-hidden mb-24 md:mb-0"
                 style={{ height: "500px" }}
               >
                 <iframe

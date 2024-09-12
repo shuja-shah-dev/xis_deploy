@@ -18,7 +18,7 @@ export async function getStaticProps() {
 const Careers = ({jobsData}) => {
   return (
     <>
-      <div className="px-6 sm:px-10 lg:px-16 xl:px-32 2xl:px-52 pt-20 ">
+      <div className="px-8 sm:px-10 lg:px-16 xl:px-32 2xl:px-52 pt-20 ">
         <CareerHeroSection />
         <CareerJobs jobsData = {jobsData}/>
       </div>

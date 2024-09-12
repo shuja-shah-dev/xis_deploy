@@ -226,7 +226,7 @@ const page = () => {
           <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4 sm:w-[600px] md:w-[700px] text-center">
             Please fill in the following form, and we’ll be in touch shortly
           </h3> */}
-          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="w-[80%] text-left sm:text-center mx-auto sm:w-full font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Let’s explore how xis.ai can work for you
           </h1>
           <h3 className="text-gray-300 text-base sm:text-xl md:text-2xl mt-4  w-[80%]  md:w-[700px] text-center text-justify sm:text-center">
@@ -236,10 +236,10 @@ const page = () => {
           </h3>
         </div>
 
-        <div className="pb-40 pt-2 sm:pt-12 text-sm sm:text-base ">
+        <div className="pb-20 sm:pb-40 pt-2 sm:pt-12 text-sm sm:text-base ">
           <form
             onSubmit={handleSubmit}
-            className="w-[80%] md:w-[40%] m-auto flex flex-col gap-4 "
+            className="w-[90%] md:w-[40%] m-auto flex flex-col gap-4 "
           >
             <div className=" relative">
               <Image

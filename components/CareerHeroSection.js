@@ -39,7 +39,7 @@ const CareerHeroSection = () => {
         <div className="flex gap-3 w-full md:w-1/2 items-center">
        
           <div className="w-1 h-20 sm:h-16 bg-[#5D38C2]"></div>
-          <p className="text-sm">
+          <p className="text-sm text-justify">
             Explore our diverse range of rewarding opportunities where you can
             apply your talents to meaningful projects. Join us in shaping the
             future together – your skills are the catalyst for innovation and

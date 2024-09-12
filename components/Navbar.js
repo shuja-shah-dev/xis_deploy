@@ -144,7 +144,7 @@ const Header = () => {
               height: "50%",
               width: "100%",
               fontFamily: "Poppins, Roboto, sans-serif",
-              fontSize: "1rem",
+              fontSize: "1.5rem",
               fontWeight: "600",
               listStyle: "none",
               mt: "1rem",

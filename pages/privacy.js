@@ -129,8 +129,8 @@ const privacy = () => {
         <section className="flex items-center font-poppins ">
           <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div className="flex flex-wrap">
-              <div className="w-full px-6 justify-center mb-10  lg:mb-0 ">
-                <div className="pl-4 mb-6 ">
+              <div className="w-full px-6 justify-center mb-10  lg:mb-0 text-left sm:text-center">
+                <div className="sm:pl-4 mb-6 ">
                   <span className="text-lg uppercase text-gray-200"></span>
                   <h1 className="mt-2 text-3xl font-black  md:text-5xl text-gray-100">
                     Privacy Policy

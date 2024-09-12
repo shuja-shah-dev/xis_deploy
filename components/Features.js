@@ -66,7 +66,7 @@ Customizable labeling and training processes ensure the software fits your needs
         <h1 className="text-4xl font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Features
         </h1>
-        <h3 className="font-poppins px-4 sm:px-0 text-gray-300 text-base sm:text-xl mt-4 text-center">
+        <h3 className="font-poppins px-4 sm:px-0 text-gray-300 text-base sm:text-xl mt-2 sm:mt-4 text-center">
           Train the AI based on the dataset you Provided.
         </h3>
       </div>

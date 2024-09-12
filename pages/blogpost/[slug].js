@@ -197,7 +197,7 @@ const Slug = ({ blog }) => {
           }}
           key={"NormalSizedBlob"}
         />
-        <div className="container px-5 py-24 mx-auto flex flex-col">
+        <div className="container px-6 py-24 mx-auto flex flex-col">
           <div className="w-full lg:w-3/4 mx-auto">
             <div className="rounded-lg sm:h-32 overflow-hidden">
               <h1
@@ -318,13 +318,13 @@ const Slug = ({ blog }) => {
                 </div>
                 {startsWithPTag || startsWithHTag ? (
                   <div
-                    className="leading-relaxed text-lg mb-4 myCustomDiv blog-content"
+                    className="leading-relaxed text-lg mb-4 myCustomDiv blog-content text-left"
                     dangerouslySetInnerHTML={{
                       __html: firstPartContent,
                     }}
                   />
                 ) : (
-                  <div className=" leading-relaxed text-lg mb-4 ">
+                  <div className=" leading-relaxed text-lg mb-4 text-left">
                     <BlocksRenderer
                       content={blogContent}
                       blocks={{

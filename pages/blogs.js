@@ -127,7 +127,7 @@ const page = ({ blogsData }) => {
         />
 
         <div className="flex flex-col justify-center items-center mb-14  m-auto px-2 sm:px-4 lg:px-16">
-          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="w-[80%] text-left sm:text-center mx-auto sm:w-full font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Welcome to the xis.ai Blogs
           </h1>
           <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 w-[80%] md:w-[700px] text-center text-justify sm:text-center">
