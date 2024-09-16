@@ -9,19 +9,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import Link from "next/link";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
-import { Alert } from "@mui/material";
-import Truncate from "react-truncate-html";
-import renderHTML from "react-render-html";
-
-const truncateText = (text, maxLength) => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(text, "text/html");
-  const truncatedContent = doc.body.textContent || "";
-  return (
-    truncatedContent.slice(0, maxLength) +
-    (truncatedContent.length > maxLength ? "..." : "")
-  );
-};
+import { HeroBlob } from "@/components/HeroSection";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700"],
@@ -29,14 +17,10 @@ const roboto = Roboto({
 });
 
 const Slug = ({ blog }) => {
-  console.log(blog);
+  console.log( );
   function createMarkup(c) {
     return { __html: c };
   }
-
-  const truncateRef = useRef();
-
-  const [submitBlog, setSubmitBlog] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -83,10 +67,28 @@ const Slug = ({ blog }) => {
 
   return (
     <>
-      <section className="bg-[#111]">
+      <section className="relative">
+        <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            bottom: "2%",
+            zIndex: "-1",
+            right: "10%",
+          }}
+          key={"UniqueElementor1"}
+        />
+        <HeroBlob
+          sx={{
+            right: "10%",
+            top: "-300px",
+            zIndex: "-1",
+            right: "100px",
+          }}
+          key={"NormalSizedBlob"}
+        />
         <div className="container px-5 py-24 mx-auto flex flex-col">
           <div className="lg:w-3/4 mx-auto">
-            <div className="rounded-lg h-32 overflow-hidden">
+            <div className="rounded-lg sm:h-32 overflow-hidden">
               <h1
                 className={`${roboto.className} mb-4 text-3xl font-bold text-center`}
               >
@@ -191,18 +193,18 @@ const Slug = ({ blog }) => {
                 </div>
               </div>
               <div className="sm:w-2/3 sm:pl-8 sm:pb-8 mt-4 sm:mt-0 text-center sm:text-left">
+                <div className="">
+                  <div className="rounded-lg h-full overflow-hidden mb-4">
+                    <img
+                      alt="contentImage"
+                      className="object-cover object-center  w-full"
+                      src={`${BASE_URL}/media/${blog[0].blog_image}`}
+                    />
+                  </div>
+                </div>
                 <p
-                  className="leading-relaxed text-lg mb-4"
+                  className="leading-relaxed text-lg mb-4 myCustomDiv "
                   dangerouslySetInnerHTML={createMarkup(blog[0].blog_content)}
-                />
-              </div>
-            </div>
-            <div className="max-w-xl mx-auto">
-              <div className="rounded-lg h-full overflow-hidden mb-4">
-                <img
-                  alt="contentImage"
-                  className="object-cover object-center h-full w-full"
-                  src={`${BASE_URL}/media/${blog[0].blog_image}`}
                 />
               </div>
             </div>

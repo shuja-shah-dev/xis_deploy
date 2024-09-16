@@ -2,30 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); */
+
+@font-face {
+  font-family: "Nexa Bold";
+  /* src: url("/NexaBold/Nexa-Bold.woff2") format("woff2"),
+   url("/NexaBold/Nexa-Bold.woff") format("woff"); */
+  src: url("/NexaBold/Nexa Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-gray-300;
+  }
+}
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-y: auto;
-  background-image: url(../public/background.png);
+  /* overflow-y: auto; */
+  /* background-image: url(../public/background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;*/
   color: white;
+  background-color: #000;
+  overflow-x: hidden;
+}
+.CookiebotWidget-consents-list {
+  height: 170px;
+}
+.CookiebotWidget-consents-list ul {
+  width: 100%;
+  flex-direction: column;
+  padding: 5px;
+}
+.CybotCookiebotDialogDetailFooter{
+  display: none !important;
+}
+.CybotCookiebotDialogDetailBodyContentCookieContainerTypes{
+  flex-direction: column !important;
+}
+.CybotCookiebotDialogTabContent{
+  height: 400px !important;
+}
+.CybotCookiebotDialogDetailBodyContentCookieContainerTypes li{
+  width: 100% !important;
 }
 
+.myCustomDiv h1 {
+  font-size: 24px; /* Larger font size for h1 */
+}
 
+.myCustomDiv h2 {
+  font-size: 20px; /* Slightly smaller font size for h2 */
+}
 
+.myCustomDiv h3 {
+  font-size: 18px; /* Font size for h3 */
+}
 
+.myCustomDiv h4 {
+  font-size: 16px; /* Font size for h4 */
+}
+
+.myCustomDiv h5 {
+  font-size: 14px; /* Font size for h5 */
+}
+
+.myCustomDiv h6 {
+  font-size: 12px; /* Font size for h6 */
+}
+
+.myCustomDiv iframe {
+  width: 100%; /* Set the width to 100% */
+  height: 300px; /* Automatically adjust the height */
+  max-width: 100%; /* Ensure the video does not exceed the container width */
+  margin-bottom: 16px; /* Add some space below the video */
+}
+
+.my-custom-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+/* body {
+  font-family: "Inter", sans-serif;
+} */
 
 ::-webkit-scrollbar {
   width: 0px;
 }
-
 
 .hiddenCase {
   opacity: 0;
@@ -52,7 +164,6 @@ body {
   transform: translateY(0);
 }
 
-
 .hiddenn {
   opacity: 0;
   transition: all 0.8s;
@@ -65,7 +176,6 @@ body {
   filter: blur(0);
   transform: translateY(0);
 }
-
 
 @layer components {
 }
@@ -238,7 +348,7 @@ body {
   box-shadow: 0 3px 0 #fff, 0 0 12px rgba(51, 51, 51, 0.5);
 }
 
-.buttonWrapperT2{
+.buttonWrapperT2 {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -281,7 +391,7 @@ body {
 .twentytwenty-left-arrow {
   border-right: 6px solid white;
   left: 50%;
-  margin-left: -17px; 
+  margin-left: -17px;
 }
 
 .twentytwenty-horizontal .twentytwenty-handle:after {

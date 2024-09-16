@@ -114,7 +114,6 @@ const Blogadmin = () => {
     }));
   };
 
-
   const handleEdit = (blogId) => {
     setEditBlogId(blogId);
     setOpen(true);
@@ -302,7 +301,7 @@ const Blogadmin = () => {
                       Content
                     </label>
                     <ReactQuill
-                      className="quill-editor"
+                      className="quill-editor my-custom-quill"
                       theme="snow"
                       value={formData.blog_content}
                       onChange={(value) =>
@@ -315,7 +314,7 @@ const Blogadmin = () => {
                         toolbar: [
                           [{ header: [1, 2, 3, 4, 5, 6, false] }],
                           ["bold", "italic", "underline", "strike"],
-                          ["link", "image", "color"],
+                          ["link", "image", "video", "color"],
                           [{ list: "ordered" }, { list: "bullet" }],
                           ["clean"],
                         ],
@@ -532,7 +531,7 @@ const Blogadmin = () => {
                       Content
                     </label>
                     <ReactQuill
-                      className="quill-editor"
+                      className="quill-editor my-custom-quill"
                       theme="snow"
                       value={editedContent}
                       onChange={(value) => setEditedContent(value)} // Use 'value' directly, not 'e.target.value'
@@ -540,7 +539,7 @@ const Blogadmin = () => {
                         toolbar: [
                           [{ header: [1, 2, 3, 4, 5, 6, false] }],
                           ["bold", "italic", "underline", "strike"],
-                          ["link", "image", "color"],
+                          ["link", "image", "video", "color"],
                           [{ list: "ordered" }, { list: "bullet" }],
                           ["clean"],
                         ],

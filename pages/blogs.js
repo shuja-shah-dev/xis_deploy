@@ -1,389 +1,111 @@
+import BlogCard from "@/components/BlogCard";
+import { IoSearch } from "react-icons/io5";
+import Image from "next/image";
 import { Roboto } from "next/font/google";
-import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
-import Alert from "@mui/material/Alert";
-import { ENDPOINT } from "./blogadmin";
 import Head from "next/head";
 import { BASE_URL } from "@/common/base_config";
 import DOMPurify from "dompurify";
 import Truncate from "react-truncate-html";
+import Link from "next/link";
+import { HeroBlob } from "@/components/HeroSection";
+import { PropagateLoader } from "react-spinners";
+import { useQuery } from "react-query";
 
-const roboto = Roboto({
-  weight: ["100", "300", "400", "500", "700"],
-  subsets: ["latin"],
-});
+const page = () => {
+  const gradientStyle = {
+    background: "linear-gradient(0deg, #301466 0%, #3E5FAA 123.73%)",
+  };
+  const gradientStyleMain = {
+    background:
+      "linear-gradient(180deg, rgba(48, 20, 102, 0.25) 0%, rgba(62, 95, 170, 0.25) 100%)",
+  };
 
-const Featured = () => {
   const [submitBlog, setSubmitBlog] = useState([]);
-
-  function createMarkup(c) {
-    return { __html: c };
-  }
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/blogs`);
-        if (response.ok) {
-          const data = await response.json();
-          setSubmitBlog(data);
-        } else {
-          console.log(error, "Error");
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return (
-    <div className="container mx-auto px-5 pb-24 items-center ">
-      <div className="flex w-full flex-col lg:items-center lg:text-center items-center text-center mb-20">
-        <h1
-          className={`${roboto.className} title-font text-3xl font-bold mb-4`}
-        >
-          Discover Nice Articles Here
-        </h1>
-        {/* <p className='w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae omnis fugit ea at magni quod dolorem totam aperiam temporibus?</p> */}
-      </div>
-      <div className="flex flex-col">
-        <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
-          <h2 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">
-            Featured
-          </h2>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="flex flex-col md:flex-row space-y-2 items-center justify-center max-w-7xl w-full">
-          {submitBlog && submitBlog.length > 0 ? (
-            submitBlog.map((item, index) => {
-              if (index < 1) {
-                return (
-                  <div
-                    key={item._id}
-                    className="w-full md:w-1/2 h-96 mr-0 md:mr-4 overflow-hidden rounded-lg relative"
-                  >
-                    <img
-                      alt={`content-${index}`}
-                      className="object-cover object-center h-full w-full"
-                      src={`${BASE_URL}${item.blog_image}`}
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
-                      <h3
-                        className={`${roboto.className} text-xl font-medium leading-9 text-white dark:text-white`}
-                      >
-                        <Link passHref={true} href={`/blogpost/${item.blog_name}`}>
-                          {item.blog_title}
-                        </Link>
-                      </h3>
-                    </div>
-                  </div>
-                );
-              }
-              return null;
-            })
-          ) : (
-            <Alert severity="info">You don't have any blog yet.</Alert>
-          )}
-
-          <div className="w-full md:w-1/2 mx-2 h-96 ">
-            <div className="flex flex-col space-y-4">
-              {submitBlog && submitBlog.length > 0 ? (
-                submitBlog.map((item, index) => {
-                  if (index === 1) {
-                    const blog = submitBlog[item];
-                    // const truncatedContent = blog.blog_content.length > 150
-                    //     ? blog.blog_content.slice(0, 150) + '...'
-                    //     : blog.blog_content;
-                    return (
-                      <div
-                        key={item._id}
-                        className="h-48 w-full overflow-hidden relative rounded-lg"
-                      >
-                        <img
-                          alt={`content-${index}`}
-                          className="object-center h-full w-full"
-                          src={`${BASE_URL}${item.blog_image}`}
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
-                          <p className="text-xl font-medium leading-9 text-white dark:text-white">
-                            <Link
-                              passHref={true}
-                              href={`/blogpost/${item.blog_name}`}
-                            >
-                              {item.blog_title}
-                            </Link>
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  }
-                  return null;
-                })
-              ) : (
-                <Alert severity="info">You don't have any blog yet.</Alert>
-              )}
-
-              <div className="h-48 w-full flex space-x-4 ">
-                {submitBlog && submitBlog.length > 0 ? (
-                  submitBlog.map((item, index) => {
-                    if (index >= 2 && index < 4) {
-                      return (
-                        <div
-                          key={item._id}
-                          className="w-full md:w-1/2 h-96 mr-0 md:mr-4 overflow-hidden rounded-lg relative"
-                        >
-                          <img
-                            alt={`content-${index}`}
-                            className="object-cover object-center h-full w-full"
-                            src={`${BASE_URL}${item.blog_image}`}
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 z-10 p-6 -mt-12 bg-gradient-to-t from-gray-800/70 to-gray-50/0">
-                            <h3
-                              className={`${roboto.className} text-xl font-medium leading-9 text-white dark:text-white`}
-                            >
-                              <Link
-                                passHref={true}
-                                href={`/blogpost/${item.blog_name}`}
-                              >
-                                {item.blog_title}
-                              </Link>
-                            </h3>
-                          </div>
-                        </div>
-                      );
-                    }
-                    return null;
-                  })
-                ) : (
-                  <Alert severity="info">You don't have any blog yet.</Alert>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const truncateText = (text, maxLength) => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(text, "text/html");
-  const truncatedContent = doc.body.textContent || "";
-  return (
-    truncatedContent.slice(0, maxLength) +
-    (truncatedContent.length > maxLength ? "..." : "")
-  );
-};
-
-const TrendingBlog = () => {
-  const [submitBlog, setSubmitBlog] = useState([]);
+  const [allBlogs, setAllBlogs] = useState([]);
   const truncateRef = useRef();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/blogs`);
-        if (response.ok) {
-          const data = await response.json();
-          setSubmitBlog(data);
-        } else {
-          console.error("Error fetching data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  const truncateText = (text, maxLength) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const truncatedContent = doc.body.textContent || "";
+    return (
+      truncatedContent.slice(0, maxLength) +
+      (truncatedContent.length > maxLength ? "..." : "")
+    );
+  };
 
-    fetchData();
-  }, []);
+  const [searchText, setSearchText] = useState("");
+  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchedResults, setSearchedResults] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  return (
-    <>
-      <div className="container px-5 py-12 mx-auto">
-        <div className="flex flex-col">
-          <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6">
-            <h3 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">
-              Trending
-            </h3>
-          </div>
-        </div>
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-          {submitBlog && submitBlog.length > 0 ? (
-            submitBlog.map((item, index) => {
-              const truncatedTitle = item.blog_title.slice(0, 40);
+  const filterPrompts = (searchtext) => {
+    const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+    return blogsData.filter((item) => regex.test(item.blog_title));
+  };
 
-              return (
-                <div key={item._id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                  <div className="rounded-lg h-64 overflow-hidden">
-                    <img
-                      alt={`content-${index}`}
-                      className="object-cover object-center h-full w-full"
-                      src={`${BASE_URL}${item.blog_image}`}
-                    />
-                  </div>
-                  <Link passHref={true} href={`/blogpost/${item.blog_name}`}>
-                    <h2 className="text-xl font-medium title-font mt-5 mb-4">
-                      {truncatedTitle}
-                    </h2>
-                  </Link>
-                  <Truncate
-                    ref={truncateRef}
-                    lines={3}
-                    dangerouslySetInnerHTML={{
-                      __html: DOMPurify.sanitize(
-                        truncateText(item.blog_content, 150)
-                      ),
-                    }}
-                  />
-                </div>
-              );
-            })
-          ) : (
-            <Alert severity="info">You don't have any blog yet.</Alert>
-          )}
-        </div>
-      </div>
-    </>
-  );
-};
+  const handleChange = (e) => {
+    clearTimeout(searchTimeout);
+    setSearchText(e.target.value);
 
-const LatestBlog = () => {
-  const [submitBlog, setSubmitBlog] = useState([]);
+    // debounce method
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResults(searchResult);
+      }, 500)
+    );
+  };
 
-  const truncateRef = useRef();
+  const fetchData = async () => {
+    const response = await fetch(`${BASE_URL}/blogs`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return response.json();
+  };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/blogs`);
-        if (response.ok) {
-          const data = await response.json();
-          setSubmitBlog(data);
-        } else {
-          console.error("Error fetching data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  const {
+    data: blogsData,
+    isLoading,
+    isError,
+  } = useQuery("blogs", fetchData, {
+    staleTime: 300000, // 5 minutes
+    cacheTime: 3600000, // 1 hour
+  });
 
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const cachedData = localStorage.getItem("cached_blogs");
+  //       if (cachedData) {
+  //         setSubmitBlog(JSON.parse(cachedData));
+  //         setAllBlogs(JSON.parse(cachedData));
+  //         setLoading(false);
+  //       } else {
+  //         const response = await fetch(`${BASE_URL}/blogs`);
+  //         if (response.ok) {
+  //           const data = await response.json();
+  //           setSubmitBlog(data);
+  //           setAllBlogs(data);
+  //           localStorage.setItem("cached_blogs", JSON.stringify(data));
+  //           setLoading(false);
+  //         } else {
+  //           throw new Error("Failed to fetch data");
+  //         }
+  //       }
+  //     } catch (error) {
+  //       setError(error.message);
+  //       setLoading(false);
+  //     }
+  //   };
 
-  function createMarkup(c) {
-    return { __html: c };
-  }
+  //   fetchData();
+  // }, []);
+  // console.log(searchedResults);
 
-  return (
-    <>
-      <div className="container px-5 py-12 mx-auto">
-        <div className="flex flex-col">
-          <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-6 justify-between">
-            <h4 className="sm:w-2/5 text-[#57C8E7] font-medium title-font text-3xl mb-2 sm:mb-0">
-              Latest Post
-            </h4>
-          </div>
-        </div>
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-          {submitBlog && submitBlog.length > 0 ? (
-            submitBlog.map((item, index) => {
-              if (index < 2) {
-                // const blog = submitBlog[item];
-                // const truncatedContent = item.blog_content.slice(0, 150);
-                const truncatedTitle = item.blog_title.slice(0, 40);
-                return (
-                  <div key={item._id} className="p-4 md:w-1/3 sm:mb-0 mb-6">
-                    <div className="rounded-lg h-64 overflow-hidden">
-                      <img
-                        alt={`content-${index}`}
-                        className="object-cover object-center h-full w-full"
-                        src={`${BASE_URL}${item.blog_image}`}
-                      />
-                    </div>
-                    <h2 className="text-xl font-medium title-font mt-5 mb-4">
-                      <Link
-                        passHref={true}
-                        href={`/blogpost/${item.blog_name}`}
-                      >
-                        {truncatedTitle}
-                      </Link>
-                    </h2>
-                    <Truncate
-                      ref={truncateRef}
-                      lines={3}
-                      dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(
-                          truncateText(item.blog_content, 150)
-                        ),
-                      }}
-                    />
-                  </div>
-                );
-              }
-              return null;
-            })
-          ) : (
-            <Alert severity="info">You dont have any blog yet.</Alert>
-          )}
-
-          <div className="p-4 lg:w-1/3 pt-20 lg:pt-4 relative">
-            <h4 className="sm:w-full absolute top-0 lg:-top-16 text-[#57C8E7] text-start font-medium title-font text-3xl mb-6">
-              Popular Post
-            </h4>
-            {submitBlog && submitBlog.length > 0 ? (
-              submitBlog.map((item, index) => {
-                if (index >= 2 && index < 4) {
-                  const truncatedTitle = item.blog_title.slice(0, 40);
-                  // const blog = submitBlog[item];
-                  // const truncatedContent = blog.blog_content.length > 150
-                  //     ? blog.blog_content.slice(0, 150) + '...'
-                  //     : blog.blog_content;
-                  return (
-                    <div key={item._id} className="flex sm:flex-row mb-6">
-                      <img
-                        alt={`content-${index}`}
-                        className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-                        src={`${BASE_URL}${item.blog_image}`}
-                      />
-                      <div className="flex-grow pl-4 sm:pl-8">
-                        <h4 className="font-medium text-xl mb-4">
-                          <Link
-                            passHref={true}
-                            href={`/blogpost/${item.blog_name}`}
-                          >
-                            {truncatedTitle}
-                          </Link>
-                        </h4>
-                        <Truncate
-                          ref={truncateRef}
-                          lines={3}
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(
-                              truncateText(item.blog_content, 150)
-                            ),
-                          }}
-                        />
-                      </div>
-                    </div>
-                  );
-                }
-                return null;
-              })
-            ) : (
-              <Alert severity="info">You don't have any blog yet.</Alert>
-            )}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const Blogs = () => {
   return (
     <>
       <Head>
@@ -446,15 +168,173 @@ const Blogs = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
-      <div className="bg-[#111]">
-        <div className="container mx-auto px-5 py-24 items-center">
-          <Featured />
-          <TrendingBlog />
-          <LatestBlog />
+
+      <div className="mt-20 relative">
+        <HeroBlob
+          sx={{
+            background: "rgba(62, 95, 170, 0.25)",
+            top: "-300px",
+            zIndex: "-1",
+            right: "100px",
+          }}
+          key={"UniqueElementor1"}
+        />
+
+        <HeroBlob
+          sx={{
+            right: "10%",
+            bottom: "2%",
+            zIndex: "-1",
+          }}
+          key={"NormalSizedBlob"}
+        />
+        {/* <div className=" absolute left-[-100px] top-[100px]  sm:top-[-200px]">
+          <Image
+            src="/Ellipse 165.png"
+            alt="Ellipse "
+            height={900}
+            width={900}
+          />
         </div>
+ 
+        <div className=" absolute left-[-100px] top-[100px]  sm:top-[150px]">
+          <Image
+            src="/Ellipse 172.png"
+            alt="Ellipse "
+            height={900}
+            width={900}
+          />
+        </div>
+ 
+        <div className=" absolute right-[-200px] bottom-[-500px] ">
+          <Image
+            src="/Ellipse 171.png"
+            alt="Ellipse "
+            height={800}
+            width={800}
+          />
+        </div> */}
+        <div className="flex flex-col justify-center items-center mb-14 w-1/2 md:w-3/5 m-auto">
+          <h1 className="font-inter pb-1.5 text-4xl md:text-5xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-white to-gray-400">
+            Welcome to the xis.ai Blogs
+          </h1>
+          <h3 className="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-4 sm:w-[600px] md:w-[700px] text-center">
+            Our central destination for the latest updates, stories and industry
+            news about visual deep learning and computer vision.
+          </h3>
+        </div>
+        {isLoading ? (
+          <div
+            style={{
+              width: "100vw",
+              height: "100vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginbottom: "50%",
+            }}
+          >
+            <PropagateLoader color="#36d7b7" />
+          </div>
+        ) : isError ? (
+          <div>Error: {error}</div>
+        ) : (
+          <div className="px-6 sm:px-16 py-20 mt-4 mb-32 sm:my-40 border-2 border-slate-800 rounded-2xl ">
+            <div className="flex flex-col md:flex-row justify-between mb-20 px-2 sm:px-16 ">
+              <IoSearch
+                color="#8A8A8E"
+                size={30}
+                className="absolute ml-4 mt-1.5"
+              />
+              <input
+                onChange={handleChange}
+                value={searchText}
+                placeholder="Search By Keywords, industry or application*"
+                type="text"
+                className="font-poppins rounded-full z-50 bg-[#0F0F14] mb-4 md:mb-0 outline-none py-2 px-16 border border-[#5D38C2] w-full md:w-3/5 text-[#8A8A8E] "
+              />
+              <button
+                style={gradientStyle}
+                className="cursor-pointer z-50 w-[100px] sm:w-32 sm:ml-auto  text-xs sm:text-lg
+               rounded-full border-2 border-[#5D38C2]
+            text-white
+           py-1 sm:py-2  sm:px-6 font-poppins"
+              >
+                Subscribe
+              </button>
+              <div className="hidden md:block cursor-pointer border-2 bg-transparent border-[#5D38C2] rounded-2xl px-1 py-0 ml-6 mt-2 h-8">
+                <Image
+                  className="mt-1"
+                  src="/ic_round-link.svg"
+                  alt="Ellipse "
+                  height={20}
+                  width={20}
+                  color="white"
+                />
+              </div>
+            </div>
+
+            {blogsData &&
+              blogsData.map(
+                (item, index) =>
+                  index == 0 && (
+                    <div className="mb-20 px-0 sm:px-2 md:px-16 flex flex-col md:flex-row justify-between">
+                      <div className="rounded-xl h-64 w-full md:w-1/2 overflow-hidden mb-4 md:mb-0">
+                        <Image
+                          className="object-cover object-center h-full w-full"
+                          src={`${BASE_URL}${item.blog_image}`}
+                          alt={`content-${index}`}
+                          width={350}
+                          height={300}
+                        />
+                      </div>
+
+                      <div className=" flex flex-col w-full md:w-2/5">
+                        <div className="px-4mt-4">
+                          <h1 className="font-inter text-white text-2xl sm:text-4xl">
+                            {item.blog_title.slice(0, 63)}
+                          </h1>
+                          <p className="text-sm mt-2 leading-7 font-poppins text-gray-300">
+                            <Truncate
+                              ref={truncateRef}
+                              lines={3}
+                              dangerouslySetInnerHTML={{
+                                __html: DOMPurify.sanitize(
+                                  truncateText(item.blog_content, 150)
+                                ),
+                              }}
+                            />
+                          </p>
+                        </div>
+                        <Link
+                          passHref={true}
+                          href={`/blogpost/${item.blog_name}`}
+                        >
+                          <div
+                            style={gradientStyleMain}
+                            className="font-poppins w-[40%] sm:w-[30%] mt-4 mr-2 mb-4 py-1 lg:py-2  text-gray-300  test-sm text-center  border-2  border-[#5D38C2] rounded-3xl"
+                          >
+                            Read More
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  )
+              )}
+
+            <h3 className="font-inter mb-10 text-white test-semibold text-2xl sm:ml-10">
+              LATEST STORIES
+            </h3>
+            {searchText ? (
+              <BlogCard data={searchedResults} />
+            ) : (
+              <BlogCard data={blogsData} />
+            )}
+          </div>
+        )}
       </div>
     </>
   );
 };
 
-export default Blogs;
+export default page;

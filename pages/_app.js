@@ -1,30 +1,32 @@
 import { AuthProvider } from "@/common/authProvider";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Navbar";
 import "@/styles/globals.css";
+// import "@fontsource/poppins";
 import Link from "next/link";
 import CookieConsent from "react-cookie-consent";
 import { useEffect, useState } from "react";
 import { Box, Switch } from "@mui/material";
-import { Roboto, Lato } from 'next/font/google'
+import { Roboto, Lato } from "next/font/google";
 import CrispChat from "@/components/Crisp";
 import Script from "next/script";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
-import 'react-quill/dist/quill.snow.css'; 
+import "react-quill/dist/quill.snow.css"; 
+import CookiebotScript from "@/components/CookiebotScript";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-
-
-
+// Create a new QueryClient instance
+const queryClient = new QueryClient();
 
 const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const lato = Lato({
-  weight: ['100', '300', '400', '700'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "700"],
+  subsets: ["latin"],
+});
 
 const ArrowSlider = () => {
   const [showButton, setShowButton] = useState(false);
@@ -66,8 +68,8 @@ const ArrowSlider = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const EssentialCookies = () => {
   return (
@@ -111,7 +113,7 @@ const EssentialCookies = () => {
           Essential Cookies
         </h3>
       </Box>
-      <p>
+      <p className="text-sm">
         Essential cookies enable core functionality such as page navigation and
         access to secure areas. The website cannot function properly without
         these cookies, and can only be disabled by changing your browser
@@ -161,7 +163,7 @@ const MarketingCookies = () => {
           Marketing Cookies
         </h3>
       </Box>
-      <p>
+      <p className="text-sm">
         Marketing cookies are used to track visitors across websites. The
         intention is to display ads that are relevant and engaging for the
         individual user and thereby more valuable for publishers and third party
@@ -178,6 +180,7 @@ const AnalyticsCookies = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
+        paddingBottom: "20px"
       }}
     >
       <Box
@@ -211,7 +214,7 @@ const AnalyticsCookies = () => {
           Analytics Cookies
         </h3>
       </Box>
-      <p>
+      <p className="text-sm">
         Analytical cookies help us to improve our website by collecting and
         reporting information on its usage.
       </p>
@@ -220,23 +223,21 @@ const AnalyticsCookies = () => {
 };
 
 export default function App({ Component, pageProps }) {
-
-
   const [settings, setSettings] = useState(false);
 
   const dec = {
     alignItems: "flex-start",
-    background: "rgb(31, 41, 54)",
+    background: "rgb(2 6 23)",
     color: "white",
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "column",
     left: "0px",
+
     position: "fixed",
-    width: "100%",
     zIndex: "999",
     height: "auto",
-    fontSize: "21px",
+    fontSize: "20px",
     bottom: "5px",
     padding: "0.88rem 1.44rem",
     borderRadius: "8px",
@@ -248,89 +249,94 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <AuthProvider>
-        <CookieConsent
-          enableDeclineButton
-          style={{
-            background: "#1F2936",
-            height: "13%",
-            fontSize: "1.1rem",
-            ...dec,
-          }}
-          disableStyles
-          buttonStyle={{
-            color: "#fff",
-            background: "transparent",
-            border: "1px solid #fff",
-            borderRadius: "8px",
-            fontSize: "16px",
-            padding: "8px 12px",
-            "&:hover": {
-              transform: "scale(1.1)",
-            },
-          }}
-          declineButtonStyle={{
-            color: "#fff",
-            background: "transparent",
-            border: "1px solid #fff",
-            borderRadius: "8px",
-            fontSize: "16px",
-            padding: "8px 12px",
-            transform: "scale(1.1)",
-            "&:hover": {
-              transform: "scale(1.1)",
-            },
-          }}
-          buttonText="Accept"
-          declineButtonText="Settings"
-          buttonWrapperClasses="buttonWrapperT2"
-          // onDecline={(_) => setSettings(true)}
-          customDeclineButtonProps={{
-            onClick: () => setSettings(true),
-            style: {
-              display: settings ? "none" : "block",
-              ...{
-                color: "rgb(255, 255, 255)",
-                background: "transparent",
-                border: "1px solid rgb(255, 255, 255)",
-                borderRadius: "8px",
-                fontSize: "16px",
-                padding: "8px 12px",
-                "&:hover": {
-                  transform: "scale(1.1)",
+        <QueryClientProvider client={queryClient}>
+          {/* <CookieConsent
+            enableDeclineButton
+            style={{
+              ...dec,
+            }}
+            disableStyles
+            buttonStyle={{
+              color: "#fff",
+              background: "transparent",
+              border: "1px solid #5D38C2",
+              borderRadius: "8px",
+              fontSize: "16px",
+              padding: "8px 12px",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+              marginRight: "72px",
+            }}
+            // declineButtonStyle={{
+            //   color: "#fff",
+            //   background: "transparent",
+            //   border: "1px solid #5D38C2",
+            //   borderRadius: "8px",
+            //   fontSize: "16px",
+            //   padding: "8px 12px",
+            //   transform: "scale(1.1)",
+            //   "&:hover": {
+            //     transform: "scale(1.1)",
+            //   },
+            // }}
+            buttonText="Accept"
+            declineButtonText="Settings"
+            buttonWrapperClasses="buttonWrapperT2"
+            // onDecline={(_) => setSettings(true)}
+            customDeclineButtonProps={{
+              onClick: () => setSettings(true),
+              style: {
+                display: settings ? "none" : "block",
+                ...{
+                  color: "rgb(255, 255, 255)",
+                  background: "transparent",
+                  border: "1px solid #5D38C2",
+                  borderRadius: "8px",
+                  fontSize: "16px",
+                  padding: "8px 12px",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                  },
                 },
               },
-            },
-          }}
-        >
-          {!settings ? (
-            <>
-              We use cookies to enhance your browsing experience and analyze
-              site traffic. By clicking 'Accept,' you consent to the use of all
-              cookies. If you prefer not to allow non-essential cookies, click
-              'Decline.'For More Info, see our{" "}
-              <Link href={"/privacy"}>Privacy Policy</Link>.{" "}
-            </>
-          ) : (
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <EssentialCookies />
-              <MarketingCookies />
-              <AnalyticsCookies />
-            </Box>
-          )}
-        </CookieConsent>
-        <Navbar />
-        <main className={lato.className}>
-          <Component {...pageProps} />
-        </main>
-        <ArrowSlider/>
-        <CrispChat />
-        <Footer />
+            }}
+          >
+            {!settings ? (
+              <>
+                <div className="pb-[12px]">
+                  We use cookies to enhance your browsing experience and analyze
+                  site traffic. By clicking 'Accept,' you consent to the use of
+                  all cookies. For More Info, see our{" "}
+                  <Link href={"/privacy"} className="font-semibold">
+                    Privacy Policy
+                  </Link>
+                  .{" "}
+                </div>
+              </>
+            ) : (
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                <EssentialCookies />
+                <MarketingCookies />
+                <AnalyticsCookies />
+              </Box>
+            )}
+          </CookieConsent> */}
+          {/* <CookiebotScript /> */}
+          <Header />
+          <main className={lato.className}>
+            <Component {...pageProps} />
+          </main>
+          <ArrowSlider />
+          <CrispChat />
+          <Footer />
+        </QueryClientProvider>
       </AuthProvider>
     </>
   );
