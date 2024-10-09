@@ -98,6 +98,7 @@ const roboto = Roboto({
 const Slug = ({ blog }) => {
   blog = blog?.data?.[0];
 
+// console.log(blog.attributes.Keywords.split(','))
   const blogContent = blog?.attributes?.blog_content || '';
   const firstPartContent = blogContent[0]?.children[0]?.text.trim() || '';
   const startsWithPTag = firstPartContent?.startsWith("<p>");
@@ -161,6 +162,12 @@ const Slug = ({ blog }) => {
           ],
           site_name: "xis.ai",
         }}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content: blog?.attributes?.Keywords, 
+          },
+        ]}
       />
 
       <ArticleJsonLd
