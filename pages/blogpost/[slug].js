@@ -415,7 +415,7 @@ export async function getStaticProps({ params }) {
       props: {
         blog: blog,
       },
-      revalidate: 7200, // ISR revalidation every 2 hours (7200 seconds)
+      revalidate: 10, // ISR revalidation every 2 hours (7200 seconds)
     };
   } catch (error) {
     console.error("Error fetching data:", error.message);
