@@ -402,22 +402,20 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   try {
     const res = await fetch(
-      `
-      ${BASE_URL_STRAPI}/api/blogs/?populate=blog_image&filters[slug][$eq]=${params.slug}`,
-      {
-        next: { revalidate: 7200 },
-      }
+      `${BASE_URL_STRAPI}/api/blogs/?populate=blog_image&filters[slug][$eq]=${params.slug}`
     );
 
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    let blog = await res.json();
+
+    const blog = await res.json();
 
     return {
       props: {
         blog: blog,
       },
+      revalidate: 7200, // ISR revalidation every 2 hours (7200 seconds)
     };
   } catch (error) {
     console.error("Error fetching data:", error.message);
@@ -425,6 +423,38 @@ export async function getStaticProps({ params }) {
       props: {
         blog: {},
       },
+      revalidate: 60, // fallback revalidate in case of error
     };
   }
 }
+
+
+// export async function getStaticProps({ params }) {
+//   try {
+//     const res = await fetch(
+//       `
+//       ${BASE_URL_STRAPI}/api/blogs/?populate=blog_image&filters[slug][$eq]=${params.slug}`,
+//       {
+//         next: { revalidate: 7200 },
+//       }
+//     );
+
+//     if (!res.ok) {
+//       throw new Error(`HTTP error! Status: ${res.status}`);
+//     }
+//     let blog = await res.json();
+
+//     return {
+//       props: {
+//         blog: blog,
+//       },
+//     };
+//   } catch (error) {
+//     console.error("Error fetching data:", error.message);
+//     return {
+//       props: {
+//         blog: {},
+//       },
+//     };
+//   }
+// }
