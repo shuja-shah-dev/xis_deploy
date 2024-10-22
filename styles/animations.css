@@ -17,3 +17,32 @@
     animation: scaleUp 1s ease-out;
   }
   
+  
+  .gradient-background-btn {
+    background: linear-gradient(0deg, #301466 0%, #3e5faa 123.73%);
+  }
+  .gradient-background-cylinder {
+    background: linear-gradient(
+      203deg,
+      rgba(39, 36, 55, 0.8) 54.33%,
+      rgba(28, 25, 41, 0.8) 83.04%
+    );
+  }
+  .blob {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    border-radius: 10%;
+    background: linear-gradient(0deg, #301466 0%, #263b6d 123.73%);
+    filter: blur(350px);
+    z-index: -1;
+  }
+  .blob2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 10%;
+    background: linear-gradient(0deg, #1b52a5 0%, #688ada 123.73%);
+    filter: blur(450px);
+    z-index: -1;
+  }
