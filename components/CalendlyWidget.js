@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 function CalendlyWidget() {
@@ -69,33 +70,107 @@ export function SecondorayWidget() {
   }, [on]);
   return (
     <>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          p: "2rem",
+          flexDirection: "column",
+          gap: "2rem",
+        }}
+      >
+        <Box
+          sx={{
+            width: "50%",
+            borderColor: "rgba(165, 165, 165, 0.50)",
+            borderStyle: "solid",
+            borderWidth: "1.5px",
+            borderRadius: "10px",
+            backdropFilter: "blur(50px)",
+            background:
+              "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
+            p: "2rem",
+            pt: "4rem",
+          }}
+        >
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: "Poppins",
+              color: "#7C4EFC",
+              fontSize: "1.3rem",
+              fontWeight: "600",
+              mb: "2rem",
+            }}
+          >
+            Get a FREE Consultation and a Proof of Concept for your Use Case &
+            Explore how xis.ai can Improve your Quality Inspection.
+          </Typography>
+
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+              color: "#fff",
+              fontSize: "1rem",
+              fontWeight: "300",
+            }}
+          >
+            Join the ranks of manufacturers who have transformed their
+            operations with xis.ai. Let’s make quality control simple and
+            effective together!
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            width: "50%",
+            borderColor: "rgba(165, 165, 165, 0.50)",
+            borderStyle: "solid",
+            borderWidth: "1.5px",
+            borderRadius: "20px",
+            backdropFilter: "blur(50px)",
+            background:
+              "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
+            p: "2rem",
+            pt: "1rem",
+            pb: "1rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <Typography
+            variant="h5"
+            sx={{ fontFamily: "Poppins", color: "#fff", fontWeight: 700 }}
+          >
+            Ready to Elevate your Production?
+          </Typography>
+
+          <button
+            type="submit"
+            id="main-button"
+            onClick={() => setOn(true)}
+            style={{
+              fontFamily: "Poppins",
+              background: "linear-gradient(180deg, #301466 0%, #3E5FAA 100%)",
+              borderRadius: "10px",
+              border: "none",
+              color: "#fff",
+              padding: "10px 20px",
+              cursor: "pointer",
+              fontSize: "1rem",
+            }}
+          >
+            Request Your Free Consultation
+          </button>
+        </Box>
+      </Box>
       <link
         href="https://assets.calendly.com/assets/external/widget.css"
         rel="stylesheet"
       />
-
-      <div class=" mb-40 text-white flex flex-col justify-center items-center">
-        <h1
-          class="text-4xl mb-4 text-white"
-          style={{
-            fontFamily: "Poppins",
-          }}
-        >
-          Get a Free Testing Prototype
-        </h1>
-
-        <button
-          type="submit"
-          class="ml-6 py-2 px-8 rounded-md mt-2 backdrop-blur-2xl border-[#5D38C2] border gradient-background-btn text-white"
-          id="main-button"
-          onClick={() => setOn(true)}
-          style={{
-            fontFamily: "Poppins",
-          }}
-        >
-          Request
-        </button>
-      </div>
     </>
   );
 }

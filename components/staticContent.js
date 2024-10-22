@@ -128,7 +128,7 @@ export const _landingPage = `
 
     
 
-        <div class="mt-10 mb-20">
+        <div class="mt-10 mb-10">
           <h1 class="text-6xl text-white text-center mb-16">How It Works</h1>
           <div class="flex justify-center">
             <img src="/hiw.svg" width="950px" height="" alt="" />
@@ -137,7 +137,7 @@ export const _landingPage = `
 
 
         ${industrySol}
-        <div class=" mb-40 text-white flex flex-col justify-center items-center">
+        <div class=" mb-10 text-white flex flex-col justify-center items-center">
         <div class="mt-10 mb-10">
           <h1 class="text-5xl my-10">Our Customers</h1>
           <div class="flex flex-col gap-4">
