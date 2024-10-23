@@ -38,196 +38,151 @@ const industrySol = `
 </div>`;
 
 const vid = `
-<div class="w-[95%] m-auto lg:w-[65%] my-2"  
- 
-><video style="border-radius: 10px;" controls class='border-[#193037]'><source src="/FA.mp4" type="video/mp4"></video></div>`;
+<div class="m-auto my-2 flex align-center justify-between sm:flex-col md:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; width:72%;">
+ <img src='/_pati.png' alt='How it works steps' style="height: 600px"> </img>
+ <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA.mp4" type="video/mp4"></video>
+</div>`;
 
 export const _landingPage = `
-        <script type="text/javascript">
-          
-            (window.onload = function () {
-              Calendly.initBadgeWidget({
-                url: "https://calendly.com/syedmutti/call-with-muti",
-                text: "Schedule Time",
-                color: "#22418a",
-                textColor: "#ffffff",
-                branding: undefined,
-              });
-            })
-          
-        </script>
-
-
-<body class="bg-black relative overflow-x-hidden">
-    <div class="blob top-[-100px] left-0"></div>
-    <div class="blob top-[900px] right-0"></div>
-    <div class="blob2 top-[1500px] left-0"></div>
-
-    <div class="blob top-[2500px] right-0"></div>
-    <div class="blob2 top-[3100px] left-0"></div>
-    <div class="blob right-0 bottom-0"></div>
-
-    <div class="flex justify-center text-white my-24">
-      <div class="flex flex-col">
-        <div>
-          <h1 class="text-6xl text-center mb-16">
-            AI Vision Inspection System
-          </h1>
-          <div class="flex gap-10 text-xl justify-center">
-            <div class="flex flex-col gap-4">
-              <img
-                src="/image 66.svg"
-                width="400px"
-                height=""
-                class="rounded-lg"
-                alt=""
-              />
-              <p class="text-center">Inline inspection system</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <img
-                src="/image 69.svg"
-                width="400px"
-                height=""
-                class="rounded-lg"
-                alt=""
-              />
-              <p class="text-center">End Of Line inspection system</p>
-            </div>
-            <div class="flex flex-col gap-4">
-              <img
-                src="/image 70.svg"
-                width="400px"
-                height=""
-                class="rounded-lg"
-                alt=""
-              />
-              <p class="text-center">Retro-fit Existing Vision system</p>
-            </div>
-          </div>
-        </div>
-
-<div class="mt-20 mb-10">
-            <div class="flex flex-col justify-center items-center mb-2">
-        <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify mt-4">Software</h1>
-    </div>
-          <div class="flex justify-center">
-                ${vid}
-          </div>
-        </div>
-
-
-    
-
-        <div class="mt-10 mb-20">
-          <h1 class="text-6xl text-white text-center my-16">Solution</h1>
-          <div class="flex justify-center">
-            <img src="/sol.svg" width="700px" height="" alt="" />
-          </div>
-        </div>
-
-    
-
-        <div class="mt-10 mb-10">
-          <h1 class="text-6xl text-white text-center mb-16">How It Works</h1>
-          <div class="flex justify-center">
-            <img src="/hiw.svg" width="950px" height="" alt="" />
-          </div>
-        </div>
-
-
-        ${industrySol}
-        <div class=" mb-10 text-white flex flex-col justify-center items-center">
-        <div class="mt-10 mb-10">
-          <h1 class="text-5xl my-10">Our Customers</h1>
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-4">
-              <img src="/Group 54.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 56.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 58.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 59.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 60.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 61.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 62.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 63.svg" width="150px" height="" alt="" />
-            </div>
-            <div class="flex gap-4">
-              <img src="/Group 64.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 67.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 68.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 69.svg" width="150px" height="" alt="" />
-
-              <img src="/Group 70.svg" width="150px" height="" alt="" />
-              <img src="/audi.svg" width="150px" height="" alt="" />
-
-              <img src="/lg.svg" width="150px" height="" alt="" />
-
-              <img src="/toyota.svg" width="150px" height="" alt="" />
-            </div>
-
-            <div class="flex gap-4">
-              <img src="/7.svg" width="150px" height="" alt="" />
-              <img src="/8.svg" width="150px" height="" alt="" />
-            </div>
-
-            <div>
-              <h1 class="text-5xl my-10">Our Partners</h1>
-              <div class="flex gap-4">
-                <img src="/Group 95.svg" width="150px" height="" alt="" />
-
-                <img src="/Group 96.svg" width="150px" height="" alt="" />
-
-                <img src="/Group 98.svg" width="150px" height="" alt="" />
-                <img src="/Group 99.svg" width="150px" height="" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    
+<script type="text/javascript">
+   (window.onload = function () {
+     Calendly.initBadgeWidget({
+       url: "https://calendly.com/syedmutti/call-with-muti",
+       text: "Schedule Time",
+       color: "#22418a",
+       textColor: "#ffffff",
+       branding: undefined,
+     });
+   })
    
-
- <script>
-        document.getElementById("email-form").addEventListener("submit", async function (e) {
-          e.preventDefault(); 
+</script>
+<body class="bg-black relative overflow-x-hidden">
+   <div class="blob top-[-100px] left-0"></div>
+   <div class="blob top-[900px] right-0"></div>
+   <div class="blob2 top-[1500px] left-0"></div>
+   <div class="blob top-[2500px] right-0"></div>
+   <div class="blob2 top-[3100px] left-0"></div>
+   <div class="blob right-0 bottom-0"></div>
+   <div class="flex justify-center text-white my-24">
+      <div class="flex flex-col">
+         <div>
+                <div class="flex flex-col justify-center items-center mb-14">
+        <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">Hardware Solutions</h1>
+        <h3 class="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-2 sm:mt-4 w-full md:w-[800px] text-center cc34 ">We focus on delivering custom development solutions that are specifically designed to meet the unique needs
+of our customers.</h3>
+    </div>
+            <div class="flex gap-10 text-xl justify-center">
+               <div class="flex flex-col gap-4">
+                  <img
+                     src="/image 66.svg"
+                     width="400px"
+                     height=""
+                     class="rounded-lg"
+                     alt=""
+                     />
+                  <p class="text-center cc34">Inline inspection system</p>
+               </div>
+               <div class="flex flex-col gap-4">
+                  <img
+                     src="/image 69.svg"
+                     width="400px"
+                     height=""
+                     class="rounded-lg"
+                     alt=""
+                     />
+                  <p class="text-center cc34">End Of Line inspection system</p>
+               </div>
+               <div class="flex flex-col gap-4">
+                  <img
+                     src="/image 70.svg"
+                     width="400px"
+                     height=""
+                     class="rounded-lg"
+                     alt=""
+                     />
+                  <p class="text-center cc34">Retro-fit Existing Vision system</p>
+               </div>
+            </div>
+         </div>
+         <div class="mt-20 mb-10">
+            <div class="flex flex-col justify-center items-center mb-2">
+               <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify mt-4">How it works</h1>
+            </div>
+            <div style="display:flex; align-items:center; justify-content: center; width:100%">
+              ${vid}
+            </div>
+         </div>
+         ${industrySol}
+         <div class=" mb-10 text-white flex flex-col justify-center items-center">
+            <div class="mt-10 mb-10">
+               <h1 class="text-5xl my-10">Our Customers</h1>
+               <div class="flex flex-col gap-4">
+                  <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                     <img src="/Group 54.svg" width="150px" height="" alt="" />
+                     <img src="/Group 56.svg" width="150px" height="" alt="" />
+                     <img src="/Group 58.svg" width="150px" height="" alt="" />
+                     <img src="/Group 59.svg" width="150px" height="" alt="" />
+                     <img src="/Group 60.svg" width="150px" height="" alt="" />
+                     <img src="/Group 61.svg" width="150px" height="" alt="" />
+                     <img src="/Group 62.svg" width="150px" height="" alt="" />
+                     <img src="/Group 63.svg" width="150px" height="" alt="" />
+                  </div>
+                  <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                     <img src="/Group 64.svg" width="150px" height="" alt="" />
+                     <img src="/Group 67.svg" width="150px" height="" alt="" />
+                     <img src="/Group 68.svg" width="150px" height="" alt="" />
+                     <img src="/Group 69.svg" width="150px" height="" alt="" />
+                     <img src="/Group 70.svg" width="150px" height="" alt="" />
+                     <img src="/audi.svg" width="150px" height="" alt="" />
+                     <img src="/lg.svg" width="150px" height="" alt="" />
+                     <img src="/toyota.svg" width="150px" height="" alt="" />
+                  </div>
+                  <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                     <img src="/7.svg" width="150px" height="" alt="" />
+                     <img src="/8.svg" width="150px" height="" alt="" />
+                  </div>
+                  <div>
+                     <h1 class="text-5xl my-10">Our Partners</h1>
+                     <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                        <img src="/Group 95.svg" width="150px" height="" alt="" />
+                        <img src="/Group 96.svg" width="150px" height="" alt="" />
+                        <img src="/Group 98.svg" width="150px" height="" alt="" />
+                        <img src="/Group 99.svg" width="150px" height="" alt="" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script>
+      document.getElementById("email-form").addEventListener("submit", async function (e) {
+        e.preventDefault(); 
       
-          const email = e.target.querySelector("input[type='email']").value;
+        const email = e.target.querySelector("input[type='email']").value;
       
-          try {
-            const response = await fetch("https://be.xis.ai/api/emails", { 
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
+        try {
+          const response = await fetch("https://be.xis.ai/api/emails", { 
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              data: {
+                email: email,
               },
-              body: JSON.stringify({
-                data: {
-                  email: email,
-                },
-              }),
-            });
+            }),
+          });
       
-            if (response.ok) {
-              alert("Email submitted successfully!");
-            } else {
-              alert("Failed to submit email.");
-            }
-          } catch (error) {
-            console.error("Error:", error);
-            alert("An error occurred while submitting the email.");
+          if (response.ok) {
+            alert("Email submitted successfully!");
+          } else {
+            alert("Failed to submit email.");
           }
-        });
-      </script>
-
+        } catch (error) {
+          console.error("Error:", error);
+          alert("An error occurred while submitting the email.");
+        }
+      });
+   </script>
     `;

@@ -16,15 +16,6 @@ function CalendlyWidget() {
           textColor: "#ffffff",
           branding: undefined,
         });
-
-        //   const badgeWidgetContainer = document.querySelector(
-        //     ".calendly-badge-widget"
-        //   );
-        //   if (badgeWidgetContainer) {
-        //     badgeWidgetContainer.style.position = "fixed";
-        //     badgeWidgetContainer.style.bottom = "14%";
-
-        //   }
       }
     };
 
@@ -81,6 +72,18 @@ export function SecondorayWidget() {
           gap: "2rem",
         }}
       >
+        <div class="flex flex-col justify-center items-center mb-14">
+          <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">
+            Contact Us
+          </h1>
+        </div>
+        <img
+          src="/___Map.png"
+          alt="Location Map"
+          style={{
+            width: "80%",
+          }}
+        />
         <Box
           sx={{
             width: "50%",

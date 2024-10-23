@@ -4,6 +4,10 @@ import { SecondorayWidget } from "../components/CalendlyWidget";
 import Head from "next/head";
 import { Box, Typography } from "@mui/material";
 import LogoBar from "../components/LogoBar";
+import { _AltVideoSection } from "../components/VideoSection";
+
+
+
 const $Main = () => {
   const choices = [
     "Autonomous",
@@ -103,6 +107,14 @@ const $Main = () => {
             <span style={spanStyle}>Effortless</span>
           </div>
         </div>
+        <h3
+          className="font-nexa text-5xl sm:text-6xl pb-2 font-bold mt-8 text-shadow line-height-82 gradient-text"
+          style={{
+            margin: 0,
+          }}
+        >
+          With AI
+        </h3>
       </Box>
     </Box>
   );
@@ -166,20 +178,31 @@ export default function VisualInspection() {
           background: "#121212",
           py: "2rem",
           px: "5rem",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
-        {[
-          { tt: "85%", bt: "Faster Time To Value" },
-          { tt: "6.9%", bt: "Return On Investment" },
-          { tt: "75%", bt: "Lower Total Cost" },
-          { tt: "100%", bt: "Risk Free" },
-          { tt: "0", bt: "AI Expertise necessary " },
-        ].map(({ tt, bt }, $Key) => (
-          <$_renderation {...{ tt, bt }} key={$Key} />
-        ))}
+        <Box
+          sx={{
+            display: "flex",
+            width: "87%",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          {[
+            { tt: "85%", bt: "Faster Time To Value" },
+            // { tt: "6.9%", bt: "Return On Investment" },
+            { tt: "75%", bt: "Lower Total Cost" },
+            { tt: "100%", bt: "Without any Risk" },
+            { tt: "0", bt: "AI Expertise necessary " },
+          ].map(({ tt, bt }, $Key) => (
+            <$_renderation {...{ tt, bt }} key={$Key} />
+          ))}
+        </Box>
       </Box>
+
+      <_AltVideoSection />
       <div
         style={{
           width: "100%",
@@ -199,7 +222,7 @@ const $_renderation = ({ tt, bt }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         alignItems: "center",
         width: "150px",
         height: "100px",
