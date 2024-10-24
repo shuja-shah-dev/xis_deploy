@@ -78,7 +78,7 @@ export const _landingPage = `
                      class="rounded-lg"
                      alt=""
                      />
-                  <p class="text-center cc34 w-full sm:w-[70%] md:w-[70%]">Inline inspection system</p>
+                  <p class="text-center cc34 w-[400px] ">Inline inspection system</p>
                </div>
                <div class="flex flex-col gap-4 flex flex-col gap-4 items-center sm:items-center md:items-center lg:items-start xl:items-start">
                   <img
@@ -88,7 +88,7 @@ export const _landingPage = `
                      class="rounded-lg"
                      alt=""
                      />
-                  <p class="text-center cc34 w-full sm:w-[70%] md:w-[70%]">End Of Line inspection system</p>
+                  <p class="text-center cc34 w-[400px]">End Of Line inspection system</p>
                </div>
                <div class="flex flex-col gap-4 items-center sm:items-center md:items-center lg:items-start xl:items-start">
                   <img
@@ -98,7 +98,7 @@ export const _landingPage = `
                      class="rounded-lg"
                      alt=""
                      />
-                  <p class="text-center cc34 w-full sm:w-[70%] md:w-[70%]">Retro-fit Existing Vision system</p>
+                  <p class="text-center cc34  w-[400px]">Retro-fit Existing Vision system</p>
                </div>
             </div>
          </div>

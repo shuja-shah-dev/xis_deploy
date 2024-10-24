@@ -96,102 +96,128 @@ export function SecondorayWidget() {
           <img
             src="/___Map.png"
             alt="Location Map"
-            // style={{
-            //   width: "60%",
-            // }}
-            class='w-[60%] sm:w-[80%] md:w-[80%] lg:w-[70%] xl:w-[60%]'
+            // class="h-[470px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[200px]"
+            style={{
+              height: "470px",
+            }}            
           />
           <Box
             sx={{
-              width: { xl: "40%", lg: "40%", md: "80%", sm: "80%", xs: "95%" },
-              borderColor: "rgba(165, 165, 165, 0.50)",
-              borderStyle: "solid",
-              borderWidth: "1.5px",
-              borderRadius: "10px",
-              backdropFilter: "blur(50px)",
-              background:
-                "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
-              p: "2rem",
-              pt: "4rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+              alignItems: "center",
             }}
           >
-            <Typography
-              variant="h4"
+            <Box
               sx={{
-                fontFamily: "Poppins",
-                color: "#7C4EFC",
-                fontSize: "1.3rem",
-                fontWeight: "600",
-                mb: "2rem",
+                width: {
+                  xl: "800px",
+                  lg: "800px",
+                  md: "80%",
+                  sm: "80%",
+                  xs: "95%",
+                },
+                borderColor: "rgba(165, 165, 165, 0.50)",
+                borderStyle: "solid",
+                borderWidth: "1.5px",
+                borderRadius: "10px",
+                backdropFilter: "blur(50px)",
+                background:
+                  "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
+                p: "2rem",
+                pt: "4rem",
               }}
             >
-              Get a FREE Consultation and a Proof of Concept for your Use Case &
-              Explore how xis.ai can Improve your Quality Inspection.
-            </Typography>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontFamily: "Poppins",
+                  color: "#7C4EFC",
+                  fontSize: "1.3rem",
+                  fontWeight: "600",
+                  mb: "2rem",
+                }}
+              >
+                Get a FREE Consultation and a Proof of Concept for your Use Case
+                & Explore how xis.ai can Improve your Quality Inspection.
+              </Typography>
 
-            <Typography
+              <Typography
+                sx={{
+                  fontFamily: "Poppins",
+                  color: "#fff",
+                  fontSize: "1rem",
+                  fontWeight: "300",
+                }}
+              >
+                Join the ranks of manufacturers who have transformed their
+                operations with xis.ai. Let&apos;s make quality control simple and
+                effective together!
+              </Typography>
+            </Box>
+            <Box
               sx={{
-                fontFamily: "Poppins",
-                color: "#fff",
-                fontSize: "1rem",
-                fontWeight: "300",
+                width: {
+                  xl: "800px",
+                  lg: "800px",
+                  md: "80%",
+                  sm: "80%",
+                  xs: "95%",
+                },
+                borderColor: "rgba(165, 165, 165, 0.50)",
+                borderStyle: "solid",
+                borderWidth: "1.5px",
+                borderRadius: "20px",
+                backdropFilter: "blur(50px)",
+                background:
+                  "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
+                p: "2rem",
+                pt: "1rem",
+                pb: "1rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: {
+                  xs: "column",
+                  md: "column",
+                  lg: "row",
+                  xl: "row",
+                },
               }}
             >
-              Join the ranks of manufacturers who have transformed their
-              operations with xis.ai. Let’s make quality control simple and
-              effective together!
-            </Typography>
+              <Typography
+                // variant="h5"
+                sx={{ fontFamily: "Poppins", color: "#fff", fontWeight: 700 , fontSize:{
+                  xs:"1rem",
+                  md:"1.2rem",
+                  lg:"1.2rem",
+                  xl:"1.2rem"
+                }}}
+              >
+                Ready to Elevate your Production?
+              </Typography>
+
+              <button
+                type="submit"
+                id="main-button"
+                onClick={() => setOn(true)}
+                style={{
+                  fontFamily: "Poppins",
+                  background:
+                    "linear-gradient(180deg, #301466 0%, #3E5FAA 100%)",
+                  borderRadius: "10px",
+                  border: "none",
+                  color: "#fff",
+                  padding: "10px 20px",
+                  cursor: "pointer",
+                  fontSize: "1rem",
+                }}
+              >
+                Request Your Free Consultation
+              </button>
+            </Box>
           </Box>
-        </Box>
-
-        <Box
-          sx={{
-            width: { xl: "50%", lg: "50%", md: "80%", sm: "80%", xs: "95%" },
-            borderColor: "rgba(165, 165, 165, 0.50)",
-            borderStyle: "solid",
-            borderWidth: "1.5px",
-            borderRadius: "20px",
-            backdropFilter: "blur(50px)",
-            background:
-              "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
-            p: "2rem",
-            pt: "1rem",
-            pb: "1rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexDirection: {
-              xs: "column",
-              md: "column",
-              lg: "row",
-              xl: "row",
-            },
-          }}
-        >
-          <Typography
-            variant="h5"
-            sx={{ fontFamily: "Poppins", color: "#fff", fontWeight: 700 }}
-          >
-            Ready to Elevate your Production?
-          </Typography>
-
-          <button
-            type="submit"
-            id="main-button"
-            onClick={() => setOn(true)}
-            style={{
-              fontFamily: "Poppins",
-              background: "linear-gradient(180deg, #301466 0%, #3E5FAA 100%)",
-              borderRadius: "10px",
-              border: "none",
-              color: "#fff",
-              padding: "10px 20px",
-              cursor: "pointer",
-              fontSize: "1rem",
-            }}
-          >
-            Request Your Free Consultation
-          </button>
         </Box>
       </Box>
       <link

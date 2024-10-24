@@ -111,7 +111,18 @@ const $Main = () => {
             margin: 0,
           }}
         >
-          With AI
+          With{" "}
+          <span
+            style={{
+              background:
+                "linear-gradient(99deg, #A9C3FF 40.82%, #C8F3FF 62.26%)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            AI
+          </span>
         </h3>
       </Box>
     </Box>
@@ -127,7 +138,7 @@ export default function VisualInspection() {
 
   const vid = `
 <div class="w-[72%] sm:w-full md:w-full lg:w-[72%] my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; ">
- <img src='/_pati.png' alt='How it works steps' style="height: 600px" class="sm:hidden md:hidden lg:block xs:hidden xl:block"> </img>
+
  <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA2.mp4" type="video/mp4"></video>
 </div>`;
 
@@ -315,7 +326,7 @@ export default function VisualInspection() {
                 sm: "column",
                 xs: "column",
               },
-              gap:{
+              gap: {
                 xl: 0,
                 lg: 0,
                 md: 0,
@@ -350,10 +361,14 @@ export default function VisualInspection() {
               sm: "none",
               xs: "none",
             },
+            justifyContent: "center",
+            alignItems: "center",
           }}
-          className="sm:px-2 lg:px-16 relative pt-28 pb-28"
+
         >
-          <h1 className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          <h1 className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 " style={{
+            margin: 0,
+          }}>
             How it Works
           </h1>
 
@@ -367,24 +382,24 @@ export default function VisualInspection() {
                 sm: "100%",
                 xs: "100%",
               },
-              justifyContent: "space-between",
+              justifyContent: "center",
               alignItems: "center",
+              gap:'2rem'
             }}
           >
             <img
               src="/_pati.png"
               alt="How it works steps"
               style={{ height: "600px" }}
-              height={600}
-              width={"100%"}
-              className="sm:hidden md:hidden lg:block xs:hidden xl:block"
-            ></img>
+              class="sm:hidden md:hidden lg:block xs:hidden xl:block"
+            />
+
             <video
-              style={{ borderRadius: "10px", width: "100%", height: "400px" }}
+              style={{ borderRadius: "10px", width: "64%", height: "400px" }}
               controls
               className="border-[#193037]"
             >
-              <source src="/FA2.mp4" type="video/mp4" />{" "}
+              <source src="/FA2.mp4" type="video/mp4" />
             </video>
           </Box>
         </Box>
@@ -410,7 +425,13 @@ const $_renderation = ({ tt, bt }) => {
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
-        width:{xl: "150px", lg: "150px", md: "150px", sm: "100%", xs: "100%"},
+        width: {
+          xl: "150px",
+          lg: "150px",
+          md: "150px",
+          sm: "100%",
+          xs: "100%",
+        },
         height: "100px",
       }}
     >
