@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 import LogoBar from "../components/LogoBar";
 import { _AltVideoSection } from "../components/VideoSection";
 import IndustrySolutions from "../components/IndustrySolutions";
+import { HeroBlob } from "../components/HeroSection";
 
 const $Main = () => {
   const choices = [
@@ -244,18 +245,24 @@ export default function VisualInspection() {
           overflowX: "hidden",
         }}
       >
-        <div
-          class="blob top-[-100px] left-0"
-          style={{
-            overflow: "hidden",
-          }}
-        ></div>
-        <div
-          class="blob top-[900px] right-0"
-          style={{
-            overflow: "hidden",
-          }}
-        ></div>
+      <HeroBlob
+        sx={{
+          top: "-100px",
+          left:'0',
+          zIndex: "1",
+        }}
+        key={1}
+      />
+      {/* -10 */}
+      <HeroBlob
+        sx={{
+          right: "900px",
+          right:'0',
+          zIndex: "1",
+        }}
+        key={2}
+        id="blob2"
+      />
         <div
           class="blob2 top-[1500px] left-0"
           style={{
