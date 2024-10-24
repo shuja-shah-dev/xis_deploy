@@ -120,36 +120,36 @@ export const _landingPage = `
                <h1 class="text-5xl my-10">Our Customers</h1>
                <div class="flex flex-col gap-4">
                   <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-                     <img src="/Group 54.svg" width="150px" height="" alt="" />
-                     <img src="/Group 56.svg" width="150px" height="" alt="" />
-                     <img src="/Group 58.svg" width="150px" height="" alt="" />
-                     <img src="/Group 59.svg" width="150px" height="" alt="" />
-                     <img src="/Group 60.svg" width="150px" height="" alt="" />
-                     <img src="/Group 61.svg" width="150px" height="" alt="" />
-                     <img src="/Group 62.svg" width="150px" height="" alt="" />
-                     <img src="/Group 63.svg" width="150px" height="" alt="" />
+                     <img src="/Group 54.svg" width="150px" height="" alt="General Motos" />
+                     <img src="/Group 56.svg" width="150px" height="" alt="Rockwell & collins" />
+                     <img src="/Group 58.svg" width="150px" height="" alt="ZF" />
+                     <img src="/Group 59.svg" width="150px" height="" alt="Denso" />
+                     <img src="/Group 60.svg" width="150px" height="" alt="Lamborghini" />
+                     <img src="/Group 61.svg" width="150px" height="" alt="Ford" />
+                     <img src="/Group 62.svg" width="150px" height="" alt="Porche" />
+                     <img src="/Group 63.svg" width="150px" height="" alt="ABB" />
                   </div>
                   <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-                     <img src="/Group 64.svg" width="150px" height="" alt="" />
-                     <img src="/Group 67.svg" width="150px" height="" alt="" />
-                     <img src="/Group 68.svg" width="150px" height="" alt="" />
-                     <img src="/Group 69.svg" width="150px" height="" alt="" />
-                     <img src="/Group 70.svg" width="150px" height="" alt="" />
-                     <img src="/audi.svg" width="150px" height="" alt="" />
-                     <img src="/lg.svg" width="150px" height="" alt="" />
-                     <img src="/toyota.svg" width="150px" height="" alt="" />
+                     <img src="/Group 64.svg" width="150px" height="" alt="Mahale" />
+                     <img src="/Group 67.svg" width="150px" height="" alt="Phillips" />
+                     <img src="/Group 68.svg" width="150px" height="" alt="BOSCH" />
+                     <img src="/Group 69.svg" width="150px" height="" alt="Jopp" />
+                     <img src="/Group 70.svg" width="150px" height="" alt="Knoor" />
+                     <img src="/audi.svg" width="150px" height="" alt="Audi" />
+                     <img src="/lg.svg" width="150px" height="" alt="LG" />
+                     <img src="/toyota.svg" width="150px" height="" alt="Toyota" />
                   </div>
                   <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-                     <img src="/7.svg" width="150px" height="" alt="" />
-                     <img src="/8.svg" width="150px" height="" alt="" />
+                     <img src="/7.svg" width="150px" height="" alt="Samsung" />
+                     <img src="/8.svg" width="150px" height="" alt="Volkswagon" />
                   </div>
                   <div>
                      <h1 class="text-5xl my-10">Our Partners</h1>
                      <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-                        <img src="/Group 95.svg" width="150px" height="" alt="" />
-                        <img src="/Group 96.svg" width="150px" height="" alt="" />
-                        <img src="/Group 98.svg" width="150px" height="" alt="" />
-                        <img src="/Group 99.svg" width="150px" height="" alt="" />
+                        <img src="/Group 95.svg" width="150px" height="" alt="Nvidia" />
+                        <img src="/Group 96.svg" width="150px" height="" alt="AWS" />
+                        <img src="/Group 98.svg" width="150px" height="" alt="Basler" />
+                        <img src="/Group 99.svg" width="150px" height="" alt="Lanner" />
                      </div>
                   </div>
                </div>
