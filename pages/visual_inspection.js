@@ -219,7 +219,7 @@ export default function VisualInspection() {
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
       <$Main />
-      <div
+      <Box
         className="min-[2300px]:w-[65%] min-[2300px]:m-auto"
         style={{
           padding: "2rem 0",
@@ -227,6 +227,12 @@ export default function VisualInspection() {
           alignItems: "flex-start",
           width: "100%",
           justifyContent: "center",
+          flexDirection: {
+            xs: "column",
+            md: "column",
+            lg: "row",
+            xl: "row",
+          },
         }}
       >
         <Typography
@@ -241,7 +247,7 @@ export default function VisualInspection() {
           Trusted By{" "}
         </Typography>
         <LogoBar sx={{ width: "80%" }} />
-      </div>
+      </Box>
 
       <Box
         sx={{
@@ -257,7 +263,7 @@ export default function VisualInspection() {
         <Box
           sx={{
             display: "flex",
-            width: "87%",
+            width: {xl:"87%", lg:"87%", md:"100%", sm:"100%", xs:"100%"},
             alignItems: "center",
             justifyContent: "space-between",
             flexDirection: {

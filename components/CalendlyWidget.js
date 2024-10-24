@@ -159,6 +159,12 @@ export function SecondorayWidget() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            flexDirection: {
+              xs: "column",
+              md: "column",
+              lg: "row",
+              xl: "row",
+            },
           }}
         >
           <Typography

@@ -38,8 +38,8 @@ const industrySol = `
 </div>`;
 
 const vid = `
-<div class="m-auto my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; width:72%;">
- <img src='/_pati.png' alt='How it works steps' style="height: 600px"> </img>
+<div class="m-auto w-[72%] sm:w-full md:w-full lg:w-[72%] my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; ">
+ <img src='/_pati.png' alt='How it works steps' style="height: 600px" class="sm:hidden md:hidden lg:block"> </img>
  <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA2.mp4" type="video/mp4"></video>
 </div>`;
 
@@ -103,9 +103,9 @@ export const _landingPage = `
                </div>
                <div class="flex flex-col gap-4">
                   <img
-                     src="/image 70.svg"
-                     width="400px"
-                     height=""
+                     src="/_retroFit.jpg"
+                     width="353px"
+                     height="299.33px"
                      class="rounded-lg"
                      alt=""
                      />
