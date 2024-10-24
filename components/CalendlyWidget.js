@@ -106,13 +106,14 @@ export function SecondorayWidget() {
                 xl: "block",
                 lg: "none",
                 md: "none",
+                sm:'none',
+                xs:"none"
               },
             }}
           >
             <img
               src="/___Map.png"
               alt="Location Map"
-              class="block sm:hidden md:hidden lg:block xl:block"
               style={{
                 height: "100%",
               }}
