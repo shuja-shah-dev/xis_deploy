@@ -124,7 +124,7 @@ export const _AltVideoSection = () => {
         sx={{
           background:
             "linear-gradient(90deg, rgba(62, 95, 170, 0.15) 0%, rgba(62, 95, 170, 0.00) 99.33%)",
-          padding: "3rem 2rem",
+          padding: {xl:"3rem 2rem", lg:"2rem 1rem", md:"2rem 1rem", sm:"1.5rem 1rem", xs:"1rem 1rem"},
           borderRadius: "10px",
           borderColor: "rgba(148, 143, 143, 0.50)",
           borderWidth: "1px",
@@ -137,12 +137,18 @@ export const _AltVideoSection = () => {
         <Typography
           sx={{
             color: "#fff",
-            fontSize: "1.2rem",
+            fontSize: {
+              xl: "1.2rem",
+              lg: "1rem",
+              md: "1rem",
+              sm: "0.9rem",
+              xs: "0.8rem",
+            },
             fontFamily: "Inter, Poppins",
             fontWeight: "300",
           }}
         >
-          Upgrade your manufacturing with AI-driven Visual Quality Inspection
+          Upgrade your manufacturing with an AI-driven Visual Quality Inspection
           system. Utilizing advanced computer vision technology, we simplify
           automated quality assurance, making it more effective than ever.
           xis.ai inspection solutions provide real-time monitoring and precise

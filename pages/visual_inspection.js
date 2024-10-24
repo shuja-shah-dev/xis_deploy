@@ -315,6 +315,13 @@ export default function VisualInspection() {
                 sm: "column",
                 xs: "column",
               },
+              gap:{
+                xl: 0,
+                lg: 0,
+                md: 0,
+                sm: "1rem",
+                xs: "1rem",
+              },
             }}
           >
             {[
@@ -403,7 +410,7 @@ const $_renderation = ({ tt, bt }) => {
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "150px",
+        width:{xl: "150px", lg: "150px", md: "150px", sm: "100%", xs: "100%"},
         height: "100px",
       }}
     >
