@@ -96,9 +96,10 @@ export function SecondorayWidget() {
           <img
             src="/___Map.png"
             alt="Location Map"
-            style={{
-              width: "60%",
-            }}
+            // style={{
+            //   width: "60%",
+            // }}
+            class='w-[60%] sm:w-[80%] md:w-[80%] lg:w-[70%] xl:w-[60%]'
           />
           <Box
             sx={{
