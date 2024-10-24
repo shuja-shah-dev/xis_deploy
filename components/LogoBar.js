@@ -1,11 +1,12 @@
+import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 const LogoBar = ({ sx = {} }) => {
   return (
-    <div
+    <Box
       className="flex  gap-6 sm:mx-0 mx-4 sm:gap-0 justify-around items-center md:px-10 sm:pb-10 px-1 sm:px-0 "
-      style={{
+      sx={{
         ...sx,
       }}
     >
@@ -29,7 +30,7 @@ const LogoBar = ({ sx = {} }) => {
       <div>
         <Image src="/bosch.png" alt="bosch logo" width={150} height={100} />
       </div>
-    </div>
+    </Box>
   );
 };
 

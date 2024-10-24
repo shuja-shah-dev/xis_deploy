@@ -102,7 +102,7 @@ export function SecondorayWidget() {
           />
           <Box
             sx={{
-              width: "40%",
+              width: { xl: "40%", lg: "40%", md: "80%", sm: "80%", xs: "95%" },
               borderColor: "rgba(165, 165, 165, 0.50)",
               borderStyle: "solid",
               borderWidth: "1.5px",
@@ -145,7 +145,7 @@ export function SecondorayWidget() {
 
         <Box
           sx={{
-            width: "50%",
+            width: { xl: "50%", lg: "50%", md: "80%", sm: "80%", xs: "95%" },
             borderColor: "rgba(165, 165, 165, 0.50)",
             borderStyle: "solid",
             borderWidth: "1.5px",

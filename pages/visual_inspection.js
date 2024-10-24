@@ -242,11 +242,18 @@ export default function VisualInspection() {
             fontFamily: "Poppins",
             fontSize: "2.1rem",
             fontWeight: 400,
+            display:{
+              xs:"none",
+              sm:"none",
+              md:"none",
+              lg:"block",
+              xl:"block"
+            }
           }}
         >
           Trusted By{" "}
         </Typography>
-        <LogoBar sx={{ width: "80%" }} />
+        <LogoBar sx={{ width:{xl: "80%", lg:'80%', md:'100%', sm:'100%', xs:'100%' }}} />
       </Box>
 
       <Box
@@ -264,7 +271,7 @@ export default function VisualInspection() {
           sx={{
             display: "flex",
             width: {xl:"87%", lg:"87%", md:"100%", sm:"100%", xs:"100%"},
-            alignItems: "center",
+            alignItems: {xl:"center", lg:"center", md:"center", sm:"flex-start", xs:"flex-start"},
             justifyContent: "space-between",
             flexDirection: {
               xl: "row",

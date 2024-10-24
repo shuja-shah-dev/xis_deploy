@@ -38,8 +38,8 @@ const industrySol = `
 </div>`;
 
 const vid = `
-<div class="m-auto w-[72%] sm:w-full md:w-full lg:w-[72%] my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; ">
- <img src='/_pati.png' alt='How it works steps' style="height: 600px" class="sm:hidden md:hidden lg:block"> </img>
+<div class="w-[72%] sm:w-full md:w-full lg:w-[72%] my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; ">
+ <img src='/_pati.png' alt='How it works steps' style="height: 600px" class="sm:hidden md:hidden lg:block xs:hidden xl:block"> </img>
  <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA2.mp4" type="video/mp4"></video>
 </div>`;
 
@@ -80,7 +80,7 @@ export const _landingPage = `
         <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">Hardware Solutions</h1>
         <h3 class="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-2 sm:mt-4 w-full md:w-[800px] text-center  ">We are specialized in providing personalized development solutions that are specifically created to address the unique requirements of our clients.</h3>
     </div>
-            <div class="flex gap-10 text-xl justify-center">
+            <div class="flex gap-10 text-xl justify-center sm:flex-col md:flex-col lg:flex-row xl:flex-row">
                <div class="flex flex-col gap-4">
                   <img
                      src="/image 66.svg"
@@ -117,7 +117,7 @@ export const _landingPage = `
          ${industrySol}
          <div class=" mb-10 text-white flex flex-col justify-center items-center">
             <div class="mt-10 mb-10">
-               <h1 class="text-5xl my-10">Our Customers</h1>
+               <h1 class="text-5xl my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left">Our Customers</h1>
                <div class="flex flex-col gap-4">
                   <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
                      <img src="/Group 54.svg" width="150px" height="" alt="General Motos" />
@@ -144,7 +144,7 @@ export const _landingPage = `
                      <img src="/8.svg" width="150px" height="" alt="Volkswagon" />
                   </div>
                   <div>
-                     <h1 class="text-5xl my-10">Our Partners</h1>
+                     <h1 class="text-5xl my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left">Our Partners</h1>
                      <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
                         <img src="/Group 95.svg" width="150px" height="" alt="Nvidia" />
                         <img src="/Group 96.svg" width="150px" height="" alt="AWS" />
