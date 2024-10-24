@@ -125,6 +125,12 @@ export default function VisualInspection() {
     landingPageContent.current.innerHTML = _landingPage;
   }, []);
 
+  const vid = `
+<div class="w-[72%] sm:w-full md:w-full lg:w-[72%] my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; ">
+ <img src='/_pati.png' alt='How it works steps' style="height: 600px" class="sm:hidden md:hidden lg:block xs:hidden xl:block"> </img>
+ <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA2.mp4" type="video/mp4"></video>
+</div>`;
+
   return (
     <>
       <Head>
@@ -218,92 +224,173 @@ export default function VisualInspection() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
-      <$Main />
-      <Box
-        className="min-[2300px]:w-[65%] min-[2300px]:m-auto"
-        style={{
-          padding: "2rem 0",
-          display: "flex",
-          alignItems: "flex-start",
-          width: "100%",
-          justifyContent: "center",
-          flexDirection: {
-            xs: "column",
-            md: "column",
-            lg: "row",
-            xl: "row",
-          },
-        }}
-      >
-        <Typography
-          sx={{
-            textAlign: "left",
-            m: 0,
-            fontFamily: "Poppins",
-            fontSize: "2.1rem",
-            fontWeight: 400,
-            display:{
-              xs:"none",
-              sm:"none",
-              md:"none",
-              lg:"block",
-              xl:"block"
-            }
-          }}
-        >
-          Trusted By{" "}
-        </Typography>
-        <LogoBar sx={{ width:{xl: "80%", lg:'80%', md:'100%', sm:'100%', xs:'100%' }}} />
-      </Box>
-
       <Box
         sx={{
           width: "100%",
-          display: "flex",
-          background: "#121212",
-          py: "2rem",
-          px: "5rem",
-          justifyContent: "center",
-          alignItems: "center",
+          height: "100%",
+          overflowX: "hidden",
         }}
       >
+        <$Main />
         <Box
-          sx={{
+          className="min-[2300px]:w-[65%] min-[2300px]:m-auto"
+          style={{
+            padding: "2rem 0",
             display: "flex",
-            width: {xl:"87%", lg:"87%", md:"100%", sm:"100%", xs:"100%"},
-            alignItems: {xl:"center", lg:"center", md:"center", sm:"flex-start", xs:"flex-start"},
-            justifyContent: "space-between",
+            alignItems: "flex-start",
+            width: "100%",
+            justifyContent: "center",
             flexDirection: {
-              xl: "row",
-              lg: "row",
-              md: "row",
-              sm: "column",
               xs: "column",
+              md: "column",
+              lg: "row",
+              xl: "row",
             },
           }}
         >
-          {[
-            { tt: "85%", bt: "Faster Time To Value" },
-            // { tt: "6.9%", bt: "Return On Investment" },
-            { tt: "75%", bt: "Lower Total Cost" },
-            { tt: "100%", bt: "Without any Risk" },
-            { tt: "0", bt: "AI Expertise necessary " },
-          ].map(({ tt, bt }, $Key) => (
-            <$_renderation {...{ tt, bt }} key={$Key} />
-          ))}
+          <Typography
+            sx={{
+              textAlign: "left",
+              m: 0,
+              fontFamily: "Poppins",
+              fontSize: "2.1rem",
+              fontWeight: 400,
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "block",
+                xl: "block",
+              },
+            }}
+          >
+            Trusted By{" "}
+          </Typography>
+          <LogoBar
+            sx={{
+              width: {
+                xl: "80%",
+                lg: "80%",
+                md: "100%",
+                sm: "100%",
+                xs: "100%",
+              },
+            }}
+          />
         </Box>
+
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            background: "#121212",
+            py: "2rem",
+            px: "5rem",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              width: {
+                xl: "87%",
+                lg: "87%",
+                md: "100%",
+                sm: "100%",
+                xs: "100%",
+              },
+              alignItems: {
+                xl: "center",
+                lg: "center",
+                md: "center",
+                sm: "flex-start",
+                xs: "flex-start",
+              },
+              justifyContent: "space-between",
+              flexDirection: {
+                xl: "row",
+                lg: "row",
+                md: "row",
+                sm: "column",
+                xs: "column",
+              },
+            }}
+          >
+            {[
+              { tt: "85%", bt: "Faster Time To Value" },
+              // { tt: "6.9%", bt: "Return On Investment" },
+              { tt: "75%", bt: "Lower Total Cost" },
+              { tt: "100%", bt: "Without any Risk" },
+              { tt: "0", bt: "AI Expertise necessary " },
+            ].map(({ tt, bt }, $Key) => (
+              <$_renderation {...{ tt, bt }} key={$Key} />
+            ))}
+          </Box>
+        </Box>
+
+        <_AltVideoSection />
+
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            display: {
+              xl: "flex",
+              lg: "flex",
+              md: "none",
+              sm: "none",
+              xs: "none",
+            },
+          }}
+          className="sm:px-2 lg:px-16 relative pt-28 pb-28"
+        >
+          <h1 className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+            How it Works
+          </h1>
+
+          <Box
+            sx={{
+              display: "flex",
+              width: {
+                xl: "72%",
+                lg: "72%",
+                md: "100%",
+                sm: "100%",
+                xs: "100%",
+              },
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src="/_pati.png"
+              alt="How it works steps"
+              style={{ height: "600px" }}
+              height={600}
+              width={"100%"}
+              className="sm:hidden md:hidden lg:block xs:hidden xl:block"
+            ></img>
+            <video
+              style={{ borderRadius: "10px", width: "100%", height: "400px" }}
+              controls
+              className="border-[#193037]"
+            >
+              <source src="/FA2.mp4" type="video/mp4" />{" "}
+            </video>
+          </Box>
+        </Box>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          ref={landingPageContent}
+        />
+
+        <SecondorayWidget />
       </Box>
-
-      <_AltVideoSection />
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-        ref={landingPageContent}
-      />
-
-      <SecondorayWidget />
     </>
   );
 }
