@@ -245,48 +245,25 @@ export default function VisualInspection() {
           overflowX: "hidden",
         }}
       >
-      <HeroBlob
-        sx={{
-          top: "-100px",
-          left:'0',
-          zIndex: "1",
-        }}
-        key={1}
-      />
-      {/* -10 */}
-      <HeroBlob
-        sx={{
-          right: "900px",
-          right:'0',
-          zIndex: "1",
-        }}
-        key={2}
-        id="blob2"
-      />
-        <div
-          class="blob2 top-[1500px] left-0"
-          style={{
-            overflow: "hidden",
+        <HeroBlob
+          sx={{
+            top: "-100px",
+            left: "0",
+            zIndex: "1",
           }}
-        ></div>
-        <div
-          class="blob top-[2500px] right-0"
-          style={{
-            overflow: "hidden",
+          key={1}
+        />
+        {/* -10 */}
+        <HeroBlob
+          sx={{
+            right: "900px",
+            right: "0",
+            zIndex: "1",
           }}
-        ></div>
-        <div
-          class="blob2 top-[3100px] left-0"
-          style={{
-            overflow: "hidden",
-          }}
-        ></div>
-        <div
-          class="blob right-0 bottom-0"
-          style={{
-            overflow: "hidden",
-          }}
-        ></div>
+          key={2}
+          id="blob2"
+        />
+
         <$Main />
         <Box
           className="min-[2300px]:w-[65%] min-[2300px]:m-auto"
