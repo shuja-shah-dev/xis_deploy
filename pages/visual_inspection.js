@@ -6,8 +6,6 @@ import { Box, Typography } from "@mui/material";
 import LogoBar from "../components/LogoBar";
 import { _AltVideoSection } from "../components/VideoSection";
 
-
-
 const $Main = () => {
   const choices = [
     "Autonomous",
@@ -144,7 +142,81 @@ export default function VisualInspection() {
           async
         ></script>
 
-        <title>xis.ai</title>
+        <title>xis.ai - Simplified Edge AI for Industrial Inspection</title>
+        <meta
+          name="description"
+          content="XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta
+          name="keywords"
+          content="monitoring, 
+                  computer vision,
+                  defect,
+                  Quality inspection,
+                  defect detection,
+                  development solutions,
+                  inspection solutions,
+                  automated quality assurance,
+                  custom development solutions,
+                  Visual Quality Inspection,
+                  highest quality standards,
+                  Quality inspection system,
+                  visual quality inspection system,
+                  AI,
+                  FREE,
+                  vision,
+                  technology,
+                  manufacturing,
+                  software,
+                  Autonomous,
+                  quality assurance,
+                  INSPECTION,
+                  real-time,
+                  quality control,
+                  automated,
+                  monitoring,"
+        />
+        <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL} />
+        <meta
+          property="og:title"
+          content="Simplified Edge AI for Industrial Inspection"
+        />
+        <meta
+          property="og:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@XisAI" />
+        <meta
+          name="twitter:title"
+          content="Simplified Edge AI for Industrial Inspection"
+        />
+        <meta
+          name="twitter:description"
+          content="AI startup of XRAY-LAB that aims to revolutionize Industrial Quality inspection and Process Monitoring through the power of artificial intelligence and robotics"
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}opengraph-image.png`}
+        />
+        <meta name="twitter:image:type" content="image/png" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
       </Head>
       <$Main />
       <div
@@ -188,6 +260,13 @@ export default function VisualInspection() {
             width: "87%",
             alignItems: "center",
             justifyContent: "space-between",
+            flexDirection: {
+              xl: "row",
+              lg: "row",
+              md: "row",
+              sm: "column",
+              xs: "column",
+            },
           }}
         >
           {[

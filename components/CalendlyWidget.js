@@ -77,53 +77,70 @@ export function SecondorayWidget() {
             Contact Us
           </h1>
         </div>
-        <img
-          src="/___Map.png"
-          alt="Location Map"
-          style={{
-            width: "80%",
-          }}
-        />
+
         <Box
           sx={{
-            width: "50%",
-            borderColor: "rgba(165, 165, 165, 0.50)",
-            borderStyle: "solid",
-            borderWidth: "1.5px",
-            borderRadius: "10px",
-            backdropFilter: "blur(50px)",
-            background:
-              "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
-            p: "2rem",
-            pt: "4rem",
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            justifyContent: "center",
+            gap: "1rem",
+            flexDirection: {
+              xs: "column",
+              md: "column",
+              lg: "row",
+              xl: "row",
+            },
           }}
         >
-          <Typography
-            variant="h4"
+          <img
+            src="/___Map.png"
+            alt="Location Map"
+            style={{
+              width: "60%",
+            }}
+          />
+          <Box
             sx={{
-              fontFamily: "Poppins",
-              color: "#7C4EFC",
-              fontSize: "1.3rem",
-              fontWeight: "600",
-              mb: "2rem",
+              width: "40%",
+              borderColor: "rgba(165, 165, 165, 0.50)",
+              borderStyle: "solid",
+              borderWidth: "1.5px",
+              borderRadius: "10px",
+              backdropFilter: "blur(50px)",
+              background:
+                "linear-gradient(82deg, rgba(119, 84, 194, 0.10) 0.29%, rgba(119, 84, 194, 0.00) 99.65%)",
+              p: "2rem",
+              pt: "4rem",
             }}
           >
-            Get a FREE Consultation and a Proof of Concept for your Use Case &
-            Explore how xis.ai can Improve your Quality Inspection.
-          </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                fontFamily: "Poppins",
+                color: "#7C4EFC",
+                fontSize: "1.3rem",
+                fontWeight: "600",
+                mb: "2rem",
+              }}
+            >
+              Get a FREE Consultation and a Proof of Concept for your Use Case &
+              Explore how xis.ai can Improve your Quality Inspection.
+            </Typography>
 
-          <Typography
-            sx={{
-              fontFamily: "Poppins",
-              color: "#fff",
-              fontSize: "1rem",
-              fontWeight: "300",
-            }}
-          >
-            Join the ranks of manufacturers who have transformed their
-            operations with xis.ai. Let’s make quality control simple and
-            effective together!
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: "Poppins",
+                color: "#fff",
+                fontSize: "1rem",
+                fontWeight: "300",
+              }}
+            >
+              Join the ranks of manufacturers who have transformed their
+              operations with xis.ai. Let’s make quality control simple and
+              effective together!
+            </Typography>
+          </Box>
         </Box>
 
         <Box

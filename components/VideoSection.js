@@ -118,7 +118,7 @@ export const _AltVideoSection = () => {
       />
 
       <h1 className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-        Use Cases
+        Visual Quality Inspection
       </h1>
       <Box
         sx={{

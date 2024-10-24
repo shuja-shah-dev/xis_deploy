@@ -38,9 +38,9 @@ const industrySol = `
 </div>`;
 
 const vid = `
-<div class="m-auto my-2 flex align-center justify-between sm:flex-col md:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; width:72%;">
+<div class="m-auto my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; width:72%;">
  <img src='/_pati.png' alt='How it works steps' style="height: 600px"> </img>
- <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA.mp4" type="video/mp4"></video>
+ <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA2.mp4" type="video/mp4"></video>
 </div>`;
 
 export const _landingPage = `
@@ -63,13 +63,22 @@ export const _landingPage = `
    <div class="blob top-[2500px] right-0"></div>
    <div class="blob2 top-[3100px] left-0"></div>
    <div class="blob right-0 bottom-0"></div>
+         <div class="mt-20 mb-10">
+            <div class="flex flex-col justify-center items-center mb-2">
+               <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify mt-4">How it works</h1>
+            </div>
+            <div style="display:flex; align-items:center; justify-content: center; width:100%">
+              ${vid}
+            </div>
+         </div>
+
+
    <div class="flex justify-center text-white my-24">
       <div class="flex flex-col">
          <div>
                 <div class="flex flex-col justify-center items-center mb-14">
         <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify">Hardware Solutions</h1>
-        <h3 class="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-2 sm:mt-4 w-full md:w-[800px] text-center cc34 ">We focus on delivering custom development solutions that are specifically designed to meet the unique needs
-of our customers.</h3>
+        <h3 class="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-2 sm:mt-4 w-full md:w-[800px] text-center  ">We are specialized in providing personalized development solutions that are specifically created to address the unique requirements of our clients.</h3>
     </div>
             <div class="flex gap-10 text-xl justify-center">
                <div class="flex flex-col gap-4">
@@ -104,14 +113,7 @@ of our customers.</h3>
                </div>
             </div>
          </div>
-         <div class="mt-20 mb-10">
-            <div class="flex flex-col justify-center items-center mb-2">
-               <h1 class="pb-1.5 font-inter text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center md:text-justify mt-4">How it works</h1>
-            </div>
-            <div style="display:flex; align-items:center; justify-content: center; width:100%">
-              ${vid}
-            </div>
-         </div>
+
          ${industrySol}
          <div class=" mb-10 text-white flex flex-col justify-center items-center">
             <div class="mt-10 mb-10">
