@@ -12,12 +12,7 @@ export const _landingPage = `
    })
    
 </script>
-   <div class="blob top-[-100px] left-0"></div>
-   <div class="blob top-[900px] right-0"></div>
-   <div class="blob2 top-[1500px] left-0"></div>
-   <div class="blob top-[2500px] right-0"></div>
-   <div class="blob2 top-[3100px] left-0"></div>
-   <div class="blob right-0 bottom-0"></div>
+
 
    <script>
       document.getElementById("email-form").addEventListener("submit", async function (e) {

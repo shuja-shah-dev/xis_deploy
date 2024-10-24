@@ -133,9 +133,9 @@ const $Main = () => {
 export default function VisualInspection() {
   const landingPageContent = useRef(null);
 
-  useEffect(() => {
-    landingPageContent.current.innerHTML = _landingPage;
-  }, []);
+  // useEffect(() => {
+  //   landingPageContent.current.innerHTML = _landingPage;
+  // }, []);
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -244,6 +244,42 @@ export default function VisualInspection() {
           overflowX: "hidden",
         }}
       >
+        <div
+          class="blob top-[-100px] left-0"
+          style={{
+            overflow: "hidden",
+          }}
+        ></div>
+        <div
+          class="blob top-[900px] right-0"
+          style={{
+            overflow: "hidden",
+          }}
+        ></div>
+        <div
+          class="blob2 top-[1500px] left-0"
+          style={{
+            overflow: "hidden",
+          }}
+        ></div>
+        <div
+          class="blob top-[2500px] right-0"
+          style={{
+            overflow: "hidden",
+          }}
+        ></div>
+        <div
+          class="blob2 top-[3100px] left-0"
+          style={{
+            overflow: "hidden",
+          }}
+        ></div>
+        <div
+          class="blob right-0 bottom-0"
+          style={{
+            overflow: "hidden",
+          }}
+        ></div>
         <$Main />
         <Box
           className="min-[2300px]:w-[65%] min-[2300px]:m-auto"
@@ -415,55 +451,90 @@ export default function VisualInspection() {
         </Box>
         <_Harware />
         <IndustrySolutions />
-        <Box class="mt-10 mb-10">
-          <h3 class="text-5xl my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-inter">
-            Our Customers
-          </h3>
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-              <img
-                src="/Group 54.svg"
-                width="150px"
-                height=""
-                alt="General Motos"
-              />
-              <img
-                src="/Group 56.svg"
-                width="150px"
-                height=""
-                alt="Rockwell & collins"
-              />
-              <img src="/Group 58.svg" width="150px" height="" alt="ZF" />
-              <img src="/Group 59.svg" width="150px" height="" alt="Denso" />
-              <img
-                src="/Group 60.svg"
-                width="150px"
-                height=""
-                alt="Lamborghini"
-              />
-              <img src="/Group 61.svg" width="150px" height="" alt="Ford" />
-              <img src="/Group 62.svg" width="150px" height="" alt="Porche" />
-              <img src="/Group 63.svg" width="150px" height="" alt="ABB" />
+        <Box
+          class="mt-10 mb-10"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: { xl: "72%", lg: "72%", md: "80%", sm: "90%", xs: "90%" },
+            }}
+          >
+            <h3 class="text-5xl  my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-inter">
+              Our Customers
+            </h3>
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                <img
+                  src="/Group 54.svg"
+                  width="150px"
+                  height=""
+                  alt="General Motos"
+                />
+                <img
+                  src="/Group 56.svg"
+                  width="150px"
+                  height=""
+                  alt="Rockwell & collins"
+                />
+                <img src="/Group 58.svg" width="150px" height="" alt="ZF" />
+                <img src="/Group 59.svg" width="150px" height="" alt="Denso" />
+                <img
+                  src="/Group 60.svg"
+                  width="150px"
+                  height=""
+                  alt="Lamborghini"
+                />
+                <img src="/Group 61.svg" width="150px" height="" alt="Ford" />
+                <img src="/Group 62.svg" width="150px" height="" alt="Porche" />
+                <img src="/Group 63.svg" width="150px" height="" alt="ABB" />
+              </div>
+              <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                <img src="/Group 64.svg" width="150px" height="" alt="Mahale" />
+                <img
+                  src="/Group 67.svg"
+                  width="150px"
+                  height=""
+                  alt="Phillips"
+                />
+                <img src="/Group 68.svg" width="150px" height="" alt="BOSCH" />
+                <img src="/Group 69.svg" width="150px" height="" alt="Jopp" />
+                <img src="/Group 70.svg" width="150px" height="" alt="Knoor" />
+                <img src="/audi.svg" width="150px" height="" alt="Audi" />
+                <img src="/lg.svg" width="150px" height="" alt="LG" />
+                <img src="/toyota.svg" width="150px" height="" alt="Toyota" />
+              </div>
+              <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+                <img src="/7.svg" width="150px" height="" alt="Samsung" />
+                <img src="/8.svg" width="150px" height="" alt="Volkswagon" />
+              </div>
             </div>
-            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-              <img src="/Group 64.svg" width="150px" height="" alt="Mahale" />
-              <img src="/Group 67.svg" width="150px" height="" alt="Phillips" />
-              <img src="/Group 68.svg" width="150px" height="" alt="BOSCH" />
-              <img src="/Group 69.svg" width="150px" height="" alt="Jopp" />
-              <img src="/Group 70.svg" width="150px" height="" alt="Knoor" />
-              <img src="/audi.svg" width="150px" height="" alt="Audi" />
-              <img src="/lg.svg" width="150px" height="" alt="LG" />
-              <img src="/toyota.svg" width="150px" height="" alt="Toyota" />
-            </div>
-            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
-              <img src="/7.svg" width="150px" height="" alt="Samsung" />
-              <img src="/8.svg" width="150px" height="" alt="Volkswagon" />
-            </div>
-          </div>
+          </Box>
         </Box>
 
-        <Box class="mt-10 mb-10">
-          <div>
+        <Box
+          class="mt-10 mb-10"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: { xl: "72%", lg: "72%", md: "80%", sm: "90%", xs: "90%" },
+            }}
+          >
             <h3 class="text-5xl my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400  font-inter">
               Our Partners
             </h3>
@@ -473,16 +544,16 @@ export default function VisualInspection() {
               <img src="/Group 98.svg" width="150px" height="" alt="Basler" />
               <img src="/Group 99.svg" width="150px" height="" alt="Lanner" />
             </div>
-          </div>
+          </Box>
         </Box>
 
-        <div
+        {/* <div
           style={{
             width: "100%",
             height: "100%",
           }}
           ref={landingPageContent}
-        />
+        /> */}
 
         <SecondorayWidget />
       </Box>
