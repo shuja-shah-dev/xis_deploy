@@ -93,14 +93,32 @@ export function SecondorayWidget() {
             },
           }}
         >
-          <img
-            src="/___Map.png"
-            alt="Location Map"
-            // class="h-[470px] sm:w-[200px] md:w-[200px] lg:w-[200px] xl:w-[200px]"
-            style={{
-              height: "470px",
-            }}            
-          />
+          <Box
+            sx={{
+              width: {
+                xl: "800px",
+                lg: "800px",
+                md: "80%",
+                sm: "80%",
+                xs: "95%",
+              },
+              display: {
+                xl: "block",
+                lg: "none",
+                md: "none",
+              },
+            }}
+          >
+            <img
+              src="/___Map.png"
+              alt="Location Map"
+              class="block sm:hidden md:hidden lg:block xl:block"
+              style={{
+                height: "100%",
+              }}
+            />
+          </Box>
+
           <Box
             sx={{
               display: "flex",
@@ -152,8 +170,8 @@ export function SecondorayWidget() {
                 }}
               >
                 Join the ranks of manufacturers who have transformed their
-                operations with xis.ai. Let&apos;s make quality control simple and
-                effective together!
+                operations with xis.ai. Let&apos;s make quality control simple
+                and effective together!
               </Typography>
             </Box>
             <Box
@@ -187,13 +205,17 @@ export function SecondorayWidget() {
               }}
             >
               <Typography
-                // variant="h5"
-                sx={{ fontFamily: "Poppins", color: "#fff", fontWeight: 700 , fontSize:{
-                  xs:"1rem",
-                  md:"1.2rem",
-                  lg:"1.2rem",
-                  xl:"1.2rem"
-                }}}
+                sx={{
+                  fontFamily: "Poppins",
+                  color: "#fff",
+                  fontWeight: 700,
+                  fontSize: {
+                    xs: "1rem",
+                    md: "1.2rem",
+                    lg: "1.2rem",
+                    xl: "1.2rem",
+                  },
+                }}
               >
                 Ready to Elevate your Production?
               </Typography>
@@ -211,7 +233,13 @@ export function SecondorayWidget() {
                   color: "#fff",
                   padding: "10px 20px",
                   cursor: "pointer",
-                  fontSize: "1rem",
+                  fontSize: {
+                    xl: "1rem",
+                    lg: "1rem",
+                    md: "0.9rem",
+                    sm: "0.9rem",
+                    xs: "0.9rem",
+                  },
                 }}
               >
                 Request Your Free Consultation

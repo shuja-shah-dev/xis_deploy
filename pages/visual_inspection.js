@@ -5,6 +5,7 @@ import Head from "next/head";
 import { Box, Typography } from "@mui/material";
 import LogoBar from "../components/LogoBar";
 import { _AltVideoSection } from "../components/VideoSection";
+import IndustrySolutions from "../components/IndustrySolutions";
 
 const $Main = () => {
   const choices = [
@@ -135,12 +136,13 @@ export default function VisualInspection() {
   useEffect(() => {
     landingPageContent.current.innerHTML = _landingPage;
   }, []);
-
-  const vid = `
-<div class="w-[72%] sm:w-full md:w-full lg:w-[72%] my-2 flex align-center justify-between sm:flex-col md:flex-col lg:flex-row xs:flex-col" style="gap:3rem; justify-content: space-between; align-items: center; ">
-
- <video style="border-radius: 10px; width:100%; height:400px" controls class='border-[#193037]'><source src="/FA2.mp4" type="video/mp4"></video>
-</div>`;
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+    });
+  }, []);
 
   return (
     <>
@@ -337,7 +339,6 @@ export default function VisualInspection() {
           >
             {[
               { tt: "85%", bt: "Faster Time To Value" },
-              // { tt: "6.9%", bt: "Return On Investment" },
               { tt: "75%", bt: "Lower Total Cost" },
               { tt: "100%", bt: "Without any Risk" },
               { tt: "0", bt: "AI Expertise necessary " },
@@ -364,11 +365,13 @@ export default function VisualInspection() {
             justifyContent: "center",
             alignItems: "center",
           }}
-
         >
-          <h1 className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 " style={{
-            margin: 0,
-          }}>
+          <h1
+            className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 "
+            style={{
+              margin: 0,
+            }}
+          >
             How it Works
           </h1>
 
@@ -384,15 +387,22 @@ export default function VisualInspection() {
               },
               justifyContent: "center",
               alignItems: "center",
-              gap:'2rem'
+              gap: "2rem",
             }}
           >
-            <img
-              src="/_pati.png"
-              alt="How it works steps"
-              style={{ height: "600px" }}
-              class="sm:hidden md:hidden lg:block xs:hidden xl:block"
-            />
+            <Box
+              sx={{
+                // width: "100%",
+                height: { xl: "600px", lg: "600px", md: "60%" },
+              }}
+            >
+              <img
+                src="/_pati.png"
+                alt="How it works steps"
+                style={{ height: "100%" }}
+                class="block sm:hidden md:hidden lg:block xs:hidden xl:block"
+              />
+            </Box>
 
             <video
               style={{ borderRadius: "10px", width: "64%", height: "400px" }}
@@ -403,6 +413,69 @@ export default function VisualInspection() {
             </video>
           </Box>
         </Box>
+        <_Harware />
+        <IndustrySolutions />
+        <Box class="mt-10 mb-10">
+          <h3 class="text-5xl my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-inter">
+            Our Customers
+          </h3>
+          <div class="flex flex-col gap-4">
+            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+              <img
+                src="/Group 54.svg"
+                width="150px"
+                height=""
+                alt="General Motos"
+              />
+              <img
+                src="/Group 56.svg"
+                width="150px"
+                height=""
+                alt="Rockwell & collins"
+              />
+              <img src="/Group 58.svg" width="150px" height="" alt="ZF" />
+              <img src="/Group 59.svg" width="150px" height="" alt="Denso" />
+              <img
+                src="/Group 60.svg"
+                width="150px"
+                height=""
+                alt="Lamborghini"
+              />
+              <img src="/Group 61.svg" width="150px" height="" alt="Ford" />
+              <img src="/Group 62.svg" width="150px" height="" alt="Porche" />
+              <img src="/Group 63.svg" width="150px" height="" alt="ABB" />
+            </div>
+            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+              <img src="/Group 64.svg" width="150px" height="" alt="Mahale" />
+              <img src="/Group 67.svg" width="150px" height="" alt="Phillips" />
+              <img src="/Group 68.svg" width="150px" height="" alt="BOSCH" />
+              <img src="/Group 69.svg" width="150px" height="" alt="Jopp" />
+              <img src="/Group 70.svg" width="150px" height="" alt="Knoor" />
+              <img src="/audi.svg" width="150px" height="" alt="Audi" />
+              <img src="/lg.svg" width="150px" height="" alt="LG" />
+              <img src="/toyota.svg" width="150px" height="" alt="Toyota" />
+            </div>
+            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+              <img src="/7.svg" width="150px" height="" alt="Samsung" />
+              <img src="/8.svg" width="150px" height="" alt="Volkswagon" />
+            </div>
+          </div>
+        </Box>
+
+        <Box class="mt-10 mb-10">
+          <div>
+            <h3 class="text-5xl my-10 text-center sm:text-center md:text-center lg:text-left xl:text-left pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400  font-inter">
+              Our Partners
+            </h3>
+            <div class="flex gap-4 flex flex-wrap gap-4 sm:gap-6 justify-center z-40 relative">
+              <img src="/Group 95.svg" width="150px" height="" alt="Nvidia" />
+              <img src="/Group 96.svg" width="150px" height="" alt="AWS" />
+              <img src="/Group 98.svg" width="150px" height="" alt="Basler" />
+              <img src="/Group 99.svg" width="150px" height="" alt="Lanner" />
+            </div>
+          </div>
+        </Box>
+
         <div
           style={{
             width: "100%",
@@ -416,6 +489,86 @@ export default function VisualInspection() {
     </>
   );
 }
+
+const _Harware = () => {
+  return (
+    <Box class="flex justify-center text-white my-24">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h1
+          className="text-4xl text-center mb-12 font-inter md:text-5xl pb-1.5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 "
+          style={{
+            margin: 0,
+          }}
+        >
+          Hardware Solutions
+        </h1>
+
+        <h3 class="font-poppins text-gray-300 text-base sm:text-xl md:text-xl mt-2 sm:mt-4 w-full md:w-[800px] text-center  ">
+          We are specialized in providing personalized development solutions
+          that are specifically created to address the unique requirements of
+          our clients.
+        </h3>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {
+              xl: "row",
+              lg: "row",
+              md: "column",
+              sm: "column",
+              xs: "column",
+            },
+            gap: "1rem",
+            alignItems: "center",
+            my: "2rem",
+          }}
+        >
+          <div class="flex flex-col gap-4 items-center sm:items-center md:items-center lg:items-start xl:items-start">
+            <img
+              src="/image 66.svg"
+              width="400px"
+              height=""
+              class="rounded-lg"
+              alt=""
+            />
+            <p class="text-center cc34 w-[400px] ">Inline inspection system</p>
+          </div>
+          <div class="flex flex-col gap-4 flex flex-col gap-4 items-center sm:items-center md:items-center lg:items-start xl:items-start">
+            <img
+              src="/image 69.svg"
+              width="400px"
+              height=""
+              class="rounded-lg"
+              alt=""
+            />
+            <p class="text-center cc34 w-[400px]">
+              End Of Line inspection system
+            </p>
+          </div>
+          <div class="flex flex-col gap-4 items-center sm:items-center md:items-center lg:items-start xl:items-start">
+            <img
+              src="/_retroFit.jpg"
+              width="353px"
+              height="299.33px"
+              class="rounded-lg"
+              alt=""
+            />
+            <p class="text-center cc34  w-[353px]">
+              Retro-fit Existing Vision system
+            </p>
+          </div>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
 
 const $_renderation = ({ tt, bt }) => {
   return (
@@ -440,7 +593,7 @@ const $_renderation = ({ tt, bt }) => {
           fontSize: "2.4rem",
           fontWeight: 600,
           color: "#fff",
-          fontFamily: "Roboto",
+          fontFamily: "Roboto, Poppins, sans-serif",
         }}
       >
         {tt}
